@@ -210,3 +210,51 @@
 @media (max-width:640px){
   .blog-grille .blog-mois .t-label{font-size:0.875rem}
 }
+
+/* ── 8. LA CARTE DE L'ATLAS (26-legal-data) ──
+   Mesuré le 03/09 sur https://www.cleolabs.co/fr/legal-data : le bloc
+   « Veille live par marché » porte un .leaflet-container (846 x 558 px à
+   1440, 460/560 px selon écran dans le CSS servi), 140 circleMarker SVG,
+   tuiles basemaps.cartocdn.com/light_nolabels + light_only_labels, une
+   légende à 4 bandes en bas à gauche. La maquette l'avait remplacée par une
+   grille de tuiles « Plus gros marchés » ; la carte reprend sa place ici,
+   avec les dix-huit marchés déjà écrits dans la page (aucun chiffre absolu :
+   l'original en montre au survol, la maquette non, décision de Naomie du
+   03/09). Hauteur fixe pour ne pas faire sauter la mise en page pendant le
+   chargement des tuiles. */
+.atlas-carte{position:relative; height:460px; border-radius:var(--r-lg);
+  border:1px solid var(--c-border); background:var(--c-surface); overflow:hidden;
+  margin-bottom:20px}
+.atlas-carte-conteneur{width:100%; height:100%}
+/* Texte de secours : si le script Leaflet ne charge pas (hors ligne, CDN
+   bloqué), il reste seul et visible, rien ne casse. Le script vide le
+   conteneur avant d'y poser la carte s'il s'exécute. */
+.atlas-carte-secours{display:flex; align-items:center; justify-content:center;
+  height:100%; margin:0; padding:0 24px; text-align:center;
+  color:var(--c-text-3); font-size:0.9375rem}
+.atlas-carte .leaflet-tooltip,.atlas-carte .leaflet-popup-content{
+  font-family:var(--font); font-size:0.8125rem}
+.atlas-carte .leaflet-popup-content{margin:8px 10px}
+.atlas-carte .leaflet-popup-content-wrapper{border-radius:var(--r-sm)}
+/* L'attribution Leaflet garde sa taille d'origine : mention légale de
+   tuile, pas du contenu de page, elle est exclue de la règle des 14 px
+   sur téléphone. */
+.atlas-carte .leaflet-control-attribution{font-size:10px;
+  background:rgba(249,248,246,0.85)}
+/* Le bouton d'activation tactile réutilise .btn (composants.css) ; cette
+   règle ne pose que sa place. Caché par défaut : sous 640 px seulement, un
+   doigt qui commence son défilement sur la carte reste sinon piégé dedans
+   (le dragging Leaflet capte le geste avant le scroll de la page). */
+.atlas-carte-activer{display:none; position:absolute; left:50%; bottom:14px;
+  transform:translateX(-50%); z-index:1000}
+.atlas-carte-legende{display:flex; align-items:center; gap:20px; flex-wrap:wrap;
+  margin:14px 0 56px}
+.atlas-carte-legende-item{display:flex; align-items:center; gap:8px}
+.atlas-carte-pastille{display:block; width:10px; height:10px; border-radius:50%; flex:none}
+.atlas-carte-pastille.pass{background:var(--c-pass)}
+.atlas-carte-pastille.risk{background:var(--c-risk)}
+.atlas-carte-pastille.block{background:var(--c-block)}
+@media (max-width:640px){
+  .atlas-carte{height:360px}
+  .atlas-carte-activer{display:inline-flex}
+}
