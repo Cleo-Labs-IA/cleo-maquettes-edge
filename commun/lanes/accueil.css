@@ -200,3 +200,86 @@
 .fiche-entete-pays span{font-size:0.8125rem}
 .duo-temoin a.t-body{padding:10px 0; margin-top:18px}
 @media (max-width:640px){ .fiche-entete-pays span{font-size:0.875rem} .hero-globe .gp-nom{font-size:14px} }
+
+
+/* ════════════════════════════════════════════════════════════════
+   « PENSÉ POUR LE TRAVAIL QUOTIDIEN » : plus visuel, avec à la fin l'animation.
+   Naomie, 03/09/2026 14:05. Les trois cartes sont numérotées ; l'écran produit
+   ferme la section et se joue en trois temps, chacun allumant sa carte.
+   Le déroulé est en transitions à délais (0,5 s, courbe de révélation),
+   déclenché par .vu ; mouvement réduit : état final d'emblée.
+   ════════════════════════════════════════════════════════════════ */
+.quotidien-cartes .quotidien-carte{position:relative; border:1px solid var(--c-border);
+  transition:border-color 0.35s ease-out, box-shadow 0.35s ease-out}
+.quotidien-carte .flux-rang{color:var(--c-text-3)}
+/* L'état actif est un état, pas un décor : le bleu y a sa place. */
+.quotidien-carte.actif{border-color:var(--c-blue); box-shadow:0 0 0 3px var(--c-blue-light), var(--shadow-md)}
+.quotidien-carte.actif .flux-rang{color:var(--c-blue)}
+
+.quotidien-anim{max-width:960px; margin:40px auto 0}
+.quotidien-ecran{position:relative; z-index:1; text-align:left}
+.quotidien-ecran .ecran-app{box-shadow:var(--shadow-xl)}
+.quotidien-legende{margin:16px 0 0}
+
+/* ── Temps 1 : la fiche se remplit, ligne par ligne, et la jauge monte ── */
+.quotidien-anim .fiche-tete,.quotidien-anim .fiche-entete-pays,.quotidien-anim .fiche-ligne{
+  opacity:0; transform:translateY(6px); transition:opacity 0.5s var(--ease-reveal), transform 0.5s var(--ease-reveal)}
+.quotidien-anim .fiche .marqueur{opacity:0; transform:scale(0.7); transition:opacity 0.35s var(--ease-ui), transform 0.35s var(--ease-ui)}
+.quotidien-anim .jauge span{width:0 !important; transition:width 0.9s var(--ease-reveal)}
+.quotidien-anim.vu .fiche-tete,.quotidien-anim.vu .fiche-entete-pays,.quotidien-anim.vu .fiche-ligne{opacity:1; transform:none}
+.quotidien-anim.vu .fiche .marqueur{opacity:1; transform:none}
+.quotidien-anim.vu .jauge span{width:72% !important; transition-delay:0.45s}
+.quotidien-anim.vu .fiche-tete{transition-delay:0.2s}
+.quotidien-anim.vu .fiche-ligne:nth-of-type(1){transition-delay:0.35s}
+.quotidien-anim.vu .fiche-entete-pays:nth-of-type(1){transition-delay:0.55s}
+.quotidien-anim.vu .fiche-ligne:nth-of-type(2){transition-delay:0.7s}
+.quotidien-anim.vu .fiche-ligne:nth-of-type(3){transition-delay:0.85s}
+.quotidien-anim.vu .fiche-entete-pays:nth-of-type(2){transition-delay:1s}
+.quotidien-anim.vu .fiche-ligne:nth-of-type(4){transition-delay:1.15s}
+.quotidien-anim.vu .fiche-ligne:nth-of-type(5){transition-delay:1.3s}
+.quotidien-anim.vu .fiche-ligne:nth-of-type(2) .marqueur{transition-delay:1s}
+.quotidien-anim.vu .fiche-ligne:nth-of-type(3) .marqueur{transition-delay:1.15s}
+.quotidien-anim.vu .fiche-ligne:nth-of-type(4) .marqueur{transition-delay:1.45s}
+.quotidien-anim.vu .fiche-ligne:nth-of-type(5) .marqueur{transition-delay:1.6s}
+
+/* ── Temps 2 : la citation, puis la règle encodée, champ par champ ── */
+.quotidien-anim .hp-citation{opacity:0; transform:translateX(14px); transition:opacity 0.5s var(--ease-reveal), transform 0.5s var(--ease-reveal)}
+.quotidien-anim .hp-regle{opacity:0; transform:translateY(10px); transition:opacity 0.5s var(--ease-reveal), transform 0.5s var(--ease-reveal)}
+.quotidien-anim .hp-regle .t-h3,.quotidien-anim .pl-champ,.quotidien-anim .pl-verdict{
+  opacity:0; transform:translateY(5px); transition:opacity 0.4s var(--ease-reveal), transform 0.4s var(--ease-reveal)}
+.quotidien-anim .pl-champ b{background:linear-gradient(var(--c-blue-light),var(--c-blue-light)) no-repeat right/0 100%; transition:background-size 0.35s var(--ease-ui)}
+.quotidien-anim.vu .hp-citation{opacity:1; transform:none; transition-delay:1.75s}
+.quotidien-anim.vu .hp-regle{opacity:1; transform:none; transition-delay:2.05s}
+.quotidien-anim.vu .hp-regle .t-h3{opacity:1; transform:none; transition-delay:2.2s}
+.quotidien-anim.vu .pl-champ{opacity:1; transform:none}
+.quotidien-anim.vu .pl-champ:nth-of-type(1){transition-delay:2.4s}
+.quotidien-anim.vu .pl-champ:nth-of-type(2){transition-delay:2.6s}
+.quotidien-anim.vu .pl-champ:nth-of-type(3){transition-delay:2.8s}
+.quotidien-anim.vu .pl-champ:nth-of-type(4){transition-delay:3s}
+.quotidien-anim.vu .pl-champ:nth-of-type(5){transition-delay:3.2s}
+.quotidien-anim.vu .pl-champ b{background-size:100% 100%}
+.quotidien-anim.vu .pl-champ:nth-of-type(1) b{transition-delay:2.55s}
+.quotidien-anim.vu .pl-champ:nth-of-type(2) b{transition-delay:2.75s}
+.quotidien-anim.vu .pl-champ:nth-of-type(3) b{transition-delay:2.95s}
+.quotidien-anim.vu .pl-champ:nth-of-type(4) b{transition-delay:3.15s}
+.quotidien-anim.vu .pl-champ:nth-of-type(5) b{transition-delay:3.35s}
+
+/* ── Temps 3 : le verdict ── */
+.quotidien-anim .pl-pastille{background:rgba(0,0,0,0.18); transform:scale(0.6); transition:background 0.4s ease-out, transform 0.4s var(--ease-ui)}
+.quotidien-anim.vu .pl-verdict{opacity:1; transform:none; transition-delay:3.5s}
+.quotidien-anim.vu .pl-pastille{background:var(--c-pass); transform:none; transition-delay:3.7s}
+
+@media (max-width:640px){ .quotidien-anim{margin-top:28px} .quotidien-carte .t-h2{font-size:1.0625rem} }
+@media (prefers-reduced-motion: reduce){
+  .quotidien-anim *,.quotidien-anim.vu *{opacity:1 !important; transform:none !important; transition:none !important}
+  .quotidien-anim .jauge span{width:72% !important}
+  .quotidien-anim .pl-pastille{background:var(--c-pass)}
+  .quotidien-anim .pl-champ b{background-size:100% 100%}
+}
+/* Mesuré après la pose : la légende courait sur 960 px ; sur téléphone le fil d'Ariane
+   et les champs de la règle restaient à 12-13 px. */
+.quotidien-legende{max-width:720px; margin:16px auto 0}
+@media (max-width:640px){
+  .quotidien-anim .pl-champ,.quotidien-anim .pl-verdict,.quotidien-anim .fiche-entete-pays,
+  .quotidien-anim .ecran-tete .fil-ariane,.quotidien-anim .fiche-ref{font-size:0.875rem}
+}
