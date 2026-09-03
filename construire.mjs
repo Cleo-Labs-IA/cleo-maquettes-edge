@@ -581,6 +581,10 @@ const lanesCss = fs.existsSync(dossierLanes)
   ? fs.readdirSync(dossierLanes).filter(f => f.endsWith('.css')).sort()
       .map(f => `/* ── lane ${f} ── */\n` + fs.readFileSync(path.join(dossierLanes, f), 'utf8')).join('\n')
   : ''
+/* Les commentaires des feuilles sont des notes d'atelier (mesures, sources, dont
+   edgecomply.com) : ils ne sortent pas dans la page. Mesuré le 03/09/2026 : 192 mentions
+   d'edgecomply sur 47 pages, toutes dans le CSS inclus. */
+const sansCommentairesCss = (css) => css.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\n{3,}/g, '\n\n')
 const base = fs.readFileSync(path.join(ICI, 'commun/base.css'), 'utf8')
 const regimeNoir = fs.existsSync(path.join(ICI, 'commun/regime-noir.css'))
   ? fs.readFileSync(path.join(ICI, 'commun/regime-noir.css'), 'utf8') : ''
@@ -922,11 +926,7 @@ ${structure}
 <style>
 @font-face{font-family:"Satoshi";src:url(/fonts/Satoshi-Variable.woff2) format("woff2");
   font-weight:300 900;font-style:normal;font-display:swap}
-${base}
-${composants}
-${lanesCss}
-${p.noir ? regimeNoir : ''}
-${mouvement}
+${sansCommentairesCss(base + '\n' + composants + '\n' + lanesCss + '\n' + (p.noir ? regimeNoir : '') + '\n' + mouvement)}
 </style>
 </head>
 <body>
