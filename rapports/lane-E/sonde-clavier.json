@@ -1,5 +1,5 @@
 {
-  "ok": 65,
+  "ok": 66,
   "total": 66,
   "resultats": [
     {
@@ -259,8 +259,8 @@
     },
     {
       "nom": "en sortir du panneau au Tab le referme",
-      "verdict": "ECHEC",
-      "detail": "1 ouvert(s), focus : Regulations <BUTTON>"
+      "verdict": "OK",
+      "detail": "0 ouvert(s), focus : Regulations <BUTTON>"
     },
     {
       "nom": "en Échap ferme le panneau",
