@@ -22,6 +22,7 @@ const SRC = {
   logo: path.join(HOME, 'cleo-landing/public/logo-blue.svg'),
   police: path.join(MAQUETTES, 'sortie/fonts/Satoshi-Variable.woff2'),
   citation: path.join(HOME, 'cleo-landing/src/components/landing/DecathlonQuote.tsx'),
+  produit: path.join(MAQUETTES, 'sortie/images/jean.png'),
 }
 
 // ── La citation, extraite du composant, jamais retapee ────────────────────────
@@ -33,7 +34,7 @@ function citationEn() {
 }
 
 // ── La masse et l'unique : 26 colonnes, 4 rangees, UN SEUL element colore ─────
-function masse(total = 104, index = 57) {
+function masse(total = 120, index = 66) {
   return Array.from({ length: total }, (_, i) =>
     i === index ? '<i class="trouve"></i>' : '<i></i>'
   ).join('')
@@ -53,6 +54,7 @@ const html = fs
   .split('{{MASSE}}').join(masse())
   .split('{{QUOTE_EN}}').join(citationEn())
   .split('{{QR}}').join(qr.replace(/<\?xml[^>]*\?>/, '').trim())
+  .split('{{PRODUIT}}').join('data:image/png;base64,' + fs.readFileSync(SRC.produit).toString('base64'))
 
 const cible = path.join(ICI, 'one-pager.html')
 fs.writeFileSync(cible, html)
@@ -65,7 +67,7 @@ const soucis = []
 page.on('pageerror', (e) => soucis.push(String(e)))
 await page.goto('file://' + cible)
 await page.emulateMedia({ media: 'print' })
-await page.waitForTimeout(400)
+await page.waitForTimeout(600)
 
 const mesures = await page.evaluate(() => {
   const HAUTEUR_A4 = 297 // mm
@@ -125,7 +127,7 @@ const bloquant = []
 if (mesures.debordements.length) bloquant.push('contenu coupe')
 if (mesures.monospaces.length) bloquant.push('monospace presente')
 if (mesures.masseColorees !== 1 || mesures.massesTotal !== 1) bloquant.push('la masse doit avoir un seul element colore')
-if (mesures.champsProfonds.some((n) => n !== 1)) bloquant.push('un seul champ profond par page')
+if (mesures.champsProfonds.some((n) => n > 1)) bloquant.push('deux champs profonds sur une meme page')
 mesures.parPage.forEach((m) => {
   if (m.contenuMm > 297) bloquant.push(`page ${m.page} deborde de la feuille`)
   if (m.airAvantPiedMm < 3) bloquant.push(`page ${m.page} colle son pied au contenu`)

@@ -13,18 +13,18 @@
   Regulation (EU) 2023/988 · file:cleo-rules/eu/eu-2023-988-art19-d-*.yaml         · PASS
   Article 19(d)            · file:cleo-rules/eu/eu-2023-988-art19-d-*.yaml         · PASS
   13 Dec 2024              · file:cleo-rules/eu/eu-2023-988-art19-d-*.yaml         · PASS
-  Decathlon quote, 496 ch  · file:cleo-landing/src/.../DecathlonQuote.tsx          · PASS
+  Decathlon quote          · file:cleo-landing/src/.../DecathlonQuote.tsx          · PASS
+  Le schema du recto reprend les quatre parutions reelles du radar de l'accueil V6
+  (sortie/01-accueil.html) : CPSIA 101(a), REACH annexe XVII, Proposition 65, 21 CFR 101.
   Absent by design: 3,700 sources · encoded-rule counts · client logos · Longchamp/BIC/PMU/Kiabi · NVIDIA
 -->
 <style>
 /* ════════════════════════════════════════════════════════════════
    ONE-PAGER A4 RECTO/VERSO — DA Cleo V6, portee en print.
-   Jetons repris verbatim de commun/lanes/v6-foundation.css :
-   surface #F9F8F6, encre #1A1A1A, champ profond #08093B, bleu
-   d'action #0008CF, signal sur profond #4D57FF, rayons 8/16/24.
-   Regles tenues : aucune monospace · le bleu est signal, jamais
-   decoratif · un seul champ profond par page · une seule masse
-   coloree par image · aucun tiret cadratin hors citation verbatim.
+   Version schema : le dessin explique, le texte nomme.
+   Jetons repris de commun/lanes/v6-foundation.css. Regles tenues :
+   aucune monospace · le bleu est signal, jamais decoratif · un seul
+   champ profond par page · une seule masse coloree par image.
    ════════════════════════════════════════════════════════════════ */
 
 @font-face{
@@ -37,8 +37,6 @@
   --surface:#F9F8F6;
   --raised:#FFFFFF;
   --soft:#F0EFEC;
-  --pale:#EFEEFB;
-  --cream:#F1EEE3;
   --ink:#1A1A1A;
   --ink-2:rgba(26,26,26,.66);
   --ink-3:rgba(26,26,26,.46);
@@ -48,7 +46,7 @@
   --signal:#4D57FF;
   --on-dark-2:rgba(255,255,255,.70);
   --on-dark-3:rgba(255,255,255,.50);
-  --border:rgba(8,9,59,.10);
+  --border:rgba(8,9,59,.12);
   --border-dark:rgba(255,255,255,.14);
   --mass:rgba(255,255,255,.16);
   --mass-2:rgba(255,255,255,.26);
@@ -56,7 +54,6 @@
 }
 
 *,*::before,*::after{box-sizing:border-box}
-
 html,body{margin:0;padding:0}
 body{
   font-family:'Satoshi',-apple-system,BlinkMacSystemFont,sans-serif;
@@ -70,123 +67,99 @@ body{
 
 .page{
   position:relative;
-  width:210mm; height:297mm;
-  overflow:hidden;
+  width:210mm;height:297mm;overflow:hidden;
   background:var(--surface);
-  page-break-after:always;
-  break-after:page;
+  page-break-after:always;break-after:page;
 }
 .page:last-child{page-break-after:auto;break-after:auto}
 
-/* Le fond V6 : deux radiales tres douces sur la surface creme. */
 .page-recto{
   background:
     radial-gradient(58mm 58mm at 4% 3%, rgba(0,8,207,.045), transparent 66%),
-    radial-gradient(70mm 70mm at 98% 30%, rgba(138,147,255,.10), transparent 70%),
+    radial-gradient(70mm 70mm at 98% 28%, rgba(138,147,255,.10), transparent 70%),
     var(--surface);
 }
 .page-verso{
   background:
     radial-gradient(64mm 64mm at 100% 2%, rgba(0,8,207,.040), transparent 68%),
-    radial-gradient(56mm 56mm at 0% 74%, rgba(138,147,255,.09), transparent 70%),
+    radial-gradient(56mm 56mm at 0% 72%, rgba(138,147,255,.09), transparent 70%),
     var(--surface);
 }
 
 .bande{padding-left:var(--marge);padding-right:var(--marge)}
 
-/* ── Echelle editoriale, calee en points pour le print ── */
-.t-hero{font-size:37pt;font-weight:780;letter-spacing:-.045em;line-height:.98;margin:0;color:var(--ink)}
-.t-display{font-size:18.5pt;font-weight:740;letter-spacing:-.032em;line-height:1.08;margin:0;color:var(--ink)}
-.t-h1{font-size:14pt;font-weight:720;letter-spacing:-.028em;line-height:1.14;margin:0;color:var(--ink)}
-.t-h3{font-size:11pt;font-weight:700;letter-spacing:-.022em;line-height:1.2;margin:0;color:var(--ink)}
-.t-lead{font-size:10.4pt;font-weight:400;line-height:1.42;margin:0;color:var(--ink-2)}
-.t-body{font-size:9pt;font-weight:400;line-height:1.46;margin:0;color:var(--ink-2)}
-.t-sm{font-size:8.1pt;font-weight:400;line-height:1.4;margin:0;color:var(--ink-2)}
+/* ── Echelle editoriale ── */
+.t-hero{font-size:36pt;font-weight:780;letter-spacing:-.045em;line-height:.98;margin:0;color:var(--ink)}
+.t-display{font-size:19pt;font-weight:740;letter-spacing:-.035em;line-height:1.06;margin:0;color:var(--ink)}
+.t-h1{font-size:13.5pt;font-weight:720;letter-spacing:-.028em;line-height:1.14;margin:0;color:var(--ink)}
+.t-h3{font-size:10.5pt;font-weight:700;letter-spacing:-.022em;line-height:1.2;margin:0;color:var(--ink)}
+.t-lead{font-size:11pt;font-weight:400;line-height:1.38;margin:0;color:var(--ink-2)}
+.t-sm{font-size:8.4pt;font-weight:400;line-height:1.38;margin:0;color:var(--ink-2)}
 .t-caption{font-size:7.2pt;font-weight:400;line-height:1.35;margin:0;color:var(--ink-3)}
-.surtitre{
-  font-size:7pt;font-weight:640;letter-spacing:.15em;text-transform:uppercase;
-  color:var(--ink-3);margin:0;
-}
+.surtitre{font-size:7pt;font-weight:640;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-3);margin:0}
 .attenue{color:var(--ink-3)}
 
-.sur-sombre .t-hero,.sur-sombre .t-display,.sur-sombre .t-h1,.sur-sombre .t-h3{color:#fff}
-.sur-sombre .t-lead,.sur-sombre .t-body,.sur-sombre .t-sm{color:var(--on-dark-2)}
-.sur-sombre .surtitre,.sur-sombre .t-caption,.sur-sombre .attenue{color:var(--on-dark-3)}
+.sur-sombre .t-display,.sur-sombre .t-h1,.sur-sombre .t-h3{color:#fff}
+.sur-sombre .t-sm{color:var(--on-dark-2)}
+.sur-sombre .surtitre,.sur-sombre .t-caption{color:var(--on-dark-3)}
 
-/* ── En-tete de page ── */
-.entete{
-  display:flex;align-items:center;justify-content:space-between;
-  padding-top:13mm;padding-bottom:5mm;
-}
-.page-verso .entete{padding-top:10mm;padding-bottom:4mm}
-.entete .logo{width:23mm;height:auto;display:block}
+/* ── En-tete ── */
+.entete{display:flex;align-items:center;justify-content:space-between;padding-top:13mm;padding-bottom:6mm}
+.page-verso .entete{padding-top:12mm;padding-bottom:5mm}
+.entete .logo{width:23mm}
 .entete .logo svg{width:100%;height:auto;display:block}
 .entete-droite{text-align:right}
 
-/* ── HERO recto ── */
-.hero{padding-top:5mm}
-.hero .t-hero{max-width:152mm}
-.hero .t-lead{max-width:114mm;margin-top:5.5mm}
+/* ══════════ LE SCHEMA DU RECTO : ce qui parait, ce que ca touche ══════════ */
+.schema{position:relative;margin-top:10mm}
+.schema-boite{display:grid;grid-template-columns:1fr 30mm 1fr;align-items:start}
+.schema-col{display:flex;flex-direction:column;gap:3.2mm}
+.schema-titre{margin-bottom:2.6mm}
 
-/* ── Les trois chiffres, filets porteurs facon harvey.ai ── */
-.chiffres{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  margin-top:8.5mm;border-top:1px solid var(--border);
+.parution{
+  background:var(--raised);border:1px solid var(--border);border-radius:2.6mm;
+  padding:3.4mm 3.6mm;box-shadow:0 .2mm .6mm rgba(8,9,59,.03);
 }
-.chiffres > div{padding:4.4mm 0 4.6mm;border-right:1px solid var(--border)}
-.chiffres > div:first-child{padding-right:6mm}
-.chiffres > div:not(:first-child){padding-left:6mm;padding-right:6mm}
+.parution .autorite{display:block;font-size:6.6pt;font-weight:660;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
+.parution .texte{display:block;margin-top:1mm;font-size:8.8pt;line-height:1.3;color:var(--ink)}
+.parution.hors{opacity:.55}
+.parution.hors .texte{color:var(--ink-2)}
+
+.traits{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.traits line.touche{stroke:var(--blue);stroke-width:1.1}
+.traits line.hors{stroke:rgba(26,26,26,.22);stroke-width:1;stroke-dasharray:2.2 2.2}
+
+.fiche{background:var(--raised);border:1px solid var(--border);border-radius:2.6mm;overflow:hidden;box-shadow:0 .4mm 1.4mm rgba(8,9,59,.05), 0 5mm 14mm rgba(8,9,59,.06)}
+.fiche-produit{display:flex;align-items:center;gap:3.6mm;padding:3.6mm}
+.fiche-produit img{width:16mm;height:16mm;object-fit:contain;background:var(--surface);border-radius:1.6mm;padding:1.2mm;flex:none}
+.fiche-nom{font-size:9.6pt;font-weight:680;letter-spacing:-.02em;color:var(--ink);line-height:1.2}
+.fiche-ref{margin-top:.6mm;font-size:7.4pt;color:var(--ink-3)}
+.fiche-ligne{
+  display:flex;align-items:center;justify-content:space-between;gap:3mm;
+  padding:3mm 3.6mm;border-top:1px solid var(--border);font-size:8.4pt;color:var(--ink-2);
+}
+.marqueur{font-size:7pt;font-weight:660;padding:.8mm 2.2mm;border-radius:9999px;white-space:nowrap}
+.m-couvert{color:#0D6E44;background:rgba(13,110,68,.10)}
+.m-manquant{color:#8A5A00;background:rgba(138,90,0,.12)}
+.fiche-compte{padding:3mm 3.6mm;border-top:1px solid var(--border);background:var(--surface);font-size:7.6pt;color:var(--ink-2)}
+.fiche-compte b{color:var(--ink);font-weight:700}
+
+/* ── Les trois chiffres ── */
+.chiffres{display:grid;grid-template-columns:repeat(3,1fr);margin-top:11mm;border-top:1px solid var(--border)}
+.chiffres > div{padding:4mm 0 4.2mm;border-right:1px solid var(--border)}
+.chiffres > div:not(:first-child){padding-left:6mm}
+.chiffres > div:not(:last-child){padding-right:6mm}
 .chiffres > div:last-child{border-right:0}
-.chiffres b{
-  display:block;font-size:23pt;font-weight:760;letter-spacing:-.04em;
-  line-height:1;color:var(--ink);
-}
-.chiffres span{display:block;margin-top:1.8mm;font-size:8pt;color:var(--ink-2);line-height:1.3}
+.chiffres b{display:block;font-size:22pt;font-weight:760;letter-spacing:-.04em;line-height:1;color:var(--ink)}
+.chiffres span{display:block;margin-top:1.6mm;font-size:7.8pt;color:var(--ink-2);line-height:1.3}
 
-/* ── LE CHAMP PROFOND, une seule fois par page ── */
-.profond{
-  position:relative;
-  background:linear-gradient(155deg,var(--deep-2) 0%,var(--deep) 62%);
-  color:#fff;
-  overflow:hidden;
-}
-.profond::after{
-  content:'';position:absolute;inset:0;
-  background:radial-gradient(60mm 40mm at 88% 8%, rgba(77,87,255,.20), transparent 70%);
-  pointer-events:none;
-}
-.profond > *{position:relative;z-index:1}
+/* ── Mission et vision, une ligne chacune ── */
+.credo{display:grid;grid-template-columns:1fr 1fr;gap:9mm;margin-top:9mm}
+.credo section{border-top:2px solid var(--ink);padding-top:3mm}
+.credo .surtitre{margin-bottom:2mm}
+.credo p{margin:0;font-size:9.4pt;font-weight:600;letter-spacing:-.015em;line-height:1.3;color:var(--ink)}
 
-/* La masse et l'unique : un seul element colore, il porte son marquage. */
-.masse-bloc{padding:9mm var(--marge) 9.5mm}
-.masse-entete{display:flex;align-items:flex-end;justify-content:space-between;gap:10mm;margin-bottom:6.5mm}
-.masse-entete .t-h1{max-width:106mm}
-.masse-entete .t-sm{max-width:54mm;text-align:right}
-
-.masse{display:grid;grid-template-columns:repeat(26,minmax(0,1fr));gap:1.5mm}
-.masse i{display:block;height:4.4mm;border-radius:1.1mm;background:var(--mass)}
-.masse i:nth-child(3n){background:var(--mass-2)}
-.masse i.trouve{background:var(--signal);box-shadow:0 0 0 .7mm rgba(77,87,255,.30)}
-
-.marquage{
-  display:flex;align-items:center;gap:4mm;margin-top:6mm;
-  padding-top:5mm;border-top:1px solid var(--border-dark);
-}
-.marquage .puce{flex:0 0 auto;width:4.4mm;height:4.4mm;border-radius:1.1mm;background:var(--signal)}
-.marquage .texte{flex:1 1 auto}
-.marquage .ref{display:block;font-size:9.4pt;font-weight:680;letter-spacing:-.02em;color:#fff;line-height:1.25}
-.marquage .meta{display:block;margin-top:1.2mm;font-size:7.6pt;color:var(--on-dark-3);line-height:1.3}
-.marquage .date{flex:0 0 auto;text-align:right;padding-left:5mm;border-left:1px solid var(--border-dark)}
-.marquage .date b{display:block;font-size:11pt;font-weight:700;letter-spacing:-.03em;color:#fff;line-height:1.1}
-.marquage .date span{display:block;margin-top:1mm;font-size:7pt;color:var(--on-dark-3)}
-
-/* ── Mission / vision ── */
-.duo{display:grid;grid-template-columns:1fr 1fr;gap:10mm;padding-top:8.5mm}
-.duo section{border-top:2px solid var(--ink);padding-top:4mm}
-.duo .surtitre{margin-bottom:3mm}
-.duo .t-h3{margin-bottom:2.6mm}
-
-/* ── Pied de page ── */
+/* ── Pied ── */
 .pied{
   position:absolute;left:0;right:0;bottom:0;
   display:flex;align-items:flex-end;justify-content:space-between;gap:8mm;
@@ -195,87 +168,95 @@ body{
 .pied .t-caption{max-width:104mm}
 .pied .t-caption:last-child{max-width:70mm;text-align:right}
 
-/* ── VERSO : les quatre briques ── */
-.briques{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin-top:5mm}
-.brique{
-  background:var(--raised);
-  border:1px solid var(--border);
-  border-radius:4mm;
-  padding:4.8mm 5mm 5mm;
-  box-shadow:0 .3mm .8mm rgba(8,9,59,.035), 0 4mm 11mm rgba(8,9,59,.055);
+/* ══════════ VERSO : quatre produits, une ligne chacun ══════════ */
+.produits{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm;margin-top:6mm}
+.produit{
+  background:var(--raised);border:1px solid var(--border);border-radius:3.4mm;
+  padding:5mm 4.6mm 5.4mm;box-shadow:0 .3mm .8mm rgba(8,9,59,.035), 0 4mm 11mm rgba(8,9,59,.05);
 }
-.brique .rang{display:flex;align-items:baseline;justify-content:space-between;gap:4mm;margin-bottom:1.8mm}
-.brique .num{font-size:7pt;font-weight:660;letter-spacing:.13em;color:var(--ink-3)}
-.brique .peine{
-  margin:0 0 2.2mm;padding-left:2.6mm;border-left:1.5px solid var(--blue);
-  font-size:8pt;font-weight:560;line-height:1.3;color:var(--ink);
-}
-.brique ul{margin:0;padding:0;list-style:none}
-.brique li{
-  position:relative;padding-left:3.8mm;margin-bottom:1.5mm;
-  font-size:7.8pt;line-height:1.3;color:var(--ink-2);
-}
-.brique li:last-child{margin-bottom:0}
-.brique li::before{
-  content:'';position:absolute;left:0;top:1.3mm;
-  width:1.3mm;height:1.3mm;border-radius:50%;background:rgba(26,26,26,.24);
-}
+.produit .picto{display:block;width:11mm;height:11mm;margin-bottom:3.4mm}
+.produit .picto svg{width:100%;height:100%;display:block}
+.produit .t-h3{min-height:9mm;margin-bottom:2mm}
+.produit p{margin:0;font-size:8.3pt;line-height:1.36;color:var(--ink-2)}
 
-/* ── La chaine, quatre temps ── */
-.chaine{display:grid;grid-template-columns:repeat(4,1fr);margin-top:5.5mm;border-top:1px solid var(--border)}
-.chaine > div{padding:3.6mm 4.2mm 3.4mm 0}
-.chaine > div + div{padding-left:4.4mm;border-left:1px solid var(--border)}
-.chaine .etape{font-size:6.8pt;font-weight:660;letter-spacing:.13em;color:var(--ink-3);margin:0 0 1.8mm}
-.chaine .t-h3{font-size:9.6pt;margin-bottom:1.2mm}
-.chaine .t-sm{font-size:7.5pt;line-height:1.32}
+/* ── LE SCHEMA DE LA CHAINE ── */
+.chaine{display:grid;grid-template-columns:repeat(4,1fr);margin-top:8mm}
+.chaine-etape{position:relative;padding-right:9mm}
+.chaine-etape + .chaine-etape{padding-left:7mm}
+.chaine-etape .rond{
+  display:flex;align-items:center;justify-content:center;
+  width:7mm;height:7mm;border-radius:50%;margin-bottom:2.8mm;
+  border:1px solid var(--border);background:var(--raised);
+  font-size:7pt;font-weight:700;color:var(--ink-2);
+}
+.chaine-etape.actif .rond{border-color:var(--blue);color:var(--blue)}
+.chaine-etape .t-h3{min-height:8.4mm;margin-bottom:1.6mm}
+.chaine-etape p{margin:0;font-size:8.1pt;line-height:1.34;color:var(--ink-2)}
+.chaine-fleche{position:absolute;top:2.4mm;right:2.2mm;display:block;width:5mm;height:2.4mm}
+.chaine-fleche svg{width:100%;height:100%;display:block}
+.chaine-etape:last-child .chaine-fleche{display:none}
 
-/* ── Le bloc profond du verso ── */
-.verso-profond{margin-top:6mm;padding:6.4mm 7mm 6.8mm;border-radius:5mm}
-.verso-profond .grille{display:grid;grid-template-columns:1fr 1fr;gap:8mm;align-items:start}
-.verso-profond .arret{
-  margin-top:3.2mm;padding:3mm 3.4mm;border-radius:3mm;
-  background:rgba(255,255,255,.055);border:1px solid var(--border-dark);
+/* ── LE CHAMP PROFOND, une seule fois par page ── */
+.profond{
+  position:relative;color:#fff;overflow:hidden;
+  background:linear-gradient(155deg,var(--deep-2) 0%,var(--deep) 62%);
 }
-.verso-profond .arret .etiquette{
-  display:inline-block;margin-bottom:2.4mm;padding:.9mm 2.6mm;border-radius:9999px;
-  background:rgba(77,87,255,.20);border:1px solid rgba(77,87,255,.42);
-  font-size:6.8pt;font-weight:660;letter-spacing:.06em;color:#C7CBFF;
+.profond::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(60mm 40mm at 88% 6%, rgba(77,87,255,.20), transparent 70%);
 }
-.citation{
-  margin:0;font-size:7.5pt;line-height:1.42;color:var(--on-dark-2);
-  padding-left:3.6mm;border-left:1px solid var(--border-dark);
-}
-.citation-nom{margin-top:2.8mm;padding-left:3.6mm}
-.citation-nom b{display:block;font-size:8.6pt;font-weight:680;color:#fff;letter-spacing:-.015em}
-.citation-nom span{display:block;margin-top:.8mm;font-size:7.2pt;color:var(--on-dark-3)}
+.profond > *{position:relative;z-index:1}
 
-/* ── Pied du verso : contact et QR ── */
-.pied-verso{position:absolute;left:0;right:0;bottom:0;padding:0 var(--marge) 6mm}
-.pied-contact{
-  display:flex;align-items:center;justify-content:space-between;gap:7mm;
-  padding-top:4.2mm;border-top:1px solid var(--border);
-}
-.contact-lignes{display:flex;gap:8mm;flex:1 1 auto;min-width:0}
-.contact-lignes .cle{font-size:6.9pt;font-weight:640;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3);margin:0 0 1.4mm}
-.contact-lignes .val{margin:0;font-size:8.6pt;font-weight:600;color:var(--ink);letter-spacing:-.01em;line-height:1.3}
-.contact-lignes .val small{display:block;font-size:7.4pt;font-weight:400;color:var(--ink-2);letter-spacing:0;margin-top:.6mm}
+.bloc-masse{margin-top:8mm;border-radius:5mm;padding:6.6mm 7mm 6.4mm}
+.masse-entete{display:flex;align-items:flex-end;justify-content:space-between;gap:9mm;margin-bottom:5.4mm}
+.masse-entete .t-h1{max-width:100mm}
+.masse-entete .t-caption{max-width:52mm;text-align:right}
 
-.qr{display:flex;align-items:center;gap:4mm;flex:0 0 auto}
-.qr-cadre{width:17.5mm;height:17.5mm;padding:1.4mm;border-radius:2.6mm;background:#fff;border:1px solid var(--border)}
+.masse{display:grid;grid-template-columns:repeat(24,minmax(0,1fr));gap:1.4mm}
+.masse i{display:block;height:4mm;border-radius:1mm;background:var(--mass)}
+.masse i:nth-child(3n){background:var(--mass-2)}
+.masse i.trouve{background:var(--signal);box-shadow:0 0 0 .6mm rgba(77,87,255,.32)}
+
+.marquage{display:flex;align-items:center;gap:3.6mm;margin-top:5mm;padding-top:4.4mm;border-top:1px solid var(--border-dark)}
+.marquage .puce{flex:0 0 auto;width:3.8mm;height:3.8mm;border-radius:1mm;background:var(--signal)}
+.marquage .texte{flex:1 1 auto}
+.marquage .ref{display:block;font-size:9pt;font-weight:680;letter-spacing:-.02em;color:#fff;line-height:1.25}
+.marquage .meta{display:block;margin-top:1mm;font-size:7.2pt;color:var(--on-dark-3);line-height:1.3}
+.marquage .date{flex:0 0 auto;text-align:right;padding-left:4.4mm;border-left:1px solid var(--border-dark)}
+.marquage .date b{display:block;font-size:10.5pt;font-weight:700;letter-spacing:-.03em;color:#fff;line-height:1.1}
+.marquage .date span{display:block;margin-top:.8mm;font-size:6.8pt;color:var(--on-dark-3)}
+
+/* ── L'arret de la machine, la citation, le contact ── */
+.pied-verso{position:absolute;left:0;right:0;bottom:0;padding:0 var(--marge) 7mm}
+.deux{display:grid;grid-template-columns:1fr 1fr;gap:9mm;padding-top:5mm;border-top:1px solid var(--border)}
+.deux-verso{grid-template-columns:1fr}
+.deux-verso .citation{max-width:150mm}
+.arret{margin-top:6mm;padding:4mm 4.4mm;border-radius:3mm;background:rgba(0,8,207,.035);border:1px solid rgba(0,8,207,.14);max-width:126mm}
+.arret .etiquette{
+  display:inline-block;margin-bottom:2.2mm;padding:.9mm 2.6mm;border-radius:9999px;
+  background:rgba(0,8,207,.08);border:1px solid rgba(0,8,207,.28);
+  font-size:6.8pt;font-weight:680;letter-spacing:.05em;color:var(--blue);
+}
+.arret p{margin:0;font-size:8pt;line-height:1.36;color:var(--ink-2)}
+.citation{margin:0;font-size:8pt;line-height:1.38;color:var(--ink-2);padding-left:3.4mm;border-left:1.5px solid var(--border)}
+.citation-nom{margin:2.2mm 0 0;padding-left:3.4mm;font-size:7.4pt;color:var(--ink-3)}
+.citation-nom b{color:var(--ink);font-weight:680;font-size:8pt;letter-spacing:-.015em}
+
+.contact{display:flex;align-items:center;justify-content:space-between;gap:8mm;margin-top:6mm;padding-top:4.4mm;border-top:1px solid var(--border)}
+.contact-lignes{display:flex;gap:9mm}
+.contact-lignes .cle{margin:0 0 1.2mm;font-size:6.8pt;font-weight:640;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3)}
+.contact-lignes .val{margin:0;font-size:8.6pt;font-weight:620;color:var(--ink);letter-spacing:-.01em;line-height:1.3}
+.contact-lignes .val small{display:block;margin-top:.6mm;font-size:7.2pt;font-weight:400;letter-spacing:0;color:var(--ink-2)}
+.qr{display:flex;align-items:center;gap:3.6mm;flex:0 0 auto}
+.qr-cadre{width:17mm;height:17mm;padding:1.4mm;border-radius:2.4mm;background:#fff;border:1px solid var(--border)}
 .qr-cadre svg{width:100%;height:100%;display:block}
-.qr-texte{text-align:left;max-width:34mm}
 .qr-texte b{display:block;font-size:8.4pt;font-weight:680;color:var(--ink);letter-spacing:-.015em}
-.qr-texte span{display:block;margin-top:1mm;font-size:7pt;color:var(--ink-3);line-height:1.3}
+.qr-texte span{display:block;margin-top:.8mm;font-size:7pt;color:var(--ink-3);line-height:1.3}
 
-/* ── Signature de bas de verso ── */
-.signature{
-  display:flex;align-items:flex-end;justify-content:space-between;
-  margin-top:3.4mm;
-}
+.signature{display:flex;align-items:flex-end;justify-content:space-between;margin-top:4mm}
 .signature .mot{width:11mm;opacity:.12}
 .signature .mot svg{width:100%;height:auto;display:block}
 
-/* ── Ecran seulement : deux feuilles posees ── */
 @media screen{
   body{padding:12mm 0;display:flex;flex-direction:column;align-items:center;gap:10mm}
   .page{box-shadow:0 6mm 24mm rgba(0,0,0,.22)}
@@ -295,64 +276,81 @@ body{
     </div>
   </div>
 
-  <div class="bande hero">
+  <div class="bande">
     <h1 class="t-hero">Sell anywhere.<br><span class="attenue">Comply everywhere.</span></h1>
-    <p class="t-lead">
-      One product can carry more than a hundred rules across the markets it sells in. Cleo reads the
-      official texts, ties every rule to your own references, and tells you what changes before the
-      deadline reaches you.
+    <p class="t-lead" style="max-width:118mm;margin-top:5mm">
+      Authorities publish every day. Cleo tells you which of it touches your product, and by when.
     </p>
+
+    <!-- LE SCHEMA. Les quatre parutions et les verdicts sont ceux du radar de
+         l'accueil V6 : rien d'invente ici. Les traits sont traces au chargement. -->
+    <div class="schema" id="schema">
+      <div class="schema-boite">
+        <div class="schema-col">
+          <p class="surtitre schema-titre">What gets published</p>
+          <div class="parution" data-cible="0">
+            <span class="autorite">CPSC · United States</span>
+            <span class="texte">CPSIA, section 101(a), lead content</span>
+          </div>
+          <div class="parution" data-cible="1">
+            <span class="autorite">ECHA · European Union</span>
+            <span class="texte">REACH, Annex XVII</span>
+          </div>
+          <div class="parution" data-cible="2">
+            <span class="autorite">OEHHA · California</span>
+            <span class="texte">Proposition 65</span>
+          </div>
+          <div class="parution hors">
+            <span class="autorite">FDA · United States</span>
+            <span class="texte">21 CFR 101, food labelling</span>
+          </div>
+        </div>
+
+        <div></div>
+
+        <div class="schema-col">
+          <p class="surtitre schema-titre">Your reference</p>
+          <div class="fiche">
+            <div class="fiche-produit">
+              <img src="{{PRODUIT}}" alt="">
+              <div>
+                <div class="fiche-nom">Kids straight jeans</div>
+                <div class="fiche-ref">DNM-4412</div>
+              </div>
+            </div>
+            <div class="fiche-ligne" data-ligne="0"><span>CPSIA, lead</span><span class="marqueur m-couvert">Covered</span></div>
+            <div class="fiche-ligne" data-ligne="1"><span>REACH, Annex XVII</span><span class="marqueur m-couvert">Covered</span></div>
+            <div class="fiche-ligne" data-ligne="2"><span>Proposition 65</span><span class="marqueur m-manquant">Missing data</span></div>
+            <div class="fiche-compte"><b>3</b> of 4 publications touch this reference</div>
+          </div>
+        </div>
+      </div>
+      <svg class="traits" aria-hidden="true"></svg>
+    </div>
+
+    <div class="arret">
+      <span class="etiquette">Missing data</span>
+      <p>Proposition 65 needs an input this file does not carry. The answer names the missing field
+      instead of filling the gap. We publish how a rule is checked, not only what it answers.</p>
+    </div>
 
     <div class="chiffres">
       <div><b>106</b><span>countries covered</span></div>
       <div><b>25,000</b><span>regulations indexed</span></div>
       <div><b>19,000</b><span>regulatory authorities followed</span></div>
     </div>
-    <p class="t-caption" style="margin-top:3mm;text-align:right">Coverage figures published by Cleo Labs.</p>
-  </div>
+    <p class="t-caption" style="margin-top:2.6mm;text-align:right">Coverage figures published by Cleo Labs.</p>
 
-  <!-- La masse et l'unique : une seule grille, un seul element colore,
-       et il porte son marquage (article + date d'application). -->
-  <div class="profond masse-bloc sur-sombre" style="margin-top:8.5mm">
-    <div class="masse-entete">
-      <h2 class="t-h1">Authorities publish continuously. A handful of it lands on your catalogue.</h2>
-      <p class="t-sm">Cleo names the one that applies, quotes its article, and dates it.</p>
+    <div class="credo">
+      <section>
+        <p class="surtitre">Mission</p>
+        <p>Turn the rule into something a machine can act on.</p>
+      </section>
+      <section>
+        <p class="surtitre">Vision</p>
+        <p>Compliance as an infrastructure layer: current, sourced, callable.</p>
+      </section>
     </div>
-
-    <div class="masse">{{MASSE}}</div>
-
-    <div class="marquage">
-      <span class="puce"></span>
-      <span class="texte">
-        <span class="ref">Regulation (EU) 2023/988, Article 19(d)</span>
-        <span class="meta">General Product Safety Regulation · what a distance offer must show, in the language the Member State sets</span>
-      </span>
-      <span class="date">
-        <b>13 Dec 2024</b>
-        <span>applies since</span>
-      </span>
-    </div>
-  </div>
-
-  <div class="bande duo">
-    <section>
-      <p class="surtitre">Mission</p>
-      <h3 class="t-h3">Turn the rule into something a machine can act on.</h3>
-      <p class="t-body">
-        Every other function of the company runs on structured data. Product compliance still runs on
-        documents read by hand. We encode the obligation itself and keep the wording of the official
-        source with it, so a team checks a product instead of rereading a text.
-      </p>
-    </section>
-    <section>
-      <p class="surtitre">Vision</p>
-      <h3 class="t-h3">Compliance as an infrastructure layer.</h3>
-      <p class="t-body">
-        Current, sourced, and callable from the systems you already run: the PLM, the product record,
-        the supplier questionnaire. You open a market because the answer is there, not because someone
-        found the time to look for it.
-      </p>
-    </section>
   </div>
 
   <div class="pied">
@@ -368,113 +366,124 @@ body{
     <span class="logo">{{LOGO_BLUE}}</span>
     <div class="entete-droite">
       <p class="surtitre">The offer</p>
-      <p class="t-caption" style="margin-top:1.4mm">Four products, one encoded rule base</p>
+      <p class="t-caption" style="margin-top:1.4mm">Four products, one rule base</p>
     </div>
   </div>
 
   <div class="bande">
-    <h2 class="t-display" style="max-width:142mm;font-size:16pt">
-      Four products on the same rule base. <span class="attenue">You start with the one you need first.</span>
-    </h2>
+    <h2 class="t-display" style="max-width:130mm">You start with the one you need first.</h2>
 
-    <div class="briques">
-
-      <article class="brique">
-        <div class="rang"><h3 class="t-h3">Regulatory Change</h3><span class="num">01</span></div>
-        <p class="peine">You hear about a deadline once it has passed.</p>
-        <ul>
-          <li>Official journals, market authorities and notified bodies, read every day</li>
-          <li>Each publication tied to the product range it touches</li>
-          <li>The application date, apart from the publication date, and the days you have left</li>
-        </ul>
+    <div class="produits">
+      <article class="produit">
+        <span class="picto">
+          <svg viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="5" width="16" height="4" rx="1" stroke="rgba(26,26,26,.30)" stroke-width="1.4"/>
+            <rect x="3" y="14" width="16" height="4" rx="1" stroke="#0008CF" stroke-width="1.7"/>
+            <rect x="3" y="23" width="16" height="4" rx="1" stroke="rgba(26,26,26,.30)" stroke-width="1.4"/>
+            <path d="M21 16h7m-2.6-2.8L28.2 16l-2.8 2.8" stroke="#0008CF" stroke-width="1.7"/>
+          </svg>
+        </span>
+        <h3 class="t-h3">Regulatory Change</h3>
+        <p>Every publication, tied to the range it touches, with its application date.</p>
       </article>
 
-      <article class="brique">
-        <div class="rang"><h3 class="t-h3">Research</h3><span class="num">02</span></div>
-        <p class="peine">The answer sits in an annex nobody has time to open.</p>
-        <ul>
-          <li>One product, one market, one question, asked in plain language</li>
-          <li>The answer quotes the article it comes from, annexes included</li>
-          <li>Every source opens on the official text, at the right paragraph</li>
-        </ul>
+      <article class="produit">
+        <span class="picto">
+          <svg viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 7h24v15H14l-6 5v-5H4z" stroke="rgba(26,26,26,.30)" stroke-width="1.4"/>
+            <path d="M10 13h12M10 17.5h7" stroke="rgba(26,26,26,.30)" stroke-width="1.4"/>
+            <path d="M22.5 17.5h3.5" stroke="#0008CF" stroke-width="1.9"/>
+          </svg>
+        </span>
+        <h3 class="t-h3">Research</h3>
+        <p>Ask in plain language. The answer quotes the article it comes from.</p>
       </article>
 
-      <article class="brique">
-        <div class="rang"><h3 class="t-h3">Compliance Data</h3><span class="num">03</span></div>
-        <p class="peine">Your PLM cannot read a regulation.</p>
-        <ul>
-          <li>The obligation encoded as a testable rule, with the source wording kept beside it</li>
-          <li>One verdict per reference, called from the systems you already run</li>
-          <li>The inputs a rule needs are named, so a supplier can answer them</li>
-        </ul>
+      <article class="produit">
+        <span class="picto">
+          <svg viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="12" cy="8" rx="8" ry="3.4" stroke="rgba(26,26,26,.30)" stroke-width="1.4"/>
+            <path d="M4 8v9c0 1.9 3.6 3.4 8 3.4s8-1.5 8-3.4V8" stroke="rgba(26,26,26,.30)" stroke-width="1.4"/>
+            <path d="M12 25h6" stroke="rgba(26,26,26,.30)" stroke-width="1.4"/>
+            <path d="M20 25h8m-2.8-2.8L28 25l-2.8 2.8" stroke="#0008CF" stroke-width="1.7"/>
+          </svg>
+        </span>
+        <h3 class="t-h3">Compliance Data</h3>
+        <p>One verdict per reference, called from the systems you already run.</p>
       </article>
 
-      <article class="brique">
-        <div class="rang"><h3 class="t-h3">Compliance as a Service</h3><span class="num">04</span></div>
-        <p class="peine">Some answers need a name under them.</p>
-        <ul>
-          <li>Our experts write, review and sign the analysis</li>
-          <li>They encode the rules your catalogue needs first</li>
-          <li>They stay on the file as the text is amended</li>
-        </ul>
+      <article class="produit">
+        <span class="picto">
+          <svg viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 4h13l7 7v17H6z" stroke="rgba(26,26,26,.30)" stroke-width="1.4"/>
+            <path d="M19 4v7h7" stroke="rgba(26,26,26,.30)" stroke-width="1.4"/>
+            <path d="M10 22c3-4 5 2 8-2.5s3 1.5 4 1.5" stroke="#0008CF" stroke-width="1.8"/>
+          </svg>
+        </span>
+        <h3 class="t-h3">Compliance as a Service</h3>
+        <p>Our experts encode the rules, review the analysis and sign it.</p>
       </article>
     </div>
 
+    <!-- LE SCHEMA DE LA CHAINE -->
     <div class="chaine">
-      <div>
-        <p class="etape">01 · Catalogue</p>
-        <h4 class="t-h3">Your references</h4>
-        <p class="t-sm">Product records, materials and markets, as you already keep them.</p>
+      <div class="chaine-etape">
+        <span class="rond">1</span>
+        <h4 class="t-h3">Your catalogue</h4>
+        <p>Product records, materials, markets. As you already keep them.</p>
+        <span class="chaine-fleche"><svg viewBox="0 0 20 8" fill="none"><path d="M0 4h18m-3.4-3.4L18 4l-3.4 3.4" stroke="rgba(26,26,26,.30)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
-      <div>
-        <p class="etape">02 · Mapping</p>
-        <h4 class="t-h3">Rules that apply</h4>
-        <p class="t-sm">Agents tie each reference to the texts in force for its markets.</p>
+      <div class="chaine-etape actif">
+        <span class="rond">2</span>
+        <h4 class="t-h3">Agents map it</h4>
+        <p>Each reference tied to the texts in force for its markets.</p>
+        <span class="chaine-fleche"><svg viewBox="0 0 20 8" fill="none"><path d="M0 4h18m-3.4-3.4L18 4l-3.4 3.4" stroke="rgba(26,26,26,.30)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
-      <div>
-        <p class="etape">03 · Verdict</p>
-        <h4 class="t-h3">Reference by reference</h4>
-        <p class="t-sm">Each encoded rule answers on the product, with the wording it used.</p>
+      <div class="chaine-etape">
+        <span class="rond">3</span>
+        <h4 class="t-h3">A verdict per rule</h4>
+        <p>With the source wording it was decided on.</p>
+        <span class="chaine-fleche"><svg viewBox="0 0 20 8" fill="none"><path d="M0 4h18m-3.4-3.4L18 4l-3.4 3.4" stroke="rgba(26,26,26,.30)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       </div>
-      <div>
-        <p class="etape">04 · Watch</p>
-        <h4 class="t-h3">What changes next</h4>
-        <p class="t-sm">An amendment to the text reopens the products it touches.</p>
-      </div>
-    </div>
-
-    <div class="profond verso-profond sur-sombre">
-      <div class="grille">
-        <div>
-          <p class="surtitre">Where the machine stops</p>
-          <h3 class="t-h1" style="margin-top:2.6mm;max-width:74mm;font-size:12.5pt">
-            We publish how a rule is checked, not only what it answers.
-          </h3>
-          <div class="arret">
-            <span class="etiquette">Missing data</span>
-            <p class="t-sm" style="margin:0">
-              When a rule needs an input the file does not carry, the answer says which input is
-              missing, field by field. The system states what it does not know instead of filling the
-              gap, and a human signature is recorded wherever one has been given.
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <p class="surtitre" style="margin-bottom:3.4mm">From a customer</p>
-          <blockquote class="citation">{{QUOTE_EN}}</blockquote>
-          <div class="citation-nom">
-            <b>Philippine Tamic</b>
-            <span>Product Compliance Operations Manager at Decathlon</span>
-          </div>
-        </div>
+      <div class="chaine-etape">
+        <span class="rond">4</span>
+        <h4 class="t-h3">The text stays watched</h4>
+        <p>An amendment reopens the products it touches.</p>
       </div>
     </div>
 
+    <!-- LA MASSE ET L'UNIQUE : un seul element colore, il porte son marquage -->
+    <div class="profond bloc-masse sur-sombre">
+      <div class="masse-entete">
+        <h3 class="t-h1">One rule out of thousands lands on your catalogue. We name it.</h3>
+        <p class="t-caption">Each encoded rule keeps the wording of its official source.</p>
+      </div>
+
+      <div class="masse">{{MASSE}}</div>
+
+      <div class="marquage">
+        <span class="puce"></span>
+        <span class="texte">
+          <span class="ref">Regulation (EU) 2023/988, Article 19(d)</span>
+          <span class="meta">General Product Safety Regulation · what a distance offer must show, in the language the Member State sets</span>
+        </span>
+        <span class="date">
+          <b>13 Dec 2024</b>
+          <span>applies since</span>
+        </span>
+      </div>
+    </div>
   </div>
 
   <div class="pied-verso">
-    <div class="pied-contact">
+    <div class="deux deux-verso">
+      <div>
+        <blockquote class="citation">{{QUOTE_EN}}</blockquote>
+        <p class="citation-nom"><b>Philippine Tamic</b> · Product Compliance Operations Manager at Decathlon</p>
+      </div>
+    </div>
+
+    <div class="contact">
       <div class="contact-lignes">
         <div>
           <p class="cle">Talk to us</p>
@@ -485,7 +494,6 @@ body{
           <p class="val">MARIA<small>Multi-Agent Regulatory Intelligence Architecture</small></p>
         </div>
       </div>
-
       <div class="qr">
         <div class="qr-cadre">{{QR}}</div>
         <div class="qr-texte">
@@ -494,12 +502,53 @@ body{
         </div>
       </div>
     </div>
+
     <div class="signature">
       <span class="mot">{{LOGO_INK}}</span>
       <p class="t-caption">Product Safety in the Age of AI · Brussels, 9 September 2026</p>
     </div>
   </div>
 </section>
+
+<script>
+/* Les traits du schema : mesures reelles au chargement, comme le radar du site.
+   Rien n'est place a la main, donc rien ne se decale quand un texte change. */
+(function () {
+  var schema = document.getElementById('schema')
+  if (!schema) return
+  var svg = schema.querySelector('.traits')
+  var base = schema.getBoundingClientRect()
+  svg.setAttribute('viewBox', '0 0 ' + base.width + ' ' + base.height)
+  svg.setAttribute('preserveAspectRatio', 'none')
+
+  var lignes = {}
+  schema.querySelectorAll('.fiche-ligne').forEach(function (l) { lignes[l.dataset.ligne] = l })
+  var fiche = schema.querySelector('.fiche').getBoundingClientRect()
+
+  schema.querySelectorAll('.parution').forEach(function (p) {
+    var r = p.getBoundingClientRect()
+    var cible = lignes[p.dataset.cible]
+    var x1 = r.right - base.left + 4
+    var y1 = r.top + r.height / 2 - base.top
+    var x2, y2, classe
+    if (cible) {
+      var c = cible.getBoundingClientRect()
+      x2 = fiche.left - base.left - 4
+      y2 = c.top + c.height / 2 - base.top
+      classe = 'touche'
+    } else {
+      x2 = x1 + (fiche.left - r.right) * 0.5
+      y2 = y1
+      classe = 'hors'
+    }
+    var line = document.createElementNS('http://www.w3.org/2000/svg', 'line')
+    line.setAttribute('x1', x1); line.setAttribute('y1', y1)
+    line.setAttribute('x2', x2); line.setAttribute('y2', y2)
+    line.setAttribute('class', classe)
+    svg.appendChild(line)
+  })
+})()
+</script>
 
 </body>
 </html>

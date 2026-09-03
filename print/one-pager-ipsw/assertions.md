@@ -13,9 +13,17 @@ Bruxelles, 9 septembre 2026. Public : industriels d'abord, régulateurs ensuite.
 Tiré à ~100 exemplaires.
 
 - Fabrication : `node construire.mjs` → `cleo-one-pager-a4.pdf` + `apercu-recto.png` + `apercu-verso.png`
-- Mesuré au navigateur en `media: print` : recto 266,9 mm de contenu sur 297, verso 249,4 mm,
-  0 élément coupé, 0 monospace, 1 seul élément coloré dans la masse, 1 seul champ profond par page.
-- PDF vérifié : 2 pages, MediaBox 209,9 × 297,0 mm, 593 ko.
+- Mesuré au navigateur en `media: print` : recto 260 mm de contenu sur 297, verso 215,9 mm,
+  0 élément coupé, 0 monospace, 1 seul élément coloré dans la masse, au plus 1 champ profond par page.
+- PDF vérifié : 2 pages, MediaBox 209,9 × 297,0 mm.
+
+## Le schéma du recto
+
+Les quatre parutions, le produit et les trois verdicts sont ceux du **radar de l'accueil V6**
+(`sortie/01-accueil.html`, direction B choisie par Naomie le 03/09/2026) : CPSIA section 101(a),
+REACH annexe XVII, Proposition 65, et 21 CFR 101 qui ne touche pas le produit. Rien d'inventé.
+Les traits sont tracés au chargement à partir des positions réelles, comme sur le site : un texte
+plus long ne les décale pas.
 
 ## Les chiffres
 
