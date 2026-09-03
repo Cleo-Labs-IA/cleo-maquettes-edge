@@ -1,0 +1,126 @@
+/* ════════════════════════════════════════════════════════════════
+   LANE D — ressources, blog, articles, Legal Data. 03/09/2026.
+   Concaténé après composants.css. N'agit que sur des composants de
+   cette famille (.article, .legal, .sommaire, .res-*, .blog-*, .atlas-*)
+   ou sur des classes créées ici. Aucune règle sur une balise nue.
+   Chaque bloc porte la mesure qui l'a décidé.
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── 1. LA MESURE DE LECTURE ──
+   Comptée EXACTEMENT le 03/09 (Range caractère par caractère sur la ligne
+   rendue, pas une estimation), à 1440 px, AVANT :
+     12-article  .article p        720 px, 16 px → 109 car. par ligne
+     22-legal    .legal p          752 px, 15 px → 103 car.
+     27-levee    .article p        760 px, 16 px → 107 car.
+     23-research .carte p.t-body   660 px, 15 px → 107 car.
+     26-legal    p.t-body          752 px, 15 px → 129 car.
+   La barre du chantier est 75. Dans Satoshi, un caractère de texte courant
+   mesure 0,39 em : 75 caractères en 16 px demandent une colonne de 470 px,
+   ce que la grille ne porte pas. La sortie est donc de MONTER le corps du
+   texte long, comme le font harvey.ai (18 px) et legora.com (17 px), et de
+   resserrer la colonne. 18 px sur 580 px rend 82 caractères, mesurés. */
+.article{max-width:580px}
+.article p,.article li{font-size:1.125rem; line-height:1.75}
+.article blockquote p{font-size:1.0625rem}
+/* Le bandeau d'un article : le titre a besoin de la largeur, son chapô non. */
+.article-tete{max-width:760px}
+.article-tete .t-body{max-width:500px}
+/* 22-legal : même traitement, le texte d'un contrat se lit comme un article. */
+.legal{max-width:500px}
+.legal p,.legal li{font-size:1rem; line-height:1.75}
+/* Le chapô d'une page légale ne prend pas la gouttière entière :
+   mesuré à 1 040 px sur 22-legal pour une ligne de trente caractères. */
+.legal-tete{max-width:640px}
+/* Les chapôs de section : ils vivaient hors .entete-section, bornés au cas
+   par cas en style= inline (560, 600, 620, 640, 660 px), donc bornés par
+   rien de commun. Mesurés jusqu'à 129 caractères par ligne en 15 px.
+   Une seule valeur, dans une classe : 500 px rend 84 caractères en 15 px. */
+.chapo{max-width:500px}
+.res-corps p.t-body,.res-corps p.t-caption,
+.res-corps .carte p.t-body,.res-corps .carte p.t-caption{max-width:500px}
+
+/* ── 2. L'ATLAS DE COUVERTURE (26-legal-data) ──
+   Mesuré à 390 px avant : 189 textes sous 14 px, dont 176 pastilles
+   .marqueur à 13 px, et une matrice de 900 px de large dont la colonne
+   des libellés sortait de l'écran dès le premier défilement. */
+@media (max-width:640px){
+  .atlas .marqueur,.atlas .badge{font-size:0.875rem; padding:4px 8px}
+}
+/* La colonne des libellés reste en place pendant que la matrice défile :
+   sans elle, à 390 px, les seize colonnes de marchés n'ont plus de ligne
+   à laquelle se rattacher. */
+.atlas-matrice th:first-child,
+.atlas-matrice td:first-child{position:sticky; left:0; z-index:2;
+  background:var(--c-surface); padding-right:16px}
+.atlas-matrice td:first-child::after{content:""; position:absolute; top:0; right:0;
+  bottom:0; width:1px; background:var(--c-border)}
+.atlas-matrice thead th:first-child{background:var(--c-surface)}
+/* Le tableau défile dans son conteneur, jamais la page : on le dit, et
+   seulement là où c'est vrai. */
+.atlas-defile{display:none}
+@media (max-width:1024px){ .atlas-defile{display:block} }
+/* Les notes de périmètre et de provenance sont du texte suivi, pas des
+   légendes : mesurées à 154 caractères par ligne, en 12 px, sur 752 px.
+   Elles montent au corps du texte et prennent une mesure. */
+.atlas-note{font-size:0.9375rem; line-height:1.6; max-width:500px}
+
+/* ── 3. LES TEXTES QUI TOMBAIENT SOUS 14 px SUR TÉLÉPHONE ──
+   Relevé à 390 px : .sommaire .titre 12 px, .article .source-citee 12 px,
+   les boutons .btn-sm des listes et des cartes 13 px, les intitulés des
+   formulaires 12 px. Le socle a déjà relevé .t-caption et .t-micro ;
+   ces quatre-là lui avaient échappé parce qu'ils vivent chez nous. */
+@media (max-width:640px){
+  .sommaire .titre,.res-nav .titre{font-size:0.875rem}
+  .article .source-citee{font-size:0.875rem}
+  .res-corps .btn-sm,.article .btn-sm,.liste-postes .btn-sm,
+  .ligne-liste .btn-sm,.res-carte .btn-sm{font-size:0.875rem}
+  .form-evenement label{font-size:0.875rem}
+}
+
+/* ── 4. LES CIBLES SOUS 40 px SUR TÉLÉPHONE ──
+   Relevé à 390 px : le premier onglet de la barre Ressources rendait
+   28 × 44 (« Tout »), le fil d'Ariane des pages filles 78 × 15, et les
+   pilules de renvoi d'un terme 105 × 38. */
+.fil-ariane a{min-height:24px; display:inline-flex; align-items:center}
+.renvois{display:flex; gap:8px; flex-wrap:wrap}
+.renvois .pilule{min-height:40px}
+/* La règle de téléphone vient APRÈS la règle de base : à égalité de
+   spécificité, c'est la dernière écrite qui rend. Mesuré : posée avant,
+   elle laissait le fil d'Ariane à 24 px de haut. */
+@media (max-width:640px){
+  .res-nav a{min-width:44px; justify-content:center}
+  .fil-ariane a{min-height:44px; padding-right:8px}
+  .renvois .pilule{min-height:44px}
+}
+
+/* ── 5. LE BLEU EST UNE COUCHE DE SIGNAL ──
+   Relevé le 03/09 : 45 noms de skills et 6 renvois d'article rendus en
+   #0008CF sur des éléments qui ne sont ni un lien, ni un bouton, ni un
+   état actif. Le bleu y désignait du texte, pas une action : il ne
+   désigne alors plus rien. Ils passent à l'encre ; l'action de la page
+   (installer, télécharger, demander) garde le bleu pour elle seule. */
+.skill-nom{color:var(--c-ink); font-weight:600; overflow-wrap:anywhere}
+.sur-sombre .skill-nom{color:var(--c-text-on-dark)}
+.ref-texte{color:var(--c-text-2); font-weight:600}
+.sur-sombre .ref-texte{color:var(--c-text-on-dark-2)}
+
+/* ── 5 bis. L'ACTION D'UNE CARTE SE CALE EN BAS ──
+   .res-carte .lien porte déjà margin-top:auto ; .cta-texte, non. Mesuré sur
+   17-modeles : les six « Demander le modèle » d'une même grille rendaient à
+   trois hauteurs différentes selon la longueur du renvoi au-dessus. */
+.res-carte .corps .cta-texte{margin-top:auto}
+
+/* ── 6. LES BLOCS QUI VIVAIENT EN style= INLINE ──
+   Une grille, une colonne, une rangée : dans une classe. */
+.liste-postes{display:flex; flex-direction:column; gap:14px}
+.rang-boutons{display:flex; gap:14px; flex-wrap:wrap; margin-top:28px}
+.rang-etat{display:flex; align-items:center; justify-content:space-between;
+  gap:20px; flex-wrap:wrap}
+
+/* ── 7. LE FIL DU BLOG (24-blog) ──
+   Le repère de mois porte la date et le nombre : à 390 px il tombait à
+   12 px comme toute étiquette. Ici il sert de séparateur de lecture dans
+   une liste de seize cartes, pas d'exergue : il se lit. */
+@media (max-width:640px){
+  .blog-grille .blog-mois .t-label{font-size:0.875rem}
+}

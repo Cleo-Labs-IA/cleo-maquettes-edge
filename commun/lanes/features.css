@@ -1,0 +1,68 @@
+/* ════════════════════════════════════════════════════════════════
+   LANE B — les trois pages feature (03 Regulatory Change, 07 Research,
+   08 Compliance Data), la demande d'accès (21) et la page 404.
+   Posée le 03/09/2026. Concaténée après composants.css.
+   Ne touche que des sélecteurs qui n'existent que sur ces pages.
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── LE BLOC « CE QUE X FAIT ».
+   Mesuré le 03/09 avant : deux colonnes cousues à la main, six puces à
+   gauche, sept à droite, donc une colonne qui s'arrête 130 px avant
+   l'autre ; et la note « Bon à savoir » large de 460 px seule dans une
+   largeur de 1040, soit 580 px de vide à sa droite.
+   Après : cinq groupes autonomes qui s'alignent par rangée, la note en
+   sixième cellule. Rien n'est réécrit, tout est rangé. ── */
+.bf-faits{display:grid; grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:52px 56px; align-items:start}
+.bf-faits > *{min-width:0}
+.bf-bloc > h3{margin:0 0 18px}
+.bf-bloc .coches{margin:0}
+
+/* La note ferme la grille. Elle est le seul élément coloré du bloc :
+   la masse des cinq groupes, l'unique. */
+.bf-note{border:1px solid var(--accent); border-radius:var(--r-md); padding:20px;
+  display:flex; gap:14px; align-items:flex-start; align-self:start}
+.bf-note-ico{width:32px; height:32px; border-radius:50%; background:var(--accent);
+  display:grid; place-items:center; flex:none}
+
+/* Une seule colonne sous 820 px : à deux colonnes, une puce de 60 signes
+   tombait sur quatre lignes. Le socle bascule .g2 à 640, ce bloc a besoin
+   d'air plus tôt parce que ses puces sont des phrases. */
+@media (max-width:820px){
+  .bf-faits{grid-template-columns:minmax(0,1fr); gap:40px}
+}
+
+/* ── LE CHAPÔ « POUR QUI ? ».
+   Mesuré à 820 px de large sur les trois pages, au-delà de la mesure de
+   lecture (le seuil de l'audit est 760). ── */
+.bf-intro{max-width:720px}
+
+/* ── LA CARTE D'APPEL.
+   Son unique ligne courait sur 690 px centrés : deux lignes courtes se
+   lisent d'un regard, une ligne de 690 px se balaie. ── */
+.bf-appel-txt{max-width:520px; margin:0 auto 24px}
+
+/* ── 21, DEMANDE D'ACCÈS.
+   Mesuré le 03/09 : la colonne de texte s'arrêtait 138 px au-dessus du
+   formulaire, tout le vide tombait sous elle. Centrées, les deux colonnes
+   se répondent. Sous 1024 px le socle repasse .duo en une colonne. ── */
+.p-demande .duo{align-items:center}
+.p-demande .duo > div:first-child{max-width:520px}
+@media (max-width:1024px){
+  .p-demande .duo{align-items:start}
+  .p-demande .duo > div:first-child{max-width:none}
+}
+
+/* L'exemple posé dans le champ. Mesuré le 03/09 au navigateur : le fond du
+   champ rend #262625, et le blanc à 0,45 dessus donne 4,25:1, sous le seuil de
+   4,5. À 0,52 il donne 5,18:1 (relevé sur la page construite). Le libellé, lui,
+   est déjà au bon cran : 7,82:1. */
+.p-demande .form-carte input::placeholder{color:rgba(255,255,255,0.52)}
+
+/* Le libellé de champ sur téléphone. Le socle remonte .t-caption, .t-micro et
+   .t-sm à 14 px sous 640 px mais laisse le libellé de formulaire à 12 px :
+   mesuré le 03/09 à 390 px, les cinq libellés de cette page rendaient 12 px.
+   Ils sont la seule légende d'un champ vide, ils doivent se lire. */
+@media (max-width:640px){
+  .p-demande .form-carte label{font-size:0.875rem}
+}

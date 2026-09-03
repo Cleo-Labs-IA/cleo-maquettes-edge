@@ -1,0 +1,180 @@
+/* ════════════════════════════════════════════════════════════════
+   LANE E — LE CADRE COMMUN (barre, méga-menus, menu sur téléphone, pied)
+   et les pages solutions 30 à 36.
+   Écrit le 03/09/2026. Chaque règle répond à une mesure prise au
+   navigateur, notée en commentaire. Rien de décoratif.
+   ════════════════════════════════════════════════════════════════ */
+
+/* ────────────────────────────────────────────────────────────────
+   1. LE MENU SUR TÉLÉPHONE S'OUVRAIT SUR 45 PIXELS.
+   Mesuré le 03/09 à 390 x 844, au clic sur .nav-burger : le panneau
+   passe bien à hidden=false, mais sa boîte rend 390 x 45 alors que
+   son contenu fait 1 615 px. Cause : .menu-mobile est en position
+   fixed À L'INTÉRIEUR de .nav, et .nav porte un backdrop-filter.
+   Un backdrop-filter crée un bloc conteneur pour les descendants
+   fixed : le panneau se calait donc sur la barre (61 px de haut),
+   pas sur la fenêtre — top:60 + bottom:0 dans une boîte de 61 px.
+   On rend le bloc conteneur à la fenêtre en retirant le flou le
+   temps que le menu est ouvert : la barre reste opaque puisque le
+   panneau blanc la prolonge. Mesuré après : 390 x 783.
+   ──────────────────────────────────────────────────────────────── */
+html.menu-ouvert .nav{
+  backdrop-filter:none; -webkit-backdrop-filter:none;
+  background:var(--c-white);
+}
+
+@media (max-width:1024px){
+  /* La barre mesure 61 px, bordure comprise : le panneau commençait
+     1 px trop haut et laissait voir le filet par-dessous. */
+  .menu-mobile{top:61px; padding-bottom:56px; overscroll-behavior:contain}
+  /* Les intertitres du panneau rendaient 12 px. Le seuil du chantier
+     est 14 px sur téléphone : l'approche se resserre, la taille monte. */
+  .mm-titre{font-size:0.875rem; letter-spacing:0.1em; padding:10px 0 6px}
+  /* Le filet du dernier groupe sert de séparation avant les actions :
+     en ajouter un second au-dessus de .mm-actions donnait deux traits
+     à 20 px l'un de l'autre (vu sur la capture du bas de panneau). */
+  .mm-actions{margin-top:4px; padding-top:24px}
+}
+
+/* Quand le panneau est ouvert, le bouton de démo apparaissait DEUX fois :
+   dans la barre et au bas du panneau, deux boutons bleus identiques à
+   l'écran (capture du 03/09). La barre ne garde que le logo et la croix,
+   le geste relevé sur legora.com et harvey.ai. */
+html.menu-ouvert .nav-fin .btn{display:none}
+
+/* Le bouton de démo de la barre rendait 12 px de texte sur téléphone
+   (règle .nav-fin .btn de composants.css, mesurée à 390 px). Il est
+   le seul mot lisible à côté du logo : il repasse à 14 px, sans
+   revenir à la coupure sur quatre lignes qui avait motivé la règle. */
+@media (max-width:640px){
+  .nav-fin .btn{font-size:0.875rem; padding:9px 16px}
+}
+
+/* Le logo rendait 77 x 22 px : la cible tactile la plus visitée de la
+   page était la plus petite. Elle passe à 44 px de haut sans bouger
+   d'un pixel à l'écran, le mot-symbole restant centré.
+   Sa taille vivait en style= inline dans le fragment, avec un
+   filter:brightness(0) invert(1) que .nav-logo img annulait déjà par
+   !important : deux règles qui se contredisaient en silence. */
+.nav-logo{min-height:44px}
+.nav-logo img{height:22px; width:auto}
+
+/* Dans un méga-menu, .mega-item centre son icône et son texte : quand une
+   entrée porte deux lignes de description et sa voisine une seule, leurs
+   titres ne sont plus sur la même ligne (mesuré le 03/09 sur « Produit » :
+   155 px contre 163). Une ligne d'entrées se lit par le haut. */
+.mega-item{align-items:flex-start}
+.mega-icone{margin-top:1px}
+
+/* ────────────────────────────────────────────────────────────────
+   2. LE PIED SUR TÉLÉPHONE MESURAIT 1 919 PIXELS.
+   Les cinq colonnes tombaient en une seule (règle .pied-colonnes de
+   composants.css à 640 px) : vingt-deux liens à 44 px empilés, deux
+   écrans et demi de pied pour une page qui en fait six. Deux colonnes
+   tiennent à 390 px (145 px par colonne, le plus long libellé
+   « Importateurs et distributeurs » se coupe en deux lignes).
+   ──────────────────────────────────────────────────────────────── */
+@media (max-width:640px){
+  .pied-colonnes{grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:var(--s-32) var(--s-16); padding-bottom:32px}
+  /* « Blog » rendait 28 px de large, « Skills » 30 : la hauteur était
+     bien à 44, la largeur non. */
+  .pied ul a{min-width:44px}
+  /* contact@cleolabs.co et « Réserver 30 minutes » rendaient 127 x 17. */
+  .pied-coordonnees a{min-height:44px; display:inline-flex; align-items:center}
+  .pied-coordonnees{gap:var(--s-24) var(--s-32)}
+  /* Le bas de pied rendait 12 px et posait le SIREN sur une ligne
+     seule poussée à droite par margin-left:auto. */
+  .pied-bas{flex-direction:column; align-items:flex-start; gap:4px; font-size:0.875rem}
+  .pied-bas span{margin-left:0 !important}
+  /* La signature n'est plus qu'un filet de 81 px sur téléphone : elle
+     coûte de la hauteur sans se lire. */
+  .signature-cleo{padding-top:24px}
+  .signature-cleo .wordmark{width:60%}
+}
+
+/* ────────────────────────────────────────────────────────────────
+   3. LES PAGES 30 À 36.
+   ──────────────────────────────────────────────────────────────── */
+
+/* Les étiquettes de section de ces sept pages rendaient 12 px sur
+   téléphone. La classe .surtitre est partagée par tout le site : on ne
+   la déplace pas, on marque les nôtres. */
+@media (max-width:640px){
+  .st-lisible{font-size:0.875rem; letter-spacing:0.1em}
+}
+
+/* 32, 33, 34, 35 — LES DEUX COLONNES DE TEXTE. Le composant .duo centre
+   ses colonnes (align-items:center) : quand l'une porte une ligne de
+   texte de plus que l'autre, les deux étiquettes de section ne sont plus
+   sur la même ligne. Mesuré le 03/09 sur 32 : 1 717 px contre 1 705, un
+   décalage de 12 px que l'œil lit comme une erreur de composition.
+   Deux colonnes de texte s'alignent par le haut. Le gap de 56 px vivait
+   en style= inline sur sept sections : il rentre dans la classe. */
+.duo-haut{align-items:start; gap:56px}
+.duo-serre{gap:56px}
+
+/* 32 — LE FLUX EN QUATRE ÉTAPES. La grille de .flux vaut trois colonnes
+   (elle a été écrite pour les trois étapes du Compliance service, sur
+   l'accueil) : la quatrième étape tombait seule sur une deuxième ligne,
+   et le fil qui relie les étapes pendait dans le vide à droite de la
+   troisième. Quatre colonnes, un fil qui va d'un bout à l'autre. */
+.flux-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.flux-4 .flux-etape{padding:28px 24px}
+/* Le rang rendait 11 px, le plus petit texte de la page. */
+.flux-4 .flux-rang{font-size:0.8125rem}
+@media (max-width:1180px){
+  .flux-4{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .flux-4 .flux-etape:nth-child(2n)::after{display:none}
+}
+@media (max-width:640px){
+  .flux-4{grid-template-columns:minmax(0,1fr)}
+  .flux-4 .flux-rang{font-size:0.875rem}
+}
+
+/* 33, 34, 35 — LA FICHE « UN CAS, TEL QU'IL REMONTE ». Le composant
+   .mesures pose le libellé et la valeur sur une même ligne, ce qui
+   marche en pleine largeur (30, 32, 36) et casse dans la colonne de
+   .duo : mesuré le 03/09, « Ce qui a bougé » y rendait sur QUATRE
+   lignes d'un mot chacune, la valeur à 32 px prenant toute la place.
+   Dans une colonne, le libellé passe au-dessus. */
+.mesures-fiche .ligne{flex-direction:column; align-items:flex-start; gap:6px; padding:18px 0}
+.mesures-fiche .libelle{flex:none}
+.mesures-fiche .valeur{font-size:1.25rem; line-height:1.35; letter-spacing:-0.01em}
+
+/* 31 — LE JOURNAL. Aucune règle ne portait la classe .journal : les
+   lignes se touchaient, bords arrondis contre bords arrondis, et les
+   entrées se lisaient par paquets de deux au lieu d'une par une.
+   Le paragraphe le plus large de la page rendait 888 px. */
+.journal{display:flex; flex-direction:column; gap:12px}
+.journal .blog-mois{margin:28px 0 6px}
+.journal .blog-mois:first-child{margin-top:0}
+.journal .ligne-liste{align-items:flex-start}
+.journal .ligne-liste .pilule{margin-top:2px}
+.journal .principal p{max-width:720px}
+@media (max-width:640px){
+  .journal .ligne-liste{flex-direction:column; gap:12px}
+  /* Les mois rendaient 12 px. */
+  .journal .mois-lisible{font-size:0.875rem; letter-spacing:0.1em}
+  .journal .blog-mois .t-caption{font-size:0.875rem}
+}
+
+/* 36 — LA MATRICE. Ses en-têtes portent leur propre taille (0,75 rem),
+   plus spécifique que la règle qui remonte les tableaux à 14 px sur
+   téléphone : ils rendaient 12 px. */
+@media (max-width:640px){
+  .matrice th{font-size:0.875rem}
+}
+/* La matrice fait 820 px de large au minimum : sous cette largeur elle
+   défile dans sa boîte, mais RIEN ne le disait. Mesuré le 03/09 à 390 px :
+   la troisième colonne était tranchée net au bord droit, sans dégradé ni
+   ombre, et le lecteur n'avait aucune raison de tenter le glissement.
+   Un voile au bord droit dit que la ligne continue. */
+.table-cadre{position:relative}
+@media (max-width:1024px){
+  .table-cadre::after{content:''; position:absolute; top:0; right:0; bottom:0; width:48px;
+    pointer-events:none; background:linear-gradient(to right, rgba(249,248,246,0), var(--c-surface))}
+}
+/* Le chapô du hero rendait 780 px de large, au-delà de la mesure de
+   lecture retenue pour le chantier (760). */
+.hero-mesure{max-width:720px}

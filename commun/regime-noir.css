@@ -219,3 +219,8 @@ body{background:var(--c-surface); color:var(--c-text)}
    composants.css : l'ordre suffit, pas besoin de !important. */
 .nav-item:hover .nav-declencheur{color:var(--c-periwinkle)}
 .mega-liste a:hover{color:var(--c-periwinkle)}
+
+/* Le bleu porté par une CLASSE bascule comme le bleu inline (lane A, 03/09 : .cta-texte
+   rendait 1,64:1 sur 01-accueil-noir). Les îlots clairs gardent le bleu de marque. */
+.cta-texte{color:var(--c-periwinkle)}
+.carte-claire .cta-texte,.ecran-app .cta-texte,.fiche .cta-texte,.flottant .cta-texte{color:var(--c-blue)}

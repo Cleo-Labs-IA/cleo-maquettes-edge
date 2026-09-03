@@ -32,7 +32,7 @@
   --c-text-3: rgba(0,0,0,0.54);
   --c-text-on-dark: #FFFFFF;
   --c-text-on-dark-2: rgba(255,255,255,0.64);
-  --c-text-on-dark-3: rgba(255,255,255,0.45);
+  --c-text-on-dark-3: rgba(255,255,255,0.52); /* 0,45 rendait 4,42:1 sur #0F0E0D, mesuré le 03/09 ; 0,52 rend 5,6:1 */
 
   /* ── Bordures, le filet de cleolabs.co ; --c-border 0,08 -> 0,13 le 27/08 (1,196 -> 1,347:1) ── */
   --c-border: rgba(0,0,0,0.13);

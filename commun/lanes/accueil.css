@@ -1,0 +1,195 @@
+/* ════════════════════════════════════════════════════════════════
+   LANE A — la page d'accueil, et elle seule.
+   Portée : 01-accueil, 01-accueil-en et leur variante 01-accueil-noir.
+   Chaque sélecteur est préfixé par un bloc que cette page possède
+   (.hero-produit, .champ-demo, .temoin-compact, .g-agents, .experts-*)
+   ou par une accroche posée dans la page (.acc-methode, #compliance-service).
+   Aucune règle sur une balise nue, aucune règle sur .flux ni .pipeline
+   nus : ces deux-là vivent aussi sur 03-offre, 26-legal-data,
+   32-plan-action, 23-research, 02-entreprise et 29-article-deel-en, que
+   d'autres lanes mesurent en ce moment.
+   ════════════════════════════════════════════════════════════════ */
+
+
+/* ── 1. L'ENCRE DES BADGES DANS L'INTERFACE DU HERO ──────────────
+   L'interface produit est une surface CLAIRE posée dans une section
+   .sur-sombre. .hero-produit rebascule déjà --c-text*, mais les trois
+   badges de statut sont peints par des règles .sur-sombre .m-* qui
+   servent des valeurs LITTÉRALES : elles gagnaient (0,2,0 contre 0,1,0)
+   et rendaient les variantes de champ profond sur une carte blanche.
+   Mesuré le 03/09/2026 sur 01-accueil, viewport 1440 :
+     .m-manquant  rgba(255,255,255,0.45) sur rgba(255,255,255,0.07) = 1,00:1
+                  — le badge « Donnée manquante » était littéralement absent
+     .m-couvert   #3FD08A sur rgba(63,208,138,0.13)                 = 1,81:1
+     .m-attente   #E0A63C sur rgba(224,166,60,0.13)                 = 1,97:1
+   On remet les jetons de statut du régime CLAIR (base.css:58-60), en
+   littéral et pas en var() : sur 01-accueil-noir, regime-noir.css
+   redéfinit --c-pass et --c-risk en variantes de champ profond, et une
+   var() nous y ramènerait au même défaut. Même manœuvre que
+   regime-noir.css:96-98 pour .fiche.
+   .m-manquant passe de --c-text-3 (4,31:1) à --c-text-2 : à 13 px sur
+   un aplat gris, 4,31 ne passe pas la barre de 4,5. ── */
+.sur-sombre .hero-produit .m-couvert{background:rgba(13,110,68,0.09); color:#0D6E44}
+.sur-sombre .hero-produit .m-attente{background:rgba(138,90,0,0.10); color:#8A5A00}
+.sur-sombre .hero-produit .m-manquant{background:rgba(0,0,0,0.05); color:rgba(0,0,0,0.62)}
+/* La pastille verte du verdict, même raison : var(--c-pass) vaut #3FD08A
+   sur 01-accueil-noir, soit une pastille claire sur une carte blanche. */
+.sur-sombre .hero-produit .pl-pastille{background:#0D6E44}
+
+
+/* ── 2. LE CHAMP EMAIL DU HERO ───────────────────────────────────
+   a) L'invite était à rgba(255,255,255,0.42) sur le fond du champ
+      (rgba(255,255,255,0.045) posé sur #0F0E0D) : 4,10:1 mesuré. C'est
+      la seule étiquette visible du champ, elle doit passer 4,5.
+   b) .champ-demo input porte outline:0 (composants.css:1048, 0,1,1) et
+      battait donc le :focus-visible du socle (0,1,0) : au clavier, le
+      champ ne rendait qu'un bord qui passe de 0,13 à 0,28 d'alpha.
+   c) 15 px sur un input déclenche le zoom automatique d'iOS à la mise au
+      point. 16 px sur téléphone l'évite. ── */
+.champ-demo input::placeholder{color:rgba(255,255,255,0.56)}
+.champ-demo input:focus-visible{outline:2px solid #fff; outline-offset:3px; border-radius:999px}
+@media (max-width:560px){ .champ-demo input{font-size:1rem} }
+
+
+/* ── 3. L'INTERFACE DU HERO SUR TÉLÉPHONE ────────────────────────
+   .hero-produit vit hors .conteneur : à 390 px il n'a pas de gouttière et
+   l'écran touchait les deux bords, ses coins arrondis laissant deux
+   éclats de champ profond. On assume la pleine largeur (c'est le geste
+   de Legora et de Harvey) et on retire l'arrondi, plutôt que d'ajouter
+   une gouttière : mesuré, 2 × 16 px de gouttière font passer la ligne
+   « Étiquetage textile 1007/2011 » + son badge de 316 px demandés à
+   304 px disponibles, donc sur deux lignes. ── */
+@media (max-width:640px){
+  .hero-produit .ecran-app{border-radius:0}
+}
+
+/* Les tailles écrites en dur dans l'interface échappent au relèvement du
+   socle (composants.css:1324, qui ne connaît que .t-caption et sa famille).
+   Mesuré à 390 px : 5 × 13 px sur .pl-champ span, 5 × 13 px sur .pl-champ b,
+   2 × 12 px sur .fiche-entete-pays, 1 × 12 px sur .fil-ariane. On les
+   remonte à 14 px, l'intention déjà écrite dans le socle.
+   Les badges restent à 13 px : c'est la décision du socle pour les pastilles
+   (composants.css:1326), et à 14 px « DONNÉE MANQUANTE » ne tient plus sur
+   la ligne « Proposition 65 » à 390 px. */
+@media (max-width:640px){
+  .hero-produit .pl-champ{font-size:0.875rem}
+  .hero-produit .pl-verdict{font-size:0.875rem}
+  .hero-produit .fiche-entete-pays{font-size:0.875rem}
+  .hero-produit .ecran-tete .fil-ariane{font-size:0.875rem}
+}
+
+
+/* ── 4. LE PREMIER ÉCRAN SUR UN PORTABLE ─────────────────────────
+   Mesuré le 03/09 à 1280 × 720 : h1 à 181 px, chapô à 343, champ à 427,
+   interface à 544 — les quatre sont visibles, mais il ne restait que
+   176 px d'interface, soit l'en-tête de fenêtre et 116 px de fiche.
+   Sur un écran court seulement, on rend 46 px au produit sans toucher au
+   hero des grands écrans. ── */
+@media (min-width:1025px) and (max-height:820px){
+  .hero-epure.hero-clos{padding-top:88px}
+  .hero-epure.hero-clos .hero-produit{margin-top:34px}
+}
+
+
+/* ── 5. LE TÉMOIGNAGE ────────────────────────────────────────────
+   La citation Decathlon fait 17 lignes à 390 px. Centrée, elle rend deux
+   bords en drapeau sur toute sa hauteur. Le bloc reste centré (portrait,
+   logo, attribution, lien) ; seule la citation s'aligne à gauche, sur la
+   mesure de lecture. Le texte n'est pas touché d'un caractère. ── */
+@media (max-width:640px){
+  .temoin-compact .citation{text-align:left}
+}
+
+
+/* ── 6. LES TROIS CHIFFRES DES AGENTS ────────────────────────────
+   .agent-kpi est une rangée flex dont chaque colonne prend la largeur de
+   son étiquette : à 390 px, « 106 » et « 25 000 » se posaient sur des
+   colonnes de 70 et 160 px, et « 19 000 » repartait seul à la ligne, sans
+   alignement. Une grille à deux colonnes égales les remet en face.
+   Les étiquettes passent de 12 à 14 px : elles sont hors de la famille
+   .t-caption, elles échappaient au relèvement du socle. Les chiffres
+   eux-mêmes ne sont pas touchés. ── */
+@media (max-width:640px){
+  .g-agents .agent-kpi{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px 18px}
+  .g-agents .agent-kpi span{font-size:0.875rem}
+}
+
+
+/* ── 7. LES DEUX LIENS LINKEDIN DES EXPERTS ──────────────────────
+   Mesurés à 51 × 21 px sur téléphone, sous la barre des 44 px. Le socle
+   relève .cta-texte et les listes du pied (composants.css:1341), pas
+   celui-ci. ── */
+.experts-portraits .t-caption[href]{min-height:44px; display:inline-flex; align-items:center; margin-top:2px}
+
+
+/* ── 8. « NOTRE MÉTHODE » : LE BLEU SUR CHAMP PROFOND ────────────
+   .acc-methode est l'accroche posée sur la section de l'accueil ; la
+   classe .pipeline est partagée avec 23-research, 02-entreprise et
+   29-article-deel-en, on ne la touche pas nue.
+   a) .pl-num sert le bleu de marque #0008CF sur le champ #0F0E0D :
+      1,37:1, les trois numéros d'étage ne se voyaient pas. Le régime noir
+      a déjà tranché ce même arbitrage (regime-noir.css:196-213) : sur champ
+      sombre, l'encre bleue devient --c-periwinkle #8A93FF, mesuré 6,51:1
+      sur #181818. --c-signal-clair #5B65FF n'aurait rendu que 4,38:1, sous
+      la barre pour un texte de 12 px.
+   b) Les six nœuds sources portaient chacun un filet bleu de 2 px, donc
+      invisible ET répété : le bleu n'y était plus un signal, c'était une
+      décoration. Ils reprennent un filet neutre, et l'accent unique du
+      bloc reste le numéro d'étage. Même chose pour les cinq pastilles de
+      l'axe d'encodage. ── */
+.acc-methode .pl-num{color:var(--c-periwinkle); font-size:0.75rem}
+.acc-methode .pl-n{border-left-color:rgba(255,255,255,0.30)}
+.acc-methode .pl-etapes li::before{border-color:rgba(255,255,255,0.34)}
+/* La règle encodée est une carte blanche dans la section sombre : sa
+   pastille de verdict doit rester le vert de champ clair sur les deux
+   régimes, pour la même raison qu'au point 1. */
+.acc-methode .pl-regle .pl-pastille{background:#0D6E44}
+
+/* Le connecteur en faisceau tient à 60 × 230 sur grand écran ; réduit à
+   44 × 44 et pivoté d'un quart de tour par le socle, ses six courbes se
+   tassaient en un balai illisible. Sur téléphone, un entonnoir dessiné
+   pour ce format prend le relais. Les deux SVG sont dans la page, le
+   basculement se fait ici. */
+.acc-methode .pl-lien-tel{display:none}
+@media (max-width:1024px){
+  /* .pl-lien-faisceau ne désigne QUE le premier connecteur : le second est
+     une flèche droite, elle tient très bien pivotée, et la masquer aurait
+     laissé un vide de 44 px entre l'encodage et la règle. */
+  .acc-methode .pl-lien-faisceau > svg:not(.pl-lien-tel){display:none}
+  .acc-methode .pl-lien-faisceau{height:auto}
+  .acc-methode .pl-lien-tel{display:block; width:100%; max-width:260px; height:46px; transform:none}
+}
+
+/* Les tailles écrites en dur du pipeline, mêmes 13 px que l'interface du
+   hero et même raison. Mesuré à 390 px : 6 × .pl-n, 5 × .pl-etapes span,
+   5 + 5 × .pl-champ. */
+@media (max-width:640px){
+  .acc-methode .pl-n{font-size:0.875rem}
+  .acc-methode .pl-etapes span{font-size:0.875rem}
+  .acc-methode .pl-regle .pl-champ{font-size:0.875rem}
+  .acc-methode .pl-regle .pl-verdict{font-size:0.875rem}
+}
+
+
+/* ── 9. LES TROIS ÉTAPES DU COMPLIANCE SERVICE ───────────────────
+   .flux-rang était à 11 px, sous le plancher de 12 px que le socle a posé
+   pour les étiquettes en capitales (base.css:137). Portée : la section de
+   l'accueil, la classe .flux servant aussi 03-offre, 26-legal-data et
+   32-plan-action. ── */
+#compliance-service .flux-rang{font-size:0.75rem}
+
+
+/* ── 10. LA CARTE DE CLÔTURE SUR TÉLÉPHONE ───────────────────────
+   .p48 vaut 64 px de padding (composants.css:174) et ne se détend pas sur
+   téléphone : à 390 px, la carte fait 334 px de large et il ne restait que
+   206 px de colonne pour un h2 en .t-display, qui partait sur quatre lignes.
+   32 px rendent 270 px. Portée : la carte de clôture de l'accueil ; .p48
+   sert aussi 02-entreprise, 03-offre, 04-secteur, 05-marche, 06-cas-client,
+   07-chat, 08-reglementation et 09-texte, qui ne sont pas de cette lane. ── */
+@media (max-width:640px){
+  .acc-cloture{padding:32px}
+}
+
+/* Sur téléphone, les numéros d'étape rejoignent le plancher de 14 px du système
+   (les deux règles ci-dessus gagnent par spécificité sur composants.css). */
+@media (max-width:640px){ .acc-methode .pl-num,#compliance-service .flux-rang{font-size:0.875rem} }

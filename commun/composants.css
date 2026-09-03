@@ -149,6 +149,13 @@
 .sur-sombre .m-attente{background:rgba(224,166,60,0.13); color:var(--c-risk-d)}
 .sur-sombre .m-bloque{background:rgba(255,107,96,0.13); color:var(--c-block-d)}
 .sur-sombre .m-manquant{background:rgba(255,255,255,0.07); color:var(--c-text-on-dark-3)}
+/* Une surface CLAIRE posée dans un champ profond (fiche, écran, carte claire) reprend
+   les valeurs claires, en littéral : mesuré le 03/09 par la lane A, les badges du hero
+   rendaient 1,00 / 1,81 / 1,97:1 avec les valeurs de champ profond. */
+.sur-sombre .fiche .m-couvert,.sur-sombre .ecran-app .m-couvert,.sur-sombre .carte-claire .m-couvert{background:rgba(13,110,68,0.09); color:#0D6E44}
+.sur-sombre .fiche .m-attente,.sur-sombre .ecran-app .m-attente,.sur-sombre .carte-claire .m-attente{background:rgba(138,90,0,0.10); color:#8A5A00}
+.sur-sombre .fiche .m-bloque,.sur-sombre .ecran-app .m-bloque,.sur-sombre .carte-claire .m-bloque{background:rgba(179,38,30,0.09); color:#B3261E}
+.sur-sombre .fiche .m-manquant,.sur-sombre .ecran-app .m-manquant,.sur-sombre .carte-claire .m-manquant{background:rgba(0,0,0,0.04); color:rgba(0,0,0,0.54)}
 
 /* ── Liste à puces cochées ── */
 .coches{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:15px}
@@ -186,7 +193,7 @@
 .g2{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--s-32)}
 .g3{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px}
 .g4{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:var(--s-24)}
-.duo{display:grid; grid-template-columns:1.05fr minmax(0,1fr); gap:96px; align-items:center}
+.duo{display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); gap:96px; align-items:center}
 /* Le témoignage : la photo à gauche, le texte à droite, jointifs.
    CETTE GRILLE VIT ICI ET PAS EN INLINE. Mesuré le 01/09 : posée en style=,
    elle gagnait sur la media query et le bloc restait sur deux colonnes de
@@ -362,7 +369,7 @@
 /* ── Le geste Harvey : chiffres en lignes à filets ── */
 .mesures{border-top:1px solid var(--c-border)}
 .mesures .ligne{display:flex; align-items:baseline; gap:32px; padding:26px 0; border-bottom:1px solid var(--c-border)}
-.mesures .libelle{flex:1; min-width:0; font-size:0.9375rem; color:var(--c-text-2); line-height:1.5}
+.mesures .libelle{flex:1; min-width:120px; font-size:0.9375rem; color:var(--c-text-2); line-height:1.5}
 .mesures .valeur{flex:none; font-size:2rem; font-weight:400; letter-spacing:-0.015em;
   line-height:1; color:var(--c-ink); min-width:clamp(150px,22vw,260px)}
 .sur-sombre .mesures{border-top-color:var(--c-filet-sombre)}
@@ -429,7 +436,11 @@
 .pied-regs{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--s-32); padding:44px 0;
   border-top:1px solid var(--c-filet-sombre)}
 .pied-regs .paire{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--s-24)}
-.pied-bas{border-top:1px solid var(--c-filet-sombre); padding-top:28px; display:flex; gap:28px; flex-wrap:wrap;
+.pied-bas a{padding:10px 0; display:inline-flex; align-items:center}
+/* Un lien posé DANS une phrase garde sa ligne, mais sa cible tactile monte à 41 px :
+   le padding vertical est repris par une marge négative. */
+.lien-inline{padding:12px 0; margin:-12px 0; display:inline-block}
+.pied-bas{border-top:1px solid var(--c-filet-sombre); padding-top:20px; display:flex; gap:28px; flex-wrap:wrap; align-items:center;
   font-size:0.75rem; color:var(--c-text-on-dark-3)}
 .infolettre{background:rgba(255,255,255,0.05); border:1px solid var(--c-filet-sombre); color:var(--c-text-on-dark);
   border-radius:var(--r-md); padding:24px; max-width:300px}
@@ -541,7 +552,8 @@
   color:var(--c-text-3); margin-bottom:8px}
 .fiche-laterale .valeur{font-size:0.9375rem; color:var(--c-text); line-height:1.6}
 .sur-sombre .fiche-laterale .valeur{color:var(--c-text-on-dark)}
-.recit p,.recit li{font-size:0.9375rem; line-height:1.78; color:var(--c-text-2); margin:0 0 17px}
+.recit{max-width:640px}
+.recit p,.recit li{font-size:1.0625rem; line-height:1.72; color:var(--c-text-2); margin:0 0 17px}
 .recit ul{margin:0 0 17px; padding-left:20px}
 .recit b{color:var(--c-text)}
 .sur-sombre .recit p,.sur-sombre .recit li{color:var(--c-text-on-dark-2)}
@@ -624,7 +636,7 @@
      le bord. On empêche la coupure du libellé, on retire le lien secondaire
      qui n'a pas sa place à cette largeur, et on resserre. */
   .nav-fin{gap:8px}
-  .nav-fin .btn{white-space:nowrap; padding:8px 14px; font-size:0.75rem}
+  .nav-fin .btn{white-space:nowrap; padding:9px 16px; font-size:0.875rem}
   .nav-fin .lien-secondaire{display:none}
   .nav-langue{margin-right:4px; padding:1px}
   .nav-langue span,.nav-langue a{padding:3px 7px; font-size:0.6875rem}
@@ -933,7 +945,7 @@
 .flux{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; margin-bottom:22px}
 .flux-etape{min-width:0; background:var(--c-white); border-radius:var(--r-lg);
   padding:32px; box-shadow:var(--shadow-sm); position:relative}
-.flux-rang{font-size:0.6875rem; font-weight:600; letter-spacing:0.15em;
+.flux-rang{font-size:0.75rem; font-weight:600; letter-spacing:0.15em;
   color:var(--c-blue); margin-bottom:14px}
 .flux-etape .t-h2{margin-bottom:10px}
 /* Le fil qui relie les étapes : il dit l'ordre sans l'écrire. */
@@ -993,7 +1005,10 @@
   gap:0; align-items:center; margin-top:56px}
 .pl-etage{min-width:0}
 .pl-tete{display:flex; align-items:baseline; gap:10px; margin-bottom:16px}
-.pl-num{font-size:0.6875rem; font-weight:600; letter-spacing:0.13em; color:var(--c-blue)}
+.pl-num{font-size:0.75rem; font-weight:600; letter-spacing:0.13em; color:var(--c-blue)}
+/* Sur champ profond, le bleu de marque rend 1,37:1 (mesuré le 03/09) : périwinkle, 6,87:1. */
+.sur-sombre .pl-num{color:var(--c-periwinkle)}
+.sur-sombre .pl-n{border-left-color:rgba(255,255,255,0.30)}
 .pl-lien{color:rgba(255,255,255,0.42); align-self:stretch; display:flex; align-items:center}
 .pl-lien svg{width:100%; height:230px}
 
@@ -1045,7 +1060,7 @@
   background:rgba(255,255,255,0.045); border:1px solid rgba(255,255,255,0.13);
   transition:border-color var(--dur-survol) ease-out, background var(--dur-survol) ease-out}
 .champ-demo:focus-within{border-color:rgba(255,255,255,0.28); background:rgba(255,255,255,0.07)}
-.champ-demo input{flex:1; min-width:0; background:none; border:0; outline:0; padding:0;
+.champ-demo input{flex:1; min-width:0; background:none; border:0; padding:0;
   font-family:inherit; font-size:0.9375rem; color:#fff; letter-spacing:-0.01em}
 .champ-demo input::placeholder{color:rgba(255,255,255,0.42)}
 .champ-demo .btn{flex:none; white-space:nowrap; margin:0}
@@ -1102,10 +1117,6 @@
 .blog-art .signature span{color:var(--c-text-3)}
 .blog-art:hover h3{color:var(--c-blue)}
 
-.blog-mois{grid-column:1 / -1; display:flex; align-items:baseline; justify-content:space-between;
-  padding-top:20px; border-top:1px solid var(--c-border); margin:16px 0 0}
-.blog-grille > .blog-mois:first-child{margin-top:0}
-.blog-mois .t-caption{color:var(--c-text-3)}
 
 @media (max-width:1024px){ .blog-grille{grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px} }
 @media (max-width:640px){ .blog-grille{grid-template-columns:minmax(0,1fr)} }
@@ -1259,7 +1270,7 @@
 .menu-mobile{display:none}
 @media (max-width:1024px){
   .nav-burger{display:flex}
-  .menu-mobile{display:block; position:fixed; top:60px; left:0; right:0; bottom:0; overflow-y:auto; z-index:80;
+  .menu-mobile{display:block; position:fixed; top:61px; left:0; right:0; bottom:0; overflow-y:auto; z-index:80;
     background:var(--c-white); padding:4px var(--gouttiere) 40px; border-top:1px solid var(--c-border)}
   .menu-mobile[hidden]{display:none}
   html.menu-ouvert{overflow:hidden}
@@ -1321,12 +1332,19 @@
   .bande-logos .cellule{height:72px; min-width:0; padding:14px 12px}
   .bande-logos .cellule:last-child:nth-child(odd){grid-column:1 / -1}
   .bande-logos img{max-height:36px; max-width:150px}
-  .t-caption,.t-micro,.t-sm,.pilule,.tag,.etiquette,.fiche-ref,.fiche,.mega-badge{font-size:0.875rem}
-  .t-label,.surtitre{font-size:0.75rem}
-  .badge,.marqueur,.vv-etat{font-size:0.8125rem}
+  .t-caption,.t-micro,.t-sm,.pilule,.tag,.etiquette,.fiche-ref,.fiche,.mega-badge,.form-carte label,.agent-kpi span{font-size:0.875rem}
+  /* Les étiquettes en capitales montent aussi à 14 px sur téléphone (lane E, 03/09) : 12 px
+     en capitales espacées ne se lit pas à bout de bras. L'approche se resserre. */
+  .t-label,.surtitre{font-size:0.875rem; letter-spacing:0.1em}
+  .p32{padding:28px} .p40{padding:32px} .p48{padding:32px}
+  .nav-langue span,.nav-langue a{font-size:0.875rem; min-width:44px; min-height:40px; display:inline-flex; align-items:center; justify-content:center; padding:0 10px}
+  .badge,.marqueur,.vv-etat,.flux-rang,.pl-num{font-size:0.875rem}
+  .nav-logo{min-width:44px; justify-content:center}
+  .mass-refs{grid-template-columns:repeat(4,minmax(0,1fr))} .mass-ref{font-size:0.875rem; padding:6px 4px}
+  .ca-mode,.cf-ref,.nd .bas span,.nd .id,.nd .op,.nd .nb{font-size:11px}
   .comparatif td,.comparatif th,.tab-donnees td,.tab-donnees th,table td,table th{font-size:0.875rem}
   .pied ul a,.res-nav a,.sommaire a,.fiche-laterale a,.cta-texte,.mega-liste a{min-height:44px; display:inline-flex; align-items:center}
   .pied-bas a{min-height:44px; display:inline-flex; align-items:center}
   .btn-sm{min-height:44px}
-  .nav-langue span,.nav-langue a{min-height:32px; display:inline-flex; align-items:center}
+  .nav-langue span,.nav-langue a{min-height:40px; display:inline-flex; align-items:center}
 }

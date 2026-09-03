@@ -1,8 +1,8 @@
 <!--NAV-->
 
 <!-- ═══ HERO PLEINE LARGEUR ═══ photo de fond, voile à gauche, texte posé dessus -->
-<section class="sur-sombre" style="position:relative;background:var(--ink-deep);overflow:hidden">
-  <img src="img:chaines" alt="Vue aérienne d'un échangeur autoroutier, une seule voiture bleue parmi les voitures blanches et grises" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 40%;opacity:0.45">
+<section class="seg sur-sombre" style="position:relative;background:var(--ink-deep);overflow:hidden">
+  <img src="img:chaines" alt="Chaînes d'acier empilées, un maillon bleu au milieu des maillons gris" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 40%;opacity:0.45">
   <div style="position:absolute;inset:0;background:linear-gradient(90deg,var(--ink-deep) 12%,rgba(15,14,13,0.90) 48%,rgba(15,14,13,0.45) 100%)"></div>
   <div class="conteneur" style="position:relative;background:transparent;padding-top:112px;padding-bottom:112px">
     <div style="max-width:600px">
@@ -19,90 +19,93 @@
   </div>
 </section>
 
-<!-- ═══ TITRE + GRILLE DE PORTRAITS ═══ -->
-<section class="section">
+<!-- ═══ TITRE + GRILLE DE PORTRAITS ═══
+     La carte est sombre par la photo dans une section claire : elle porte
+     donc sa propre encre. Avant, le « FR » gardait celle du régime clair
+     et rendait à 1,1:1 (mesuré le 03/09/2026). -->
+<section class="seg section">
   <div class="conteneur">
     <div class="entete-section centre" data-anim="monte" style="align-items:center">
       <h2 class="t-display mesure-centree" style="max-width:820px">Un juriste et un ingénieur sur le même problème.</h2>
       <p class="t-lead mesure-centree">Ce qui compte le plus, nous l'encodons. Tout ce qui l'entoure, nous le suivons.</p>
     </div>
 
-    <div class="g3" data-anim-groupe style="gap:22px">
-      <!-- Carte portrait : photo pleine, pays en haut, identité en bas -->
-      <div style="position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:3/4;background:var(--ink-card)">
-        <img src="img:anaelle" alt="Portrait d'Anaëlle Guez" style="width:100%;height:100%;object-fit:cover">
-        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,14,13,0.55) 0%,transparent 34%,transparent 46%,rgba(15,14,13,0.92) 100%)"></div>
-        <div style="position:absolute;top:16px;left:16px;display:flex;align-items:center;gap:8px">
-          <span class="t-body-lg">FR</span>
-          <div><div class="t-sm" style="color:#fff;line-height:1.2">France</div><div class="t-caption" style="color:rgba(255,255,255,0.62)">Neuilly-sur-Seine</div></div>
+    <div class="g3 seg-equipe" data-anim-groupe>
+
+      <div class="seg-portrait">
+        <img src="img:anaelle" alt="Portrait d'Anaëlle Guez">
+        <div class="voile"></div>
+        <div class="pays">
+          <span class="code">FR</span>
+          <div class="lieu"><b>France</b><span>Neuilly-sur-Seine</span></div>
         </div>
-        <div style="position:absolute;left:20px;right:20px;bottom:20px">
-          <div class="t-h2" style="color:#fff">Anaëlle Guez</div>
-          <div class="t-sm" style="color:rgba(255,255,255,0.72);margin-bottom:12px">CEO, cofondatrice <a href="https://www.linkedin.com/in/anaelle-guez-ab341746/" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;text-underline-offset:2px">LinkedIn</a></div>
-          <div style="display:flex;gap:7px;flex-wrap:wrap">
-            <span class="pilule pilule-contour t-caption" style="padding:4px 11px;border-color:rgba(255,255,255,0.28);color:#fff">Droit</span>
-            <span class="pilule pilule-contour t-caption" style="padding:4px 11px;border-color:rgba(255,255,255,0.28);color:#fff">Ex Havas Group</span>
+        <div class="bas">
+          <div class="nom">Anaëlle Guez</div>
+          <div class="role">CEO, cofondatrice <a href="https://www.linkedin.com/in/anaelle-guez-ab341746/" target="_blank" rel="noopener">LinkedIn</a></div>
+          <div class="marqueurs">
+            <span class="pilule pilule-contour">Droit</span>
+            <span class="pilule pilule-contour">Ex Havas Group</span>
           </div>
         </div>
       </div>
 
-      <div style="position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:3/4;background:var(--ink-card)">
-        <img src="img:naomie" alt="Portrait de Naomie Halioua" style="width:100%;height:100%;object-fit:cover">
-        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,14,13,0.55) 0%,transparent 34%,transparent 46%,rgba(15,14,13,0.92) 100%)"></div>
-        <div style="position:absolute;top:16px;left:16px;display:flex;align-items:center;gap:8px">
-          <span class="t-body-lg">FR</span>
-          <div><div class="t-sm" style="color:#fff;line-height:1.2">France</div><div class="t-caption" style="color:rgba(255,255,255,0.62)">Neuilly-sur-Seine</div></div>
+      <div class="seg-portrait">
+        <img src="img:naomie" alt="Portrait de Naomie Halioua">
+        <div class="voile"></div>
+        <div class="pays">
+          <span class="code">FR</span>
+          <div class="lieu"><b>France</b><span>Neuilly-sur-Seine</span></div>
         </div>
-        <div style="position:absolute;left:20px;right:20px;bottom:20px">
-          <div class="t-h2" style="color:#fff">Naomie Halioua</div>
-          <div class="t-sm" style="color:rgba(255,255,255,0.72);margin-bottom:12px">CDO, cofondatrice <a href="https://www.linkedin.com/in/naomiehalioua/" target="_blank" rel="noopener" style="color:#fff;text-decoration:underline;text-underline-offset:2px">LinkedIn</a></div>
-          <div style="display:flex;gap:7px;flex-wrap:wrap">
-            <span class="pilule pilule-contour t-caption" style="padding:4px 11px;border-color:rgba(255,255,255,0.28);color:#fff">Systèmes multi-agents</span>
-            <span class="pilule pilule-contour t-caption" style="padding:4px 11px;border-color:rgba(255,255,255,0.28);color:#fff">Polytechnique</span>
+        <div class="bas">
+          <div class="nom">Naomie Halioua</div>
+          <div class="role">CDO, cofondatrice <a href="https://www.linkedin.com/in/naomiehalioua/" target="_blank" rel="noopener">LinkedIn</a></div>
+          <div class="marqueurs">
+            <span class="pilule pilule-contour">Systèmes multi-agents</span>
+            <span class="pilule pilule-contour">Polytechnique</span>
           </div>
         </div>
       </div>
 
-      <div style="position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:3/4;background:var(--ink-card)">
-        <img src="img:alex" alt="Portrait d'Alexandre Bloch" style="width:100%;height:100%;object-fit:cover">
-        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,14,13,0.55) 0%,transparent 34%,transparent 46%,rgba(15,14,13,0.92) 100%)"></div>
-        <div style="position:absolute;top:16px;left:16px;display:flex;align-items:center;gap:8px">
-          <span class="t-body-lg">FR</span>
-          <div><div class="t-sm" style="color:#fff;line-height:1.2">France</div><div class="t-caption" style="color:rgba(255,255,255,0.62)">Neuilly-sur-Seine</div></div>
+      <div class="seg-portrait">
+        <img src="img:alex" alt="Portrait d'Alexandre Bloch">
+        <div class="voile"></div>
+        <div class="pays">
+          <span class="code">FR</span>
+          <div class="lieu"><b>France</b><span>Neuilly-sur-Seine</span></div>
         </div>
-        <div style="position:absolute;left:20px;right:20px;bottom:20px;padding-bottom:40px">
-          <div class="t-h2" style="color:#fff">Alexandre Bloch</div>
-          <div class="t-sm" style="color:rgba(255,255,255,0.72)">CTO</div>
-        </div>
-      </div>
-
-      <div style="position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:3/4;background:var(--ink-card)">
-        <img src="img:darcial" alt="Portrait de Darcial Mondjo" style="width:100%;height:100%;object-fit:cover">
-        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,14,13,0.55) 0%,transparent 34%,transparent 46%,rgba(15,14,13,0.92) 100%)"></div>
-        <div style="position:absolute;left:20px;right:20px;bottom:20px;padding-bottom:40px">
-          <div class="t-h2" style="color:#fff">Darcial Mondjo</div>
-          <div class="t-sm" style="color:rgba(255,255,255,0.72)">Global Head of Product &amp; Sanitary Compliance</div>
+        <div class="bas">
+          <div class="nom">Alexandre Bloch</div>
+          <div class="role">CTO</div>
         </div>
       </div>
 
-      <div style="position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:3/4;background:var(--ink-card)">
-        <img src="img:thezi" alt="Portrait de Thezi Mabuza" style="width:100%;height:100%;object-fit:cover">
-        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,14,13,0.55) 0%,transparent 34%,transparent 46%,rgba(15,14,13,0.92) 100%)"></div>
-        <div style="position:absolute;left:20px;right:20px;bottom:20px;padding-bottom:40px">
-          <div class="t-h2" style="color:#fff">Thezi Mabuza</div>
-          <div class="t-sm" style="color:rgba(255,255,255,0.72)">Stalwart in Consumer Protection &amp; Product Safety</div>
+      <div class="seg-portrait">
+        <img src="img:darcial" alt="Portrait de Darcial Mondjo">
+        <div class="voile"></div>
+        <div class="bas">
+          <div class="nom">Darcial Mondjo</div>
+          <div class="role">Global Head of Product &amp; Sanitary Compliance</div>
         </div>
       </div>
 
-      <!-- Cellule lavande : leur carte « et 20 autres experts », transposée -->
-      <div class="carte-lavande" style="aspect-ratio:3/4;padding:28px;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-start">
+      <div class="seg-portrait">
+        <img src="img:thezi" alt="Portrait de Thezi Mabuza">
+        <div class="voile"></div>
+        <div class="bas">
+          <div class="nom">Thezi Mabuza</div>
+          <div class="role">Stalwart in Consumer Protection &amp; Product Safety</div>
+        </div>
+      </div>
+
+      <!-- Cellule lavande : la phrase qui tient la grille, sans photo -->
+      <div class="carte-lavande seg-equipe-mot">
         <div class="avatars" style="margin-bottom:20px">
           <img src="img:fenetres" alt="Façade d'immeuble la nuit, deux fenêtres éclairées en bleu parmi des dizaines de fenêtres jaunes"><img src="img:pneus" alt="Pneus empilés, un pneu bleu au centre de la pile"><img src="img:briques" alt="Briques de construction grises en vrac, deux briques bleues au milieu">
         </div>
-        <div class="t-h1" style="line-height:1.28;font-weight:500">
+        <div class="t-h1 phrase">
           <b>Et l'équipe</b> qui encode, relit et met à jour les règles chaque semaine.
         </div>
-        <svg viewBox="0 0 200 200" style="position:absolute;right:-40px;bottom:-40px;width:200px;height:200px;opacity:0.30" fill="none" stroke="#08093B" stroke-width="0.6">
+        <svg class="orbe" viewBox="0 0 200 200" fill="none" stroke="#08093B" stroke-width="0.6" aria-hidden="true">
           <circle cx="100" cy="100" r="78"/><ellipse cx="100" cy="100" rx="78" ry="30"/><ellipse cx="100" cy="100" rx="78" ry="56"/>
           <ellipse cx="100" cy="100" rx="30" ry="78"/><ellipse cx="100" cy="100" rx="56" ry="78"/><line x1="22" y1="100" x2="178" y2="100"/>
         </svg>
@@ -112,7 +115,7 @@
 </section>
 
 <!-- ═══ LES CHIFFRES, EN ESCALIER ═══ -->
-<section class="section gc-doux" style="padding-top:0">
+<section class="seg section" style="padding-top:0">
   <div class="conteneur">
     <div class="duo" style="align-items:start;margin-bottom:56px">
       <h2 class="t-display">Ce que le moteur couvre</h2>
@@ -122,7 +125,7 @@
           la couverture reste la même : les textes en vigueur, les autorités qui les portent, les sources qui les publient.
         </p>
         <p class="t-body" style="margin:0">
-          Chiffres de couverture Cleo Labs, figés au référentiel interne.
+          Chiffres de couverture Cleo Labs.
         </p>
       </div>
     </div>
@@ -136,34 +139,37 @@
   </div>
 </section>
 
-<!-- ═══ ANCRAGE + PHOTO À CARTES FLOTTANTES ═══ -->
-<section class="section sur-clair-fond">
+<!-- ═══ ANCRAGE + PHOTO À CARTES FLOTTANTES ═══
+     Les cartes sont posées sur la photo au-dessus de 900 px et reprennent le
+     fil normal en dessous : en position absolue elles se recouvraient et
+     sortaient du conteneur (344 px de contenu pour 334, mesuré le 03/09). -->
+<section class="seg section sur-clair-fond">
   <div class="conteneur">
     <div class="entete-section centre" data-anim="monte" style="align-items:center">
       <h2 class="t-display mesure-centree">Basées à Neuilly-sur-Seine, au travail sur 106 pays</h2>
       <p class="t-lead mesure-centree">Cleo Corp SAS, fondée en 2023, société constituée en 2024.</p>
     </div>
 
-    <div style="position:relative;max-width:1000px;margin:0 auto">
+    <div class="seg-ancrage">
       <div class="scene" data-anim="grandit" style="aspect-ratio:16/8">
         <img class="fond" src="img:parc-voitures" alt="Parc de voitures neuves vu du ciel, une seule voiture bleue au milieu des voitures blanches">
       </div>
-      <div style="position:absolute;left:24px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:12px;width:320px">
-        <div class="flottant" style="position:static;display:flex;gap:13px;align-items:center;padding:14px 16px">
-          <span style="width:36px;height:36px;border-radius:var(--r-sm);background:var(--brand-muted);display:grid;place-items:center;flex:none">ico:euro</span>
-          <span class="t-caption" style="line-height:1.4;color:var(--cleo-ink)">1,5 M€ levés en pre-seed</span>
+      <div class="seg-ancrage-cartes">
+        <div class="flottant">
+          <span class="jeton" style="background:var(--brand-muted)">ico:euro</span>
+          <span class="t-caption dit">1,5 M€ levés en pre-seed</span>
         </div>
-        <div class="flottant" style="position:static;display:flex;gap:13px;align-items:center;padding:14px 16px">
-          <span style="width:36px;height:36px;border-radius:var(--r-sm);background:var(--accent-muted);display:grid;place-items:center;flex:none">ico:cabinet</span>
-          <span class="t-caption" style="line-height:1.4;color:var(--cleo-ink)">Vu au CES 2026</span>
+        <div class="flottant">
+          <span class="jeton" style="background:var(--accent-muted)">ico:cabinet</span>
+          <span class="t-caption dit">Vu au CES 2026</span>
         </div>
-        <div class="flottant" style="position:static;display:flex;gap:13px;align-items:center;padding:14px 16px">
-          <span style="width:36px;height:36px;border-radius:var(--r-sm);background:var(--brand-muted);display:grid;place-items:center;flex:none">ico:engrenage</span>
-          <span class="t-caption" style="line-height:1.4;color:var(--cleo-ink)">MARIA, architecture multi-agents de veille réglementaire</span>
+        <div class="flottant">
+          <span class="jeton" style="background:var(--brand-muted)">ico:engrenage</span>
+          <span class="t-caption dit">MARIA, architecture multi-agents de veille réglementaire</span>
         </div>
       </div>
-      <div style="position:absolute;right:24px;top:24px" class="flottant">
-        <span class="t-caption" style="color:var(--cleo-ink)"><b>Nous rencontrer</b> à Neuilly-sur-Seine, France</span>
+      <div class="flottant seg-ancrage-lieu">
+        <span class="t-caption dit"><b>Nous rencontrer</b> à Neuilly-sur-Seine, France</span>
       </div>
     </div>
   </div>
@@ -172,7 +178,7 @@
 <!-- ═══ LA LEVÉE, LE PRIX, LA PRESSE ═══ relevés sur cleo-landing :
      company/layout.tsx (montant, financeurs), [locale]/layout.tsx (award),
      landing/PressSection.tsx (les 6 médias et leurs URL). -->
-<section class="section sur-clair-fond" style="padding-top:0">
+<section class="seg section sur-clair-fond" style="padding-top:0">
   <div class="conteneur">
 
     <div class="carte" data-anim="monte" style="padding:40px;margin-bottom:72px">
@@ -247,7 +253,7 @@
         <span class="pilule" style="flex:none">Recherche</span>
         <div class="principal">
           <div class="t-h2" style="margin-bottom:4px">Lire notre article de recherche</div>
-          <div class="t-caption">Une approche multi-agents par pipeline pour l’intelligence réglementaire: 19 régions, 8 langues, 30+ appels LLM par exécution.</div>
+          <div class="t-caption">Une approche multi-agents par pipeline pour l’intelligence réglementaire : 19 régions, 8 langues, 30+ appels LLM par exécution.</div>
         </div>
       </a>
     </div>
@@ -256,7 +262,7 @@
 </section>
 
 <!-- ═══ LE TEXTE LONG ═══ -->
-<section class="section sur-clair-fond" style="padding-top:0">
+<section class="seg section sur-clair-fond" style="padding-top:0">
   <div class="conteneur">
     <div class="duo" style="align-items:start;gap:80px">
       <div>
@@ -290,7 +296,7 @@
 </section>
 
 <!-- ═══ CTA FINAL ═══ -->
-<section class="section">
+<section class="seg section">
   <div class="conteneur">
     <div class="carte-encre p48" data-anim="monte-court">
       <div class="cta-final">

@@ -1,12 +1,16 @@
 <!-- Page de campagne : nue, sans navigation ni pied complet.
-     Composition relevée sur edgecomply.com/landing/ce-certification-guide -->
-<div class="campagne-tete">
+     Composition relevée sur edgecomply.com/landing/ce-certification-guide.
+     Le logo est un lien : sans barre de navigation, c'est le seul retour
+     vers le site (mesuré le 03/09/2026 : aucun lien interne vers l'accueil). -->
+<div class="seg campagne-tete seg-p20-tete">
   <div class="conteneur">
-    <img src="img:cleo-logo" alt="Cleo" style="height:24px;width:auto;filter:brightness(0)">
+    <a class="marque" href="01-accueil.html" aria-label="Cleo, retour à l'accueil">
+      <img src="img:cleo-logo" alt="Cleo" style="height:24px;width:auto;filter:brightness(0)">
+    </a>
   </div>
 </div>
 
-<section class="sur-sombre gc-deep" style="padding:88px 0">
+<section class="seg sur-sombre" style="padding:88px 0 128px">
   <div class="conteneur">
     <div class="duo" style="gap:72px;align-items:center">
       <div>
@@ -27,7 +31,10 @@
         <div class="t-caption" style="margin-top:16px">Format PDF · 18 pages · Aucune inscription à une liste</div>
       </div>
 
-      <div style="position:relative">
+      <!-- La couverture porte sa propre encre : elle était sombre sur champ
+           profond, donc invisible. La carte citée descend sous le livre :
+           elle en couvrait la dernière ligne et sortait du conteneur. -->
+      <div class="seg-couverture">
         <div class="couverture">
           <div class="livre">
             <div>
@@ -43,7 +50,7 @@
             </div>
           </div>
         </div>
-        <div class="flottant" style="right:-20px;bottom:-18px;width:212px;padding:14px">
+        <div class="flottant">
           <div class="t-micro" style="margin-bottom:6px">Chaque obligation citée</div>
           <div class="t-caption" style="line-height:1.5;color:var(--c-ink)">
             « Tous les emballages sont conçus de manière à… »
@@ -55,7 +62,7 @@
   </div>
 </section>
 
-<section class="section" style="padding:0 0 88px">
+<section class="seg section" style="padding:0 0 88px">
   <div class="conteneur">
     <div class="centre t-label" style="margin-bottom:24px">Aux côtés de marques et de fabricants internationaux</div>
     <div class="bande-logos">
@@ -68,7 +75,7 @@
   </div>
 </section>
 
-<section class="section" style="padding:0 0 88px">
+<section class="seg section" style="padding:0 0 88px">
   <div class="conteneur">
     <div class="mesures" data-anim-groupe>
       <div class="ligne"><div class="libelle">Familles d'obligations : substances, signalétique, recyclabilité, contenu recyclé</div><div class="valeur">4</div></div>
@@ -78,21 +85,23 @@
   </div>
 </section>
 
-<footer class="pied" style="padding-top:56px">
+<footer class="seg pied seg-p20-pied">
   <div class="conteneur">
-    <div style="display:flex;gap:48px;flex-wrap:wrap;align-items:flex-start">
-      <div style="flex:1;min-width:260px">
-        <img src="img:cleo-logo" alt="Cleo" style="height:24px;width:auto;filter:brightness(0) invert(1);margin-bottom:14px">
+    <div class="identite">
+      <div>
+        <a class="marque" href="01-accueil.html" aria-label="Cleo, retour à l'accueil">
+          <img src="img:cleo-logo" alt="Cleo" style="height:24px;width:auto;filter:brightness(0) invert(1);margin-bottom:14px">
+        </a>
         <div class="t-caption">Vendez partout. Conformez-vous partout.</div>
       </div>
       <div class="t-caption" style="line-height:1.8">
-        Cleo Corp SAS<br>Neuilly-sur-Seine, France<br>hello@cleolabs.co
+        Cleo Corp SAS<br>Neuilly-sur-Seine, France<br><a href="mailto:contact@cleolabs.co">contact@cleolabs.co</a>
       </div>
     </div>
     <div class="pied-bas" style="margin-top:40px">
       <a href="22-legal.html">Conditions générales</a>
       <a href="22-legal.html">Politique de confidentialité</a>
-      <span style="margin-left:auto">Maquette de travail, non publiée.</span>
+      <span style="margin-left:auto">Cleo Corp SAS, SIREN 984567883</span>
     </div>
   </div>
 </footer>

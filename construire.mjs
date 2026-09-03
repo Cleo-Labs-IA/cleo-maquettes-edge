@@ -323,7 +323,13 @@ async function veille() {
   m = m.replace('/veille/produit-3b9ed4d5.png', img)
   // Le lien du Journal officiel pointe sur le texte réel (PPWR, CELEX 32025R0040) et plus sur « # ».
   m = m.replace('id="cv-f-lien" href="#"', 'id="cv-f-lien" href="https://eur-lex.europa.eu/eli/reg/2025/40/oj"')
-  return `<style>${veilleCss}\n.cv,.cv *{font-family:var(--font) !important}</style>
+  // Le gabarit porte des commentaires de chantier (« à remplacer ») : aucun ne sort.
+  m = m.replace(/<!--[\s\S]*?-->/g, '')
+  return `<style>${veilleCss}
+.cv,.cv *{font-family:var(--font) !important}
+/* Plancher typographique du composant sur téléphone (lane B, 03/09 : 8 à 11 px relevés) */
+.cv-lien{display:inline-flex; align-items:center; min-height:44px}
+@media (max-width:640px){ .cv-det u,.cv-ech,.cv-k,.cv-lbl,.cv-c span,.cv-lien,.cv-v,.cv-etat span,.cv__count{font-size:12px !important} }</style>
 <div class="ecran-app">${m}</div>
 <script>${veilleScript}</script>`
 }
@@ -760,11 +766,6 @@ const navEn = fs.existsSync(path.join(ICI, 'commun/bandeau-nav-en.html'))
   ? avecMenuMobile(fs.readFileSync(path.join(ICI, 'commun/bandeau-nav-en.html'), 'utf8')) : nav
 const piedEn = litOuRepli('commun/pied-en.html', pied)
 
-function barre(courante) {
-  const liens = PAGES.map(p =>
-    `<a href="${p.sortie || p.fichier}"${(p.sortie || p.fichier) === courante ? ' class="actif"' : ''}>${p.titre}</a>`).join('')
-  return `<div class="barre-maquettes"><a href="index.html" style="opacity:0.75">Index</a>${liens}</div>`
-}
 
 fs.mkdirSync(path.join(ICI, 'sortie'), { recursive: true })
 const journal = []
@@ -888,15 +889,16 @@ for (const p of PAGES) {
   const structure = blocs.map(b =>
     `<script type="application/ld+json">${ldjson(b, langue)}</script>`).join('\n')
 
+  /* Aucun commentaire HTML ne sort dans la page : le « noindex » est là parce que
+     ces pages reprennent le contenu de www.cleolabs.co et lui nuiraient en
+     duplication ; la source de composition (p.source) reste dans la table PAGES.
+     Mesuré le 03/09 par la lane B : ces deux commentaires étaient servis 47 fois. */
   let doc = `<!doctype html>
 <html lang="${langue}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" type="image/svg+xml" href="${FAVICON}">
-<!-- MAQUETTE DE TRAVAIL, JAMAIS UN SITE PUBLIC. Ces pages reprennent le
-     contenu de www.cleolabs.co : indexees, elles entreraient en duplication
-     avec le vrai site et lui nuiraient. Le noindex part avec la page. -->
 <meta name="robots" content="noindex,nofollow">
 <title>${ech(titre)}</title>
 ${metaDesc}
@@ -904,7 +906,6 @@ ${url ? `<link rel="canonical" href="${url}">` : ''}
 ${alternates}
 ${og}
 ${structure}
-<!-- Maquette de travail. Composition relevee sur ${p.source}, habillage DA Cleo. -->
 <style>
 @font-face{font-family:"Satoshi";src:url(/fonts/Satoshi-Variable.woff2) format("woff2");
   font-weight:300 900;font-style:normal;font-display:swap}

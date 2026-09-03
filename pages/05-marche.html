@@ -1,7 +1,7 @@
 <!--NAV-->
 
 <!-- ═══ HERO : mosaïque de trois images à gauche, formulaire à droite ═══ -->
-<section class="section" style="padding:var(--s-64) 0 0">
+<section class="seg section" style="padding:var(--s-64) 0 var(--pad-section-courte)">
   <div class="conteneur">
     <div class="duo" style="gap:56px;align-items:start">
       <div>
@@ -18,17 +18,17 @@
         </p>
 
         <!-- La mosaïque : une grande, deux petites -->
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:420px">
-          <div class="scene" data-anim="grandit" style="grid-column:1 / -1;aspect-ratio:16/7"><img class="fond" src="img:echangeur" alt=""></div>
-          <div class="scene" data-anim="grandit" style="aspect-ratio:1/1"><img class="fond" src="img:briques" alt=""></div>
-          <div class="scene" data-anim="grandit" style="aspect-ratio:1/1"><img class="fond" src="img:pneus" alt=""></div>
+        <div class="seg-mosaique">
+          <div class="scene pleine" data-anim="grandit" style="aspect-ratio:16/7"><img class="fond" src="img:masse-canette" alt="Canettes grises alignées, une seule canette bleue"></div>
+          <div class="scene" data-anim="grandit" style="aspect-ratio:1/1"><img class="fond" src="img:masse-pile" alt="Piles grises en vrac, une seule pile bleue"></div>
+          <div class="scene" data-anim="grandit" style="aspect-ratio:1/1"><img class="fond" src="img:masse-peluche" alt="Peluches grises entassées, une seule peluche bleue"></div>
         </div>
       </div>
 
       <form id="f-demo" method="get" action="https://meetings.hubspot.com/anaelle-guez/rendez-vous" hidden></form>
       <div class="carte-encre form-carte" data-anim="droite">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px">
-          <div class="avatars"><img src="img:anaelle" alt=""><img src="img:naomie" alt=""><img src="img:thezi" alt=""></div>
+          <div class="avatars"><img src="img:anaelle" alt="Anaëlle Guez"><img src="img:naomie" alt="Naomie Halioua"><img src="img:thezi" alt="Thezi Mabuza"></div>
           <span class="t-sm">L'équipe qui suit le corpus européen</span>
         </div>
         <h2 class="t-h1" style="margin-bottom:22px">Réserver un premier échange</h2>
@@ -52,7 +52,7 @@
 </section>
 
 <!-- ═══ BANDE LOGOS ═══ -->
-<section class="sur-sombre" style="background:linear-gradient(180deg,var(--ink-deep) 0%,var(--ink-deep-2) 100%);padding:64px 0 72px">
+<section class="seg sur-sombre" style="background:linear-gradient(180deg,var(--ink-deep) 0%,var(--ink-deep-2) 100%);padding:64px 0 72px">
   <div class="conteneur">
     <div class="centre t-micro" style="letter-spacing:0.12em;text-transform:uppercase;margin-bottom:24px;">
       Aux côtés de marques et de fabricants internationaux
@@ -68,7 +68,7 @@
 </section>
 
 <!-- ═══ LES QUATRE TEMPS, EN CLAIR ═══ -->
-<section class="section fond-lavande">
+<section class="seg section fond-lavande">
   <div class="conteneur">
     <div class="entete-section centre" data-anim="monte" style="align-items:center;margin-bottom:32px">
       <h2 class="t-display mesure-centree" style="max-width:760px">La mise en conformité, en quatre temps</h2>
@@ -86,7 +86,7 @@
           <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Une alerte par gamme, pas une revue de presse</li>
         </ul>
       </div>
-      <div class="scene" data-anim="grandit" style="aspect-ratio:4/3"><img class="fond" src="img:parc-voitures" alt=""></div>
+      <div class="scene" data-anim="grandit" style="aspect-ratio:4/3"><img class="fond" src="img:masse-detergent" alt="Bidons de lessive gris rangés, un seul bidon bleu"></div>
     </div>
 
     <div class="alterne inverse">
@@ -100,7 +100,7 @@
           <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Quand la donnée produit manque, la réponse le dit</li>
         </ul>
       </div>
-      <div class="scene" data-anim="grandit" style="aspect-ratio:4/3"><img class="fond" src="img:fenetres" alt=""></div>
+      <div class="scene" data-anim="grandit" style="aspect-ratio:4/3"><img class="fond" src="img:masse-flacon" alt="Flacons gris en rangées, un seul flacon bleu"></div>
     </div>
 
     <div class="alterne">
@@ -114,20 +114,20 @@
           <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>La somme des entrées manquantes fait le questionnaire fournisseur</li>
         </ul>
       </div>
-      <div class="scene" data-anim="grandit" style="aspect-ratio:4/3"><img class="fond" src="img:briques" alt=""></div>
+      <div class="scene" data-anim="grandit" style="aspect-ratio:4/3"><img class="fond" src="img:masse-couverts" alt="Couverts gris en tas, un seul couvert bleu"></div>
     </div>
 
   </div>
 </section>
 
 <!-- §18 en photographie : chaque marché sa fenêtre -->
-<section class="section sur-clair-fond" style="padding-top:0">
+<section class="seg section sur-clair-fond" style="padding-top:0">
   <div class="conteneur">
     <div class="scene-large" data-anim="grandit" style="min-height:420px">
-      <img src="img:fenetres" alt="">
+      <img src="img:fenetres" alt="Façade d'immeuble la nuit, une fenêtre éclairée en bleu parmi des dizaines de fenêtres jaunes">
       <div class="voile"></div>
       <div class="dessus">
-        <div style="max-width:500px">
+        <div class="seg-scene-texte">
           <div class="t-label" style="margin-bottom:16px">Vingt-sept États membres</div>
           <h3 class="t-h1">Chacun a ses transpositions et sa langue. Un texte européen ne dit pas encore quoi faire à Milan.</h3>
         </div>
@@ -137,7 +137,7 @@
 </section>
 
 <!-- ═══ LES TEXTES ═══ -->
-<section class="section gc-doux">
+<section class="seg section">
   <div class="conteneur">
     <h2 class="t-display" style="max-width:640px">Les textes qui structurent le marché européen</h2>
     <p class="t-body" style="margin:18px 0 44px;max-width:560px">Une sélection des règlements les plus souvent rencontrés sur les produits de grande consommation.</p>
@@ -178,7 +178,7 @@
 </section>
 
 <!-- ═══ CHIFFRES DU MARCHÉ ═══ -->
-<section class="section" style="padding-top:0">
+<section class="seg section" style="padding-top:0">
   <div class="conteneur">
     <div class="mesures" data-anim-groupe>
       <div class="ligne"><div class="libelle">États membres, chacun avec ses transpositions et sa langue</div><div class="valeur">27</div></div>
@@ -190,16 +190,16 @@
 </section>
 
 <!-- ═══ TÉMOIGNAGE + CTA ═══ -->
-<section class="section" style="padding-top:0">
+<section class="seg section" style="padding-top:0">
   <div class="conteneur">
     <div class="temoignage" data-anim-groupe style="margin-bottom:96px">
-      <div class="scene" data-anim="grandit" style="aspect-ratio:4/3"><img class="fond" src="img:parc-voitures" alt=""></div>
+      <div class="scene" data-anim="grandit" style="aspect-ratio:4/3"><img class="fond" src="img:masse-gourde" alt="Gourdes grises alignées, une seule gourde bleue"></div>
       <div>
         <p class="citation" style="margin:0">
           « Chez Decathlon, notre défi est de capter des informations très précises au milieu d’un volume massif de réglementations produits à l’international, avec un enjeu à la fois juridique et technique : piloter nos mises en conformité mondiales tout en accompagnant nos ingénieurs dans le développement des produits. C’est le pont que nous construisons avec le PoC mené avec Cleo : leur moteur d’IA agit comme un traducteur intelligent qui filtre le bruit pour extraire une donnée structurée, directement exploitable par nos équipes et indispensable pour guider la conception au sein de notre PLM. »
         </p>
         <div class="auteur">
-          <img src="img:philippine" alt="">
+          <img src="img:philippine" alt="Philippine Tamic">
           <div>
             <div class="t-sm" style="font-weight:600">Philippine Tamic</div>
             <div class="t-micro">Product Compliance Operations Manager, Decathlon</div>
@@ -211,7 +211,7 @@
 
     <div class="carte-encre p48" data-anim="monte-court">
       <div class="cta-final">
-        <img class="portrait" src="img:anaelle" alt="">
+        <img class="portrait" src="img:anaelle" alt="Anaëlle Guez, cofondatrice de Cleo Labs">
         <div>
           <div class="t-sm" style="margin-bottom:10px"><b>30 minutes</b> pour voir ce qui bloque aujourd'hui</div>
           <h2 class="t-display">Un nouveau pays n'est plus un projet. C'est une décision.</h2>
