@@ -11,6 +11,7 @@ import sharp from '/Users/naomiehalioua/cleo-landing/node_modules/sharp/lib/inde
 const ICI = '/Users/naomiehalioua/cleo-maquettes-edge'
 const PUB = path.join('/Users/naomiehalioua/cleo-maquettes-edge', 'images/depot')
 const CHEMINS = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/chemins.json'), 'utf8'))
+const V6_ROUTES = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/v6-routes.json'), 'utf8'))
 const LOCAL = path.join('/Users/naomiehalioua/cleo-maquettes-edge', 'images')
 const POLICE = '/Users/naomiehalioua/Downloads/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Variable.woff2'
 
@@ -821,6 +822,9 @@ for (const p of PAGES) {
   corps = corps.replace(/<!--(?!(?:NAV|PIED|CTA|MASSE|MASSE-REFS|ECRAN-[A-Z-]+|VEILLE|GLOBE-PRODUITS|RES-NAV:[^>]*|LANGUE)-->)[\s\S]*?-->/g, '')
 
   const nomSortie = p.sortie || p.fichier
+  const familleV6 = V6_ROUTES[nomSortie]
+  if (!familleV6) throw new Error(`FAMILLE V6 ABSENTE : ${nomSortie}`)
+  const pageV6 = nomSortie.replace(/\.html$/, '')
   const seoP = SEO.pages[nomSortie]
   const langue = p.en ? 'en' : 'fr'
   const titre = seoP && seoP.titre ? seoP.titre : `Cleo — ${p.titre}`
@@ -932,7 +936,7 @@ ${structure}
 ${sansCommentairesCss(base + '\n' + composants + '\n' + lanesCss + '\n' + (p.noir ? regimeNoir : '') + '\n' + mouvement)}
 </style>
 </head>
-<body>
+<body data-cleo-ds="v6" data-v6-family="${familleV6}" data-v6-page="${pageV6}">
 ${corps}
 <script>${mouvementJs}</script>
 <script>${corps.includes('data-globe') ? globeJs : ''}</script>
