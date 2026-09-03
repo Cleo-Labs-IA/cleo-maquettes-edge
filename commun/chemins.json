@@ -1,0 +1,178 @@
+{
+  "_note": "Chemins propres de l'apercu, calques sur les routes REELLES de www.cleolabs.co. Les routes marquees 'reelle' repondent 200 en production, mesure le 02/09/2026. Les autres suivent la famille de routes du vrai site (blog/*, jurisdictions/*, resources/*, careers/*) sans exister encore.",
+  "racine": "/fr",
+  "pages": {
+    "01-accueil.html": {
+      "chemin": "/fr",
+      "reelle": true
+    },
+    "01-accueil-en.html": {
+      "chemin": "/en",
+      "reelle": true
+    },
+    "02-entreprise.html": {
+      "chemin": "/fr/company",
+      "reelle": true
+    },
+    "03-offre.html": {
+      "chemin": "/fr/platform",
+      "reelle": true
+    },
+    "04-secteur.html": {
+      "chemin": "/fr/industries",
+      "reelle": true
+    },
+    "05-marche.html": {
+      "chemin": "/fr/jurisdictions/european-union",
+      "reelle": true
+    },
+    "06-cas-client.html": {
+      "chemin": "/fr/customers",
+      "reelle": true
+    },
+    "07-chat.html": {
+      "chemin": "/fr/platform/chat"
+    },
+    "08-reglementation.html": {
+      "chemin": "/fr/platform/regulations"
+    },
+    "09-texte.html": {
+      "chemin": "/fr/jurisdictions/european-union/regulations/ppwr"
+    },
+    "10-ressources.html": {
+      "chemin": "/fr/resources",
+      "reelle": true
+    },
+    "11-blog.html": {
+      "chemin": "/apercu/publications"
+    },
+    "12-article.html": {
+      "chemin": "/fr/blog/eu-ppwr-packaging-conformity-2026",
+      "reelle": true
+    },
+    "13-glossaire.html": {
+      "chemin": "/fr/resources/glossary",
+      "reelle": true
+    },
+    "14-terme.html": {
+      "chemin": "/fr/resources/glossary/representant-autorise"
+    },
+    "15-evenements.html": {
+      "chemin": "/fr/resources/events"
+    },
+    "16-evenement.html": {
+      "chemin": "/fr/resources/events/ppwr-ce-qui-change"
+    },
+    "17-modeles.html": {
+      "chemin": "/fr/resources/templates"
+    },
+    "18-recrutement.html": {
+      "chemin": "/fr/careers",
+      "reelle": true
+    },
+    "19-poste.html": {
+      "chemin": "/fr/careers/ingenieur-donnees-reglementaires"
+    },
+    "20-campagne.html": {
+      "chemin": "/fr/guide/ppwr"
+    },
+    "21-inscription.html": {
+      "chemin": "/fr/meet",
+      "reelle": true
+    },
+    "22-legal.html": {
+      "chemin": "/fr/terms",
+      "reelle": true
+    },
+    "23-research.html": {
+      "chemin": "/fr/research",
+      "reelle": true
+    },
+    "23-research-en.html": {
+      "chemin": "/en/research",
+      "reelle": true
+    },
+    "24-blog.html": {
+      "chemin": "/fr/blog",
+      "reelle": true
+    },
+    "24-blog-en.html": {
+      "chemin": "/en/blog",
+      "reelle": true
+    },
+    "25-skills.html": {
+      "chemin": "/fr/skills",
+      "reelle": true
+    },
+    "25-skills-en.html": {
+      "chemin": "/en/skills",
+      "reelle": true
+    },
+    "26-legal-data.html": {
+      "chemin": "/fr/legal-data",
+      "reelle": true
+    },
+    "26-legal-data-en.html": {
+      "chemin": "/en/legal-data",
+      "reelle": true
+    },
+    "00-composants.html": {
+      "chemin": "/apercu/composants"
+    },
+    "01-accueil-noir.html": {
+      "chemin": "/apercu/accueil-champ-profond"
+    },
+    "27-article-levee.html": {
+      "chemin": "/fr/blog/cleo-labs-raises-1-5m-preseed",
+      "reelle": true
+    },
+    "27-article-levee-en.html": {
+      "chemin": "/en/blog/cleo-labs-raises-1-5m-preseed",
+      "reelle": true
+    },
+    "28-article-vivatech.html": {
+      "chemin": "/fr/blog/cleo-labs-vivatech-2026-scaleway-startup-challenge",
+      "reelle": true
+    },
+    "28-article-vivatech-en.html": {
+      "chemin": "/en/blog/cleo-labs-vivatech-2026-scaleway-startup-challenge",
+      "reelle": true
+    },
+    "29-article-deel.html": {
+      "chemin": "/fr/blog/global-product-compliance-pitch-by-deel",
+      "reelle": true
+    },
+    "29-article-deel-en.html": {
+      "chemin": "/en/blog/global-product-compliance-pitch-by-deel",
+      "reelle": true
+    },
+    "30-securite.html": {
+      "chemin": "/fr/security",
+      "reelle": true
+    },
+    "31-journal.html": {
+      "chemin": "/fr/changelog",
+      "reelle": true
+    },
+    "32-plan-action.html": {
+      "chemin": "/fr/maria-action-plan",
+      "reelle": true
+    },
+    "33-fabricants.html": {
+      "chemin": "/fr/for/manufacturers",
+      "reelle": true
+    },
+    "34-importateurs.html": {
+      "chemin": "/fr/for/importers-distributors",
+      "reelle": true
+    },
+    "35-marketplaces.html": {
+      "chemin": "/fr/for/marketplaces",
+      "reelle": true
+    },
+    "36-solutions.html": {
+      "chemin": "/fr/solutions/product-compliance",
+      "reelle": true
+    }
+  }
+}

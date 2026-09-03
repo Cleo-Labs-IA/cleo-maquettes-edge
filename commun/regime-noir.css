@@ -1,0 +1,221 @@
+/* ════════════════════════════════════════════════════════════════
+   RÉGIME NOIR — surcouche de tokens, relevée sur morpho.org.
+   Le socle et les composants ne changent pas : seules les valeurs
+   des champs et de l'encre basculent, plus la retenue typographique
+   qui est le vrai apport de Morpho (graisse 300-400, tailles
+   modestes, texte secondaire à 50 %, beaucoup d'air).
+   ════════════════════════════════════════════════════════════════ */
+:root{
+  --c-surface: #181818;          /* le noir de morpho.org, mesuré */
+  --c-card: #1F1F1F;
+  --c-field-pale: #202020;
+  --c-field-deep: #121212;       /* la strate plus profonde de Morpho */
+  --c-field-deep-2: #1F1F1F;
+  --c-ink: #FFFFFF;
+
+  --c-text: rgba(255,255,255,0.92);
+  --c-text-2: rgba(255,255,255,0.50);   /* Morpho : le secondaire est à 50 % */
+  --c-text-3: rgba(255,255,255,0.47);
+
+  --c-border: rgba(255,255,255,0.13);
+  --c-border-hover: rgba(255,255,255,0.18);
+  --c-filet: rgba(255,255,255,0.11);
+  --c-filet-sombre: rgba(255,255,255,0.13);
+
+  --c-signal: #5B65FF;
+  --c-blue-light: rgba(91,101,255,0.12);
+  --c-signal-wash: rgba(91,101,255,0.12);
+  --c-signal-line: rgba(91,101,255,0.30);
+
+  --c-pass: #3FD08A;      --c-pass-bg: rgba(63,208,138,0.13);
+  --c-risk: #E0A63C;      --c-risk-bg: rgba(224,166,60,0.13);
+  --c-block: #FF6B60;     --c-block-bg: rgba(255,107,96,0.13);
+
+  --c-mass: rgba(255,255,255,0.15);
+  --c-mass-2: rgba(255,255,255,0.25);
+  --c-found: #5B65FF;
+
+  /* Le verre bascule en sombre : celui de legora.com */
+  --verre-bg: rgba(255,255,255,0.06);
+  --verre-blur: blur(14px);
+  --verre-bord: 1px solid rgba(255,255,255,0.12);
+  --verre-nav-bg: rgba(24,24,24,0.72);
+  --verre-nav-blur: blur(24px);
+
+  --shadow-sm: none;
+  --shadow-md: 0 8px 32px rgba(0,0,0,0.40);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.48);
+  --shadow-xl: 0 24px 64px rgba(0,0,0,0.55);
+  --card-shadow: none; --card-shadow-hover: none;
+
+  /* La retenue de Morpho : rayon 8, plus d'air */
+  --r-md: 12px; --r-lg: 16px;
+  --pad-section: 144px;
+}
+body{background:var(--c-surface); color:var(--c-text)}
+
+/* Typographie : Morpho titre en 300-400, à des tailles modestes,
+   sans approche négative. C'est ce qui fait sa tenue. */
+.t-hero{font-weight:300; letter-spacing:-0.02em; line-height:1.12; color:#fff;
+  font-size:clamp(2.25rem, 4.4vw, 3.75rem)}
+.t-display{font-weight:300; letter-spacing:-0.012em; line-height:1.2; color:#fff;
+  font-size:clamp(1.75rem, 2.8vw, 2.5rem)}
+.t-h1{font-weight:400; letter-spacing:-0.008em; color:#fff; font-size:clamp(1.375rem, 1.9vw, 1.625rem)}
+.t-h2,.t-h3,.t-h4{font-weight:450; color:#fff}
+.attenue{color:var(--c-text-2)}
+
+/* Les écrans produit restent clairs : c'est l'app, pas la page. */
+.ecran-app,.fiche{background:#FAFAF9; color:rgba(0,0,0,0.87); border-color:rgba(0,0,0,0.12)}
+/* Une surface claire ne bascule PAS avec le régime : elle porte sa propre encre.
+   Sans ça, un enfant qui écrit color:var(--c-text) ou var(--cleo-ink) hérite de
+   l'encre CLAIRE du régime noir et rend blanc sur blanc. Mesuré au pixel le
+   26/08 : « 18 / 25 couvertes » à 1,04:1, la citation CPSIA à 1,00:1.
+   .carte-claire est la poignée à poser sur toute carte blanche sans classe. */
+.ecran-app,.fiche,.carte-claire{--c-text:rgba(0,0,0,0.87); --c-text-2:rgba(0,0,0,0.62);
+  --c-text-3:rgba(0,0,0,0.54); --c-ink:#0A0A0A; --cleo-ink:#0A0A0A}
+.ecran-tete{background:#FFFFFF; border-bottom-color:rgba(0,0,0,0.09)}
+.ecran-tete .pastilles i{background:rgba(0,0,0,0.11)}
+.ecran-tete .fil-ariane{color:rgba(0,0,0,0.54)}
+.canevas{background:radial-gradient(circle,#00000010 1px,transparent 1px) 0 0/22px 22px,#FAFAF9}
+.nd{background:#fff; border-color:rgba(0,0,0,0.15)}
+.nd .titre{color:rgba(0,0,0,0.87)} .nd .id,.nd .op,.nd .nb{color:rgba(0,0,0,0.54); border-color:rgba(0,0,0,0.10)}
+.chemin-pilule,.barre-canevas{background:#fff; border-color:rgba(0,0,0,0.10)}
+.chemin-pilule,.barre-canevas span{color:rgba(0,0,0,0.62)} .chemin-pilule b,.barre-canevas .zoom{color:rgba(0,0,0,0.87)}
+.chat-accueil .ca-corps,.chat-fil-ecran .cf-corps,.vv-corps{background:#FAFAF9}
+.ca-champ,.cf-question,.cf-cite,.cf-saisie,.vv-ligne{background:#fff; border-color:rgba(0,0,0,0.10)}
+.ca-texte,.cf-question,.cf-reponse p,.vv-titre{color:rgba(0,0,0,0.87)}
+.cf-etape{color:rgba(0,0,0,0.54)} .cf-etape.fait{color:rgba(0,0,0,0.62)}
+.cf-cite,.cf-placeholder,.vv-ref{color:rgba(0,0,0,0.5)}
+.ca-mode{background:rgba(0,8,207,0.07); border-color:rgba(0,8,207,0.22); color:#0008CF}
+.ca-envoi,.cf-cite{border-left-color:#0008CF} .ca-envoi{background:#0008CF}
+.cf-ref{color:#0008CF}
+.fiche-nom{color:rgba(0,0,0,0.87)} .fiche-ref{color:rgba(0,0,0,0.54)}
+.fiche-ligne{color:rgba(0,0,0,0.62); border-top-color:rgba(0,0,0,0.08)}
+.fiche-entete-pays{color:rgba(0,0,0,0.87); background:#F9F8F6; border-top-color:rgba(0,0,0,0.08)}
+.jauge{background:rgba(0,0,0,0.08)} .jauge span{background:#0A0A0A}
+.fiche .m-couvert{background:rgba(13,110,68,0.09); color:#0D6E44}
+.fiche .m-attente{background:rgba(138,90,0,0.10); color:#8A5A00}
+.fiche .m-manquant{background:rgba(0,0,0,0.04); color:rgba(0,0,0,0.54)}
+.vv-etat{background:rgba(0,0,0,0.04); color:rgba(0,0,0,0.54)}
+.vv-etat.touche{background:rgba(13,110,68,0.09); color:#0D6E44}
+.vv-bilan{color:#0D6E44} .vv-date b{color:rgba(0,0,0,0.87)} .vv-date span{color:rgba(0,0,0,0.54)}
+.regle-flottante{background:rgba(255,255,255,0.95); color:#0A0A0A; border-color:rgba(0,0,0,0.08)}
+.regle-flottante .drapeau{background:#F2F1EF}
+.statut-vide{background:rgba(0,0,0,0.09)} .statut-ok{background:#0008CF}
+.flottant{background:rgba(255,255,255,0.95); color:rgba(0,0,0,0.87); border-color:rgba(0,0,0,0.08)}
+.flottant .t-micro{color:rgba(0,0,0,0.54)}
+/* Les méga-menus restent clairs, comme chez Morpho */
+.mega{background:#1F1F1F; border-color:rgba(255,255,255,0.10); color:var(--c-text)}
+.mega-item:hover{background:rgba(255,255,255,0.05)}
+.mega-icone{background:rgba(255,255,255,0.07)}
+.mega-item b,.mega-titre{color:#fff} .mega-item i,.mega-liste a{color:var(--c-text-2)}
+.mega-pied{background:rgba(255,255,255,0.04); color:var(--c-text-3)}
+.mega-badge{background:rgba(91,101,255,0.16); color:#8A93FF}
+.mega-liste{border-top-color:rgba(255,255,255,0.10)}
+/* Boutons : Morpho met un bleu plein en pilule */
+.btn-primaire,.btn-marque{background:#fff; color:#0A0A0A}
+.btn-primaire:hover,.btn-marque:hover{background:#E8E7E3}
+.nav .btn-marque{background:#0008CF; color:#fff}
+.nav .btn-marque:hover{background:#1A22E0}
+.btn-contour,.btn-clair{background:transparent; color:#fff; border:1px solid rgba(255,255,255,0.22)}
+.btn-contour:hover{border-color:rgba(255,255,255,0.5)}
+.coches .coche{background:rgba(255,255,255,0.14)} .coches .coche svg path{stroke:#fff}
+.oui{background:#fff} .oui svg path{stroke:#0A0A0A} .oui-doux{background:rgba(255,255,255,0.09)}
+.bande-logos img{filter:grayscale(1) brightness(0) invert(1); opacity:0.55}
+.mass-ref{background:rgba(255,255,255,0.05); color:rgba(255,255,255,0.25)}
+.mass-ref.alt{color:rgba(255,255,255,0.15)}
+.mass-ref.found{background:#0008CF; color:#fff}
+.sceau .nom{color:#0F0E0D} .sceau .sous{color:#2A2A2A}
+.article blockquote{background:rgba(255,255,255,0.04)}
+.pied{background:#121212}
+.infolettre{background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.11)}
+.infolettre button{background:#fff; color:#0A0A0A !important}
+.kit-cadre{background:rgba(255,255,255,0.03); border-color:rgba(255,255,255,0.10)}
+.kit-nav a:hover{background:rgba(255,255,255,0.07)}
+
+/* Les surfaces : les composants les prennent en dur sur --c-white,
+   qui doit rester blanc pour l'encre des boutons. On bascule donc
+   les classes plutôt que le token. */
+.carte,.carte-tiede,.carte-encre,.carte-sombre,.res-carte,.terme-carte,.ligne-liste,.form-carte{
+  background:rgba(255,255,255,0.04); border-color:rgba(255,255,255,0.11); box-shadow:none; color:var(--c-text)}
+.carte:hover,.carte-encre:hover,.res-carte:hover,.ligne-liste:hover{
+  border-color:rgba(255,255,255,0.22); box-shadow:none; transform:none}
+.carte-lavande{background:rgba(255,255,255,0.06); border-color:rgba(255,255,255,0.11); color:var(--c-text)}
+.carte-lavande .t-sm,.carte-lavande .t-micro{color:var(--c-text-2)}
+.carte .t-h1,.carte .t-h2,.carte .t-h4,.carte-encre .t-h1,.carte-encre .t-h2,.carte-encre .t-h4,
+.res-carte .titre,.terme-carte .nom,.ligne-liste .t-h2{color:#fff}
+.carte .t-sm,.carte .t-lead,.carte-encre .t-sm,.carte-encre .t-lead,
+.terme-carte .def,.res-carte .t-caption{color:var(--c-text-2)}
+.carte .t-micro,.carte .surtitre,.carte-encre .t-micro,.carte-encre .surtitre{color:var(--c-text-3)}
+.res-carte .vignette{background:rgba(255,255,255,0.05)}
+.res-carte .lien{color:#8A93FF}
+.jouer span{background:rgba(24,24,24,0.88); border:1px solid rgba(255,255,255,0.18)}
+.jouer span svg{fill:#fff !important}
+.pilule,.tag{background:rgba(255,255,255,0.06); border-color:rgba(255,255,255,0.14); color:var(--c-text-2)}
+.etiquette{background:rgba(255,255,255,0.07); color:var(--c-text-2)}
+.mesures,.mesures .ligne,.faq,.faq details,.comparatif td,.pied-regs,.pied-bas{border-color:rgba(255,255,255,0.11)}
+.mesures .valeur,.chiffre,.faq summary,.citation,.fiche-laterale .valeur{color:#fff}
+.mesures .libelle,.faq .reponse,.recit p,.recit li,.article p,.article li,.legal p,.legal li{color:var(--c-text-2)}
+.article h2,.article h3,.article b,.recit b,.legal h2{color:#fff}
+.article .source-citee{color:#8A93FF}
+.sommaire a{border-left-color:rgba(255,255,255,0.11); color:var(--c-text-2)}
+.sommaire a:hover,.sommaire a.actif{color:#fff}
+.ligne-icone{background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.11)}
+.res-nav a{color:var(--c-text-2)} .res-nav a:hover,.res-nav .titre{color:#fff}
+.res-nav a.actif{color:#8A93FF}
+.form-carte input{background:rgba(255,255,255,0.06); border-color:rgba(255,255,255,0.14); color:#fff}
+.form-carte input::placeholder{color:var(--c-text-3)}
+.form-carte label{color:var(--c-text-2)}
+.avatars img{border-color:#181818}
+.kit-nom,.kit-famille .num{color:#fff} .kit-note{color:var(--c-text-2)}
+.kit-ou{border-color:rgba(255,255,255,0.11); color:var(--c-text-3)}
+.bandeau{background:#0C0C0C}
+.signature-cleo{background:#121212}
+/* Le bouton blanc doit garder son encre sombre */
+.btn-primaire,.btn-marque,.sur-sombre .btn-primaire,.sur-sombre .btn-marque{background:#fff; color:#0A0A0A}
+.nav .btn-marque{background:#0008CF; color:#fff}
+.couverture{background:linear-gradient(160deg,#1F1F1F 0%,#121212 100%)}
+/* La carte citée est un objet clair posé sur la photo : son encre reste sombre. */
+.flottant,.flottant *{color:rgba(0,0,0,0.87)}
+.flottant .t-micro{color:rgba(0,0,0,0.54)}
+/* Les blocs clairs posés dans le flux gardent leur encre sombre.
+   Vécu : la carte de citation sortait blanc sur blanc. */
+[style*="background:var(--c-white)"],[style*="background:var(--c-white)"] *{color:rgba(0,0,0,0.87)}
+[style*="background:var(--c-white)"] .t-caption{color:rgba(0,0,0,0.54)}
+[style*="background:var(--c-white)"] [style*="color:var(--c-blue)"]{color:#0008CF !important}
+
+/* ── Les mots-symboles basculent avec le régime, eux aussi. ──
+   .nav-logo img porte filter:none !important (composants.css:56) pour laisser le
+   mot-symbole en BLEU sur les pages claires, où il rend 8,79:1. Sur champ sombre
+   ce même bleu tombe à 1,97:1 : mesuré le 27/08 sur 01-accueil-noir, rgb(14,42,215)
+   sur rgb(24,24,24). Il faut donc le rebasculer ici, et gagner le !important.
+   .logo-marque fait la même chose pour un logo de marque posé hors .bande-logos :
+   le bleu marine de Decathlon rendait 1,35:1 dans le bloc citation. */
+.nav-logo img{filter:brightness(0) invert(1) !important}
+.logo-marque{filter:brightness(0) invert(1)}
+
+/* ── LE BLEU DE MARQUE NE TIENT PAS SUR CHAMP SOMBRE. ──
+   Mesuré le 27/08/2026 sur 01-accueil-noir : le lien « Voir les autres cas »
+   rend #0008CF sur #212121, soit 1,48:1, le pire ratio du chantier. Ce
+   #212121 est la carte elle-même : rgba(255,255,255,0.04) posée sur le
+   --c-surface #181818 de ce régime.
+   Le remplaçant est un jeton qui existe déjà, --c-periwinkle #8A93FF
+   (base.css:57), que ce régime ne redéfinit pas : 5,89:1 sur la carte,
+   6,51:1 sur #181818, 6,87:1 sur #121212.
+   Le !important n'est pas un raccourci : la couleur est posée en style=
+   sur le lien (pages/01-accueil.html:270) et un style inline bat toute
+   feuille. Même manœuvre que la ligne 185, qui reste au-dessus par
+   spécificité (0,2,0 contre 0,1,0).
+   PORTÉE : le régime sombre seulement, et seulement l'encre bleue. Les
+   îlots CLAIRS gardent le bleu, qui y rend 10,85:1 sur blanc là où le
+   periwinkle ne ferait que 2,73:1. Faire de #8A93FF LE jeton d'accent
+   texte du site est un arbitrage pour Naomie, pas ce correctif. */
+[style*="color:var(--c-blue)"]{color:var(--c-periwinkle) !important}
+.carte-claire [style*="color:var(--c-blue)"],.ecran-app [style*="color:var(--c-blue)"],
+.fiche [style*="color:var(--c-blue)"],.flottant [style*="color:var(--c-blue)"]{color:var(--c-blue) !important}
+/* Les deux mêmes bleus posés en survol par composants.css:62 et :92.
+   1,64:1 sur le verre de la barre, 1,52:1 sur le méga-menu #1F1F1F.
+   Sélecteurs identiques aux leurs, et cette feuille est inline APRÈS
+   composants.css : l'ordre suffit, pas besoin de !important. */
+.nav-item:hover .nav-declencheur{color:var(--c-periwinkle)}
+.mega-liste a:hover{color:var(--c-periwinkle)}

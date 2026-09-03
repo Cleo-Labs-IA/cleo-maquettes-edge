@@ -1,0 +1,78 @@
+/* ============================================================
+   BASE — DA Cleo. Tokens repris verbatim de cleo-landing/src/app/globals.css
+   Composition inspiree d'edgecomply.com, habillage 100% Cleo.
+   ============================================================ */
+:root{
+  /* Texte */
+  --text-primary:rgba(0,0,0,0.87); --text-secondary:rgba(0,0,0,0.62); --text-muted:rgba(0,0,0,0.45);
+  --text-on-dark:#FFFFFF; --text-on-dark-2:rgba(255,255,255,0.66); --text-on-dark-3:rgba(255,255,255,0.38);
+  /* Surfaces */
+  --bg-card:#FFFFFF; --bg-card-warm:#F0EFEC; --bg-card-hover:#FAF9F7; --bg-subtle:#F0EFEC;
+  --cleo-frost:#F9F8F6; --cleo-ink:#1A1A1A;
+  /* Bordures */
+  --border-subtle:rgba(0,0,0,0.08); --border-default:rgba(0,0,0,0.12); --border-strong:rgba(0,0,0,0.15);
+  /* Marque */
+  --brand-text:#0008CF; --brand-solid:#0008CF; --brand-hover:#0006A8;
+  --brand-muted:rgba(0,8,207,0.08); --brand-light:rgba(0,8,207,0.06); --brand-medium:rgba(0,8,207,0.12);
+  --brand-on-dark:#6B8AFF;
+  --btn-primary-bg:#1A1A1A; --btn-primary-hover-bg:#333333; --btn-primary-text:#FFFFFF;
+  /* Accent lavande */
+  --accent:#C4A8E0; --accent-light:#D8C4ED; --accent-muted:rgba(196,168,224,0.15);
+  --cleo-sky:#B8C8F0;
+  /* Fonds de section */
+  --section-sky:rgba(0,8,207,0.06); --section-indigo:rgba(196,168,224,0.08);
+  /* Encre profonde : la contrepartie sombre de la DA, deja en place sur la landing */
+  --ink-deep:#0B0B1F; --ink-deep-2:#141433; --ink-card:#1A1A3D;
+  /* Ombres */
+  --shadow-sm:0 2px 8px rgba(0,0,0,0.04); --shadow-md:0 8px 32px rgba(0,0,0,0.06);
+  --shadow-lg:0 16px 48px rgba(0,0,0,0.08); --shadow-xl:0 24px 64px rgba(0,0,0,0.10);
+  --shadow-blue:0 4px 24px rgba(0,8,207,0.10);
+  /* Rayons */
+  --r-sm:8px; --r-md:16px; --r-lg:24px; --r-pill:9999px;
+  /* Mouvement */
+  --ease-out:cubic-bezier(0.16,1,0.3,1);
+  /* Grille : releve edgecomply = conteneur 1340 sur viewport 1440 */
+  --conteneur:1340px; --gouttiere:50px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--cleo-frost); color:var(--text-primary);
+  font-family:"Satoshi",-apple-system,BlinkMacSystemFont,system-ui,sans-serif;
+  font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+img{max-width:100%; display:block}
+a{color:inherit; text-decoration:none}
+button{font:inherit}
+
+/* ── Echelle typographique : proportions relevees chez edgecomply,
+      rendues avec Satoshi et les graisses Cleo (700/600, ls negatif) ── */
+h1,h2,h3,h4{margin:0; font-family:inherit}
+.t-hero{font-size:clamp(2.25rem,1.4rem + 3.2vw,3.625rem); font-weight:700; line-height:1.10; letter-spacing:-0.032em}
+.t-h2{font-size:clamp(1.875rem,1.2rem + 2.2vw,3rem); font-weight:700; line-height:1.12; letter-spacing:-0.028em}
+.t-h3{font-size:clamp(1.5rem,1.1rem + 1.4vw,2.25rem); font-weight:600; line-height:1.18; letter-spacing:-0.022em}
+.t-h4{font-size:clamp(1.125rem,1rem + 0.5vw,1.375rem); font-weight:600; line-height:1.30; letter-spacing:-0.012em}
+.t-lead{font-size:clamp(1rem,0.95rem + 0.3vw,1.125rem); font-weight:400; line-height:1.62; color:var(--text-secondary)}
+.t-body{font-size:1rem; line-height:1.65; color:var(--text-secondary)}
+.t-sm{font-size:0.875rem; line-height:1.55; color:var(--text-secondary)}
+.t-micro{font-size:0.8125rem; line-height:1.45; color:var(--text-muted)}
+/* Surtitre en petites capitales espacees : signature edgecomply, gardee */
+.surtitre{font-size:0.75rem; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--brand-text)}
+.sur-clair{color:var(--brand-on-dark)}
+/* Le titre en deux teintes : leur geste le plus reconnaissable */
+.attenue{color:var(--text-muted)}
+.sur-sombre .attenue{color:var(--text-on-dark-3)}
+
+/* ── Blocs ── */
+.conteneur{max-width:var(--conteneur); margin:0 auto; padding:0 var(--gouttiere)}
+.section{padding:112px 0}
+.section-serree{padding:72px 0}
+.sur-sombre{background:var(--ink-deep); color:var(--text-on-dark)}
+.sur-sombre .t-lead,.sur-sombre .t-body,.sur-sombre .t-sm{color:var(--text-on-dark-2)}
+.sur-sombre .t-micro{color:var(--text-on-dark-3)}
+.sur-clair-fond{background:var(--cleo-frost)}
+.sur-lavande{background:var(--section-indigo)}
+.centre{text-align:center}
+.mesure{max-width:640px}
+.mesure-centree{max-width:680px; margin-left:auto; margin-right:auto}

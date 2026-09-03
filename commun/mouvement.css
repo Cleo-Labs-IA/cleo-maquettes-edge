@@ -1,0 +1,122 @@
+/* ════════════════════════════════════════════════════════════════
+   MOUVEMENT — valeurs relevées au navigateur le 26/08/2026 sur les
+   deux sites Framer que Naomie a donnés en référence.
+     legora.com     0,5 s · cubic-bezier(0.625, 0.05, 0, 1)
+                    reveal = opacité 0→1 + translation Y, will-change
+                    survols 0,15 s ease sur fond et bordure, 0,05 s sur transform
+     edgecomply.com 0,28 s · cubic-bezier(0.22, 1, 0.36, 1)
+   On ne copie pas leur bundle : on rejoue leurs valeurs en CSS,
+   déclenché par un IntersectionObserver. Aucune dépendance.
+   ⚠️ Le moteur ne touche JAMAIS à la molette : capter wheel avec
+   preventDefault a déjà cassé le défilement de la landing le 30/07.
+   ════════════════════════════════════════════════════════════════ */
+:root{
+  --ease-reveal: cubic-bezier(0.625, 0.05, 0, 1);   /* legora */
+  --ease-ui: cubic-bezier(0.22, 1, 0.36, 1);        /* edgecomply */
+  --dur-reveal: 0.5s;
+  --dur-ui: 0.28s;
+  --dur-survol: 0.15s;
+}
+
+/* ── Le reveal. L'élément part en place, décalé et transparent,
+      et rejoint sa position quand il entre dans le champ. ── */
+[data-anim]{opacity:0; will-change:opacity, transform}
+[data-anim="monte"]{transform:translateY(22px)}
+[data-anim="monte-court"]{transform:translateY(12px)}
+[data-anim="fondu"]{transform:none}
+[data-anim="droite"]{transform:translateX(26px)}
+[data-anim="gauche"]{transform:translateX(-26px)}
+[data-anim="grandit"]{transform:scale(0.985)}
+[data-anim].vu{opacity:1; transform:none;
+  transition:opacity var(--dur-reveal) var(--ease-reveal),
+             transform var(--dur-reveal) var(--ease-reveal)}
+/* Une fois arrivé, on rend la main au navigateur */
+[data-anim].pose{will-change:auto}
+
+/* Le décalage en cascade : les enfants d'un groupe arrivent l'un
+   après l'autre. 70 ms, la valeur qui lit sans traîner. */
+[data-anim-groupe] > *{opacity:0; transform:translateY(18px); will-change:opacity, transform}
+[data-anim-groupe].vu > *{opacity:1; transform:none;
+  transition:opacity var(--dur-reveal) var(--ease-reveal),
+             transform var(--dur-reveal) var(--ease-reveal)}
+[data-anim-groupe].vu > *:nth-child(1){transition-delay:0ms}
+[data-anim-groupe].vu > *:nth-child(2){transition-delay:70ms}
+[data-anim-groupe].vu > *:nth-child(3){transition-delay:140ms}
+[data-anim-groupe].vu > *:nth-child(4){transition-delay:210ms}
+[data-anim-groupe].vu > *:nth-child(5){transition-delay:280ms}
+[data-anim-groupe].vu > *:nth-child(6){transition-delay:350ms}
+[data-anim-groupe].vu > *:nth-child(n+7){transition-delay:420ms}
+
+/* ── Les survols, aux valeurs relevées ──
+   La courbe du survol est ease-out, jamais var(--ease-reveal) : celle-ci
+   n'a parcouru que 7,1 % de sa course à 20 % du budget, contre 30,7 %
+   pour la valeur par défaut du navigateur. Elle est faite pour une
+   révélation de 0,5 s ; posée sur 0,15 s elle donne l'impression que
+   rien ne répond. Plus aucune transition ne tourne sur le défaut. */
+.carte,.carte-encre,.res-carte,.terme-carte,.ligne-liste{
+  transition:border-color var(--dur-survol) ease-out, box-shadow var(--dur-survol) ease-out,
+             transform var(--dur-survol) ease-out}
+.btn{transition:background var(--dur-survol) ease-out, border-color var(--dur-survol) ease-out,
+                color var(--dur-survol) ease-out, transform var(--dur-survol) ease-out,
+                box-shadow var(--dur-survol) ease-out}
+.mega-item,.nav-declencheur,.pied ul a,.res-nav a,.sommaire a{transition:color var(--dur-survol) ease-out,
+  background var(--dur-survol) ease-out}
+.mega{transition:opacity var(--dur-ui) var(--ease-ui), transform var(--dur-ui) var(--ease-ui), visibility var(--dur-ui)}
+.nav-declencheur .chev{transition:transform var(--dur-ui) var(--ease-ui)}
+.res-carte .lien svg,.bandeau .fleche{transition:transform var(--dur-ui) var(--ease-ui)}
+
+/* La révélation et le survol se disputaient les mêmes éléments.
+   [data-anim].vu et [data-anim-groupe].vu > * pèsent (0,2,0) et
+   l'emportent sur .carte-encre, qui pèse (0,1,0) : une carte révélée
+   perdait toute sa transition de survol, et sa bordure sautait à sa
+   valeur finale dès la première image. La classe .vu est posée une fois
+   et n'est jamais retirée, donc la perte est définitive.
+   Ici on remonte à (0,3,0) et on garde les DEUX jeux de propriétés :
+   la révélation sur --dur-reveal, le survol sur --dur-survol. Les
+   propriétés sont listées une par une, jamais « all », pour qu'aucune
+   déclaration ne raccourcisse la révélation de opacity et transform. */
+[data-anim].vu.carte,[data-anim].vu.carte-encre,[data-anim].vu.res-carte,
+[data-anim].vu.terme-carte,[data-anim].vu.ligne-liste,
+[data-anim-groupe].vu > .carte,[data-anim-groupe].vu > .carte-encre,
+[data-anim-groupe].vu > .res-carte,[data-anim-groupe].vu > .terme-carte,
+[data-anim-groupe].vu > .ligne-liste{
+  transition:opacity var(--dur-reveal) var(--ease-reveal),
+             transform var(--dur-reveal) var(--ease-reveal),
+             border-color var(--dur-survol) ease-out,
+             box-shadow var(--dur-survol) ease-out}
+
+/* ── La scène du hero : l'image respire d'un souffle très lent.
+      C'est le seul mouvement continu de la page. ── */
+@keyframes souffle{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.028)}
+}
+.scene img.fond{animation:souffle 22s ease-in-out infinite}
+
+/* Les pilules de règlement arrivent en cascade sur la photo */
+.pile-regles > *{opacity:0; transform:translateX(20px); will-change:opacity, transform}
+.pile-regles.vu > *{opacity:1; transform:translateX(var(--decal, 0));
+  transition:opacity var(--dur-reveal) var(--ease-reveal), transform var(--dur-reveal) var(--ease-reveal)}
+.pile-regles.vu > *:nth-child(1){transition-delay:120ms}
+.pile-regles.vu > *:nth-child(2){transition-delay:200ms}
+.pile-regles.vu > *:nth-child(3){transition-delay:280ms}
+.pile-regles.vu > *:nth-child(4){transition-delay:360ms}
+.pile-regles.vu > *:nth-child(5){transition-delay:440ms}
+
+/* ── La masse : les documents apparaissent par vagues, et l'unique
+      arrive en dernier. C'est ce qui fait lire le geste. ── */
+.mass .mass-item{opacity:0; will-change:opacity}
+.mass.vu .mass-item{opacity:1; transition:opacity 0.42s var(--ease-reveal)}
+.mass.vu .mass-item.found{transition:opacity 0.5s var(--ease-reveal) 0.62s}
+
+/* ── Personne ne subit le mouvement ── */
+@media (prefers-reduced-motion: reduce){
+  [data-anim],[data-anim-groupe] > *,.pile-regles > *,.mass .mass-item{
+    opacity:1 !important; transform:none !important; transition:none !important}
+  .scene img.fond{animation:none}
+  *{transition-duration:0.01ms !important; animation-duration:0.01ms !important}
+}
+
+/* Le hero est déjà à l'écran : rien n'y entre, tout y est. */
+[data-sans-anim] [data-anim],[data-sans-anim] [data-anim-groupe] > *{
+  opacity:1 !important; transform:none !important}

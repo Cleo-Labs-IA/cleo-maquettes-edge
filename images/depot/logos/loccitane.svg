@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" fill="none">
+  <!-- L'Occitane en Provence logo - Gold/amber serif typeface -->
+  <text x="260" y="52" text-anchor="middle" font-family="Georgia, 'Times New Roman', 'Palatino Linotype', serif" font-weight="400" font-size="46" fill="#C8963E" letter-spacing="8">L'OCCITANE</text>
+  <line x1="100" y1="65" x2="420" y2="65" stroke="#C8963E" stroke-width="0.5"/>
+  <text x="260" y="88" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-weight="400" font-size="18" fill="#C8963E" letter-spacing="10">EN PROVENCE</text>
+</svg>

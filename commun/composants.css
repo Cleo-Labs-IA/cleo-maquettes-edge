@@ -1,0 +1,1239 @@
+/* ════════════════════════════════════════════════════════════════
+   COMPOSANTS — régime clair dominant, champ profond en ponctuation.
+   Composition relevée sur edgecomply.com, matière relevée sur
+   cleolabs.co (le verre, l'échelle), legora.com (le verre sombre sur
+   photo) et harvey.ai (les filets, les chiffres).
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── Alias de migration : les fragments ont été écrits avant. ── */
+:root{
+  --text-primary: var(--c-text); --text-secondary: var(--c-text-2); --text-muted: var(--c-text-3);
+  --text-on-dark: var(--c-text-on-dark); --text-on-dark-2: var(--c-text-on-dark-2); --text-on-dark-3: var(--c-text-on-dark-3);
+  --brand-solid: var(--c-blue); --brand-text: var(--c-blue); --brand-hover: var(--c-blue-hover);
+  --brand-on-dark: var(--c-signal-clair); --brand-muted: var(--c-signal-wash);
+  --ink-deep: var(--c-field-deep); --ink-deep-2: var(--c-field-deep-2); --ink-card: var(--c-field-deep-2);
+  --cleo-frost: var(--c-surface); --cleo-ink: var(--c-ink);
+  --bg-card: var(--c-white); --bg-card-warm: var(--c-card); --bg-card-hover: #FAF9F7;
+  --accent: var(--c-periwinkle); --accent-light: var(--c-lavande); --accent-muted: rgba(138,147,255,0.14);
+  --border-subtle: var(--c-border); --border-default: var(--c-border-hover);
+  --shadow-blue: 0 4px 24px rgba(0,8,207,0.10);
+  --ease-out: var(--ease-luxury); --duration-normal: var(--dur-normal);
+  --card-bg: var(--c-white); --card-bg-plain: var(--c-white);
+  --card-border: 1px solid var(--c-border); --card-edge: none; --card-ring: none;
+  --card-blur: none; --btn-glow: none; --btn-edge: none; --btn-lift: var(--shadow-sm);
+  --r-xs: 6px;
+}
+.t-lead{font-size:clamp(1rem, 0.95rem + 0.3vw, 1.125rem); line-height:1.66; color:var(--c-text-2)}
+.t-sm{font-size:0.9375rem; line-height:1.6; color:var(--c-text-2)}
+.t-micro{font-size:0.75rem; line-height:1.5; color:var(--c-text-3)}
+.t-h4{font-size:1rem; font-weight:500; line-height:1.35; letter-spacing:-0.01em; color:var(--c-ink)}
+.surtitre{font-size:0.75rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:var(--c-text-3)}
+.sur-lavande{background:var(--c-field-pale)}
+.sur-sombre .t-lead,.sur-sombre .t-sm{color:var(--c-text-on-dark-2)}
+.sur-sombre .t-micro,.sur-sombre .surtitre{color:var(--c-text-on-dark-3)}
+.sur-sombre .t-h4{color:var(--c-text-on-dark)}
+
+/* ── LE VERRE, régime clair. Valeurs relevées sur cleolabs.co. ── */
+.verre{background:var(--verre-bg); backdrop-filter:var(--verre-blur); -webkit-backdrop-filter:var(--verre-blur);
+  border:var(--verre-bord); border-radius:var(--verre-r)}
+/* Régime sombre, relevé sur legora.com : posé sur une photo, sans bord ni ombre. */
+.verre-sombre{background:var(--verre-sombre-bg); backdrop-filter:var(--verre-sombre-blur);
+  -webkit-backdrop-filter:var(--verre-sombre-blur); border-radius:var(--verre-sombre-r);
+  color:var(--c-text-on-dark); border:none; box-shadow:none}
+
+/* ── Bandeau et navigation ── */
+.bandeau{background:var(--c-ink); color:rgba(255,255,255,0.72); font-size:0.75rem; font-weight:400}
+.bandeau .conteneur{display:flex; align-items:center; justify-content:center; gap:8px; padding:10px 0}
+.bandeau b{font-weight:600; color:#fff}
+.bandeau .fleche{transition:transform var(--dur-normal) var(--ease-apple)}
+.bandeau a:hover .fleche{transform:translateX(3px)}
+
+.nav{background:var(--verre-nav-bg); backdrop-filter:var(--verre-nav-blur);
+  -webkit-backdrop-filter:var(--verre-nav-blur); color:var(--c-text);
+  position:sticky; top:0; z-index:50; border-bottom:1px solid var(--c-border)}
+.nav .conteneur{display:flex; align-items:center; gap:34px; height:60px; position:static}
+.nav-logo{display:flex; align-items:center}
+.nav-logo img{filter:none !important}
+.nav-liens{display:flex; align-items:center; gap:24px; margin-left:6px}
+.nav-item{position:static}
+.nav-declencheur{background:none; border:none; cursor:pointer; padding:0; font-size:0.75rem;
+  font-weight:450; color:var(--c-text); display:flex; align-items:center; gap:5px;
+  transition:color var(--dur-fast) var(--ease-apple)}
+.nav-item:hover .nav-declencheur{color:var(--c-blue)}
+.nav-item:hover .chev{transform:rotate(180deg)}
+.nav-declencheur .chev{width:9px; height:9px; opacity:0.45; transition:transform var(--dur-fast) var(--ease-apple)}
+.nav-fin{margin-left:auto; display:flex; align-items:center; gap:16px}
+.nav-fin .lien-secondaire{font-size:0.75rem; color:var(--c-text-2)}
+
+/* ── Méga-menus ── */
+.mega{position:absolute; top:calc(100% - 1px); left:var(--gouttiere); right:var(--gouttiere);
+  background:var(--c-white); color:var(--c-text); border:1px solid var(--c-border);
+  border-radius:var(--r-md); padding:30px 32px; box-shadow:var(--shadow-lg);
+  opacity:0; visibility:hidden; transform:translateY(-6px);
+  transition:opacity 160ms var(--ease-apple), transform 160ms var(--ease-apple), visibility 160ms; z-index:70}
+.nav-item:hover .mega{opacity:1; visibility:visible; transform:translateY(0)}
+.mega-etroit{left:auto; right:var(--gouttiere); width:250px}
+.mega-titre{font-size:0.9375rem; font-weight:500; color:var(--c-text); margin-bottom:20px}
+.mega-grille{display:grid; gap:8px}
+.mega-grille.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.mega-grille.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.mega-item{display:flex; align-items:center; gap:13px; padding:10px 12px; border-radius:var(--r-sm);
+  transition:background 140ms var(--ease-apple)}
+.mega-item:hover{background:var(--c-surface)}
+.mega-icone{width:36px; height:36px; border-radius:var(--r-sm); background:var(--c-field-pale);
+  display:grid; place-items:center; font-size:1rem; flex:none}
+.mega-item span:last-child{min-width:0}
+.mega-item b{display:block; font-size:0.75rem; font-weight:500; color:var(--c-text); line-height:1.35}
+.mega-item i{display:block; font-style:normal; font-size:0.75rem; color:var(--c-text-3); line-height:1.4; margin-top:2px}
+.mega-colonnes{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:48px}
+.mega-liste{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:9px 20px;
+  padding-top:14px; border-top:1px solid var(--c-border)}
+.mega-liste a{font-size:0.75rem; color:var(--c-text-2); display:flex; align-items:center; gap:7px; padding:4px 0}
+.mega-liste a:hover{color:var(--c-blue)}
+.mega-liste-seule{grid-template-columns:minmax(0,1fr); border-top:none; padding-top:0}
+.mega-badge{font-size:0.625rem; font-weight:600; background:var(--c-blue-light); color:var(--c-blue);
+  padding:2px 7px; border-radius:4px}
+.mega-pied{margin-top:20px; padding:14px 16px; background:var(--c-surface); border-radius:var(--r-sm);
+  font-size:0.75rem; color:var(--c-text-3)}
+@media (max-width:1024px){ .mega{display:none} }
+
+/* ── Boutons. Le primaire de cleolabs.co est ENCRE, en pilule. ── */
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:9px; border:none; cursor:pointer;
+  font-family:var(--font); font-weight:500; letter-spacing:-0.005em; text-decoration:none;
+  font-size:0.9375rem; padding:12px 24px; border-radius:var(--r-pill); min-height:var(--touch-min);
+  transition:var(--transition-hover)}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:translateY(0)}
+.btn-primaire,.btn-marque{background:var(--c-ink); color:#fff; box-shadow:var(--shadow-sm)}
+.btn-primaire:hover,.btn-marque:hover{background:#2A2A2A; box-shadow:var(--shadow-md)}
+.btn-bleu{background:var(--c-blue); color:#fff}
+.btn-bleu:hover{background:var(--c-blue-hover)}
+.btn-clair{background:var(--c-white); color:var(--c-ink); border:1px solid var(--c-border); box-shadow:var(--shadow-sm)}
+.btn-contour{background:var(--c-white); color:var(--c-text); border:1px solid var(--c-border-hover)}
+.btn-contour:hover{border-color:var(--c-ink)}
+.btn-sm{padding:9px 17px; font-size:0.75rem; min-height:auto}
+.btn .rond{display:none}
+/* Sur champ profond, les boutons s'inversent */
+.sur-sombre .btn-primaire,.sur-sombre .btn-marque{background:#fff; color:var(--c-ink)}
+.sur-sombre .btn-primaire:hover,.sur-sombre .btn-marque:hover{background:#EDEBE7}
+.sur-sombre .btn-contour,.sur-sombre .btn-clair{background:transparent; color:#fff; border-color:rgba(255,255,255,0.28)}
+.sur-sombre .btn-contour:hover{border-color:rgba(255,255,255,0.55)}
+.nav .btn-marque{background:var(--c-blue); color:#fff}
+.nav .btn-marque:hover{background:var(--c-blue-hover)}
+
+/* ── Pilules ── */
+.pilule,.tag{display:inline-flex; align-items:center; gap:7px; padding:6px 14px; border-radius:var(--r-pill);
+  font-size:0.75rem; font-weight:500; background:var(--c-white); border:1px solid var(--c-border);
+  color:var(--c-text-2)}
+.pilule-contour{background:transparent}
+.sur-sombre .pilule,.sur-sombre .tag{background:rgba(255,255,255,0.06); border-color:rgba(255,255,255,0.16); color:var(--c-text-on-dark-2)}
+.etiquette{display:inline-block; padding:5px 12px; border-radius:var(--r-pill); font-size:0.75rem;
+  font-weight:500; background:var(--c-field-pale); color:var(--c-text-2)}
+.sur-sombre .etiquette{background:rgba(255,255,255,0.08); color:var(--c-text-on-dark-2)}
+.pilule-dispo{display:inline-flex; align-items:center; gap:9px; font-size:0.9375rem; color:var(--c-text-2)}
+.pilule-dispo .point{width:8px; height:8px; border-radius:50%; background:var(--c-pass); box-shadow:0 0 0 4px rgba(13,110,68,0.12)}
+.pilule-dispo .sep{width:1px; height:14px; background:var(--c-border-hover)}
+.sur-sombre .pilule-dispo{color:var(--c-text-on-dark-2)}
+.sur-sombre .pilule-dispo .sep{background:rgba(255,255,255,0.20)}
+
+/* ── Badges de statut. COUCHE 3 : produit uniquement. ── */
+.badge,.marqueur{display:inline-flex; align-items:center; font-size:0.75rem; font-weight:700;
+  letter-spacing:0.04em; text-transform:uppercase; padding:4px 10px; border-radius:var(--r-xs)}
+.m-couvert{background:var(--c-pass-bg); color:var(--c-pass)}
+.m-attente{background:var(--c-risk-bg); color:var(--c-risk)}
+.m-bloque{background:var(--c-block-bg); color:var(--c-block)}
+.m-manquant{background:rgba(0,0,0,0.04); color:var(--c-text-3)}
+.sur-sombre .m-couvert{background:rgba(63,208,138,0.13); color:var(--c-pass-d)}
+.sur-sombre .m-attente{background:rgba(224,166,60,0.13); color:var(--c-risk-d)}
+.sur-sombre .m-bloque{background:rgba(255,107,96,0.13); color:var(--c-block-d)}
+.sur-sombre .m-manquant{background:rgba(255,255,255,0.07); color:var(--c-text-on-dark-3)}
+
+/* ── Liste à puces cochées ── */
+.coches{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:15px}
+.coches li{display:flex; gap:12px; align-items:flex-start; font-size:0.9375rem; line-height:1.6; color:var(--c-text-2)}
+.coches .coche{flex:none; width:19px; height:19px; border-radius:50%; background:var(--c-ink);
+  display:grid; place-items:center; margin-top:2px}
+.coches .coche svg{width:10px; height:10px}
+.coches .coche svg path{stroke:#fff}
+.sur-sombre .coches li{color:var(--c-text-on-dark-2)}
+.sur-sombre .coches .coche{background:rgba(255,255,255,0.14)}
+
+/* ── Cartes : blanches, filet fin, ombre tiède. ── */
+.carte,.carte-tiede,.carte-encre,.carte-sombre{background:var(--c-white); border:none;
+  border-radius:var(--r-lg); box-shadow:none; color:var(--c-text);
+  transition:box-shadow var(--dur-normal) var(--ease-apple)}
+.carte:hover,.carte-encre:hover{box-shadow:var(--shadow-md)}
+.carte-tiede{background:var(--c-card); box-shadow:none}
+/* Sur champ profond, la carte s'inverse */
+.sur-sombre .carte,.sur-sombre .carte-encre,.sur-sombre .carte-sombre{background:rgba(255,255,255,0.04);
+  border-color:var(--c-filet-sombre); box-shadow:none; color:var(--c-text-on-dark)}
+.sur-sombre .carte:hover,.sur-sombre .carte-encre:hover{border-color:rgba(255,255,255,0.24); box-shadow:none}
+.carte-lavande{background:var(--c-field-pale); border:1px solid var(--c-border); border-radius:var(--r-md); color:var(--c-text)}
+.p32{padding:40px} .p40{padding:48px} .p48{padding:64px}
+.carte .t-lead,.carte-encre .t-lead,.carte .t-sm,.carte-encre .t-sm{color:var(--c-text-2)}
+.sur-sombre .carte .t-lead,.sur-sombre .carte-encre .t-lead,
+.sur-sombre .carte .t-sm,.sur-sombre .carte-encre .t-sm{color:var(--c-text-on-dark-2)}
+.sur-sombre .carte .t-micro,.sur-sombre .carte-encre .t-micro,
+.sur-sombre .carte .surtitre,.sur-sombre .carte-encre .surtitre{color:var(--c-text-on-dark-3)}
+.sur-sombre .carte .t-h4,.sur-sombre .carte-encre .t-h4,
+.sur-sombre .carte .t-h1,.sur-sombre .carte-encre .t-h1,
+.sur-sombre .carte .t-h2,.sur-sombre .carte-encre .t-h2{color:var(--c-text-on-dark)}
+.sur-sombre .carte .attenue,.sur-sombre .carte-encre .attenue{color:var(--c-text-on-dark-2)}
+
+/* ── Grilles ── */
+.g2{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--s-32)}
+.g3{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px}
+.g4{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:var(--s-24)}
+.duo{display:grid; grid-template-columns:1.05fr minmax(0,1fr); gap:96px; align-items:center}
+/* Le témoignage : la photo à gauche, le texte à droite, jointifs.
+   CETTE GRILLE VIT ICI ET PAS EN INLINE. Mesuré le 01/09 : posée en style=,
+   elle gagnait sur la media query et le bloc restait sur deux colonnes de
+   140 et 194 px à 390 px de large, avec deux mots par ligne. */
+.duo-temoin{grid-template-columns:0.72fr minmax(0,1fr); gap:0; align-items:stretch}
+@media (max-width:1024px){ .duo-temoin{grid-template-columns:minmax(0,1fr); gap:0} }
+.duo-inverse{grid-template-columns:minmax(0,1fr) 1.05fr}
+.entete-section{display:flex; flex-direction:column; gap:14px; margin-bottom:72px}
+.g2 > *,.g3 > *,.g4 > *,.duo > *,.escalier > *{min-width:0}
+
+/* ── Bande de logos : gris doux, filet unique. ── */
+.bande-logos{display:flex; align-items:center; justify-content:center; flex-wrap:wrap; gap:0}
+.bande-logos .cellule{padding:28px 22px; display:grid; place-items:center; min-width:120px; height:104px}
+.bande-logos img{height:auto; width:auto; object-fit:contain; opacity:0.52; filter:grayscale(1)}
+.sur-sombre .bande-logos img{filter:grayscale(1) brightness(0) invert(1); opacity:0.6}
+.bande-logos img[alt="Decathlon"]{height:35px}
+.bande-logos img[alt="L'Occitane"]{height:32px}
+.bande-logos img[alt="Balzac Paris"]{height:30px}
+.bande-logos img[alt="Mercedes-Benz"]{height:40px}
+.bande-logos img[alt="NVIDIA"]{height:48px}
+
+/* ── LA SCÈNE : une photo chaude, l'interface posée dessus.
+      Le geste de cleolabs.co et de legora.com. ── */
+.scene{position:relative; border-radius:var(--r-lg); overflow:hidden; box-shadow:var(--shadow-lg)}
+.scene img.fond{width:100%; height:100%; object-fit:cover; display:block}
+.flottant{position:absolute; background:var(--verre-bg); backdrop-filter:var(--verre-blur);
+  -webkit-backdrop-filter:var(--verre-blur); border:var(--verre-bord); border-radius:var(--verre-r);
+  padding:12px 15px; color:var(--c-text); box-shadow:var(--shadow-md)}
+.flottant .t-micro{color:var(--c-text-3)}
+/* Pilule de règlement : verre clair, posée sur la photo */
+.regle-flottante{display:flex; align-items:center; gap:11px; background:var(--verre-bg);
+  backdrop-filter:var(--verre-blur); -webkit-backdrop-filter:var(--verre-blur);
+  border:var(--verre-bord); border-radius:var(--r-pill); padding:8px 12px 8px 9px;
+  box-shadow:var(--shadow-md); font-size:0.9375rem; font-weight:500; color:var(--c-ink)}
+.regle-flottante .drapeau{width:24px; height:24px; border-radius:50%; display:grid; place-items:center;
+  font-size:0.9375rem; background:var(--c-field-pale); flex:none}
+.regle-flottante .statut{width:19px; height:19px; border-radius:50%; display:grid; place-items:center; flex:none; margin-left:auto}
+.statut-ok{background:var(--c-blue)} .statut-vide{background:rgba(0,0,0,0.09)}
+.pile-regles{position:absolute; right:-40px; top:44px; display:flex; flex-direction:column; gap:12px; width:280px}
+
+/* ── Écrans produit ── */
+.ecran-app{background:var(--c-white); color:var(--c-text); border-radius:var(--r-lg);
+  overflow:hidden; box-shadow:var(--shadow-lg); border:none; max-width:100%; min-width:0}
+.ecran-app *{font-family:var(--font)}
+.ecran-tete{display:flex; align-items:center; gap:12px; padding:10px 15px;
+  background:var(--c-white); border-bottom:1px solid var(--c-border)}
+.ecran-tete .pastilles{display:flex; gap:6px}
+.ecran-tete .pastilles i{width:8px; height:8px; border-radius:50%; background:rgba(0,0,0,0.11); display:block}
+.ecran-tete .fil-ariane{font-size:12px; color:var(--c-text-3)}
+
+/* Fiche produit */
+.fiche{background:var(--c-white); border-radius:var(--r-sm); box-shadow:var(--shadow-lg);
+  overflow:hidden; font-size:0.75rem; color:var(--c-text); border:1px solid var(--c-border)}
+.fiche-tete{display:flex; gap:12px; align-items:center; padding:14px}
+.fiche-vignette{width:44px; height:44px; border-radius:var(--r-xs); background:var(--c-card); object-fit:cover; flex:none}
+.fiche-nom{font-weight:600; color:var(--c-ink); font-size:0.9375rem}
+.fiche-ref{color:var(--c-text-3); font-size:0.75rem}
+.jauge{height:5px; border-radius:var(--r-pill); background:rgba(0,0,0,0.08); overflow:hidden; flex:1}
+.jauge span{display:block; height:100%; background:var(--c-ink); border-radius:var(--r-pill)}
+.fiche-ligne{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:11px 14px;
+  border-top:1px solid var(--c-border); color:var(--c-text-2)}
+.fiche-entete-pays{display:flex; align-items:center; gap:8px; padding:10px 14px; font-weight:600;
+  color:var(--c-ink); border-top:1px solid var(--c-border); background:var(--c-surface); font-size:0.75rem}
+
+/* Arbre de règles, valeurs du builder cleo-rulemap */
+.canevas{position:relative; overflow-x:auto; overflow-y:hidden; min-height:0; max-width:100%; min-width:0;
+  background:radial-gradient(circle, #00000010 1px, transparent 1px) 0 0/22px 22px, var(--c-surface)}
+.arbre{display:grid; grid-template-columns:repeat(3,190px); gap:0 40px; padding:56px 22px 22px;
+  position:relative; min-width:max-content}
+.arbre .col{display:flex; flex-direction:column; gap:9px; justify-content:center}
+.nd{width:190px; background:var(--c-white); border:1px solid var(--c-border-hover); border-radius:9px;
+  padding:9px 11px 8px; cursor:pointer; user-select:none}
+.nd .titre{font-size:12px; line-height:1.35; font-weight:500; color:var(--c-text);
+  display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden}
+.nd .bas{display:flex; align-items:center; gap:6px; margin-top:7px}
+.nd .id{font-size:10px; color:var(--c-text-3); letter-spacing:0.02em}
+.nd .op{font-size:10px; font-weight:700; letter-spacing:0.05em; color:var(--c-text-3);
+  border:1px solid var(--c-border); border-radius:4px; padding:1px 4px}
+.nd .nb{margin-left:auto; width:17px; height:17px; border-radius:50%; border:1px solid var(--c-border);
+  display:grid; place-items:center; font-size:10px; color:var(--c-text-3)}
+.nd .pt{width:7px; height:7px; border-radius:50%; margin-left:auto}
+.nd.chemin{border-color:var(--c-blue)}
+.nd.v-conforme .pt{background:var(--c-pass)}
+.nd.eteint{opacity:0.34}
+.chemin-pilule{position:absolute; left:18px; top:16px; background:var(--c-white); border:1px solid var(--c-border);
+  border-radius:var(--r-pill); padding:8px 15px; font-size:12px; color:var(--c-text-2);
+  box-shadow:var(--shadow-sm); z-index:3}
+.chemin-pilule b{color:var(--c-text)}
+.barre-canevas{position:absolute; left:50%; bottom:16px; transform:translateX(-50%); display:flex;
+  align-items:center; gap:2px; background:var(--c-white); border:1px solid var(--c-border);
+  border-radius:var(--r-pill); padding:5px 8px; box-shadow:var(--shadow-md); z-index:3; white-space:nowrap}
+.barre-canevas span{font-size:12px; color:var(--c-text-2); padding:5px 11px; border-radius:var(--r-pill)}
+.barre-canevas .sep{width:1px; height:15px; background:var(--c-border); padding:0; margin:0 4px}
+.barre-canevas .zoom{color:var(--c-text); font-weight:600}
+
+/* Chat */
+.chat-accueil .ca-corps{padding:52px 36px 48px; display:flex; flex-direction:column; align-items:center;
+  gap:20px; background:var(--c-surface)}
+.ca-logo{height:32px; width:auto; opacity:0.92}
+.ca-champ{width:100%; max-width:540px; background:var(--c-white); border:1.5px solid var(--c-signal-line);
+  border-radius:var(--r-sm); padding:15px 15px 11px; box-shadow:var(--shadow-md)}
+.ca-texte{font-size:12px; line-height:1.6; color:var(--c-text); margin-bottom:13px}
+.ca-bas{display:flex; align-items:center; gap:10px}
+.ca-joindre{color:var(--c-text-3); display:grid; place-items:center; margin-right:auto}
+.ca-mode{font-size:10px; font-weight:600; color:var(--c-blue); background:var(--c-blue-light);
+  border:1px solid var(--c-signal-line); border-radius:var(--r-pill); padding:5px 12px}
+.ca-envoi{width:26px; height:26px; border-radius:var(--r-xs); background:var(--c-blue); display:grid; place-items:center; flex:none}
+.chat-fil-ecran .cf-corps{padding:22px 26px 20px; background:var(--c-surface); display:flex; flex-direction:column; gap:14px}
+.cf-question{background:var(--c-white); border:1px solid var(--c-border); border-radius:var(--r-sm);
+  padding:11px 14px; font-size:12px; line-height:1.55; color:var(--c-text)}
+.cf-etapes{display:flex; flex-direction:column; gap:6px; padding-left:2px}
+.cf-etape{font-size:12px; color:var(--c-text-3); display:flex; align-items:center; gap:6px}
+.cf-etape.fait{color:var(--c-text-2)}
+.cf-etape:not(.fait)::before{content:''; width:7px; height:7px; border-radius:50%;
+  border:1.5px solid var(--c-signal-line); border-top-color:transparent; display:inline-block}
+.cf-reponse p{font-size:12px; line-height:1.7; color:var(--c-text); margin:0 0 12px}
+.cf-cite{background:var(--c-white); border-left:2px solid var(--c-blue); border-radius:0 var(--r-xs) var(--r-xs) 0;
+  padding:11px 14px; font-size:12px; line-height:1.55; color:var(--c-text-2); margin-bottom:12px}
+.cf-ref{display:block; margin-top:7px; font-size:10px; font-weight:700; color:var(--c-blue)}
+.cf-composeur{margin-top:auto; padding-top:6px}
+.cf-saisie{display:flex; align-items:center; gap:10px; background:var(--c-white);
+  border:1.5px solid var(--c-signal-line); border-radius:var(--r-sm); padding:11px 13px}
+.cf-placeholder{font-size:12px; color:var(--c-text-3); margin-right:auto}
+
+/* Vignette de veille */
+.vv-corps{padding:15px; display:flex; flex-direction:column; gap:9px; background:var(--c-surface); min-width:0}
+.vv-ligne{display:flex; align-items:center; gap:9px; background:var(--c-white); border:1px solid var(--c-border);
+  border-radius:var(--r-xs); padding:8px 10px; min-width:0}
+.vv-ligne.hors{opacity:0.5}
+.vv-date{flex:none; text-align:center; min-width:24px}
+.vv-date b{display:block; font-size:12px; font-weight:700; color:var(--c-text); line-height:1}
+.vv-date span{font-size:10px; color:var(--c-text-3); text-transform:uppercase; letter-spacing:0.06em}
+.vv-texte{flex:1; min-width:0}
+.vv-titre{font-size:10px; line-height:1.35; color:var(--c-text);
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden}
+.vv-ref{font-size:10px; color:var(--c-text-3); margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.vv-etat{flex:none; font-size:10px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase;
+  padding:3px 6px; border-radius:5px; background:rgba(0,0,0,0.04); color:var(--c-text-3)}
+.vv-etat.touche{background:var(--c-pass-bg); color:var(--c-pass)}
+.vv-produit{display:flex; align-items:center; gap:9px; padding:2px 3px; min-width:0}
+.vv-produit img{width:30px; height:30px; object-fit:contain; flex:none}
+.vv-bilan{margin-left:auto; flex:none; font-size:10px; color:var(--c-pass); font-weight:600; white-space:nowrap}
+.vignette-ecran{border-radius:var(--r-sm); box-shadow:var(--shadow-md); overflow:hidden}
+.vignette-ecran .ecran-tete{padding:8px 12px}
+.vignette-ecran .pastilles i{width:7px; height:7px}
+.vignette-ecran .fil-ariane{font-size:10px}
+.vignette-ecran .nd{padding:7px 9px 6px; border-radius:7px}
+.vignette-ecran .nd .id{font-size:10px}
+.vignette-ecran .nd .op{font-size:10px; padding:1px 3px}
+.vignette-ecran .nd .nb{width:14px; height:14px; font-size:10px}
+.g3 > .carte-encre .vignette-ecran,.g3 > .carte .vignette-ecran{height:224px; display:flex; flex-direction:column}
+.g3 > .carte-encre .vignette-ecran > *:last-child,.g3 > .carte .vignette-ecran > *:last-child{flex:1; overflow:hidden}
+
+/* ── §18. La masse et l'unique ── */
+.mass{display:grid; gap:7px; border-radius:var(--r-md); padding:0}
+.mass-20{grid-template-columns:repeat(20,minmax(0,1fr))}
+.mass-item{color:var(--c-mass)}
+.mass-item.alt{color:var(--c-mass-2)}
+.mass-item.found{color:var(--c-found)}
+.mass-item svg{width:100%; height:auto; display:block}
+.sur-sombre .mass-item{color:rgba(255,255,255,0.16)}
+.sur-sombre .mass-item.alt{color:rgba(255,255,255,0.26)}
+.sur-sombre .mass-item.found{color:var(--c-signal-clair)}
+.mass-refs{display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:8px}
+.mass-ref{font-size:12px; font-weight:500; padding:8px 10px; border-radius:var(--r-xs); text-align:center;
+  background:rgba(0,0,0,0.035); color:var(--c-mass-2); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.mass-ref.alt{color:var(--c-mass)}
+.mass-ref.found{background:var(--c-blue); color:#fff; font-weight:700; box-shadow:0 6px 20px rgba(0,8,207,0.24)}
+.mass-ref.found .mass-mark{display:block; font-size:10px; font-weight:500; opacity:0.78; margin-top:2px}
+.sur-sombre .mass-ref{background:rgba(255,255,255,0.05); color:rgba(255,255,255,0.26)}
+.sur-sombre .mass-ref.alt{color:rgba(255,255,255,0.16)}
+
+/* ── Le geste Harvey : chiffres en lignes à filets ── */
+.mesures{border-top:1px solid var(--c-border)}
+.mesures .ligne{display:flex; align-items:baseline; gap:32px; padding:26px 0; border-bottom:1px solid var(--c-border)}
+.mesures .libelle{flex:1; min-width:0; font-size:0.9375rem; color:var(--c-text-2); line-height:1.5}
+.mesures .valeur{flex:none; font-size:2rem; font-weight:400; letter-spacing:-0.015em;
+  line-height:1; color:var(--c-ink); min-width:clamp(150px,22vw,260px)}
+.sur-sombre .mesures{border-top-color:var(--c-filet-sombre)}
+.sur-sombre .mesures .ligne{border-bottom-color:var(--c-filet-sombre)}
+.sur-sombre .mesures .libelle{color:var(--c-text-on-dark-2)}
+.sur-sombre .mesures .valeur{color:var(--c-text-on-dark)}
+.chiffre{font-size:2rem; font-weight:400; letter-spacing:-0.015em; line-height:1; color:var(--c-ink)}
+.sur-sombre .chiffre{color:var(--c-text-on-dark)}
+.escalier{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--s-24); align-items:start}
+
+/* ── Tableau comparatif ── */
+.table-defilante{overflow-x:auto; -webkit-overflow-scrolling:touch}
+.table-defilante .comparatif{min-width:620px}
+.comparatif{width:100%; border-collapse:separate; border-spacing:0}
+.comparatif th{font-weight:500; font-size:0.75rem; color:var(--c-text-3); padding:0 14px 16px; text-align:center}
+.comparatif td{padding:22px 14px; text-align:center; border-bottom:1px solid var(--c-border)}
+.comparatif td:first-child{text-align:left; width:36%}
+.comparatif .nous td{border-bottom-color:var(--c-border-hover)}
+.ligne-nom{display:flex; align-items:center; gap:14px}
+.ligne-icone{width:42px; height:42px; border-radius:var(--r-sm); background:var(--c-field-pale);
+  border:1px solid var(--c-border); display:grid; place-items:center; flex:none}
+.oui{width:25px; height:25px; border-radius:50%; background:var(--c-ink); display:inline-grid; place-items:center}
+.oui svg path{stroke:#fff}
+.oui-doux{width:25px; height:25px; border-radius:50%; background:rgba(0,0,0,0.07); display:inline-grid; place-items:center}
+.oui-doux svg path{stroke:var(--c-text-3) !important}
+.non{color:var(--c-text-3)}
+.sur-sombre .comparatif td{border-bottom-color:var(--c-filet-sombre)}
+.sur-sombre .ligne-icone{background:rgba(255,255,255,0.05); border-color:var(--c-filet-sombre)}
+.sur-sombre .oui{background:#fff} .sur-sombre .oui svg path{stroke:var(--c-ink)}
+.sur-sombre .oui-doux{background:rgba(255,255,255,0.09)}
+
+/* ── Questions fréquentes ── */
+.faq{border-top:1px solid var(--c-border)}
+.faq details{border-bottom:1px solid var(--c-border)}
+.faq summary{list-style:none; cursor:pointer; padding:26px 4px; display:flex; align-items:center;
+  justify-content:space-between; gap:20px; font-size:1rem; font-weight:500; color:var(--c-text)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .chev{transition:transform 220ms var(--ease-apple); opacity:0.4; flex:none}
+.faq details[open] summary .chev{transform:rotate(180deg)}
+.faq .reponse{padding:0 4px 28px; max-width:820px; font-size:0.9375rem; line-height:1.7; color:var(--c-text-2)}
+.sur-sombre .faq,.sur-sombre .faq details{border-color:var(--c-filet-sombre)}
+.sur-sombre .faq summary{color:var(--c-text-on-dark)}
+.sur-sombre .faq .reponse{color:var(--c-text-on-dark-2)}
+
+/* ── Témoignage et fin de page ── */
+.temoignage{display:grid; grid-template-columns:340px minmax(0,1fr); gap:80px; align-items:center}
+.citation{font-size:0.9375rem; line-height:1.65; font-weight:400;
+  letter-spacing:-0.01em; color:var(--c-text)}
+.sur-sombre .citation{color:var(--c-text-on-dark)}
+.auteur{display:flex; align-items:center; gap:12px; margin-top:var(--s-24)}
+.auteur img{width:42px; height:42px; border-radius:50%; object-fit:cover}
+.cta-final{display:grid; grid-template-columns:180px minmax(0,1fr); gap:40px; align-items:center}
+.cta-final .portrait{width:180px; height:180px; border-radius:var(--r-md); object-fit:cover}
+
+/* ── Pied de page : champ profond, c'est sa place chez les trois. ── */
+.pied{background:var(--c-field-deep); color:var(--c-text-on-dark); padding-top:var(--s-96); padding-bottom:44px}
+.pied-colonnes{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:var(--s-32); padding-bottom:var(--s-48)}
+.pied h4{font-size:0.9375rem; font-weight:500; margin-bottom:18px; color:var(--c-text-on-dark)}
+.pied ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:11px}
+.pied ul a{font-size:0.9375rem; color:var(--c-text-on-dark-2)}
+.pied ul a:hover{color:var(--c-text-on-dark)}
+.pied .t-sm{color:var(--c-text-on-dark-2)} .pied .t-micro,.pied .t-caption{color:var(--c-text-on-dark-3)}
+.pied .pilule{background:rgba(255,255,255,0.06); border-color:var(--c-filet-sombre); color:var(--c-text-on-dark-2)}
+.pied-regs{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--s-32); padding:44px 0;
+  border-top:1px solid var(--c-filet-sombre)}
+.pied-regs .paire{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--s-24)}
+.pied-bas{border-top:1px solid var(--c-filet-sombre); padding-top:28px; display:flex; gap:28px; flex-wrap:wrap;
+  font-size:0.75rem; color:var(--c-text-on-dark-3)}
+.infolettre{background:rgba(255,255,255,0.05); border:1px solid var(--c-filet-sombre); color:var(--c-text-on-dark);
+  border-radius:var(--r-md); padding:24px; max-width:300px}
+.infolettre *{color:var(--c-text-on-dark)}
+.infolettre input{width:100%; padding:10px 13px; border-radius:var(--r-xs); border:1px solid var(--c-filet-sombre);
+  background:rgba(255,255,255,0.06); font-size:0.9375rem; margin-bottom:9px; font-family:inherit; color:#fff}
+.infolettre input::placeholder{color:var(--c-text-on-dark-3)}
+.infolettre button{width:100%; padding:11px; border-radius:var(--r-xs); border:none; background:#fff;
+  color:var(--c-ink) !important; font-weight:600; font-size:0.9375rem; cursor:pointer}
+.signature-cleo{background:var(--c-field-deep); padding:56px 0 0; overflow:hidden}
+.signature-cleo .wordmark{width:100%; height:auto; opacity:0.07; filter:brightness(0) invert(1); transform:translateY(14%)}
+
+/* ── Formulaires ── */
+.form-carte{border-radius:var(--r-md); padding:var(--s-32)}
+.form-carte label{display:block; font-size:0.75rem; font-weight:500; margin-bottom:7px; color:var(--c-text-2)}
+.form-carte input{width:100%; padding:11px 14px; border-radius:var(--r-xs); border:1px solid var(--c-border-hover);
+  background:var(--c-white); font-size:0.9375rem; font-family:inherit; margin-bottom:16px; color:var(--c-text)}
+.form-carte input::placeholder{color:var(--c-text-3)}
+.form-carte .paire{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px}
+.sur-sombre .form-carte label{color:var(--c-text-on-dark-2)}
+.sur-sombre .form-carte input{background:rgba(255,255,255,0.06); border-color:var(--c-filet-sombre); color:#fff}
+.sur-sombre .form-carte input::placeholder{color:var(--c-text-on-dark-3)}
+.avatars{display:flex}
+.avatars img{width:38px; height:38px; border-radius:50%; border:2px solid var(--c-white); object-fit:cover; margin-left:-12px}
+.avatars img:first-child{margin-left:0}
+.sur-sombre .avatars img{border-color:var(--c-field-deep)}
+
+/* ── Ressources ── */
+.res-corps{display:grid; grid-template-columns:200px minmax(0,1fr); gap:88px; align-items:start}
+.res-nav{position:sticky; top:88px; align-self:start; display:flex; flex-direction:column; gap:12px}
+.res-nav .titre{font-size:0.9375rem; font-weight:600; color:var(--c-text); margin-bottom:4px}
+.res-nav a{font-size:0.9375rem; color:var(--c-text-2)}
+.res-nav a:hover{color:var(--c-text)}
+.res-nav a.actif{color:var(--c-blue)}
+.res-tete{display:grid; grid-template-columns:1.4fr minmax(0,1fr); gap:48px; align-items:end; margin-bottom:var(--s-64)}
+.res-carte{display:flex; flex-direction:column; border-radius:var(--r-lg); overflow:hidden; background:transparent;
+  border:none; box-shadow:none; transition:var(--transition-hover)}
+.res-carte:hover{transform:none; box-shadow:none}
+.res-carte .vignette{aspect-ratio:16/10; overflow:hidden; background:var(--c-card); position:relative}
+.res-carte .vignette img{width:100%; height:100%; object-fit:cover}
+.res-carte .corps{padding:20px 22px 24px; display:flex; flex-direction:column; gap:11px; flex:1}
+.res-carte .titre{font-size:1rem; font-weight:500; line-height:1.4; letter-spacing:-0.012em; color:var(--c-ink)}
+.res-carte .lien{margin-top:auto; display:inline-flex; align-items:center; gap:7px; font-size:0.9375rem;
+  font-weight:500; color:var(--c-blue)}
+.res-carte:hover .lien svg{transform:translateX(3px)}
+.res-carte .lien svg{transition:transform var(--dur-fast) var(--ease-apple)}
+.jouer{position:absolute; inset:0; display:grid; place-items:center}
+.jouer span{width:44px; height:44px; border-radius:50%; background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(10px); display:grid; place-items:center}
+.jouer span svg{fill:var(--c-ink) !important}
+.terme-carte{border-radius:var(--r-lg); padding:26px; background:var(--c-white); border:none;
+  box-shadow:none; display:flex; flex-direction:column; gap:11px}
+.terme-carte .nom{font-size:1rem; font-weight:500; letter-spacing:-0.012em; color:var(--c-ink)}
+.terme-carte .def{font-size:0.9375rem; line-height:1.6; color:var(--c-text-2); flex:1}
+.ligne-liste{display:flex; align-items:center; gap:24px; padding:24px 26px; border-radius:var(--r-lg);
+  background:var(--c-white); border:none; box-shadow:none; transition:var(--transition-hover)}
+.ligne-liste .principal{flex:1; min-width:0}
+/* La vignette d'une breve : carree, jamais deformee, et elle disparait sur
+   telephone ou la ligne n'a deja plus la place pour la pilule ET le texte. */
+.vignette-ligne{flex:none; width:88px; height:88px; border-radius:var(--r-sm);
+  overflow:hidden; background:var(--c-field-deep)}
+.vignette-ligne img{width:100%; height:100%; object-fit:cover; display:block}
+@media (max-width:640px){ .vignette-ligne{display:none} }
+.sur-sombre .res-carte,.sur-sombre .terme-carte,.sur-sombre .ligne-liste{background:rgba(255,255,255,0.04);
+  border-color:var(--c-filet-sombre); box-shadow:none}
+.sur-sombre .res-carte .titre,.sur-sombre .terme-carte .nom{color:var(--c-text-on-dark)}
+.sur-sombre .res-carte .lien{color:var(--c-signal-clair)}
+.sur-sombre .terme-carte .def{color:var(--c-text-on-dark-2)}
+
+/* ── Article ── */
+.article{max-width:720px; margin:0 auto}
+.article h2{font-size:1.5rem; font-weight:500; letter-spacing:-0.022em;
+  line-height:1.28; margin:56px 0 20px; color:var(--c-ink)}
+.article h3{font-size:1.125rem; font-weight:500; margin:32px 0 14px; color:var(--c-ink)}
+.article p{font-size:1rem; line-height:1.8; color:var(--c-text-2); margin:0 0 22px}
+.article ul,.article ol{margin:0 0 20px; padding-left:22px}
+.article li{font-size:1rem; line-height:1.8; color:var(--c-text-2); margin-bottom:22px}
+.article b,.article strong{color:var(--c-text); font-weight:600}
+.article blockquote{margin:32px 0; padding:20px 24px; border-left:2px solid var(--c-blue);
+  background:var(--c-white); border-radius:0 var(--r-sm) var(--r-sm) 0}
+.article blockquote p{margin:0; font-size:1rem; color:var(--c-text)}
+.article .source-citee{font-size:0.75rem; color:var(--c-blue); font-weight:600; margin-top:8px; display:block}
+.sur-sombre .article h2,.sur-sombre .article h3,.sur-sombre .article b{color:var(--c-text-on-dark)}
+.sur-sombre .article p,.sur-sombre .article li{color:var(--c-text-on-dark-2)}
+.sur-sombre .article blockquote{background:rgba(255,255,255,0.04)}
+.sur-sombre .article blockquote p{color:var(--c-text-on-dark)}
+.sur-sombre .article .source-citee{color:var(--c-signal-clair)}
+.sommaire{position:sticky; top:88px; align-self:start; font-size:0.9375rem}
+.sommaire .titre{font-size:0.75rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase;
+  color:var(--c-text-3); margin-bottom:16px}
+.sommaire a{display:block; padding:7px 0 7px 14px; border-left:1px solid var(--c-border); color:var(--c-text-2)}
+.sommaire a:hover{color:var(--c-text); border-left-color:var(--c-blue)}
+.sommaire a.actif{color:var(--c-blue); border-left-color:var(--c-blue)}
+.sur-sombre .sommaire a{border-left-color:var(--c-filet-sombre); color:var(--c-text-on-dark-2)}
+.corps-sommaire{display:grid; grid-template-columns:200px minmax(0,1fr); gap:88px; align-items:start}
+.corps-aside{display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:88px; align-items:start}
+.legal{max-width:760px}
+.legal h2{font-size:1.5rem; font-weight:500; letter-spacing:-0.018em; margin:40px 0 14px; color:var(--c-ink)}
+.legal p,.legal li{font-size:0.9375rem; line-height:1.8; color:var(--c-text-2); margin:0 0 15px}
+.sur-sombre .legal h2{color:var(--c-text-on-dark)}
+.sur-sombre .legal p,.sur-sombre .legal li{color:var(--c-text-on-dark-2)}
+
+/* ── Cas client, sceaux, blocs alternés ── */
+.cas-corps{display:grid; grid-template-columns:260px minmax(0,1fr); gap:96px; align-items:start}
+.fiche-laterale{position:sticky; top:88px; align-self:start}
+.fiche-laterale .bloc{margin-bottom:26px}
+.fiche-laterale .cle{font-size:0.75rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase;
+  color:var(--c-text-3); margin-bottom:8px}
+.fiche-laterale .valeur{font-size:0.9375rem; color:var(--c-text); line-height:1.6}
+.sur-sombre .fiche-laterale .valeur{color:var(--c-text-on-dark)}
+.recit p,.recit li{font-size:0.9375rem; line-height:1.78; color:var(--c-text-2); margin:0 0 17px}
+.recit ul{margin:0 0 17px; padding-left:20px}
+.recit b{color:var(--c-text)}
+.sur-sombre .recit p,.sur-sombre .recit li{color:var(--c-text-on-dark-2)}
+.sur-sombre .recit b{color:var(--c-text-on-dark)}
+.sceau{position:relative; width:auto; height:auto; margin:0 0 18px; display:flex; align-items:baseline; gap:8px}
+.sceau svg{display:none}
+.sceau .dedans{position:relative; text-align:left; line-height:1.2; display:flex; align-items:baseline; gap:9px}
+.sceau .nom{font-size:1.125rem; font-weight:500; letter-spacing:-0.02em; color:var(--c-ink)}
+.sceau .sous{font-size:0.75rem; font-weight:400; letter-spacing:0; text-transform:none;
+  color:var(--c-text-3); margin:0; font-variant-numeric:tabular-nums}
+.alterne{display:grid; grid-template-columns:minmax(0,1fr) 1.06fr; gap:96px; align-items:center; padding:var(--s-64) 0}
+.alterne.inverse{grid-template-columns:1.06fr minmax(0,1fr)}
+.alterne.inverse .texte{order:2}
+.alterne > *{min-width:0}
+.couverture{border-radius:var(--r-md); overflow:hidden; box-shadow:var(--shadow-xl);
+  background:linear-gradient(160deg, var(--c-field-deep-2) 0%, var(--c-field-deep) 100%);
+  aspect-ratio:16/11; display:grid; place-items:center; padding:36px}
+.couverture .livre{height:100%; aspect-ratio:3/4; width:auto; border-radius:5px; background:var(--c-field-deep);
+  box-shadow:0 24px 60px rgba(0,0,0,0.45); border:1px solid rgba(255,255,255,0.10); padding:24px 20px;
+  display:flex; flex-direction:column; justify-content:space-between}
+.couverture .livre *{color:#fff}
+.couverture .livre .t-caption{color:rgba(255,255,255,0.55)}
+.campagne-tete{padding:28px 0}
+.cv{min-width:700px}
+@media (max-width:820px){ .cv{min-width:0} }
+
+/* ── Kit ── */
+.kit-nav{position:sticky; top:0; z-index:60; background:var(--verre-nav-bg);
+  backdrop-filter:var(--verre-nav-blur); -webkit-backdrop-filter:var(--verre-nav-blur);
+  border-bottom:1px solid var(--c-border)}
+.kit-nav .conteneur{display:flex; align-items:center; gap:20px; height:56px; overflow-x:auto}
+.kit-nav a{font-size:0.75rem; color:var(--c-text-2); white-space:nowrap; padding:6px 12px; border-radius:var(--r-pill)}
+.kit-nav a:hover{color:var(--c-text); background:rgba(0,0,0,0.04)}
+.kit-famille{padding:64px 0 8px}
+.kit-famille .num{font-size:0.75rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase;
+  color:var(--c-text-3); margin-bottom:12px}
+.kit-bloc{margin-bottom:52px}
+.kit-tete{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:6px}
+.kit-nom{font-size:1rem; font-weight:500; letter-spacing:-0.012em; color:var(--c-ink)}
+.kit-ou{font-size:0.75rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase;
+  color:var(--c-text-3); border:1px solid var(--c-border); border-radius:var(--r-pill); padding:3px 10px}
+.kit-note{font-size:0.9375rem; line-height:1.6; color:var(--c-text-2); margin:0 0 20px; max-width:640px}
+.kit-cadre{border:1px solid var(--c-border); border-radius:var(--r-md); padding:32px; background:var(--c-white); overflow:hidden}
+.kit-cadre.serre{padding:20px}
+.kit-cadre.nu{padding:0; border:none; background:none}
+.kit-duo{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px}
+.kit-trio{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px}
+.kit-duo > *,.kit-trio > *{min-width:0}
+.sur-sombre .kit-nom,.sur-sombre .kit-note{color:var(--c-text-on-dark)}
+.sur-sombre .kit-note{color:var(--c-text-on-dark-2)}
+.sur-sombre .kit-cadre{background:rgba(255,255,255,0.03); border-color:var(--c-filet-sombre)}
+.sur-sombre .kit-ou{border-color:var(--c-filet-sombre); color:var(--c-text-on-dark-3)}
+.sur-sombre .kit-famille .num{color:var(--c-text-on-dark-3)}
+
+
+/* ── Écran étroit ── */
+@media (max-width:1024px){
+  :root{--gouttiere:28px; --pad-section:var(--s-96)}
+  .duo,.duo-inverse,.temoignage,.cta-final,.cas-corps,.res-corps,.corps-sommaire,.corps-aside{grid-template-columns:minmax(0,1fr); gap:36px}
+  .alterne{grid-template-columns:minmax(0,1fr)}
+  .alterne.inverse{grid-template-columns:minmax(0,1fr); gap:32px; padding:28px 0}
+  .alterne.inverse .texte{order:0}
+  .g3,.g4,.escalier,.pied-colonnes,.pied-regs,.res-tete{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .res-tete{gap:20px; align-items:start}
+  .cta-final .portrait{width:140px; height:140px}
+  .fiche-laterale,.sommaire,.res-nav,.corps-aside > aside{position:static}
+  .res-nav{flex-direction:row; flex-wrap:wrap; gap:16px}
+  .nav-liens{display:none}
+  .mass-20{grid-template-columns:repeat(12,minmax(0,1fr))}
+  .mass-refs{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .pile-regles{position:static; width:auto; margin-top:16px; display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:10px}
+  .pile-regles > *{transform:none !important}
+  .arbre{grid-template-columns:repeat(2,180px); gap:0 30px}
+  .arbre .col:nth-child(3){display:none}
+}
+@media (max-width:640px){
+  /* LA BARRE SUR TÉLÉPHONE. Mesuré le 01/09 à 390 px : le bouton de démo
+     rendait 65x79 px sur QUATRE lignes, écrasé entre le sélecteur de langue et
+     le bord. On empêche la coupure du libellé, on retire le lien secondaire
+     qui n'a pas sa place à cette largeur, et on resserre. */
+  .nav-fin{gap:8px}
+  .nav-fin .btn{white-space:nowrap; padding:8px 14px; font-size:0.75rem}
+  .nav-fin .lien-secondaire{display:none}
+  .nav-langue{margin-right:4px; padding:1px}
+  .nav-langue span,.nav-langue a{padding:3px 7px; font-size:0.625rem}
+  .g2,.g3,.g4,.escalier,.pied-colonnes,.pied-regs,.form-carte .paire,.kit-duo,.kit-trio{grid-template-columns:minmax(0,1fr)}
+  .bande-logos .cellule{min-width:110px}
+  .mass-20{grid-template-columns:repeat(8,minmax(0,1fr))}
+  .mass-refs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .arbre{grid-template-columns:180px} .arbre .col:nth-child(2){display:none} .nd{width:180px}
+  .mesures .ligne{flex-direction:column; gap:8px; align-items:flex-start}
+  .mesures .valeur{min-width:0}
+}
+/* Même règle en régime clair : la carte citée est claire, encre sombre. */
+.flottant div:not(.t-micro){color:var(--c-text)}
+
+/* ── L'AIR, relevé sur cleolabs.co le 26/08/2026 : padding de section
+      160 px (×8), conteneur 1200. Ce qui manquait n'était pas la couleur,
+      c'était l'espace.
+      Passe 12 du 27/08 : les gaps et les marges que ce bloc posait une
+      seconde fois sont RENTRÉS chez leur composant, à la valeur qui
+      rendait (.duo 96, .g3 28, .temoignage 80, .cas-corps 96, .p32 40…).
+      Un gap qui vit ici et chez lui se contredit en silence. ── */
+.entete-section .t-body,.entete-section .t-lead{max-width:600px}
+.entete-section.centre .t-body,.entete-section.centre .t-lead{margin-left:auto; margin-right:auto}
+/* Les titres de section ne collent plus à leur chapô */
+.t-display + .t-body,.t-display + .t-lead,.t-hero + .t-body,.t-hero + .t-lead{margin-top:24px}
+@media (max-width:1024px){
+  :root{--pad-hero-haut:var(--s-96); --pad-hero-bas:var(--s-64)}
+  .duo,.alterne,.res-corps,.corps-sommaire,.corps-aside,.cas-corps,.temoignage{gap:40px}
+}
+
+/* Le globe : sa scène est sombre par nécessité, il peint en additif. */
+.globe{aspect-ratio:1/1; max-height:520px; width:100%; border-radius:var(--r-lg);
+  overflow:hidden; background:#0a0a10; position:relative}
+.hero-globe canvas{opacity:0.9}
+
+/* ════════════════════════════════════════════════════════════════
+   PLUS D'IMAGE, PLUS DE VERRE — Legora et Harvey posent leurs
+   surfaces sur des photographies, jamais sur du plat. Le verre n'a
+   de sens que sur une image : c'est ce qui le rend visible.
+   ════════════════════════════════════════════════════════════════ */
+
+/* Une scène pleine largeur, qui porte le bloc suivant */
+.scene-large{position:relative; border-radius:var(--r-lg); overflow:hidden;
+  min-height:520px; box-shadow:var(--shadow-lg)}
+.scene-large > img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+.scene-large .voile{position:absolute; inset:0;
+  background:linear-gradient(100deg, rgba(15,14,13,0.94) 0%, rgba(15,14,13,0.80) 38%,
+    rgba(15,14,13,0.44) 68%, rgba(15,14,13,0.18) 100%)}
+.scene-large .dessus{position:relative; z-index:2; padding:56px}
+.scene-large .dessus,.scene-large .dessus .t-h1,.scene-large .dessus .t-display{color:#fff}
+.scene-large .dessus .t-body,.scene-large .dessus .t-lead{color:rgba(255,255,255,0.78)}
+.scene-large .dessus .t-caption,.scene-large .dessus .t-label{color:rgba(255,255,255,0.55)}
+.scene-large .dessus .coches li{color:rgba(255,255,255,0.78)}
+.scene-large .dessus .coches .coche{background:rgba(255,255,255,0.18)}
+.scene-large .dessus .coches .coche svg path{stroke:#fff}
+
+/* ── Le verre de Legora : sombre, très flouté, sans bord ni ombre,
+      et il ne se pose que sur une image. ── */
+.verre-legora{background:rgba(0,0,0,0.50);
+  backdrop-filter:blur(27.5px); -webkit-backdrop-filter:blur(27.5px);
+  border-radius:24px; border:none; box-shadow:none; color:#fff; padding:20px 24px}
+.verre-legora .t-caption,.verre-legora .t-label{color:rgba(255,255,255,0.60)}
+.verre-legora b{color:#fff}
+/* Une pastille de verre, façon leurs étiquettes de plateforme */
+.pastille-verre{display:inline-flex; align-items:center; gap:9px;
+  background:rgba(0,0,0,0.40); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+  border-radius:var(--r-pill); padding:9px 16px; color:#fff; font-size:0.75rem; font-weight:500}
+.pastille-verre .plus{width:19px; height:19px; border-radius:50%; background:rgba(255,255,255,0.22);
+  display:grid; place-items:center; font-size:0.75rem; flex:none}
+
+/* ── Les cartes de feature portent maintenant une image ── */
+.carte-image{position:relative; border-radius:var(--r-md); overflow:hidden; min-height:300px;
+  box-shadow:var(--shadow-md)}
+.carte-image > img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover}
+.carte-image .voile{position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(15,14,13,0.10) 0%, rgba(15,14,13,0.86) 72%)}
+.carte-image .dessus{position:relative; z-index:2; padding:28px; height:100%;
+  display:flex; flex-direction:column; justify-content:flex-end}
+.carte-image .dessus *{color:#fff}
+.carte-image .dessus .t-caption{color:rgba(255,255,255,0.68)}
+
+/* Les scènes gagnent de la place */
+.scene{box-shadow:var(--shadow-lg)}
+.res-carte .vignette{aspect-ratio:3/2}
+@media (max-width:1024px){
+  .scene-large{min-height:340px} .scene-large .dessus{padding:32px}
+  .carte-image{min-height:260px} .carte-image .dessus{padding:22px}
+}
+
+/* Une vignette d'écran posée sur une photo : le verre prend son sens. */
+.g3 > .carte .vignette-ecran,.g3 > .carte-encre .vignette-ecran{height:auto; box-shadow:var(--shadow-lg)}
+.g3 > .carte .scene,.g3 > .carte-encre .scene{border-radius:var(--r-sm)}
+
+/* Les icônes : pleines, sur la grille 24, une seule couleur.
+   Style relevé sur le module Framer « Moon Sleep ». */
+.ico{display:block; flex:none}
+.mega-icone .ico{width:19px; height:19px; color:var(--c-text-2)}
+.mega-item:hover .mega-icone .ico{color:var(--c-blue)}
+.ligne-icone .ico{width:20px; height:20px; color:var(--c-text-3)}
+.comparatif .nous .ligne-icone .ico{color:var(--c-blue)}
+.res-carte .vignette .ico,.kit-cadre .ico{color:var(--c-text-2)}
+
+/* ── Le hero épuré, relevé sur morpho.org : tout centré, beaucoup d'air,
+      l'objet au centre plutôt qu'à côté du texte. ── */
+.hero-epure{position:relative; padding:120px 0 0; overflow:hidden; text-align:center}
+/* Le jeton de .t-hero vit dans base.css:128. Il est RECOPIE ici, et pas
+   simplement laisse a l'heritage, parce que regime-noir.css:59 redeclare
+   .t-hero a clamp(2.25rem, 4.4vw, 3.75rem) : sans cette ligne, la page
+   01-accueil-noir partirait a 60 px. Toute retouche du jeton se repercute ici. */
+.hero-epure .t-hero{font-size:clamp(2.125rem, 3.4vw, 3.125rem);
+  font-weight:400; letter-spacing:-0.018em; line-height:1.22}
+.hero-globe{position:relative; height:clamp(320px, 40vw, 520px); margin:24px auto 0;
+  max-width:860px; z-index:1}
+.hero-globe::after{content:''; position:absolute; inset:0; pointer-events:none;
+  background:radial-gradient(ellipse at center, transparent 52%, var(--c-field-deep) 88%)}
+.hero-pied{padding-bottom:96px; position:relative; z-index:2; margin-top:-28px}
+.hero-epure .avatars img{border-color:var(--c-field-deep)}
+@media (max-width:1024px){
+  .hero-epure{padding-top:72px}
+  .hero-globe{height:300px; margin-top:0}
+  .hero-pied{padding-bottom:56px; margin-top:0}
+}
+
+/* ── Épure relevée sur lemrock.com : conteneur 1080, rayons 4-12, ombres
+      à 10 % sur 1,5 px. Ce qui fait l'épure n'est pas le vide, c'est la
+      RETENUE D'ÉCHELLE.
+      Passe 12 du 27/08 : ce bloc reposait une taille par-dessus celle du
+      composant (corps 14, boutons 13, citation 17). Ces tailles sont
+      rentrées chez leur composant, sur les huit crans 49/32/24/18/16/15/
+      12/10. Il ne reste ici que des ombres. ── */
+.carte,.carte-tiede,.carte-encre,.carte-sombre{box-shadow:var(--shadow-sm)}
+.terme-carte,.ligne-liste{background:var(--c-white); box-shadow:var(--shadow-sm)}
+.res-carte .vignette{box-shadow:var(--shadow-sm)}
+/* Ces deux-là sont les JETONS de la DA : 12 et 10. base.css:135-136 dit
+   encore 13 et 11 ; c'est base.css qu'il faut réparer, pas ces deux lignes.
+   Tant que ce n'est pas fait, elles doivent rester ici pour gagner. */
+.t-caption{font-size:0.75rem}
+.t-label{font-size:0.625rem; letter-spacing:0.13em}
+
+/* Une surface sombre posée à la main porte sa propre encre. Sans ça, ses enfants
+   gardent l'encre du régime clair et rendent sombre sur sombre. Symétrique de
+   .carte-claire (regime-noir.css). Mesuré le 27/08 : icônes des vignettes de
+   17-modeles à 2,7 d'écart, étiquettes de palette de 00-composants à 1,8. */
+.surface-sombre{--c-text:var(--c-text-on-dark); --c-text-2:var(--c-text-on-dark-2);
+  --c-text-3:var(--c-text-on-dark-3); --c-ink:#FFFFFF; --cleo-ink:#FFFFFF}
+
+/* ════════════════════════════════════════════════════════════════
+   ACCUEIL, refonte du 27/08/2026. Trois compositions ajoutées :
+   les features et le cycle relevés sur regology.com, les experts sur
+   edgecomply.com. Leur violet, leur or et leur vert restent chez eux :
+   ici le champ chaud #0F0E0D et le bleu #0008CF, qui ne marque jamais
+   pour décorer. Chaque grille vit dans une CLASSE et pas en style=
+   inline : l'inline gagne sur la media query et le bloc ne se replierait
+   pas. Toute colonne porte minmax(0,1fr) + min-width:0.
+   ════════════════════════════════════════════════════════════════ */
+
+/* Le hero sans pied : le bas de bloc était porté par .hero-pied, parti
+   avec la phrase et les avatars. La classe le rend au conteneur. */
+.hero-epure.hero-clos{padding-bottom:96px}
+
+/* ── Les trois features. Deux blocs côte à côte, un pleine largeur en
+      bas, texte à gauche et visuel à droite. ── */
+.g-features{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px}
+.g-features > *{min-width:0}
+.g-features .feature-visuel{margin-top:32px}
+.g-features .feature-large{grid-column:1 / -1; display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:56px; align-items:center}
+.g-features .feature-large > *{min-width:0}
+.g-features .feature-large .feature-visuel{margin-top:0}
+/* L'écran produit posé sur son champ : la surface suit le régime, donc
+   elle n'a besoin d'aucune poignée d'encre. */
+.feature-cadre{background:var(--c-surface); border-radius:var(--r-md); padding:28px}
+.feature-cadre .vignette-ecran{width:100%}
+
+/* ── Le cycle : ce qui entre à gauche, la règle encodée au centre, ce
+      qui sort à droite. Le mouvement est celui de mouvement.css, on ne
+      réécrit pas de moteur : les colonnes sont des groupes et gardent
+      la cascade du groupe. Seule la DIRECTION d'arrivée est posée ici,
+      et .vu de mouvement.css la remet à zéro, donc rien ne reste
+      transparent après le défilement. ── */
+.cycle{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.15fr) minmax(0,1fr);
+  gap:40px; align-items:center}
+.cycle > *{min-width:0}
+.cycle-colonne{display:flex; flex-direction:column; gap:12px; min-width:0}
+.cycle-colonne .t-label{margin-bottom:4px}
+.cycle-jeton{padding:14px 18px; border-radius:var(--r-pill); min-width:0;
+  background:rgba(255,255,255,0.05); border:1px solid var(--c-filet-sombre)}
+.cycle-noyau{background:rgba(255,255,255,0.06); border:1px solid var(--c-filet-sombre);
+  border-radius:var(--r-lg); padding:36px 32px; text-align:center; min-width:0}
+.cycle-icone{display:inline-grid; place-items:center; width:44px; height:44px;
+  border-radius:var(--r-sm); background:rgba(91,101,255,0.16);
+  color:var(--c-signal-clair); margin-bottom:20px}
+.cycle-noyau .t-h1{margin-bottom:20px}
+.cycle-ligne{display:flex; align-items:center; justify-content:center; gap:9px;
+  padding:11px 0; border-top:1px solid var(--c-filet-sombre)}
+/* Ces deux lignes sont du contenu, pas des etiquettes : elles gardent la
+   taille de .t-caption mais prennent l'encre de niveau 2. Le niveau 3 sur
+   champ profond, rgba(255,255,255,0.38) sur #0F0E0D, tourne autour de 3,4:1. */
+.sur-sombre .cycle-ligne{color:var(--c-text-on-dark-2)}
+.cycle-ligne .pastille{width:5px; height:5px; border-radius:50%; flex:none;
+  background:var(--c-signal-clair)}
+.cycle-entrees[data-anim-groupe] > *{transform:translateX(-24px)}
+.cycle-sorties[data-anim-groupe] > *{transform:translateX(24px)}
+
+/* ── Les experts : portraits à gauche, titre et coches à droite. ── */
+.experts-duo{display:grid; grid-template-columns:0.82fr minmax(0,1fr); gap:0; align-items:stretch}
+.experts-duo > *{min-width:0}
+.experts-portraits{padding:56px; background:var(--c-surface);
+  display:flex; flex-direction:column; justify-content:center}
+.experts-portraits img{width:100%; aspect-ratio:3/4; object-fit:cover;
+  border-radius:var(--r-sm); margin-bottom:14px}
+.experts-texte{padding:56px; display:flex; flex-direction:column; justify-content:center}
+
+@media (max-width:1024px){
+  .g-features,.g-features .feature-large{grid-template-columns:minmax(0,1fr)}
+  .g-features .feature-large{gap:36px}
+  .cycle{grid-template-columns:minmax(0,1fr); gap:28px}
+  .cycle-noyau{padding:32px 24px}
+  .experts-duo{grid-template-columns:minmax(0,1fr)}
+  .experts-portraits,.experts-texte{padding:36px}
+  .hero-epure.hero-clos{padding-bottom:56px}
+}
+
+/* .experts-texte est une colonne flex : sans align-self, un bouton en
+   display:flex s'étire sur toute la colonne et prend l'air d'un bouton de
+   formulaire. Mesuré le 27/08 : 459 px de large pour un libellé de 14. */
+.experts-texte .btn{align-self:flex-start}
+
+/* ── LES TROIS AGENTS, brief du 28/08 : GRANDE IMAGE, peu de texte.
+      Trois rangs pleine largeur, l'image change de côté d'un rang à l'autre.
+      La grille vit ICI et jamais en style= inline : l'inline gagnerait sur la
+      media query et le bloc ne se replierait pas sur téléphone (vécu). ── */
+.g-agents{display:grid; gap:22px}
+.agent{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);
+  gap:48px; align-items:center; padding:0; overflow:hidden}
+.agent-texte{min-width:0; padding:44px 0 44px 44px}
+.agent-visuel{min-width:0; align-self:stretch; position:relative}
+.agent-visuel img{width:100%; height:100%; min-height:340px; object-fit:cover; display:block}
+/* Le rang inverse : l'image passe à gauche, sans toucher à l'ordre du markup,
+   pour que la lecture au clavier et à la voix reste celle du document. */
+.agent-inverse .agent-texte{order:2; padding:44px 44px 44px 0}
+.agent-inverse .agent-visuel{order:1}
+.agent .coches{margin:22px 0 26px}
+.agent .coches li{font-size:0.9375rem}
+@media (max-width:1024px){
+  .agent{grid-template-columns:minmax(0,1fr); gap:0}
+  .agent-texte,.agent-inverse .agent-texte{order:2; padding:32px}
+  .agent-visuel,.agent-inverse .agent-visuel{order:1}
+  .agent-visuel img{min-height:240px}
+}
+
+/* .sur-clair : le surtitre posé sur une carte claire. La définition d'origine
+   vivait dans une feuille abandonnée ; sans elle le surtitre héritait de
+   l'encre courante. On la remet ici, à sa place. */
+.sur-clair{color:var(--c-text-3)}
+
+/* ── L'ENCODAGE : la dispersion à gauche, l'unique à droite. Brief du 28/08.
+      Le motif de la page entière, dit une fois en composition. ── */
+.encodage{display:grid; grid-template-columns:minmax(0,1fr) auto minmax(0,0.9fr);
+  gap:40px; align-items:center; margin-top:56px}
+.enc-source{min-width:0}
+.enc-eparpille{display:flex; flex-wrap:wrap; gap:10px}
+.enc-bribe{display:inline-block; padding:9px 14px; border-radius:var(--r-sm);
+  background:rgba(255,255,255,0.05); border:1px solid var(--c-filet-sombre);
+  color:var(--c-text-2); font-size:0.8125rem; line-height:1.4}
+/* Les bribes ne sont pas alignées : c'est la dispersion, elle se voit. */
+.enc-eparpille .enc-bribe:nth-child(2n){transform:translateY(6px)}
+.enc-eparpille .enc-bribe:nth-child(3n){transform:translateY(-5px)}
+.enc-fleche{display:flex; flex-direction:column; align-items:center; gap:10px;
+  color:var(--c-text-3)}
+.enc-fleche svg{width:64px; height:24px}
+.enc-regle{padding:28px; border-radius:var(--r-md); background:var(--c-white)}
+.enc-ligne{display:flex; justify-content:space-between; gap:18px; padding:11px 0;
+  border-top:1px solid var(--c-border); font-size:0.875rem}
+.enc-ligne span{color:var(--c-text-3)} .enc-ligne b{color:var(--c-ink); font-weight:500; text-align:right}
+@media (max-width:1024px){
+  .encodage{grid-template-columns:minmax(0,1fr); gap:28px}
+  .enc-fleche svg{transform:rotate(90deg)}
+  .enc-eparpille .enc-bribe{transform:none}
+}
+
+/* ── UNE SURFACE CLAIRE DANS UNE SECTION SOMBRE PORTE SA PROPRE ENCRE.
+      .carte-claire ne vivait que dans regime-noir.css : sur une page en régime
+      CLAIR, une carte blanche posée dans une section .sur-sombre héritait donc
+      de l'encre blanche de la section. Mesuré au pixel le 28/08 : le titre de
+      la règle encodée rendait un écart-type de 0,0, blanc sur blanc.
+      C'est la troisième fois que ce défaut sort sur ce chantier. Il est
+      maintenant fermé des deux côtés. ── */
+.sur-sombre .carte-claire,.sur-sombre .enc-regle,.flux-etape{
+  --c-text:rgba(0,0,0,0.87); --c-text-2:rgba(0,0,0,0.62); --c-text-3:rgba(0,0,0,0.54);
+  --c-ink:#0A0A0A; --cleo-ink:#0A0A0A; --c-border:rgba(0,0,0,0.13); color:var(--c-text)}
+.flux-etape .t-h2,.flux-etape .t-h3,
+.sur-sombre .carte-claire .t-hero,.sur-sombre .carte-claire .t-display,
+.sur-sombre .carte-claire .t-h1,.sur-sombre .carte-claire .t-h2,
+.sur-sombre .carte-claire .t-h3,.sur-sombre .enc-regle .t-h2{color:var(--c-ink)}
+.sur-sombre .carte-claire .t-caption,.sur-sombre .carte-claire .t-label,
+.sur-sombre .enc-regle .t-label{color:var(--c-text-3)}
+
+/* Les bribes : ce sont des surfaces SOMBRES posées sur du sombre. Leur encre
+   doit rester claire. Mesurée à 7,6 d'écart-type avant, trop juste. */
+.enc-bribe{color:var(--c-text-on-dark-2); background:rgba(255,255,255,0.07);
+  border-color:rgba(255,255,255,0.14)}
+
+/* ── LE FLUX du Compliance service, brief du 01/09 : trois étapes qui disent
+      qui fait quoi, dans l'ordre. La grille vit ICI, jamais en inline. ── */
+.flux{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; margin-bottom:22px}
+.flux-etape{min-width:0; background:var(--c-white); border-radius:var(--r-lg);
+  padding:32px; box-shadow:var(--shadow-sm); position:relative}
+.flux-rang{font-size:0.6875rem; font-weight:600; letter-spacing:0.15em;
+  color:var(--c-blue); margin-bottom:14px}
+.flux-etape .t-h2{margin-bottom:10px}
+/* Le fil qui relie les étapes : il dit l'ordre sans l'écrire. */
+.flux-etape:not(:last-child)::after{content:''; position:absolute; top:44px; right:-22px;
+  width:22px; height:1px; background:var(--c-border)}
+@media (max-width:1024px){
+  .flux{grid-template-columns:minmax(0,1fr)}
+  .flux-etape:not(:last-child)::after{display:none}
+}
+.experts-portraits .t-caption[href]{display:inline-block; margin-top:6px}
+
+/* ── Le sélecteur de langue : deux crans, la langue courante marquée.
+      Discret, il ne dispute rien au bouton de démo. ── */
+.nav-langue{display:inline-flex; align-items:center; gap:2px; margin-right:14px;
+  border:1px solid var(--c-border); border-radius:999px; padding:2px}
+.nav-langue span,.nav-langue a{font-size:0.6875rem; font-weight:600; letter-spacing:0.06em;
+  padding:4px 9px; border-radius:999px; line-height:1; color:var(--c-text-3)}
+.nav-langue .actif{background:var(--c-ink); color:var(--c-white)}
+.nav-langue a:hover{color:var(--c-ink)}
+
+/* ── LE LOGO REPREND SA COULEUR AU SURVOL. Demandé le 01/09.
+      Trois des cinq logos portent une vraie couleur : Decathlon #3642B8,
+      L'Occitane #C8963E, NVIDIA #76B900. Balzac et Mercedes sont noirs par
+      construction : ils passent du gris au noir, ce qui se lit quand même.
+      La courbe est ease-out et non notre courbe de révélation : mesuré, celle
+      de la révélation n'a parcouru que 7,1 % de sa course à 20 % du budget,
+      elle donne l'impression que rien ne répond sur un survol court. ── */
+.bande-logos img{transition:opacity var(--dur-survol) ease-out, filter var(--dur-survol) ease-out}
+.bande-logos .cellule:hover img{opacity:1; filter:none}
+/* Sur champ sombre, la couleur ne peut pas revenir : Balzac et Mercedes sont
+   noirs, ils disparaîtraient. Le logo s'éclaircit, il ne se colore pas. */
+.sur-sombre .bande-logos .cellule:hover img{opacity:1;
+  filter:grayscale(1) brightness(0) invert(1)}
+
+/* ── Les trois chiffres canoniques, dans la carte Regulatory Change.
+      Source : cleo-landing/docs/CANONICAL-FACTS.md, « triple headline à
+      utiliser partout, identique ». On ne les réécrit jamais autrement. ── */
+.agent-kpi{display:flex; gap:34px; flex-wrap:wrap; margin:0 0 26px}
+.agent-kpi b{display:block; font-size:1.5rem; font-weight:400; letter-spacing:-0.015em;
+  color:var(--c-ink); line-height:1.1}
+.agent-kpi span{display:block; font-size:0.75rem; color:var(--c-text-3); margin-top:5px}
+@media (max-width:1024px){ .agent-kpi{gap:22px} }
+
+/* Une citation de trois paragraphes ne se lit pas à la taille d'une accroche :
+   on descend d'un cran et on resserre l'interligne. */
+.citation-longue{font-size:0.9375rem; line-height:1.68}
+.citation-longue p:last-child{margin-bottom:0}
+
+/* ══ LE PIPELINE D'ENCODAGE, schéma technique. Demandé le 02/09.
+      Trois étages, deux faisceaux de liens : les sources convergent en un
+      point, l'encodage les traverse, la règle en sort structurée.
+      Les liens sont en SVG à viewBox fixe et preserveAspectRatio:none, donc
+      ils s'étirent avec la hauteur de l'étage sans se déformer en épaisseur.
+      La grille vit ICI et jamais en inline : l'inline gagne sur la media
+      query et le bloc ne se replierait pas. ══ */
+.pipeline{display:grid; grid-template-columns:minmax(0,1fr) 60px minmax(0,0.92fr) 60px minmax(0,0.86fr);
+  gap:0; align-items:center; margin-top:56px}
+.pl-etage{min-width:0}
+.pl-tete{display:flex; align-items:baseline; gap:10px; margin-bottom:16px}
+.pl-num{font-size:0.625rem; font-weight:600; letter-spacing:0.13em; color:var(--c-blue)}
+.pl-lien{color:rgba(255,255,255,0.42); align-self:stretch; display:flex; align-items:center}
+.pl-lien svg{width:100%; height:230px}
+
+/* Les sources : des nœuds alignés, pas une liste. Un filet à gauche dit
+   qu'ils viennent d'ailleurs. */
+.pl-noeuds{display:flex; flex-direction:column; gap:8px}
+.pl-n{padding:9px 13px; border:1px solid var(--c-filet-sombre); border-left:2px solid var(--c-blue);
+  border-radius:4px; background:rgba(255,255,255,0.04); color:var(--c-text-on-dark-2);
+  font-size:0.8125rem; line-height:1.35}
+
+/* Le moteur : cinq opérations numérotées, reliées par un filet vertical. */
+.pl-moteur{position:relative}
+.pl-etapes{list-style:none; margin:0; padding:0 0 0 22px; position:relative}
+.pl-etapes::before{content:''; position:absolute; left:4px; top:8px; bottom:8px;
+  width:1px; background:var(--c-filet-sombre)}
+.pl-etapes li{position:relative; padding:0 0 16px}
+.pl-etapes li:last-child{padding-bottom:0}
+.pl-etapes li::before{content:''; position:absolute; left:-22px; top:6px; width:9px; height:9px;
+  border-radius:50%; border:1px solid var(--c-blue); background:var(--c-field-deep)}
+.pl-etapes b{display:block; font-size:0.9375rem; font-weight:500; color:var(--c-text-on-dark)}
+.pl-etapes span{display:block; font-size:0.8125rem; color:var(--c-text-on-dark-3); margin-top:2px}
+
+/* La sortie : une fiche, pas un paragraphe. C'est le propos du bloc. */
+.pl-regle{background:var(--c-white); border-radius:var(--r-md); padding:22px}
+.pl-regle .t-h3{margin-bottom:14px}
+.pl-champ{display:flex; justify-content:space-between; gap:14px; padding:8px 0;
+  border-top:1px solid var(--c-border); font-size:0.8125rem}
+.pl-champ span{color:var(--c-text-3)}
+.pl-champ b{color:var(--c-ink); font-weight:500; text-align:right}
+.pl-verdict{display:flex; align-items:center; gap:8px; margin-top:14px; padding-top:12px;
+  border-top:1px solid var(--c-border); font-size:0.75rem; color:var(--c-text-3)}
+.pl-pastille{width:7px; height:7px; border-radius:50%; background:var(--c-pass); flex:none}
+
+@media (max-width:1024px){
+  /* Sur téléphone le schéma se lit de haut en bas : les faisceaux
+     deviennent des flèches verticales courtes. */
+  .pipeline{grid-template-columns:minmax(0,1fr); gap:0}
+  .pl-lien{height:44px; align-self:center; justify-content:center}
+  .pl-lien svg{width:44px; height:44px; transform:rotate(90deg)}
+  .pl-etage{padding:4px 0}
+}
+
+/* ── Champ de prise de rendez-vous, en hero.
+   Une pastille sombre qui porte le champ et le bouton, comme un seul objet.
+   Le formulaire part en GET vers la page de rendez-vous HubSpot, qui lit
+   « ?email= » et pre-remplit : le champ n'est donc pas decoratif. */
+.champ-demo{display:flex; align-items:center; gap:10px; width:100%; max-width:520px;
+  margin:36px auto 0; padding:8px 8px 8px 26px; border-radius:999px;
+  background:rgba(255,255,255,0.045); border:1px solid rgba(255,255,255,0.13);
+  transition:border-color var(--dur-survol) ease-out, background var(--dur-survol) ease-out}
+.champ-demo:focus-within{border-color:rgba(255,255,255,0.28); background:rgba(255,255,255,0.07)}
+.champ-demo input{flex:1; min-width:0; background:none; border:0; outline:0; padding:0;
+  font-family:inherit; font-size:0.9375rem; color:#fff; letter-spacing:-0.01em}
+.champ-demo input::placeholder{color:rgba(255,255,255,0.42)}
+.champ-demo .btn{flex:none; white-space:nowrap; margin:0}
+@media (max-width:560px){
+  .champ-demo{flex-direction:column; align-items:stretch; gap:12px;
+    padding:16px; border-radius:var(--r-lg)}
+  .champ-demo input{text-align:center; padding:6px 0}
+  .champ-demo .btn{justify-content:center}
+}
+
+/* ── Page blog.
+   Composition relevee au navigateur sur hcompany.ai/blog le 02/09/2026 :
+   fond clair, une banniere large en 3/1 pour l'article en tete, puis une
+   GRILLE DE TROIS COLONNES a gouttiere 40 px, dont chaque item est une CARTE
+   BLANCHE bordee a rayon 15 px. L'image occupe le haut de la carte et porte
+   son etiquette incrustee ; la date, le titre et l'extrait vivent dessous.
+   Leur echelle monte a 72 px : on garde la notre, plus retenue, comme le veut
+   la regle « la reference donne la composition, notre DA donne le traitement ».
+   Le releve precedent venait de legora.com, sans carte ni rayon. */
+.blog-tete{display:block; border-top:1px solid var(--c-border); padding-top:22px}
+.blog-tete-photo{display:block; overflow:hidden; border-radius:var(--r-lg); margin-bottom:28px}
+.blog-tete-photo img{width:100%; aspect-ratio:3/1; object-fit:cover; display:block;
+  transition:transform 0.6s cubic-bezier(.625,.05,0,1)}
+.blog-tete-photo:hover img{transform:scale(1.02)}
+.blog-tete-texte{max-width:760px}
+.blog-tete-bas{padding-top:0}
+
+.blog-filtres{display:flex; gap:9px; flex-wrap:wrap; margin-bottom:40px}
+
+.blog-grille{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:40px}
+.blog-art{display:flex; flex-direction:column; color:inherit; text-decoration:none;
+  background:#fff; border:1px solid var(--c-border); border-radius:var(--r-lg);
+  overflow:hidden; transition:border-color var(--dur-survol) ease-out,
+  box-shadow var(--dur-survol) ease-out, transform var(--dur-survol) ease-out}
+.blog-art:hover{border-color:var(--c-border-hover); box-shadow:0 8px 28px rgba(0,0,0,0.07);
+  transform:translateY(-2px)}
+.blog-art-img{position:relative; overflow:hidden; background:var(--c-field-deep)}
+.blog-art-img img{width:100%; aspect-ratio:16/10; object-fit:cover; display:block;
+  transition:transform 0.6s cubic-bezier(.625,.05,0,1)}
+.blog-art:hover .blog-art-img img{transform:scale(1.03)}
+/* l'etiquette s'incruste sur l'image, comme leur titre en surimpression */
+.blog-art-img .etiquette{position:absolute; left:14px; bottom:14px; margin:0;
+  background:rgba(255,255,255,0.92); color:var(--c-ink); backdrop-filter:blur(6px)}
+.blog-art .corps-carte{padding:22px 22px 24px; display:flex; flex-direction:column; flex:1}
+.blog-art .date{color:var(--c-text-3); margin-bottom:8px; display:block}
+.blog-art h3{margin:0 0 12px; display:-webkit-box; -webkit-line-clamp:6;
+  -webkit-box-orient:vertical; overflow:hidden}
+.titre-carte{font-size:1.125rem; font-weight:500; line-height:1.32; letter-spacing:-0.012em;
+  color:var(--c-ink)}
+.blog-art .resume{font-size:0.9375rem; line-height:1.5; margin:0 0 14px; color:var(--c-text-2);
+  display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden}
+.blog-art .signature{display:flex; align-items:center; gap:9px; margin-top:auto; padding-top:2px}
+.blog-art .signature img{width:26px; height:26px; border-radius:50%; object-fit:cover; flex:none}
+.blog-art .signature span{color:var(--c-text-3)}
+.blog-art:hover h3{color:var(--c-blue)}
+
+.blog-mois{grid-column:1 / -1; display:flex; align-items:baseline; justify-content:space-between;
+  padding-top:20px; border-top:1px solid var(--c-border); margin:16px 0 0}
+.blog-grille > .blog-mois:first-child{margin-top:0}
+.blog-mois .t-caption{color:var(--c-text-3)}
+
+@media (max-width:1024px){ .blog-grille{grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px} }
+@media (max-width:640px){ .blog-grille{grid-template-columns:minmax(0,1fr)} }
+
+/* Les trois articles mis en avant : meme grille de trois, mais une image en
+   16/9 et un titre plus grand, pour qu'ils se distinguent de la serie. */
+.blog-avant{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px}
+.blog-avant .blog-art-img img{aspect-ratio:16/9}
+.blog-avant{gap:40px}
+@media (max-width:1024px){ .blog-avant{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:640px){ .blog-avant{grid-template-columns:minmax(0,1fr); gap:40px} }
+
+/* Le fil d'actualite se coupe par mois : un filet, le mois a gauche, le
+   nombre d'articles a droite. Le bandeau d'auteur ci-dessous ne sert plus a
+   ranger la page, il reste pour les pages qui en ont besoin. */
+.blog-mois{grid-column:1 / -1; display:flex; align-items:baseline; justify-content:space-between;
+  padding-top:20px; border-top:1px solid var(--c-border); margin:14px 0 0}
+.blog-grille > .blog-mois:first-child{margin-top:0}
+.blog-mois .t-caption{color:var(--c-text-3)}
+
+/* « Qui ecrit quoi » : bandeau d'auteur, avec portrait et compte reel. */
+.blog-auteur{display:flex; align-items:center; gap:14px; margin:0 0 28px;
+  padding-top:22px; border-top:1px solid var(--c-border)}
+.blog-auteur img{width:44px; height:44px; border-radius:50%; object-fit:cover; flex:none}
+.blog-auteur .nom{display:block; font-weight:500}
+.blog-auteur .role{display:block; color:var(--c-text-3)}
+
+/* ── Appel texte a fleche.
+   Decompile le 02/09/2026 depuis le composant Framer « Text Arrow CTA »
+   (framer.com/m/Text-Arrow-CTA-qdMepe.js). Deux gestes, mesures dans sa
+   source, pas approximes :
+   1. LA FLECHE SAUTE DE DROITE A GAUCHE. Celle de droite pivote de -90 deg et
+      se reduit a zero ; celle de gauche, cachee a rotate(-90deg) scale(0),
+      revient a l'endroit ET prend sa place dans le flux, ce qui pousse le
+      libelle vers la droite.
+   2. LE FILET S'EFFACE PAR LA DROITE PENDANT QU'IL SE RETRACE PAR LA GAUCHE.
+      Deux barres de 1 px : celle de droite passe de 100 % a 1 %, celle de
+      gauche de 1 % a 100 %, avec des durees croisees.
+   Flèche a 15 px, comme dans la source. Le bleu ne sert qu'a l'action, §V5. */
+.cta-texte{position:relative; display:inline-flex; align-items:center; gap:10px;
+  color:var(--c-blue); font-weight:500; text-decoration:none; padding-bottom:6px;
+  line-height:1.2; letter-spacing:-0.01em}
+.cta-texte .fleche{flex:none; width:15px; height:15px; display:block;
+  transition:transform var(--dur-survol,0.45s) cubic-bezier(.625,.05,0,1),
+             opacity var(--dur-survol,0.45s) cubic-bezier(.625,.05,0,1)}
+.cta-texte .fl-gauche{position:absolute; left:-20px; opacity:0;
+  transform:rotate(-90deg) scale(0)}
+.cta-texte .fl-droite{position:relative; opacity:1; transform:rotate(0) scale(1)}
+.cta-texte:hover .fl-gauche{position:relative; left:0; opacity:1; transform:rotate(0) scale(1)}
+.cta-texte:hover .fl-droite{position:absolute; right:0; opacity:0;
+  transform:rotate(-90deg) scale(0)}
+/* les deux barres du filet */
+.cta-texte .filet{position:absolute; bottom:0; height:1px; background:currentColor}
+.cta-texte .fi-gauche{left:0; width:0;   transition:width 0.5s cubic-bezier(.625,.05,0,1) 0.12s}
+.cta-texte .fi-droite{right:0; width:100%; transition:width 0.32s cubic-bezier(.625,.05,0,1)}
+.cta-texte:hover .fi-gauche{width:100%}
+.cta-texte:hover .fi-droite{width:0}
+@media (prefers-reduced-motion:reduce){
+  .cta-texte .fleche,.cta-texte .filet{transition:none}
+}
+
+/* Tableau de donnees, aligne a gauche, respire. A distinguer de .comparatif,
+   qui est centre et pense pour un face-a-face en deux colonnes. */
+.matrice{width:100%; border-collapse:separate; border-spacing:0; min-width:820px}
+.matrice th{font-weight:500; font-size:0.75rem; letter-spacing:0.04em; text-transform:uppercase;
+  color:var(--c-text-3); padding:0 20px 14px 0; text-align:left; white-space:nowrap;
+  border-bottom:1px solid var(--c-border)}
+.matrice td{padding:18px 20px 18px 0; text-align:left; font-size:0.9375rem;
+  border-bottom:1px solid var(--c-border); vertical-align:top}
+.matrice tr:last-child td{border-bottom:0}
+.matrice td:first-child{font-weight:500; color:var(--c-ink)}
+.matrice td:last-child,.matrice th:last-child{padding-right:0; white-space:nowrap}
+.table-defilante .matrice{min-width:820px}
+
+/* ── Hero de l'offre, composition envoyee par Naomie le 02/09/2026.
+   Le titre y est nettement plus gras et plus grand que notre .t-hero, qui
+   plafonne a 50 px en graisse 400. On garde le cran de l'echelle et on ajoute
+   la graisse : le geste tient a la masse du titre, pas a un cran de plus. */
+.t-hero.t-hero-gras{font-weight:700; letter-spacing:-0.03em; line-height:1.06;
+  font-size:clamp(2.5rem, 5vw, 4.25rem)}
+
+/* Les trois offres : des cartes claires bordees, un label en petites capitales
+   bleues, un titre gras, un corps. Le bleu ne sert qu'a nommer l'offre. */
+.g-offres{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px}
+.offre{display:flex; flex-direction:column; background:#fff;
+  border:1px solid var(--c-border); border-radius:var(--r-lg); padding:34px 32px 32px;
+  transition:border-color var(--dur-survol) ease-out, box-shadow var(--dur-survol) ease-out,
+  transform var(--dur-survol) ease-out}
+.offre:hover{border-color:var(--c-border-hover); box-shadow:0 8px 28px rgba(0,0,0,0.06);
+  transform:translateY(-2px)}
+.offre .label{font-size:0.75rem; font-weight:700; letter-spacing:0.09em; text-transform:uppercase;
+  color:var(--c-blue); margin-bottom:16px}
+.offre h3{font-size:1.375rem; font-weight:700; letter-spacing:-0.02em; line-height:1.2;
+  color:var(--c-ink); margin:0 0 14px}
+.offre p{margin:0 0 20px; color:var(--c-text-2)}
+.offre .pied-offre{margin-top:auto; padding-top:20px; border-top:1px solid var(--c-border)}
+/* La carte Legal Data garde sa cartographie : demande du 02/09. */
+.offre-carto{margin:0 0 22px; border-radius:var(--r-sm); padding:20px;
+  background:var(--c-field-deep); display:grid; grid-template-columns:repeat(18,1fr);
+  gap:5px; align-content:center}
+.offre-carto i{display:block; aspect-ratio:1; border-radius:1px;
+  background:rgba(255,255,255,0.20)}
+.offre-carto i.vu{background:var(--c-signal, #4D57FF)}
+@media (max-width:1024px){ .g-offres{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:640px){ .g-offres{grid-template-columns:minmax(0,1fr)} }
+
+/* Les trois chiffres du corpus, sous l'appel du hero. Le hero dit la
+   promesse, la bande dit la matiere : c'est ce qui oriente la page sur la
+   donnee sans changer le titre. */
+.bande-chiffres{display:flex; justify-content:center; gap:56px; flex-wrap:wrap;
+  margin:38px auto 0; max-width:620px}
+.bande-chiffres b{display:block; font-size:1.75rem; font-weight:500; letter-spacing:-0.02em;
+  line-height:1.1; color:var(--c-text-on-dark, #fff)}
+.bande-chiffres span{display:block; margin-top:6px; font-size:0.8125rem;
+  color:rgba(255,255,255,0.58)}
+@media (max-width:560px){ .bande-chiffres{gap:28px} .bande-chiffres b{font-size:1.375rem} }
+
+/* Les trois facons d'utiliser le meme socle, dites DANS le hero et non dans
+   une section a part. Compact : un nom, une ligne. La grande version en
+   cartes est retiree, elle faisait doublon. */
+.trio-socle{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0;
+  max-width:860px; margin:44px auto 0; text-align:left}
+.trio-socle > div{padding:0 26px; border-left:1px solid rgba(255,255,255,0.14)}
+.trio-socle > div:first-child{padding-left:26px}
+.trio-socle b{display:block; font-size:0.75rem; font-weight:700; letter-spacing:0.09em;
+  text-transform:uppercase; color:var(--c-signal,#4D57FF); margin-bottom:9px}
+.trio-socle span{display:block; font-size:0.9375rem; line-height:1.45;
+  color:rgba(255,255,255,0.66)}
+@media (max-width:720px){
+  .trio-socle{grid-template-columns:minmax(0,1fr); gap:22px; max-width:420px}
+  .trio-socle > div{border-left:0; border-top:1px solid rgba(255,255,255,0.14);
+    padding:16px 0 0}
+  .trio-socle > div:first-child{padding-left:0}
+}

@@ -1,0 +1,177 @@
+/* ════════════════════════════════════════════════════════════════
+   CLEO DESIGN SYSTEM V5 — DÉCLINAISON CHAMP PROFOND (black mode)
+   Tokens repris VERBATIM de « design system 09-2026 » (V5, août 2026).
+   Le V5 dit « pas de dark mode » : cette feuille en dérive un, sans
+   inventer une seule teinte hors du système.
+     · le fond est --c-field-deep, le régime que le V5 réserve
+       déjà « à un hero ou une fin de page »
+     · le bleu sur ce fond est #4D57FF, la valeur que le V5 emploie
+       lui-même pour .field-deep .mass-item.found
+     · les statuts sont éclaircis à teinte constante, car ceux du V5
+       sont calculés sur --c-surface et tombent sous 3:1 sur le profond
+       (mesures dans le tableau ci-dessous)
+   ════════════════════════════════════════════════════════════════ */
+:root {
+  /* ── Brand (V5 verbatim) ── */
+  --c-blue: #0008CF;
+  --c-blue-hover: #0006A8;
+  --c-ink: #1A1A1A;
+  --c-white: #FFFFFF;
+
+  /* ── COUCHE 1. Champs — les trois régimes de fond (V5 verbatim) ── */
+  --c-field-pale: #F2F1EF;      /* blanc cassé chaud, relevé chez Harvey */
+  --c-field-deep: #0F0E0D;      /* le noir chaud de harvey.ai, mesuré */
+  --c-field-deep-2: #161514;    /* la strate au-dessus, à peine détachée */
+  --c-field-full: var(--c-blue);
+
+  /* ── Texte sur champ profond (V5 verbatim) ── */
+  --c-text-on-dark: #FFFFFF;             /* 19,74:1 sur le noir chaud */
+  --c-text-on-dark-2: rgba(255,255,255,0.64);
+  --c-text-on-dark-3: rgba(255,255,255,0.38);
+
+  /* ── COUCHE 2. Signal — le bleu, et rien d'autre.
+        Action, IA, état actif. Jamais décoratif.
+        #0008CF ne rend que 1,74:1 sur le profond : le V5 emploie
+        #4D57FF sur ce fond, on reprend cette valeur. ── */
+  --c-signal: #5B65FF;                   /* aplats, actions et élément trouvé */
+  --c-signal-deep: #2A33E6;              /* haut du dégradé de bouton, V5 */
+  --c-signal-wash: rgba(77,87,255,0.14);
+  --c-signal-line: rgba(77,87,255,0.34);
+
+  /* ── COUCHE 3. Statuts — produit uniquement, jamais décoratif.
+        Teinte du V5 conservée, luminosité relevée pour le profond.
+        pass  #0D6E44 → #3FD08A   2,99:1 → 9,53:1  AAA
+        risk  #8A5A00 → #E0A63C   3,18:1 → 8,71:1  AAA
+        block #B3261E → #FF6B60   2,89:1 → 6,76:1  AA   ── */
+  --c-pass: #3FD08A;      --c-pass-bg: rgba(63,208,138,0.13);
+  --c-risk: #E0A63C;      --c-risk-bg: rgba(224,166,60,0.13);
+  --c-block: #FF6B60;     --c-block-bg: rgba(255,107,96,0.13);
+  --c-info: var(--c-text-on-dark-2); --c-info-bg: rgba(255,255,255,0.06);
+
+  /* ── Famille éditoriale (V5 verbatim). Aucun sens de statut. ── */
+  --c-periwinkle: #8A93FF;   /* 6,92:1 sur le profond */
+  --c-lime: #C5EF4D;
+  --c-orange: #D65B04;
+  --c-cream: #F1EEE3;
+
+  /* ── COUCHE DA. La masse et l'unique (V5 §18), version profond ── */
+  --c-mass: rgba(255,255,255,0.16);
+  --c-mass-2: rgba(255,255,255,0.26);
+  --c-found: var(--c-signal);
+
+  /* ── Bordures sur champ profond ── */
+  --c-border: rgba(255,255,255,0.11);
+  --c-border-hover: rgba(255,255,255,0.22);
+  --c-filet: rgba(255,255,255,0.13);     /* le filet porteur, pas un accessoire */
+
+  /* ── Radius — 4 paliers, V5 verbatim ── */
+  --r-sm: 8px; --r-md: 16px; --r-lg: 24px; --r-pill: 9999px;
+
+  /* ── Spacing ×4, V5 verbatim ── */
+  --s-2:2px; --s-4:4px; --s-8:8px; --s-12:12px; --s-16:16px; --s-24:24px;
+  --s-32:32px; --s-48:48px; --s-64:64px; --s-96:96px; --s-128:128px;
+  --gap-cards: var(--s-16);
+  --pad-card: var(--s-24);
+  --pad-section: 152px;          /* régime landing, à la respiration de Harvey */
+
+  /* ── Verre des cartes, recette V5 à trois couches, transposée
+        sur le profond : fond translucide teinté de la famille bleu,
+        flou d'arrière-plan, arête haute claire qui donne l'épaisseur ── */
+  --card-bg: rgba(255,255,255,0.030);
+  --card-bg-plain: rgba(255,255,255,0.045);
+  --card-blur: saturate(140%) blur(14px);
+  --card-border: 1px solid var(--c-filet);
+  --card-edge: none;
+  --card-ring: none;
+  --card-shadow: none;
+  --card-shadow-hover: none;
+
+  /* ── Boutons, recette V5 ── */
+  --btn-edge: inset 0 1px 0 rgba(255,255,255,0.16);
+  --btn-edge-blue: inset 0 1px 0 rgba(255,255,255,0.26);
+  --btn-lift: 0 1px 2px rgba(0,0,0,0.34), 0 4px 12px rgba(0,0,0,0.28);
+  --btn-lift-hover: 0 2px 4px rgba(0,0,0,0.38), 0 10px 24px rgba(0,0,0,0.34);
+  --btn-glow: 0 1px 2px rgba(77,87,255,0.30), 0 6px 18px rgba(77,87,255,0.30);
+  --btn-glow-hover: 0 2px 4px rgba(77,87,255,0.34), 0 12px 30px rgba(77,87,255,0.40);
+  --btn-press: inset 0 2px 5px rgba(0,0,0,0.34);
+  --focus-ring-soft: 0 0 0 3px rgba(77,87,255,0.40);
+
+  /* ── Ombres ── */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.24);
+  --shadow-md: 0 8px 32px rgba(0,0,0,0.30);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.38);
+  --shadow-xl: 0 24px 64px rgba(0,0,0,0.46);
+
+  /* ── Motion, V5 verbatim ── */
+  --ease-luxury: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-apple: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+  --dur-fast:150ms; --dur-normal:250ms; --dur-slow:500ms; --dur-reveal:800ms;
+  --transition-hover: all var(--dur-fast) var(--ease-apple);
+  --touch-min: 44px;
+
+  /* ── Police. UNE SEULE, partout. Le titrage se fabrique en graisse,
+        en taille, en couleur et en approche, jamais en changeant de
+        police. Aucune monospace dans le produit ni dans les supports :
+        les références réglementaires sont en Satoshi, chiffres tabulaires. ── */
+  --font: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* ── Grille. Composition relevée sur edgecomply.com ── */
+  --conteneur: 1340px; --gouttiere: 50px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--c-field-deep); color:var(--c-text-on-dark);
+  font-family:var(--font); font-size:16px; line-height:1.7;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  font-variant-numeric:tabular-nums;
+}
+img{max-width:100%; display:block}
+a{color:inherit; text-decoration:none}
+button{font:inherit}
+h1,h2,h3,h4{margin:0; font-family:inherit}
+
+/* ── Échelle typographique V5, verbatim ──
+      Le régime landing garde les grandes tailles du V5 (.t-hero à 900),
+      les proportions de section viennent de la composition relevée. */
+.t-hero{font-size:clamp(2.75rem, 6.4vw, 4.5rem); font-weight:600; letter-spacing:-0.035em; line-height:1.02; color:var(--c-text-on-dark)}
+.t-display{font-size:clamp(2rem, 3.6vw, 3rem); font-weight:500; letter-spacing:-0.028em; line-height:1.08; color:var(--c-text-on-dark)}
+.t-h1{font-size:clamp(1.5rem, 2.2vw, 1.875rem); font-weight:500; letter-spacing:-0.022em; line-height:1.2; color:var(--c-text-on-dark)}
+.t-h2{font-size:clamp(1.375rem, 2vw, 1.5rem); font-weight:600; letter-spacing:-0.02em; line-height:1.2; color:var(--c-text-on-dark)}
+.t-h3{font-size:1.125rem; font-weight:500; letter-spacing:-0.01em; line-height:1.3; color:var(--c-text-on-dark)}
+.t-body{font-size:0.9375rem; font-weight:400; line-height:1.72; color:var(--c-text-on-dark-2)}
+.t-body-lg{font-size:clamp(1rem, 0.95rem + 0.3vw, 1.125rem); font-weight:400; line-height:1.65; color:var(--c-text-on-dark-2)}
+.t-caption{font-size:0.8125rem; font-weight:400; line-height:1.5; color:var(--c-text-on-dark-3)}
+.t-label{font-size:0.6875rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:var(--c-text-on-dark-3)}
+
+/* Le titre en deux teintes : geste de composition relevé chez eux,
+   rendu ici avec l'encre atténuée du V5, jamais avec une autre teinte. */
+.attenue{color:var(--c-text-on-dark-2)}
+
+/* ── Champs ── */
+.field-deep{background:var(--c-field-deep); color:var(--c-text-on-dark)}
+.field-deep-2{background:var(--c-field-deep-2); color:var(--c-text-on-dark)}
+.field-pale{background:var(--c-field-pale); color:rgba(0,0,0,0.87)}
+.field-pale .t-hero,.field-pale .t-display,.field-pale .t-h1,.field-pale .t-h2,.field-pale .t-h3{color:rgba(0,0,0,0.87)}
+.field-pale .t-body,.field-pale .t-body-lg{color:rgba(0,0,0,0.62)}
+.field-pale .t-caption,.field-pale .t-label{color:rgba(0,0,0,0.45)}
+.field-pale .attenue{color:rgba(0,0,0,0.45)}
+.field-full{background:var(--c-field-full); color:var(--c-text-on-dark)}
+
+/* ── Trame ── */
+.conteneur{max-width:var(--conteneur); margin:0 auto; padding:0 var(--gouttiere)}
+.section{padding:var(--pad-section) 0}
+.section-serree{padding:var(--s-96) 0}
+.centre{text-align:center}
+.mesure{max-width:640px}
+.mesure-centree{max-width:680px; margin-left:auto; margin-right:auto}
+
+/* Les balises code, pre et kbd retombent en monospace par défaut du
+   navigateur. Le DS V5 n'en admet aucune : Satoshi, chiffres tabulaires.
+   (Pas de chevrons dans ce commentaire : le contrôle d'équilibre des
+   balises les compterait comme des ouvrantes.) */
+code,kbd,samp,pre{font-family:var(--font); font-variant-numeric:tabular-nums;
+  font-size:0.94em; background:rgba(255,255,255,0.07); padding:1px 6px; border-radius:4px}

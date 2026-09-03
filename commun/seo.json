@@ -1,0 +1,1201 @@
+{
+ "_lisez_moi": {
+  "quoi": "Magasin de donnees SEO/GEO des 25 maquettes de /Users/naomiehalioua/cleo-maquettes-edge. Consomme par construire.mjs (chantier 1 du PLAN).",
+  "ecrit_le": "2026-08-27",
+  "source_de_verite": [
+   "/Users/naomiehalioua/cleo-landing (depot Next.js, LECTURE SEULE pour cette passe)",
+   "les pages servies sur https://www.cleolabs.co/fr et /en, relevees au curl le 27/08/2026"
+  ],
+  "regle": "tout ce qui est marque source:site est recopie au caractere pres depuis la page servie. Rien n'est devine. Les valeurs manquantes sont a null et expliquees dans un champ _trou voisin.",
+  "attention_depot_vs_ligne": "le checkout local de cleo-landing est sur la branche feat/cas-usage-16, pas sur la production. Ecart mesure : la production remplace les tirets cadratins des titres par deux points (depot « À Propos de Cleo Labs — Soutenue par... », ligne « À Propos de Cleo Labs : Soutenue par... » ; depot award « Winner — The Pitch... », ligne « Winner: The Pitch... »). Les valeurs de ce fichier viennent de la PAGE SERVIE, qui est ce que les moteurs indexent, et qui est deja sans tiret cadratin.",
+  "non_transcrit": "voir les champs _retire de « entite » et la section « Liste noire rencontree » de rapports/seo-donnees.md.",
+  "objets": [
+   "entite",
+   "site",
+   "levee",
+   "presse",
+   "pages",
+   "structure"
+  ]
+ },
+ "entite": {
+  "_source": "/Users/naomiehalioua/cleo-landing/src/app/[locale]/layout.tsx:73-218 (getOrganizationJsonLd), recoupe caractere par caractere sur le bloc ld+json servi par https://www.cleolabs.co/fr",
+  "_retire": {
+   "slogan": "champ 'slogan' present en ligne et au depot (layout.tsx:92). Non transcrit : liste noire, il inscrit une marque tierce dans la definition machine-lisible de Cleo Labs.",
+   "sameAs_crunchbase": "l'entree Crunchbase des sameAs est retiree : son slug ecrit « celo » au lieu de « cleo ». 6 sameAs declares dans layout.tsx:193-200, 5 gardes ici. L'URL fautive n'est pas recopiee dans ce fichier, pour qu'aucun generateur ne puisse la reprendre par inadvertance.",
+   "contactPoint": "aucune adresse de courriel n'est transcrite. Deux adresses concurrentes ont ete mesurees : celle qui commence par « contact », seule presente dans cleo-landing et servie 6 fois sur /fr, 12 fois sur /fr/terms ; et celle qui commence par « hello », presente uniquement dans pages/22-legal.html de la maquette. Le conflit est signale au rapport, aucune des deux n'est choisie ici.",
+   "founder_jobTitle_naomie": "jobTitle de Naomie Halioua non transcrit : quatre libelles concurrents mesures au depot. Conflit signale au rapport."
+  },
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.cleolabs.co/#organization",
+  "name": "Cleo Labs",
+  "legalName": "Cleo Corp SAS",
+  "url": "https://www.cleolabs.co",
+  "logo": {
+   "@type": "ImageObject",
+   "url": "https://www.cleolabs.co/apple-touch-icon.png",
+   "width": 180,
+   "height": 180
+  },
+  "image": "https://www.cleolabs.co/og-image.jpg",
+  "description": {
+   "fr": "Cleo Labs développe MARIA (Multi-Agent Regulatory Intelligence Architecture), la première infrastructure IA de conformité pour les retailers en Europe. MARIA transforme 3 700+ sources réglementaires dans 106 pays en analyses d'impact en temps réel, permettant aux équipes conformité retail de multiplier par 10 leur capacité de traitement.",
+   "en": "Cleo Labs builds MARIA (Multi-Agent Regulatory Intelligence Architecture), Europe's first AI compliance infrastructure for retailers. MARIA turns 3,700+ regulatory sources across 106 countries into real-time impact analyses, helping retail compliance teams multiply their processing capacity by 10x."
+  },
+  "foundingDate": "2023",
+  "award": "Winner: The Pitch by Deel (Station F, 2026)",
+  "foundingLocation": {
+   "@type": "Place",
+   "name": "Neuilly-sur-Seine, France"
+  },
+  "numberOfEmployees": {
+   "@type": "QuantitativeValue",
+   "minValue": 2,
+   "maxValue": 10
+  },
+  "areaServed": [
+   {
+    "@type": "Continent",
+    "name": "Europe"
+   },
+   {
+    "@type": "Country",
+    "name": "United States"
+   }
+  ],
+  "founder": [
+   {
+    "@type": "Person",
+    "@id": "https://www.cleolabs.co/#anaelle-guez",
+    "name": "Anaëlle Guez",
+    "jobTitle": "CEO & Co-founder",
+    "description": {
+     "fr": "10+ ans à l'intersection du droit et de la transformation numérique. Ancienne Chief Transformation Officer chez Havas Group.",
+     "en": "10+ years at the intersection of law and digital transformation. Former Chief Transformation Officer at Havas Group."
+    },
+    "url": "https://www.linkedin.com/in/anaelle-guez-ab341746/",
+    "alumniOf": {
+     "@type": "Organization",
+     "name": "Havas Group"
+    },
+    "knowsAbout": [
+     "Regulatory compliance",
+     "Digital transformation",
+     "Corporate law"
+    ]
+   },
+   {
+    "@type": "Person",
+    "@id": "https://www.cleolabs.co/#naomie-halioua",
+    "name": "Naomie Halioua",
+    "jobTitle": null,
+    "_jobTitle_trou": "quatre libelles concurrents au depot, aucun choisi ici : layout.tsx:125 et company/layout.tsx:76 'CRO & Co-founder' ; i18n/sections/social-proof.ts:150 'Co-founder & Chief Research Officer' / 'Co-fondatrice & Directrice de la Recherche' ; data/authors.json:5 'Co-founder & CRO, AI Research'. A trancher par Naomie.",
+    "description": {
+     "fr": "Ingénieure diplômée de l'École Polytechnique. Architecte de la technologie IA multi-agents MARIA.",
+     "en": "Engineer from École Polytechnique. Architect of the MARIA multi-agent AI technology."
+    },
+    "url": "https://www.linkedin.com/in/naomiehalioua/",
+    "alumniOf": {
+     "@type": "CollegeOrUniversity",
+     "name": "École Polytechnique"
+    },
+    "knowsAbout": [
+     "Multi-agent AI systems",
+     "Natural language processing",
+     "Regulatory technology"
+    ]
+   }
+  ],
+  "knowsAbout": [
+   "MARIA (Multi-Agent Regulatory Intelligence Architecture)",
+   "Retail regulatory compliance",
+   "CSRD",
+   "AGEC",
+   "Digital Product Passport",
+   "GPSR",
+   "EU AI Act",
+   "DORA",
+   "NIS2",
+   "GDPR",
+   "Devoir de vigilance",
+   "AI compliance agents",
+   "Multi-agent AI systems",
+   "Regulatory technology"
+  ],
+  "hasOfferCatalog": {
+   "@type": "OfferCatalog",
+   "name": {
+    "fr": "Solutions de conformité Cleo Labs",
+    "en": "Cleo Labs Compliance Solutions"
+   },
+   "itemListElement": [
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "SoftwareApplication",
+      "name": "Cleo Regulatory Scan",
+      "applicationCategory": "BusinessApplication"
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": {
+       "fr": "Automatisation de la conformité produit",
+       "en": "Product Compliance Automation"
+      }
+     }
+    },
+    {
+     "@type": "Offer",
+     "itemOffered": {
+      "@type": "Service",
+      "name": {
+       "fr": "Due Diligence tiers",
+       "en": "Third-Party Due Diligence"
+      }
+     }
+    }
+   ]
+  },
+  "address": {
+   "@type": "PostalAddress",
+   "streetAddress": "17 rue Berteaux Dumas",
+   "addressLocality": "Neuilly-sur-Seine",
+   "postalCode": "92200",
+   "addressRegion": "Île-de-France",
+   "addressCountry": "FR"
+  },
+  "sameAs": [
+   "https://www.linkedin.com/company/cleolabs",
+   "https://x.com/cleolabs",
+   "https://www.youtube.com/@Cleo_labs",
+   "https://www.producthunt.com/products/cleo-labs",
+   "https://www.wikidata.org/wiki/Q138466568"
+  ],
+  "taxID": "FR20984567883",
+  "iso6523Code": "0009:FR20984567883"
+ },
+ "site": {
+  "_source": "/Users/naomiehalioua/cleo-landing/src/app/[locale]/layout.tsx:256-277 (bloc WebSite) et 32-45 (alternates.languages), recoupe sur le HTML servi par /fr et /fr/company",
+  "base": "https://www.cleolabs.co",
+  "locales": [
+   "fr",
+   "en"
+  ],
+  "locale_par_defaut_x_default": "en",
+  "webSite": {
+   "@context": "https://schema.org",
+   "@type": "WebSite",
+   "@id": "https://www.cleolabs.co/#website",
+   "name": "Cleo Labs",
+   "url": "https://www.cleolabs.co",
+   "inLanguage": {
+    "fr": [
+     "fr-FR"
+    ],
+    "en": [
+     "en-US"
+    ]
+   },
+   "publisher": {
+    "@type": "Organization",
+    "@id": "https://www.cleolabs.co/#organization",
+    "name": "Cleo Labs",
+    "url": "https://www.cleolabs.co"
+   },
+   "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.cleolabs.co/{locale}/blog?q={search_term_string}",
+    "query-input": "required name=search_term_string",
+    "_gabarit": "{locale} vaut fr ou en. Valeur servie sur /fr : https://www.cleolabs.co/fr/blog?q={search_term_string}"
+   }
+  },
+  "canonical": {
+   "gabarit": "https://www.cleolabs.co/{locale}/{chemin}",
+   "exemple_mesure": "https://www.cleolabs.co/fr/company"
+  },
+  "hreflang": [
+   {
+    "hreflang": "en",
+    "href": "https://www.cleolabs.co/en/{chemin}"
+   },
+   {
+    "hreflang": "fr",
+    "href": "https://www.cleolabs.co/fr/{chemin}"
+   },
+   {
+    "hreflang": "x-default",
+    "href": "https://www.cleolabs.co/en/{chemin}"
+   }
+  ],
+  "_hreflang_note": "Trois liens exactement, x-default pointe sur l'anglais. Mesure sur /fr : en -> /en, fr -> /fr, x-default -> /en. Sur /fr/company : en -> /en/company, fr -> /fr/company, x-default -> /en/company.",
+  "og": {
+   "siteName": "Cleo Labs",
+   "type": "website",
+   "locale": {
+    "fr": "fr_FR",
+    "en": "en_US"
+   },
+   "image": {
+    "url": "/og-image.jpg",
+    "width": 1200,
+    "height": 630,
+    "alt": null,
+    "_alt_declare_au_depot": "Cleo Labs — AI regulatory compliance platform dashboard",
+    "_alt_trou": "valeur laissee vide a dessein : celle du depot (layout.tsx:57) porte un tiret cadratin, que le chantier interdit. A reecrire par Naomie, la maquette n'a pas d'og-image a elle."
+   },
+   "_image_note": "layout.tsx:57 declare /og-image.jpg pour l'accueil ; les layouts de section declarent /og-image.png. Les deux existent au depot."
+  },
+  "twitter": {
+   "card": "summary_large_image",
+   "site": "@cleolabs"
+  },
+  "llms": [
+   {
+    "rel": "alternate",
+    "type": "text/plain",
+    "href": "/llms.txt",
+    "title": "LLM-readable site description",
+    "statut_mesure": "200"
+   },
+   {
+    "rel": "alternate",
+    "type": "text/plain",
+    "href": "/llms-full.txt",
+    "title": "LLM-readable full reference",
+    "statut_mesure": "200"
+   }
+  ],
+  "verification": {
+   "google": "google57f0014b89d60d67"
+  }
+ },
+ "levee": {
+  "_source": "deux blocs FundingEvent distincts : /Users/naomiehalioua/cleo-landing/src/app/[locale]/layout.tsx:134-148 (dans Organization) et /Users/naomiehalioua/cleo-landing/src/app/[locale]/company/layout.tsx:81-94 (bloc Organization autonome de /company). Les deux recoupes sur le HTML servi.",
+  "montant": {
+   "@type": "MonetaryAmount",
+   "value": 1500000,
+   "currency": "EUR"
+  },
+  "financeurs": [
+   {
+    "@type": "Person",
+    "name": "Larry Berger",
+    "description": "Founder of Amplify"
+   },
+   {
+    "@type": "Organization",
+    "name": "La Financière Saint-James"
+   },
+   {
+    "@type": "Organization",
+    "name": "Kima Ventures",
+    "url": "https://www.kimaventures.com"
+   }
+  ],
+  "evenements": [
+   {
+    "porte_par": "Organization du layout racine, toutes pages",
+    "fichier": "/Users/naomiehalioua/cleo-landing/src/app/[locale]/layout.tsx:134-148",
+    "@type": "FundingEvent",
+    "name": {
+     "fr": "Tour de pré-amorçage",
+     "en": "Pre-Seed Round"
+    },
+    "date": "2026",
+    "fundingTotal": {
+     "@type": "MonetaryAmount",
+     "value": 1500000,
+     "currency": "EUR"
+    },
+    "funder": [
+     {
+      "@type": "Person",
+      "name": "Larry Berger",
+      "description": "Founder of Amplify"
+     },
+     {
+      "@type": "Organization",
+      "name": "La Financière Saint-James"
+     },
+     {
+      "@type": "Organization",
+      "name": "Kima Ventures",
+      "url": "https://www.kimaventures.com"
+     }
+    ]
+   },
+   {
+    "porte_par": "Organization autonome de la page /company",
+    "fichier": "/Users/naomiehalioua/cleo-landing/src/app/[locale]/company/layout.tsx:81-94",
+    "@type": "FundingEvent",
+    "name": "Pre-Seed Round",
+    "date": null,
+    "_date_trou": "ce second FundingEvent ne declare AUCUNE date, ni au depot ni en ligne. Le premier declare 2026.",
+    "fundingTotal": {
+     "@type": "MonetaryAmount",
+     "value": 1500000,
+     "currency": "EUR"
+    },
+    "funder": [
+     {
+      "@type": "Person",
+      "name": "Larry Berger",
+      "description": "Founder of Amplify"
+     },
+     {
+      "@type": "Organization",
+      "name": "La Financière Saint-James"
+     },
+     {
+      "@type": "Organization",
+      "name": "Kima Ventures"
+     }
+    ],
+    "_ecart": "ce bloc n'a pas d'url sur Kima Ventures, le bloc racine en a une. Le nom du tour n'est pas traduit ici, il l'est au bloc racine."
+   }
+  ]
+ },
+ "presse": {
+  "_source": "/Users/naomiehalioua/cleo-landing/src/components/landing/PressSection.tsx:13-44, tableau PRESS. Les 6 URL recoupees dans le HTML servi par https://www.cleolabs.co/fr.",
+  "_dates_trou": "le composant ne porte AUCUN champ date. Trois dates sont lisibles dans le chemin de l'URL, trois ne le sont pas. Rien n'est devine.",
+  "prix": {
+   "libelle_fr": "Lauréate, The Pitch by Deel (Station F), parmi 35 000+ candidatures",
+   "libelle_en": "Winner: The Pitch by Deel (Station F), selected among 35,000+ applications",
+   "_valeur_declaree_au_depot": {
+    "fr": "Lauréate — The Pitch by Deel (Station F), parmi 35 000+ candidatures",
+    "en": "Winner — The Pitch by Deel (Station F), selected among 35,000+ applications",
+    "source": "PressSection.tsx:50-53, champ COPY.award"
+   },
+   "_pourquoi_deux_libelles": "les valeurs du depot portent un tiret cadratin, interdit par le chantier. Les libelles a utiliser sont les memes faits, le tiret remplace par une virgule (fr) et par deux points (en, forme deja servie dans le champ award du JSON-LD : 'Winner: The Pitch by Deel (Station F, 2026)'). Aucun fait n'est modifie.",
+   "_emoji_refuse": "PressSection.tsx:82 affiche un emoji trophee avant le libelle. Non transcrit : le generateur de la maquette refuse les emoji."
+  },
+  "titre_section": {
+   "fr": "Ce qu’on dit de Cleo",
+   "en": "What people are saying about Cleo"
+  },
+  "surtitre_section": {
+   "fr": "Dans la presse",
+   "en": "In the news"
+  },
+  "articles": [
+   {
+    "media": "Tech.eu",
+    "url": "https://tech.eu/2026/04/29/cleo-labs-secures-eur15m-to-scale-ai-driven-product-compliance-globally/",
+    "date": "2026-04-29",
+    "date_source": "chemin de l'URL (/2026/04/29/)",
+    "titre": {
+     "fr": "Lève 1,5 M€ pour automatiser la conformité produit à l’échelle mondiale",
+     "en": "Secures €1.5M to scale AI-driven product compliance globally"
+    }
+   },
+   {
+    "media": "EU-Startups",
+    "url": "https://www.eu-startups.com/2026/04/female-founded-french-startup-cleo-labs-raises-e1-5-million-to-automate-international-product-compliance/",
+    "date": "2026-04",
+    "date_source": "chemin de l'URL (/2026/04/), jour non declare",
+    "titre": {
+     "fr": "La startup française fondée par deux femmes lève 1,5 M€",
+     "en": "Female-founded French startup raises €1.5M to automate international product compliance"
+    }
+   },
+   {
+    "media": "Vestbee",
+    "url": "https://www.vestbee.com/insights/articles/cleo-labs-raises-1-5-m",
+    "date": null,
+    "date_source": null,
+    "titre": {
+     "fr": "Construit le système d’exploitation IA de la conformité produit mondiale",
+     "en": "Building the AI operating system for global product compliance"
+    }
+   },
+   {
+    "media": "FinTech Global",
+    "url": "https://fintech.global/2026/04/29/cleo-labs-secures-e1-5m-for-global-product-compliance/",
+    "date": "2026-04-29",
+    "date_source": "chemin de l'URL (/2026/04/29/)",
+    "titre": {
+     "fr": "Lève 1,5 M€ pour la conformité produit mondiale",
+     "en": "Secures €1.5m for global product compliance"
+    }
+   },
+   {
+    "media": "RegTech Analyst",
+    "url": "https://regtechanalyst.com/cleo-labs-raises-e1-5m-to-scale-ai-compliance-platform/",
+    "date": null,
+    "date_source": null,
+    "titre": {
+     "fr": "Lève 1,5 M€ pour faire passer à l’échelle sa plateforme IA",
+     "en": "Raises €1.5m to scale its AI compliance platform"
+    }
+   },
+   {
+    "media": "The Legal Wire",
+    "url": "https://thelegalwire.ai/cleo-labs-raises-e1-5m-to-automate-product-regulatory-compliance-at-a-global-scale/",
+    "date": null,
+    "date_source": null,
+    "titre": {
+     "fr": "Automatise la conformité réglementaire produit à l’échelle mondiale",
+     "en": "Automating product regulatory compliance at a global scale"
+    }
+   }
+  ]
+ },
+ "pages": {
+  "00-composants.html": {
+   "titre": "Kit de composants de la maquette | Cleo Labs",
+   "description": "Chaque bloc de la maquette isolé avec son nom, son rôle et les pages où il sert : écrans produit, direction artistique, preuve, conversion.",
+   "source": "redige",
+   "url_source": null,
+   "appariement": "aucun equivalent sur cleolabs.co : page de travail interne, absente du sitemap.",
+   "appui_contenu": "pages/00-composants.html, h1 « Les composants. Un par un. » et les six familles de la nav du kit.",
+   "_mesure": "titre 44 caracteres, description 139 caracteres"
+  },
+  "01-accueil.html": {
+   "titre": "Conformité Produit Automatisée pour les Marques Internationales | Cleo Labs",
+   "description": "Plateforme IA de conformité produit pour les marques internationales. 106 pays, 25 000+ réglementations, 3 700+ sources. CSRD, AGEC, GPSR.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr",
+   "appariement": "https://www.cleolabs.co/fr, la page d'accueil francaise.",
+   "_mesure": "titre 75 caracteres, description 138 caracteres, releves sur la page servie le 27/08/2026"
+  },
+  "01-accueil-noir.html": {
+   "titre": "Conformité produit automatisée, variante sombre | Cleo Labs",
+   "description": "La page d'accueil de la maquette en régime sombre : même contenu, même hiérarchie, les surfaces claires passées en champ profond DS Cleo V5.",
+   "source": "redige",
+   "url_source": null,
+   "appariement": "variante de rendu de 01-accueil.html, pas une page du site. Titre distinct pour ne pas dupliquer celui de l'accueil.",
+   "appui_contenu": "meme fragment pages/01-accueil.html, construit avec noir:true (construire.mjs, table PAGES).",
+   "_mesure": "titre 59 caracteres, description 140 caracteres"
+  },
+  "01-accueil-en.html": {
+   "titre": "Automated Product Compliance for Global Brands | Cleo Labs",
+   "description": "AI-powered product compliance platform for global brands. 106 countries, 25,000+ regulations, 3,700+ sources. CSRD, AGEC, GPSR coverage.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/en",
+   "appariement": "https://www.cleolabs.co/en, la page d'accueil anglaise.",
+   "_mesure": "titre 58 caracteres, description 136 caracteres, releves sur la page servie le 27/08/2026"
+  },
+  "02-entreprise.html": {
+   "titre": "À Propos de Cleo Labs : Soutenue par Kima Ventures | Cleo Labs",
+   "description": "Découvrez l'équipe derrière MARIA, la première infrastructure IA de conformité pour les retailers en Europe. Fondée par Anaëlle Guez et Naomie Halioua. Soutenue par Kima Ventures, La Financière Saint-James et Larry Berger (Amplify). 1,5M€ levés.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr/company",
+   "appariement": "https://www.cleolabs.co/fr/company, la page entreprise.",
+   "_mesure": "titre 62 caracteres, description 245 caracteres, releves sur la page servie le 27/08/2026"
+  },
+  "03-offre.html": {
+   "titre": "Veille réglementaire produit sur 106 pays | Cleo Labs",
+   "description": "Les sources sont suivies en continu et ce qui va changer vous parvient des mois avant l'entrée en vigueur. Ne travaillez jamais sur une règle périmée.",
+   "source": "redige",
+   "url_source": null,
+   "appariement": "pas d'equivalent servi : /fr/product/radar rend 404. Le depot declare la page (product/radar/page.tsx:30-33) mais elle n'est pas deployee.",
+   "appui_contenu": "pages/03-offre.html, h1 « Veille réglementaire produit. En continu, sur 106 pays. » et son chapeau, repris mot pour mot.",
+   "_mesure": "titre 53 caracteres, description 150 caracteres"
+  },
+  "04-secteur.html": {
+   "titre": "Conformité produit textile et habillement | Cleo Labs",
+   "description": "Fibres, substances, étiquetage, allégations : les règles du textile changent vite et diffèrent dans chaque région. Suivez-les marché par marché.",
+   "source": "redige",
+   "url_source": null,
+   "appariement": "pas d'equivalent : les 10 slugs de /industries ne comportent pas le textile (retail, cosmetics, electronics, food-beverage, pet-care, sporting-goods, medical-devices, drugs, insurance, energy).",
+   "appui_contenu": "pages/04-secteur.html, h1 « Conformité produit textile. Marché par marché. » et son chapeau.",
+   "_mesure": "titre 53 caracteres, description 144 caracteres"
+  },
+  "05-marche.html": {
+   "titre": "Conformité réglementaire UE",
+   "description": "Naviguez la complexité réglementaire européenne avec l'IA. Cleo cartographie le RGPD, l'AI Act, DORA, la CSRD et plus de 25 000 réglementations dans les 27 États membres.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr/jurisdictions/european-union",
+   "appariement": "https://www.cleolabs.co/fr/jurisdictions/european-union, la juridiction Union europeenne.",
+   "_mesure": "titre 27 caracteres, description 170 caracteres, releves sur la page servie le 27/08/2026"
+  },
+  "06-cas-client.html": {
+   "titre": "Cas client Decathlon, conformité multi-marchés | Cleo Labs",
+   "description": "Un portefeuille large, des marchés qui s'ouvrent, des textes qui bougent : ce que change chez Decathlon une base d'obligations tenue à jour.",
+   "source": "redige",
+   "url_source": null,
+   "appariement": "pas d'equivalent : les trois cas publies sur /fr/customers sont anonymises (« Un grand retailer mode européen »), aucun ne porte le nom Decathlon.",
+   "appui_contenu": "pages/06-cas-client.html. Le nom Decathlon et la citation de Philippine Tamic sont sources : components/landing/DecathlonQuote.tsx, rendus en clair sur https://www.cleolabs.co/fr.",
+   "_mesure": "titre 58 caracteres, description 140 caracteres"
+  },
+  "07-chat.html": {
+   "titre": "Recherche réglementaire, la source avant le résumé | Cleo Labs",
+   "description": "Un produit, un marché, une question. Le Research cherche dans le texte, jusque dans les annexes, et rend l'extrait avec sa référence.",
+   "source": "redige",
+   "url_source": null,
+   "appariement": "pas d'equivalent servi : /fr/product/chat rend 404. Le depot declare la page (product/chat/page.tsx:30-33) mais elle n'est pas deployee.",
+   "appui_contenu": "pages/07-chat.html, h1 « Recherche réglementaire. La source avant le résumé. » et son chapeau, repris mot pour mot.",
+   "_mesure": "titre 62 caracteres, description 133 caracteres"
+  },
+  "08-reglementation.html": {
+   "titre": "Réglementation encodée, 2 812 règles testables | Cleo Labs",
+   "description": "2 812 obligations écrites pour être testées : une condition, les entrées qu'elle réclame, la preuve attendue, et le texte officiel qui l'impose.",
+   "source": "redige",
+   "url_source": null,
+   "appariement": "pas d'equivalent servi : /fr/product/market-access rend 404. Le depot declare la page (product/market-access/page.tsx:28-31) mais elle n'est pas deployee.",
+   "appui_contenu": "pages/08-reglementation.html, h1 « Réglementation encodée. 2 812 règles testables. » et son chapeau, repris mot pour mot. Le chiffre 2 812 vient de la maquette, il n'est PAS recoupe sur cleolabs.co.",
+   "_mesure": "titre 58 caracteres, description 144 caracteres"
+  },
+  "09-texte.html": {
+   "titre": "PPWR, conformité des emballages article par article | Cleo Labs",
+   "description": "Le règlement sur les emballages s'applique le 12 août 2026. Cleo en a encodé les obligations testables et les confronte à vos emballages, un par un.",
+   "source": "redige",
+   "url_source": null,
+   "appariement": "pas d'equivalent : /fr/resources ne porte que quatre guides de texte (ai-act, csrd, dora, product-compliance-retail), aucun sur le PPWR.",
+   "appui_contenu": "pages/09-texte.html, h1 « PPWR : conformité des emballages. Article par article. » et son chapeau.",
+   "_mesure": "titre 63 caracteres, description 148 caracteres"
+  },
+  "10-ressources.html": {
+   "titre": "Ressources & Guides de Conformité Réglementaire | Cleo Labs",
+   "description": "Guides experts sur la conformité réglementaire UE : AI Act, DORA, CSRD, RGPD. Obligations, calendriers et automatisation par l'IA.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr/resources",
+   "appariement": "https://www.cleolabs.co/fr/resources, l'index des ressources.",
+   "_mesure": "titre 59 caracteres, description 130 caracteres, releves sur la page servie le 27/08/2026"
+  },
+  "11-blog.html": {
+   "titre": "Blog | Cleo Labs",
+   "description": "Actualités, analyses et mises à jour de Cleo Labs, la plateforme d'intelligence réglementaire par IA.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr/blog",
+   "appariement": "https://www.cleolabs.co/fr/blog, l'index des publications.",
+   "_mesure": "titre 16 caracteres, description 101 caracteres, releves sur la page servie le 27/08/2026"
+  },
+  "12-article.html": {
+   "titre": "La loi européenne sur les emballages s'applique dans 20 jours : le vrai piège du 12 août n'est pas l'échéance, c'est qu'une « conformité UE » signifie déposer le même dossier séparément dans chaque État membre où vous vendez | Cleo Labs",
+   "description": "Le 12 août 2026, le règlement européen sur les emballages (2025/40) devient directement applicable dans toute l'UE, exigeant une déclaration de conformité et une documentation technique par type d'emballage unique. La plupart des analyses n'y voient qu'une échéance. Ce qu'elles manquent : il n'existe aucun registre européen unique des emballages, les producteurs doivent inscrire le même emballage séparément dans le système national de chaque État membre.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr/blog/eu-ppwr-packaging-conformity-2026",
+   "appariement": "https://www.cleolabs.co/fr/blog/eu-ppwr-packaging-conformity-2026, le seul article PPWR du corpus (108 articles au sitemap).",
+   "_mesure": "titre 236 caracteres, description 458 caracteres, releves sur la page servie le 27/08/2026",
+   "_alerte": "titre reel de 236 caracteres et description reelle de 458 caracteres. Transcrits tels quels parce que ce sont les valeurs servies, mais tres au-dessus des normes d'affichage (60 et 155). A trancher par Naomie avant que le generateur les pose."
+  },
+  "13-glossaire.html": {
+   "titre": "Glossaire de Conformité Réglementaire | 20+ Termes Clés Expliqués",
+   "description": "Glossaire complet des termes de conformité réglementaire européenne et internationale : RGPD, AI Act, DORA, CSRD, NIS2, ESPR, REACH, MiCA et plus. Définitions claires pour les professionnels de la conformité.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr/resources/glossary",
+   "appariement": "https://www.cleolabs.co/fr/resources/glossary, le glossaire.",
+   "_mesure": "titre 65 caracteres, description 208 caracteres, releves sur la page servie le 27/08/2026"
+  },
+  "14-terme.html": {
+   "titre": "Mandataire, définition et obligations | Cleo Labs",
+   "description": "Personne établie dans l'Union, désignée par écrit par un fabricant pour accomplir en son nom des tâches définies par la réglementation produit.",
+   "source": "redige",
+   "url_source": null,
+   "appariement": "pas d'equivalent : le glossaire reel tient sur une seule page, aucune URL par terme au sitemap.",
+   "appui_contenu": "pages/14-terme.html, h1 « Mandataire » et son chapeau. La citation de la page renvoie au Reglement (UE) 2023/988, article 3, point 12.",
+   "_mesure": "titre 49 caracteres, description 143 caracteres"
+  },
+  "15-evenements.html": {
+   "titre": "Rencontres et rediffusions conformité produit | Cleo Labs",
+   "description": "Des sessions courtes sur un texte, un marché ou une famille de produits. Les rediffusions restent disponibles après la rencontre.",
+   "source": "redige",
+   "url_source": null,
+   "appariement": "pas d'equivalent : aucune route evenement sur cleolabs.co, zero occurrence au sitemap.",
+   "appui_contenu": "pages/15-evenements.html, h1 « Rencontres » et son chapeau, repris mot pour mot.",
+   "_mesure": "titre 57 caracteres, description 129 caracteres"
+  },
+  "16-evenement.html": {
+   "titre": "Product Safety in the Age of AI, Bruxelles | Cleo Labs",
+   "description": "Side event de l'International Product Safety Week, le 9 septembre 2026 à Bruxelles : l'article 19 du RSGP encodé et testé sur une offre en ligne.",
+   "source": "redige",
+   "url_source": null,
+   "appariement": "pas d'equivalent : aucune route evenement sur cleolabs.co.",
+   "appui_contenu": "pages/16-evenement.html : h1, date « Mercredi 9 septembre 2026, 19h », lieu « Bruxelles », duree « 1 h 30 ».",
+   "_mesure": "titre 54 caracteres, description 145 caracteres"
+  },
+  "17-modeles.html": {
+   "titre": "Modèles de documents de conformité produit | Cleo Labs",
+   "description": "Des documents prêts à remplir, dérivés des textes eux-mêmes. Chacun porte l'article dont il vient, de la déclaration UE à l'étiquette textile.",
+   "source": "redige",
+   "url_source": null,
+   "appariement": "pas d'equivalent : /fr/resources/data publie des statistiques, pas des modeles a remplir.",
+   "appui_contenu": "pages/17-modeles.html, h1 « Modèles » et son chapeau, plus les deux premieres fiches (Decision 768/2008/CE annexe III, Reglement (UE) 1007/2011).",
+   "_mesure": "titre 54 caracteres, description 142 caracteres"
+  },
+  "18-recrutement.html": {
+   "titre": "Carrières : rejoindre Cleo Labs | Cleo Labs",
+   "description": "Rejoindre l’équipe qui automatise la conformité produit : 25 000 réglementations, 106 pays, de grandes marques déjà à bord.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr/careers",
+   "appariement": "https://www.cleolabs.co/fr/careers, l'index des postes.",
+   "_mesure": "titre 43 caracteres, description 123 caracteres, releves sur la page servie le 27/08/2026"
+  },
+  "19-poste.html": {
+   "titre": "Juriste, encodage réglementaire, Neuilly-sur-Seine | Cleo Labs",
+   "description": "Lire un texte réglementaire et en tirer des obligations testables : verbatim recopié, renvoi au paragraphe, condition évaluable, preuve acceptée.",
+   "source": "redige",
+   "url_source": null,
+   "appariement": "pas d'equivalent : les deux postes reels sont forward-deployed-engineer et legal-engineer, aucun ne s'appelle « Juriste, encodage réglementaire » et les deux sont a Paris, pas a Neuilly-sur-Seine.",
+   "appui_contenu": "pages/19-poste.html, h1 et la ligne « Neuilly-sur-Seine · Temps plein · Sur site quatre jours par semaine ». Poste reel le plus proche, si Naomie veut realigner : https://www.cleolabs.co/fr/careers/legal-engineer, titre « Legal Engineer | Cleo Labs ».",
+   "_mesure": "titre 62 caracteres, description 145 caracteres"
+  },
+  "20-campagne.html": {
+   "titre": "Guide PPWR gratuit, article par article | Cleo Labs",
+   "description": "Ce qui s'applique le 12 août 2026, ce qui suit par étapes, et les quatre familles d'obligations qui touchent un emballage. Avec les articles cités.",
+   "source": "redige",
+   "url_source": null,
+   "appariement": "pas d'equivalent : aucune route /landing sur cleolabs.co.",
+   "appui_contenu": "pages/20-campagne.html, h1 « Le PPWR en clair, article par article. », son chapeau et la ligne « Format PDF · 18 pages ».",
+   "_mesure": "titre 51 caracteres, description 147 caracteres"
+  },
+  "21-inscription.html": {
+   "titre": "Réserver une Démo | Cleo Labs",
+   "description": "Réservez une démo de 20 minutes. Nous lançons un scan réglementaire en direct sur votre entreprise et vous présentons vos résultats personnalisés.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr/meet",
+   "appariement": "https://www.cleolabs.co/fr/meet : c'est la cible des 10 liens « Essai gratuit » mesures sur /fr, et « Essai gratuit » est le CTA de la maquette.",
+   "_mesure": "titre 29 caracteres, description 146 caracteres, releves sur la page servie le 27/08/2026",
+   "_alerte": "ecart de contenu a trancher : la page reelle promet une demo de 20 minutes, la maquette promet un acces a la plateforme dans la journee, sans carte bancaire. Le titre transcrit dit « Réserver une Démo », le h1 de la maquette dit « Demander un accès »."
+  },
+  "22-legal.html": {
+   "titre": "Conditions Générales d'Utilisation | Cleo Labs",
+   "description": "Consultez les conditions générales d'utilisation de Cleo Labs. Comprenez vos droits et obligations lors de l'utilisation de notre plateforme d'intelligence réglementaire par IA.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr/terms",
+   "appariement": "https://www.cleolabs.co/fr/terms, les conditions generales.",
+   "_mesure": "titre 46 caracteres, description 177 caracteres, releves sur la page servie le 27/08/2026",
+   "_alerte": "la page reelle est en robots noindex (terms/layout.tsx:47). Si la maquette reprend le contenu, elle devrait reprendre le noindex."
+  },
+  "23-research.html": {
+   "titre": "Recherche : MARIA et l'intelligence réglementaire | Cleo Labs",
+   "description": "Les travaux de recherche de Cleo Labs : architecture multi-agents, chaîne en cinq étapes, livre blanc. La science derrière l'intelligence réglementaire.",
+   "source": "redige"
+  },
+  "24-blog.html": {
+   "titre": "Actualités et analyses de conformité produit | Cleo Labs",
+   "description": "Mises à jour réglementaires, analyses et nouveautés produit de Cleo Labs. Une publication par jour sur la conformité produit à l'international.",
+   "source": "redige"
+  },
+  "25-skills.html": {
+   "titre": "Skills : les compétences de conformité produit | Cleo Labs",
+   "description": "Les skills de Cleo Labs : des compétences de conformité produit prêtes à l'emploi, encodées et testables sur vos références.",
+   "source": "redige"
+  },
+  "26-legal-data.html": {
+   "titre": "Legal Data : le corpus réglementaire produit | Cleo Labs",
+   "description": "Le corpus de Cleo Labs : réglementations indexées, autorités suivies, codes douaniers et marchés couverts, rattachés à leur source officielle.",
+   "source": "redige"
+  },
+  "23-research-en.html": {
+   "titre": "Research: MARIA and regulatory intelligence | Cleo Labs",
+   "description": "Cleo Labs research: multi-agent architecture, a five-step chain, the white paper. The science behind regulatory intelligence.",
+   "source": "redige"
+  },
+  "24-blog-en.html": {
+   "titre": "Product compliance news and analysis | Cleo Labs",
+   "description": "Regulatory updates, analysis and product news from Cleo Labs. One publication a day on international product compliance.",
+   "source": "redige"
+  },
+  "25-skills-en.html": {
+   "titre": "Skills: ready-made product compliance capabilities | Cleo Labs",
+   "description": "Cleo Labs skills: product compliance capabilities that are encoded, testable against your references and ready to use.",
+   "source": "redige"
+  },
+  "26-legal-data-en.html": {
+   "titre": "Legal Data: the product regulatory corpus | Cleo Labs",
+   "description": "The Cleo Labs corpus: indexed regulations, tracked authorities, customs codes and covered markets, each tied to its official source.",
+   "source": "redige"
+  }
+ },
+ "structure": {
+  "_principe": "les blocs Organization et WebSite sont poses sur TOUTES les pages par le layout racine du site reel (layout.tsx:252-277). Les types listes ci-dessous sont les blocs propres a chaque page, qui s'ajoutent aux deux blocs de site.",
+  "_globaux": {
+   "sur_toutes_les_pages": [
+    "Organization",
+    "WebSite"
+   ],
+   "renvoi": "objets « entite » et « site » de ce fichier",
+   "non_repris": "VideoObject, pose par layout.tsx:278-301 sur toutes les pages du site reel. Non repris dans la maquette : elle ne sert aucune video."
+  },
+  "00-composants.html": {
+   "types": [
+    "WebPage"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "titre de la page",
+     "inLanguage": "fr-FR",
+     "isPartOf": "https://www.cleolabs.co/#website"
+    }
+   },
+   "modele": "aucun equivalent, minimum honnete."
+  },
+  "01-accueil.html": {
+   "types": [
+    "WebPage"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "titre de la page",
+     "inLanguage": "fr-FR",
+     "isPartOf": "https://www.cleolabs.co/#website",
+     "primaryImageOfPage": "non declare, la maquette n'a pas d'og-image"
+    }
+   },
+   "modele": "/fr porte en plus FAQPage et HowTo. Non repris : la maquette d'accueil ne comporte ni FAQ ni suite d'etapes."
+  },
+  "01-accueil-noir.html": {
+   "types": [
+    "WebPage"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "titre de la page",
+     "inLanguage": "fr-FR",
+     "isPartOf": "https://www.cleolabs.co/#website"
+    }
+   },
+   "modele": "variante de rendu, meme structure que 01-accueil.html."
+  },
+  "01-accueil-en.html": {
+   "types": [
+    "WebPage"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "titre de la page",
+     "inLanguage": "en-US",
+     "isPartOf": "https://www.cleolabs.co/#website"
+    }
+   },
+   "modele": "identique a 01-accueil.html, en anglais."
+  },
+  "02-entreprise.html": {
+   "types": [
+    "AboutPage",
+    "BreadcrumbList",
+    "Organization"
+   ],
+   "proprietes": {
+    "AboutPage": {
+     "name": "titre de la page",
+     "inLanguage": "fr-FR"
+    },
+    "BreadcrumbList": [
+     {
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.cleolabs.co"
+     },
+     {
+      "position": 2,
+      "name": "Company",
+      "item": "https://www.cleolabs.co/company"
+     }
+    ],
+    "Organization": "reprendre l'objet « levee » : founder + funding, exactement comme company/layout.tsx:60-95"
+   },
+   "modele": "https://www.cleolabs.co/fr/company (BreadcrumbList + Organization avec funding)."
+  },
+  "03-offre.html": {
+   "types": [
+    "WebPage",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "proprietes": {
+    "Service": {
+     "name": "Regulatory Change",
+     "serviceType": "Veille réglementaire produit",
+     "provider": "https://www.cleolabs.co/#organization",
+     "areaServed": "106 pays, valeur de la maquette"
+    },
+    "FAQPage": "les questions de la section « Questions fréquentes » de pages/03-offre.html, telles qu'elles y sont ecrites"
+   },
+   "modele": "solutions/product-compliance/layout.tsx (BreadcrumbList + Service + FAQPage + Organization). La page produit correspondante rend 404 et ne porte donc rien."
+  },
+  "04-secteur.html": {
+   "types": [
+    "WebPage",
+    "BreadcrumbList",
+    "Service"
+   ],
+   "proprietes": {
+    "Service": {
+     "name": "Conformité produit textile",
+     "serviceType": "Conformité produit",
+     "provider": "https://www.cleolabs.co/#organization",
+     "audience": {
+      "@type": "Audience",
+      "audienceType": "Marques textile et habillement"
+     }
+    }
+   },
+   "modele": "industries/[slug]/layout.tsx (BreadcrumbList + Service + Audience + FAQPage + Organization). FAQPage non repris : la maquette n'a pas de section FAQ."
+  },
+  "05-marche.html": {
+   "types": [
+    "WebPage",
+    "BreadcrumbList",
+    "Service"
+   ],
+   "proprietes": {
+    "Service": {
+     "name": "Conformité produit dans l'Union européenne",
+     "provider": "https://www.cleolabs.co/#organization",
+     "areaServed": {
+      "@type": "Place",
+      "name": "Union européenne"
+     }
+    }
+   },
+   "modele": "jurisdictions/[jurisdiction]/layout.tsx (BreadcrumbList + FAQPage). FAQPage non repris : la maquette n'a pas de section FAQ, la page reelle en a trois questions."
+  },
+  "06-cas-client.html": {
+   "types": [
+    "Article",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "Article": {
+     "headline": "titre de la page",
+     "inLanguage": "fr-FR",
+     "publisher": "https://www.cleolabs.co/#organization",
+     "about": {
+      "@type": "Organization",
+      "name": "Decathlon"
+     },
+     "citation": "la citation de Philippine Tamic, Product Compliance Operations Manager chez Decathlon, telle que servie sur /fr",
+     "datePublished": null
+    }
+   },
+   "modele": "customers/[slug]/page.tsx (Article + BreadcrumbList + Organization).",
+   "_trou": "aucune date de publication n'existe, ni sur la maquette ni sur les cas reels. datePublished laisse vide."
+  },
+  "07-chat.html": {
+   "types": [
+    "WebPage",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "proprietes": {
+    "Service": {
+     "name": "Research",
+     "serviceType": "Recherche réglementaire",
+     "provider": "https://www.cleolabs.co/#organization"
+    },
+    "FAQPage": "les questions de la section « Questions fréquentes » de pages/07-chat.html"
+   },
+   "modele": "meme gabarit que 03-offre.html."
+  },
+  "08-reglementation.html": {
+   "types": [
+    "WebPage",
+    "BreadcrumbList",
+    "Service",
+    "FAQPage"
+   ],
+   "proprietes": {
+    "Service": {
+     "name": "Compliance",
+     "serviceType": "Réglementation encodée",
+     "provider": "https://www.cleolabs.co/#organization"
+    },
+    "FAQPage": "les questions de la section « Questions fréquentes » de pages/08-reglementation.html"
+   },
+   "modele": "meme gabarit que 03-offre.html."
+  },
+  "09-texte.html": {
+   "types": [
+    "WebPage",
+    "BreadcrumbList",
+    "Legislation"
+   ],
+   "proprietes": {
+    "Legislation": {
+     "name": "Règlement (UE) 2025/40",
+     "alternateName": "PPWR",
+     "legislationJurisdiction": "Union européenne",
+     "legislationDate": null,
+     "_legislationDate_trou": "la maquette donne la date d'application, 12 août 2026, pas la date d'adoption. Non devinee."
+    }
+   },
+   "modele": "resources/[texte]-compliance/layout.tsx (Article + BreadcrumbList + Legislation + FAQPage + Organization). Article et FAQPage non repris : la maquette est une page d'offre, pas un guide redige, et n'a pas de FAQ."
+  },
+  "10-ressources.html": {
+   "types": [
+    "CollectionPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "CollectionPage": {
+     "name": "Ressources",
+     "inLanguage": "fr-FR"
+    },
+    "BreadcrumbList": [
+     {
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.cleolabs.co"
+     },
+     {
+      "position": 2,
+      "name": "Resources",
+      "item": "https://www.cleolabs.co/resources"
+     }
+    ]
+   },
+   "modele": "resources/layout.tsx (BreadcrumbList)."
+  },
+  "11-blog.html": {
+   "types": [
+    "Blog",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "Blog": {
+     "name": "Publications",
+     "inLanguage": "fr-FR",
+     "publisher": "https://www.cleolabs.co/#organization"
+    },
+    "BreadcrumbList": [
+     {
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.cleolabs.co"
+     },
+     {
+      "position": 2,
+      "name": "Blog",
+      "item": "https://www.cleolabs.co/blog"
+     }
+    ]
+   },
+   "modele": "blog/layout.tsx (BreadcrumbList seul)."
+  },
+  "12-article.html": {
+   "types": [
+    "BlogPosting",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "BlogPosting": {
+     "headline": "PPWR : ce que le 12 août 2026 change pour vos emballages",
+     "datePublished": "2026-08-26",
+     "author": {
+      "@type": "Organization",
+      "name": "Équipe Cleo"
+     },
+     "publisher": "https://www.cleolabs.co/#organization",
+     "inLanguage": "fr-FR",
+     "_source_valeurs": "pages/12-article.html : h1, ligne « 26 août 2026 · 8 minutes de lecture », signature « Équipe Cleo »."
+    }
+   },
+   "modele": "les articles reels portent WebPage + BreadcrumbList + FAQPage et AUCUN BlogPosting ni Article (verifie : zero occurrence de BlogPosting dans tout cleo-landing). C'est un manque du site, pas un modele a copier : la maquette pose BlogPosting.",
+   "_conditionnel": "ajouter FAQPage seulement si le chantier 4 du PLAN ajoute bien une section FAQ visible a la page. Pas de FAQPage sans FAQ affichee."
+  },
+  "13-glossaire.html": {
+   "types": [
+    "DefinedTermSet",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "DefinedTermSet": {
+     "name": "Glossaire",
+     "inLanguage": "fr-FR",
+     "hasDefinedTerm": "un DefinedTerm par carte de pages/13-glossaire.html, avec name et description recopies de la carte"
+    }
+   },
+   "modele": "resources/glossary/layout.tsx (DefinedTermSet + DefinedTerm + BreadcrumbList). La page reelle sert 20 DefinedTerm."
+  },
+  "14-terme.html": {
+   "types": [
+    "DefinedTerm",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "DefinedTerm": {
+     "name": "Mandataire",
+     "description": "chapeau de pages/14-terme.html, recopie",
+     "inDefinedTermSet": "le glossaire, 13-glossaire.html",
+     "_citation": "Règlement (UE) 2023/988, article 3, point 12"
+    }
+   },
+   "modele": "meme type que les termes servis dans le DefinedTermSet reel."
+  },
+  "15-evenements.html": {
+   "types": [
+    "CollectionPage",
+    "BreadcrumbList",
+    "ItemList"
+   ],
+   "proprietes": {
+    "ItemList": "un Event par rencontre affichee, voir 16-evenement.html pour la seule rencontre a venir"
+   },
+   "modele": "aucun equivalent, aucune route evenement sur cleolabs.co."
+  },
+  "16-evenement.html": {
+   "types": [
+    "Event",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "Event": {
+     "name": "Product Safety in the Age of AI",
+     "startDate": "2026-09-09T19:00",
+     "_startDate_trou": "l'heure est donnee sans fuseau sur la maquette. Le decalage n'est pas devine.",
+     "duration": "PT1H30M",
+     "location": {
+      "@type": "Place",
+      "name": "Bruxelles",
+      "address": null,
+      "_address_trou": "la maquette ecrit « lieu communiqué à l'inscription ». Aucune adresse a transcrire."
+     },
+     "superEvent": {
+      "@type": "Event",
+      "name": "International Product Safety Week"
+     },
+     "organizer": "https://www.cleolabs.co/#organization"
+    }
+   },
+   "modele": "aucun equivalent."
+  },
+  "17-modeles.html": {
+   "types": [
+    "CollectionPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "CollectionPage": {
+     "name": "Modèles",
+     "inLanguage": "fr-FR"
+    }
+   },
+   "modele": "aucun equivalent. resources/data/layout.tsx pose un Dataset, mais il decrit des statistiques, pas des modeles a remplir : type non repris."
+  },
+  "18-recrutement.html": {
+   "types": [
+    "CollectionPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "CollectionPage": {
+     "name": "Postes ouverts",
+     "inLanguage": "fr-FR"
+    }
+   },
+   "modele": "careers/page.tsx ne pose aucun JSON-LD sur le site reel. CollectionPage est le minimum honnete."
+  },
+  "19-poste.html": {
+   "types": [
+    "JobPosting",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "JobPosting": {
+     "title": "Juriste, encodage réglementaire",
+     "employmentType": "FULL_TIME",
+     "hiringOrganization": "https://www.cleolabs.co/#organization",
+     "jobLocation": {
+      "@type": "Place",
+      "address": {
+       "@type": "PostalAddress",
+       "addressLocality": "Neuilly-sur-Seine",
+       "addressCountry": "FR"
+      }
+     },
+     "jobLocationType": "sur site quatre jours par semaine, valeur de la maquette",
+     "datePosted": null,
+     "_datePosted_trou": "la maquette ne date pas l'annonce. Non devinee.",
+     "baseSalary": null,
+     "_baseSalary_trou": "aucune remuneration affichee sur la maquette ni sur les deux annonces reelles."
+    }
+   },
+   "modele": "careers/[slug]/page.tsx (JobPosting + Organization + Place + PostalAddress)."
+  },
+  "20-campagne.html": {
+   "types": [
+    "WebPage"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "titre de la page",
+     "inLanguage": "fr-FR"
+    }
+   },
+   "modele": "aucun equivalent, aucune route /landing sur cleolabs.co.",
+   "_conseil": "page nue, sans navigation ni pied : lui poser robots noindex si elle n'a pas vocation a etre indexee."
+  },
+  "21-inscription.html": {
+   "types": [
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "titre de la page",
+     "inLanguage": "fr-FR"
+    }
+   },
+   "modele": "meet/layout.tsx (BreadcrumbList seul)."
+  },
+  "22-legal.html": {
+   "types": [
+    "WebPage"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "titre de la page",
+     "inLanguage": "fr-FR"
+    }
+   },
+   "modele": "terms/layout.tsx ne pose aucun JSON-LD et declare robots noindex."
+  },
+  "23-research.html": {
+   "types": [
+    "WebPage"
+   ],
+   "proprietes": {}
+  },
+  "24-blog.html": {
+   "types": [
+    "WebPage"
+   ],
+   "proprietes": {}
+  },
+  "25-skills.html": {
+   "types": [
+    "WebPage"
+   ],
+   "proprietes": {}
+  },
+  "26-legal-data.html": {
+   "types": [
+    "WebPage"
+   ],
+   "proprietes": {}
+  },
+  "23-research-en.html": {
+   "types": [
+    "WebPage"
+   ],
+   "proprietes": {}
+  },
+  "24-blog-en.html": {
+   "types": [
+    "WebPage"
+   ],
+   "proprietes": {}
+  },
+  "25-skills-en.html": {
+   "types": [
+    "WebPage"
+   ],
+   "proprietes": {}
+  },
+  "26-legal-data-en.html": {
+   "types": [
+    "WebPage"
+   ],
+   "proprietes": {}
+  }
+ }
+}

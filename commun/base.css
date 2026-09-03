@@ -1,0 +1,162 @@
+/* ════════════════════════════════════════════════════════════════
+   SOCLE — DA Cleo, régime clair dominant.
+   Trois relevés au navigateur le 26/08/2026 :
+     · cleolabs.co    fond #F9F8F6, h1 92px w500 ls -0.04em Satoshi,
+                      verre blanc blur(8px)/95 %, bord #E3E0D8, r12
+     · legora.com     fond #FAFAF9, hero = grande photo, verre SOMBRE
+                      blur(27.5px) rgba(0,0,0,.5) r24, sans bord ni ombre
+     · harvey.ai      fond clair #FAFAF9 + sections noires #0F0E0D,
+                      filets porteurs, chiffres énormes alignés à droite
+   Le clair domine, le noir ponctue. C'est ce que font les trois.
+   ════════════════════════════════════════════════════════════════ */
+:root {
+  /* ── Marque, V5 verbatim ── */
+  --c-blue: #0008CF;
+  --c-blue-hover: #0006A8;
+  --c-blue-light: rgba(0,8,207,0.06);
+  --c-blue-medium: rgba(0,8,207,0.12);
+  --c-ink: #0A0A0A;              /* l'encre du h1 de cleolabs.co */
+  --c-white: #FFFFFF;
+
+  /* ── COUCHE 1. Champs ── */
+  --c-surface: #F9F8F6;          /* le fond du site actuel */
+  --c-card: #F0EFEC;
+  --c-field-pale: #F2F1EF;
+  --c-field-deep: #0F0E0D;       /* le noir chaud de harvey.ai */
+  --c-field-deep-2: #161514;
+  --c-field-full: var(--c-blue);
+
+  /* ── Texte sur clair, V5 ; --c-text-3 remonté à 0,54 le 27/08, 0,45 rendait 3,32:1 ── */
+  --c-text: rgba(0,0,0,0.87);
+  --c-text-2: rgba(0,0,0,0.62);
+  --c-text-3: rgba(0,0,0,0.54);
+  --c-text-on-dark: #FFFFFF;
+  --c-text-on-dark-2: rgba(255,255,255,0.64);
+  --c-text-on-dark-3: rgba(255,255,255,0.45);
+
+  /* ── Bordures, le filet de cleolabs.co ; --c-border 0,08 -> 0,13 le 27/08 (1,196 -> 1,347:1) ── */
+  --c-border: rgba(0,0,0,0.13);
+  --c-border-hover: rgba(0,0,0,0.15);
+  --c-filet: #E3E0D8;                       /* le bord du verre, relevé */
+  --c-filet-sombre: rgba(255,255,255,0.13);
+
+  /* ── COUCHE 2. Signal ── */
+  --c-signal: var(--c-blue);
+  --c-signal-clair: #5B65FF;                /* le bleu sur champ profond */
+  --c-signal-wash: rgba(0,8,207,0.07);
+  --c-signal-line: rgba(0,8,207,0.22);
+
+  /* ── COUCHE 3. Statuts. Produit uniquement, jamais décoratif.
+        Valeurs V5 sur clair, variantes relevées pour le champ profond. ── */
+  --c-pass: #0D6E44;      --c-pass-bg: rgba(13,110,68,0.09);
+  --c-risk: #8A5A00;      --c-risk-bg: rgba(138,90,0,0.10);
+  --c-block: #B3261E;     --c-block-bg: rgba(179,38,30,0.09);
+  --c-pass-d: #3FD08A;    --c-risk-d: #E0A63C;    --c-block-d: #FF6B60;
+
+  /* ── Famille éditoriale, V5 ── */
+  --c-periwinkle: #8A93FF;
+  --c-lavande: #C7CBFF;
+  --c-cream: #F1EEE3;
+
+  /* ── COUCHE DA. La masse et l'unique ── */
+  --c-mass: rgba(0,0,0,0.13);
+  --c-mass-2: rgba(0,0,0,0.22);
+  --c-found: var(--c-blue);
+
+  /* ── LE VERRE. Deux régimes, tous deux mesurés.
+        clair  : celui de cleolabs.co, sur fond clair ou photo claire
+        sombre : celui de legora.com, posé sur une photo ── */
+  --verre-bg: rgba(255,255,255,0.95);
+  --verre-blur: blur(8px);
+  --verre-bord: 1px solid var(--c-filet);
+  --verre-r: 12px;
+  --verre-nav-bg: rgba(255,255,255,0.60);
+  --verre-nav-blur: blur(24px);
+  --verre-sombre-bg: rgba(0,0,0,0.50);
+  --verre-sombre-blur: blur(27.5px);
+  --verre-sombre-r: 24px;
+
+  /* ── Rayons, V5 ── */
+  --r-sm: 6px; --r-md: 10px; --r-lg: 14px; --r-pill: 9999px;
+
+  /* ── Espacement ×4, V5 ── */
+  --s-2:2px; --s-4:4px; --s-8:8px; --s-12:12px; --s-16:16px; --s-24:24px;
+  --s-32:32px; --s-48:48px; --s-64:64px; --s-96:96px; --s-128:128px;
+  --gap-cards: var(--s-16); --pad-card: var(--s-24);
+  --pad-section: 128px;
+  --pad-section-courte: 88px;
+  --pad-hero-haut: 128px;
+  --pad-hero-bas: 104px;
+
+  /* ── Ombres tièdes, V5 ── */
+  --shadow-sm: 1.6px 3.7px 8.4px rgba(194,194,194,0.10);
+  --shadow-md: 2.4px 5.7px 13px rgba(194,194,194,0.14);
+  --shadow-lg: 4px 10px 26px rgba(120,120,125,0.13);
+  --shadow-xl: 6px 16px 44px rgba(120,120,125,0.16);
+  --card-shadow: var(--shadow-sm);
+  --card-shadow-hover: var(--shadow-md);
+
+  /* ── Mouvement, V5 ── */
+  --ease-luxury: cubic-bezier(0.19,1,0.22,1);
+  --ease-apple: cubic-bezier(0.4,0,0.2,1);
+  --ease-smooth: cubic-bezier(0.25,0.1,0.25,1);
+  --dur-fast:150ms; --dur-normal:250ms; --dur-slow:500ms;
+  --transition-hover: all var(--dur-fast) var(--ease-apple);
+  --touch-min: 44px;
+
+  --font: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+  --conteneur: 1120px; --gouttiere: 40px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--c-surface); color:var(--c-text);
+  font-family:var(--font); font-size:16px; line-height:1.7;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  font-variant-numeric:tabular-nums;
+}
+img{max-width:100%; display:block}
+a{color:inherit; text-decoration:none}
+button{font:inherit}
+h1,h2,h3,h4{margin:0; font-family:inherit}
+code,kbd,samp,pre{font-family:var(--font); font-variant-numeric:tabular-nums;
+  font-size:0.94em; background:rgba(0,0,0,0.05); padding:1px 6px; border-radius:4px}
+
+/* ── Échelle typographique, relevée sur cleolabs.co : le h1 y fait
+      92 px en graisse 500 avec une approche de -0,04 em. ── */
+.t-hero{font-size:clamp(2.125rem, 3.4vw, 3.125rem); font-weight:400; letter-spacing:-0.02em; line-height:1.2; color:var(--c-ink)}
+.t-display{font-size:clamp(1.5rem, 2.2vw, 2rem); font-weight:400; letter-spacing:-0.01em; line-height:1.2; color:var(--c-ink)}
+.t-h1{font-size:clamp(1.25rem, 1.7vw, 1.5rem); font-weight:400; letter-spacing:-0.01em; line-height:1.25; color:var(--c-ink)}
+.t-h2{font-size:1.125rem; font-weight:500; letter-spacing:-0.005em; line-height:1.4; color:var(--c-ink)}
+.t-h3{font-size:1rem; font-weight:500; letter-spacing:0; line-height:1.4; color:var(--c-ink)}
+.t-body{font-size:0.9375rem; font-weight:400; line-height:1.60; color:var(--c-text-2)}
+.t-body-lg{font-size:1rem; font-weight:400; line-height:1.7; color:var(--c-text-2)}
+.t-caption{font-size:0.75rem; font-weight:400; line-height:1.5; color:var(--c-text-3)}
+.t-label{font-size:0.625rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:var(--c-text-3)}
+.attenue{color:var(--c-text-3)}
+
+/* ── Champs ── */
+.field-deep,.sur-sombre{background:var(--c-field-deep); color:var(--c-text-on-dark)}
+.field-deep-2{background:var(--c-field-deep-2); color:var(--c-text-on-dark)}
+.field-pale,.sur-clair-fond{background:var(--c-surface); color:var(--c-text)}
+.fond-lavande{background:var(--c-field-pale)}
+.field-full{background:var(--c-field-full); color:var(--c-text-on-dark)}
+/* Sur champ profond, toute l'encre bascule */
+.sur-sombre .t-hero,.sur-sombre .t-display,.sur-sombre .t-h1,.sur-sombre .t-h2,.sur-sombre .t-h3{color:var(--c-text-on-dark)}
+.sur-sombre .t-body,.sur-sombre .t-body-lg{color:var(--c-text-on-dark-2)}
+.sur-sombre .t-caption,.sur-sombre .t-label{color:var(--c-text-on-dark-3)}
+.sur-sombre .attenue{color:var(--c-text-on-dark-2)}
+
+/* ── Trame ── */
+.conteneur{max-width:var(--conteneur); margin:0 auto; padding:0 var(--gouttiere)}
+.section{padding:var(--pad-section) 0}
+.section-serree{padding:var(--pad-section-courte) 0}
+/* Le hero de cleolabs.co respire davantage en haut qu'en bas : 224 / 128. */
+.section-hero{padding:var(--pad-hero-haut) 0 var(--pad-hero-bas)}
+/* Une colonne de texte ne dépasse jamais la mesure de lecture. */
+.mesure{max-width:600px}
+.mesure-centree{max-width:640px; margin-left:auto; margin-right:auto}
+.centre{text-align:center}
+.mesure{max-width:640px}
+.mesure-centree{max-width:680px; margin-left:auto; margin-right:auto}

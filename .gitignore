@@ -1,0 +1,7 @@
+sortie/
+captures/
+rapports/
+.vercel/
+temoins/
+node_modules/
+.DS_Store

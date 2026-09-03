@@ -1,0 +1,906 @@
+/* ════════════════════════════════════════════════════════════════
+   COMPOSANTS — régime landing du DS V5, sur champ profond.
+   Chaque bloc reprend une composition relevée sur edgecomply.com
+   et la rend avec les tokens V5. Aucune teinte hors système.
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── Alias de migration.
+      Les six fragments ont été écrits avant le passage au V5 ; ces
+      alias les font suivre sans les réécrire. Ne plus en écrire de
+      nouveaux : viser directement les tokens --c-*. ── */
+:root{
+  --text-primary: var(--c-text-on-dark);
+  --text-secondary: var(--c-text-on-dark-2);
+  --text-muted: var(--c-text-on-dark-3);
+  --text-on-dark: var(--c-text-on-dark);
+  --text-on-dark-2: var(--c-text-on-dark-2);
+  --text-on-dark-3: var(--c-text-on-dark-3);
+  --brand-solid: var(--c-signal);
+  --brand-text: var(--c-signal);
+  --brand-hover: var(--c-signal-deep);
+  --brand-on-dark: var(--c-signal);
+  --brand-muted: var(--c-signal-wash);
+  --ink-deep: var(--c-field-deep);
+  --ink-deep-2: var(--c-field-deep-2);
+  --ink-card: var(--c-field-deep-2);
+  --cleo-frost: var(--c-field-pale);
+  --cleo-ink: var(--c-ink);
+  --bg-card: rgba(255,255,255,0.055);
+  --bg-card-warm: rgba(255,255,255,0.075);
+  --bg-card-hover: rgba(255,255,255,0.09);
+  --accent: var(--c-periwinkle);
+  --accent-light: var(--c-periwinkle);
+  --accent-muted: rgba(138,147,255,0.16);
+  --border-subtle: var(--c-border);
+  --border-default: var(--c-border-hover);
+  --shadow-blue: var(--btn-glow);
+  --ease-out: var(--ease-luxury);
+  --duration-normal: var(--dur-normal);
+}
+/* Alias de classes typographiques */
+.t-lead{font-size:clamp(1rem, 0.95rem + 0.3vw, 1.125rem); font-weight:400; line-height:1.65; color:var(--c-text-on-dark-2)}
+.t-sm{font-size:0.875rem; line-height:1.55; color:var(--c-text-on-dark-2)}
+.t-micro{font-size:0.8125rem; line-height:1.5; color:var(--c-text-on-dark-3)}
+.t-h4{font-size:clamp(1.125rem, 1rem + 0.5vw, 1.375rem); font-weight:600; line-height:1.3; letter-spacing:-0.012em; color:var(--c-text-on-dark)}
+.surtitre{font-size:0.6875rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:var(--c-text-on-dark-3)}
+.sur-clair{color:var(--c-text-on-dark-3)}
+.sur-sombre{background:var(--c-field-deep); color:var(--c-text-on-dark)}
+.sur-clair-fond{background:var(--c-field-deep)}
+.fond-lavande{background:var(--c-field-deep-2)}
+.sur-lavande{background:var(--c-field-deep-2)}
+/* Le champ pâle bascule toute l'encre : une section claire posée dans
+   une page profonde ne doit jamais garder l'encre blanche. */
+.fond-lavande.pale,.sur-clair-fond.pale{background:var(--c-field-pale); color:rgba(0,0,0,0.87)}
+
+/* ── Bandeau d'annonce ── */
+.bandeau{background:#0A0908; color:var(--c-text-on-dark-2); font-size:0.75rem; font-weight:400;
+         border-bottom:1px solid var(--c-filet); letter-spacing:0.01em}
+.bandeau .conteneur{display:flex; align-items:center; justify-content:center; gap:8px; padding-top:10px; padding-bottom:10px}
+.bandeau b{font-weight:600; color:var(--c-text-on-dark)}
+.bandeau .fleche{transition:transform var(--dur-normal) var(--ease-apple)}
+.bandeau a:hover .fleche{transform:translateX(3px)}
+
+/* ── Navigation. Verre, comme le V5 le prévoit pour la navbar landing ── */
+.nav{background:rgba(15,14,13,0.86); backdrop-filter:saturate(140%) blur(14px); -webkit-backdrop-filter:saturate(140%) blur(14px);
+     color:var(--c-text-on-dark); position:relative; z-index:50; border-bottom:1px solid var(--c-border)}
+.nav .conteneur{display:flex; align-items:center; gap:36px; height:68px}
+.nav-logo{display:flex; align-items:center; gap:9px}
+.nav-liens{display:flex; align-items:center; gap:26px; margin-left:8px}
+.nav-liens a{font-size:0.875rem; color:var(--c-text-on-dark-2); display:flex; align-items:center; gap:5px;
+             transition:color var(--dur-fast) var(--ease-apple)}
+.nav-liens a:hover{color:var(--c-text-on-dark)}
+.nav-liens .chev{width:9px; height:9px; opacity:0.55}
+.nav-fin{margin-left:auto; display:flex; align-items:center; gap:16px}
+.nav-fin .lien-secondaire{font-size:0.875rem; color:var(--c-text-on-dark-2)}
+
+/* ── Boutons. Recette V5 : une arête haute claire pour le relief,
+      une ombre teintée de la couleur du bouton pour l'ancrage.
+      Régime landing, donc rayon pilule. ── */
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; border:none; cursor:pointer;
+     font-family:var(--font); font-weight:600; letter-spacing:-0.01em; text-decoration:none;
+     font-size:15px; padding:14px 28px; border-radius:var(--r-pill); min-height:var(--touch-min);
+     transition:var(--transition-hover); position:relative}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:translateY(0); transition-duration:60ms; box-shadow:var(--btn-press)}
+.btn:focus-visible{outline:none; box-shadow:var(--focus-ring-soft)}
+/* Sur champ profond, le primaire encre du V5 disparaîtrait dans le fond.
+   Le bleu prend le relais : un CTA est une action, c'est le métier de
+   la couche 2. Le dégradé et l'arête sont ceux du V5. */
+.btn-marque{background:linear-gradient(180deg, var(--c-signal-deep) 0%, var(--c-blue) 100%);
+            color:var(--c-white); box-shadow:var(--btn-edge-blue), var(--btn-glow)}
+.btn-marque:hover{background:linear-gradient(180deg,#3A42F0 0%,#0208D8 100%); box-shadow:var(--btn-edge-blue), var(--btn-glow-hover)}
+.btn-primaire{background:linear-gradient(180deg,#FFFFFF 0%,#E8E7F5 100%); color:var(--c-ink); box-shadow:var(--btn-lift)}
+.btn-primaire:hover{box-shadow:var(--btn-lift-hover)}
+.btn-clair{background:linear-gradient(180deg,#FFFFFF 0%,#E8E7F5 100%); color:var(--c-ink); box-shadow:var(--btn-lift)}
+.btn-clair:hover{box-shadow:var(--btn-lift-hover)}
+.btn-contour{background:var(--card-bg-plain); color:var(--c-text-on-dark);
+             backdrop-filter:var(--card-blur); -webkit-backdrop-filter:var(--card-blur);
+             border:var(--card-border); box-shadow:var(--card-edge), var(--card-ring)}
+.btn-contour:hover{box-shadow:var(--card-edge), var(--card-ring), 0 6px 18px rgba(0,0,0,0.30)}
+.btn-sm{padding:10px 18px; font-size:14px; min-height:auto}
+.btn .rond{width:26px; height:26px; border-radius:50%; background:rgba(255,255,255,0.20); display:grid; place-items:center; flex:none}
+.btn-clair .rond,.btn-primaire .rond{background:var(--c-signal-wash)}
+.btn-contour .rond{background:rgba(255,255,255,0.10)}
+
+/* ── Tags et pilules, V5 ── */
+.pilule,.tag{display:inline-flex; align-items:center; gap:6px; padding:8px 16px; border-radius:var(--r-pill);
+             font-size:12px; font-weight:600; background:var(--c-signal-wash); color:var(--c-text-on-dark)}
+.pilule-lavande{background:rgba(138,147,255,0.16); color:var(--c-periwinkle)}
+.pilule-contour{background:transparent; border:1px solid var(--c-border-hover); color:var(--c-text-on-dark-2)}
+.pilule-dispo{display:inline-flex; align-items:center; gap:9px; font-size:0.875rem; color:var(--c-text-on-dark-2)}
+.pilule-dispo .point{width:8px; height:8px; border-radius:50%; background:var(--c-pass); box-shadow:0 0 0 4px rgba(63,208,138,0.16)}
+.pilule-dispo .sep{width:1px; height:14px; background:var(--c-border-hover)}
+/* Étiquette de section : famille éditoriale, aucun sens de statut */
+.etiquette{display:inline-block; padding:5px 12px; border-radius:var(--r-sm); font-size:0.75rem;
+           font-weight:600; letter-spacing:0.02em; background:rgba(138,147,255,0.16); color:var(--c-periwinkle)}
+
+/* ── Badges de statut. COUCHE 3 : produit uniquement, jamais décoratif. ── */
+.badge,.marqueur{display:inline-flex; align-items:center; font-size:11px; font-weight:700; letter-spacing:0.04em;
+                 text-transform:uppercase; padding:4px 10px; border-radius:6px}
+.m-couvert,.badge-pass{background:var(--c-pass-bg); color:var(--c-pass)}
+.m-attente,.badge-risk{background:var(--c-risk-bg); color:var(--c-risk)}
+.m-bloque,.badge-block{background:var(--c-block-bg); color:var(--c-block)}
+.m-manquant,.badge-neutral{background:var(--c-info-bg); color:var(--c-text-on-dark-3)}
+
+/* ── Liste à puces cochées.
+      La coche dit « compris », pas « action » : elle ne prend donc pas
+      le bleu, que le V5 réserve à la couche signal. ── */
+.coches{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:13px}
+.coches li{display:flex; gap:12px; align-items:flex-start; font-size:0.9375rem; line-height:1.55; color:var(--c-text-on-dark-2)}
+.coches .coche{flex:none; width:20px; height:20px; border-radius:50%; background:rgba(255,255,255,0.12);
+               border:1px solid rgba(255,255,255,0.16); display:grid; place-items:center; margin-top:1px}
+.coches .coche svg{width:11px; height:11px}
+.coches .coche svg path{stroke:var(--c-text-on-dark)}
+.field-pale .coches li,.pale .coches li{color:rgba(0,0,0,0.62)}
+.field-pale .coches .coche,.pale .coches .coche{background:rgba(0,0,0,0.06); border-color:rgba(0,0,0,0.10)}
+.field-pale .coches .coche svg path,.pale .coches .coche svg path{stroke:var(--c-ink)}
+
+/* ── Cartes. Recette V5 à trois couches : fond translucide teinté de
+      la famille bleu, flou d'arrière-plan, arête haute claire. ── */
+.carte,.carte-tiede,.carte-encre,.carte-sombre{
+  border-radius:var(--r-md); background:var(--card-bg);
+  backdrop-filter:var(--card-blur); -webkit-backdrop-filter:var(--card-blur);
+  border:var(--card-border); box-shadow:var(--card-edge), var(--card-ring), var(--card-shadow);
+  color:var(--c-text-on-dark); transition:var(--transition-hover)}
+.carte:hover,.carte-encre:hover{box-shadow:var(--card-edge), var(--card-ring), var(--card-shadow-hover); transform:translateY(-1px)}
+.carte-lavande{background:var(--c-field-pale); border-radius:var(--r-md); color:rgba(0,0,0,0.87)}
+.carte-lavande .t-sm{color:rgba(0,0,0,0.62)} .carte-lavande .t-micro{color:rgba(0,0,0,0.45)}
+.p32{padding:var(--s-32)} .p40{padding:40px} .p48{padding:var(--s-48)}
+/* Les cartes portent leur propre encre, jamais celle de la section */
+.carte .t-body,.carte-encre .t-body,.carte-sombre .t-body,
+.carte .t-lead,.carte-encre .t-lead,.carte-sombre .t-lead,
+.carte .t-sm,.carte-encre .t-sm,.carte-sombre .t-sm{color:var(--c-text-on-dark-2)}
+.carte .t-micro,.carte-encre .t-micro,.carte-sombre .t-micro{color:var(--c-text-on-dark-3)}
+.carte .surtitre,.carte-encre .surtitre,.carte-sombre .surtitre{color:var(--c-text-on-dark-3)}
+.carte .attenue,.carte-encre .attenue,.carte-sombre .attenue{color:var(--c-text-on-dark-3)}
+
+/* ── Grilles ── */
+.g2{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--s-24)}
+.g3{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--s-24)}
+.g4{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:var(--s-16)}
+.duo{display:grid; grid-template-columns:1.05fr minmax(0,1fr); gap:var(--s-64); align-items:center}
+.duo-inverse{grid-template-columns:minmax(0,1fr) 1.05fr}
+.entete-section{display:flex; flex-direction:column; gap:14px; margin-bottom:var(--s-48)}
+
+/* ── Bande de logos ── */
+.bande-logos{display:flex; align-items:center; justify-content:center; flex-wrap:wrap}
+.bande-logos .cellule{padding:22px 34px; border-left:1px solid var(--c-border); display:grid; place-items:center;
+                      min-width:150px; height:82px}
+.bande-logos .cellule:last-child{border-right:1px solid var(--c-border)}
+.bande-logos img{height:auto; width:auto; object-fit:contain; opacity:0.82; filter:brightness(0) invert(1)}
+/* Hauteurs reprises de cleo-landing/src/components/landing/LogoWall.tsx */
+.bande-logos img[alt="Decathlon"]{height:26px}
+.bande-logos img[alt="L'Occitane"]{height:23px}
+.bande-logos img[alt="Balzac Paris"]{height:23px}
+.bande-logos img[alt="Mercedes-Benz"]{height:30px}
+.bande-logos img[alt="Electrolux Professional"]{height:40px}
+.bande-logos img[alt="SNCF Réseau"]{height:36px}
+
+/* ── Scène : photo pleine, interface posée dessus ── */
+.scene{position:relative; border-radius:var(--r-lg); overflow:hidden; box-shadow:var(--shadow-xl)}
+.scene img.fond{width:100%; height:100%; object-fit:cover; display:block}
+.flottant{position:absolute; background:var(--c-white); border-radius:var(--r-md); box-shadow:var(--shadow-lg);
+          padding:12px 16px; color:var(--c-ink)}
+.flottant .t-micro{color:rgba(0,0,0,0.45)}
+.regle-flottante{display:flex; align-items:center; gap:11px; background:var(--c-white); border-radius:var(--r-pill);
+                 padding:9px 12px 9px 10px; box-shadow:var(--shadow-lg); font-size:0.875rem; font-weight:600; color:var(--c-ink)}
+.regle-flottante .drapeau{width:26px; height:26px; border-radius:50%; display:grid; place-items:center;
+                          font-size:0.9rem; background:rgba(0,0,0,0.05); flex:none}
+.regle-flottante .statut{width:20px; height:20px; border-radius:50%; display:grid; place-items:center; flex:none; margin-left:auto}
+/* L'unique : un seul élément marqué par image (V5 §18) */
+.statut-ok{background:var(--c-blue)} .statut-vide{background:rgba(0,0,0,0.10)}
+
+/* ── Fiche produit. Écran d'app : fond clair, encre sombre. ── */
+.fiche{background:var(--c-white); border-radius:var(--r-md); box-shadow:var(--shadow-lg); overflow:hidden;
+       font-size:0.8125rem; color:var(--c-ink)}
+.fiche-tete{display:flex; gap:12px; align-items:center; padding:14px}
+.fiche-vignette{width:46px; height:46px; border-radius:var(--r-sm); background:#F0EFEC; object-fit:cover; flex:none}
+.fiche-nom{font-weight:600; color:var(--c-ink); font-size:0.875rem}
+.fiche-ref{color:rgba(0,0,0,0.45); font-size:0.75rem}
+.jauge{height:6px; border-radius:var(--r-pill); background:rgba(0,0,0,0.08); overflow:hidden; flex:1}
+.jauge span{display:block; height:100%; background:var(--c-blue); border-radius:var(--r-pill)}
+.fiche-ligne{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:11px 14px;
+             border-top:1px solid rgba(0,0,0,0.08); color:rgba(0,0,0,0.62)}
+.fiche-entete-pays{display:flex; align-items:center; gap:8px; padding:11px 14px; font-weight:600; color:var(--c-ink);
+                   border-top:1px solid rgba(0,0,0,0.08); background:#F9F8F6}
+/* Dans l'écran d'app, les statuts reprennent les valeurs V5 sur fond clair */
+.fiche .m-couvert{background:rgba(13,110,68,0.09); color:#0D6E44}
+.fiche .m-attente{background:rgba(138,90,0,0.10); color:#8A5A00}
+.fiche .m-manquant{background:rgba(0,0,0,0.04); color:rgba(0,0,0,0.45)}
+
+/* ── Chiffres. Satoshi en chiffres tabulaires, jamais de monospace. ── */
+.chiffre{font-size:clamp(2.5rem, 2rem + 2vw, 3.5rem); font-weight:700; letter-spacing:-0.04em; line-height:1;
+         font-variant-numeric:tabular-nums; color:var(--c-text-on-dark)}
+.escalier{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--s-24); align-items:start}
+.escalier > *:nth-child(2){margin-top:44px} .escalier > *:nth-child(3){margin-top:88px}
+
+/* ── Tableau comparatif ── */
+.table-defilante{overflow-x:auto; -webkit-overflow-scrolling:touch}
+.table-defilante .comparatif{min-width:600px}
+.comparatif{width:100%; border-collapse:separate; border-spacing:0 10px}
+.comparatif th{font-weight:500; font-size:0.9375rem; color:var(--c-text-on-dark-2); padding:0 14px 14px;
+               text-align:center; vertical-align:bottom}
+.comparatif td{padding:20px 14px; text-align:center; vertical-align:middle; background:transparent}
+.comparatif td:first-child{text-align:left; width:36%}
+/* L'unique : une seule ligne marquée, la nôtre */
+.comparatif .nous td{background:var(--c-field-deep-2)}
+.comparatif .nous td:first-child{border-radius:var(--r-md) 0 0 var(--r-md)}
+.comparatif .nous td:last-child{border-radius:0 var(--r-md) var(--r-md) 0}
+.comparatif .nous{outline:1px solid var(--c-signal-line)}
+.ligne-nom{display:flex; align-items:center; gap:14px}
+.ligne-icone{width:44px; height:44px; border-radius:var(--r-sm); background:rgba(255,255,255,0.06);
+             border:1px solid var(--c-border); display:grid; place-items:center; flex:none}
+.oui{width:26px; height:26px; border-radius:50%; background:var(--c-signal); display:inline-grid; place-items:center}
+.oui-doux{width:26px; height:26px; border-radius:50%; background:rgba(255,255,255,0.10); display:inline-grid; place-items:center}
+.oui-doux svg path{stroke:var(--c-text-on-dark-2) !important}
+.non{color:var(--c-text-on-dark-3); font-size:1.05rem}
+
+/* ── Questions fréquentes ── */
+.faq{border-top:1px solid var(--c-border)}
+.faq details{border-bottom:1px solid var(--c-border)}
+.faq summary{list-style:none; cursor:pointer; padding:22px 4px; display:flex; align-items:center;
+             justify-content:space-between; gap:20px; font-size:1rem; font-weight:500; color:var(--c-text-on-dark)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .chev{transition:transform 220ms var(--ease-apple); opacity:0.5; flex:none}
+.faq details[open] summary .chev{transform:rotate(180deg)}
+.faq .reponse{padding:0 4px 24px; max-width:820px; font-size:0.9375rem; line-height:1.7; color:var(--c-text-on-dark-2)}
+
+/* ── Témoignage ── */
+.temoignage{display:grid; grid-template-columns:340px 1fr; gap:var(--s-64); align-items:center}
+.citation{font-size:clamp(1.125rem, 1rem + 0.6vw, 1.375rem); line-height:1.5; font-weight:500;
+          letter-spacing:-0.012em; color:var(--c-text-on-dark)}
+.auteur{display:flex; align-items:center; gap:12px; margin-top:var(--s-24)}
+.auteur img{width:44px; height:44px; border-radius:50%; object-fit:cover}
+
+/* ── Fin de page ── */
+.cta-final{display:grid; grid-template-columns:200px minmax(0,1fr); gap:40px; align-items:center}
+.cta-final .portrait{width:200px; height:200px; border-radius:var(--r-md); object-fit:cover}
+
+.pied{background:var(--c-field-deep); color:var(--c-text-on-dark); padding-top:var(--s-96); padding-bottom:44px;
+      border-top:1px solid var(--c-border)}
+.pied-colonnes{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:var(--s-32); padding-bottom:var(--s-48)}
+.pied h4{font-size:0.875rem; font-weight:600; margin-bottom:18px; color:var(--c-text-on-dark)}
+.pied ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:11px}
+.pied ul a{font-size:0.875rem; color:var(--c-text-on-dark-2); transition:color var(--dur-fast) var(--ease-apple)}
+.pied ul a:hover{color:var(--c-text-on-dark)}
+.pied .t-sm{color:var(--c-text-on-dark-2)} .pied .t-micro{color:var(--c-text-on-dark-3)}
+.pied .pilule-contour{border-color:var(--c-border-hover); color:var(--c-text-on-dark-2)}
+.pied-regs{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--s-32); padding:44px 0;
+           border-top:1px solid var(--c-border)}
+.pied-regs .paire{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--s-24)}
+.pied-bas{border-top:1px solid var(--c-border); padding-top:28px; display:flex; gap:28px; flex-wrap:wrap;
+          font-size:0.8125rem; color:var(--c-text-on-dark-3)}
+.infolettre{background:var(--c-field-pale); color:var(--c-ink); border-radius:var(--r-md); padding:26px; max-width:300px}
+.infolettre *{color:var(--c-ink)}
+.infolettre input{width:100%; padding:10px 13px; border-radius:var(--r-sm); border:1px solid rgba(0,0,0,0.10);
+                  background:var(--c-white); font-size:0.875rem; margin-bottom:9px; font-family:inherit}
+.infolettre button{width:100%; padding:11px; border-radius:var(--r-sm); border:none;
+                   background:linear-gradient(180deg,#2E2E2E 0%,var(--c-ink) 100%); color:var(--c-white) !important;
+                   font-weight:600; font-size:0.875rem; cursor:pointer; box-shadow:var(--btn-edge)}
+
+/* ── Formulaire latéral ── */
+.form-carte{border-radius:var(--r-lg); padding:var(--s-32)}
+.form-carte label{display:block; font-size:0.8125rem; font-weight:500; margin-bottom:7px; color:var(--c-text-on-dark-2)}
+.form-carte input{width:100%; padding:11px 14px; border-radius:var(--r-sm); border:1px solid var(--c-border-hover);
+                  background:rgba(255,255,255,0.06); font-size:0.875rem; font-family:inherit;
+                  margin-bottom:16px; color:var(--c-text-on-dark)}
+.form-carte input::placeholder{color:var(--c-text-on-dark-3)}
+.form-carte .paire{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px}
+.avatars{display:flex}
+.avatars img{width:40px; height:40px; border-radius:50%; border:2px solid var(--c-field-deep-2); object-fit:cover; margin-left:-12px}
+.avatars img:first-child{margin-left:0}
+
+/* ── Cas client ── */
+.cas-corps{display:grid; grid-template-columns:260px minmax(0,1fr); gap:80px; align-items:start}
+.fiche-laterale{position:sticky; top:24px; align-self:start}
+.fiche-laterale .bloc{margin-bottom:26px}
+.fiche-laterale .cle{font-size:0.6875rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase;
+                     color:var(--c-text-on-dark-3); margin-bottom:8px}
+.fiche-laterale .valeur{font-size:0.9375rem; color:var(--c-text-on-dark); line-height:1.6}
+.recit p{font-size:0.9375rem; line-height:1.75; color:var(--c-text-on-dark-2); margin:0 0 18px}
+.recit ul{margin:0 0 18px; padding-left:20px}
+.recit li{font-size:0.9375rem; line-height:1.75; color:var(--c-text-on-dark-2); margin-bottom:10px}
+.recit b{color:var(--c-text-on-dark)}
+
+/* ── Sceau de réglementation ── */
+.sceau{position:relative; width:132px; height:132px; margin:0 auto 20px; display:grid; place-items:center}
+.sceau svg{position:absolute; inset:0; width:100%; height:100%}
+.sceau .dedans{position:relative; text-align:center; line-height:1.1}
+.sceau .nom{font-size:1.0625rem; font-weight:700; letter-spacing:-0.02em; color:var(--c-field-deep)}
+.sceau .sous{font-size:0.5625rem; font-weight:600; letter-spacing:0.16em; text-transform:uppercase;
+             color:var(--c-field-deep-2); margin-top:4px}
+
+/* ── Bloc alterné ── */
+.alterne{display:grid; grid-template-columns:minmax(0,1fr) 1.06fr; gap:var(--s-64); align-items:center; padding:44px 0}
+.alterne.inverse{grid-template-columns:1.06fr minmax(0,1fr)}
+.alterne.inverse .texte{order:2}
+
+/* ── Pile des règles du hero ── */
+.pile-regles{position:absolute; right:-40px; top:44px; display:flex; flex-direction:column; gap:13px; width:290px}
+
+/* ── Barre de navigation entre maquettes (hors maquette) ── */
+.barre-maquettes{position:fixed; bottom:20px; left:50%; transform:translateX(-50%); z-index:200;
+  background:rgba(15,14,13,0.92); backdrop-filter:var(--card-blur); border:1px solid var(--c-border-hover);
+  border-radius:var(--r-pill); padding:7px 10px; display:flex; gap:4px; box-shadow:var(--shadow-xl)}
+.barre-maquettes a{font-size:0.8125rem; color:var(--c-text-on-dark-2); padding:7px 14px;
+                   border-radius:var(--r-pill); font-weight:500}
+.barre-maquettes a:hover{color:var(--c-white); background:rgba(255,255,255,0.08)}
+.barre-maquettes a.actif{color:var(--c-white); background:var(--c-blue)}
+.capture .barre-maquettes{display:none}
+
+/* ── Écran étroit. La composition relevée n'a aucune media query :
+      le garde-fou est posé ici. ── */
+@media (max-width:1024px){
+  :root{--gouttiere:28px; --pad-section:var(--s-96)}
+  .duo,.duo-inverse,.temoignage,.cta-final,.cas-corps{grid-template-columns:minmax(0,1fr); gap:36px}
+  .alterne,.alterne.inverse{grid-template-columns:minmax(0,1fr); gap:32px; padding:28px 0}
+  .alterne.inverse .texte{order:0}
+  .g3,.g4,.escalier,.pied-colonnes,.pied-regs{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .escalier > *{margin-top:0 !important}
+  .cta-final .portrait{width:140px; height:140px}
+  .fiche-laterale{position:static}
+  .nav-liens{display:none}
+  .pile-regles{position:static; width:auto; margin-top:16px; display:grid;
+               grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px}
+  .pile-regles > *{transform:none !important; box-shadow:var(--shadow-md) !important}
+}
+@media (max-width:640px){
+  .g2,.g3,.g4,.escalier,.pied-colonnes,.pied-regs,.form-carte .paire{grid-template-columns:minmax(0,1fr)}
+  .bande-logos .cellule{padding:16px 20px; min-width:120px}
+}
+
+/* ════════════════════════════════════════════════════════════════
+   ADN CLEO — les gestes qui ne viennent pas de la composition relevée
+   mais du Design System V5 lui-même.
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── Gradient canvas, §10. Le .gc-hero du V5 est calibré sur le champ
+      pâle ; ici la même construction en trois ellipses, posée sur le
+      champ profond : bleu, periwinkle, bleu. ── */
+.gc-deep{
+  background:
+    radial-gradient(ellipse at 30% 60%, rgba(0,8,207,0.42) 0%, transparent 55%),
+    radial-gradient(ellipse at 70% 30%, rgba(138,147,255,0.20) 0%, transparent 50%),
+    radial-gradient(ellipse at 55% 88%, rgba(0,8,207,0.20) 0%, transparent 45%),
+    var(--c-field-deep);
+}
+.gc-deep-doux{
+  background:
+    radial-gradient(ellipse at 78% 18%, rgba(138,147,255,0.13) 0%, transparent 52%),
+    radial-gradient(ellipse at 12% 82%, rgba(0,8,207,0.24) 0%, transparent 50%),
+    var(--c-field-deep);
+}
+
+/* ── §18. La masse et l'unique.
+      Un seul élément coloré par image, sans exception. Les voisins sont
+      atténués mais restent lisibles. Le contenu vient du réel. ── */
+.mass{display:grid; gap:10px; border-radius:var(--r-lg); padding:0}
+.mass-14{grid-template-columns:repeat(14,minmax(0,1fr))}
+.mass-item{color:var(--c-mass); transition:none}
+.mass-item.alt{color:var(--c-mass-2)}
+.mass-item.found{color:var(--c-found)}
+.mass-item svg{width:100%; height:auto; display:block}
+
+.mass-refs{display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:8px}
+.mass-ref{font-size:11px; font-weight:500; padding:8px 10px; border-radius:6px; text-align:center;
+  background:rgba(255,255,255,0.05); color:var(--c-mass-2); white-space:nowrap; overflow:hidden;
+  text-overflow:ellipsis; font-variant-numeric:tabular-nums}
+.mass-ref.alt{color:var(--c-mass)}
+/* L'unique. Il est évident, jamais dissimulé, et il porte sa référence
+   ET son échéance : l'image dit alors la masse, la sélection et le livrable. */
+.mass-ref.found{background:var(--c-blue); color:var(--c-white); font-weight:700;
+  box-shadow:0 6px 20px rgba(0,8,207,0.42); padding:7px 10px}
+.mass-ref.found .mass-mark{display:block; font-size:9px; font-weight:500; opacity:0.78;
+  letter-spacing:0.04em; margin-top:2px}
+
+/* ── Le mot-symbole. « cleo » seul, la mention LABS a été retirée
+      du lockup : elle alourdissait la signature. ── */
+.wordmark{display:block; width:100%; max-width:none; height:auto; opacity:0.10}
+.wordmark-nav{height:26px; width:auto}
+
+/* ── Verre lourd, §13. Pour ce qui se pose PAR-DESSUS une scène. ── */
+.glass-heavy{background:rgba(15,14,13,0.62); backdrop-filter:saturate(200%) blur(40px);
+  -webkit-backdrop-filter:saturate(200%) blur(40px);
+  border:0.5px solid rgba(255,255,255,0.18); border-radius:var(--r-lg); box-shadow:var(--shadow-lg)}
+
+@media (max-width:1024px){
+  .mass-14{grid-template-columns:repeat(8,minmax(0,1fr))}
+  .mass-refs{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  .mass-14{grid-template-columns:repeat(6,minmax(0,1fr))}
+  .mass-refs{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* La masse en régime dense : 20 colonnes, pictogrammes courts. */
+.mass-20{grid-template-columns:repeat(20,minmax(0,1fr)); gap:7px}
+@media (max-width:1024px){ .mass-20{grid-template-columns:repeat(12,minmax(0,1fr)); gap:6px} }
+@media (max-width:640px){ .mass-20{grid-template-columns:repeat(8,minmax(0,1fr)); gap:5px} }
+
+/* ── Signature de fin de page : le mot-symbole en grand, posé sur le
+      champ profond. Il ne se lit pas, il se reconnaît. ── */
+.signature-cleo{background:var(--c-field-deep); padding:64px 0 0; overflow:hidden}
+.signature-cleo .wordmark{width:100%; height:auto; opacity:0.09;
+  filter:brightness(0) invert(1); transform:translateY(14%)}
+
+/* ── Les sections ne sont jamais tout à fait plates : le canvas de
+      dégradé du V5, en régime profond. ── */
+.sur-sombre.gc-doux{
+  background:
+    radial-gradient(ellipse at 82% 12%, rgba(138,147,255,0.11) 0%, transparent 52%),
+    radial-gradient(ellipse at 8% 88%, rgba(0,8,207,0.22) 0%, transparent 48%),
+    var(--c-field-deep);
+}
+
+/* ════════════════════════════════════════════════════════════════
+   RESSOURCES — le second gabarit du site : une colonne latérale
+   collante et des grilles de cartes. Composition relevée sur
+   edgecomply.com/library.
+   ════════════════════════════════════════════════════════════════ */
+.res-corps{display:grid; grid-template-columns:200px minmax(0,1fr); gap:64px; align-items:start}
+.res-nav{position:sticky; top:24px; align-self:start; display:flex; flex-direction:column; gap:13px}
+.res-nav .titre{font-size:0.875rem; font-weight:600; color:var(--c-text-on-dark); margin-bottom:4px}
+.res-nav a{font-size:0.875rem; color:var(--c-text-on-dark-2); transition:color var(--dur-fast) var(--ease-apple)}
+.res-nav a:hover{color:var(--c-text-on-dark)}
+.res-nav a.actif{color:var(--c-signal)}
+.res-tete{display:grid; grid-template-columns:1.4fr minmax(0,1fr); gap:48px; align-items:end; margin-bottom:56px}
+
+/* Carte de ressource : vignette, étiquette, titre, lien */
+.res-carte{display:flex; flex-direction:column; border-radius:var(--r-md); overflow:hidden;
+  background:var(--card-bg); backdrop-filter:var(--card-blur); border:var(--card-border);
+  box-shadow:var(--card-edge), var(--card-ring), var(--card-shadow); transition:var(--transition-hover)}
+.res-carte:hover{transform:translateY(-2px); box-shadow:var(--card-edge), var(--card-ring), var(--card-shadow-hover)}
+.res-carte .vignette{aspect-ratio:16/10; overflow:hidden; background:var(--c-field-deep-2); position:relative}
+.res-carte .vignette img{width:100%; height:100%; object-fit:cover}
+.res-carte .corps{padding:20px 22px 24px; display:flex; flex-direction:column; gap:12px; flex:1}
+.res-carte .titre{font-size:1.0625rem; font-weight:600; line-height:1.35; letter-spacing:-0.015em; color:var(--c-text-on-dark)}
+.res-carte .lien{margin-top:auto; display:inline-flex; align-items:center; gap:7px; font-size:0.875rem;
+  font-weight:600; color:var(--c-signal)}
+.res-carte:hover .lien svg{transform:translateX(3px)}
+.res-carte .lien svg{transition:transform var(--dur-fast) var(--ease-apple)}
+/* Pastille de lecture, sur les rediffusions */
+.jouer{position:absolute; inset:0; display:grid; place-items:center}
+.jouer span{width:46px; height:46px; border-radius:50%; background:rgba(15,14,13,0.68);
+  backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.24); display:grid; place-items:center}
+
+/* Carte de terme : pas de vignette, du texte seul */
+.terme-carte{border-radius:var(--r-md); padding:22px; background:var(--card-bg);
+  backdrop-filter:var(--card-blur); border:var(--card-border);
+  box-shadow:var(--card-edge), var(--card-ring), var(--card-shadow); display:flex; flex-direction:column; gap:11px}
+.terme-carte .nom{font-size:1.0625rem; font-weight:600; letter-spacing:-0.015em; color:var(--c-text-on-dark)}
+.terme-carte .def{font-size:0.875rem; line-height:1.6; color:var(--c-text-on-dark-2); flex:1}
+
+/* Ligne de liste : un événement à venir, un poste ouvert */
+.ligne-liste{display:flex; align-items:center; gap:24px; padding:20px 24px; border-radius:var(--r-md);
+  background:var(--card-bg); backdrop-filter:var(--card-blur); border:var(--card-border);
+  box-shadow:var(--card-edge), var(--card-ring); transition:var(--transition-hover)}
+.ligne-liste:hover{transform:translateY(-1px); box-shadow:var(--card-edge), var(--card-ring), var(--card-shadow)}
+.ligne-liste .principal{flex:1; min-width:0}
+
+/* ── Article long ── */
+.article{max-width:720px; margin:0 auto}
+.article h2{font-size:clamp(1.5rem, 1.2rem + 1.2vw, 1.875rem); font-weight:600; letter-spacing:-0.02em;
+  line-height:1.25; margin:48px 0 18px; color:var(--c-text-on-dark)}
+.article h3{font-size:1.25rem; font-weight:600; letter-spacing:-0.015em; margin:32px 0 14px; color:var(--c-text-on-dark)}
+.article p{font-size:1.0625rem; line-height:1.8; color:var(--c-text-on-dark-2); margin:0 0 20px}
+.article ul,.article ol{margin:0 0 20px; padding-left:22px}
+.article li{font-size:1.0625rem; line-height:1.8; color:var(--c-text-on-dark-2); margin-bottom:10px}
+.article b,.article strong{color:var(--c-text-on-dark); font-weight:600}
+.article blockquote{margin:32px 0; padding:20px 24px; border-left:2px solid var(--c-signal);
+  background:rgba(77,87,255,0.07); border-radius:0 var(--r-sm) var(--r-sm) 0}
+.article blockquote p{margin:0; font-size:1rem; color:var(--c-text-on-dark)}
+.article .source-citee{font-size:0.8125rem; color:var(--c-signal); font-weight:600; margin-top:8px; display:block}
+
+/* Sommaire collant de l'article */
+.sommaire{position:sticky; top:24px; align-self:start; font-size:0.875rem}
+.sommaire .titre{font-size:0.6875rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase;
+  color:var(--c-text-on-dark-3); margin-bottom:16px}
+.sommaire a{display:block; padding:7px 0 7px 14px; border-left:1px solid var(--c-border);
+  color:var(--c-text-on-dark-2); transition:var(--transition-hover)}
+.sommaire a:hover{color:var(--c-text-on-dark); border-left-color:var(--c-signal)}
+.sommaire a.actif{color:var(--c-signal); border-left-color:var(--c-signal)}
+
+/* ── Page de campagne : nue, sans navigation ── */
+.campagne-tete{padding:32px 0}
+.couverture{border-radius:var(--r-lg); overflow:hidden; box-shadow:var(--shadow-xl);
+  background:linear-gradient(160deg, var(--c-field-deep-2) 0%, var(--c-field-deep) 100%);
+  aspect-ratio:16/11; display:grid; place-items:center; padding:40px; border:1px solid var(--c-border)}
+.couverture .livre{height:100%; aspect-ratio:3/4; width:auto; border-radius:6px; background:var(--c-field-deep);
+  box-shadow:0 30px 70px rgba(0,0,0,0.55), inset 0 1px 0 rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.10); padding:26px 22px; display:flex; flex-direction:column; justify-content:space-between}
+
+/* ── Bloc légal ── */
+.legal{max-width:760px}
+.legal h2{font-size:1.375rem; font-weight:600; letter-spacing:-0.02em; margin:40px 0 14px; color:var(--c-text-on-dark)}
+.legal p{font-size:0.9375rem; line-height:1.8; color:var(--c-text-on-dark-2); margin:0 0 16px}
+.legal li{font-size:0.9375rem; line-height:1.8; color:var(--c-text-on-dark-2); margin-bottom:9px}
+
+@media (max-width:1024px){
+  .res-corps{grid-template-columns:minmax(0,1fr); gap:36px}
+  .res-nav{position:static; flex-direction:row; flex-wrap:wrap; gap:18px}
+  .res-tete{grid-template-columns:minmax(0,1fr); gap:20px; align-items:start}
+  .sommaire{position:static; margin-bottom:32px}
+  .ligne-liste{flex-wrap:wrap; gap:14px}
+}
+
+/* Corps à sommaire et corps à encart : posés en classes et non en style
+   inline, sinon la media query ne peut pas les replier sur téléphone. */
+.corps-sommaire{display:grid; grid-template-columns:200px minmax(0,1fr); gap:72px; align-items:start}
+.corps-aside{display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:72px; align-items:start}
+@media (max-width:1024px){
+  .corps-sommaire,.corps-aside{grid-template-columns:minmax(0,1fr); gap:36px}
+  .corps-aside > aside{position:static !important}
+}
+
+/* ════════════════════════════════════════════════════════════════
+   ÉCRANS PRODUIT — le vrai produit, pas une illustration.
+   L'app Cleo vit sur champ clair (--c-surface du V5) : les écrans
+   gardent donc leur fond clair, posés sur le champ profond. C'est
+   le geste de composition retenu le 31/07 (référence Legora).
+   ════════════════════════════════════════════════════════════════ */
+.ecran-app{background:#F9F8F6; color:rgba(0,0,0,0.87); border-radius:var(--r-lg);
+  overflow:hidden; box-shadow:var(--shadow-xl); border:1px solid rgba(0,0,0,0.10)}
+.ecran-app *{font-family:var(--font)}
+.ecran-tete{display:flex; align-items:center; gap:12px; padding:11px 16px;
+  background:#FFFFFF; border-bottom:1px solid rgba(0,0,0,0.08)}
+.ecran-tete .pastilles{display:flex; gap:6px}
+.ecran-tete .pastilles i{width:9px; height:9px; border-radius:50%; background:rgba(0,0,0,0.12); display:block}
+.ecran-tete .fil-ariane{font-size:11.5px; color:rgba(0,0,0,0.45); font-variant-numeric:tabular-nums}
+
+/* ── L'ARBRE DE RÈGLES. CSS repris de cleo-rulemap/rendu/builder.template.html ── */
+.canevas{position:relative; overflow:hidden; min-height:420px;
+  background:radial-gradient(circle, #00000012 1px, transparent 1px) 0 0/22px 22px, #F9F8F6}
+.arbre{display:grid; grid-template-columns:repeat(3, 200px); gap:0 56px; padding:26px 24px; position:relative}
+.arbre .col{display:flex; flex-direction:column; gap:9px; justify-content:center}
+/* Le nœud, valeurs verbatim du builder */
+.nd{width:200px; background:#FFFFFF; border:1px solid rgba(0,0,0,0.15); border-radius:9px;
+  padding:9px 11px 8px; cursor:pointer; user-select:none}
+.nd .titre{font-size:11px; line-height:1.35; font-weight:500; color:rgba(0,0,0,0.87);
+  display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden}
+.nd .bas{display:flex; align-items:center; gap:6px; margin-top:7px}
+.nd .id{font-size:9.5px; color:rgba(0,0,0,0.45); font-variant-numeric:tabular-nums; letter-spacing:0.02em}
+.nd .op{font-size:8.5px; font-weight:700; letter-spacing:0.05em; color:rgba(0,0,0,0.45);
+  border:1px solid rgba(0,0,0,0.08); border-radius:4px; padding:1px 4px}
+.nd .nb{margin-left:auto; width:17px; height:17px; border-radius:50%; border:1px solid rgba(0,0,0,0.12);
+  display:grid; place-items:center; font-size:9px; color:rgba(0,0,0,0.45); font-variant-numeric:tabular-nums}
+.nd .pt{width:7px; height:7px; border-radius:50%; margin-left:auto}
+.nd.chemin{border-color:#0008CF}
+.nd.bloc{background:rgba(138,90,0,0.08); border-color:rgba(138,90,0,0.28)}
+.nd.v-conforme .pt{background:#0D6E44}
+.nd.v-donnee_manquante .pt{background:#8A5A00}
+.nd.eteint{opacity:0.34}
+/* Les arêtes */
+.arbre .liens{position:absolute; inset:0; pointer-events:none}
+.arbre .liens path{fill:none; stroke:rgba(0,0,0,0.16); stroke-width:1}
+.arbre .liens path.chemin{stroke:#0008CF; stroke-width:1.4}
+/* Le fil d'Ariane du chemin, et la barre de contrôle */
+.chemin-pilule{position:absolute; left:18px; top:16px; background:#FFFFFF; border:1px solid rgba(0,0,0,0.10);
+  border-radius:var(--r-pill); padding:9px 16px; font-size:11.5px; color:rgba(0,0,0,0.62);
+  box-shadow:0 2px 10px rgba(0,0,0,0.06); z-index:3}
+.chemin-pilule b{color:rgba(0,0,0,0.87)}
+.barre-canevas{position:absolute; left:50%; bottom:16px; transform:translateX(-50%); display:flex; align-items:center;
+  gap:2px; background:#FFFFFF; border:1px solid rgba(0,0,0,0.10); border-radius:var(--r-pill);
+  padding:6px 8px; box-shadow:0 4px 18px rgba(0,0,0,0.10); z-index:3; white-space:nowrap}
+.barre-canevas span{font-size:11.5px; color:rgba(0,0,0,0.62); padding:6px 12px; border-radius:var(--r-pill)}
+.barre-canevas .sep{width:1px; height:16px; background:rgba(0,0,0,0.10); padding:0; margin:0 4px}
+.barre-canevas .zoom{font-variant-numeric:tabular-nums; color:rgba(0,0,0,0.87); font-weight:600}
+
+/* ── LE CHAT : le fil à gauche, le graphe à droite.
+      Forme du produit arrêtée le 26/08/2026 : le graphe n'est pas un
+      onglet, c'est la façon dont le chat répond. ── */
+.chat-ecran{display:grid; grid-template-columns:300px minmax(0,1fr); min-height:420px}
+.chat-fil{background:#FFFFFF; border-right:1px solid rgba(0,0,0,0.08); display:flex;
+  flex-direction:column; padding:16px; gap:12px}
+.chat-fil .msg{border-radius:12px; padding:10px 12px; font-size:11.5px; line-height:1.5; max-width:92%}
+.chat-fil .msg.moi{align-self:flex-end; background:rgba(0,8,207,0.07); color:#0008CF; border-radius:12px 12px 4px 12px}
+.chat-fil .msg.lui{background:#F0EFEC; color:rgba(0,0,0,0.87); border-radius:12px 12px 12px 4px}
+.chat-fil .msg .cite{margin-top:8px; padding:8px 10px; background:#FFFFFF; border-left:2px solid #0008CF;
+  border-radius:0 6px 6px 0; font-size:10.5px; line-height:1.45}
+.chat-fil .msg .ref{display:block; margin-top:6px; font-size:9.5px; font-weight:700; color:#0008CF;
+  letter-spacing:0.02em; font-variant-numeric:tabular-nums}
+.chat-fil .saisie{margin-top:auto; border:1px solid rgba(0,0,0,0.12); border-radius:10px; padding:9px 11px;
+  font-size:11.5px; color:rgba(0,0,0,0.45); display:flex; align-items:center; gap:8px}
+.chat-fil .saisie .env{margin-left:auto; width:22px; height:22px; border-radius:6px; background:#0008CF;
+  display:grid; place-items:center; flex:none}
+
+@media (max-width:1024px){
+  .arbre{grid-template-columns:repeat(2, 180px); gap:0 36px}
+  .arbre .col:nth-child(3){display:none}
+  .chat-ecran{grid-template-columns:minmax(0,1fr)}
+  .chat-fil{border-right:none; border-bottom:1px solid rgba(0,0,0,0.08)}
+}
+@media (max-width:640px){
+  .arbre{grid-template-columns:180px}
+  .arbre .col:nth-child(2){display:none}
+  .nd{width:180px}
+}
+
+/* Un écran d'app plus large que sa colonne défile dans sa propre boîte,
+   la page ne défile jamais horizontalement. */
+.ecran-app .canevas{overflow-x:auto; overflow-y:hidden}
+.ecran-app .arbre{min-width:max-content}
+
+/* Le composant de veille a une largeur utile minimale : sous ~700 px sa
+   colonne de textes s'écrase caractère par caractère. */
+.cv{min-width:700px}
+@media (max-width:820px){ .cv{min-width:0} }
+
+/* Le canevas doit rester dans sa boîte : sans min-width:0 une colonne de
+   grille prend la taille de son contenu et l'arbre pousse la page entière. */
+.ecran-app,.ecran-app .canevas{max-width:100%; min-width:0}
+.chat-ecran{min-width:0}
+.chat-ecran > *{min-width:0}
+.alterne > *,.duo > *{min-width:0}
+
+/* Les arêtes vivent derrière les nœuds, et restent discrètes : le §18
+   n'admet qu'un seul élément coloré, c'est le nœud. */
+.arbre .liens{z-index:0}
+.arbre .col{position:relative; z-index:1}
+.arbre .liens path{stroke:rgba(0,0,0,0.13)}
+
+/* ════════════════════════════════════════════════════════════════
+   LE CHAT — un chat, pas un tableau de bord.
+   Composition relevée sur GC AI : le champ centré à l'accueil, et
+   dans le fil la recherche qui se montre avant la réponse.
+   Le mode s'appelle Research.
+   ════════════════════════════════════════════════════════════════ */
+.chat-accueil .ca-corps{padding:64px 40px 56px; display:flex; flex-direction:column;
+  align-items:center; gap:22px; background:#FBFAF8}
+.ca-logo{height:34px; width:auto; opacity:0.92; margin-bottom:6px}
+.ca-champ{width:100%; max-width:560px; background:#FFFFFF; border:1.5px solid rgba(0,8,207,0.45);
+  border-radius:14px; padding:16px 16px 12px; box-shadow:0 1px 3px rgba(15,14,13,0.05), 0 8px 26px rgba(15,14,13,0.07)}
+.ca-texte{font-size:12.5px; line-height:1.6; color:rgba(0,0,0,0.87); margin-bottom:14px}
+.ca-bas{display:flex; align-items:center; gap:10px}
+.ca-joindre{color:rgba(0,0,0,0.38); display:grid; place-items:center; margin-right:auto}
+.ca-mode{font-size:10.5px; font-weight:600; color:#0008CF; background:rgba(0,8,207,0.07);
+  border:1px solid rgba(0,8,207,0.20); border-radius:var(--r-pill); padding:5px 12px; letter-spacing:0.01em}
+.ca-envoi{width:26px; height:26px; border-radius:8px; background:#0008CF; display:grid; place-items:center; flex:none}
+.ca-exemple{font-size:11px; color:rgba(0,0,0,0.45); border:1px solid rgba(0,0,0,0.09);
+  border-radius:var(--r-pill); padding:7px 16px; background:#FFFFFF}
+
+/* ── Le fil ── */
+.chat-fil-ecran .cf-corps{padding:26px 30px 22px; background:#FBFAF8; display:flex; flex-direction:column; gap:16px}
+.cf-question{background:#FFFFFF; border:1px solid rgba(0,0,0,0.09); border-radius:10px;
+  padding:12px 15px; font-size:12.5px; line-height:1.55; color:rgba(0,0,0,0.87)}
+/* Les étapes : la recherche se montre, c'est le geste central */
+.cf-etapes{display:flex; flex-direction:column; gap:7px; padding-left:2px}
+.cf-etape{font-size:11.5px; color:rgba(0,0,0,0.45); display:flex; align-items:center; gap:6px}
+.cf-etape.fait{color:rgba(0,0,0,0.62)}
+.cf-etape:not(.fait)::before{content:''; width:7px; height:7px; border-radius:50%;
+  border:1.5px solid rgba(0,8,207,0.45); border-top-color:transparent; display:inline-block}
+.cf-reponse p{font-size:12.5px; line-height:1.7; color:rgba(0,0,0,0.87); margin:0 0 12px}
+.cf-reponse b{font-weight:600}
+.cf-cite{background:#FFFFFF; border-left:2px solid #0008CF; border-radius:0 8px 8px 0;
+  padding:11px 14px; font-size:11.5px; line-height:1.55; color:rgba(0,0,0,0.62); margin-bottom:12px}
+.cf-ref{display:block; margin-top:7px; font-size:10px; font-weight:700; color:#0008CF;
+  letter-spacing:0.02em; font-variant-numeric:tabular-nums}
+.cf-methode{font-size:10.5px; color:rgba(0,0,0,0.45); padding-top:10px;
+  border-top:1px solid rgba(0,0,0,0.08); font-variant-numeric:tabular-nums}
+/* Le composeur, avec son état en cours */
+.cf-composeur{margin-top:auto; padding-top:6px}
+.cf-etat{display:flex; align-items:center; background:#FFFFFF; border:1px solid rgba(0,0,0,0.09);
+  border-radius:10px; padding:9px 13px; font-size:11.5px; color:rgba(0,0,0,0.45); margin-bottom:9px}
+.cf-stop{margin-left:auto; color:rgba(0,0,0,0.87); font-weight:600}
+.cf-saisie{display:flex; align-items:center; gap:10px; background:#FFFFFF;
+  border:1.5px solid rgba(0,8,207,0.45); border-radius:12px; padding:11px 13px;
+  box-shadow:0 1px 3px rgba(15,14,13,0.05)}
+.cf-placeholder{font-size:12px; color:rgba(0,0,0,0.38); margin-right:auto}
+
+/* ════════════════════════════════════════════════════════════════
+   KIT — la page qui montre chaque composant seul.
+   Un cadre, un nom, une phrase, le rendu. Rien d'autre.
+   ════════════════════════════════════════════════════════════════ */
+.kit-nav{position:sticky; top:0; z-index:60; background:rgba(15,14,13,0.88);
+  backdrop-filter:var(--card-blur); border-bottom:1px solid var(--c-border)}
+.kit-nav .conteneur{display:flex; align-items:center; gap:20px; height:58px; overflow-x:auto}
+.kit-nav a{font-size:0.8125rem; color:var(--c-text-on-dark-2); white-space:nowrap;
+  padding:6px 12px; border-radius:var(--r-pill); transition:var(--transition-hover)}
+.kit-nav a:hover{color:var(--c-text-on-dark); background:rgba(255,255,255,0.07)}
+
+.kit-famille{padding:72px 0 8px}
+.kit-famille .num{font-size:0.6875rem; font-weight:600; letter-spacing:0.15em;
+  text-transform:uppercase; color:var(--c-text-on-dark-3); margin-bottom:12px}
+
+.kit-bloc{margin-bottom:56px}
+.kit-tete{display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:6px}
+.kit-nom{font-size:1.125rem; font-weight:600; letter-spacing:-0.015em; color:var(--c-text-on-dark)}
+.kit-ou{font-size:0.6875rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase;
+  color:var(--c-text-on-dark-3); border:1px solid var(--c-border); border-radius:var(--r-pill); padding:3px 10px}
+.kit-note{font-size:0.875rem; line-height:1.6; color:var(--c-text-on-dark-2); margin:0 0 20px; max-width:640px}
+/* Le cadre qui isole le rendu : un fond légèrement distinct, rien de plus */
+.kit-cadre{border:1px solid var(--c-border); border-radius:var(--r-lg); padding:32px;
+  background:rgba(255,255,255,0.025); overflow:hidden}
+.kit-cadre.serre{padding:20px}
+.kit-cadre.nu{padding:0; border:none; background:none}
+.kit-duo{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px}
+.kit-trio{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px}
+@media (max-width:900px){ .kit-duo,.kit-trio{grid-template-columns:minmax(0,1fr)} }
+
+/* ── Les écrans produit, simplifiés.
+      Chaque écran dit UNE chose. Les arêtes tracées à la main dérivaient
+      dès que les hauteurs changeaient : elles laissent la place à un
+      simple décalage de colonne, qui suffit à lire la descendance. ── */
+.arbre{grid-template-columns:repeat(3, 190px); gap:0 40px; padding:56px 22px 22px}
+.arbre .col:nth-child(2){padding-top:0}
+.nd{width:190px}
+.chat-accueil .ca-corps{padding:52px 36px 48px; gap:20px}
+.chat-fil-ecran .cf-corps{padding:22px 26px 20px; gap:14px}
+.cf-etapes{gap:6px}
+
+/* Vignette d'écran : la même chose, en réduction, pour tenir dans une
+   carte au tiers de la largeur. */
+.vignette-ecran{border-radius:var(--r-md); box-shadow:var(--shadow-lg)}
+.vignette-ecran .ecran-tete{padding:8px 12px}
+.vignette-ecran .pastilles i{width:7px; height:7px}
+.vignette-ecran .fil-ariane{font-size:10px}
+.vignette-ecran .canevas{min-height:0; background-size:16px 16px}
+.vignette-ecran .nd{padding:7px 9px 6px; border-radius:7px}
+.vignette-ecran .nd .id{font-size:8.5px}
+.vignette-ecran .nd .op{font-size:7.5px; padding:1px 3px}
+.vignette-ecran .nd .nb{width:14px; height:14px; font-size:8px}
+.vignette-ecran .nd .pt{width:6px; height:6px}
+
+/* Les trois cartes de feature s'alignent : même hauteur de vignette,
+   comme les deux cartes de leur gabarit. */
+.g3 > .carte-encre .vignette-ecran{height:230px; display:flex; flex-direction:column}
+.g3 > .carte-encre .vignette-ecran > *:last-child{flex:1; overflow:hidden}
+
+/* Les lignes de la vignette de veille sont en flex : sans min-width:0
+   leur contenu les empêche de rétrécir et la carte pousse la page. */
+.vignette-ecran [style*="display:flex"]{min-width:0}
+.vignette-ecran [style*="display:flex"] > *{min-width:0}
+.vignette-ecran{overflow:hidden}
+
+/* Vignette de veille : en classes, pour que la media query et min-width:0
+   puissent la replier. En style inline, rien ne pouvait la contraindre. */
+.vv-corps{padding:16px; display:flex; flex-direction:column; gap:9px; background:#FBFAF8; min-width:0}
+.vv-ligne{display:flex; align-items:center; gap:9px; background:#FFFFFF;
+  border:1px solid rgba(0,0,0,0.08); border-radius:8px; padding:8px 10px; min-width:0}
+.vv-ligne.hors{opacity:0.5}
+.vv-date{flex:none; text-align:center; min-width:24px}
+.vv-date b{display:block; font-size:12.5px; font-weight:700; color:rgba(0,0,0,0.87); line-height:1}
+.vv-date span{font-size:8px; color:rgba(0,0,0,0.45); text-transform:uppercase; letter-spacing:0.06em}
+.vv-texte{flex:1; min-width:0}
+.vv-titre{font-size:10px; line-height:1.35; color:rgba(0,0,0,0.87);
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden}
+.vv-ref{font-size:8.5px; color:rgba(0,0,0,0.45); margin-top:2px;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.vv-etat{flex:none; font-size:8px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase;
+  padding:3px 6px; border-radius:5px; background:rgba(0,0,0,0.04); color:rgba(0,0,0,0.45)}
+.vv-etat.touche{background:rgba(13,110,68,0.09); color:#0D6E44}
+.vv-produit{display:flex; align-items:center; gap:9px; padding:2px 3px; min-width:0}
+.vv-produit img{width:30px; height:30px; object-fit:contain; flex:none}
+.vv-bilan{margin-left:auto; flex:none; font-size:8.5px; color:#0D6E44; font-weight:600; white-space:nowrap}
+
+/* Filet de sécurité : tout enfant direct d'une grille peut rétrécir. */
+.g2 > *,.g3 > *,.g4 > *,.escalier > *,.kit-duo > *,.kit-trio > *{min-width:0}
+
+/* ════════════════════════════════════════════════════════════════
+   REGISTRE HARVEY — relevé sur harvey.ai le 26/08/2026.
+   Ce qui change : le filet remplace la carte, l'ombre disparaît,
+   l'air augmente, et le bleu se fait rare.
+   Ce qui ne change pas : Satoshi, le bleu #0008CF, les statuts V5.
+   ════════════════════════════════════════════════════════════════ */
+
+/* Les cartes s'effacent : un filet, un fond à peine posé, aucune ombre. */
+.carte,.carte-tiede,.carte-encre,.carte-sombre{
+  background:var(--card-bg); border:1px solid var(--c-filet);
+  box-shadow:none; backdrop-filter:none; -webkit-backdrop-filter:none;
+  border-radius:var(--r-sm); transition:border-color var(--dur-normal) var(--ease-apple)}
+.carte:hover,.carte-encre:hover{transform:none; border-color:var(--c-border-hover); box-shadow:none}
+.carte-lavande{border-radius:var(--r-sm)}
+
+/* Rayons ramenés : Harvey est presque à angle droit. */
+.scene,.ecran-app,.res-carte .vignette,.fiche,.form-carte{border-radius:var(--r-sm)}
+.res-carte,.terme-carte,.ligne-liste{border-radius:var(--r-sm); box-shadow:none;
+  background:var(--card-bg); border:1px solid var(--c-filet)}
+.res-carte:hover,.ligne-liste:hover{transform:none; box-shadow:none; border-color:var(--c-border-hover)}
+
+/* Boutons : le primaire garde le bleu, le reste devient un filet. */
+.btn{border-radius:var(--r-sm); font-size:14px; padding:12px 22px; font-weight:500}
+.btn:hover{transform:none}
+.btn-marque{background:var(--c-blue); box-shadow:none}
+.btn-marque:hover{background:#1A22E0; box-shadow:none}
+.btn-primaire,.btn-clair{background:#FFFFFF; color:var(--c-ink); box-shadow:none}
+.btn-contour{background:transparent; border:1px solid var(--c-border-hover); box-shadow:none; backdrop-filter:none}
+.btn-contour:hover{border-color:rgba(255,255,255,0.40); box-shadow:none}
+.btn .rond{display:none}
+.btn-sm{padding:9px 16px; font-size:13px}
+
+/* Pilules et étiquettes : filet, pas d'aplat coloré. */
+.pilule,.tag{background:transparent; border:1px solid var(--c-filet); color:var(--c-text-on-dark-2);
+  font-size:11.5px; font-weight:500; padding:6px 13px; letter-spacing:0.01em}
+.etiquette{background:transparent; border:1px solid var(--c-filet); color:var(--c-text-on-dark-2);
+  border-radius:var(--r-pill); font-size:11px; font-weight:500; padding:5px 13px}
+.pilule-lavande{background:transparent; border-color:var(--c-filet); color:var(--c-text-on-dark-2)}
+
+/* Les coches s'effacent en filet. */
+.coches .coche{background:transparent; border:1px solid var(--c-border-hover)}
+.coches .coche svg path{stroke:var(--c-text-on-dark-2)}
+.coches li{font-size:0.9375rem; color:var(--c-text-on-dark-2)}
+
+/* ── LE GESTE HARVEY : la ligne à filet, libellé à gauche, chiffre à droite.
+      C'est sa façon de dire un nombre, et elle remplace nos cartes. ── */
+.mesures{border-top:1px solid var(--c-filet)}
+.mesures .ligne{display:flex; align-items:baseline; gap:32px; padding:28px 0;
+  border-bottom:1px solid var(--c-filet)}
+.mesures .libelle{flex:1; min-width:0; font-size:0.9375rem; color:var(--c-text-on-dark-2); line-height:1.5}
+.mesures .valeur{flex:none; font-size:clamp(2.25rem, 4vw, 3.25rem); font-weight:500;
+  letter-spacing:-0.035em; line-height:1; color:var(--c-text-on-dark);
+  font-variant-numeric:tabular-nums; min-width:clamp(150px, 22vw, 260px); text-align:left}
+
+/* Bande de logos : filet unique, pas de cellules encadrées. */
+.bande-logos{gap:0; border-top:1px solid var(--c-filet); border-bottom:1px solid var(--c-filet)}
+.bande-logos .cellule{border-left:none; border-right:none !important; padding:26px 30px; height:88px}
+.bande-logos img{opacity:0.62}
+
+/* Le tableau comparatif perd son fond, garde ses filets. */
+.comparatif{border-spacing:0}
+.comparatif td{border-bottom:1px solid var(--c-filet); padding:22px 14px}
+.comparatif th{padding:0 14px 16px; font-size:0.8125rem; font-weight:500}
+.comparatif .nous td{background:transparent; border-bottom-color:var(--c-border-hover)}
+.comparatif .nous{outline:none}
+.comparatif .nous td:first-child{border-radius:0} .comparatif .nous td:last-child{border-radius:0}
+.ligne-icone{background:transparent; border:1px solid var(--c-filet); border-radius:var(--r-sm)}
+.oui{background:var(--c-blue)} .oui-doux{background:rgba(255,255,255,0.08)}
+
+/* Le canvas de dégradé s'éteint : Harvey n'en a pas. Un noir, et c'est tout. */
+.gc-deep,.gc-deep-doux,.sur-sombre.gc-doux{background:var(--c-field-deep)}
+
+/* Les entêtes de section respirent davantage. */
+.entete-section{margin-bottom:var(--s-64)}
+.section-serree{padding:var(--s-96) 0}
+
+/* Les fonds d'app restent clairs mais prennent le blanc chaud de Harvey. */
+.ecran-app{background:#FAFAF9; border-color:rgba(0,0,0,0.12)}
+.chat-accueil .ca-corps,.chat-fil-ecran .cf-corps,.vv-corps{background:#FAFAF9}
+.canevas{background:radial-gradient(circle, #00000010 1px, transparent 1px) 0 0/22px 22px, #FAFAF9}
+.ecran-tete{background:#FFFFFF; border-bottom-color:rgba(0,0,0,0.09)}
+
+/* ════════════════════════════════════════════════════════════════
+   MÉGA-MENUS — composition relevée sur edgecomply.com.
+   Panneau clair posé sous la barre, titre de section, grille
+   d'entrées à icône, encart d'invitation en bas.
+   ════════════════════════════════════════════════════════════════ */
+.nav .conteneur{position:static}
+.nav-item{position:static}
+.nav-declencheur{background:none; border:none; cursor:pointer; padding:0;
+  font-size:0.875rem; font-weight:400; color:var(--c-text-on-dark-2);
+  display:flex; align-items:center; gap:5px; transition:color var(--dur-fast) var(--ease-apple)}
+.nav-item:hover .nav-declencheur{color:var(--c-signal)}
+.nav-item:hover .chev{transform:rotate(180deg)}
+.nav-declencheur .chev{width:9px; height:9px; opacity:0.6; transition:transform var(--dur-fast) var(--ease-apple)}
+
+.mega{position:absolute; top:calc(100% - 1px); left:var(--gouttiere); right:var(--gouttiere);
+  background:#FFFFFF; color:rgba(0,0,0,0.87); border-radius:12px;
+  padding:26px 28px; box-shadow:0 18px 50px rgba(0,0,0,0.45);
+  opacity:0; visibility:hidden; transform:translateY(-6px);
+  transition:opacity 160ms var(--ease-apple), transform 160ms var(--ease-apple), visibility 160ms;
+  z-index:70}
+.nav-item:hover .mega{opacity:1; visibility:visible; transform:translateY(0)}
+.mega-etroit{left:auto; right:var(--gouttiere); width:260px}
+.mega-titre{font-size:0.875rem; font-weight:500; color:rgba(0,0,0,0.87); margin-bottom:20px}
+.mega-grille{display:grid; gap:10px}
+.mega-grille.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.mega-grille.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.mega-item{display:flex; align-items:center; gap:13px; padding:10px 12px; border-radius:8px;
+  transition:background 140ms var(--ease-apple)}
+.mega-item:hover{background:rgba(0,0,0,0.035)}
+.mega-icone{width:38px; height:38px; border-radius:8px; background:#F2F1EF; display:grid;
+  place-items:center; font-size:1.0625rem; flex:none}
+.mega-item span:last-child{min-width:0}
+.mega-item b{display:block; font-size:0.875rem; font-weight:500; color:rgba(0,0,0,0.87); line-height:1.35}
+.mega-item i{display:block; font-style:normal; font-size:0.75rem; color:rgba(0,0,0,0.52); line-height:1.4; margin-top:2px}
+.mega-colonnes{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:48px}
+.mega-liste{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:9px 20px;
+  padding-top:14px; border-top:1px solid rgba(0,0,0,0.10)}
+.mega-liste a{font-size:0.8125rem; color:rgba(0,0,0,0.72); display:flex; align-items:center; gap:7px;
+  padding:4px 0; transition:color 140ms}
+.mega-liste a:hover{color:var(--c-blue)}
+.mega-liste-seule{grid-template-columns:minmax(0,1fr); border-top:none; padding-top:0}
+.mega-badge{font-size:0.625rem; font-weight:600; background:rgba(0,8,207,0.10); color:var(--c-blue);
+  padding:2px 7px; border-radius:4px; letter-spacing:0.01em}
+.mega-pied{margin-top:20px; padding:14px 16px; background:#F7F6F4; border-radius:8px;
+  font-size:0.8125rem; color:rgba(0,0,0,0.52)}
+
+@media (max-width:1024px){ .mega{display:none} }

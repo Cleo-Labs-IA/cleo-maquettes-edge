@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" fill="none">
+  <!-- SNCF Réseau logo - Purple/Magenta brand color with rounded shape -->
+  <g>
+    <!-- SNCF part - bold, white text on magenta background pill -->
+    <rect x="0" y="20" width="200" height="80" rx="40" fill="#82388C"/>
+    <text x="100" y="72" text-anchor="middle" font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="40" fill="#FFFFFF" letter-spacing="3">SNCF</text>
+    <!-- RÉSEAU part -->
+    <text x="218" y="76" font-family="'Arial', 'Helvetica Neue', sans-serif" font-weight="700" font-size="32" fill="#82388C" letter-spacing="1">RÉSEAU</text>
+  </g>
+</svg>

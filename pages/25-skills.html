@@ -1,0 +1,293 @@
+<!--NAV-->
+
+<!-- ═══ BANDEAU, moule de la famille Ressources ═══
+     Même gabarit que 10-ressources et 13-glossaire : champ profond,
+     res-tete, puis le corps sur res-corps avec la nav latérale. ═══ -->
+<section class="sur-sombre gc-deep section-serree" style="padding-bottom:var(--s-64)">
+  <div class="conteneur">
+    <div class="res-tete" style="margin-bottom:0">
+      <div>
+        <span class="etiquette" style="margin-bottom:20px">Open source · MCP · Licence MIT</span>
+        <h1 class="t-display" style="margin-top:20px">Skills</h1>
+      </div>
+      <p class="t-body" style="margin:0">45 skills open-source. Une commande pour les installer.
+        Compatibles Claude Code, Cursor, ChatGPT desktop, et tout client MCP.</p>
+    </div>
+
+    <!-- La commande d'installation. La balise code du socle porte déjà
+         Satoshi et les chiffres tabulaires : aucune police à machine écrire. -->
+    <div style="margin-top:48px;max-width:520px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+                padding:16px 20px;border-radius:var(--r-md);background:rgba(255,255,255,0.05);
+                border:1px solid var(--c-filet-sombre)">
+      <span class="t-body" style="color:var(--c-signal-clair);font-weight:600">$</span>
+      <code class="t-body" style="background:transparent;padding:0;color:#fff;overflow-wrap:anywhere">npx -y @cleo-labs/skills-mcp@latest</code>
+    </div>
+
+    <!-- Les quatre valeurs. Grille en CLASSE (.g4), jamais en style= inline :
+         l'inline gagnerait sur la media query et le bloc resterait à quatre
+         colonnes à 390 px de large. -->
+    <div class="g4" style="margin-top:40px;max-width:760px">
+      <div>
+        <div class="t-display">45</div>
+        <div class="t-caption" style="margin-top:6px">skills</div>
+      </div>
+      <div>
+        <div class="t-display">27</div>
+        <div class="t-caption" style="margin-top:6px">familles de produit</div>
+      </div>
+      <div>
+        <div class="t-display">18</div>
+        <div class="t-caption" style="margin-top:6px">skills de méthode</div>
+      </div>
+      <div>
+        <div class="t-display">MIT</div>
+        <div class="t-caption" style="margin-top:6px">licence</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:64px">
+  <div class="conteneur">
+    <div class="res-corps">
+      <!--RES-NAV:Skills-->
+
+      <div>
+        <!-- ── Couverture ── -->
+        <div class="t-label" style="margin-bottom:14px">Couverture</div>
+        <h2 class="t-h1" style="margin-bottom:16px">6 verticales. 45 skills.</h2>
+        <p class="t-body" style="max-width:560px;margin:0 0 32px">Chaque skill couvre une régulation,
+          un framework ou une certification. Curé par notre équipe, dérivé du moteur Cleo Labs.</p>
+
+        <div class="g3" data-anim-groupe style="margin-bottom:56px">
+          <div class="terme-carte">
+            <span class="ligne-icone">ico:cosmetique</span>
+            <div class="nom">Cosmétique</div>
+            <div class="def">CPNP, EU 1223/2009, FDA MoCRA, étiquetage INCI, allégations.</div>
+            <span class="t-caption" style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">cosmetics-compliance</span>
+          </div>
+          <div class="terme-carte">
+            <span class="ligne-icone">ico:alimentaire</span>
+            <div class="nom">Alimentaire</div>
+            <div class="def">FSMA, INCO 1169/2011, allergènes, nutri-score, EFSA.</div>
+            <span class="t-caption" style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">food-compliance</span>
+          </div>
+          <div class="terme-carte">
+            <span class="ligne-icone">ico:electronique</span>
+            <div class="nom">Électronique</div>
+            <div class="def">Marquage CE, FCC, RED, RoHS, REACH, PSE Japan.</div>
+            <span class="t-caption" style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">electronics-compliance</span>
+          </div>
+          <div class="terme-carte">
+            <span class="ligne-icone">ico:jouets</span>
+            <div class="nom">Jouets</div>
+            <div class="def">EN 71, CPSIA, ASTM F963, déclaration UE, âge mini.</div>
+            <span class="t-caption" style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">toy-compliance</span>
+          </div>
+          <div class="terme-carte">
+            <span class="ligne-icone">ico:textile</span>
+            <div class="nom">Textile</div>
+            <div class="def">Composition fibres, Oeko-Tex, traçabilité, allégations vertes.</div>
+            <span class="t-caption" style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">textile-compliance</span>
+          </div>
+          <div class="terme-carte">
+            <span class="ligne-icone">ico:laboratoire</span>
+            <div class="nom">Compléments</div>
+            <div class="def">DGCCRF, FDA DSHEA, allégations santé, novel food.</div>
+            <span class="t-caption" style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">supplement-compliance</span>
+          </div>
+        </div>
+
+        <div style="height:1px;background:var(--c-border);margin-bottom:48px"></div>
+
+        <!-- ── L'inventaire, relevé sur le serveur ── -->
+        <div class="t-label" style="margin-bottom:14px">L'inventaire</div>
+        <h2 class="t-h1" style="margin-bottom:16px">Les 45 skills, une par une.</h2>
+        <p class="t-body" style="max-width:560px;margin:0 0 32px">Les six verticales ci-dessus sont celles
+          que la page met en avant. Voici les noms tels que le serveur MCP les expose : 27 skills portent
+          une famille de produit, 18 portent une méthode de travail.</p>
+
+        <h3 class="t-h2" style="margin-bottom:20px">27 skills par famille de produit</h3>
+        <div class="g3" data-anim-groupe style="margin-bottom:48px">
+          <ul class="t-body" style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px">
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">agricultural-compliance</span><br>Engrais, pesticides, semences, agriculture biologique</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">alcohol-spirits-compliance</span><br>Vin, bière, spiritueux, accises</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">automotive-aftermarket-compliance</span><br>Pièces et accessoires de rechange automobile</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">baby-children-products-compliance</span><br>Poussettes, lits, chaises hautes, articles de puériculture</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">baby-formula-compliance</span><br>Préparations pour nourrissons et laits de suite</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">candle-fragrance-compliance</span><br>Bougies, fondants, diffuseurs, parfums d'ambiance</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">cosmetics-compliance</span><br>Cosmétique, soin, capillaire, parfum</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">electronics-compliance</span><br>Électronique, objets connectés, appareils sur batterie</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">firearms-compliance</span><br>Armes, munitions, répliques, airsoft, airguns</li>
+          </ul>
+          <ul class="t-body" style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px">
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">food-compliance</span><br>Denrées alimentaires, boissons, novel food</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">herbal-medicine-compliance</span><br>Médicaments à base de plantes, ayurvéda, médecine chinoise</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">household-chemicals-compliance</span><br>Détergents, nettoyants, désinfectants, aérosols, colles</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">jewelry-compliance</span><br>Bijouterie, horlogerie, métaux précieux, gemmes</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">labeling-compliance</span><br>Étiquetage, nomenclature INCI, marquages CE, UKCA, FCC</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">marketplace-compliance</span><br>Amazon, Shopify, Etsy, Walmart, TikTok Shop</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">medical-device-compliance</span><br>Dispositifs médicaux, DIV, logiciel dispositif médical</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">optical-eyewear-compliance</span><br>Lunettes de soleil, de vue, de protection, masques</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">packaging-compliance</span><br>Emballage, REP, déchets d'emballages, plastiques à usage unique</li>
+          </ul>
+          <ul class="t-body" style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px">
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">pet-product-compliance</span><br>Aliments, friandises, jouets et accessoires pour animaux</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">product-compliance</span><br>Conformité d'un produit sur ses marchés cibles</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">professional-cosmetics-compliance</span><br>Cosmétique de salon, colorations et pigments professionnels</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">sporting-goods-compliance</span><br>Casques, EPI, gilets, escalade, vélos et trottinettes électriques</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">supplement-compliance</span><br>Compléments, vitamines, minéraux, plantes, probiotiques</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">sustainability-compliance</span><br>CSRD, CSDDD, EUDR, MACF, REP, passeport numérique de produit</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">textile-compliance</span><br>Textile, habillement, chaussure, linge de maison</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">tobacco-vape-compliance</span><br>Tabac, vapes, e-liquides, sachets de nicotine</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">toy-compliance</span><br>Jouets, jeux, puzzles, porteurs</li>
+          </ul>
+        </div>
+
+        <h3 class="t-h2" style="margin-bottom:20px">18 skills de méthode</h3>
+        <div class="g3" data-anim-groupe style="margin-bottom:56px">
+          <ul class="t-body" style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px">
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">claims-substantiation</span><br>Justifier une allégation de packaging ou de publicité</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">compliance-audit-sprint</span><br>Le sprint de conformité avant lancement</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">compliance-frameworks-ref</span><br>Le référentiel des frameworks et des exigences</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">compliance-mcp-tools</span><br>Appeler les outils MCP Cleo Legal API, Insight, Bastion</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">compliance-remediation</span><br>Corriger pour débloquer une mise en marché</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">compliance-reporting</span><br>Le rapport de conformité d'un portefeuille produit</li>
+          </ul>
+          <ul class="t-body" style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px">
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">customs-and-trade</span><br>Code SH, droits de douane, coût rendu, sanctions</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">evidence-blitz</span><br>Rassembler les preuves d'une certification ou d'un audit</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">import-export-docs</span><br>Les documents d'une expédition à l'import et à l'export</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">market-entry-checklist</span><br>La marche à suivre pour vendre dans un nouveau pays</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">multi-jurisdiction-scan</span><br>La carte des règles d'un produit sur plusieurs marchés</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">product-safety-incident</span><br>L'incident de sécurité produit et sa notification</li>
+          </ul>
+          <ul class="t-body" style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px">
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">recall-response</span><br>La réponse à un rappel ou à une alerte de sécurité</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">regulatory-calendar</span><br>Les échéances, les renouvellements, les dates d'application</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">regulatory-intelligence</span><br>La veille sur ce qui change et qui touche le produit</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">responsible-person</span><br>La personne responsable et le mandataire local</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">substance-screening</span><br>Le contrôle des substances, INCI vers CAS, seuils</li>
+            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">testing-certification</span><br>Les essais, les laboratoires, les délais et les coûts</li>
+          </ul>
+        </div>
+
+        <div style="height:1px;background:var(--c-border);margin-bottom:48px"></div>
+
+        <!-- ── Les trois temps ── -->
+        <div class="t-label" style="margin-bottom:14px">Comment ça marche</div>
+        <h2 class="t-h1" style="margin-bottom:32px">Installer. Demander. Livrer.</h2>
+
+        <div class="g3" data-anim-groupe style="margin-bottom:56px">
+          <div class="terme-carte">
+            <span class="ligne-icone">ico:engrenage</span>
+            <div class="t-label">01</div>
+            <div class="nom">Installer</div>
+            <div class="def">Une commande npx. Pas de build, pas de compte, pas de clé API.</div>
+            <code class="t-caption" style="display:block;padding:10px 12px;border-radius:var(--r-sm);overflow-wrap:anywhere">npx -y @cleo-labs/skills-mcp@latest</code>
+          </div>
+          <div class="terme-carte">
+            <span class="ligne-icone">ico:research</span>
+            <div class="t-label">02</div>
+            <div class="nom">Demander</div>
+            <div class="def">Posez votre question conformité à votre agent. Il appelle les bons skills automatiquement.</div>
+            <code class="t-caption" style="display:block;padding:10px 12px;border-radius:var(--r-sm);overflow-wrap:anywhere">Mon shampoing est-il conforme en France ?</code>
+          </div>
+          <div class="terme-carte">
+            <span class="ligne-icone">ico:reglementation</span>
+            <div class="t-label">03</div>
+            <div class="nom">Livrer</div>
+            <div class="def">Réponse sourcée en quelques secondes. Citez la régulation, lancez la mise en marché.</div>
+            <code class="t-caption" style="display:block;padding:10px 12px;border-radius:var(--r-sm);overflow-wrap:anywhere">Réponse sourcée · CPNP · EU 1223/2009</code>
+          </div>
+        </div>
+
+        <div style="height:1px;background:var(--c-border);margin-bottom:48px"></div>
+
+        <!-- ── En action ── -->
+        <div class="t-label" style="margin-bottom:14px">En action</div>
+        <h2 class="t-h1" style="margin-bottom:16px">Une question. Une réponse sourcée.</h2>
+        <p class="t-body" style="max-width:560px;margin:0 0 32px">Claude Code, ou tout client MCP,
+          sélectionne automatiquement les bons skills, croise les sources et cite la régulation.
+          Zéro hallucination : chaque affirmation est traçable.</p>
+
+        <!-- Surface sombre dans une section claire : elle porte .surface-sombre
+             pour que toute l'encre bascule en blanc. -->
+        <div class="surface-sombre" style="background:var(--c-field-deep);border-radius:var(--r-lg);padding:32px;margin-bottom:24px">
+          <div class="t-label" style="margin-bottom:20px">Claude Code · skills-mcp</div>
+          <p class="t-body-lg" style="margin:0 0 28px;color:#fff">Je veux vendre des écouteurs sans fil
+            aux US et en France. Quelles certifications obligatoires ?</p>
+
+          <div class="g2">
+            <div>
+              <div class="t-h3" style="margin-bottom:12px">États-Unis</div>
+              <ul class="t-body" style="margin:0;padding-left:18px">
+                <li>FCC Part 15 (sub B) + Part 15.247 (Bluetooth)</li>
+                <li>Étiquetage FCC ID requis</li>
+                <li>Pile : UN38.3 + DOT</li>
+              </ul>
+            </div>
+            <div>
+              <div class="t-h3" style="margin-bottom:12px">France (UE)</div>
+              <ul class="t-body" style="margin:0;padding-left:18px">
+                <li>Marquage CE (RED 2014/53/UE)</li>
+                <li>RoHS 2011/65/UE + REACH SVHC</li>
+                <li>Déclaration UE de conformité</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin-bottom:56px">
+          <a class="btn btn-contour btn-sm" href="12-article.html">Lire le post de lancement</a>
+          <a class="t-caption" href="11-blog.html" style="color:var(--c-signal);font-weight:600">Lire les skills</a>
+        </div>
+
+        <div style="height:1px;background:var(--c-border);margin-bottom:48px"></div>
+
+        <!-- ── Questions fréquentes, reprises de la page ── -->
+        <div class="t-label" style="margin-bottom:14px">FAQ</div>
+        <h2 class="t-h1" style="margin-bottom:24px">Questions fréquentes</h2>
+
+        <div class="faq" data-anim="monte-court">
+          <details open>
+            <summary>Qu'est-ce que le Skills Library ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+            <div class="reponse">Une collection gratuite et open-source de 45 skills de conformité produit
+              exposés via un serveur Model Context Protocol (MCP). Tout agent IA compatible (Claude Code,
+              Cursor, ChatGPT desktop ou le vôtre) peut les appeler pour répondre à des questions
+              réglementaires en cosmétique, alimentaire, électronique, jouets, textile et compléments.</div>
+          </details>
+          <details>
+            <summary>Comment l'installer ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+            <div class="reponse">Une commande : <code>npx -y @cleo-labs/skills-mcp@latest</code>. Ajoutez-la
+              à la config de votre client MCP (Claude Code, Cursor, etc.) et les 45 skills sont
+              disponibles immédiatement.</div>
+          </details>
+          <details>
+            <summary>C'est vraiment gratuit ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+            <div class="reponse">Oui. Licence MIT. Utilisez-le dans des produits commerciaux, forkez-le,
+              modifiez-le. Nous le maintenons parce que nous l'utilisons nous-mêmes chez Cleo Labs.</div>
+          </details>
+          <details>
+            <summary>Quelle est la différence avec la plateforme Cleo Labs ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+            <div class="reponse">Les skills donnent le « quoi » : la connaissance des réglementations,
+              frameworks et certifications. La plateforme Cleo Labs donne le « comment » : scan automatisé
+              de votre catalogue dans 106 pays, monitoring temps réel, preuves d'audit et workflows
+              d'équipe.</div>
+          </details>
+          <details>
+            <summary>Quels clients MCP sont supportés ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+            <div class="reponse">Tout ce qui parle MCP via stdio. Testé avec Claude Code, Claude Desktop,
+              Cursor et Continue. Le serveur est un wrapper léger, donc s'adapter à un nouveau client est
+              principalement une question de configuration.</div>
+          </details>
+        </div>
+
+        <p class="t-caption" style="margin-top:32px">MIT · zéro télémétrie · zéro compte requis</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--CTA-->
+<!--PIED-->
