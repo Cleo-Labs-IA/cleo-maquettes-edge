@@ -108,6 +108,13 @@ const mesures = await page.evaluate(() => {
     debordements: [...new Set(debordements)],
     monospaces: [...monospaces],
     masseColorees: document.querySelectorAll('.masse .trouve').length,
+    inventaire: {
+      produits: document.querySelectorAll('.produit').length,
+      etapes: document.querySelectorAll('.chaine-etape').length,
+      parutions: document.querySelectorAll('.parution').length,
+      verdicts: document.querySelectorAll('.fiche-ligne').length,
+      traits: document.querySelectorAll('.traits line').length,
+    },
     massesTotal: document.querySelectorAll('.masse').length,
     champsProfonds: pages.map((p) => p.querySelectorAll('.profond').length),
   }
@@ -121,6 +128,7 @@ console.log('  elements coupes ou debordants :', mesures.debordements.length ? m
 console.log('  monospace :', mesures.monospaces.length ? mesures.monospaces.join(', ') : 'aucune')
 console.log('  masse :', mesures.masseColorees, 'element colore pour', mesures.massesTotal, 'grille(s)')
 console.log('  champ profond par page :', mesures.champsProfonds.join(' / '))
+console.log('  inventaire :', Object.entries(mesures.inventaire).map(([k, v]) => k + ' ' + v).join(' · '))
 if (soucis.length) console.log('  erreurs de page :', soucis.join(' | '))
 
 const bloquant = []
@@ -128,6 +136,11 @@ if (mesures.debordements.length) bloquant.push('contenu coupe')
 if (mesures.monospaces.length) bloquant.push('monospace presente')
 if (mesures.masseColorees !== 1 || mesures.massesTotal !== 1) bloquant.push('la masse doit avoir un seul element colore')
 if (mesures.champsProfonds.some((n) => n > 1)) bloquant.push('deux champs profonds sur une meme page')
+// ne (23/09) d'une regex gourmande qui avait mange trois cartes produit sur quatre
+const attendu = { produits: 4, etapes: 4, parutions: 4, verdicts: 3, traits: 4 }
+for (const [quoi, n] of Object.entries(attendu)) {
+  if (mesures.inventaire[quoi] !== n) bloquant.push(`${quoi} : ${mesures.inventaire[quoi]} au lieu de ${n}`)
+}
 mesures.parPage.forEach((m) => {
   if (m.contenuMm > 297) bloquant.push(`page ${m.page} deborde de la feuille`)
   if (m.airAvantPiedMm < 3) bloquant.push(`page ${m.page} colle son pied au contenu`)

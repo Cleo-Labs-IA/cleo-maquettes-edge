@@ -51,6 +51,8 @@
   --mass:rgba(255,255,255,.16);
   --mass-2:rgba(255,255,255,.26);
   --marge:16mm;
+  --ombre-plate:0 .3mm .9mm rgba(8,9,59,.04);
+  --ombre-carte:0 .3mm .9mm rgba(8,9,59,.04), 0 4mm 12mm rgba(8,9,59,.06);
 }
 
 *,*::before,*::after{box-sizing:border-box}
@@ -95,6 +97,7 @@ body{
 .t-h3{font-size:10.5pt;font-weight:700;letter-spacing:-.022em;line-height:1.2;margin:0;color:var(--ink)}
 .t-lead{font-size:11pt;font-weight:400;line-height:1.38;margin:0;color:var(--ink-2)}
 .t-sm{font-size:8.4pt;font-weight:400;line-height:1.38;margin:0;color:var(--ink-2)}
+.t-nom{font-size:9pt;font-weight:680;letter-spacing:-.02em;line-height:1.2;color:var(--ink)}
 .t-caption{font-size:7.2pt;font-weight:400;line-height:1.35;margin:0;color:var(--ink-3)}
 .surtitre{font-size:7pt;font-weight:640;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-3);margin:0}
 .attenue{color:var(--ink-3)}
@@ -117,23 +120,24 @@ body{
 .schema-titre{margin-bottom:2.6mm}
 
 .parution{
-  background:var(--raised);border:1px solid var(--border);border-radius:2.6mm;
-  padding:3.4mm 3.6mm;box-shadow:0 .2mm .6mm rgba(8,9,59,.03);
+  background:var(--raised);border:1px solid var(--border);border-radius:3mm;
+  padding:3.4mm 3.6mm;box-shadow:var(--ombre-plate);
 }
-.parution .autorite{display:block;font-size:6.6pt;font-weight:660;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3)}
-.parution .texte{display:block;margin-top:1mm;font-size:8.8pt;line-height:1.3;color:var(--ink)}
+.parution .autorite{display:block;font-size:7pt;font-weight:640;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.parution .texte{display:block;margin-top:1.2mm;font-size:8.4pt;line-height:1.32;color:var(--ink)}
 .parution.hors{opacity:.55}
 .parution.hors .texte{color:var(--ink-2)}
+.parution .verdict-hors{display:block;margin-top:1.4mm;font-size:7.2pt;color:var(--ink-3)}
 
 .traits{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .traits line.touche{stroke:var(--blue);stroke-width:1.1}
 .traits line.hors{stroke:rgba(26,26,26,.22);stroke-width:1;stroke-dasharray:2.2 2.2}
 
-.fiche{background:var(--raised);border:1px solid var(--border);border-radius:2.6mm;overflow:hidden;box-shadow:0 .4mm 1.4mm rgba(8,9,59,.05), 0 5mm 14mm rgba(8,9,59,.06)}
+.fiche{background:var(--raised);border:1px solid var(--border);border-radius:3mm;overflow:hidden;box-shadow:var(--ombre-carte)}
 .fiche-produit{display:flex;align-items:center;gap:3.6mm;padding:3.6mm}
-.fiche-produit img{width:16mm;height:16mm;object-fit:contain;background:var(--surface);border-radius:1.6mm;padding:1.2mm;flex:none}
-.fiche-nom{font-size:9.6pt;font-weight:680;letter-spacing:-.02em;color:var(--ink);line-height:1.2}
-.fiche-ref{margin-top:.6mm;font-size:7.4pt;color:var(--ink-3)}
+.fiche-produit img{width:16mm;height:16mm;object-fit:contain;background:var(--surface);border-radius:3mm;padding:1.2mm;flex:none}
+.fiche-nom{font-size:9pt;font-weight:680;letter-spacing:-.02em;color:var(--ink);line-height:1.2}
+.fiche-ref{margin-top:.8mm;font-size:7.2pt;color:var(--ink-3)}
 .fiche-ligne{
   display:flex;align-items:center;justify-content:space-between;gap:3mm;
   padding:3mm 3.6mm;border-top:1px solid var(--border);font-size:8.4pt;color:var(--ink-2);
@@ -141,8 +145,8 @@ body{
 .marqueur{font-size:7pt;font-weight:660;padding:.8mm 2.2mm;border-radius:9999px;white-space:nowrap}
 .m-couvert{color:#0D6E44;background:rgba(13,110,68,.10)}
 .m-manquant{color:#8A5A00;background:rgba(138,90,0,.12)}
-.fiche-compte{padding:3mm 3.6mm;border-top:1px solid var(--border);background:var(--surface);font-size:7.6pt;color:var(--ink-2)}
-.fiche-compte b{color:var(--ink);font-weight:700}
+.fiche-compte{padding:3mm 3.6mm;border-top:1px solid var(--border);background:var(--surface);font-size:7.2pt;color:var(--ink-2)}
+.fiche-compte b{color:var(--ink);font-weight:680}
 
 /* ── Les trois chiffres ── */
 .chiffres{display:grid;grid-template-columns:repeat(3,1fr);margin-top:11mm;border-top:1px solid var(--border)}
@@ -151,13 +155,14 @@ body{
 .chiffres > div:not(:last-child){padding-right:6mm}
 .chiffres > div:last-child{border-right:0}
 .chiffres b{display:block;font-size:22pt;font-weight:760;letter-spacing:-.04em;line-height:1;color:var(--ink)}
-.chiffres span{display:block;margin-top:1.6mm;font-size:7.8pt;color:var(--ink-2);line-height:1.3}
+.chiffres span{display:block;margin-top:1.8mm;font-size:7.2pt;color:var(--ink-2);line-height:1.35}
 
 /* ── Mission et vision, une ligne chacune ── */
-.credo{display:grid;grid-template-columns:1fr 1fr;gap:9mm;margin-top:9mm}
-.credo section{border-top:2px solid var(--ink);padding-top:3mm}
+.credo{display:grid;grid-template-columns:1fr 30mm 1fr;margin-top:9mm}
+.credo section:last-child{grid-column:3}
+.credo section{border-top:1px solid var(--border);padding-top:3.4mm}
 .credo .surtitre{margin-bottom:2mm}
-.credo p{margin:0;font-size:9.4pt;font-weight:600;letter-spacing:-.015em;line-height:1.3;color:var(--ink)}
+.credo .phrase{margin:0;font-size:9pt;font-weight:620;letter-spacing:-.02em;line-height:1.32;color:var(--ink)}
 
 /* ── Pied ── */
 .pied{
@@ -171,28 +176,27 @@ body{
 /* ══════════ VERSO : quatre produits, une ligne chacun ══════════ */
 .produits{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm;margin-top:6mm}
 .produit{
-  background:var(--raised);border:1px solid var(--border);border-radius:3.4mm;
-  padding:5mm 4.6mm 5.4mm;box-shadow:0 .3mm .8mm rgba(8,9,59,.035), 0 4mm 11mm rgba(8,9,59,.05);
+  background:var(--raised);border:1px solid var(--border);border-radius:3mm;
+  padding:5mm 4.6mm 5.4mm;box-shadow:var(--ombre-carte);
 }
 .produit .picto{display:block;width:11mm;height:11mm;margin-bottom:3.4mm}
 .produit .picto svg{width:100%;height:100%;display:block}
-.produit .t-h3{min-height:9mm;margin-bottom:2mm}
-.produit p{margin:0;font-size:8.3pt;line-height:1.36;color:var(--ink-2)}
+.produit .t-h3{min-height:9.6mm;margin-bottom:2mm}
+.produit p{margin:0;font-size:8.4pt;line-height:1.38;color:var(--ink-2)}
 
 /* ── LE SCHEMA DE LA CHAINE ── */
-.chaine{display:grid;grid-template-columns:repeat(4,1fr);margin-top:8mm}
-.chaine-etape{position:relative;padding-right:9mm}
-.chaine-etape + .chaine-etape{padding-left:7mm}
+.chaine{display:grid;grid-template-columns:repeat(4,1fr);gap:4mm;margin-top:7mm}
+.chaine-etape{position:relative;padding:0 4.6mm}
 .chaine-etape .rond{
   display:flex;align-items:center;justify-content:center;
-  width:7mm;height:7mm;border-radius:50%;margin-bottom:2.8mm;
+  width:7mm;height:7mm;border-radius:50%;margin-bottom:3mm;
   border:1px solid var(--border);background:var(--raised);
-  font-size:7pt;font-weight:700;color:var(--ink-2);
+  font-size:7pt;font-weight:660;color:var(--ink-2);
 }
 .chaine-etape.actif .rond{border-color:var(--blue);color:var(--blue)}
-.chaine-etape .t-h3{min-height:8.4mm;margin-bottom:1.6mm}
-.chaine-etape p{margin:0;font-size:8.1pt;line-height:1.34;color:var(--ink-2)}
-.chaine-fleche{position:absolute;top:2.4mm;right:2.2mm;display:block;width:5mm;height:2.4mm}
+.chaine-etape .t-h3{min-height:9.6mm;margin-bottom:1.6mm}
+.chaine-etape p{margin:0;font-size:8.4pt;line-height:1.38;color:var(--ink-2)}
+.chaine-fleche{position:absolute;top:2.6mm;right:-5.4mm;display:block;width:6.8mm;height:2.4mm}
 .chaine-fleche svg{width:100%;height:100%;display:block}
 .chaine-etape:last-child .chaine-fleche{display:none}
 
@@ -207,7 +211,7 @@ body{
 }
 .profond > *{position:relative;z-index:1}
 
-.bloc-masse{margin-top:8mm;border-radius:5mm;padding:6.6mm 7mm 6.4mm}
+.bloc-masse{margin-top:7mm;border-radius:5mm;padding:6.4mm 7mm 6.2mm}
 .masse-entete{display:flex;align-items:flex-end;justify-content:space-between;gap:9mm;margin-bottom:5.4mm}
 .masse-entete .t-h1{max-width:100mm}
 .masse-entete .t-caption{max-width:52mm;text-align:right}
@@ -220,38 +224,37 @@ body{
 .marquage{display:flex;align-items:center;gap:3.6mm;margin-top:5mm;padding-top:4.4mm;border-top:1px solid var(--border-dark)}
 .marquage .puce{flex:0 0 auto;width:3.8mm;height:3.8mm;border-radius:1mm;background:var(--signal)}
 .marquage .texte{flex:1 1 auto}
-.marquage .ref{display:block;font-size:9pt;font-weight:680;letter-spacing:-.02em;color:#fff;line-height:1.25}
-.marquage .meta{display:block;margin-top:1mm;font-size:7.2pt;color:var(--on-dark-3);line-height:1.3}
+.marquage .ref{display:block;font-size:9pt;font-weight:680;letter-spacing:-.02em;color:#fff;line-height:1.2}
+.marquage .meta{display:block;margin-top:1.2mm;font-size:7.2pt;color:var(--on-dark-3);line-height:1.35}
 .marquage .date{flex:0 0 auto;text-align:right;padding-left:4.4mm;border-left:1px solid var(--border-dark)}
-.marquage .date b{display:block;font-size:10.5pt;font-weight:700;letter-spacing:-.03em;color:#fff;line-height:1.1}
-.marquage .date span{display:block;margin-top:.8mm;font-size:6.8pt;color:var(--on-dark-3)}
+.marquage .date b{display:block;font-size:10.5pt;font-weight:700;letter-spacing:-.028em;color:#fff;line-height:1.1}
+.marquage .date span{display:block;margin-top:1mm;font-size:7.2pt;color:var(--on-dark-3)}
 
 /* ── L'arret de la machine, la citation, le contact ── */
 .pied-verso{position:absolute;left:0;right:0;bottom:0;padding:0 var(--marge) 7mm}
 .deux{display:grid;grid-template-columns:1fr 1fr;gap:9mm;padding-top:5mm;border-top:1px solid var(--border)}
 .deux-verso{grid-template-columns:1fr}
 .deux-verso .citation{max-width:150mm}
-.arret{margin-top:6mm;padding:4mm 4.4mm;border-radius:3mm;background:rgba(0,8,207,.035);border:1px solid rgba(0,8,207,.14);max-width:126mm}
+.arret{margin-top:7mm;padding:4mm 4.4mm;border-radius:3mm;background:var(--raised);border:1px solid var(--border);box-shadow:var(--ombre-plate)}
 .arret .etiquette{
-  display:inline-block;margin-bottom:2.2mm;padding:.9mm 2.6mm;border-radius:9999px;
-  background:rgba(0,8,207,.08);border:1px solid rgba(0,8,207,.28);
-  font-size:6.8pt;font-weight:680;letter-spacing:.05em;color:var(--blue);
+  display:inline-block;margin-bottom:2.4mm;padding:.8mm 2.2mm;border-radius:9999px;
+  font-size:7pt;font-weight:660;color:#8A5A00;background:rgba(138,90,0,.12);
 }
-.arret p{margin:0;font-size:8pt;line-height:1.36;color:var(--ink-2)}
-.citation{margin:0;font-size:8pt;line-height:1.38;color:var(--ink-2);padding-left:3.4mm;border-left:1.5px solid var(--border)}
-.citation-nom{margin:2.2mm 0 0;padding-left:3.4mm;font-size:7.4pt;color:var(--ink-3)}
-.citation-nom b{color:var(--ink);font-weight:680;font-size:8pt;letter-spacing:-.015em}
+.arret p{margin:0;font-size:8.4pt;line-height:1.38;color:var(--ink-2)}
+.citation{margin:0;font-size:8.4pt;line-height:1.38;color:var(--ink-2);padding-left:3.6mm;border-left:1px solid var(--border)}
+.citation-nom{margin:2.4mm 0 0;padding-left:3.6mm;font-size:7.2pt;color:var(--ink-3)}
+.citation-nom b{color:var(--ink);font-weight:680;font-size:9pt;letter-spacing:-.02em}
 
 .contact{display:flex;align-items:center;justify-content:space-between;gap:8mm;margin-top:6mm;padding-top:4.4mm;border-top:1px solid var(--border)}
 .contact-lignes{display:flex;gap:9mm}
-.contact-lignes .cle{margin:0 0 1.2mm;font-size:6.8pt;font-weight:640;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-3)}
-.contact-lignes .val{margin:0;font-size:8.6pt;font-weight:620;color:var(--ink);letter-spacing:-.01em;line-height:1.3}
-.contact-lignes .val small{display:block;margin-top:.6mm;font-size:7.2pt;font-weight:400;letter-spacing:0;color:var(--ink-2)}
+.contact-lignes .cle{margin:0 0 1.4mm;font-size:7pt;font-weight:640;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-3)}
+.contact-lignes .val{margin:0;font-size:9pt;font-weight:680;color:var(--ink);letter-spacing:-.02em;line-height:1.25}
+.contact-lignes .val small{display:block;margin-top:.8mm;font-size:7.2pt;font-weight:400;letter-spacing:0;color:var(--ink-3)}
 .qr{display:flex;align-items:center;gap:3.6mm;flex:0 0 auto}
-.qr-cadre{width:17mm;height:17mm;padding:1.4mm;border-radius:2.4mm;background:#fff;border:1px solid var(--border)}
+.qr-cadre{width:17mm;height:17mm;padding:1.4mm;border-radius:3mm;background:#fff;border:1px solid var(--border)}
 .qr-cadre svg{width:100%;height:100%;display:block}
-.qr-texte b{display:block;font-size:8.4pt;font-weight:680;color:var(--ink);letter-spacing:-.015em}
-.qr-texte span{display:block;margin-top:.8mm;font-size:7pt;color:var(--ink-3);line-height:1.3}
+.qr-texte b{display:block;font-size:9pt;font-weight:680;color:var(--ink);letter-spacing:-.02em}
+.qr-texte span{display:block;margin-top:.8mm;font-size:7.2pt;color:var(--ink-3);line-height:1.35}
 
 .signature{display:flex;align-items:flex-end;justify-content:space-between;margin-top:4mm}
 .signature .mot{width:11mm;opacity:.12}
@@ -303,6 +306,7 @@ body{
           <div class="parution hors">
             <span class="autorite">FDA · United States</span>
             <span class="texte">21 CFR 101, food labelling</span>
+            <span class="verdict-hors">Does not touch this reference</span>
           </div>
         </div>
 
@@ -344,11 +348,11 @@ body{
     <div class="credo">
       <section>
         <p class="surtitre">Mission</p>
-        <p>Turn the rule into something a machine can act on.</p>
+        <p class="phrase">Turn the rule into something a machine can act on.</p>
       </section>
       <section>
         <p class="surtitre">Vision</p>
-        <p>Compliance as an infrastructure layer: current, sourced, callable.</p>
+        <p class="phrase">Compliance as an infrastructure layer: current, sourced, callable.</p>
       </section>
     </div>
   </div>
@@ -377,10 +381,9 @@ body{
       <article class="produit">
         <span class="picto">
           <svg viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="5" width="16" height="4" rx="1" stroke="rgba(26,26,26,.30)" stroke-width="1.4"/>
-            <rect x="3" y="14" width="16" height="4" rx="1" stroke="#0008CF" stroke-width="1.7"/>
-            <rect x="3" y="23" width="16" height="4" rx="1" stroke="rgba(26,26,26,.30)" stroke-width="1.4"/>
-            <path d="M21 16h7m-2.6-2.8L28.2 16l-2.8 2.8" stroke="#0008CF" stroke-width="1.7"/>
+            <path d="M5 7h13M5 25h13" stroke="rgba(26,26,26,.32)" stroke-width="1.5"/>
+            <path d="M5 16h13" stroke="#0008CF" stroke-width="1.7"/>
+            <path d="M21 16h6m-1.8-1.8L27 16l-1.8 1.8" stroke="#0008CF" stroke-width="1.7"/>
           </svg>
         </span>
         <h3 class="t-h3">Regulatory Change</h3>
@@ -390,9 +393,9 @@ body{
       <article class="produit">
         <span class="picto">
           <svg viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 7h24v15H14l-6 5v-5H4z" stroke="rgba(26,26,26,.30)" stroke-width="1.4"/>
-            <path d="M10 13h12M10 17.5h7" stroke="rgba(26,26,26,.30)" stroke-width="1.4"/>
-            <path d="M22.5 17.5h3.5" stroke="#0008CF" stroke-width="1.9"/>
+            <path d="M5 6h22v15H14l-5 5v-5H5z" stroke="rgba(26,26,26,.32)" stroke-width="1.5"/>
+            <path d="M10 11.5h12" stroke="rgba(26,26,26,.32)" stroke-width="1.5"/>
+            <path d="M10 16.5h7" stroke="#0008CF" stroke-width="1.7"/>
           </svg>
         </span>
         <h3 class="t-h3">Research</h3>
@@ -402,10 +405,9 @@ body{
       <article class="produit">
         <span class="picto">
           <svg viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <ellipse cx="12" cy="8" rx="8" ry="3.4" stroke="rgba(26,26,26,.30)" stroke-width="1.4"/>
-            <path d="M4 8v9c0 1.9 3.6 3.4 8 3.4s8-1.5 8-3.4V8" stroke="rgba(26,26,26,.30)" stroke-width="1.4"/>
-            <path d="M12 25h6" stroke="rgba(26,26,26,.30)" stroke-width="1.4"/>
-            <path d="M20 25h8m-2.8-2.8L28 25l-2.8 2.8" stroke="#0008CF" stroke-width="1.7"/>
+            <ellipse cx="12" cy="9" rx="7" ry="3" stroke="rgba(26,26,26,.32)" stroke-width="1.5"/>
+            <path d="M5 9v13c0 1.7 3.1 3 7 3s7-1.3 7-3V9" stroke="rgba(26,26,26,.32)" stroke-width="1.5"/>
+            <path d="M22 16h5m-1.8-1.8L27 16l-1.8 1.8" stroke="#0008CF" stroke-width="1.7"/>
           </svg>
         </span>
         <h3 class="t-h3">Compliance Data</h3>
@@ -415,9 +417,9 @@ body{
       <article class="produit">
         <span class="picto">
           <svg viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 4h13l7 7v17H6z" stroke="rgba(26,26,26,.30)" stroke-width="1.4"/>
-            <path d="M19 4v7h7" stroke="rgba(26,26,26,.30)" stroke-width="1.4"/>
-            <path d="M10 22c3-4 5 2 8-2.5s3 1.5 4 1.5" stroke="#0008CF" stroke-width="1.8"/>
+            <path d="M7 6h11l7 7v13H7z" stroke="rgba(26,26,26,.32)" stroke-width="1.5"/>
+            <path d="M18 6v7h7" stroke="rgba(26,26,26,.32)" stroke-width="1.5"/>
+            <path d="M11 21c2.4-3.4 4 1.6 6.4-2s2.4 1.2 3.2 1.2" stroke="#0008CF" stroke-width="1.7"/>
           </svg>
         </span>
         <h3 class="t-h3">Compliance as a Service</h3>

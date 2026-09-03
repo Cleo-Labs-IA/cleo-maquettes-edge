@@ -37,3 +37,18 @@ champ profond par page · un pied collé au contenu.
 PDF A4 exact (209,9 × 297,0 mm), sans fond perdu. Les aplats profonds touchent les bords :
 si l'imprimeur demande du fond perdu, le dire, la feuille se régénère avec marge de coupe et
 repères. Recto/verso, reliure bord long, pas de tête-bêche.
+
+## Cohérence visuelle
+
+`node auditer.mjs` relève les valeurs réellement rendues et compte les valeurs distinctes.
+Le 03/09/2026, un premier relevé a donné 30 combinaisons taille/graisse de corps, 8 rayons,
+6 bords et 4 ombres : c'est ce que Naomie voyait comme « plein d'incohérences ». Après passe :
+13 crans typographiques (tous portés par un rôle), 4 rayons dont un cercle, 3 bords, 3 ombres.
+
+Deux défauts que seul le relevé a montrés : `.credo p` écrasait la taille des surtitres
+MISSION et VISION (9 pt au lieu de 7 pt), et la colonne droite du bloc mission/vision tombait
+à 109,5 mm quand celle du schéma tombait à 120 mm.
+
+`construire.mjs` compte aussi l'inventaire (4 cartes, 4 étapes, 4 parutions, 3 verdicts,
+4 traits) et bloque s'il en manque : une expression régulière trop gourmande avait supprimé
+trois cartes produit sur quatre sans qu'aucun autre contrôle ne s'en aperçoive.
