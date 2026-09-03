@@ -283,3 +283,11 @@
 /* La sécurité descend tout en bas (03/09, 14:10) : même bloc, dans sa propre section. */
 .securite-bas{padding:88px 0}
 .securite-bas .hero-securite{margin:0; padding:0; max-width:none}
+
+/* Orientation donnée (03/09, 14:35 : « oriente le truc data ») : la bande des quatre
+   chiffres canon en tête de la scène, la colonne de gauche dite « agrégée depuis ». */
+.radar-stats{grid-column:1 / -1; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-bottom:22px; padding-bottom:22px; border-bottom:1px solid var(--c-border)}
+.radar-stats > div{min-width:0}
+.radar-stats b{display:block; font-size:1.625rem; font-weight:500; letter-spacing:-0.02em; line-height:1.1; color:var(--c-ink)}
+.radar-stats span{display:block; font-size:0.8125rem; color:var(--c-text-3); margin-top:4px}
+@media (max-width:760px){ .radar-stats{grid-template-columns:repeat(2,minmax(0,1fr))} .radar-stats b{font-size:1.375rem} .radar-stats span{font-size:0.875rem} }
