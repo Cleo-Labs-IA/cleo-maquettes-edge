@@ -1,0 +1,63 @@
+{
+  "nom": "34-importateurs",
+  "desktop": {
+    "largeurDoc": 1440,
+    "largeurFenetre": 1440,
+    "debordement": false,
+    "hauteur": 3099,
+    "h1": {
+      "texte": "Passer la douane sans mauvaise surprise.",
+      "taille": "51.84px",
+      "graisse": "500",
+      "classe": "t-hero"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 20,
+    "textesSous12": 3,
+    "ciblesSous40": 49,
+    "paragrapheLePlusLarge": 560,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 525,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "Conformité produit pour les importateurs et distributeurs | Cleo Labs",
+    "description": 132
+  },
+  "mobile": {
+    "largeurDoc": 390,
+    "largeurFenetre": 390,
+    "debordement": false,
+    "hauteur": 5857,
+    "h1": {
+      "texte": "Passer la douane sans mauvaise surprise.",
+      "taille": "36px",
+      "graisse": "500",
+      "classe": "t-hero"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 7,
+    "textesSous12": 0,
+    "ciblesSous40": 5,
+    "paragrapheLePlusLarge": 334,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 1919,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "Conformité produit pour les importateurs et distributeurs | Cleo Labs",
+    "description": 132
+  },
+  "tranches": {
+    "desktop": 2,
+    "mobile": 4
+  },
+  "erreursConsole": [],
+  "capture": "2026-09-03T08:46:22.792Z"
+}

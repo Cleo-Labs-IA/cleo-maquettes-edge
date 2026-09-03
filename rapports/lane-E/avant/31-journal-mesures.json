@@ -1,0 +1,63 @@
+{
+  "nom": "31-journal",
+  "desktop": {
+    "largeurDoc": 1440,
+    "largeurFenetre": 1440,
+    "debordement": false,
+    "hauteur": 3564,
+    "h1": {
+      "texte": "Journal des modifications",
+      "taille": "51.84px",
+      "graisse": "500",
+      "classe": "t-hero"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 46,
+    "textesSous12": 3,
+    "ciblesSous40": 49,
+    "paragrapheLePlusLarge": 888,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 525,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "Journal des modifications | Cleo Labs",
+    "description": 115
+  },
+  "mobile": {
+    "largeurDoc": 390,
+    "largeurFenetre": 390,
+    "debordement": false,
+    "hauteur": 6583,
+    "h1": {
+      "texte": "Journal des modifications",
+      "taille": "36px",
+      "graisse": "500",
+      "classe": "t-hero"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 9,
+    "textesSous12": 0,
+    "ciblesSous40": 5,
+    "paragrapheLePlusLarge": 334,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 1919,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "Journal des modifications | Cleo Labs",
+    "description": 115
+  },
+  "tranches": {
+    "desktop": 2,
+    "mobile": 5
+  },
+  "erreursConsole": [],
+  "capture": "2026-09-03T08:46:08.880Z"
+}

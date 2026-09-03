@@ -1,0 +1,63 @@
+{
+  "nom": "04-secteur",
+  "desktop": {
+    "largeurDoc": 1440,
+    "largeurFenetre": 1440,
+    "debordement": false,
+    "hauteur": 6477,
+    "h1": {
+      "texte": "Conformité produit textile. Marché par marché.",
+      "taille": "51.84px",
+      "graisse": "500",
+      "classe": "t-hero"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 34,
+    "textesSous12": 3,
+    "ciblesSous40": 49,
+    "paragrapheLePlusLarge": 620,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 525,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "Conformité produit textile et habillement | Cleo Labs",
+    "description": 144
+  },
+  "mobile": {
+    "largeurDoc": 390,
+    "largeurFenetre": 390,
+    "debordement": false,
+    "hauteur": 11263,
+    "h1": {
+      "texte": "Conformité produit textile. Marché par marché.",
+      "taille": "36px",
+      "graisse": "500",
+      "classe": "t-hero"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 16,
+    "textesSous12": 0,
+    "ciblesSous40": 5,
+    "paragrapheLePlusLarge": 334,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 1919,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "Conformité produit textile et habillement | Cleo Labs",
+    "description": 144
+  },
+  "tranches": {
+    "desktop": 3,
+    "mobile": 8
+  },
+  "erreursConsole": [],
+  "capture": "2026-09-03T08:44:30.671Z"
+}

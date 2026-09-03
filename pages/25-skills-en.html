@@ -3,7 +3,7 @@
 <!-- ═══ BANDEAU, moule de la famille Ressources ═══
      Même gabarit que 10-ressources et 13-glossaire : champ profond,
      res-tete, puis le corps sur res-corps avec la nav latérale. ═══ -->
-<section class="sur-sombre gc-deep section-serree" style="padding-bottom:var(--s-64)">
+<section class="sur-sombre section-serree" style="padding-bottom:var(--s-64)">
   <div class="conteneur">
     <div class="res-tete" style="margin-bottom:0">
       <div>
@@ -16,11 +16,9 @@
 
     <!-- La commande d'installation. La balise code du socle porte déjà
          Satoshi et les chiffres tabulaires : aucune police à machine écrire. -->
-    <div style="margin-top:48px;max-width:520px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;
-                padding:16px 20px;border-radius:var(--r-md);background:rgba(255,255,255,0.05);
-                border:1px solid var(--c-filet-sombre)">
-      <span class="t-body" style="color:var(--c-signal-clair);font-weight:600">$</span>
-      <code class="t-body" style="background:transparent;padding:0;color:#fff;overflow-wrap:anywhere">npx -y @cleo-labs/skills-mcp@latest</code>
+    <div class="ligne-commande" style="margin-top:48px">
+      <span class="t-body invite">$</span>
+      <code class="t-body">npx -y @cleo-labs/skills-mcp@latest</code>
     </div>
 
     <!-- Les quatre valeurs. Grille en CLASSE (.g4), jamais en style= inline :
@@ -56,7 +54,7 @@
         <!-- ── Couverture ── -->
         <div class="t-label" style="margin-bottom:14px">Coverage</div>
         <h2 class="t-h1" style="margin-bottom:16px">6 verticals. 45 skills.</h2>
-        <p class="t-body" style="max-width:560px;margin:0 0 32px">Every skill covers one regulation,
+        <p class="t-body chapo" style="margin:0 0 32px">Every skill covers one regulation,
           one framework or one certification. Curated by our team, derived from the Cleo Labs engine.</p>
 
         <div class="g3" data-anim-groupe style="margin-bottom:56px">
@@ -64,37 +62,37 @@
             <span class="ligne-icone">ico:cosmetique</span>
             <div class="nom">Cosmetics</div>
             <div class="def">CPNP, EU 1223/2009, FDA MoCRA, INCI labelling, claims.</div>
-            <span class="t-caption" style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">cosmetics-compliance</span>
+            <span class="t-caption skill-nom">cosmetics-compliance</span>
           </div>
           <div class="terme-carte">
             <span class="ligne-icone">ico:alimentaire</span>
             <div class="nom">Food</div>
             <div class="def">FSMA, INCO 1169/2011, allergens, nutri-score, EFSA.</div>
-            <span class="t-caption" style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">food-compliance</span>
+            <span class="t-caption skill-nom">food-compliance</span>
           </div>
           <div class="terme-carte">
             <span class="ligne-icone">ico:electronique</span>
             <div class="nom">Electronics</div>
             <div class="def">CE marking, FCC, RED, RoHS, REACH, PSE Japan.</div>
-            <span class="t-caption" style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">electronics-compliance</span>
+            <span class="t-caption skill-nom">electronics-compliance</span>
           </div>
           <div class="terme-carte">
             <span class="ligne-icone">ico:jouets</span>
             <div class="nom">Toys</div>
             <div class="def">EN 71, CPSIA, ASTM F963, EU declaration, age grading.</div>
-            <span class="t-caption" style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">toy-compliance</span>
+            <span class="t-caption skill-nom">toy-compliance</span>
           </div>
           <div class="terme-carte">
             <span class="ligne-icone">ico:textile</span>
             <div class="nom">Textiles</div>
             <div class="def">Fibre composition, Oeko-Tex, traceability, green claims.</div>
-            <span class="t-caption" style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">textile-compliance</span>
+            <span class="t-caption skill-nom">textile-compliance</span>
           </div>
           <div class="terme-carte">
             <span class="ligne-icone">ico:laboratoire</span>
             <div class="nom">Supplements</div>
             <div class="def">DGCCRF, FDA DSHEA, health claims, novel food.</div>
-            <span class="t-caption" style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">supplement-compliance</span>
+            <span class="t-caption skill-nom">supplement-compliance</span>
           </div>
         </div>
 
@@ -102,73 +100,73 @@
 
         <!-- ── L'inventaire, relevé sur le serveur ── -->
         <div class="t-label" style="margin-bottom:14px">The inventory</div>
-        <h2 class="t-h1" style="margin-bottom:16px">The 45 skills, one by one.</h2>
-        <p class="t-body" style="max-width:560px;margin:0 0 32px">The six verticals above are the ones
+        <h2 class="t-h1" id="inventaire" style="margin-bottom:16px">The 45 skills, one by one.</h2>
+        <p class="t-body chapo" style="margin:0 0 32px">The six verticals above are the ones
           this page puts forward. Here are the names as the MCP server exposes them: 27 skills carry
           a product family, 18 carry a working method.</p>
 
         <h3 class="t-h2" style="margin-bottom:20px">27 skills by product family</h3>
         <div class="g3" data-anim-groupe style="margin-bottom:48px">
           <ul class="t-body" style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px">
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">agricultural-compliance</span><br>Fertilisers, pesticides, seeds, organic farming</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">alcohol-spirits-compliance</span><br>Wine, beer, spirits, excise duty</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">automotive-aftermarket-compliance</span><br>Automotive replacement parts and accessories</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">baby-children-products-compliance</span><br>Pushchairs, cots, high chairs, childcare articles</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">baby-formula-compliance</span><br>Infant formula and follow-on formula</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">candle-fragrance-compliance</span><br>Candles, wax melts, diffusers, home fragrances</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">cosmetics-compliance</span><br>Cosmetics, skincare, haircare, fragrance</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">electronics-compliance</span><br>Electronics, connected devices, battery-powered devices</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">firearms-compliance</span><br>Firearms, ammunition, replicas, airsoft, airguns</li>
+            <li><span class="skill-nom">agricultural-compliance</span><br>Fertilisers, pesticides, seeds, organic farming</li>
+            <li><span class="skill-nom">alcohol-spirits-compliance</span><br>Wine, beer, spirits, excise duty</li>
+            <li><span class="skill-nom">automotive-aftermarket-compliance</span><br>Automotive replacement parts and accessories</li>
+            <li><span class="skill-nom">baby-children-products-compliance</span><br>Pushchairs, cots, high chairs, childcare articles</li>
+            <li><span class="skill-nom">baby-formula-compliance</span><br>Infant formula and follow-on formula</li>
+            <li><span class="skill-nom">candle-fragrance-compliance</span><br>Candles, wax melts, diffusers, home fragrances</li>
+            <li><span class="skill-nom">cosmetics-compliance</span><br>Cosmetics, skincare, haircare, fragrance</li>
+            <li><span class="skill-nom">electronics-compliance</span><br>Electronics, connected devices, battery-powered devices</li>
+            <li><span class="skill-nom">firearms-compliance</span><br>Firearms, ammunition, replicas, airsoft, airguns</li>
           </ul>
           <ul class="t-body" style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px">
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">food-compliance</span><br>Foodstuffs, beverages, novel food</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">herbal-medicine-compliance</span><br>Herbal medicines, ayurveda, Chinese medicine</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">household-chemicals-compliance</span><br>Detergents, cleaners, disinfectants, aerosols, glues</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">jewelry-compliance</span><br>Jewellery, watches, precious metals, gemstones</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">labeling-compliance</span><br>Labelling, INCI nomenclature, CE, UKCA and FCC markings</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">marketplace-compliance</span><br>Amazon, Shopify, Etsy, Walmart, TikTok Shop</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">medical-device-compliance</span><br>Medical devices, IVD, medical device software</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">optical-eyewear-compliance</span><br>Sunglasses, prescription and protective eyewear, goggles</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">packaging-compliance</span><br>Packaging, EPR, packaging waste, single-use plastics</li>
+            <li><span class="skill-nom">food-compliance</span><br>Foodstuffs, beverages, novel food</li>
+            <li><span class="skill-nom">herbal-medicine-compliance</span><br>Herbal medicines, ayurveda, Chinese medicine</li>
+            <li><span class="skill-nom">household-chemicals-compliance</span><br>Detergents, cleaners, disinfectants, aerosols, glues</li>
+            <li><span class="skill-nom">jewelry-compliance</span><br>Jewellery, watches, precious metals, gemstones</li>
+            <li><span class="skill-nom">labeling-compliance</span><br>Labelling, INCI nomenclature, CE, UKCA and FCC markings</li>
+            <li><span class="skill-nom">marketplace-compliance</span><br>Amazon, Shopify, Etsy, Walmart, TikTok Shop</li>
+            <li><span class="skill-nom">medical-device-compliance</span><br>Medical devices, IVD, medical device software</li>
+            <li><span class="skill-nom">optical-eyewear-compliance</span><br>Sunglasses, prescription and protective eyewear, goggles</li>
+            <li><span class="skill-nom">packaging-compliance</span><br>Packaging, EPR, packaging waste, single-use plastics</li>
           </ul>
           <ul class="t-body" style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px">
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">pet-product-compliance</span><br>Pet food, treats, toys and accessories</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">product-compliance</span><br>Compliance of a product on its target markets</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">professional-cosmetics-compliance</span><br>Salon cosmetics, professional colourants and pigments</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">sporting-goods-compliance</span><br>Helmets, PPE, vests, climbing, electric bikes and scooters</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">supplement-compliance</span><br>Supplements, vitamins, minerals, botanicals, probiotics</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">sustainability-compliance</span><br>CSRD, CSDDD, EUDR, CBAM, EPR, digital product passport</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">textile-compliance</span><br>Textiles, apparel, footwear, home linen</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">tobacco-vape-compliance</span><br>Tobacco, vapes, e-liquids, nicotine pouches</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">toy-compliance</span><br>Toys, games, puzzles, ride-ons</li>
+            <li><span class="skill-nom">pet-product-compliance</span><br>Pet food, treats, toys and accessories</li>
+            <li><span class="skill-nom">product-compliance</span><br>Compliance of a product on its target markets</li>
+            <li><span class="skill-nom">professional-cosmetics-compliance</span><br>Salon cosmetics, professional colourants and pigments</li>
+            <li><span class="skill-nom">sporting-goods-compliance</span><br>Helmets, PPE, vests, climbing, electric bikes and scooters</li>
+            <li><span class="skill-nom">supplement-compliance</span><br>Supplements, vitamins, minerals, botanicals, probiotics</li>
+            <li><span class="skill-nom">sustainability-compliance</span><br>CSRD, CSDDD, EUDR, CBAM, EPR, digital product passport</li>
+            <li><span class="skill-nom">textile-compliance</span><br>Textiles, apparel, footwear, home linen</li>
+            <li><span class="skill-nom">tobacco-vape-compliance</span><br>Tobacco, vapes, e-liquids, nicotine pouches</li>
+            <li><span class="skill-nom">toy-compliance</span><br>Toys, games, puzzles, ride-ons</li>
           </ul>
         </div>
 
         <h3 class="t-h2" style="margin-bottom:20px">18 method skills</h3>
         <div class="g3" data-anim-groupe style="margin-bottom:56px">
           <ul class="t-body" style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px">
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">claims-substantiation</span><br>Substantiate a packaging or advertising claim</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">compliance-audit-sprint</span><br>The compliance sprint before launch</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">compliance-frameworks-ref</span><br>The reference set of frameworks and requirements</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">compliance-mcp-tools</span><br>Call the Cleo Legal API, Insight and Bastion MCP tools</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">compliance-remediation</span><br>Fix what stands between you and a market launch</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">compliance-reporting</span><br>The compliance report of a product portfolio</li>
+            <li><span class="skill-nom">claims-substantiation</span><br>Substantiate a packaging or advertising claim</li>
+            <li><span class="skill-nom">compliance-audit-sprint</span><br>The compliance sprint before launch</li>
+            <li><span class="skill-nom">compliance-frameworks-ref</span><br>The reference set of frameworks and requirements</li>
+            <li><span class="skill-nom">compliance-mcp-tools</span><br>Call the Cleo Legal API, Insight and Bastion MCP tools</li>
+            <li><span class="skill-nom">compliance-remediation</span><br>Fix what stands between you and a market launch</li>
+            <li><span class="skill-nom">compliance-reporting</span><br>The compliance report of a product portfolio</li>
           </ul>
           <ul class="t-body" style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px">
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">customs-and-trade</span><br>HS code, customs duties, landed cost, sanctions</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">evidence-blitz</span><br>Gather the evidence for a certification or an audit</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">import-export-docs</span><br>The documents of a shipment on import and on export</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">market-entry-checklist</span><br>The steps to follow to sell in a new country</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">multi-jurisdiction-scan</span><br>The map of a product's rules across several markets</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">product-safety-incident</span><br>The product safety incident and its notification</li>
+            <li><span class="skill-nom">customs-and-trade</span><br>HS code, customs duties, landed cost, sanctions</li>
+            <li><span class="skill-nom">evidence-blitz</span><br>Gather the evidence for a certification or an audit</li>
+            <li><span class="skill-nom">import-export-docs</span><br>The documents of a shipment on import and on export</li>
+            <li><span class="skill-nom">market-entry-checklist</span><br>The steps to follow to sell in a new country</li>
+            <li><span class="skill-nom">multi-jurisdiction-scan</span><br>The map of a product's rules across several markets</li>
+            <li><span class="skill-nom">product-safety-incident</span><br>The product safety incident and its notification</li>
           </ul>
           <ul class="t-body" style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px">
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">recall-response</span><br>The response to a recall or to a safety alert</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">regulatory-calendar</span><br>The deadlines, the renewals, the dates of application</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">regulatory-intelligence</span><br>The watch on what changes and touches the product</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">responsible-person</span><br>The responsible person and the local representative</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">substance-screening</span><br>The screening of substances, INCI to CAS, thresholds</li>
-            <li><span style="color:var(--c-signal);font-weight:600;overflow-wrap:anywhere">testing-certification</span><br>The tests, the laboratories, the lead times and the costs</li>
+            <li><span class="skill-nom">recall-response</span><br>The response to a recall or to a safety alert</li>
+            <li><span class="skill-nom">regulatory-calendar</span><br>The deadlines, the renewals, the dates of application</li>
+            <li><span class="skill-nom">regulatory-intelligence</span><br>The watch on what changes and touches the product</li>
+            <li><span class="skill-nom">responsible-person</span><br>The responsible person and the local representative</li>
+            <li><span class="skill-nom">substance-screening</span><br>The screening of substances, INCI to CAS, thresholds</li>
+            <li><span class="skill-nom">testing-certification</span><br>The tests, the laboratories, the lead times and the costs</li>
           </ul>
         </div>
 
@@ -207,7 +205,7 @@
         <!-- ── En action ── -->
         <div class="t-label" style="margin-bottom:14px">In action</div>
         <h2 class="t-h1" style="margin-bottom:16px">One question. One sourced answer.</h2>
-        <p class="t-body" style="max-width:560px;margin:0 0 32px">Claude Code, or any MCP client,
+        <p class="t-body chapo" style="margin:0 0 32px">Claude Code, or any MCP client,
           selects the right skills on its own, cross-checks the sources and cites the regulation.
           Zero hallucination: every statement is traceable.</p>
 
@@ -238,9 +236,9 @@
           </div>
         </div>
 
-        <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin-bottom:56px">
+        <div class="rang-boutons" style="margin:0 0 56px">
           <a class="btn btn-contour btn-sm" href="12-article.html">Read the launch post</a>
-          <a class="t-caption" href="11-blog.html" style="color:var(--c-signal);font-weight:600">Read the skills</a>
+          <a class="t-body lien-signal" href="#inventaire">Read the 45 skills</a>
         </div>
 
         <div style="height:1px;background:var(--c-border);margin-bottom:48px"></div>

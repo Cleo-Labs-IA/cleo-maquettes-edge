@@ -768,6 +768,48 @@
    "url_source": null,
    "_appui": "pages/99-404.html",
    "_ecrit_le": "2026-09-03"
+  },
+  "27-article-levee.html": {
+   "titre": "Cleo Labs lève 1,5 M€ pour automatiser la conformité réglementaire produit à l’échelle mondiale | Cleo Labs",
+   "description": "Tour mené par Larry Berger, aux côtés de Kima Ventures, Financière Saint-James et plusieurs figures du tech : complété par un financement de Deel. Cleo Labs accélère son développement technologique, structure son expansion européenne et prépare son entrée sur le marché américain.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr/blog/cleo-labs-raises-1-5m-preseed",
+   "_releve_le": "2026-09-03"
+  },
+  "27-article-levee-en.html": {
+   "titre": "Cleo Labs raises €1.5M to automate product regulatory compliance at a global scale | Cleo Labs",
+   "description": "Round led by Larry Berger, with Kima Ventures, Financière Saint-James, and several tech ecosystem figures: plus additional funding from Deel. Cleo Labs will accelerate technology development, structure European expansion, and prepare for entry into the U.S. market.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/en/blog/cleo-labs-raises-1-5m-preseed",
+   "_releve_le": "2026-09-03"
+  },
+  "28-article-vivatech.html": {
+   "titre": "Cleo Labs remporte le Scaleway Startup Challenge et sera présente à VivaTech 2026 | Cleo Labs",
+   "description": "Cleo Labs est lauréate du Scaleway Startup Challenge à VivaTech 2026 (« product compliance for global brands ») : jusqu’à 250 000 € de crédits cloud et un accompagnement dédié Scaleway. Rendez-vous sur le stand Scaleway, 17–20 juin, Hall 7.3 – Booth 3F10, Porte de Versailles, Paris.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr/blog/cleo-labs-vivatech-2026-scaleway-startup-challenge",
+   "_releve_le": "2026-09-03"
+  },
+  "28-article-vivatech-en.html": {
+   "titre": "Cleo Labs wins the Scaleway Startup Challenge and joins VivaTech 2026 | Cleo Labs",
+   "description": "Cleo Labs is the winner of the Scaleway Startup Challenge at VivaTech 2026 (“product compliance for global brands”): up to €250K in cloud credits and dedicated Scaleway support. Meet the team on the Scaleway booth, June 17–20, Hall 7.3 – Booth 3F10, Porte de Versailles, Paris.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/en/blog/cleo-labs-vivatech-2026-scaleway-startup-challenge",
+   "_releve_le": "2026-09-03"
+  },
+  "29-article-deel.html": {
+   "titre": "Conformité produit mondiale en 2026 : pourquoi nous avons gagné The Pitch by Deel | Cleo Labs",
+   "description": "Chaque produit physique vendu à l'international fait face à plus de 100 réglementations, de la R&D aux douanes. Voici comment Cleo Labs automatise la conformité produit mondiale avec l'IA, et pourquoi Deel nous a choisis comme vainqueurs à Station F.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr/blog/global-product-compliance-pitch-by-deel",
+   "_releve_le": "2026-09-03"
+  },
+  "29-article-deel-en.html": {
+   "titre": "Global Product Compliance in 2026: Why We Won the Pitch by Deel | Cleo Labs",
+   "description": "Every physical product sold globally faces 100+ regulations across R&D, manufacturing, labelling, and customs. Here's how Cleo Labs is automating global product compliance with AI, and why Deel just picked us as their winner at Station F.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/en/blog/global-product-compliance-pitch-by-deel",
+   "_releve_le": "2026-09-03"
   }
  },
  "structure": {

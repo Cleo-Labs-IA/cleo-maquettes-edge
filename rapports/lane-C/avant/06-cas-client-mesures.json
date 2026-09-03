@@ -1,0 +1,63 @@
+{
+  "nom": "06-cas-client",
+  "desktop": {
+    "largeurDoc": 1440,
+    "largeurFenetre": 1440,
+    "debordement": false,
+    "hauteur": 3941,
+    "h1": {
+      "texte": "Decathlon tient sa conformité sur des dizaines de marchés",
+      "taille": "51.84px",
+      "graisse": "500",
+      "classe": "t-hero"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 26,
+    "textesSous12": 3,
+    "ciblesSous40": 49,
+    "paragrapheLePlusLarge": 688,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 525,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "Cas client Decathlon, conformité multi-marchés | Cleo Labs",
+    "description": 140
+  },
+  "mobile": {
+    "largeurDoc": 390,
+    "largeurFenetre": 390,
+    "debordement": false,
+    "hauteur": 8101,
+    "h1": {
+      "texte": "Decathlon tient sa conformité sur des dizaines de marchés",
+      "taille": "36px",
+      "graisse": "500",
+      "classe": "t-hero"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 13,
+    "textesSous12": 0,
+    "ciblesSous40": 5,
+    "paragrapheLePlusLarge": 334,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 1919,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "Cas client Decathlon, conformité multi-marchés | Cleo Labs",
+    "description": 140
+  },
+  "tranches": {
+    "desktop": 2,
+    "mobile": 6
+  },
+  "erreursConsole": [],
+  "capture": "2026-09-03T08:44:42.377Z"
+}

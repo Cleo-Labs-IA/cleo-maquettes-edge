@@ -1,0 +1,3426 @@
+{
+  "02-entreprise": {
+    "nom": "02-entreprise",
+    "desktop": {
+      "petits": [
+        {
+          "px": "13px",
+          "t": "Chaque parution rattachée à vos références",
+          "c": "div.mega > div.mega-grille.g4 > a.mega-item > span > i"
+        },
+        {
+          "px": "13px",
+          "t": "La question posée, l'article en réponse",
+          "c": "div.mega > div.mega-grille.g4 > a.mega-item > span > i"
+        },
+        {
+          "px": "13px",
+          "t": "Le verdict par référence, appelable depuis vos systèmes",
+          "c": "div.mega > div.mega-grille.g4 > a.mega-item > span > i"
+        },
+        {
+          "px": "13px",
+          "t": "Nos experts rédigent, relisent et signent",
+          "c": "div.mega > div.mega-grille.g4 > a.mega-item > span > i"
+        },
+        {
+          "px": "12px",
+          "t": "Vous ne savez pas par où commencer ? Parlez-en à l'équipe, o",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > div.mega > div.mega-pied"
+        },
+        {
+          "px": "11px",
+          "t": "Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a > span.mega-badge"
+        },
+        {
+          "px": "11px",
+          "t": "Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a > span.mega-badge"
+        },
+        {
+          "px": "11px",
+          "t": "Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a > span.mega-badge"
+        },
+        {
+          "px": "12px",
+          "t": "Un texte qui ne figure pas ici ? Dites-nous lequel, on vous ",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > div.mega.mega-large > div.mega-pied"
+        },
+        {
+          "px": "13px",
+          "t": "Voir une démo",
+          "c": "body > nav.nav > div.conteneur > div.nav-fin > a.btn.btn-marque.btn-sm"
+        },
+        {
+          "px": "12px",
+          "t": "L'équipe derrière Cleo",
+          "c": "main > section.seg.sur-sombre > div.conteneur > div > div.surtitre.sur-clair"
+        },
+        {
+          "px": "12px",
+          "t": "1,5 M€ levés en pre-seed",
+          "c": "div.conteneur > div.seg-ancrage > div.seg-ancrage-cartes > div.flottant > span.t-caption.dit"
+        },
+        {
+          "px": "12px",
+          "t": "Vu au CES 2026",
+          "c": "div.conteneur > div.seg-ancrage > div.seg-ancrage-cartes > div.flottant > span.t-caption.dit"
+        },
+        {
+          "px": "12px",
+          "t": "MARIA, architecture multi-agents de veille réglementaire",
+          "c": "div.conteneur > div.seg-ancrage > div.seg-ancrage-cartes > div.flottant > span.t-caption.dit"
+        },
+        {
+          "px": "12px",
+          "t": "Nous rencontrer",
+          "c": "div.conteneur > div.seg-ancrage > div.flottant.seg-ancrage-lieu > span.t-caption.dit > b"
+        },
+        {
+          "px": "12px",
+          "t": "Financement",
+          "c": "div.conteneur > div.carte.vu > div.duo > div > div.surtitre"
+        },
+        {
+          "px": "13px",
+          "t": "Lire l'annonce",
+          "c": "div.carte.vu > div.duo > div > div > a.btn.btn-contour.btn-sm"
+        },
+        {
+          "px": "12px",
+          "t": "Lauréate, The Pitch by Deel (Station F, 2026)",
+          "c": "div.carte.vu > div.duo > div > div > span.pilule.t-caption"
+        },
+        {
+          "px": "12px",
+          "t": "Les financeurs",
+          "c": "div.conteneur > div.carte.vu > div.duo > div > div.t-label"
+        },
+        {
+          "px": "12px",
+          "t": "Tour pre-seed, 1,5 M€.",
+          "c": "div.conteneur > div.carte.vu > div.duo > div > div.t-caption"
+        },
+        {
+          "px": "12px",
+          "t": "Dans la presse",
+          "c": "main > section.seg.section.sur-clair-fond > div.conteneur > div.entete-section.centre.vu > div.surtitre"
+        },
+        {
+          "px": "12px",
+          "t": "29 avril 2026",
+          "c": "div.conteneur > div.g3.vu > a.carte > div > span.t-caption"
+        },
+        {
+          "px": "12px",
+          "t": "avril 2026",
+          "c": "div.conteneur > div.g3.vu > a.carte > div > span.t-caption"
+        },
+        {
+          "px": "12px",
+          "t": "29 avril 2026",
+          "c": "div.conteneur > div.g3.vu > a.carte > div > span.t-caption"
+        },
+        {
+          "px": "12px",
+          "t": "Recherche",
+          "c": "section.seg.section.sur-clair-fond > div.conteneur > div > a.ligne-liste > span.pilule"
+        },
+        {
+          "px": "12px",
+          "t": "Une approche multi-agents par pipeline pour l’intelligence r",
+          "c": "div.conteneur > div > a.ligne-liste > div.principal > div.t-caption"
+        },
+        {
+          "px": "12px",
+          "t": "Neuilly-sur-Seine, France",
+          "c": "div.conteneur > div.pied-identite > div.pied-coordonnees > div > div.t-micro"
+        },
+        {
+          "px": "12px",
+          "t": "contact@cleolabs.co",
+          "c": "div.pied-identite > div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "px": "12px",
+          "t": "Réserver 30 minutes",
+          "c": "div.pied-identite > div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "px": "12px",
+          "t": "Conditions générales",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Politique de confidentialité",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Cleo Corp SAS, SIREN 984567883",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > span"
+        }
+      ],
+      "cibles": [
+        {
+          "w": 59,
+          "h": 24,
+          "t": "Produit",
+          "c": "nav.nav > div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 53,
+          "h": 24,
+          "t": "Textes",
+          "c": "nav.nav > div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "PPWR Actualité",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "REACH",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "RSGP",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "ESPR / Passeport Actualité",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "EN 71",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Allégations vertes",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Batteries",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "EPI",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "AI Act",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Proposition 65",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "PFAS Actualité",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "TSCA",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "ASTM F963",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "TB 117",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Loi 96 (Québec)",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "CPSIA",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "FTC Green Guides",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 84,
+          "h": 24,
+          "t": "Ressources",
+          "c": "nav.nav > div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 63,
+          "h": 24,
+          "t": "Entreprise",
+          "c": "nav.nav > div.conteneur > div.nav-liens > div.nav-item > a.nav-declencheur"
+        },
+        {
+          "w": 66,
+          "h": 24,
+          "t": "Connexion",
+          "c": "body > nav.nav > div.conteneur > div.nav-fin > a.lien-secondaire"
+        },
+        {
+          "w": 118,
+          "h": 30,
+          "t": "Regulatory Change",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 56,
+          "h": 30,
+          "t": "Research",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 106,
+          "h": 30,
+          "t": "Compliance Data",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 149,
+          "h": 30,
+          "t": "Compliance as a service",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 63,
+          "h": 30,
+          "t": "Fabricants",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 172,
+          "h": 30,
+          "t": "Importateurs et distributeurs",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 81,
+          "h": 30,
+          "t": "Marketplaces",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 117,
+          "h": 30,
+          "t": "Conformité produit",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 53,
+          "h": 30,
+          "t": "Secteurs",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 114,
+          "h": 30,
+          "t": "Union européenne",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 150,
+          "h": 30,
+          "t": "PPWR, article par article",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 65,
+          "h": 30,
+          "t": "Legal Data",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 28,
+          "h": 30,
+          "t": "Blog",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 131,
+          "h": 30,
+          "t": "Travaux de recherche",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 30,
+          "h": 30,
+          "t": "Skills",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 158,
+          "h": 30,
+          "t": "Journal des changements",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 125,
+          "h": 30,
+          "t": "Plan d'action MARIA",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 56,
+          "h": 30,
+          "t": "À propos",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 127,
+          "h": 30,
+          "t": "Cas client Decathlon",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 50,
+          "h": 30,
+          "t": "Sécurité",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 78,
+          "h": 30,
+          "t": "Recrutement",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 123,
+          "h": 30,
+          "t": "Demander un accès",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 109,
+          "h": 15,
+          "t": "contact@cleolabs.co",
+          "c": "div.pied-identite > div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "w": 109,
+          "h": 15,
+          "t": "Réserver 30 minutes",
+          "c": "div.pied-identite > div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "w": 111,
+          "h": 28,
+          "t": "Conditions générales",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "w": 139,
+          "h": 28,
+          "t": "Politique de confidentialité",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > a"
+        }
+      ],
+      "liens": [
+        "#contenu",
+        "/fr",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/research",
+        "/fr/blog",
+        "/fr/skills",
+        "/fr/company",
+        "https://insight.cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/research",
+        "/fr/blog",
+        "/fr/skills",
+        "/fr/company",
+        "https://insight.cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "https://www.linkedin.com/in/anaelle-guez-ab341746/",
+        "https://www.linkedin.com/in/naomiehalioua/",
+        "https://www.cleolabs.co/fr/blog/cleo-labs-raises-1-5m-preseed",
+        "https://tech.eu/2026/04/29/cleo-labs-secures-eur15m-to-scale-ai-driven-product-compliance-globally/",
+        "https://www.eu-startups.com/2026/04/female-founded-french-startup-cleo-labs-raises-e1-5-million-to-automate-international-product-compliance/",
+        "https://www.vestbee.com/insights/articles/cleo-labs-raises-1-5-m",
+        "https://fintech.global/2026/04/29/cleo-labs-secures-e1-5m-for-global-product-compliance/",
+        "https://regtechanalyst.com/cleo-labs-raises-e1-5m-to-scale-ai-compliance-platform/",
+        "https://thelegalwire.ai/cleo-labs-raises-e1-5m-to-automate-product-regulatory-compliance-at-a-global-scale/",
+        "https://www.cleolabs.co/fr/research",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/for/manufacturers",
+        "/fr/for/importers-distributors",
+        "/fr/for/marketplaces",
+        "/fr/solutions/product-compliance",
+        "/fr/industries",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/legal-data",
+        "/fr/blog",
+        "/fr/research",
+        "/fr/skills",
+        "/fr/changelog",
+        "/fr/maria-action-plan",
+        "/fr/company",
+        "/fr/customers",
+        "/fr/security",
+        "/fr/careers",
+        "/fr/meet",
+        "mailto:contact@cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/terms",
+        "/fr/terms"
+      ],
+      "larges": [],
+      "troptot": [
+        {
+          "sw": 370,
+          "cw": 330,
+          "c": "main > section.seg.section > div.conteneur > div.g3.seg-equipe.vu > div.carte-lavande.seg-equipe-mot",
+          "t": "Et l'équipe qui encode, relit et met à j"
+        }
+      ]
+    },
+    "mobile": {
+      "petits": [],
+      "cibles": [],
+      "liens": [
+        "#contenu",
+        "/fr",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/research",
+        "/fr/blog",
+        "/fr/skills",
+        "/fr/company",
+        "https://insight.cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/research",
+        "/fr/blog",
+        "/fr/skills",
+        "/fr/company",
+        "https://insight.cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "https://www.linkedin.com/in/anaelle-guez-ab341746/",
+        "https://www.linkedin.com/in/naomiehalioua/",
+        "https://www.cleolabs.co/fr/blog/cleo-labs-raises-1-5m-preseed",
+        "https://tech.eu/2026/04/29/cleo-labs-secures-eur15m-to-scale-ai-driven-product-compliance-globally/",
+        "https://www.eu-startups.com/2026/04/female-founded-french-startup-cleo-labs-raises-e1-5-million-to-automate-international-product-compliance/",
+        "https://www.vestbee.com/insights/articles/cleo-labs-raises-1-5-m",
+        "https://fintech.global/2026/04/29/cleo-labs-secures-e1-5m-for-global-product-compliance/",
+        "https://regtechanalyst.com/cleo-labs-raises-e1-5m-to-scale-ai-compliance-platform/",
+        "https://thelegalwire.ai/cleo-labs-raises-e1-5m-to-automate-product-regulatory-compliance-at-a-global-scale/",
+        "https://www.cleolabs.co/fr/research",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/for/manufacturers",
+        "/fr/for/importers-distributors",
+        "/fr/for/marketplaces",
+        "/fr/solutions/product-compliance",
+        "/fr/industries",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/legal-data",
+        "/fr/blog",
+        "/fr/research",
+        "/fr/skills",
+        "/fr/changelog",
+        "/fr/maria-action-plan",
+        "/fr/company",
+        "/fr/customers",
+        "/fr/security",
+        "/fr/careers",
+        "/fr/meet",
+        "mailto:contact@cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/terms",
+        "/fr/terms"
+      ],
+      "larges": [],
+      "troptot": [
+        {
+          "sw": 372,
+          "cw": 332,
+          "c": "main > section.seg.section > div.conteneur > div.g3.seg-equipe.vu > div.carte-lavande.seg-equipe-mot",
+          "t": "Et l'équipe qui encode, relit et met à j"
+        }
+      ]
+    }
+  },
+  "04-secteur": {
+    "nom": "04-secteur",
+    "desktop": {
+      "petits": [
+        {
+          "px": "13px",
+          "t": "Chaque parution rattachée à vos références",
+          "c": "div.mega > div.mega-grille.g4 > a.mega-item > span > i"
+        },
+        {
+          "px": "13px",
+          "t": "La question posée, l'article en réponse",
+          "c": "div.mega > div.mega-grille.g4 > a.mega-item > span > i"
+        },
+        {
+          "px": "13px",
+          "t": "Le verdict par référence, appelable depuis vos systèmes",
+          "c": "div.mega > div.mega-grille.g4 > a.mega-item > span > i"
+        },
+        {
+          "px": "13px",
+          "t": "Nos experts rédigent, relisent et signent",
+          "c": "div.mega > div.mega-grille.g4 > a.mega-item > span > i"
+        },
+        {
+          "px": "12px",
+          "t": "Vous ne savez pas par où commencer ? Parlez-en à l'équipe, o",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > div.mega > div.mega-pied"
+        },
+        {
+          "px": "11px",
+          "t": "Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a > span.mega-badge"
+        },
+        {
+          "px": "11px",
+          "t": "Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a > span.mega-badge"
+        },
+        {
+          "px": "11px",
+          "t": "Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a > span.mega-badge"
+        },
+        {
+          "px": "12px",
+          "t": "Un texte qui ne figure pas ici ? Dites-nous lequel, on vous ",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > div.mega.mega-large > div.mega-pied"
+        },
+        {
+          "px": "13px",
+          "t": "Voir une démo",
+          "c": "body > nav.nav > div.conteneur > div.nav-fin > a.btn.btn-marque.btn-sm"
+        },
+        {
+          "px": "12px",
+          "t": "Prénom",
+          "c": "div.duo > div.carte-encre.form-carte.vu > div.paire > div > label"
+        },
+        {
+          "px": "12px",
+          "t": "Nom",
+          "c": "div.duo > div.carte-encre.form-carte.vu > div.paire > div > label"
+        },
+        {
+          "px": "12px",
+          "t": "Email professionnel",
+          "c": "section.seg.section > div.conteneur > div.duo > div.carte-encre.form-carte.vu > label"
+        },
+        {
+          "px": "12px",
+          "t": "Site de la marque",
+          "c": "section.seg.section > div.conteneur > div.duo > div.carte-encre.form-carte.vu > label"
+        },
+        {
+          "px": "12px",
+          "t": "Aux côtés de marques et de fabricants internationaux",
+          "c": "body > main > section.seg.sur-sombre > div.conteneur > div.centre.t-micro"
+        },
+        {
+          "px": "12px",
+          "t": "Regulatory Change",
+          "c": "section.seg.section.fond-lavande > div.conteneur > div.alterne > div.texte.vu > span.etiquette"
+        },
+        {
+          "px": "12px",
+          "t": "Research",
+          "c": "section.seg.section.fond-lavande > div.conteneur > div.alterne.inverse > div.texte.vu > span.etiquette"
+        },
+        {
+          "px": "12px",
+          "t": "Compliance Data",
+          "c": "section.seg.section.fond-lavande > div.conteneur > div.alterne > div.texte.vu > span.etiquette"
+        },
+        {
+          "px": "12px",
+          "t": "Composant par composant",
+          "c": "div.conteneur > div.scene-large.vu > div.dessus > div.seg-scene-texte > div.t-label"
+        },
+        {
+          "px": "12px",
+          "t": "Substances",
+          "c": "div.g4.vu > div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "Étiquetage",
+          "c": "div.g4.vu > div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "2023/988",
+          "c": "div.g4.vu > div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "Passeport",
+          "c": "div.g4.vu > div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "Le plus pris",
+          "c": "section.seg.section.fond-lavande > div.conteneur > div.g3.vu > div.carte.p32 > span.etiquette"
+        },
+        {
+          "px": "13px",
+          "t": "En savoir plus",
+          "c": "section.seg.section.fond-lavande > div.conteneur > div.g3.vu > div.carte.p32 > a.btn.btn-contour.btn-sm"
+        },
+        {
+          "px": "13px",
+          "t": "En savoir plus",
+          "c": "section.seg.section.fond-lavande > div.conteneur > div.g3.vu > div.carte.p32 > a.btn.btn-contour.btn-sm"
+        },
+        {
+          "px": "13px",
+          "t": "En savoir plus",
+          "c": "section.seg.section.fond-lavande > div.conteneur > div.g3.vu > div.carte.p32 > a.btn.btn-contour.btn-sm"
+        },
+        {
+          "px": "12px",
+          "t": "Product Compliance Operations Manager, Decathlon",
+          "c": "div.temoignage.vu > div > div.auteur > div > div.t-micro"
+        },
+        {
+          "px": "12px",
+          "t": "Neuilly-sur-Seine, France",
+          "c": "div.conteneur > div.pied-identite > div.pied-coordonnees > div > div.t-micro"
+        },
+        {
+          "px": "12px",
+          "t": "contact@cleolabs.co",
+          "c": "div.pied-identite > div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "px": "12px",
+          "t": "Réserver 30 minutes",
+          "c": "div.pied-identite > div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "px": "12px",
+          "t": "Conditions générales",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Politique de confidentialité",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Cleo Corp SAS, SIREN 984567883",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > span"
+        }
+      ],
+      "cibles": [
+        {
+          "w": 59,
+          "h": 24,
+          "t": "Produit",
+          "c": "nav.nav > div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 53,
+          "h": 24,
+          "t": "Textes",
+          "c": "nav.nav > div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "PPWR Actualité",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "REACH",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "RSGP",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "ESPR / Passeport Actualité",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "EN 71",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Allégations vertes",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Batteries",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "EPI",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "AI Act",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Proposition 65",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "PFAS Actualité",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "TSCA",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "ASTM F963",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "TB 117",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Loi 96 (Québec)",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "CPSIA",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "FTC Green Guides",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 84,
+          "h": 24,
+          "t": "Ressources",
+          "c": "nav.nav > div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 63,
+          "h": 24,
+          "t": "Entreprise",
+          "c": "nav.nav > div.conteneur > div.nav-liens > div.nav-item > a.nav-declencheur"
+        },
+        {
+          "w": 66,
+          "h": 24,
+          "t": "Connexion",
+          "c": "body > nav.nav > div.conteneur > div.nav-fin > a.lien-secondaire"
+        },
+        {
+          "w": 118,
+          "h": 30,
+          "t": "Regulatory Change",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 56,
+          "h": 30,
+          "t": "Research",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 106,
+          "h": 30,
+          "t": "Compliance Data",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 149,
+          "h": 30,
+          "t": "Compliance as a service",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 63,
+          "h": 30,
+          "t": "Fabricants",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 172,
+          "h": 30,
+          "t": "Importateurs et distributeurs",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 81,
+          "h": 30,
+          "t": "Marketplaces",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 117,
+          "h": 30,
+          "t": "Conformité produit",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 53,
+          "h": 30,
+          "t": "Secteurs",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 114,
+          "h": 30,
+          "t": "Union européenne",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 150,
+          "h": 30,
+          "t": "PPWR, article par article",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 65,
+          "h": 30,
+          "t": "Legal Data",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 28,
+          "h": 30,
+          "t": "Blog",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 131,
+          "h": 30,
+          "t": "Travaux de recherche",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 30,
+          "h": 30,
+          "t": "Skills",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 158,
+          "h": 30,
+          "t": "Journal des changements",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 125,
+          "h": 30,
+          "t": "Plan d'action MARIA",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 56,
+          "h": 30,
+          "t": "À propos",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 127,
+          "h": 30,
+          "t": "Cas client Decathlon",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 50,
+          "h": 30,
+          "t": "Sécurité",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 78,
+          "h": 30,
+          "t": "Recrutement",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 123,
+          "h": 30,
+          "t": "Demander un accès",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 109,
+          "h": 15,
+          "t": "contact@cleolabs.co",
+          "c": "div.pied-identite > div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "w": 109,
+          "h": 15,
+          "t": "Réserver 30 minutes",
+          "c": "div.pied-identite > div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "w": 111,
+          "h": 28,
+          "t": "Conditions générales",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "w": 139,
+          "h": 28,
+          "t": "Politique de confidentialité",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > a"
+        }
+      ],
+      "liens": [
+        "#contenu",
+        "/fr",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/research",
+        "/fr/blog",
+        "/fr/skills",
+        "/fr/company",
+        "https://insight.cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/research",
+        "/fr/blog",
+        "/fr/skills",
+        "/fr/company",
+        "https://insight.cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/for/manufacturers",
+        "/fr/for/importers-distributors",
+        "/fr/for/marketplaces",
+        "/fr/solutions/product-compliance",
+        "/fr/industries",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/legal-data",
+        "/fr/blog",
+        "/fr/research",
+        "/fr/skills",
+        "/fr/changelog",
+        "/fr/maria-action-plan",
+        "/fr/company",
+        "/fr/customers",
+        "/fr/security",
+        "/fr/careers",
+        "/fr/meet",
+        "mailto:contact@cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/terms",
+        "/fr/terms"
+      ],
+      "larges": [
+        {
+          "largeur": 620,
+          "cpl": 85,
+          "lignes": 7,
+          "t": "« Chez Decathlon, notre défi est de capter des inf",
+          "c": "section.seg.section > div.conteneur > div.temoignage.vu > div > p.citation"
+        }
+      ],
+      "troptot": []
+    },
+    "mobile": {
+      "petits": [],
+      "cibles": [],
+      "liens": [
+        "#contenu",
+        "/fr",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/research",
+        "/fr/blog",
+        "/fr/skills",
+        "/fr/company",
+        "https://insight.cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/research",
+        "/fr/blog",
+        "/fr/skills",
+        "/fr/company",
+        "https://insight.cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/for/manufacturers",
+        "/fr/for/importers-distributors",
+        "/fr/for/marketplaces",
+        "/fr/solutions/product-compliance",
+        "/fr/industries",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/legal-data",
+        "/fr/blog",
+        "/fr/research",
+        "/fr/skills",
+        "/fr/changelog",
+        "/fr/maria-action-plan",
+        "/fr/company",
+        "/fr/customers",
+        "/fr/security",
+        "/fr/careers",
+        "/fr/meet",
+        "mailto:contact@cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/terms",
+        "/fr/terms"
+      ],
+      "larges": [],
+      "troptot": []
+    }
+  },
+  "05-marche": {
+    "nom": "05-marche",
+    "desktop": {
+      "petits": [
+        {
+          "px": "13px",
+          "t": "Chaque parution rattachée à vos références",
+          "c": "div.mega > div.mega-grille.g4 > a.mega-item > span > i"
+        },
+        {
+          "px": "13px",
+          "t": "La question posée, l'article en réponse",
+          "c": "div.mega > div.mega-grille.g4 > a.mega-item > span > i"
+        },
+        {
+          "px": "13px",
+          "t": "Le verdict par référence, appelable depuis vos systèmes",
+          "c": "div.mega > div.mega-grille.g4 > a.mega-item > span > i"
+        },
+        {
+          "px": "13px",
+          "t": "Nos experts rédigent, relisent et signent",
+          "c": "div.mega > div.mega-grille.g4 > a.mega-item > span > i"
+        },
+        {
+          "px": "12px",
+          "t": "Vous ne savez pas par où commencer ? Parlez-en à l'équipe, o",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > div.mega > div.mega-pied"
+        },
+        {
+          "px": "11px",
+          "t": "Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a > span.mega-badge"
+        },
+        {
+          "px": "11px",
+          "t": "Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a > span.mega-badge"
+        },
+        {
+          "px": "11px",
+          "t": "Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a > span.mega-badge"
+        },
+        {
+          "px": "12px",
+          "t": "Un texte qui ne figure pas ici ? Dites-nous lequel, on vous ",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > div.mega.mega-large > div.mega-pied"
+        },
+        {
+          "px": "13px",
+          "t": "Voir une démo",
+          "c": "body > nav.nav > div.conteneur > div.nav-fin > a.btn.btn-marque.btn-sm"
+        },
+        {
+          "px": "12px",
+          "t": "Prénom",
+          "c": "div.duo > div.carte-encre.form-carte.vu > div.paire > div > label"
+        },
+        {
+          "px": "12px",
+          "t": "Nom",
+          "c": "div.duo > div.carte-encre.form-carte.vu > div.paire > div > label"
+        },
+        {
+          "px": "12px",
+          "t": "Email professionnel",
+          "c": "section.seg.section > div.conteneur > div.duo > div.carte-encre.form-carte.vu > label"
+        },
+        {
+          "px": "12px",
+          "t": "Site de la marque",
+          "c": "section.seg.section > div.conteneur > div.duo > div.carte-encre.form-carte.vu > label"
+        },
+        {
+          "px": "12px",
+          "t": "Aux côtés de marques et de fabricants internationaux",
+          "c": "body > main > section.seg.sur-sombre > div.conteneur > div.centre.t-micro"
+        },
+        {
+          "px": "12px",
+          "t": "Regulatory Change",
+          "c": "section.seg.section.fond-lavande > div.conteneur > div.alterne > div.texte.vu > span.etiquette"
+        },
+        {
+          "px": "12px",
+          "t": "Research",
+          "c": "section.seg.section.fond-lavande > div.conteneur > div.alterne.inverse > div.texte.vu > span.etiquette"
+        },
+        {
+          "px": "12px",
+          "t": "Compliance Data",
+          "c": "section.seg.section.fond-lavande > div.conteneur > div.alterne > div.texte.vu > span.etiquette"
+        },
+        {
+          "px": "12px",
+          "t": "Vingt-sept États membres",
+          "c": "div.conteneur > div.scene-large.vu > div.dessus > div.seg-scene-texte > div.t-label"
+        },
+        {
+          "px": "12px",
+          "t": "1907/2006",
+          "c": "div.g4.vu > div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "2023/988",
+          "c": "div.g4.vu > div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "2025/40",
+          "c": "div.g4.vu > div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "2023/1542",
+          "c": "div.g4.vu > div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "Product Compliance Operations Manager, Decathlon",
+          "c": "div.temoignage.vu > div > div.auteur > div > div.t-micro"
+        },
+        {
+          "px": "12px",
+          "t": "Neuilly-sur-Seine, France",
+          "c": "div.conteneur > div.pied-identite > div.pied-coordonnees > div > div.t-micro"
+        },
+        {
+          "px": "12px",
+          "t": "contact@cleolabs.co",
+          "c": "div.pied-identite > div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "px": "12px",
+          "t": "Réserver 30 minutes",
+          "c": "div.pied-identite > div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "px": "12px",
+          "t": "Conditions générales",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Politique de confidentialité",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Cleo Corp SAS, SIREN 984567883",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > span"
+        }
+      ],
+      "cibles": [
+        {
+          "w": 59,
+          "h": 24,
+          "t": "Produit",
+          "c": "nav.nav > div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 53,
+          "h": 24,
+          "t": "Textes",
+          "c": "nav.nav > div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "PPWR Actualité",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "REACH",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "RSGP",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "ESPR / Passeport Actualité",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "EN 71",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Allégations vertes",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Batteries",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "EPI",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "AI Act",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Proposition 65",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "PFAS Actualité",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "TSCA",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "ASTM F963",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "TB 117",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Loi 96 (Québec)",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "CPSIA",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "FTC Green Guides",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 84,
+          "h": 24,
+          "t": "Ressources",
+          "c": "nav.nav > div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 63,
+          "h": 24,
+          "t": "Entreprise",
+          "c": "nav.nav > div.conteneur > div.nav-liens > div.nav-item > a.nav-declencheur"
+        },
+        {
+          "w": 66,
+          "h": 24,
+          "t": "Connexion",
+          "c": "body > nav.nav > div.conteneur > div.nav-fin > a.lien-secondaire"
+        },
+        {
+          "w": 118,
+          "h": 30,
+          "t": "Regulatory Change",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 56,
+          "h": 30,
+          "t": "Research",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 106,
+          "h": 30,
+          "t": "Compliance Data",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 149,
+          "h": 30,
+          "t": "Compliance as a service",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 63,
+          "h": 30,
+          "t": "Fabricants",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 172,
+          "h": 30,
+          "t": "Importateurs et distributeurs",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 81,
+          "h": 30,
+          "t": "Marketplaces",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 117,
+          "h": 30,
+          "t": "Conformité produit",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 53,
+          "h": 30,
+          "t": "Secteurs",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 114,
+          "h": 30,
+          "t": "Union européenne",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 150,
+          "h": 30,
+          "t": "PPWR, article par article",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 65,
+          "h": 30,
+          "t": "Legal Data",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 28,
+          "h": 30,
+          "t": "Blog",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 131,
+          "h": 30,
+          "t": "Travaux de recherche",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 30,
+          "h": 30,
+          "t": "Skills",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 158,
+          "h": 30,
+          "t": "Journal des changements",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 125,
+          "h": 30,
+          "t": "Plan d'action MARIA",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 56,
+          "h": 30,
+          "t": "À propos",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 127,
+          "h": 30,
+          "t": "Cas client Decathlon",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 50,
+          "h": 30,
+          "t": "Sécurité",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 78,
+          "h": 30,
+          "t": "Recrutement",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 123,
+          "h": 30,
+          "t": "Demander un accès",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 109,
+          "h": 15,
+          "t": "contact@cleolabs.co",
+          "c": "div.pied-identite > div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "w": 109,
+          "h": 15,
+          "t": "Réserver 30 minutes",
+          "c": "div.pied-identite > div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "w": 111,
+          "h": 28,
+          "t": "Conditions générales",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "w": 139,
+          "h": 28,
+          "t": "Politique de confidentialité",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > a"
+        }
+      ],
+      "liens": [
+        "#contenu",
+        "/fr",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/research",
+        "/fr/blog",
+        "/fr/skills",
+        "/fr/company",
+        "https://insight.cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/research",
+        "/fr/blog",
+        "/fr/skills",
+        "/fr/company",
+        "https://insight.cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/for/manufacturers",
+        "/fr/for/importers-distributors",
+        "/fr/for/marketplaces",
+        "/fr/solutions/product-compliance",
+        "/fr/industries",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/legal-data",
+        "/fr/blog",
+        "/fr/research",
+        "/fr/skills",
+        "/fr/changelog",
+        "/fr/maria-action-plan",
+        "/fr/company",
+        "/fr/customers",
+        "/fr/security",
+        "/fr/careers",
+        "/fr/meet",
+        "mailto:contact@cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/terms",
+        "/fr/terms"
+      ],
+      "larges": [
+        {
+          "largeur": 620,
+          "cpl": 85,
+          "lignes": 7,
+          "t": "« Chez Decathlon, notre défi est de capter des inf",
+          "c": "section.seg.section > div.conteneur > div.temoignage.vu > div > p.citation"
+        }
+      ],
+      "troptot": []
+    },
+    "mobile": {
+      "petits": [],
+      "cibles": [],
+      "liens": [
+        "#contenu",
+        "/fr",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/research",
+        "/fr/blog",
+        "/fr/skills",
+        "/fr/company",
+        "https://insight.cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/research",
+        "/fr/blog",
+        "/fr/skills",
+        "/fr/company",
+        "https://insight.cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/for/manufacturers",
+        "/fr/for/importers-distributors",
+        "/fr/for/marketplaces",
+        "/fr/solutions/product-compliance",
+        "/fr/industries",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/legal-data",
+        "/fr/blog",
+        "/fr/research",
+        "/fr/skills",
+        "/fr/changelog",
+        "/fr/maria-action-plan",
+        "/fr/company",
+        "/fr/customers",
+        "/fr/security",
+        "/fr/careers",
+        "/fr/meet",
+        "mailto:contact@cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/terms",
+        "/fr/terms"
+      ],
+      "larges": [],
+      "troptot": []
+    }
+  },
+  "06-cas-client": {
+    "nom": "06-cas-client",
+    "desktop": {
+      "petits": [
+        {
+          "px": "13px",
+          "t": "Chaque parution rattachée à vos références",
+          "c": "div.mega > div.mega-grille.g4 > a.mega-item > span > i"
+        },
+        {
+          "px": "13px",
+          "t": "La question posée, l'article en réponse",
+          "c": "div.mega > div.mega-grille.g4 > a.mega-item > span > i"
+        },
+        {
+          "px": "13px",
+          "t": "Le verdict par référence, appelable depuis vos systèmes",
+          "c": "div.mega > div.mega-grille.g4 > a.mega-item > span > i"
+        },
+        {
+          "px": "13px",
+          "t": "Nos experts rédigent, relisent et signent",
+          "c": "div.mega > div.mega-grille.g4 > a.mega-item > span > i"
+        },
+        {
+          "px": "12px",
+          "t": "Vous ne savez pas par où commencer ? Parlez-en à l'équipe, o",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > div.mega > div.mega-pied"
+        },
+        {
+          "px": "11px",
+          "t": "Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a > span.mega-badge"
+        },
+        {
+          "px": "11px",
+          "t": "Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a > span.mega-badge"
+        },
+        {
+          "px": "11px",
+          "t": "Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a > span.mega-badge"
+        },
+        {
+          "px": "12px",
+          "t": "Un texte qui ne figure pas ici ? Dites-nous lequel, on vous ",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > div.mega.mega-large > div.mega-pied"
+        },
+        {
+          "px": "13px",
+          "t": "Voir une démo",
+          "c": "body > nav.nav > div.conteneur > div.nav-fin > a.btn.btn-marque.btn-sm"
+        },
+        {
+          "px": "12px",
+          "t": "Cas client",
+          "c": "section.seg.sur-sombre.section > div.conteneur > div.duo > div > div.surtitre.sur-clair"
+        },
+        {
+          "px": "12px",
+          "t": "Familles de produits",
+          "c": "div.conteneur > div.cas-corps > aside.fiche-laterale > div.bloc > div.cle"
+        },
+        {
+          "px": "12px",
+          "t": "Taille",
+          "c": "div.conteneur > div.cas-corps > aside.fiche-laterale > div.bloc > div.cle"
+        },
+        {
+          "px": "12px",
+          "t": "Features utilisées",
+          "c": "div.conteneur > div.cas-corps > aside.fiche-laterale > div.bloc > div.cle"
+        },
+        {
+          "px": "12px",
+          "t": "Marchés couverts",
+          "c": "div.conteneur > div.cas-corps > aside.fiche-laterale > div.bloc > div.cle"
+        },
+        {
+          "px": "12px",
+          "t": "À propos",
+          "c": "div.conteneur > div.cas-corps > aside.fiche-laterale > div.bloc > div.cle"
+        },
+        {
+          "px": "12px",
+          "t": "Decathlon conçoit, fabrique et distribue des produits de spo",
+          "c": "div.conteneur > div.cas-corps > aside.fiche-laterale > div.bloc > div.t-micro"
+        },
+        {
+          "px": "12px",
+          "t": "Le contexte",
+          "c": "section.seg.section.gc-doux > div.conteneur > div.cas-corps > div.recit.seg-recit > div.surtitre.sur-clair"
+        },
+        {
+          "px": "12px",
+          "t": "La démarche",
+          "c": "section.seg.section.gc-doux > div.conteneur > div.cas-corps > div.recit.seg-recit > div.surtitre.sur-clair"
+        },
+        {
+          "px": "12px",
+          "t": "Le résultat",
+          "c": "section.seg.section.gc-doux > div.conteneur > div.cas-corps > div.recit.seg-recit > div.surtitre.sur-clair"
+        },
+        {
+          "px": "12px",
+          "t": "Neuilly-sur-Seine, France",
+          "c": "div.conteneur > div.pied-identite > div.pied-coordonnees > div > div.t-micro"
+        },
+        {
+          "px": "12px",
+          "t": "contact@cleolabs.co",
+          "c": "div.pied-identite > div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "px": "12px",
+          "t": "Réserver 30 minutes",
+          "c": "div.pied-identite > div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "px": "12px",
+          "t": "Conditions générales",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Politique de confidentialité",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Cleo Corp SAS, SIREN 984567883",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > span"
+        }
+      ],
+      "cibles": [
+        {
+          "w": 59,
+          "h": 24,
+          "t": "Produit",
+          "c": "nav.nav > div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 53,
+          "h": 24,
+          "t": "Textes",
+          "c": "nav.nav > div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "PPWR Actualité",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "REACH",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "RSGP",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "ESPR / Passeport Actualité",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "EN 71",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Allégations vertes",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Batteries",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "EPI",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "AI Act",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Proposition 65",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "PFAS Actualité",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "TSCA",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "ASTM F963",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "TB 117",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Loi 96 (Québec)",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "CPSIA",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "FTC Green Guides",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 84,
+          "h": 24,
+          "t": "Ressources",
+          "c": "nav.nav > div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 63,
+          "h": 24,
+          "t": "Entreprise",
+          "c": "nav.nav > div.conteneur > div.nav-liens > div.nav-item > a.nav-declencheur"
+        },
+        {
+          "w": 66,
+          "h": 24,
+          "t": "Connexion",
+          "c": "body > nav.nav > div.conteneur > div.nav-fin > a.lien-secondaire"
+        },
+        {
+          "w": 118,
+          "h": 30,
+          "t": "Regulatory Change",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 56,
+          "h": 30,
+          "t": "Research",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 106,
+          "h": 30,
+          "t": "Compliance Data",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 149,
+          "h": 30,
+          "t": "Compliance as a service",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 63,
+          "h": 30,
+          "t": "Fabricants",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 172,
+          "h": 30,
+          "t": "Importateurs et distributeurs",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 81,
+          "h": 30,
+          "t": "Marketplaces",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 117,
+          "h": 30,
+          "t": "Conformité produit",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 53,
+          "h": 30,
+          "t": "Secteurs",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 114,
+          "h": 30,
+          "t": "Union européenne",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 150,
+          "h": 30,
+          "t": "PPWR, article par article",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 65,
+          "h": 30,
+          "t": "Legal Data",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 28,
+          "h": 30,
+          "t": "Blog",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 131,
+          "h": 30,
+          "t": "Travaux de recherche",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 30,
+          "h": 30,
+          "t": "Skills",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 158,
+          "h": 30,
+          "t": "Journal des changements",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 125,
+          "h": 30,
+          "t": "Plan d'action MARIA",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 56,
+          "h": 30,
+          "t": "À propos",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 127,
+          "h": 30,
+          "t": "Cas client Decathlon",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 50,
+          "h": 30,
+          "t": "Sécurité",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 78,
+          "h": 30,
+          "t": "Recrutement",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 123,
+          "h": 30,
+          "t": "Demander un accès",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 109,
+          "h": 15,
+          "t": "contact@cleolabs.co",
+          "c": "div.pied-identite > div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "w": 109,
+          "h": 15,
+          "t": "Réserver 30 minutes",
+          "c": "div.pied-identite > div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "w": 111,
+          "h": 28,
+          "t": "Conditions générales",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "w": 139,
+          "h": 28,
+          "t": "Politique de confidentialité",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > a"
+        }
+      ],
+      "liens": [
+        "#contenu",
+        "/fr",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/research",
+        "/fr/blog",
+        "/fr/skills",
+        "/fr/company",
+        "https://insight.cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/research",
+        "/fr/blog",
+        "/fr/skills",
+        "/fr/company",
+        "https://insight.cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/for/manufacturers",
+        "/fr/for/importers-distributors",
+        "/fr/for/marketplaces",
+        "/fr/solutions/product-compliance",
+        "/fr/industries",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/legal-data",
+        "/fr/blog",
+        "/fr/research",
+        "/fr/skills",
+        "/fr/changelog",
+        "/fr/maria-action-plan",
+        "/fr/company",
+        "/fr/customers",
+        "/fr/security",
+        "/fr/careers",
+        "/fr/meet",
+        "mailto:contact@cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/terms",
+        "/fr/terms"
+      ],
+      "larges": [
+        {
+          "largeur": 620,
+          "cpl": 90,
+          "lignes": 6,
+          "t": "Aujourd'hui, notre principal défi chez Decathlon, ",
+          "c": "div.conteneur > div.seg-citation > div > blockquote.citation.citation-longue > p"
+        },
+        {
+          "largeur": 620,
+          "cpl": 87,
+          "lignes": 6,
+          "t": "C'est exactement le pont que nous essayons de cons",
+          "c": "div.conteneur > div.seg-citation > div > blockquote.citation.citation-longue > p"
+        },
+        {
+          "largeur": 620,
+          "cpl": 82,
+          "lignes": 6,
+          "t": "Au-delà de l'outil, cette collaboration est une vr",
+          "c": "div.conteneur > div.seg-citation > div > blockquote.citation.citation-longue > p"
+        },
+        {
+          "largeur": 640,
+          "cpl": 87,
+          "lignes": 4,
+          "t": "Une enseigne qui conçoit ses propres produits port",
+          "c": "section.seg.section.gc-doux > div.conteneur > div.cas-corps > div.recit.seg-recit > p"
+        },
+        {
+          "largeur": 640,
+          "cpl": 83,
+          "lignes": 3,
+          "t": "L'approche classique consiste à interroger un cabi",
+          "c": "section.seg.section.gc-doux > div.conteneur > div.cas-corps > div.recit.seg-recit > p"
+        },
+        {
+          "largeur": 640,
+          "cpl": 85,
+          "lignes": 4,
+          "t": "Le catalogue est ensuite rapproché de cette base. ",
+          "c": "section.seg.section.gc-doux > div.conteneur > div.cas-corps > div.recit.seg-recit > p"
+        },
+        {
+          "largeur": 640,
+          "cpl": 79,
+          "lignes": 1,
+          "t": "La mention de tri attendue est-elle la même dans l",
+          "c": "div.conteneur > div.cas-corps > div.recit.seg-recit > ul > li"
+        },
+        {
+          "largeur": 640,
+          "cpl": 92,
+          "lignes": 1,
+          "t": "Quelle date d'application s'applique à ce produit,",
+          "c": "div.conteneur > div.cas-corps > div.recit.seg-recit > ul > li"
+        }
+      ],
+      "troptot": []
+    },
+    "mobile": {
+      "petits": [],
+      "cibles": [],
+      "liens": [
+        "#contenu",
+        "/fr",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/research",
+        "/fr/blog",
+        "/fr/skills",
+        "/fr/company",
+        "https://insight.cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/research",
+        "/fr/blog",
+        "/fr/skills",
+        "/fr/company",
+        "https://insight.cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/for/manufacturers",
+        "/fr/for/importers-distributors",
+        "/fr/for/marketplaces",
+        "/fr/solutions/product-compliance",
+        "/fr/industries",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/legal-data",
+        "/fr/blog",
+        "/fr/research",
+        "/fr/skills",
+        "/fr/changelog",
+        "/fr/maria-action-plan",
+        "/fr/company",
+        "/fr/customers",
+        "/fr/security",
+        "/fr/careers",
+        "/fr/meet",
+        "mailto:contact@cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/terms",
+        "/fr/terms"
+      ],
+      "larges": [],
+      "troptot": []
+    }
+  },
+  "09-texte": {
+    "nom": "09-texte",
+    "desktop": {
+      "petits": [
+        {
+          "px": "13px",
+          "t": "Chaque parution rattachée à vos références",
+          "c": "div.mega > div.mega-grille.g4 > a.mega-item > span > i"
+        },
+        {
+          "px": "13px",
+          "t": "La question posée, l'article en réponse",
+          "c": "div.mega > div.mega-grille.g4 > a.mega-item > span > i"
+        },
+        {
+          "px": "13px",
+          "t": "Le verdict par référence, appelable depuis vos systèmes",
+          "c": "div.mega > div.mega-grille.g4 > a.mega-item > span > i"
+        },
+        {
+          "px": "13px",
+          "t": "Nos experts rédigent, relisent et signent",
+          "c": "div.mega > div.mega-grille.g4 > a.mega-item > span > i"
+        },
+        {
+          "px": "12px",
+          "t": "Vous ne savez pas par où commencer ? Parlez-en à l'équipe, o",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > div.mega > div.mega-pied"
+        },
+        {
+          "px": "11px",
+          "t": "Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a > span.mega-badge"
+        },
+        {
+          "px": "11px",
+          "t": "Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a > span.mega-badge"
+        },
+        {
+          "px": "11px",
+          "t": "Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a > span.mega-badge"
+        },
+        {
+          "px": "12px",
+          "t": "Un texte qui ne figure pas ici ? Dites-nous lequel, on vous ",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > div.mega.mega-large > div.mega-pied"
+        },
+        {
+          "px": "13px",
+          "t": "Voir une démo",
+          "c": "body > nav.nav > div.conteneur > div.nav-fin > a.btn.btn-marque.btn-sm"
+        },
+        {
+          "px": "12px",
+          "t": "Prénom",
+          "c": "div.duo > div.carte-encre.form-carte.vu > div.paire > div > label"
+        },
+        {
+          "px": "12px",
+          "t": "Nom",
+          "c": "div.duo > div.carte-encre.form-carte.vu > div.paire > div > label"
+        },
+        {
+          "px": "12px",
+          "t": "Email professionnel",
+          "c": "section.seg.section > div.conteneur > div.duo > div.carte-encre.form-carte.vu > label"
+        },
+        {
+          "px": "12px",
+          "t": "Site de la marque",
+          "c": "section.seg.section > div.conteneur > div.duo > div.carte-encre.form-carte.vu > label"
+        },
+        {
+          "px": "12px",
+          "t": "Aux côtés de marques et de fabricants internationaux",
+          "c": "body > main > section.seg.sur-sombre > div.conteneur > div.centre.t-micro"
+        },
+        {
+          "px": "12px",
+          "t": "Regulatory Change",
+          "c": "section.seg.section.fond-lavande > div.conteneur > div.alterne > div.texte.vu > span.etiquette"
+        },
+        {
+          "px": "12px",
+          "t": "Research",
+          "c": "section.seg.section.fond-lavande > div.conteneur > div.alterne.inverse > div.texte.vu > span.etiquette"
+        },
+        {
+          "px": "12px",
+          "t": "Compliance Data",
+          "c": "section.seg.section.fond-lavande > div.conteneur > div.alterne > div.texte.vu > span.etiquette"
+        },
+        {
+          "px": "12px",
+          "t": "Substances",
+          "c": "div.g4.vu > div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "Signalétique",
+          "c": "div.g4.vu > div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "Recyclabilité",
+          "c": "div.g4.vu > div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "Recyclé",
+          "c": "div.g4.vu > div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "Le texte intégral du PPWR est au dépôt, en français et en an",
+          "c": "body > main > section.seg.section.gc-doux > div.conteneur > div.t-caption"
+        },
+        {
+          "px": "12px",
+          "t": "Le plus pris",
+          "c": "section.seg.section.fond-lavande > div.conteneur > div.g3.vu > div.carte.p32 > span.etiquette"
+        },
+        {
+          "px": "13px",
+          "t": "En savoir plus",
+          "c": "section.seg.section.fond-lavande > div.conteneur > div.g3.vu > div.carte.p32 > a.btn.btn-contour.btn-sm"
+        },
+        {
+          "px": "13px",
+          "t": "En savoir plus",
+          "c": "section.seg.section.fond-lavande > div.conteneur > div.g3.vu > div.carte.p32 > a.btn.btn-contour.btn-sm"
+        },
+        {
+          "px": "13px",
+          "t": "En savoir plus",
+          "c": "section.seg.section.fond-lavande > div.conteneur > div.g3.vu > div.carte.p32 > a.btn.btn-contour.btn-sm"
+        },
+        {
+          "px": "12px",
+          "t": "Product Compliance Operations Manager, Decathlon",
+          "c": "div.temoignage.vu > div > div.auteur > div > div.t-micro"
+        },
+        {
+          "px": "12px",
+          "t": "Neuilly-sur-Seine, France",
+          "c": "div.conteneur > div.pied-identite > div.pied-coordonnees > div > div.t-micro"
+        },
+        {
+          "px": "12px",
+          "t": "contact@cleolabs.co",
+          "c": "div.pied-identite > div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "px": "12px",
+          "t": "Réserver 30 minutes",
+          "c": "div.pied-identite > div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "px": "12px",
+          "t": "Conditions générales",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Politique de confidentialité",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Cleo Corp SAS, SIREN 984567883",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > span"
+        }
+      ],
+      "cibles": [
+        {
+          "w": 59,
+          "h": 24,
+          "t": "Produit",
+          "c": "nav.nav > div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 53,
+          "h": 24,
+          "t": "Textes",
+          "c": "nav.nav > div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "PPWR Actualité",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "REACH",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "RSGP",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "ESPR / Passeport Actualité",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "EN 71",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Allégations vertes",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Batteries",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "EPI",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "AI Act",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Proposition 65",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "PFAS Actualité",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "TSCA",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "ASTM F963",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "TB 117",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Loi 96 (Québec)",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "CPSIA",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "FTC Green Guides",
+          "c": "div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 84,
+          "h": 24,
+          "t": "Ressources",
+          "c": "nav.nav > div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 63,
+          "h": 24,
+          "t": "Entreprise",
+          "c": "nav.nav > div.conteneur > div.nav-liens > div.nav-item > a.nav-declencheur"
+        },
+        {
+          "w": 66,
+          "h": 24,
+          "t": "Connexion",
+          "c": "body > nav.nav > div.conteneur > div.nav-fin > a.lien-secondaire"
+        },
+        {
+          "w": 118,
+          "h": 30,
+          "t": "Regulatory Change",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 56,
+          "h": 30,
+          "t": "Research",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 106,
+          "h": 30,
+          "t": "Compliance Data",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 149,
+          "h": 30,
+          "t": "Compliance as a service",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 63,
+          "h": 30,
+          "t": "Fabricants",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 172,
+          "h": 30,
+          "t": "Importateurs et distributeurs",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 81,
+          "h": 30,
+          "t": "Marketplaces",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 117,
+          "h": 30,
+          "t": "Conformité produit",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 53,
+          "h": 30,
+          "t": "Secteurs",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 114,
+          "h": 30,
+          "t": "Union européenne",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 150,
+          "h": 30,
+          "t": "PPWR, article par article",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 65,
+          "h": 30,
+          "t": "Legal Data",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 28,
+          "h": 30,
+          "t": "Blog",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 131,
+          "h": 30,
+          "t": "Travaux de recherche",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 30,
+          "h": 30,
+          "t": "Skills",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 158,
+          "h": 30,
+          "t": "Journal des changements",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 125,
+          "h": 30,
+          "t": "Plan d'action MARIA",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 56,
+          "h": 30,
+          "t": "À propos",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 127,
+          "h": 30,
+          "t": "Cas client Decathlon",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 50,
+          "h": 30,
+          "t": "Sécurité",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 78,
+          "h": 30,
+          "t": "Recrutement",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 123,
+          "h": 30,
+          "t": "Demander un accès",
+          "c": "div.pied-colonnes > div > ul > li > a"
+        },
+        {
+          "w": 109,
+          "h": 15,
+          "t": "contact@cleolabs.co",
+          "c": "div.pied-identite > div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "w": 109,
+          "h": 15,
+          "t": "Réserver 30 minutes",
+          "c": "div.pied-identite > div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "w": 111,
+          "h": 28,
+          "t": "Conditions générales",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "w": 139,
+          "h": 28,
+          "t": "Politique de confidentialité",
+          "c": "body > footer.pied > div.conteneur > div.pied-bas > a"
+        }
+      ],
+      "liens": [
+        "#contenu",
+        "/fr",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/research",
+        "/fr/blog",
+        "/fr/skills",
+        "/fr/company",
+        "https://insight.cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/research",
+        "/fr/blog",
+        "/fr/skills",
+        "/fr/company",
+        "https://insight.cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/for/manufacturers",
+        "/fr/for/importers-distributors",
+        "/fr/for/marketplaces",
+        "/fr/solutions/product-compliance",
+        "/fr/industries",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/legal-data",
+        "/fr/blog",
+        "/fr/research",
+        "/fr/skills",
+        "/fr/changelog",
+        "/fr/maria-action-plan",
+        "/fr/company",
+        "/fr/customers",
+        "/fr/security",
+        "/fr/careers",
+        "/fr/meet",
+        "mailto:contact@cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/terms",
+        "/fr/terms"
+      ],
+      "larges": [
+        {
+          "largeur": 620,
+          "cpl": 85,
+          "lignes": 7,
+          "t": "« Chez Decathlon, notre défi est de capter des inf",
+          "c": "section.seg.section > div.conteneur > div.temoignage.vu > div > p.citation"
+        }
+      ],
+      "troptot": []
+    },
+    "mobile": {
+      "petits": [],
+      "cibles": [],
+      "liens": [
+        "#contenu",
+        "/fr",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/research",
+        "/fr/blog",
+        "/fr/skills",
+        "/fr/company",
+        "https://insight.cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/legal-data",
+        "/fr/research",
+        "/fr/blog",
+        "/fr/skills",
+        "/fr/company",
+        "https://insight.cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/platform",
+        "/fr/platform/research",
+        "/fr/platform/regulations",
+        "/fr#compliance-service",
+        "/fr/for/manufacturers",
+        "/fr/for/importers-distributors",
+        "/fr/for/marketplaces",
+        "/fr/solutions/product-compliance",
+        "/fr/industries",
+        "/fr/jurisdictions/european-union",
+        "/fr/jurisdictions/european-union/regulations/ppwr",
+        "/fr/legal-data",
+        "/fr/blog",
+        "/fr/research",
+        "/fr/skills",
+        "/fr/changelog",
+        "/fr/maria-action-plan",
+        "/fr/company",
+        "/fr/customers",
+        "/fr/security",
+        "/fr/careers",
+        "/fr/meet",
+        "mailto:contact@cleolabs.co",
+        "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+        "/fr/terms",
+        "/fr/terms"
+      ],
+      "larges": [],
+      "troptot": []
+    }
+  },
+  "20-campagne": {
+    "nom": "20-campagne",
+    "desktop": {
+      "petits": [
+        {
+          "px": "12px",
+          "t": "Format PDF · 18 pages · Aucune inscription à une liste",
+          "c": "section.seg.sur-sombre.gc-deep > div.conteneur > div.duo > div > div.t-caption"
+        },
+        {
+          "px": "12px",
+          "t": "Cleo · Guide",
+          "c": "div.seg-couverture > div.couverture > div.livre > div > div.t-label"
+        },
+        {
+          "px": "12px",
+          "t": "Règlement (UE) 2025/40",
+          "c": "div.seg-couverture > div.couverture > div.livre > div > div.t-caption"
+        },
+        {
+          "px": "12px",
+          "t": "Applicable au 12 août 2026",
+          "c": "div.seg-couverture > div.couverture > div.livre > div > div.t-caption"
+        },
+        {
+          "px": "12px",
+          "t": "Chaque obligation citée",
+          "c": "div.conteneur > div.duo > div.seg-couverture > div.flottant > div.t-micro"
+        },
+        {
+          "px": "12px",
+          "t": "« Tous les emballages sont conçus de manière à… »",
+          "c": "div.conteneur > div.duo > div.seg-couverture > div.flottant > div.t-caption"
+        },
+        {
+          "px": "12px",
+          "t": "Art. 6, §1",
+          "c": "div.conteneur > div.duo > div.seg-couverture > div.flottant > div.t-caption"
+        },
+        {
+          "px": "12px",
+          "t": "Aux côtés de marques et de fabricants internationaux",
+          "c": "html > body > section.seg.section > div.conteneur > div.centre.t-label"
+        },
+        {
+          "px": "12px",
+          "t": "Vendez partout. Conformez-vous partout.",
+          "c": "footer.seg.pied.seg-p20-pied > div.conteneur > div.identite > div > div.t-caption"
+        },
+        {
+          "px": "12px",
+          "t": "hello@cleolabs.co",
+          "c": "footer.seg.pied.seg-p20-pied > div.conteneur > div.identite > div.t-caption > a"
+        },
+        {
+          "px": "12px",
+          "t": "Conditions générales",
+          "c": "body > footer.seg.pied.seg-p20-pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Politique de confidentialité",
+          "c": "body > footer.seg.pied.seg-p20-pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Cleo Corp SAS, SIREN 984567883",
+          "c": "body > footer.seg.pied.seg-p20-pied > div.conteneur > div.pied-bas > span"
+        }
+      ],
+      "cibles": [
+        {
+          "w": 111,
+          "h": 28,
+          "t": "Conditions générales",
+          "c": "body > footer.seg.pied.seg-p20-pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "w": 139,
+          "h": 28,
+          "t": "Politique de confidentialité",
+          "c": "body > footer.seg.pied.seg-p20-pied > div.conteneur > div.pied-bas > a"
+        }
+      ],
+      "liens": [
+        "/fr",
+        "/fr/blog/eu-ppwr-packaging-conformity-2026",
+        "/fr",
+        "mailto:hello@cleolabs.co",
+        "/fr/terms",
+        "/fr/terms"
+      ],
+      "larges": [],
+      "troptot": []
+    },
+    "mobile": {
+      "petits": [],
+      "cibles": [],
+      "liens": [
+        "/fr",
+        "/fr/blog/eu-ppwr-packaging-conformity-2026",
+        "/fr",
+        "mailto:hello@cleolabs.co",
+        "/fr/terms",
+        "/fr/terms"
+      ],
+      "larges": [],
+      "troptot": []
+    }
+  }
+}

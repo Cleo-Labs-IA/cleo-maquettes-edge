@@ -648,12 +648,20 @@ const CTA_EN = `
   </div>
 </section>`
 
-const resNav = (actif) => {
-  const liens = [['10-ressources.html','Tout'],['15-evenements.html','Rencontres'],
-                 ['17-modeles.html','Modèles'],['11-blog.html','Publications'],['13-glossaire.html','Glossaire']]
+/* La barre latérale des ressources, alignée sur le méga-menu « Ressources » depuis le
+   03/09/2026 (lane D : Recherche et Skills ne marquaient rien d'actif, et les pages
+   anglaises recevaient la barre française). Le marqueur de page garde son ancien
+   libellé : « Recherche » et « Publications » sont reconnus par alias. */
+const resNav = (actif, en) => {
+  const liens = en
+    ? [['10-ressources.html','Tout','All'],['24-blog-en.html','Blog','Blog'],['23-research-en.html','Recherche','Research'],['25-skills-en.html','Skills','Skills'],
+       ['26-legal-data-en.html','Legal Data','Legal Data'],['15-evenements.html','Rencontres','Events'],['17-modeles.html','Modèles','Templates'],['13-glossaire.html','Glossaire','Glossary']]
+    : [['10-ressources.html','Tout','Tout'],['24-blog.html','Blog','Blog'],['23-research.html','Recherche','Travaux de recherche'],['25-skills.html','Skills','Skills'],
+       ['26-legal-data.html','Legal Data','Legal Data'],['15-evenements.html','Rencontres','Rencontres'],['17-modeles.html','Modèles','Modèles'],['13-glossaire.html','Glossaire','Glossaire']]
+  const cle = actif === 'Publications' ? 'Blog' : actif
   return `<nav class="res-nav">
-    <div class="titre">Ressources</div>
-    ${liens.map(([h,t]) => `<a href="${h}"${t === actif ? ' class="actif"' : ''}>${t}</a>`).join('\n    ')}
+    <div class="titre">${en ? 'Resources' : 'Ressources'}</div>
+    ${liens.map(([h,k,t]) => `<a href="${h}"${k === cle ? ' class="actif"' : ''}>${t}</a>`).join('\n    ')}
   </nav>`
 }
 
@@ -797,7 +805,7 @@ for (const p of PAGES) {
     .replace('<!--VEILLE-VIGNETTE-->', VIGNETTES.veille || '')
   if (corps.includes('<!--VEILLE-->')) corps = corps.replace('<!--VEILLE-->', await veille())
   if (corps.includes('<!--GLOBE-PRODUITS-->')) corps = corps.replace('<!--GLOBE-PRODUITS-->', await globeProduits())
-  corps = corps.replace(/<!--RES-NAV:([^>]*)-->/g, (_, a) => resNav(a.trim()))
+  corps = corps.replace(/<!--RES-NAV:([^>]*)-->/g, (_, a) => resNav(a.trim(), !!p.en))
   corps = await injecterImages(corps)
 
   const nomSortie = p.sortie || p.fichier

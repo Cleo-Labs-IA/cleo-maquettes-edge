@@ -1,0 +1,63 @@
+{
+  "nom": "08-reglementation",
+  "desktop": {
+    "largeurDoc": 1440,
+    "largeurFenetre": 1440,
+    "debordement": false,
+    "hauteur": 5495,
+    "h1": {
+      "texte": "Compliance Data. 2 812 règles testables.",
+      "taille": "51.84px",
+      "graisse": "500",
+      "classe": "t-hero mesure-centree"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 52,
+    "textesSous12": 19,
+    "ciblesSous40": 49,
+    "paragrapheLePlusLarge": 820,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 525,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "Réglementation encodée, 2 812 règles testables | Cleo Labs",
+    "description": 144
+  },
+  "mobile": {
+    "largeurDoc": 390,
+    "largeurFenetre": 390,
+    "debordement": false,
+    "hauteur": 8574,
+    "h1": {
+      "texte": "Compliance Data. 2 812 règles testables.",
+      "taille": "36px",
+      "graisse": "500",
+      "classe": "t-hero mesure-centree"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 15,
+    "textesSous12": 3,
+    "ciblesSous40": 5,
+    "paragrapheLePlusLarge": 334,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 1919,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "Réglementation encodée, 2 812 règles testables | Cleo Labs",
+    "description": 144
+  },
+  "tranches": {
+    "desktop": 3,
+    "mobile": 6
+  },
+  "erreursConsole": [],
+  "capture": "2026-09-03T08:44:06.265Z"
+}

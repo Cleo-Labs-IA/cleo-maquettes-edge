@@ -1,0 +1,63 @@
+{
+  "nom": "09-texte",
+  "desktop": {
+    "largeurDoc": 1440,
+    "largeurFenetre": 1440,
+    "debordement": false,
+    "hauteur": 5899,
+    "h1": {
+      "texte": "PPWR : conformité des emballages. Article par article.",
+      "taille": "51.84px",
+      "graisse": "500",
+      "classe": "t-hero"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 34,
+    "textesSous12": 3,
+    "ciblesSous40": 49,
+    "paragrapheLePlusLarge": 620,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 525,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "PPWR, conformité des emballages article par article | Cleo Labs",
+    "description": 148
+  },
+  "mobile": {
+    "largeurDoc": 390,
+    "largeurFenetre": 390,
+    "debordement": false,
+    "hauteur": 10699,
+    "h1": {
+      "texte": "PPWR : conformité des emballages. Article par article.",
+      "taille": "36px",
+      "graisse": "500",
+      "classe": "t-hero"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 15,
+    "textesSous12": 0,
+    "ciblesSous40": 5,
+    "paragrapheLePlusLarge": 334,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 1919,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "PPWR, conformité des emballages article par article | Cleo Labs",
+    "description": 148
+  },
+  "tranches": {
+    "desktop": 3,
+    "mobile": 7
+  },
+  "erreursConsole": [],
+  "capture": "2026-09-03T08:44:48.618Z"
+}

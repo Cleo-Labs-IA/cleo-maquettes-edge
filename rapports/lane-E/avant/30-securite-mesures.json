@@ -1,0 +1,63 @@
+{
+  "nom": "30-securite",
+  "desktop": {
+    "largeurDoc": 1440,
+    "largeurFenetre": 1440,
+    "debordement": false,
+    "hauteur": 5564,
+    "h1": {
+      "texte": "La sécurité est au fondement de ce que nous construisons.",
+      "taille": "51.84px",
+      "graisse": "500",
+      "classe": "t-hero"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 20,
+    "textesSous12": 3,
+    "ciblesSous40": 50,
+    "paragrapheLePlusLarge": 760,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 525,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "Sécurité des données chez Cleo Labs | Cleo Labs",
+    "description": 183
+  },
+  "mobile": {
+    "largeurDoc": 390,
+    "largeurFenetre": 390,
+    "debordement": false,
+    "hauteur": 9449,
+    "h1": {
+      "texte": "La sécurité est au fondement de ce que nous construisons.",
+      "taille": "36px",
+      "graisse": "500",
+      "classe": "t-hero"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 7,
+    "textesSous12": 0,
+    "ciblesSous40": 5,
+    "paragrapheLePlusLarge": 334,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 1919,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "Sécurité des données chez Cleo Labs | Cleo Labs",
+    "description": 183
+  },
+  "tranches": {
+    "desktop": 3,
+    "mobile": 6
+  },
+  "erreursConsole": [],
+  "capture": "2026-09-03T08:46:04.093Z"
+}

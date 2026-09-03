@@ -436,7 +436,7 @@
 .pied-regs{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--s-32); padding:44px 0;
   border-top:1px solid var(--c-filet-sombre)}
 .pied-regs .paire{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:var(--s-24)}
-.pied-bas a{padding:10px 0; display:inline-flex; align-items:center}
+.pied-bas a{padding:10px 0; min-width:44px; display:inline-flex; align-items:center}
 /* Un lien posé DANS une phrase garde sa ligne, mais sa cible tactile monte à 41 px :
    le padding vertical est repris par une marge négative. */
 .lien-inline{padding:12px 0; margin:-12px 0; display:inline-block}

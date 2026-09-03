@@ -4,7 +4,7 @@
      profond en section-serree, puis le corps en res-corps avec sa nav latérale.
      Matière relevée sur https://www.cleolabs.co/fr/legal-data (zone
      proxifiée, servie par le composant CoverageAtlas de cleo-landing). ═══ -->
-<section class="sur-sombre gc-deep section-serree" style="padding-bottom:var(--s-64)">
+<section class="sur-sombre section-serree" style="padding-bottom:var(--s-64)">
   <div class="conteneur">
     <!-- Le bandeau ne passe PAS par .res-tete : mesuré à 390 px, cette grille
          reste sur deux colonnes de 157 px (elle n'est pas dans la media query
@@ -13,10 +13,10 @@
     <div class="t-label" style="margin-bottom:16px">Atlas de couverture</div>
     <h1 class="t-hero" style="margin:0;max-width:760px">Chaque produit, chaque autorité,
       <span class="attenue">et ce qu'on surveille en direct.</span></h1>
-    <p class="t-body" style="margin:20px 0 0;max-width:620px">Une carte vivante de la chaîne
+    <p class="t-body chapo" style="margin:20px 0 0">Une carte vivante de la chaîne
       produit → code SH → réglementation → autorité, et de la part que Cleo capte via un flux
       de veille live. Le vert est couvert. Le gris est un angle mort.</p>
-    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
+    <div class="rang-boutons">
       <a class="btn btn-marque" href="21-inscription.html">Obtenir un accès API</a>
       <a class="btn btn-contour" href="#explorateur">Explorer la couverture</a>
     </div>
@@ -25,7 +25,7 @@
 
 <section class="section" style="padding-top:88px">
   <div class="conteneur">
-    <div class="res-corps">
+    <div class="res-corps atlas">
       <nav class="res-nav">
         <div class="titre">Legal Data</div>
         <a class="actif" href="#perimetre">Le périmètre</a>
@@ -62,7 +62,7 @@
           <div class="t-body" style="margin:0">7 198 sur 10 582 réglementations produits de consommation
             sont rattachées à un flux de veille live.</div>
         </div>
-        <p class="t-caption" style="margin:0 0 56px;max-width:760px">Périmètre : graphe de veille
+        <p class="t-caption atlas-note" style="margin:0 0 56px">Périmètre : graphe de veille
           produit de Cleo, indexé par code SH. Le % de capture live est calculé sur les
           réglementations produits de consommation (retail) : les mappings de régimes industriels
           (douane, export control, REACH…) sont inventoriés mais pas encore suivis par flux.</p>
@@ -205,7 +205,8 @@
         <h2 class="t-h1" id="matrice" style="margin-bottom:8px">Matrice : type de produit × marché</h2>
         <p class="t-body" style="margin:0 0 28px">Chaque cellule = part des réglementations de ce
           type de produit, dans ce marché, surveillée en direct.</p>
-        <div class="table-defilante" style="margin-bottom:14px">
+        <p class="t-caption atlas-defile" style="margin:0 0 10px">Le tableau défile horizontalement.</p>
+        <div class="table-defilante atlas-matrice" style="margin-bottom:14px">
           <table style="width:100%;min-width:900px;border-collapse:separate;border-spacing:0">
             <thead>
               <tr>
@@ -403,15 +404,19 @@
             </tbody>
           </table>
         </div>
-        <p class="t-caption" style="margin:0 0 56px;max-width:760px">Les neuf types ci-dessus sont
+        <p class="t-caption atlas-note" style="margin:0 0 56px">Les neuf types ci-dessus sont
           ceux qui portent une valeur. Les huit autres types de la matrice servie (Machinery
           Industrial Components, Base Metals Raw, Textile Raw Materials, Agri Commodities Raw,
           Plastics Rubber Raw, Instruments Industrial, Transport Industrial, Wood Raw, et les
           matières premières qui suivent) sont à 0 sur les seize marchés.</p>
         <!-- ── Produit → autorités : les familles et leur volume de règles ── -->
         <h2 class="t-h1" id="autorites" style="margin-bottom:8px">Produit → autorités</h2>
-        <p class="t-body" style="margin:0 0 28px">Choisissez une famille puis un type pour voir
-          chaque autorité qui le régule et si on la capte en direct.</p>
+        <p class="t-body" style="margin:0 0 28px">Les dix-sept familles de produit du référentiel,
+          et le volume de règles rattaché à chacune.</p>
+        <div class="rang-etat" style="margin-bottom:12px">
+          <span class="t-caption">Famille de produit</span>
+          <span class="t-caption">Règles rattachées</span>
+        </div>
         <div class="mesures" data-anim-groupe style="margin-bottom:56px">
           <div class="ligne"><div class="libelle">Home &amp; Diy</div><div class="valeur">9 613</div></div>
           <div class="ligne"><div class="libelle">Chemicals &amp; Industrial</div><div class="valeur">8 115</div></div>
@@ -435,12 +440,10 @@
         <h2 class="t-h1" id="explorateur" style="margin-bottom:8px">Explorateur produit SH6</h2>
         <p class="t-body" style="margin:0 0 24px">Un code, ce qu'il déclenche : le nombre de
           réglementations, de marchés et d'autorités qui le suivent, et si un flux le capte.</p>
-        <div style="display:flex;gap:9px;flex-wrap:wrap;margin-bottom:24px">
-          <span class="pilule">Tous</span>
-          <span class="pilule pilule-contour">Surveillés seulement</span>
-          <span class="pilule pilule-contour">Angles morts seulement</span>
-        </div>
-        <div class="table-defilante" style="margin-bottom:16px">
+        <p class="t-caption atlas-note" style="margin:0 0 24px">Six codes, pris dans les 5 613 du
+          référentiel. La colonne « Veille » dit si un flux capte le code en direct.</p>
+        <p class="t-caption atlas-defile" style="margin:0 0 10px">Le tableau défile horizontalement.</p>
+        <div class="table-defilante atlas-sh6" style="margin-bottom:16px">
           <table style="width:100%;min-width:860px;border-collapse:separate;border-spacing:0">
             <thead>
               <tr>
@@ -511,11 +514,8 @@
             </tbody>
           </table>
         </div>
-        <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
-          <span class="t-caption">Affichés 60 sur 5 613 SH6</span>
-          <a class="btn btn-contour btn-sm" href="#explorateur">Charger plus</a>
-        </div>
-        <p class="t-caption" style="margin:56px 0 0;padding-top:26px;border-top:1px solid var(--c-border)">
+        <p class="t-caption" style="margin:0">Affichés 6 sur 5 613 codes SH6.</p>
+        <p class="t-caption atlas-note" style="margin:56px 0 0;padding-top:26px;border-top:1px solid var(--c-border)">
           Instantané au 2026-07-06 · Source : le référentiel produit × autorité de Cleo.
           Tous les chiffres calculés directement depuis la vue.</p>
       </div>

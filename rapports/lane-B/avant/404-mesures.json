@@ -1,0 +1,63 @@
+{
+  "nom": "404",
+  "desktop": {
+    "largeurDoc": 1440,
+    "largeurFenetre": 1440,
+    "debordement": false,
+    "hauteur": 1330,
+    "h1": {
+      "texte": "Cette page n'existe pas.",
+      "taille": "51.84px",
+      "graisse": "500",
+      "classe": "t-hero mesure-centree"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 17,
+    "textesSous12": 3,
+    "ciblesSous40": 49,
+    "paragrapheLePlusLarge": 638,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 525,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "Page introuvable | Cleo Labs",
+    "description": 46
+  },
+  "mobile": {
+    "largeurDoc": 390,
+    "largeurFenetre": 390,
+    "debordement": false,
+    "hauteur": 2584,
+    "h1": {
+      "texte": "Cette page n'existe pas.",
+      "taille": "36px",
+      "graisse": "500",
+      "classe": "t-hero mesure-centree"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 5,
+    "textesSous12": 0,
+    "ciblesSous40": 5,
+    "paragrapheLePlusLarge": 334,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 1919,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "Page introuvable | Cleo Labs",
+    "description": 46
+  },
+  "tranches": {
+    "desktop": 1,
+    "mobile": 2
+  },
+  "erreursConsole": [],
+  "capture": "2026-09-03T08:44:14.148Z"
+}

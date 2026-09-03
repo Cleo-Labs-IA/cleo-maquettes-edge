@@ -4,7 +4,7 @@
      profond en section-serree, puis le corps en res-corps avec sa nav latérale.
      Matière relevée sur https://www.cleolabs.co/fr/legal-data (zone
      proxifiée, servie par le composant CoverageAtlas de cleo-landing). ═══ -->
-<section class="sur-sombre gc-deep section-serree" style="padding-bottom:var(--s-64)">
+<section class="sur-sombre section-serree" style="padding-bottom:var(--s-64)">
   <div class="conteneur">
     <!-- Le bandeau ne passe PAS par .res-tete : mesuré à 390 px, cette grille
          reste sur deux colonnes de 157 px (elle n'est pas dans la media query
@@ -13,10 +13,10 @@
     <div class="t-label" style="margin-bottom:16px">Coverage atlas</div>
     <h1 class="t-hero" style="margin:0;max-width:760px">Every product, every authority,
       <span class="attenue">and what we track live.</span></h1>
-    <p class="t-body" style="margin:20px 0 0;max-width:620px">A living map of the chain
+    <p class="t-body chapo" style="margin:20px 0 0">A living map of the chain
       product → HS code → regulation → authority, and of the share Cleo captures through a
       live monitoring feed. Green is covered. Grey is a blind spot.</p>
-    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:28px">
+    <div class="rang-boutons">
       <a class="btn btn-marque" href="21-inscription.html">Get API access</a>
       <a class="btn btn-contour" href="#explorateur">Explore the coverage</a>
     </div>
@@ -25,7 +25,7 @@
 
 <section class="section" style="padding-top:88px">
   <div class="conteneur">
-    <div class="res-corps">
+    <div class="res-corps atlas">
       <nav class="res-nav">
         <div class="titre">Legal Data</div>
         <a class="actif" href="#perimetre">The scope</a>
@@ -62,7 +62,7 @@
           <div class="t-body" style="margin:0">7,198 of 10,582 consumer product regulations
             are tied to a live monitoring feed.</div>
         </div>
-        <p class="t-caption" style="margin:0 0 56px;max-width:760px">Scope: the Cleo product
+        <p class="t-caption atlas-note" style="margin:0 0 56px">Scope: the Cleo product
           monitoring graph, indexed by HS code. The live capture % is computed on consumer
           product regulations (retail): mappings for industrial regimes (customs, export
           control, REACH…) are inventoried but not yet followed by a feed.</p>
@@ -205,7 +205,8 @@
         <h2 class="t-h1" id="matrice" style="margin-bottom:8px">Matrix: product type × market</h2>
         <p class="t-body" style="margin:0 0 28px">Each cell = share of the regulations for that
           product type, in that market, monitored live.</p>
-        <div class="table-defilante" style="margin-bottom:14px">
+        <p class="t-caption atlas-defile" style="margin:0 0 10px">The table scrolls horizontally.</p>
+        <div class="table-defilante atlas-matrice" style="margin-bottom:14px">
           <table style="width:100%;min-width:900px;border-collapse:separate;border-spacing:0">
             <thead>
               <tr>
@@ -403,15 +404,19 @@
             </tbody>
           </table>
         </div>
-        <p class="t-caption" style="margin:0 0 56px;max-width:760px">The nine types above are the ones
+        <p class="t-caption atlas-note" style="margin:0 0 56px">The nine types above are the ones
           that carry a value. The eight other types in the served matrix (Machinery
           Industrial Components, Base Metals Raw, Textile Raw Materials, Agri Commodities Raw,
           Plastics Rubber Raw, Instruments Industrial, Transport Industrial, Wood Raw, and the
           raw materials that follow) are at 0 across the sixteen markets.</p>
         <!-- ── Produit → autorités : les familles et leur volume de règles ── -->
         <h2 class="t-h1" id="autorites" style="margin-bottom:8px">Product → authorities</h2>
-        <p class="t-body" style="margin:0 0 28px">Choose a family then a type to see
-          every authority that regulates it and whether we capture it live.</p>
+        <p class="t-body" style="margin:0 0 28px">The seventeen product families in the reference set,
+          and the volume of rules attached to each.</p>
+        <div class="rang-etat" style="margin-bottom:12px">
+          <span class="t-caption">Product family</span>
+          <span class="t-caption">Rules attached</span>
+        </div>
         <div class="mesures" data-anim-groupe style="margin-bottom:56px">
           <div class="ligne"><div class="libelle">Home &amp; Diy</div><div class="valeur">9,613</div></div>
           <div class="ligne"><div class="libelle">Chemicals &amp; Industrial</div><div class="valeur">8,115</div></div>
@@ -435,12 +440,10 @@
         <h2 class="t-h1" id="explorateur" style="margin-bottom:8px">HS6 product explorer</h2>
         <p class="t-body" style="margin:0 0 24px">One code, what it triggers: the number of
           regulations, markets and authorities that follow it, and whether a feed captures it.</p>
-        <div style="display:flex;gap:9px;flex-wrap:wrap;margin-bottom:24px">
-          <span class="pilule">All</span>
-          <span class="pilule pilule-contour">Monitored only</span>
-          <span class="pilule pilule-contour">Blind spots only</span>
-        </div>
-        <div class="table-defilante" style="margin-bottom:16px">
+        <p class="t-caption atlas-note" style="margin:0 0 24px">Six codes, taken from the 5,613 in the
+          reference set. The “Monitoring” column says whether a feed captures the code live.</p>
+        <p class="t-caption atlas-defile" style="margin:0 0 10px">The table scrolls horizontally.</p>
+        <div class="table-defilante atlas-sh6" style="margin-bottom:16px">
           <table style="width:100%;min-width:860px;border-collapse:separate;border-spacing:0">
             <thead>
               <tr>
@@ -511,11 +514,8 @@
             </tbody>
           </table>
         </div>
-        <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
-          <span class="t-caption">Showing 60 of 5,613 HS6</span>
-          <a class="btn btn-contour btn-sm" href="#explorateur">Load more</a>
-        </div>
-        <p class="t-caption" style="margin:56px 0 0;padding-top:26px;border-top:1px solid var(--c-border)">
+        <p class="t-caption" style="margin:0">Showing 6 of 5,613 HS6 codes.</p>
+        <p class="t-caption atlas-note" style="margin:56px 0 0;padding-top:26px;border-top:1px solid var(--c-border)">
           Snapshot as of 2026-07-06 · Source: Cleo's product × authority reference base.
           All figures computed directly from the view.</p>
       </div>

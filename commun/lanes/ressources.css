@@ -14,11 +14,20 @@
      27-levee    .article p        760 px, 16 px → 107 car.
      23-research .carte p.t-body   660 px, 15 px → 107 car.
      26-legal    p.t-body          752 px, 15 px → 129 car.
-   La barre du chantier est 75. Dans Satoshi, un caractère de texte courant
-   mesure 0,39 em : 75 caractères en 16 px demandent une colonne de 470 px,
-   ce que la grille ne porte pas. La sortie est donc de MONTER le corps du
-   texte long, comme le font harvey.ai (18 px) et legora.com (17 px), et de
-   resserrer la colonne. 18 px sur 580 px rend 82 caractères, mesurés. */
+   La barre du chantier est 75. La sortie est de MONTER le corps du texte
+   long, comme le font harvey.ai (18 px) et legora.com (17 px), et de
+   resserrer la colonne.
+   RECOMPTÉ APRÈS, le 03/09 à 1440 px, sur les trois premiers paragraphes
+   longs de chaque page (même méthode, plus un témoin : la largeur du bout
+   de ligne compté doit tenir dans la colonne, elle y tient partout) :
+     .article p  580 px, 18 px → 60 à 75 car. (médiane 68)
+     .legal p    500 px, 16 px → 67 à 73 car.
+     .res-corps p.t-body 500 px, 15 px → 76 à 84 car.
+   Les deux premières familles sont dans la bande. La troisième dépasse
+   encore de neuf caractères : c'est un chapô de section, pas du texte
+   suivi, et le resserrer davantage casserait la grille de .res-corps.
+   (La ligne « 82 caractères » qui figurait ici était une estimation à
+   0,39 em par caractère ; la mesure donne 0,47 em sur cette matière.) */
 .article{max-width:580px}
 .article p,.article li{font-size:1.125rem; line-height:1.75}
 .article blockquote p{font-size:1.0625rem}
@@ -46,19 +55,28 @@
 @media (max-width:640px){
   .atlas .marqueur,.atlas .badge{font-size:0.875rem; padding:4px 8px}
 }
-/* La colonne des libellés reste en place pendant que la matrice défile :
+/* La colonne des libellés reste en place pendant que le tableau défile :
    sans elle, à 390 px, les seize colonnes de marchés n'ont plus de ligne
-   à laquelle se rattacher. */
+   à laquelle se rattacher. Mesuré le 03/09, la même chose vaut pour
+   l'explorateur SH6, dont la première colonne porte le code. */
 .atlas-matrice th:first-child,
-.atlas-matrice td:first-child{position:sticky; left:0; z-index:2;
+.atlas-matrice td:first-child,
+.atlas-sh6 th:first-child,
+.atlas-sh6 td:first-child{position:sticky; left:0; z-index:2;
   background:var(--c-surface); padding-right:16px}
-.atlas-matrice td:first-child::after{content:""; position:absolute; top:0; right:0;
+.atlas-matrice td:first-child::after,
+.atlas-sh6 td:first-child::after{content:""; position:absolute; top:0; right:0;
   bottom:0; width:1px; background:var(--c-border)}
-.atlas-matrice thead th:first-child{background:var(--c-surface)}
+.atlas-matrice thead th:first-child,
+.atlas-sh6 thead th:first-child{background:var(--c-surface)}
 /* Le tableau défile dans son conteneur, jamais la page : on le dit, et
-   seulement là où c'est vrai. */
-.atlas-defile{display:none}
-@media (max-width:1024px){ .atlas-defile{display:block} }
+   partout où c'est vrai. Mesuré le 03/09 à 1440 px COMME à 1120 px : la
+   colonne de contenu de .res-corps rend 752 px, la matrice 1 046 px et
+   l'explorateur SH6 860 px. Les deux tableaux cachent donc des colonnes
+   sur ordinateur aussi (294 px et 108 px), et la colonne « Veille » que
+   la note nomme n'était jamais visible sans défiler. La mention cesse
+   d'être réservée au téléphone. */
+.atlas-defile{display:block}
 /* Les notes de périmètre et de provenance sont du texte suivi, pas des
    légendes : mesurées à 154 caractères par ligne, en 12 px, sur 752 px.
    Elles montent au corps du texte et prennent une mesure. */
@@ -75,6 +93,12 @@
   .res-corps .btn-sm,.article .btn-sm,.liste-postes .btn-sm,
   .ligne-liste .btn-sm,.res-carte .btn-sm{font-size:0.875rem}
   .form-evenement label{font-size:0.875rem}
+  /* Un indice de formule suit la taille de son parent : dans un chapô de
+     15 px, sub rend 12,5 px, mesuré le 03/09 sur 23-research (N indice reg,
+     dans « Infrastructure de recherche »). Il remonte à 14 px sans changer
+     de position. Les indices posés dans un .t-h2 de 18 px rendent déjà
+     15 px et ne sont pas touchés. */
+  .res-corps p sub,.res-corps p sup{font-size:0.875rem}
 }
 
 /* ── 4. LES CIBLES SOUS 40 px SUR TÉLÉPHONE ──
@@ -113,9 +137,71 @@
 /* ── 6. LES BLOCS QUI VIVAIENT EN style= INLINE ──
    Une grille, une colonne, une rangée : dans une classe. */
 .liste-postes{display:flex; flex-direction:column; gap:14px}
-.rang-boutons{display:flex; gap:14px; flex-wrap:wrap; margin-top:28px}
+/* align-items:center, mesuré : sur 25-skills la rangée porte un bouton de
+   40 px et un lien de texte de 24 px. Sans cette ligne, le lien s'étire à
+   40 px (étirement par défaut d'un flex) et son texte se pose en haut,
+   16 px au-dessus du libellé du bouton d'à côté. */
+.rang-boutons{display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+  margin-top:28px}
+/* Le lien de texte d'une rangée est une cible au doigt comme le bouton
+   d'à côté : mesuré 104 × 24 sur 25-skills et 117 × 24 sur son jumeau
+   anglais, sous la barre des 40 px. */
+.rang-boutons .lien-signal{display:inline-flex; align-items:center; min-height:40px}
+@media (max-width:640px){ .rang-boutons .lien-signal{min-height:44px} }
+/* La ligne de commande de 25-skills : une rangée, dans une classe, et la
+   même dans les deux langues. Le « $ » n'est pas une action : il quitte le
+   bleu de signal pour l'encre atténuée du champ profond, comme les 45 noms
+   de skills l'ont fait au bloc 5. */
+.ligne-commande{display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+  max-width:520px; padding:16px 20px; border-radius:var(--r-md);
+  background:rgba(255,255,255,0.05); border:1px solid var(--c-filet-sombre)}
+.ligne-commande .invite{color:var(--c-text-on-dark-3); font-weight:600}
+/* Le sélecteur porte .sur-sombre, mesuré : sans lui, .sur-sombre .t-body
+   (0,2,0) l'emporte sur .ligne-commande code (0,1,1) et la commande rend
+   en blanc à 0,64 au lieu du blanc plein qu'elle avait en style= inline. */
+.sur-sombre .ligne-commande code{background:transparent; padding:0;
+  color:var(--c-text-on-dark); overflow-wrap:anywhere}
 .rang-etat{display:flex; align-items:center; justify-content:space-between;
   gap:20px; flex-wrap:wrap}
+/* La rangée « pastille + date » d'un événement. Mesuré à 390 px sur
+   15-evenements : la pastille « À venir », sans flex:none et dans une
+   rangée qui ne passe pas à la ligne, se comprimait à 66 px et son
+   libellé se coupait en deux lignes dans un rond. */
+.rang-meta{display:flex; align-items:center; gap:14px; flex-wrap:wrap}
+.rang-meta .pilule{flex:none}
+/* La vignette d'une carte Ressources quand elle porte une icône et non une
+   photo : le même bloc était recopié six fois en style= inline sur
+   17-modeles (display:grid + dégradé de champ profond). Le sélecteur porte
+   deux classes, mesuré : à une seule, .res-carte .vignette de composants.css
+   (spécificité 0,2,0) reprenait le fond et les six vignettes rendaient en
+   gris clair, icône invisible. */
+.vignette.vignette-ico{display:grid; place-items:center;
+  background:linear-gradient(160deg,var(--c-field-deep-2),var(--c-field-deep))}
+
+/* ── 6 bis. LE BANDEAU ET LA LIGNE DE LISTE À 390 px ──
+   composants.css remet .res-tete sur DEUX colonnes sous 1024 px et rien ne
+   la ramène à une seule ensuite. Mesuré le 03/09 à 390 px, sur les onze
+   pages qui portent .res-tete : deux colonnes de 157 px, le titre de page
+   de 40 px déborde la sienne et le chapô se lit en trois mots par ligne.
+   Une colonne sous 640 px. */
+@media (max-width:640px){
+  .res-tete{grid-template-columns:minmax(0,1fr); gap:16px}
+}
+/* .ligne-liste est un flex en nowrap sans règle d'écran étroit. Mesuré à
+   390 px, la largeur rendue de son bloc .principal :
+     15-evenements   18 px   (pastille + titre + date + bouton)
+     10-ressources   66 px
+     18-recrutement 145 px
+     23-research    179 px
+   À 18 px, le titre « PPWR : relire ses emballages avant le 12 août »
+   descend sur douze lignes d'un mot. Le bloc principal prend la ligne
+   entière sous 640 px, la pastille et le bouton passent dessous.
+   .journal .ligne-liste (lane cadre) garde sa colonne : sa règle porte
+   deux classes, elle l'emporte. */
+@media (max-width:640px){
+  .ligne-liste{flex-wrap:wrap; gap:14px; padding:20px}
+  .ligne-liste .principal{flex:1 1 100%}
+}
 
 /* ── 7. LE FIL DU BLOG (24-blog) ──
    Le repère de mois porte la date et le nombre : à 390 px il tombait à

@@ -1,0 +1,63 @@
+{
+  "nom": "36-solutions",
+  "desktop": {
+    "largeurDoc": 1440,
+    "largeurFenetre": 1440,
+    "debordement": false,
+    "hauteur": 4094,
+    "h1": {
+      "texte": "La conformité produit sur 106 pays, au même endroit.",
+      "taille": "51.84px",
+      "graisse": "500",
+      "classe": "t-hero"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 31,
+    "textesSous12": 3,
+    "ciblesSous40": 49,
+    "paragrapheLePlusLarge": 780,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 525,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "La conformité produit sur 106 pays, au même endroit | Cleo Labs",
+    "description": 139
+  },
+  "mobile": {
+    "largeurDoc": 390,
+    "largeurFenetre": 390,
+    "debordement": false,
+    "hauteur": 6768,
+    "h1": {
+      "texte": "La conformité produit sur 106 pays, au même endroit.",
+      "taille": "36px",
+      "graisse": "500",
+      "classe": "t-hero"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 14,
+    "textesSous12": 0,
+    "ciblesSous40": 5,
+    "paragrapheLePlusLarge": 334,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 1919,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "La conformité produit sur 106 pays, au même endroit | Cleo Labs",
+    "description": 139
+  },
+  "tranches": {
+    "desktop": 2,
+    "mobile": 5
+  },
+  "erreursConsole": [],
+  "capture": "2026-09-03T08:46:32.344Z"
+}

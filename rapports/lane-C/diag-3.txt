@@ -1,0 +1,76 @@
+
+===== 02-entreprise =====
+-- mobile, textes < 14 px :
+   13px | div.g3.seg-equipe.vu > div.seg-portrait > div.pays > div.lieu > span  ×3  ex: Neuilly-sur-Seine
+   13px | div.g3.seg-equipe.vu > div.seg-portrait > div.bas > div.marqueurs > span.pilule.pilule-contour  ×4  ex: Droit
+-- mobile, cibles < 40 px :
+-- desktop, cibles < 40 px :
+   59×24  nav.nav > div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur  « Produit »
+   53×24  nav.nav > div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur  « Textes »
+   194×32  div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a  « PPWR Actualité »
+   194×32  div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a  « REACH »
+   194×32  div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a  « RSGP »
+   194×32  div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a  « ESPR / Passeport Actualité »
+   194×32  div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a  « EN 71 »
+   194×32  div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a  « Allégations vertes »
+   194×32  div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a  « Batteries »
+   194×32  div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a  « EPI »
+   194×32  div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a  « AI Act »
+   194×32  div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a  « Proposition 65 »
+   194×32  div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a  « PFAS Actualité »
+   194×32  div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a  « TSCA »
+   194×32  div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a  « ASTM F963 »
+   194×32  div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a  « TB 117 »
+   194×32  div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a  « Loi 96 (Québec) »
+   194×32  div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a  « CPSIA »
+   194×32  div.mega.mega-large > div.mega-colonnes > div > div.mega-liste > a  « FTC Green Guides »
+   84×24  nav.nav > div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur  « Ressources »
+   63×24  nav.nav > div.conteneur > div.nav-liens > div.nav-item > a.nav-declencheur  « Entreprise »
+   66×24  body > nav.nav > div.conteneur > div.nav-fin > a.lien-secondaire  « Connexion »
+   118×30  div.pied-colonnes > div > ul > li > a  « Regulatory Change »
+   56×30  div.pied-colonnes > div > ul > li > a  « Research »
+   106×30  div.pied-colonnes > div > ul > li > a  « Compliance Data »
+   149×30  div.pied-colonnes > div > ul > li > a  « Compliance as a service »
+   63×30  div.pied-colonnes > div > ul > li > a  « Fabricants »
+   172×30  div.pied-colonnes > div > ul > li > a  « Importateurs et distributeurs »
+   81×30  div.pied-colonnes > div > ul > li > a  « Marketplaces »
+   117×30  div.pied-colonnes > div > ul > li > a  « Conformité produit »
+   53×30  div.pied-colonnes > div > ul > li > a  « Secteurs »
+   114×30  div.pied-colonnes > div > ul > li > a  « Union européenne »
+   150×30  div.pied-colonnes > div > ul > li > a  « PPWR, article par article »
+   65×30  div.pied-colonnes > div > ul > li > a  « Legal Data »
+   28×30  div.pied-colonnes > div > ul > li > a  « Blog »
+   131×30  div.pied-colonnes > div > ul > li > a  « Travaux de recherche »
+   30×30  div.pied-colonnes > div > ul > li > a  « Skills »
+   158×30  div.pied-colonnes > div > ul > li > a  « Journal des changements »
+   125×30  div.pied-colonnes > div > ul > li > a  « Plan d'action MARIA »
+   56×30  div.pied-colonnes > div > ul > li > a  « À propos »
+   127×30  div.pied-colonnes > div > ul > li > a  « Cas client Decathlon »
+   50×30  div.pied-colonnes > div > ul > li > a  « Sécurité »
+   78×30  div.pied-colonnes > div > ul > li > a  « Recrutement »
+   123×30  div.pied-colonnes > div > ul > li > a  « Demander un accès »
+   109×15  div.pied-identite > div.pied-coordonnees > div > div.t-micro > a  « contact@cleolabs.co »
+   109×15  div.pied-identite > div.pied-coordonnees > div > div.t-micro > a  « Réserver 30 minutes »
+   111×28  body > footer.pied > div.conteneur > div.pied-bas > a  « Conditions générales »
+   139×28  body > footer.pied > div.conteneur > div.pied-bas > a  « Politique de confidentialité »
+-- desktop, lignes > 78 car :
+-- desktop, debordement interne :
+   370>330  main > section.seg.section > div.conteneur > div.g3.seg-equipe.vu > div.carte-lavande.seg-equipe-mot  « Et l'équipe qui encode, relit et met à j »
+-- mobile, debordement interne :
+   372>332  main > section.seg.section > div.conteneur > div.g3.seg-equipe.vu > div.carte-lavande.seg-equipe-mot  « Et l'équipe qui encode, relit et met à j »
+-- liens internes : /fr /fr/platform /fr/platform/research /fr/platform/regulations /fr#compliance-service /fr/jurisdictions/european-union/regulations/ppwr /fr/jurisdictions/european-union /fr/legal-data /fr/research /fr/blog /fr/skills /fr/company /fr/for/manufacturers /fr/for/importers-distributors /fr/for/marketplaces /fr/solutions/product-compliance /fr/industries /fr/changelog /fr/maria-action-plan /fr/customers /fr/security /fr/careers /fr/meet /fr/terms
+
+===== 20-campagne =====
+-- mobile, textes < 14 px :
+-- mobile, cibles < 40 px :
+   334×24  footer.seg.pied.seg-p20-pied > div.conteneur > div.identite > div > a.marque  «  »
+   111×17  footer.seg.pied.seg-p20-pied > div.conteneur > div.identite > div.t-caption > a  « hello@cleolabs.co »
+-- desktop, cibles < 40 px :
+   862×24  footer.seg.pied.seg-p20-pied > div.conteneur > div.identite > div > a.marque  «  »
+   95×15  footer.seg.pied.seg-p20-pied > div.conteneur > div.identite > div.t-caption > a  « hello@cleolabs.co »
+   111×28  body > footer.seg.pied.seg-p20-pied > div.conteneur > div.pied-bas > a  « Conditions générales »
+   139×28  body > footer.seg.pied.seg-p20-pied > div.conteneur > div.pied-bas > a  « Politique de confidentialité »
+-- desktop, lignes > 78 car :
+-- desktop, debordement interne :
+-- mobile, debordement interne :
+-- liens internes : /fr /fr/blog/eu-ppwr-packaging-conformity-2026 /fr/terms

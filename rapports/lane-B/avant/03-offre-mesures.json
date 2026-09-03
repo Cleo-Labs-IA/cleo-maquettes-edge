@@ -1,0 +1,63 @@
+{
+  "nom": "03-offre",
+  "desktop": {
+    "largeurDoc": 1440,
+    "largeurFenetre": 1440,
+    "debordement": false,
+    "hauteur": 5648,
+    "h1": {
+      "texte": "Regulatory Change. Ce qui change, rattaché à vos références.",
+      "taille": "51.84px",
+      "graisse": "500",
+      "classe": "t-hero mesure-centree"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 47,
+    "textesSous12": 21,
+    "ciblesSous40": 50,
+    "paragrapheLePlusLarge": 820,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 525,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "Veille réglementaire produit sur 106 pays | Cleo Labs",
+    "description": 150
+  },
+  "mobile": {
+    "largeurDoc": 390,
+    "largeurFenetre": 390,
+    "debordement": false,
+    "hauteur": 9576,
+    "h1": {
+      "texte": "Regulatory Change. Ce qui change, rattaché à vos références.",
+      "taille": "36px",
+      "graisse": "500",
+      "classe": "t-hero mesure-centree"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 30,
+    "textesSous12": 19,
+    "ciblesSous40": 6,
+    "paragrapheLePlusLarge": 334,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 1919,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "Veille réglementaire produit sur 106 pays | Cleo Labs",
+    "description": 150
+  },
+  "tranches": {
+    "desktop": 3,
+    "mobile": 6
+  },
+  "erreursConsole": [],
+  "capture": "2026-09-03T08:43:55.307Z"
+}

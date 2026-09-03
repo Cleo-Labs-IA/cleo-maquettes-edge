@@ -1,0 +1,63 @@
+{
+  "nom": "02-entreprise",
+  "desktop": {
+    "largeurDoc": 1440,
+    "largeurFenetre": 1440,
+    "debordement": false,
+    "hauteur": 6577,
+    "h1": {
+      "texte": "L'infrastructure de la conformité produit. Depuis 2023.",
+      "taille": "51.84px",
+      "graisse": "500",
+      "classe": "t-hero"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 39,
+    "textesSous12": 3,
+    "ciblesSous40": 51,
+    "paragrapheLePlusLarge": 600,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 525,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "À Propos de Cleo Labs : Soutenue par Kima Ventures | Cleo Labs",
+    "description": 245
+  },
+  "mobile": {
+    "largeurDoc": 390,
+    "largeurFenetre": 390,
+    "debordement": false,
+    "hauteur": 11051,
+    "h1": {
+      "texte": "L'infrastructure de la conformité produit. Depuis 2023.",
+      "taille": "36px",
+      "graisse": "500",
+      "classe": "t-hero"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 9,
+    "textesSous12": 0,
+    "ciblesSous40": 7,
+    "paragrapheLePlusLarge": 334,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 1919,
+    "main": true,
+    "burger": true,
+    "police": "Satoshi",
+    "titre": "À Propos de Cleo Labs : Soutenue par Kima Ventures | Cleo Labs",
+    "description": 245
+  },
+  "tranches": {
+    "desktop": 3,
+    "mobile": 7
+  },
+  "erreursConsole": [],
+  "capture": "2026-09-03T08:44:23.966Z"
+}

@@ -1,0 +1,63 @@
+{
+  "nom": "20-campagne",
+  "desktop": {
+    "largeurDoc": 1440,
+    "largeurFenetre": 1440,
+    "debordement": false,
+    "hauteur": 1477,
+    "h1": {
+      "texte": "Le PPWR en clair, article par article.",
+      "taille": "51.84px",
+      "graisse": "500",
+      "classe": "t-hero"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 12,
+    "textesSous12": 0,
+    "ciblesSous40": 2,
+    "paragrapheLePlusLarge": 460,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 250,
+    "main": false,
+    "burger": false,
+    "police": "Satoshi",
+    "titre": "Guide PPWR gratuit, article par article | Cleo Labs",
+    "description": 147
+  },
+  "mobile": {
+    "largeurDoc": 390,
+    "largeurFenetre": 390,
+    "debordement": false,
+    "hauteur": 2265,
+    "h1": {
+      "texte": "Le PPWR en clair, article par article.",
+      "taille": "36px",
+      "graisse": "500",
+      "classe": "t-hero"
+    },
+    "nbH1": 1,
+    "liensMorts": 0,
+    "champsFiges": 0,
+    "textesSous14": 5,
+    "textesSous12": 0,
+    "ciblesSous40": 0,
+    "paragrapheLePlusLarge": 334,
+    "imagesSansAlt": 0,
+    "imagesCassees": 0,
+    "pied": 432,
+    "main": false,
+    "burger": false,
+    "police": "Satoshi",
+    "titre": "Guide PPWR gratuit, article par article | Cleo Labs",
+    "description": 147
+  },
+  "tranches": {
+    "desktop": 1,
+    "mobile": 2
+  },
+  "erreursConsole": [],
+  "capture": "2026-09-03T08:44:52.395Z"
+}
