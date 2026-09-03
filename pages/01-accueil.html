@@ -82,59 +82,53 @@
       <h2 class="t-display mesure-centree">De la parution au Journal officiel au verdict sur votre référence.</h2>
     </div>
 
-    <div class="radar" data-anim="monte-court" data-touche="touche ce produit" data-hors="ne touche pas ce produit">
-      <svg class="radar-traits" aria-hidden="true">
-        <line class="radar-trait" data-i="0"></line>
-        <line class="radar-trait" data-i="1"></line>
-        <line class="radar-trait" data-i="2"></line>
-        <line class="radar-trait" data-i="3"></line>
-        <line class="radar-trait" data-i="4"></line>
-        <line class="radar-trait" data-i="5"></line>
-      </svg>
-      <div class="radar-source" data-i="0" data-ligne="0" style="--x:5%;--y:9%">
-        <span class="radar-autorite">CPSC · États-Unis</span>
-        <span class="radar-texte">CPSIA, section 101 (a), teneur en plomb</span>
-        <span class="radar-etat"></span>
-      </div>
-      <div class="radar-source radar-droite" data-i="1" data-ligne="1" style="--x:95%;--y:9%">
-        <span class="radar-autorite">ECHA · Union européenne</span>
-        <span class="radar-texte">REACH, annexe XVII</span>
-        <span class="radar-etat"></span>
-      </div>
-      <div class="radar-source" data-i="2" data-ligne="2" style="--x:5%;--y:40%">
-        <span class="radar-autorite">OEHHA · Californie</span>
-        <span class="radar-texte">Proposition 65</span>
-        <span class="radar-etat"></span>
-      </div>
-      <div class="radar-source radar-droite" data-i="3" data-ligne="3" style="--x:95%;--y:40%">
-        <span class="radar-autorite">Journal officiel de l'UE</span>
-        <span class="radar-texte">Règlement (UE) 1007/2011, étiquetage textile</span>
-        <span class="radar-etat"></span>
-      </div>
-      <div class="radar-source" data-i="4" data-ligne="-1" style="--x:5%;--y:71%">
-        <span class="radar-autorite">Journal officiel de l'UE</span>
-        <span class="radar-texte">Règlement délégué (UE) 2025/1920, règles UDI des dispositifs médicaux</span>
-        <span class="radar-etat"></span>
-      </div>
-      <div class="radar-source radar-droite" data-i="5" data-ligne="-1" style="--x:95%;--y:71%">
-        <span class="radar-autorite">FDA · États-Unis</span>
-        <span class="radar-texte">21 CFR 101, étiquetage des denrées alimentaires</span>
-        <span class="radar-etat"></span>
-      </div>
-      <div class="radar-produit">
-        <img src="img:jean" alt="">
-        <div class="radar-nom">Jean droit enfant</div>
-        <div class="radar-ref">Référence DNM-4412</div>
-      </div>
-      <div class="radar-fiche">
-        <div class="radar-fiche-tete"><span class="t-label">Sa fiche</span><span class="radar-compte"><b>0</b> / 6 parutions touchent ce produit</span></div>
-        <div class="radar-ligne" data-i="0"><span>CPSIA, plomb</span><span class="marqueur m-couvert">Couvert</span></div>
-        <div class="radar-ligne" data-i="1"><span>REACH annexe XVII</span><span class="marqueur m-couvert">Couvert</span></div>
-        <div class="radar-ligne" data-i="2"><span>Proposition 65</span><span class="marqueur m-manquant">Donnée manquante</span></div>
-        <div class="radar-ligne" data-i="3"><span>Étiquetage textile 1007/2011</span><span class="marqueur m-attente">À vérifier</span></div>
+    <div class="radar" data-anim="monte-court" data-touche="Touche ce produit" data-hors="Ne touche pas ce produit">
+      <div class="radar-boite">
+        <div class="radar-col radar-parutions">
+          <div class="t-label radar-titre">Ce qui vient de paraître</div>
+          <div class="radar-source" data-i="0" data-ligne="0">
+            <span class="radar-autorite">CPSC · États-Unis</span>
+            <span class="radar-texte">CPSIA, section 101 (a), teneur en plomb</span>
+            <span class="radar-etat"></span>
+          </div>
+          <div class="radar-source" data-i="1" data-ligne="1">
+            <span class="radar-autorite">ECHA · Union européenne</span>
+            <span class="radar-texte">REACH, annexe XVII</span>
+            <span class="radar-etat"></span>
+          </div>
+          <div class="radar-source" data-i="2" data-ligne="2">
+            <span class="radar-autorite">OEHHA · Californie</span>
+            <span class="radar-texte">Proposition 65</span>
+            <span class="radar-etat"></span>
+          </div>
+          <div class="radar-source" data-i="3" data-ligne="-1">
+            <span class="radar-autorite">FDA · États-Unis</span>
+            <span class="radar-texte">21 CFR 101, étiquetage des denrées alimentaires</span>
+            <span class="radar-etat"></span>
+          </div>
+        </div>
+        <svg class="radar-traits" aria-hidden="true">
+          <line class="radar-trait" data-i="0"></line>
+          <line class="radar-trait" data-i="1"></line>
+          <line class="radar-trait" data-i="2"></line>
+          <line class="radar-trait" data-i="3"></line>
+        </svg>
+        <div class="radar-col radar-cible">
+          <div class="t-label radar-titre">Votre référence</div>
+          <div class="radar-fiche">
+            <div class="radar-produit">
+              <img src="img:jean" alt="">
+              <div><div class="radar-nom">Jean droit enfant</div><div class="radar-ref">DNM-4412</div></div>
+            </div>
+            <div class="radar-ligne" data-i="0"><span>CPSIA, plomb</span><span class="marqueur m-couvert">Couvert</span></div>
+            <div class="radar-ligne" data-i="1"><span>REACH annexe XVII</span><span class="marqueur m-couvert">Couvert</span></div>
+            <div class="radar-ligne" data-i="2"><span>Proposition 65</span><span class="marqueur m-manquant">Donnée manquante</span></div>
+            <div class="radar-compte"><b>0</b> sur 4 touchent ce produit</div>
+          </div>
+        </div>
       </div>
     </div>
-    <p class="t-caption centre radar-legende">Six parutions réelles, un produit : ce que l'écran rejoue. Un clic relance.</p>
+    <p class="t-caption centre radar-legende">Quatre parutions réelles, un produit. Un clic relance.</p>
 
     <div class="radar-points" data-anim-groupe>
       <div><span class="flux-rang">01</span><p class="t-body" style="margin:8px 0 0">Une parution au Journal officiel arrive rattachée aux références qu'elle touche, pas dans une liste à trier.</p></div>
@@ -149,22 +143,19 @@
       var lignes = [].slice.call(r.querySelectorAll('.radar-ligne')), compte = r.querySelector('.radar-compte b'), img = r.querySelector('.radar-produit img');
       var TOUCHE = r.getAttribute('data-touche'), HORS = r.getAttribute('data-hors');
       var reduit = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var etroit = function(){ return window.innerWidth < 760; };
-      /* Les traits : du bord de la parution au centre du produit, mesurés à la mise en page. */
       var longueurs = [];
       function poser(){
-        var R = r.getBoundingClientRect(), P = img.getBoundingClientRect();
-        var cx = P.left + P.width / 2 - R.left, cy = P.top + P.height / 2 - R.top;
+        var R = r.querySelector('.radar-boite').getBoundingClientRect(), P = img.getBoundingClientRect();
+        var cx = P.left - R.left, cy = P.top + P.height / 2 - R.top;
         sources.forEach(function(s, i){
-          var B = s.getBoundingClientRect(), droite = s.classList.contains('radar-droite');
-          var x1 = (droite ? B.left : B.right) - R.left, y1 = B.top + B.height / 2 - R.top;
+          var B = s.getBoundingClientRect(), x1 = B.right - R.left, y1 = B.top + B.height / 2 - R.top;
           var t = traits[i]; t.setAttribute('x1', x1); t.setAttribute('y1', y1); t.setAttribute('x2', cx); t.setAttribute('y2', cy);
-          var L = Math.hypot(cx - x1, cy - y1); longueurs[i] = L;
-          t.style.strokeDasharray = L; if (!t.classList.contains('plein') && !t.classList.contains('partiel')) t.style.strokeDashoffset = L;
+          var L = Math.hypot(cx - x1, cy - y1); longueurs[i] = L; t.style.strokeDasharray = L;
+          if (!t.classList.contains('plein') && !t.classList.contains('partiel')) t.style.strokeDashoffset = L;
         });
       }
-      function tracer(i, touche){ var t = traits[i]; t.classList.add(touche ? 'plein' : 'partiel'); t.style.strokeDashoffset = touche ? 0 : longueurs[i] * 0.55; }
-      function effacer(i){ var t = traits[i]; t.classList.remove('plein', 'partiel'); t.style.strokeDashoffset = longueurs[i]; }
+      function tracer(i, touche){ var t = traits[i]; t.classList.add(touche ? 'plein' : 'partiel'); t.style.strokeDashoffset = touche ? 0 : longueurs[i] * 0.5; }
+      function effacer(i){ var t = traits[i]; t.classList.remove('plein', 'partiel', 'fini'); t.style.strokeDashoffset = longueurs[i]; }
       var minuteries = [], n = 0, tours = 0, visible = false, lance = false;
       var plus = function(ms, fn){ minuteries.push(setTimeout(fn, ms)); };
       function raz(){
@@ -178,14 +169,14 @@
         tracer(i, touche);
         if (touche) { n++; compte.textContent = String(n); var l = lignes[li]; if (l) l.classList.add('vu'); }
       }
-      function final(){ raz(); sources.forEach(function(s, i){ s.classList.add('actif'); resoudre(s, i); }); }
+      function final(){ raz(); sources.forEach(function(s, i){ resoudre(s, i); traits[i].classList.add('fini'); }); }
       function joue(){
         raz(); poser();
         sources.forEach(function(s, i){
-          plus(500 + i * 1500, function(){ s.classList.add('actif'); });
-          plus(500 + i * 1500 + 750, function(){ resoudre(s, i); });
+          plus(500 + i * 1700, function(){ s.classList.add('actif'); if (i > 0) { sources[i - 1].classList.remove('actif'); traits[i - 1].classList.add('fini'); } });
+          plus(500 + i * 1700 + 800, function(){ resoudre(s, i); });
         });
-        plus(500 + sources.length * 1500 + 2600, function(){ tours++; if (tours < 5 && visible) joue(); });
+        plus(500 + sources.length * 1700 + 2400, function(){ tours++; if (tours < 5 && visible) joue(); });
       }
       poser(); if (typeof ResizeObserver !== 'undefined') new ResizeObserver(poser).observe(r); else window.addEventListener('resize', poser);
       if (reduit) { final(); return; }
