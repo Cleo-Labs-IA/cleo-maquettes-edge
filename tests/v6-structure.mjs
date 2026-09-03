@@ -6,16 +6,13 @@ import { fileURLToPath } from 'node:url'
 const ICI = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
 const SORTIE = path.join(ICI, 'sortie')
 const MANIFESTE = path.join(ICI, 'commun', 'v6-routes.json')
-// index.html est produit indépendamment par index.mjs ; construire.mjs ne gère
-// que les sorties déclarées dans PAGES.
-const SORTIES_HORS_PAGES = new Set(['index.html'])
 const FAMILLES = new Set([
   'preview', 'home', 'company-proof', 'product', 'audience', 'regulation',
   'resource-index', 'article', 'trust-conversion', 'not-found',
 ])
 
 const sorties = fs.readdirSync(SORTIE)
-  .filter(fichier => fichier.endsWith('.html') && !SORTIES_HORS_PAGES.has(fichier))
+  .filter(fichier => fichier.endsWith('.html'))
   .sort()
 
 let manifeste

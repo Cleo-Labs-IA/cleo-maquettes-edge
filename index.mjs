@@ -124,7 +124,7 @@ code,kbd,samp,pre{font-family:var(--font);font-variant-numeric:tabular-nums}
 @media (max-width:900px){.grille,.regle{grid-template-columns:minmax(0,1fr)}}
 </style>
 </head>
-<body>
+<body data-cleo-ds="v6" data-v6-family="preview" data-v6-page="index">
 <div class="conteneur">
   <header class="entete">
     <div class="t-label" style="margin-bottom:18px">Maquettes de travail</div>
