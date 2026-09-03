@@ -5,6 +5,11 @@ import sharp from '/Users/naomiehalioua/cleo-landing/node_modules/sharp/lib/inde
 
 const POLICE = fs.readFileSync('/Users/naomiehalioua/Downloads/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Variable.woff2').toString('base64')
 const base = fs.readFileSync('commun/base.css', 'utf8')
+const v6Lanes = fs.readdirSync('commun/lanes')
+  .filter(fichier => /^v6-.*\.css$/.test(fichier))
+  .sort()
+  .map(fichier => fs.readFileSync(`commun/lanes/${fichier}`, 'utf8'))
+  .join('\n')
 
 const PAGES = [
   { f:'01-accueil.html',       t:'Accueil',      g:'Accueil',    src:'edgecomply.com/', blocs:14,
@@ -96,6 +101,7 @@ const doc = `<!doctype html>
 <style>
 @font-face{font-family:"Satoshi";src:url(data:font/woff2;base64,${POLICE}) format("woff2");font-weight:300 900;font-display:swap}
 ${base}
+${v6Lanes}
 body{background:var(--c-surface);color:var(--c-text)}
 code,kbd,samp,pre{font-family:var(--font);font-variant-numeric:tabular-nums}
 .ref{font-variant-numeric:tabular-nums}
