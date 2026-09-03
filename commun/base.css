@@ -37,6 +37,7 @@
   /* ── Bordures, le filet de cleolabs.co ; --c-border 0,08 -> 0,13 le 27/08 (1,196 -> 1,347:1) ── */
   --c-border: rgba(0,0,0,0.13);
   --c-border-hover: rgba(0,0,0,0.15);
+  --c-contour-btn: rgba(0,0,0,0.45);          /* 3,9:1 sur la surface ; le bouton secondaire, audit du 03/09 */
   --c-filet: #E3E0D8;                       /* le bord du verre, relevé */
   --c-filet-sombre: rgba(255,255,255,0.13);
 
@@ -138,9 +139,9 @@ code,kbd,samp,pre{font-family:var(--font); font-variant-numeric:tabular-nums;
 .t-h3{font-size:1rem; font-weight:500; letter-spacing:0; line-height:1.4; color:var(--c-ink)}
 .t-body{font-size:0.9375rem; font-weight:400; line-height:1.60; color:var(--c-text-2)}
 .t-body-lg{font-size:1rem; font-weight:400; line-height:1.7; color:var(--c-text-2)}
-.t-caption{font-size:0.75rem; font-weight:400; line-height:1.5; color:var(--c-text-3)}
+.t-caption{font-size:0.8125rem; font-weight:400; line-height:1.5; color:var(--c-text-3)}
 /* 12 px et pas 10 : à 10 px en capitales, l'étiquette ne se lit plus (mesuré le 03/09, 13 par page d'accueil). */
-.t-label{font-size:0.75rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--c-text-3)}
+.t-label{font-size:0.8125rem; font-weight:600; letter-spacing:0.11em; text-transform:uppercase; color:var(--c-text-3)}
 .attenue{color:var(--c-text-3)}
 
 /* ── Champs ── */

@@ -488,13 +488,14 @@
    "_mesure": "titre 62 caracteres, description 245 caracteres, releves sur la page servie le 27/08/2026"
   },
   "03-offre.html": {
-   "titre": "Veille réglementaire produit sur 106 pays | Cleo Labs",
+   "titre": "Regulatory Change, veille produit sur 106 pays | Cleo Labs",
    "description": "Les sources sont suivies en continu et ce qui va changer vous parvient des mois avant l'entrée en vigueur. Ne travaillez jamais sur une règle périmée.",
    "source": "redige",
    "url_source": null,
    "appariement": "pas d'equivalent servi : /fr/product/radar rend 404. Le depot declare la page (product/radar/page.tsx:30-33) mais elle n'est pas deployee.",
    "appui_contenu": "pages/03-offre.html, h1 « Veille réglementaire produit. En continu, sur 106 pays. » et son chapeau, repris mot pour mot.",
-   "_mesure": "titre 53 caracteres, description 150 caracteres"
+   "_mesure": "titre 53 caracteres, description 150 caracteres",
+   "_gabarit_le": "2026-09-03"
   },
   "04-secteur.html": {
    "titre": "Conformité produit textile et habillement | Cleo Labs",
@@ -530,16 +531,18 @@
    "appariement": "pas d'equivalent servi : /fr/product/chat rend 404. Le depot declare la page (product/chat/page.tsx:30-33) mais elle n'est pas deployee.",
    "appui_contenu": "pages/07-chat.html, h1 « Recherche réglementaire. La source avant le résumé. » et son chapeau, repris mot pour mot.",
    "_mesure": "titre 62 caracteres, description 133 caracteres",
-   "_renomme_le": "2026-09-03 : un seul nom pour la feature, « Research », dans la nav, l'URL, le hero et le corps."
+   "_renomme_le": "2026-09-03 : un seul nom pour la feature, « Research », dans la nav, l'URL, le hero et le corps.",
+   "_gabarit_le": "2026-09-03"
   },
   "08-reglementation.html": {
-   "titre": "Réglementation encodée, 2 812 règles testables | Cleo Labs",
+   "titre": "Compliance Data, 2 812 règles testables | Cleo Labs",
    "description": "2 812 obligations écrites pour être testées : une condition, les entrées qu'elle réclame, la preuve attendue, et le texte officiel qui l'impose.",
    "source": "redige",
    "url_source": null,
    "appariement": "pas d'equivalent servi : /fr/product/market-access rend 404. Le depot declare la page (product/market-access/page.tsx:28-31) mais elle n'est pas deployee.",
    "appui_contenu": "pages/08-reglementation.html, h1 « Réglementation encodée. 2 812 règles testables. » et son chapeau, repris mot pour mot. Le chiffre 2 812 vient de la maquette, il n'est PAS recoupe sur cleolabs.co.",
-   "_mesure": "titre 58 caracteres, description 144 caracteres"
+   "_mesure": "titre 58 caracteres, description 144 caracteres",
+   "_gabarit_le": "2026-09-03"
   },
   "09-texte.html": {
    "titre": "PPWR, conformité des emballages article par article | Cleo Labs",
@@ -706,12 +709,13 @@
    "source": "redige"
   },
   "30-securite.html": {
-   "titre": "Sécurité des données chez Cleo Labs | Cleo Labs",
-   "description": "Six garanties écrites et vérifiables, les pratiques de sécurité et le socle technique de Cleo Labs, posés dès la conception pour des données réglementaires et de conformité sensibles.",
+   "titre": "Sécurité des données | Cleo Labs",
+   "description": "Six garanties écrites et vérifiables, les pratiques de sécurité et le socle technique de Cleo Labs, posés dès la conception.",
    "source": "redige",
    "url_source": null,
    "_appui": "pages/30-securite.html, h1 et h2",
-   "_ecrit_le": "2026-09-03"
+   "_ecrit_le": "2026-09-03",
+   "_gabarit_le": "2026-09-03"
   },
   "31-journal.html": {
    "titre": "Journal des modifications | Cleo Labs",
@@ -722,12 +726,13 @@
    "_ecrit_le": "2026-09-03"
   },
   "32-plan-action.html": {
-   "titre": "Plan d'action MARIA, marché par marché | Cleo Labs",
-   "description": "La méthode qui rapproche vos produits des textes qui les touchent, note le risque avec sa source et rend un plan d'action daté, en quatre étapes.",
+   "titre": "Plan d'action MARIA par marché | Cleo Labs",
+   "description": "La méthode qui rapproche vos produits des textes qui les touchent, note le risque avec sa source et rend un plan d'action daté.",
    "source": "redige",
    "url_source": null,
    "_appui": "pages/32-plan-action.html, h1 et chapeau",
-   "_ecrit_le": "2026-09-03"
+   "_ecrit_le": "2026-09-03",
+   "_gabarit_le": "2026-09-03"
   },
   "33-fabricants.html": {
    "titre": "Conformité produit pour les fabricants | Cleo Labs",
@@ -735,15 +740,17 @@
    "source": "redige",
    "url_source": null,
    "_appui": "pages/33-fabricants.html, chapeau",
-   "_ecrit_le": "2026-09-03"
+   "_ecrit_le": "2026-09-03",
+   "_gabarit_le": "2026-09-03"
   },
   "34-importateurs.html": {
-   "titre": "Conformité produit pour les importateurs et distributeurs | Cleo Labs",
+   "titre": "Conformité produit pour les importateurs | Cleo Labs",
    "description": "Code HS, droits, certifications, double usage : une réponse vérifiée par produit, avant l'expédition, du classement au dédouanement.",
    "source": "redige",
    "url_source": null,
    "_appui": "pages/34-importateurs.html, chapeau",
-   "_ecrit_le": "2026-09-03"
+   "_ecrit_le": "2026-09-03",
+   "_gabarit_le": "2026-09-03"
   },
   "35-marketplaces.html": {
    "titre": "Conformité produit pour les marketplaces | Cleo Labs",
@@ -751,15 +758,17 @@
    "source": "redige",
    "url_source": null,
    "_appui": "pages/35-marketplaces.html, chapeau",
-   "_ecrit_le": "2026-09-03"
+   "_ecrit_le": "2026-09-03",
+   "_gabarit_le": "2026-09-03"
   },
   "36-solutions.html": {
-   "titre": "La conformité produit sur 106 pays, au même endroit | Cleo Labs",
+   "titre": "Conformité produit sur 106 pays | Cleo Labs",
    "description": "Donnez votre nom de domaine. Chaque produit est rapproché de chaque réglementation qui le touche : par marché, par référence, par échéance.",
    "source": "redige",
    "url_source": null,
    "_appui": "pages/36-solutions.html, chapeau",
-   "_ecrit_le": "2026-09-03"
+   "_ecrit_le": "2026-09-03",
+   "_gabarit_le": "2026-09-03"
   },
   "404.html": {
    "titre": "Page introuvable | Cleo Labs",

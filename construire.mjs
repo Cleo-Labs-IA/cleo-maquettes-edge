@@ -329,7 +329,8 @@ async function veille() {
 .cv,.cv *{font-family:var(--font) !important}
 /* Plancher typographique du composant sur téléphone (lane B, 03/09 : 8 à 11 px relevés) */
 .cv-lien{display:inline-flex; align-items:center; min-height:44px}
-@media (max-width:640px){ .cv-det u,.cv-ech,.cv-k,.cv-lbl,.cv-c span,.cv-lien,.cv-v,.cv-etat span,.cv__count{font-size:12px !important} }</style>
+.cv-det u,.cv-ech,.cv-k,.cv-lbl,.cv-c span,.cv-lien,.cv-v,.cv-etat span,.cv__count,.cv-s{font-size:11px !important}
+@media (max-width:640px){ .cv-det u,.cv-ech,.cv-k,.cv-lbl,.cv-c span,.cv-lien,.cv-v,.cv-etat span,.cv__count,.cv-s{font-size:12px !important} }</style>
 <div class="ecran-app">${m}</div>
 <script>${veilleScript}</script>`
 }
