@@ -807,6 +807,11 @@ for (const p of PAGES) {
   if (corps.includes('<!--GLOBE-PRODUITS-->')) corps = corps.replace('<!--GLOBE-PRODUITS-->', await globeProduits())
   corps = corps.replace(/<!--RES-NAV:([^>]*)-->/g, (_, a) => resNav(a.trim(), !!p.en))
   corps = await injecterImages(corps)
+  /* AUCUN COMMENTAIRE HTML NE SORT. Mesuré le 03/09/2026 : 515 commentaires servis sur
+     46 pages, dont « composition relevée sur edgecomply.com » cinq fois sur l'accueil
+     en ligne. Les marqueurs de l'atelier non résolus (NAV, PIED, CTA…) restent, pour
+     que le contrôle « fragment commun non injecté » puisse encore les voir. */
+  corps = corps.replace(/<!--(?!(?:NAV|PIED|CTA|MASSE|MASSE-REFS|ECRAN-[A-Z-]+|VEILLE|GLOBE-PRODUITS|RES-NAV:[^>]*|LANGUE)-->)[\s\S]*?-->/g, '')
 
   const nomSortie = p.sortie || p.fichier
   const seoP = SEO.pages[nomSortie]
