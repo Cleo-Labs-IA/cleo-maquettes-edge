@@ -314,3 +314,7 @@
   .quotidien-anim .ecran-tete .fil-ariane,.quotidien-anim .fiche-ref,.quotidien-anim .qe-etape b,
   .quotidien-anim .qe-parution-tete .t-label,.quotidien-anim .qe-parution-tete .t-caption{font-size:0.875rem}
 }
+
+/* La sécurité descend tout en bas (03/09, 14:10) : même bloc, dans sa propre section. */
+.securite-bas{padding:88px 0}
+.securite-bas .hero-securite{margin:0; padding:0; max-width:none}
