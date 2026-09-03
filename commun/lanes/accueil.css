@@ -291,3 +291,20 @@
 .radar-stats b{display:block; font-size:1.625rem; font-weight:500; letter-spacing:-0.02em; line-height:1.1; color:var(--c-ink)}
 .radar-stats span{display:block; font-size:0.8125rem; color:var(--c-text-3); margin-top:4px}
 @media (max-width:760px){ .radar-stats{grid-template-columns:repeat(2,minmax(0,1fr))} .radar-stats b{font-size:1.375rem} .radar-stats span{font-size:0.875rem} }
+
+/* ── Compliance as a service, épuré (03/09, 14:55) : trois étapes sans paragraphe, et
+      le partage du travail écrit une fois, en barre : 80 % l'agent, 20 % l'expert qui
+      signe. Le bleu = la part de l'agent (action), l'encre = la part signée. ── */
+.flux-epure .flux-etape{padding-bottom:26px}
+.flux-epure .flux-etape .t-h2{margin-bottom:6px}
+.flux-part{font-size:0.8125rem; color:var(--c-text-3)}
+.flux-partage{max-width:760px; margin:8px auto 0; padding:6px 0 0}
+.fp-barre{display:flex; height:10px; border-radius:var(--r-pill); overflow:hidden; background:var(--c-field-pale)}
+.fp-agent{width:80%; background:var(--c-blue); transform-origin:left; transform:scaleX(0); transition:transform 0.9s var(--ease-reveal)}
+.fp-expert{width:20%; background:var(--c-ink); transform-origin:left; transform:scaleX(0); transition:transform 0.5s var(--ease-reveal) 0.9s}
+.flux-partage.vu .fp-agent,.flux-partage.vu .fp-expert{transform:none}
+.fp-legende{display:flex; justify-content:space-between; gap:16px; margin-top:12px; font-size:0.9375rem; color:var(--c-text-2)}
+.fp-legende b{color:var(--c-ink); font-weight:600}
+.fp-legende span:last-child{text-align:right}
+@media (max-width:640px){ .fp-legende{flex-direction:column; gap:6px} .fp-legende span:last-child{text-align:left} }
+@media (prefers-reduced-motion: reduce){ .fp-agent,.fp-expert{transform:none; transition:none} }
