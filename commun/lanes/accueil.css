@@ -203,83 +203,114 @@
 
 
 /* ════════════════════════════════════════════════════════════════
-   « PENSÉ POUR LE TRAVAIL QUOTIDIEN » : plus visuel, avec à la fin l'animation.
-   Naomie, 03/09/2026 14:05. Les trois cartes sont numérotées ; l'écran produit
-   ferme la section et se joue en trois temps, chacun allumant sa carte.
-   Le déroulé est en transitions à délais (0,5 s, courbe de révélation),
-   déclenché par .vu ; mouvement réduit : état final d'emblée.
+   « PENSÉ POUR LE TRAVAIL QUOTIDIEN », version du 03/09/2026 14:30 (« cette animation
+   est pas claire »). L'écran raconte UNE histoire, une chose à la fois, l'étape écrite
+   dans l'écran : 01 une parution arrive et se rattache à la référence · 02 elle devient
+   une règle, lue par produit, qualité, juridique · 03 le verdict tombe sur la référence.
+   Trois classes cumulées .p1 .p2 .p3 posées par le script, puis .fin ; boucle 6 fois
+   tant que l'écran est visible, un clic rejoue. Mouvement réduit : état final d'emblée.
+   Le bleu ne sert qu'à l'état actif (la ligne rattachée, l'étape en cours, la carte).
    ════════════════════════════════════════════════════════════════ */
-.quotidien-cartes .quotidien-carte{position:relative; border:1px solid var(--c-border);
-  transition:border-color 0.35s ease-out, box-shadow 0.35s ease-out}
+.quotidien-cartes .quotidien-carte{position:relative; border:1px solid var(--c-border); transition:border-color 0.35s ease-out, box-shadow 0.35s ease-out}
 .quotidien-carte .flux-rang{color:var(--c-text-3)}
-/* L'état actif est un état, pas un décor : le bleu y a sa place. */
 .quotidien-carte.actif{border-color:var(--c-blue); box-shadow:0 0 0 3px var(--c-blue-light), var(--shadow-md)}
 .quotidien-carte.actif .flux-rang{color:var(--c-blue)}
-
-.quotidien-anim{max-width:960px; margin:40px auto 0}
+.quotidien-anim{max-width:960px; margin:40px auto 0; cursor:pointer}
 .quotidien-ecran{position:relative; z-index:1; text-align:left}
 .quotidien-ecran .ecran-app{box-shadow:var(--shadow-xl)}
-.quotidien-legende{margin:16px 0 0}
-
-/* ── Temps 1 : la fiche se remplit, ligne par ligne, et la jauge monte ── */
-.quotidien-anim .fiche-tete,.quotidien-anim .fiche-entete-pays,.quotidien-anim .fiche-ligne{
-  opacity:0; transform:translateY(6px); transition:opacity 0.5s var(--ease-reveal), transform 0.5s var(--ease-reveal)}
-.quotidien-anim .fiche .marqueur{opacity:0; transform:scale(0.7); transition:opacity 0.35s var(--ease-ui), transform 0.35s var(--ease-ui)}
-.quotidien-anim .jauge span{width:0 !important; transition:width 0.9s var(--ease-reveal)}
-.quotidien-anim.vu .fiche-tete,.quotidien-anim.vu .fiche-entete-pays,.quotidien-anim.vu .fiche-ligne{opacity:1; transform:none}
-.quotidien-anim.vu .fiche .marqueur{opacity:1; transform:none}
-.quotidien-anim.vu .jauge span{width:72% !important; transition-delay:0.45s}
-.quotidien-anim.vu .fiche-tete{transition-delay:0.2s}
-.quotidien-anim.vu .fiche-ligne:nth-of-type(1){transition-delay:0.35s}
-.quotidien-anim.vu .fiche-entete-pays:nth-of-type(1){transition-delay:0.55s}
-.quotidien-anim.vu .fiche-ligne:nth-of-type(2){transition-delay:0.7s}
-.quotidien-anim.vu .fiche-ligne:nth-of-type(3){transition-delay:0.85s}
-.quotidien-anim.vu .fiche-entete-pays:nth-of-type(2){transition-delay:1s}
-.quotidien-anim.vu .fiche-ligne:nth-of-type(4){transition-delay:1.15s}
-.quotidien-anim.vu .fiche-ligne:nth-of-type(5){transition-delay:1.3s}
-.quotidien-anim.vu .fiche-ligne:nth-of-type(2) .marqueur{transition-delay:1s}
-.quotidien-anim.vu .fiche-ligne:nth-of-type(3) .marqueur{transition-delay:1.15s}
-.quotidien-anim.vu .fiche-ligne:nth-of-type(4) .marqueur{transition-delay:1.45s}
-.quotidien-anim.vu .fiche-ligne:nth-of-type(5) .marqueur{transition-delay:1.6s}
-
-/* ── Temps 2 : la citation, puis la règle encodée, champ par champ ── */
-.quotidien-anim .hp-citation{opacity:0; transform:translateX(14px); transition:opacity 0.5s var(--ease-reveal), transform 0.5s var(--ease-reveal)}
-.quotidien-anim .hp-regle{opacity:0; transform:translateY(10px); transition:opacity 0.5s var(--ease-reveal), transform 0.5s var(--ease-reveal)}
-.quotidien-anim .hp-regle .t-h3,.quotidien-anim .pl-champ,.quotidien-anim .pl-verdict{
-  opacity:0; transform:translateY(5px); transition:opacity 0.4s var(--ease-reveal), transform 0.4s var(--ease-reveal)}
-.quotidien-anim .pl-champ b{background:linear-gradient(var(--c-blue-light),var(--c-blue-light)) no-repeat right/0 100%; transition:background-size 0.35s var(--ease-ui)}
-.quotidien-anim.vu .hp-citation{opacity:1; transform:none; transition-delay:1.75s}
-.quotidien-anim.vu .hp-regle{opacity:1; transform:none; transition-delay:2.05s}
-.quotidien-anim.vu .hp-regle .t-h3{opacity:1; transform:none; transition-delay:2.2s}
-.quotidien-anim.vu .pl-champ{opacity:1; transform:none}
-.quotidien-anim.vu .pl-champ:nth-of-type(1){transition-delay:2.4s}
-.quotidien-anim.vu .pl-champ:nth-of-type(2){transition-delay:2.6s}
-.quotidien-anim.vu .pl-champ:nth-of-type(3){transition-delay:2.8s}
-.quotidien-anim.vu .pl-champ:nth-of-type(4){transition-delay:3s}
-.quotidien-anim.vu .pl-champ:nth-of-type(5){transition-delay:3.2s}
-.quotidien-anim.vu .pl-champ b{background-size:100% 100%}
-.quotidien-anim.vu .pl-champ:nth-of-type(1) b{transition-delay:2.55s}
-.quotidien-anim.vu .pl-champ:nth-of-type(2) b{transition-delay:2.75s}
-.quotidien-anim.vu .pl-champ:nth-of-type(3) b{transition-delay:2.95s}
-.quotidien-anim.vu .pl-champ:nth-of-type(4) b{transition-delay:3.15s}
-.quotidien-anim.vu .pl-champ:nth-of-type(5) b{transition-delay:3.35s}
-
-/* ── Temps 3 : le verdict ── */
-.quotidien-anim .pl-pastille{background:rgba(0,0,0,0.18); transform:scale(0.6); transition:background 0.4s ease-out, transform 0.4s var(--ease-ui)}
-.quotidien-anim.vu .pl-verdict{opacity:1; transform:none; transition-delay:3.5s}
-.quotidien-anim.vu .pl-pastille{background:var(--c-pass); transform:none; transition-delay:3.7s}
-
-@media (max-width:640px){ .quotidien-anim{margin-top:28px} .quotidien-carte .t-h2{font-size:1.0625rem} }
-@media (prefers-reduced-motion: reduce){
-  .quotidien-anim *,.quotidien-anim.vu *{opacity:1 !important; transform:none !important; transition:none !important}
-  .quotidien-anim .jauge span{width:72% !important}
-  .quotidien-anim .pl-pastille{background:var(--c-pass)}
-  .quotidien-anim .pl-champ b{background-size:100% 100%}
-}
-/* Mesuré après la pose : la légende courait sur 960 px ; sur téléphone le fil d'Ariane
-   et les champs de la règle restaient à 12-13 px. */
 .quotidien-legende{max-width:720px; margin:16px auto 0}
+
+/* Les trois étapes, écrites dans l'écran */
+.qe-etapes{display:flex; gap:8px; padding:12px 18px; background:var(--c-white); border-bottom:1px solid var(--c-border); flex-wrap:wrap}
+.qe-etape{display:inline-flex; align-items:center; gap:8px; font-size:0.8125rem; color:var(--c-text-3); padding:6px 12px 6px 8px; border-radius:var(--r-pill); border:1px solid transparent; transition:color 0.3s ease-out, border-color 0.3s ease-out, background 0.3s ease-out}
+.qe-etape b{font-weight:600; letter-spacing:0.08em; font-size:0.75rem; color:var(--c-text-3); transition:color 0.3s ease-out}
+.p1 .qe-etape[data-n="1"],.p2 .qe-etape[data-n="2"],.p3 .qe-etape[data-n="3"]{color:var(--c-ink)}
+.p1:not(.p2) .qe-etape[data-n="1"],.p2:not(.p3) .qe-etape[data-n="2"],.p3:not(.fin) .qe-etape[data-n="3"]{border-color:var(--c-signal-line); background:var(--c-blue-light)}
+.p1:not(.p2) .qe-etape[data-n="1"] b,.p2:not(.p3) .qe-etape[data-n="2"] b,.p3:not(.fin) .qe-etape[data-n="3"] b{color:var(--c-blue)}
+
+.qe-corps{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:18px; padding:18px; background:var(--c-surface); align-items:start}
+.qe-corps > *{min-width:0}
+.qe-gauche{display:flex; flex-direction:column; gap:14px}
+.qe-fiche{max-width:none; box-shadow:var(--shadow-sm)}
+
+/* 01 · la parution */
+.qe-parution{background:#fff; border-radius:var(--r-md); padding:16px 18px; box-shadow:var(--shadow-sm); border-left:2px solid var(--c-border);
+  opacity:0; transform:translateY(-10px); transition:opacity 0.5s var(--ease-reveal), transform 0.5s var(--ease-reveal), border-color 0.3s ease-out}
+.qe-parution-tete{display:flex; justify-content:space-between; gap:12px; align-items:baseline; margin-bottom:8px}
+.qe-parution-titre{font-weight:600; color:var(--c-ink); margin-bottom:6px}
+.qe-cit{color:var(--c-text); line-height:1.5}
+.qe-rattache{display:flex; align-items:center; gap:8px; margin-top:12px; padding-top:10px; border-top:1px solid var(--c-border); font-size:0.8125rem; color:var(--c-text-2);
+  opacity:0; transform:translateX(-8px); transition:opacity 0.4s var(--ease-reveal), transform 0.4s var(--ease-reveal)}
+.qe-rattache b{color:var(--c-ink); font-weight:600}
+.qe-rattache svg{color:var(--c-blue); flex:none}
+.p1 .qe-parution{opacity:1; transform:none; border-left-color:var(--c-blue)}
+.p1 .qe-rattache{opacity:1; transform:none; transition-delay:0.7s}
+.qe-cible{transition:background 0.4s ease-out, box-shadow 0.4s ease-out}
+.p1 .qe-cible{background:var(--c-blue-light); box-shadow:inset 3px 0 0 var(--c-blue); transition-delay:0.9s}
+
+/* 02 · la règle, lue par tous */
+.qe-regle{opacity:0; transform:translateY(10px); transition:opacity 0.5s var(--ease-reveal), transform 0.5s var(--ease-reveal)}
+.qe-regle .pl-champ{opacity:0; transform:translateY(5px); transition:opacity 0.4s var(--ease-reveal), transform 0.4s var(--ease-reveal)}
+.qe-lecteurs{display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:14px; padding-top:12px; border-top:1px solid var(--c-border)}
+.qe-lecteur{display:inline-flex; align-items:center; padding:5px 12px; border-radius:var(--r-pill); background:var(--c-field-pale); border:1px solid var(--c-border); font-size:0.8125rem; font-weight:500; color:var(--c-text);
+  opacity:0; transform:scale(0.85); transition:opacity 0.35s var(--ease-ui), transform 0.35s var(--ease-ui)}
+.p2 .qe-regle{opacity:1; transform:none}
+.p2 .qe-regle .pl-champ{opacity:1; transform:none}
+.p2 .qe-regle .pl-champ:nth-of-type(1){transition-delay:0.3s}
+.p2 .qe-regle .pl-champ:nth-of-type(2){transition-delay:0.5s}
+.p2 .qe-regle .pl-champ:nth-of-type(3){transition-delay:0.7s}
+.p2 .qe-regle .pl-champ:nth-of-type(4){transition-delay:0.9s}
+.p2 .qe-regle .pl-champ:nth-of-type(5){transition-delay:1.1s}
+.p2 .qe-lecteur{opacity:1; transform:none}
+.p2 .qe-lecteur:nth-of-type(1){transition-delay:1.5s}
+.p2 .qe-lecteur:nth-of-type(2){transition-delay:1.7s}
+.p2 .qe-lecteur:nth-of-type(3){transition-delay:1.9s}
+
+/* 03 · le verdict sur la référence */
+.qe-badges{position:relative; display:inline-flex; justify-content:flex-end}
+.qe-apres{position:absolute; right:0; top:0; opacity:0; transform:scale(0.7); transition:opacity 0.35s var(--ease-ui), transform 0.35s var(--ease-ui)}
+.qe-avant{transition:opacity 0.3s ease-out}
+.p3 .qe-avant{opacity:0}
+.p3 .qe-apres{opacity:1; transform:none; transition-delay:0.2s}
+.p3 .qe-cible{background:transparent; box-shadow:none; transition-delay:0.4s}
+.qe-jauge{display:block; width:68%; height:100%; background:var(--c-ink); border-radius:var(--r-pill); transition:width 0.8s var(--ease-reveal)}
+.p3 .qe-jauge{width:72%; transition-delay:0.3s}
+.qe-verdict{padding:12px 14px 2px; opacity:0; transition:opacity 0.4s var(--ease-reveal)}
+.qe-verdict .pl-pastille{background:rgba(0,0,0,0.18); transition:background 0.4s ease-out}
+.p3 .qe-verdict{opacity:1; transition-delay:0.7s}
+.p3 .qe-verdict .pl-pastille{background:var(--c-pass); transition-delay:0.9s}
+
+@media (max-width:760px){
+  .qe-corps{grid-template-columns:minmax(0,1fr)}
+  .qe-etapes{gap:4px; padding:10px 12px}
+  .qe-etape{font-size:0.875rem}
+  .qe-rattache,.qe-lecteur,.qe-parution .t-caption,.qe-parution .t-label{font-size:0.875rem}
+}
+@media (prefers-reduced-motion: reduce){
+  .quotidien-anim *{transition:none !important}
+}
+
+/* ── LA SÉCURITÉ DANS LE HERO (03/09/2026) : six garanties du vrai site, sur le champ
+      profond, chaque carte portant sa propre encre. Les icônes sont neutres : le bleu
+      n'est pas un décor. ── */
+.hero-securite{max-width:1120px; margin:64px auto 0; padding:0 var(--gouttiere); text-align:left; position:relative; z-index:2}
+.hero-securite-tete{display:flex; gap:14px; align-items:baseline; flex-wrap:wrap; margin-bottom:18px}
+.hero-securite-tete .t-label{color:var(--c-text-on-dark-2)}
+.hero-securite-tete .t-caption{color:var(--c-text-on-dark-3)}
+.hero-securite-grille{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px}
+.hs-item{display:flex; gap:12px; align-items:flex-start; padding:16px 18px; border-radius:var(--r-md); background:rgba(255,255,255,0.05); border:1px solid var(--c-filet-sombre); color:var(--c-text-on-dark); min-width:0;
+  transition:border-color 0.15s ease-out, background 0.15s ease-out}
+.hs-item:hover{border-color:rgba(255,255,255,0.3); background:rgba(255,255,255,0.08)}
+.hs-item > span:last-child{min-width:0}
+.hs-ico{flex:none; width:36px; height:36px; border-radius:var(--r-sm); background:rgba(255,255,255,0.08); color:#fff; display:grid; place-items:center}
+.hs-item b{display:block; font-size:0.9375rem; font-weight:500; line-height:1.3; color:#fff}
+.hs-item i{display:block; font-style:normal; font-size:0.8125rem; line-height:1.5; color:var(--c-text-on-dark-2); margin-top:4px}
+@media (max-width:1024px){ .hero-securite-grille{grid-template-columns:repeat(2,minmax(0,1fr))} .hero-securite{margin-top:40px} }
+@media (max-width:640px){ .hero-securite-grille{grid-template-columns:minmax(0,1fr)} .hs-item i{font-size:0.875rem} }
+/* Téléphone : rien sous 14 px dans l'écran (le sélecteur de langue et le globe ont leurs
+   propres règles). */
 @media (max-width:640px){
   .quotidien-anim .pl-champ,.quotidien-anim .pl-verdict,.quotidien-anim .fiche-entete-pays,
-  .quotidien-anim .ecran-tete .fil-ariane,.quotidien-anim .fiche-ref{font-size:0.875rem}
+  .quotidien-anim .ecran-tete .fil-ariane,.quotidien-anim .fiche-ref,.quotidien-anim .qe-etape b,
+  .quotidien-anim .qe-parution-tete .t-label,.quotidien-anim .qe-parution-tete .t-caption{font-size:0.875rem}
 }
