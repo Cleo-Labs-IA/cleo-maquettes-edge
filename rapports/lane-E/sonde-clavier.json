@@ -1,0 +1,356 @@
+{
+  "ok": 65,
+  "total": 66,
+  "resultats": [
+    {
+      "nom": "fr aria-expanded présent sur les déclencheurs à panneau",
+      "verdict": "OK",
+      "detail": "[\"Produit=false\",\"Textes=false\",\"Ressources=false\"]"
+    },
+    {
+      "nom": "fr aria-controls pointe un panneau existant",
+      "verdict": "OK",
+      "detail": "[\"Produit→mega-1\",\"Textes→mega-textes\",\"Ressources→mega-3\"]"
+    },
+    {
+      "nom": "fr le lien direct (Entreprise) ne porte PAS aria-expanded",
+      "verdict": "OK",
+      "detail": "[\"Entreprise=null\"]"
+    },
+    {
+      "nom": "fr aucun panneau ouvert au chargement",
+      "verdict": "OK",
+      "detail": "0 ouvert(s)"
+    },
+    {
+      "nom": "fr Tab atteint le 1er déclencheur",
+      "verdict": "OK",
+      "detail": "au Tab n° 3, « Produit »"
+    },
+    {
+      "nom": "fr le focus seul n'ouvre pas le panneau",
+      "verdict": "OK",
+      "detail": "0 ouvert(s)"
+    },
+    {
+      "nom": "fr Entrée ouvre UN panneau",
+      "verdict": "OK",
+      "detail": "[{\"id\":\"mega-1\",\"x\":40,\"y\":59,\"w\":1360,\"h\":254.9,\"liens\":4}]"
+    },
+    {
+      "nom": "fr Entrée pose aria-expanded=true sur le déclencheur focalisé",
+      "verdict": "OK",
+      "detail": "[\"Produit=true\",\"Textes=false\",\"Ressources=false\",\"Entreprise=null\"]"
+    },
+    {
+      "nom": "fr le panneau ouvert a une boîte non nulle et des liens",
+      "verdict": "OK",
+      "detail": "1360x254.9 à x=40 y=59, 4 liens"
+    },
+    {
+      "nom": "fr le panneau ne déborde pas de la fenêtre",
+      "verdict": "OK",
+      "detail": "droite = 1400.0 px pour 1440"
+    },
+    {
+      "nom": "fr Entrée referme (bascule)",
+      "verdict": "OK",
+      "detail": "0 ouvert(s)"
+    },
+    {
+      "nom": "fr Espace ouvre le panneau",
+      "verdict": "OK",
+      "detail": "1 ouvert(s)"
+    },
+    {
+      "nom": "fr Espace ne fait pas défiler la page",
+      "verdict": "OK",
+      "detail": "scrollY = 0"
+    },
+    {
+      "nom": "fr Tab entre dans le panneau",
+      "verdict": "OK",
+      "detail": "focus : Regulatory ChangeChaque paruti <A>"
+    },
+    {
+      "nom": "fr le panneau reste ouvert avec le focus dedans",
+      "verdict": "OK",
+      "detail": "1 ouvert(s)"
+    },
+    {
+      "nom": "fr tous les liens du panneau sont atteints au Tab",
+      "verdict": "OK",
+      "detail": "4 sur 4"
+    },
+    {
+      "nom": "fr sortir du panneau au Tab le referme",
+      "verdict": "OK",
+      "detail": "0 ouvert(s), focus : Textes <BUTTON>"
+    },
+    {
+      "nom": "fr Échap ferme le panneau",
+      "verdict": "OK",
+      "detail": "avant 1, après 0"
+    },
+    {
+      "nom": "fr Échap rend le focus au déclencheur",
+      "verdict": "OK",
+      "detail": "focus : Produit <BUTTON>"
+    },
+    {
+      "nom": "fr un seul panneau ouvert à la fois (clic A puis B)",
+      "verdict": "OK",
+      "detail": "1 ouvert(s), aria=[\"false\",\"true\",\"false\",null]"
+    },
+    {
+      "nom": "fr un clic hors de la barre ferme",
+      "verdict": "OK",
+      "detail": "0 ouvert(s)"
+    },
+    {
+      "nom": "fr le survol ouvre toujours",
+      "verdict": "OK",
+      "detail": "[\"mega-1 1360x254.9\"]"
+    },
+    {
+      "nom": "fr quitter le survol referme",
+      "verdict": "OK",
+      "detail": "0 ouvert(s)"
+    },
+    {
+      "nom": "fr géométrie des panneaux",
+      "verdict": "MESURE",
+      "detail": "[{\"menu\":\"Produit\",\"id\":\"mega-1\",\"x\":40,\"y\":59,\"w\":1360,\"h\":254.9,\"liens\":4},{\"menu\":\"Textes\",\"id\":\"mega-textes\",\"x\":40,\"y\":59,\"w\":1360,\"h\":236.7,\"liens\":3},{\"menu\":\"Ressources\",\"id\":\"mega-3\",\"x\":476.8,\"y\":61.9,\"w\":520,\"h\":233.5,\"liens\":4},{\"menu\":\"Entreprise\",\"panneau\":\"aucun (lien direct)\"}]"
+    },
+    {
+      "nom": "fr aucun texte sous 13 px dans la barre et les panneaux (desktop)",
+      "verdict": "OK",
+      "detail": "[]"
+    },
+    {
+      "nom": "fr sélecteur de langue à 1440 px : ≥ 13 px",
+      "verdict": "OK",
+      "detail": "13 px, cible 35.2x21"
+    },
+    {
+      "nom": "fr sélecteur de langue à 900 px : ≥ 13 px",
+      "verdict": "OK",
+      "detail": "13 px, cible 35.2x21"
+    },
+    {
+      "nom": "fr sélecteur de langue à 390 px : ≥ 14 px",
+      "verdict": "OK",
+      "detail": "14 px, cible 44x40"
+    },
+    {
+      "nom": "fr menu téléphone : le panneau s'ouvre au clic",
+      "verdict": "OK",
+      "detail": "avant hidden=true/exp=false, après hidden=false/exp=true"
+    },
+    {
+      "nom": "fr menu téléphone : la boîte fait bien 390 x ~783",
+      "verdict": "OK",
+      "detail": "390 x 783 px pour 989 px de contenu"
+    },
+    {
+      "nom": "fr menu téléphone : le défilement de la page est bloqué",
+      "verdict": "OK",
+      "detail": "html overflow = hidden"
+    },
+    {
+      "nom": "fr menu téléphone : pas de débordement horizontal",
+      "verdict": "OK",
+      "detail": "non"
+    },
+    {
+      "nom": "fr panneau mobile",
+      "verdict": "MESURE",
+      "detail": "390x783 pour 989 · 14 liens · [\"Produit (4)\",\"Textes (3)\",\"Ressources (4)\",\"Entreprise (1)\"]"
+    },
+    {
+      "nom": "fr menu téléphone : Échap referme",
+      "verdict": "OK",
+      "detail": "hidden=true, exp=false, display=none"
+    },
+    {
+      "nom": "fr aucune erreur JS",
+      "verdict": "OK",
+      "detail": "0"
+    },
+    {
+      "nom": "en aria-expanded présent sur les déclencheurs à panneau",
+      "verdict": "OK",
+      "detail": "[\"Product=false\",\"Regulations=false\",\"Resources=false\"]"
+    },
+    {
+      "nom": "en aria-controls pointe un panneau existant",
+      "verdict": "OK",
+      "detail": "[\"Product→mega-1\",\"Regulations→mega-textes\",\"Resources→mega-3\"]"
+    },
+    {
+      "nom": "en le lien direct (Entreprise) ne porte PAS aria-expanded",
+      "verdict": "OK",
+      "detail": "[\"Company=null\"]"
+    },
+    {
+      "nom": "en aucun panneau ouvert au chargement",
+      "verdict": "OK",
+      "detail": "0 ouvert(s)"
+    },
+    {
+      "nom": "en Tab atteint le 1er déclencheur",
+      "verdict": "OK",
+      "detail": "au Tab n° 3, « Product »"
+    },
+    {
+      "nom": "en le focus seul n'ouvre pas le panneau",
+      "verdict": "OK",
+      "detail": "0 ouvert(s)"
+    },
+    {
+      "nom": "en Entrée ouvre UN panneau",
+      "verdict": "OK",
+      "detail": "[{\"id\":\"mega-1\",\"x\":40,\"y\":59,\"w\":1360,\"h\":254.9,\"liens\":4}]"
+    },
+    {
+      "nom": "en Entrée pose aria-expanded=true sur le déclencheur focalisé",
+      "verdict": "OK",
+      "detail": "[\"Product=true\",\"Regulations=false\",\"Resources=false\",\"Company=null\"]"
+    },
+    {
+      "nom": "en le panneau ouvert a une boîte non nulle et des liens",
+      "verdict": "OK",
+      "detail": "1360x254.9 à x=40 y=59, 4 liens"
+    },
+    {
+      "nom": "en le panneau ne déborde pas de la fenêtre",
+      "verdict": "OK",
+      "detail": "droite = 1400.0 px pour 1440"
+    },
+    {
+      "nom": "en Entrée referme (bascule)",
+      "verdict": "OK",
+      "detail": "0 ouvert(s)"
+    },
+    {
+      "nom": "en Espace ouvre le panneau",
+      "verdict": "OK",
+      "detail": "1 ouvert(s)"
+    },
+    {
+      "nom": "en Espace ne fait pas défiler la page",
+      "verdict": "OK",
+      "detail": "scrollY = 0"
+    },
+    {
+      "nom": "en Tab entre dans le panneau",
+      "verdict": "OK",
+      "detail": "focus : Regulatory ChangeEvery publica <A>"
+    },
+    {
+      "nom": "en le panneau reste ouvert avec le focus dedans",
+      "verdict": "OK",
+      "detail": "1 ouvert(s)"
+    },
+    {
+      "nom": "en tous les liens du panneau sont atteints au Tab",
+      "verdict": "OK",
+      "detail": "4 sur 4"
+    },
+    {
+      "nom": "en sortir du panneau au Tab le referme",
+      "verdict": "ECHEC",
+      "detail": "1 ouvert(s), focus : Regulations <BUTTON>"
+    },
+    {
+      "nom": "en Échap ferme le panneau",
+      "verdict": "OK",
+      "detail": "avant 1, après 0"
+    },
+    {
+      "nom": "en Échap rend le focus au déclencheur",
+      "verdict": "OK",
+      "detail": "focus : Product <BUTTON>"
+    },
+    {
+      "nom": "en un seul panneau ouvert à la fois (clic A puis B)",
+      "verdict": "OK",
+      "detail": "1 ouvert(s), aria=[\"false\",\"true\",\"false\",null]"
+    },
+    {
+      "nom": "en un clic hors de la barre ferme",
+      "verdict": "OK",
+      "detail": "0 ouvert(s)"
+    },
+    {
+      "nom": "en le survol ouvre toujours",
+      "verdict": "OK",
+      "detail": "[\"mega-1 1360x254.9\"]"
+    },
+    {
+      "nom": "en quitter le survol referme",
+      "verdict": "OK",
+      "detail": "0 ouvert(s)"
+    },
+    {
+      "nom": "en géométrie des panneaux",
+      "verdict": "MESURE",
+      "detail": "[{\"menu\":\"Product\",\"id\":\"mega-1\",\"x\":40,\"y\":59,\"w\":1360,\"h\":254.9,\"liens\":4},{\"menu\":\"Regulations\",\"id\":\"mega-textes\",\"x\":40,\"y\":59,\"w\":1360,\"h\":236.7,\"liens\":3},{\"menu\":\"Resources\",\"id\":\"mega-3\",\"x\":514.5,\"y\":61.9,\"w\":520,\"h\":233.5,\"liens\":4},{\"menu\":\"Company\",\"panneau\":\"aucun (lien direct)\"}]"
+    },
+    {
+      "nom": "en aucun texte sous 13 px dans la barre et les panneaux (desktop)",
+      "verdict": "OK",
+      "detail": "[]"
+    },
+    {
+      "nom": "en sélecteur de langue à 1440 px : ≥ 13 px",
+      "verdict": "OK",
+      "detail": "13 px, cible 36.7x21"
+    },
+    {
+      "nom": "en sélecteur de langue à 900 px : ≥ 13 px",
+      "verdict": "OK",
+      "detail": "13 px, cible 36.7x21"
+    },
+    {
+      "nom": "en sélecteur de langue à 390 px : ≥ 14 px",
+      "verdict": "OK",
+      "detail": "14 px, cible 44x40"
+    },
+    {
+      "nom": "en menu téléphone : le panneau s'ouvre au clic",
+      "verdict": "OK",
+      "detail": "avant hidden=true/exp=false, après hidden=false/exp=true"
+    },
+    {
+      "nom": "en menu téléphone : la boîte fait bien 390 x ~783",
+      "verdict": "OK",
+      "detail": "390 x 783 px pour 989 px de contenu"
+    },
+    {
+      "nom": "en menu téléphone : le défilement de la page est bloqué",
+      "verdict": "OK",
+      "detail": "html overflow = hidden"
+    },
+    {
+      "nom": "en menu téléphone : pas de débordement horizontal",
+      "verdict": "OK",
+      "detail": "non"
+    },
+    {
+      "nom": "en panneau mobile",
+      "verdict": "MESURE",
+      "detail": "390x783 pour 989 · 14 liens · [\"Product (4)\",\"Regulations (3)\",\"Resources (4)\",\"Company (1)\"]"
+    },
+    {
+      "nom": "en menu téléphone : Échap referme",
+      "verdict": "OK",
+      "detail": "hidden=true, exp=false, display=none"
+    },
+    {
+      "nom": "en aucune erreur JS",
+      "verdict": "OK",
+      "detail": "0"
+    }
+  ]
+}

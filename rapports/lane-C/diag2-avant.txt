@@ -1,0 +1,335 @@
+
+===== 02-entreprise =====  desktop 6577 px, mobile 10795 px
+-- desktop, textes < 13 px : 4
+     12px | div.conteneur > div > a.ligne-liste > span.pilule  x1  ex: Recherche
+     12px | footer.pied > div.conteneur > div.pied-bas > a  x2  ex: Conditions générales
+     12px | footer.pied > div.conteneur > div.pied-bas > span  x1  ex: Cleo Corp SAS, SIREN 984567883
+-- desktop, cibles < 40 px : 48
+     59x24  div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur  << Produit >>
+     53x24  div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur  << Textes >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << PPWR Actualité >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << REACH >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << RSGP >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << ESPR / Passeport Actualité >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << EN 71 >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << Allégations vertes >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << Batteries >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << EPI >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << AI Act >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << Proposition 65 >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << PFAS Actualité >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << TSCA >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << ASTM F963 >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << TB 117 >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << Loi 96 (Québec) >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << CPSIA >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << FTC Green Guides >>
+     84x24  div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur  << Ressources >>
+     63x24  div.conteneur > div.nav-liens > div.nav-item > a.nav-declencheur  << Entreprise >>
+     66x24  nav.nav > div.conteneur > div.nav-fin > a.lien-secondaire  << Connexion >>
+     118x30  div > ul > li > a  << Regulatory Change >>
+     56x30  div > ul > li > a  << Research >>
+     106x30  div > ul > li > a  << Compliance Data >>
+     149x30  div > ul > li > a  << Compliance as a service >>
+     63x30  div > ul > li > a  << Fabricants >>
+     172x30  div > ul > li > a  << Importateurs et distributeurs >>
+     81x30  div > ul > li > a  << Marketplaces >>
+     117x30  div > ul > li > a  << Conformité produit >>
+     53x30  div > ul > li > a  << Secteurs >>
+     114x30  div > ul > li > a  << Union européenne >>
+     150x30  div > ul > li > a  << PPWR, article par article >>
+     65x30  div > ul > li > a  << Legal Data >>
+     28x30  div > ul > li > a  << Blog >>
+     131x30  div > ul > li > a  << Travaux de recherche >>
+     30x30  div > ul > li > a  << Skills >>
+     158x30  div > ul > li > a  << Journal des changements >>
+     125x30  div > ul > li > a  << Plan d'action MARIA >>
+     56x30  div > ul > li > a  << À propos >>
+     127x30  div > ul > li > a  << Cas client Decathlon >>
+     50x30  div > ul > li > a  << Sécurité >>
+     78x30  div > ul > li > a  << Recrutement >>
+     123x30  div > ul > li > a  << Demander un accès >>
+     118x16  div.pied-coordonnees > div > div.t-micro > a  << contact@cleolabs.co >>
+     118x16  div.pied-coordonnees > div > div.t-micro > a  << Réserver 30 minutes >>
+     111x28  footer.pied > div.conteneur > div.pied-bas > a  << Conditions générales >>
+     139x28  footer.pied > div.conteneur > div.pied-bas > a  << Politique de confidentialité >>
+-- desktop, paragraphe le plus large : 600 px ; > 720 : 0
+-- desktop, debordement horizontal : false ; interne : 1
+     370>330  section.seg.section > div.conteneur > div.g3.seg-equipe.vu > div.carte-lavande.seg-equipe-mot  << Et l'équipe qui encode, relit et met >>
+-- mobile, textes < 14 px : 0
+-- mobile, cibles < 40 px : 0
+-- mobile, paragraphe le plus large : 334 px ; > 720 : 0
+-- mobile, debordement horizontal : false ; interne : 1
+     372>332  section.seg.section > div.conteneur > div.g3.seg-equipe.vu > div.carte-lavande.seg-equipe-mot  << Et l'équipe qui encode, relit et met >>
+-- grille equipe : 332px 332px 332px
+      {"classe":"seg-portrait","carte":{"x":200,"y":1052,"w":332,"h":443},"nom":{"texte":"Anaëlle Guez","y":1380,"h":25},"role":{"texte":"CEO, cofondatrice LinkedIn","y":1405,"h":22,"lignes":1},"marqueurs":{"y":1439,"h":36},"bas":{"y":1380,"h":95}}
+      {"classe":"seg-portrait","carte":{"x":554,"y":1052,"w":332,"h":443},"nom":{"texte":"Naomie Halioua","y":1380,"h":25},"role":{"texte":"CDO, cofondatrice LinkedIn","y":1405,"h":22,"lignes":1},"marqueurs":{"y":1439,"h":36},"bas":{"y":1380,"h":95}}
+      {"classe":"seg-portrait","carte":{"x":908,"y":1052,"w":332,"h":443},"nom":{"texte":"Alexandre Bloch","y":1428,"h":25},"role":{"texte":"CTO","y":1453,"h":22,"lignes":1},"marqueurs":null,"bas":{"y":1428,"h":47}}
+      {"classe":"seg-portrait","carte":{"x":200,"y":1517,"w":332,"h":443},"nom":{"texte":"Darcial Mondjo","y":1893,"h":25},"role":{"texte":"Global Head of Product & Sanitary Compliance","y":1918,"h":22,"lignes":1},"marqueurs":null,"bas":{"y":1893,"h":47}}
+      {"classe":"seg-portrait","carte":{"x":554,"y":1517,"w":332,"h":443},"nom":{"texte":"Thezi Mabuza","y":1871,"h":25},"role":{"texte":"Stalwart in Consumer Protection & Product Safety","y":1896,"h":43,"lignes":2},"marqueurs":null,"bas":{"y":1871,"h":69}}
+      {"classe":"carte-lavande seg-equipe-mot","carte":{"x":908,"y":1517,"w":332,"h":443},"nom":{"texte":"Et l'équipe qui encode, reli","y":1604,"h":92},"role":null,"marqueurs":null,"bas":null}
+
+===== 04-secteur =====  desktop 6564 px, mobile 10761 px
+-- desktop, textes < 13 px : 10
+     12px | div.conteneur > div.alterne > div.texte.vu > span.etiquette  x2  ex: Regulatory Change
+     12px | div.conteneur > div.alterne.inverse > div.texte.vu > span.etiquette  x1  ex: Research
+     12px | div.carte > div.sceau > div.dedans > div.sous  x4  ex: Substances
+     12px | footer.pied > div.conteneur > div.pied-bas > a  x2  ex: Conditions générales
+     12px | footer.pied > div.conteneur > div.pied-bas > span  x1  ex: Cleo Corp SAS, SIREN 984567883
+-- desktop, cibles < 40 px : 48
+     59x24  div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur  << Produit >>
+     53x24  div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur  << Textes >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << PPWR Actualité >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << REACH >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << RSGP >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << ESPR / Passeport Actualité >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << EN 71 >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << Allégations vertes >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << Batteries >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << EPI >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << AI Act >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << Proposition 65 >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << PFAS Actualité >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << TSCA >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << ASTM F963 >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << TB 117 >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << Loi 96 (Québec) >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << CPSIA >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << FTC Green Guides >>
+     84x24  div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur  << Ressources >>
+     63x24  div.conteneur > div.nav-liens > div.nav-item > a.nav-declencheur  << Entreprise >>
+     66x24  nav.nav > div.conteneur > div.nav-fin > a.lien-secondaire  << Connexion >>
+     118x30  div > ul > li > a  << Regulatory Change >>
+     56x30  div > ul > li > a  << Research >>
+     106x30  div > ul > li > a  << Compliance Data >>
+     149x30  div > ul > li > a  << Compliance as a service >>
+     63x30  div > ul > li > a  << Fabricants >>
+     172x30  div > ul > li > a  << Importateurs et distributeurs >>
+     81x30  div > ul > li > a  << Marketplaces >>
+     117x30  div > ul > li > a  << Conformité produit >>
+     53x30  div > ul > li > a  << Secteurs >>
+     114x30  div > ul > li > a  << Union européenne >>
+     150x30  div > ul > li > a  << PPWR, article par article >>
+     65x30  div > ul > li > a  << Legal Data >>
+     28x30  div > ul > li > a  << Blog >>
+     131x30  div > ul > li > a  << Travaux de recherche >>
+     30x30  div > ul > li > a  << Skills >>
+     158x30  div > ul > li > a  << Journal des changements >>
+     125x30  div > ul > li > a  << Plan d'action MARIA >>
+     56x30  div > ul > li > a  << À propos >>
+     127x30  div > ul > li > a  << Cas client Decathlon >>
+     50x30  div > ul > li > a  << Sécurité >>
+     78x30  div > ul > li > a  << Recrutement >>
+     123x30  div > ul > li > a  << Demander un accès >>
+     118x16  div.pied-coordonnees > div > div.t-micro > a  << contact@cleolabs.co >>
+     118x16  div.pied-coordonnees > div > div.t-micro > a  << Réserver 30 minutes >>
+     111x28  footer.pied > div.conteneur > div.pied-bas > a  << Conditions générales >>
+     139x28  footer.pied > div.conteneur > div.pied-bas > a  << Politique de confidentialité >>
+-- desktop, paragraphe le plus large : 620 px ; > 720 : 0
+-- desktop, debordement horizontal : false ; interne : 0
+-- mobile, textes < 14 px : 0
+-- mobile, cibles < 40 px : 0
+-- mobile, paragraphe le plus large : 334 px ; > 720 : 0
+-- mobile, debordement horizontal : false ; interne : 0
+
+===== 05-marche =====  desktop 6391 px, mobile 10212 px
+-- desktop, textes < 13 px : 10
+     12px | div.conteneur > div.alterne > div.texte.vu > span.etiquette  x2  ex: Regulatory Change
+     12px | div.conteneur > div.alterne.inverse > div.texte.vu > span.etiquette  x1  ex: Research
+     12px | div.carte > div.sceau > div.dedans > div.sous  x4  ex: 1907/2006
+     12px | footer.pied > div.conteneur > div.pied-bas > a  x2  ex: Conditions générales
+     12px | footer.pied > div.conteneur > div.pied-bas > span  x1  ex: Cleo Corp SAS, SIREN 984567883
+-- desktop, cibles < 40 px : 48
+     59x24  div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur  << Produit >>
+     53x24  div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur  << Textes >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << PPWR Actualité >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << REACH >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << RSGP >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << ESPR / Passeport Actualité >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << EN 71 >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << Allégations vertes >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << Batteries >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << EPI >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << AI Act >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << Proposition 65 >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << PFAS Actualité >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << TSCA >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << ASTM F963 >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << TB 117 >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << Loi 96 (Québec) >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << CPSIA >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << FTC Green Guides >>
+     84x24  div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur  << Ressources >>
+     63x24  div.conteneur > div.nav-liens > div.nav-item > a.nav-declencheur  << Entreprise >>
+     66x24  nav.nav > div.conteneur > div.nav-fin > a.lien-secondaire  << Connexion >>
+     118x30  div > ul > li > a  << Regulatory Change >>
+     56x30  div > ul > li > a  << Research >>
+     106x30  div > ul > li > a  << Compliance Data >>
+     149x30  div > ul > li > a  << Compliance as a service >>
+     63x30  div > ul > li > a  << Fabricants >>
+     172x30  div > ul > li > a  << Importateurs et distributeurs >>
+     81x30  div > ul > li > a  << Marketplaces >>
+     117x30  div > ul > li > a  << Conformité produit >>
+     53x30  div > ul > li > a  << Secteurs >>
+     114x30  div > ul > li > a  << Union européenne >>
+     150x30  div > ul > li > a  << PPWR, article par article >>
+     65x30  div > ul > li > a  << Legal Data >>
+     28x30  div > ul > li > a  << Blog >>
+     131x30  div > ul > li > a  << Travaux de recherche >>
+     30x30  div > ul > li > a  << Skills >>
+     158x30  div > ul > li > a  << Journal des changements >>
+     125x30  div > ul > li > a  << Plan d'action MARIA >>
+     56x30  div > ul > li > a  << À propos >>
+     127x30  div > ul > li > a  << Cas client Decathlon >>
+     50x30  div > ul > li > a  << Sécurité >>
+     78x30  div > ul > li > a  << Recrutement >>
+     123x30  div > ul > li > a  << Demander un accès >>
+     118x16  div.pied-coordonnees > div > div.t-micro > a  << contact@cleolabs.co >>
+     118x16  div.pied-coordonnees > div > div.t-micro > a  << Réserver 30 minutes >>
+     111x28  footer.pied > div.conteneur > div.pied-bas > a  << Conditions générales >>
+     139x28  footer.pied > div.conteneur > div.pied-bas > a  << Politique de confidentialité >>
+-- desktop, paragraphe le plus large : 620 px ; > 720 : 0
+-- desktop, debordement horizontal : false ; interne : 0
+-- mobile, textes < 14 px : 0
+-- mobile, cibles < 40 px : 0
+-- mobile, paragraphe le plus large : 334 px ; > 720 : 0
+-- mobile, debordement horizontal : false ; interne : 0
+
+===== 06-cas-client =====  desktop 4150 px, mobile 7564 px
+-- desktop, textes < 13 px : 8
+     12px | div.cas-corps > aside.fiche-laterale > div.bloc > div.cle  x5  ex: Familles de produits
+     12px | footer.pied > div.conteneur > div.pied-bas > a  x2  ex: Conditions générales
+     12px | footer.pied > div.conteneur > div.pied-bas > span  x1  ex: Cleo Corp SAS, SIREN 984567883
+-- desktop, cibles < 40 px : 48
+     59x24  div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur  << Produit >>
+     53x24  div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur  << Textes >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << PPWR Actualité >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << REACH >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << RSGP >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << ESPR / Passeport Actualité >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << EN 71 >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << Allégations vertes >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << Batteries >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << EPI >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << AI Act >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << Proposition 65 >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << PFAS Actualité >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << TSCA >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << ASTM F963 >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << TB 117 >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << Loi 96 (Québec) >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << CPSIA >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << FTC Green Guides >>
+     84x24  div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur  << Ressources >>
+     63x24  div.conteneur > div.nav-liens > div.nav-item > a.nav-declencheur  << Entreprise >>
+     66x24  nav.nav > div.conteneur > div.nav-fin > a.lien-secondaire  << Connexion >>
+     118x30  div > ul > li > a  << Regulatory Change >>
+     56x30  div > ul > li > a  << Research >>
+     106x30  div > ul > li > a  << Compliance Data >>
+     149x30  div > ul > li > a  << Compliance as a service >>
+     63x30  div > ul > li > a  << Fabricants >>
+     172x30  div > ul > li > a  << Importateurs et distributeurs >>
+     81x30  div > ul > li > a  << Marketplaces >>
+     117x30  div > ul > li > a  << Conformité produit >>
+     53x30  div > ul > li > a  << Secteurs >>
+     114x30  div > ul > li > a  << Union européenne >>
+     150x30  div > ul > li > a  << PPWR, article par article >>
+     65x30  div > ul > li > a  << Legal Data >>
+     28x30  div > ul > li > a  << Blog >>
+     131x30  div > ul > li > a  << Travaux de recherche >>
+     30x30  div > ul > li > a  << Skills >>
+     158x30  div > ul > li > a  << Journal des changements >>
+     125x30  div > ul > li > a  << Plan d'action MARIA >>
+     56x30  div > ul > li > a  << À propos >>
+     127x30  div > ul > li > a  << Cas client Decathlon >>
+     50x30  div > ul > li > a  << Sécurité >>
+     78x30  div > ul > li > a  << Recrutement >>
+     123x30  div > ul > li > a  << Demander un accès >>
+     118x16  div.pied-coordonnees > div > div.t-micro > a  << contact@cleolabs.co >>
+     118x16  div.pied-coordonnees > div > div.t-micro > a  << Réserver 30 minutes >>
+     111x28  footer.pied > div.conteneur > div.pied-bas > a  << Conditions générales >>
+     139x28  footer.pied > div.conteneur > div.pied-bas > a  << Politique de confidentialité >>
+-- desktop, paragraphe le plus large : 640 px ; > 720 : 0
+-- desktop, debordement horizontal : false ; interne : 0
+-- mobile, textes < 14 px : 0
+-- mobile, cibles < 40 px : 0
+-- mobile, paragraphe le plus large : 334 px ; > 720 : 0
+-- mobile, debordement horizontal : false ; interne : 0
+-- bande citation : {"bande":{"w":1440,"h":653},"conteneur":{"x":160,"r":1280,"w":1120},"grille":{"x":200,"r":1020,"w":820,"h":525},"citation":{"x":332,"r":952,"w":620},"portrait":{"x":200,"w":100,"h":100},"videADroite":260,"enfants":[{"c":"IMG","x":200,"r":300,"w":100,"h":100},{"c":"DIV","x":332,"r":1020,"w":688,"h":525}],"paraPx":"15px","colonnes":"100px 688px"}
+
+===== 09-texte =====  desktop 5987 px, mobile 10219 px
+-- desktop, textes < 13 px : 10
+     12px | div.conteneur > div.alterne > div.texte.vu > span.etiquette  x2  ex: Regulatory Change
+     12px | div.conteneur > div.alterne.inverse > div.texte.vu > span.etiquette  x1  ex: Research
+     12px | div.carte > div.sceau > div.dedans > div.sous  x4  ex: Substances
+     12px | footer.pied > div.conteneur > div.pied-bas > a  x2  ex: Conditions générales
+     12px | footer.pied > div.conteneur > div.pied-bas > span  x1  ex: Cleo Corp SAS, SIREN 984567883
+-- desktop, cibles < 40 px : 48
+     59x24  div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur  << Produit >>
+     53x24  div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur  << Textes >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << PPWR Actualité >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << REACH >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << RSGP >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << ESPR / Passeport Actualité >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << EN 71 >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << Allégations vertes >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << Batteries >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << EPI >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << AI Act >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << Proposition 65 >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << PFAS Actualité >>
+     194x34  div.mega-colonnes > div > div.mega-liste > a  << TSCA >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << ASTM F963 >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << TB 117 >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << Loi 96 (Québec) >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << CPSIA >>
+     194x32  div.mega-colonnes > div > div.mega-liste > a  << FTC Green Guides >>
+     84x24  div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur  << Ressources >>
+     63x24  div.conteneur > div.nav-liens > div.nav-item > a.nav-declencheur  << Entreprise >>
+     66x24  nav.nav > div.conteneur > div.nav-fin > a.lien-secondaire  << Connexion >>
+     118x30  div > ul > li > a  << Regulatory Change >>
+     56x30  div > ul > li > a  << Research >>
+     106x30  div > ul > li > a  << Compliance Data >>
+     149x30  div > ul > li > a  << Compliance as a service >>
+     63x30  div > ul > li > a  << Fabricants >>
+     172x30  div > ul > li > a  << Importateurs et distributeurs >>
+     81x30  div > ul > li > a  << Marketplaces >>
+     117x30  div > ul > li > a  << Conformité produit >>
+     53x30  div > ul > li > a  << Secteurs >>
+     114x30  div > ul > li > a  << Union européenne >>
+     150x30  div > ul > li > a  << PPWR, article par article >>
+     65x30  div > ul > li > a  << Legal Data >>
+     28x30  div > ul > li > a  << Blog >>
+     131x30  div > ul > li > a  << Travaux de recherche >>
+     30x30  div > ul > li > a  << Skills >>
+     158x30  div > ul > li > a  << Journal des changements >>
+     125x30  div > ul > li > a  << Plan d'action MARIA >>
+     56x30  div > ul > li > a  << À propos >>
+     127x30  div > ul > li > a  << Cas client Decathlon >>
+     50x30  div > ul > li > a  << Sécurité >>
+     78x30  div > ul > li > a  << Recrutement >>
+     123x30  div > ul > li > a  << Demander un accès >>
+     118x16  div.pied-coordonnees > div > div.t-micro > a  << contact@cleolabs.co >>
+     118x16  div.pied-coordonnees > div > div.t-micro > a  << Réserver 30 minutes >>
+     111x28  footer.pied > div.conteneur > div.pied-bas > a  << Conditions générales >>
+     139x28  footer.pied > div.conteneur > div.pied-bas > a  << Politique de confidentialité >>
+-- desktop, paragraphe le plus large : 620 px ; > 720 : 0
+-- desktop, debordement horizontal : false ; interne : 0
+-- mobile, textes < 14 px : 0
+-- mobile, cibles < 40 px : 0
+-- mobile, paragraphe le plus large : 334 px ; > 720 : 0
+-- mobile, debordement horizontal : false ; interne : 0
+
+===== 20-campagne =====  desktop 1538 px, mobile 2489 px
+-- desktop, textes < 13 px : 3
+     12px | footer.seg.pied.seg-p20-pied > div.conteneur > div.pied-bas > a  x2  ex: Conditions générales
+     12px | footer.seg.pied.seg-p20-pied > div.conteneur > div.pied-bas > span  x1  ex: Cleo Corp SAS, SIREN 984567883
+-- desktop, cibles < 40 px : 2
+     111x28  footer.seg.pied.seg-p20-pied > div.conteneur > div.pied-bas > a  << Conditions générales >>
+     139x28  footer.seg.pied.seg-p20-pied > div.conteneur > div.pied-bas > a  << Politique de confidentialité >>
+-- desktop, paragraphe le plus large : 460 px ; > 720 : 0
+-- desktop, debordement horizontal : false ; interne : 0
+-- mobile, textes < 14 px : 0
+-- mobile, cibles < 40 px : 0
+-- mobile, paragraphe le plus large : 334 px ; > 720 : 0
+-- mobile, debordement horizontal : false ; interne : 0

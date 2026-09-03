@@ -193,3 +193,10 @@
 /* Sur téléphone, les numéros d'étape rejoignent le plancher de 14 px du système
    (les deux règles ci-dessus gagnent par spécificité sur composants.css). */
 @media (max-width:640px){ .acc-methode .pl-num,#compliance-service .flux-rang{font-size:0.875rem} }
+
+/* Retour à l'essentiel, 03/09 13:30 : le globe, le grand portrait et la carte large
+   reviennent tels quels. Trois restes mesurés après : « US » / « UE » à 12 px dans la
+   fiche, le lien du témoignage à 24 px de haut, les villes du globe à 13 px sur téléphone. */
+.fiche-entete-pays span{font-size:0.8125rem}
+.duo-temoin a.t-body{padding:10px 0; margin-top:18px}
+@media (max-width:640px){ .fiche-entete-pays span{font-size:0.875rem} .hero-globe .gp-nom{font-size:14px} }

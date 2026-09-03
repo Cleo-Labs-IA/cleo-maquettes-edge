@@ -1,0 +1,12062 @@
+{
+ "10-ressources": {
+  "desktop": {
+   "corps": 4,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [
+    {
+     "t": "SPAN",
+     "c": "pilule",
+     "px": "12px",
+     "txt": "À venir"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Emballage"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Substances"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Méthode"
+    }
+   ],
+   "cibles": 8,
+   "ciblesCadre": 48,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 59,
+     "h": 24,
+     "txt": "Produit",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 53,
+     "h": 24,
+     "txt": "Textes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "RSGP",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passeport Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Allégations vertes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "EPI",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Loi 96 (Québec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 84,
+     "h": 24,
+     "txt": "Ressources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Entreprise",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 66,
+     "h": 24,
+     "txt": "Connexion",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "actif",
+     "w": 200,
+     "h": 26,
+     "txt": "Tout",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Blog",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Travaux de recherche",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Skills",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Legal Data",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Rencontres",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Modèles",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Glossaire",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 63,
+     "h": 30,
+     "txt": "Fabricants",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 172,
+     "h": 30,
+     "txt": "Importateurs et distributeurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 117,
+     "h": 30,
+     "txt": "Conformité produit",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 53,
+     "h": 30,
+     "txt": "Secteurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "Union européenne",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 150,
+     "h": 30,
+     "txt": "PPWR, article par article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Travaux de recherche",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Journal des changements",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 125,
+     "h": 30,
+     "txt": "Plan d'action MARIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "À propos",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 127,
+     "h": 30,
+     "txt": "Cas client Decathlon",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 50,
+     "h": 30,
+     "txt": "Sécurité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 78,
+     "h": 30,
+     "txt": "Recrutement",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Demander un accès",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "Réserver 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 111,
+     "h": 28,
+     "txt": "Conditions générales",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 139,
+     "h": 28,
+     "txt": "Politique de confidentialité",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "Ressources"
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 390,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "Ressources"
+   },
+   "nbH1": 1
+  }
+ },
+ "11-blog": {
+  "desktop": {
+   "corps": 13,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Emballage"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Ingénierie"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Conformité produit"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Produit"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Conformité produit"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Conformité produit"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Conformité produit"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Entreprise"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Conformité Produit"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Conformité produit"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Conformité produit"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Conformité"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Conformité produit"
+    }
+   ],
+   "cibles": 8,
+   "ciblesCadre": 48,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 59,
+     "h": 24,
+     "txt": "Produit",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 53,
+     "h": 24,
+     "txt": "Textes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "RSGP",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passeport Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Allégations vertes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "EPI",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Loi 96 (Québec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 84,
+     "h": 24,
+     "txt": "Ressources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Entreprise",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 66,
+     "h": 24,
+     "txt": "Connexion",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Tout",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "actif",
+     "w": 200,
+     "h": 26,
+     "txt": "Blog",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Travaux de recherche",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Skills",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Legal Data",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Rencontres",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Modèles",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Glossaire",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 63,
+     "h": 30,
+     "txt": "Fabricants",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 172,
+     "h": 30,
+     "txt": "Importateurs et distributeurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 117,
+     "h": 30,
+     "txt": "Conformité produit",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 53,
+     "h": 30,
+     "txt": "Secteurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "Union européenne",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 150,
+     "h": 30,
+     "txt": "PPWR, article par article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Travaux de recherche",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Journal des changements",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 125,
+     "h": 30,
+     "txt": "Plan d'action MARIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "À propos",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 127,
+     "h": 30,
+     "txt": "Cas client Decathlon",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 50,
+     "h": 30,
+     "txt": "Sécurité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 78,
+     "h": 30,
+     "txt": "Recrutement",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Demander un accès",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "Réserver 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 111,
+     "h": 28,
+     "txt": "Conditions générales",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 139,
+     "h": 28,
+     "txt": "Politique de confidentialité",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "Publications"
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 390,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "Publications"
+   },
+   "nbH1": 1
+  }
+ },
+ "12-article": {
+  "desktop": {
+   "corps": 6,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Emballage"
+    },
+    {
+     "t": "DIV",
+     "c": "titre",
+     "px": "12px",
+     "txt": "Sur cette page"
+    },
+    {
+     "t": "SPAN",
+     "c": "source-citee",
+     "px": "12px",
+     "txt": "Règlement (UE) 2025/40, article 2, paragra"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Substances"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Méthode"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Texte"
+    }
+   ],
+   "cibles": 5,
+   "ciblesCadre": 48,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 59,
+     "h": 24,
+     "txt": "Produit",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 53,
+     "h": 24,
+     "txt": "Textes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "RSGP",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passeport Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Allégations vertes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "EPI",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Loi 96 (Québec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 84,
+     "h": 24,
+     "txt": "Ressources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Entreprise",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 66,
+     "h": 24,
+     "txt": "Connexion",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "actif",
+     "w": 200,
+     "h": 40,
+     "txt": "De quel texte on parle",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 40,
+     "txt": "Ce qui vient ensuite",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 40,
+     "txt": "Ce qu'il y a à faire",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 40,
+     "txt": "Questions fréquentes",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 40,
+     "txt": "Sources",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 63,
+     "h": 30,
+     "txt": "Fabricants",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 172,
+     "h": 30,
+     "txt": "Importateurs et distributeurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 117,
+     "h": 30,
+     "txt": "Conformité produit",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 53,
+     "h": 30,
+     "txt": "Secteurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "Union européenne",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 150,
+     "h": 30,
+     "txt": "PPWR, article par article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Travaux de recherche",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Journal des changements",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 125,
+     "h": 30,
+     "txt": "Plan d'action MARIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "À propos",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 127,
+     "h": 30,
+     "txt": "Cas client Decathlon",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 50,
+     "h": 30,
+     "txt": "Sécurité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 78,
+     "h": 30,
+     "txt": "Recrutement",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Demander un accès",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "Réserver 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 111,
+     "h": 28,
+     "txt": "Conditions générales",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 139,
+     "h": 28,
+     "txt": "Politique de confidentialité",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "PPWR : ce que le 12 août 2026 change pour vos emballages"
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 390,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "PPWR : ce que le 12 août 2026 change pour vos emballages"
+   },
+   "nbH1": 1
+  }
+ },
+ "13-glossaire": {
+  "desktop": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [],
+   "cibles": 8,
+   "ciblesCadre": 48,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 59,
+     "h": 24,
+     "txt": "Produit",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 53,
+     "h": 24,
+     "txt": "Textes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "RSGP",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passeport Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Allégations vertes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "EPI",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Loi 96 (Québec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 84,
+     "h": 24,
+     "txt": "Ressources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Entreprise",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 66,
+     "h": 24,
+     "txt": "Connexion",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Tout",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Blog",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Travaux de recherche",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Skills",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Legal Data",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Rencontres",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Modèles",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "actif",
+     "w": 200,
+     "h": 26,
+     "txt": "Glossaire",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 63,
+     "h": 30,
+     "txt": "Fabricants",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 172,
+     "h": 30,
+     "txt": "Importateurs et distributeurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 117,
+     "h": 30,
+     "txt": "Conformité produit",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 53,
+     "h": 30,
+     "txt": "Secteurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "Union européenne",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 150,
+     "h": 30,
+     "txt": "PPWR, article par article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Travaux de recherche",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Journal des changements",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 125,
+     "h": 30,
+     "txt": "Plan d'action MARIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "À propos",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 127,
+     "h": 30,
+     "txt": "Cas client Decathlon",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 50,
+     "h": 30,
+     "txt": "Sécurité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 78,
+     "h": 30,
+     "txt": "Recrutement",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Demander un accès",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "Réserver 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 111,
+     "h": 28,
+     "txt": "Conditions générales",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 139,
+     "h": 28,
+     "txt": "Politique de confidentialité",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "Glossaire"
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 390,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "Glossaire"
+   },
+   "nbH1": 1
+  }
+ },
+ "14-terme": {
+  "desktop": {
+   "corps": 4,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [
+    {
+     "t": "SPAN",
+     "c": "source-citee",
+     "px": "12px",
+     "txt": "Règlement (UE) 2023/988, article 3, point "
+    },
+    {
+     "t": "A",
+     "c": "pilule pilule-contour",
+     "px": "12px",
+     "txt": "Importateur"
+    },
+    {
+     "t": "A",
+     "c": "pilule pilule-contour",
+     "px": "12px",
+     "txt": "Distributeur"
+    },
+    {
+     "t": "A",
+     "c": "pilule pilule-contour",
+     "px": "12px",
+     "txt": "Opérateur économique"
+    }
+   ],
+   "cibles": 1,
+   "ciblesCadre": 48,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 59,
+     "h": 24,
+     "txt": "Produit",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 53,
+     "h": 24,
+     "txt": "Textes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "RSGP",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passeport Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Allégations vertes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "EPI",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Loi 96 (Québec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 84,
+     "h": 24,
+     "txt": "Ressources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Entreprise",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 66,
+     "h": 24,
+     "txt": "Connexion",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 83,
+     "h": 24,
+     "txt": "Glossaire",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 63,
+     "h": 30,
+     "txt": "Fabricants",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 172,
+     "h": 30,
+     "txt": "Importateurs et distributeurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 117,
+     "h": 30,
+     "txt": "Conformité produit",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 53,
+     "h": 30,
+     "txt": "Secteurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "Union européenne",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 150,
+     "h": 30,
+     "txt": "PPWR, article par article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Travaux de recherche",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Journal des changements",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 125,
+     "h": 30,
+     "txt": "Plan d'action MARIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "À propos",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 127,
+     "h": 30,
+     "txt": "Cas client Decathlon",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 50,
+     "h": 30,
+     "txt": "Sécurité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 78,
+     "h": 30,
+     "txt": "Recrutement",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Demander un accès",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "Réserver 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 111,
+     "h": 28,
+     "txt": "Conditions générales",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 139,
+     "h": 28,
+     "txt": "Politique de confidentialité",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "Mandataire"
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 390,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "Mandataire"
+   },
+   "nbH1": 1
+  }
+ },
+ "15-evenements": {
+  "desktop": {
+   "corps": 7,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [
+    {
+     "t": "SPAN",
+     "c": "pilule",
+     "px": "12px",
+     "txt": "À venir"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Rediffusion"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Rediffusion"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Rediffusion"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Rediffusion"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Rediffusion"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Rediffusion"
+    }
+   ],
+   "cibles": 8,
+   "ciblesCadre": 48,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 59,
+     "h": 24,
+     "txt": "Produit",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 53,
+     "h": 24,
+     "txt": "Textes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "RSGP",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passeport Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Allégations vertes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "EPI",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Loi 96 (Québec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 84,
+     "h": 24,
+     "txt": "Ressources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Entreprise",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 66,
+     "h": 24,
+     "txt": "Connexion",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Tout",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Blog",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Travaux de recherche",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Skills",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Legal Data",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "actif",
+     "w": 200,
+     "h": 26,
+     "txt": "Rencontres",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Modèles",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Glossaire",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 63,
+     "h": 30,
+     "txt": "Fabricants",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 172,
+     "h": 30,
+     "txt": "Importateurs et distributeurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 117,
+     "h": 30,
+     "txt": "Conformité produit",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 53,
+     "h": 30,
+     "txt": "Secteurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "Union européenne",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 150,
+     "h": 30,
+     "txt": "PPWR, article par article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Travaux de recherche",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Journal des changements",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 125,
+     "h": 30,
+     "txt": "Plan d'action MARIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "À propos",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 127,
+     "h": 30,
+     "txt": "Cas client Decathlon",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 50,
+     "h": 30,
+     "txt": "Sécurité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 78,
+     "h": 30,
+     "txt": "Recrutement",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Demander un accès",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "Réserver 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 111,
+     "h": 28,
+     "txt": "Conditions générales",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 139,
+     "h": 28,
+     "txt": "Politique de confidentialité",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "Rencontres"
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 390,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "Rencontres"
+   },
+   "nbH1": 1
+  }
+ },
+ "16-evenement": {
+  "desktop": {
+   "corps": 1,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [
+    {
+     "t": "SPAN",
+     "c": "pilule",
+     "px": "12px",
+     "txt": "À venir"
+    }
+   ],
+   "cibles": 0,
+   "ciblesCadre": 48,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 59,
+     "h": 24,
+     "txt": "Produit",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 53,
+     "h": 24,
+     "txt": "Textes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "RSGP",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passeport Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Allégations vertes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "EPI",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Loi 96 (Québec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 84,
+     "h": 24,
+     "txt": "Ressources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Entreprise",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 66,
+     "h": 24,
+     "txt": "Connexion",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 63,
+     "h": 30,
+     "txt": "Fabricants",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 172,
+     "h": 30,
+     "txt": "Importateurs et distributeurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 117,
+     "h": 30,
+     "txt": "Conformité produit",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 53,
+     "h": 30,
+     "txt": "Secteurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "Union européenne",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 150,
+     "h": 30,
+     "txt": "PPWR, article par article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Travaux de recherche",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Journal des changements",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 125,
+     "h": 30,
+     "txt": "Plan d'action MARIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "À propos",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 127,
+     "h": 30,
+     "txt": "Cas client Decathlon",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 50,
+     "h": 30,
+     "txt": "Sécurité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 78,
+     "h": 30,
+     "txt": "Recrutement",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Demander un accès",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "Réserver 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 111,
+     "h": 28,
+     "txt": "Conditions générales",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 139,
+     "h": 28,
+     "txt": "Politique de confidentialité",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "Product Safety in the Age of AI"
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 390,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "Product Safety in the Age of AI"
+   },
+   "nbH1": 1
+  }
+ },
+ "17-modeles": {
+  "desktop": {
+   "corps": 6,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Modèle"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Modèle"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Modèle"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Modèle"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Liste"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Liste"
+    }
+   ],
+   "cibles": 14,
+   "ciblesCadre": 48,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 59,
+     "h": 24,
+     "txt": "Produit",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 53,
+     "h": 24,
+     "txt": "Textes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "RSGP",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passeport Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Allégations vertes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "EPI",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Loi 96 (Québec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 84,
+     "h": 24,
+     "txt": "Ressources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Entreprise",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 66,
+     "h": 24,
+     "txt": "Connexion",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Tout",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Blog",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Travaux de recherche",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Skills",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Legal Data",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Rencontres",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "actif",
+     "w": 200,
+     "h": 26,
+     "txt": "Modèles",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Glossaire",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "cta-texte",
+     "w": 188,
+     "h": 25,
+     "txt": "Demander le modèle",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "cta-texte",
+     "w": 188,
+     "h": 25,
+     "txt": "Demander le modèle",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "cta-texte",
+     "w": 188,
+     "h": 25,
+     "txt": "Demander le modèle",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "cta-texte",
+     "w": 188,
+     "h": 25,
+     "txt": "Demander le modèle",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "cta-texte",
+     "w": 188,
+     "h": 25,
+     "txt": "Demander le modèle",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "cta-texte",
+     "w": 188,
+     "h": 25,
+     "txt": "Demander le modèle",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 63,
+     "h": 30,
+     "txt": "Fabricants",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 172,
+     "h": 30,
+     "txt": "Importateurs et distributeurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 117,
+     "h": 30,
+     "txt": "Conformité produit",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 53,
+     "h": 30,
+     "txt": "Secteurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "Union européenne",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 150,
+     "h": 30,
+     "txt": "PPWR, article par article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Travaux de recherche",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Journal des changements",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 125,
+     "h": 30,
+     "txt": "Plan d'action MARIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "À propos",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 127,
+     "h": 30,
+     "txt": "Cas client Decathlon",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 50,
+     "h": 30,
+     "txt": "Sécurité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 78,
+     "h": 30,
+     "txt": "Recrutement",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Demander un accès",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "Réserver 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 111,
+     "h": 28,
+     "txt": "Conditions générales",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 139,
+     "h": 28,
+     "txt": "Politique de confidentialité",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "Modèles"
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 390,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "Modèles"
+   },
+   "nbH1": 1
+  }
+ },
+ "18-recrutement": {
+  "desktop": {
+   "corps": 3,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [
+    {
+     "t": "SPAN",
+     "c": "pilule pilule-contour",
+     "px": "12px",
+     "txt": "Ouvert"
+    },
+    {
+     "t": "SPAN",
+     "c": "pilule pilule-contour",
+     "px": "12px",
+     "txt": "Ouvert"
+    },
+    {
+     "t": "SPAN",
+     "c": "pilule pilule-contour",
+     "px": "12px",
+     "txt": "Ouvert"
+    }
+   ],
+   "cibles": 0,
+   "ciblesCadre": 48,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 59,
+     "h": 24,
+     "txt": "Produit",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 53,
+     "h": 24,
+     "txt": "Textes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "RSGP",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passeport Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Allégations vertes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "EPI",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Loi 96 (Québec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 84,
+     "h": 24,
+     "txt": "Ressources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Entreprise",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 66,
+     "h": 24,
+     "txt": "Connexion",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 63,
+     "h": 30,
+     "txt": "Fabricants",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 172,
+     "h": 30,
+     "txt": "Importateurs et distributeurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 117,
+     "h": 30,
+     "txt": "Conformité produit",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 53,
+     "h": 30,
+     "txt": "Secteurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "Union européenne",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 150,
+     "h": 30,
+     "txt": "PPWR, article par article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Travaux de recherche",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Journal des changements",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 125,
+     "h": 30,
+     "txt": "Plan d'action MARIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "À propos",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 127,
+     "h": 30,
+     "txt": "Cas client Decathlon",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 50,
+     "h": 30,
+     "txt": "Sécurité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 78,
+     "h": 30,
+     "txt": "Recrutement",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Demander un accès",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "Réserver 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 111,
+     "h": 28,
+     "txt": "Conditions générales",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 139,
+     "h": 28,
+     "txt": "Politique de confidentialité",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "Encoder le droit, produit par produit."
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 390,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "Encoder le droit, produit par produit."
+   },
+   "nbH1": 1
+  }
+ },
+ "19-poste": {
+  "desktop": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [],
+   "cibles": 1,
+   "ciblesCadre": 48,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 59,
+     "h": 24,
+     "txt": "Produit",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 53,
+     "h": 24,
+     "txt": "Textes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "RSGP",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passeport Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Allégations vertes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "EPI",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Loi 96 (Québec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 84,
+     "h": 24,
+     "txt": "Ressources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Entreprise",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 66,
+     "h": 24,
+     "txt": "Connexion",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 132,
+     "h": 24,
+     "txt": "Postes ouverts",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 63,
+     "h": 30,
+     "txt": "Fabricants",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 172,
+     "h": 30,
+     "txt": "Importateurs et distributeurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 117,
+     "h": 30,
+     "txt": "Conformité produit",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 53,
+     "h": 30,
+     "txt": "Secteurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "Union européenne",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 150,
+     "h": 30,
+     "txt": "PPWR, article par article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Travaux de recherche",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Journal des changements",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 125,
+     "h": 30,
+     "txt": "Plan d'action MARIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "À propos",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 127,
+     "h": 30,
+     "txt": "Cas client Decathlon",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 50,
+     "h": 30,
+     "txt": "Sécurité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 78,
+     "h": 30,
+     "txt": "Recrutement",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Demander un accès",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "Réserver 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 111,
+     "h": 28,
+     "txt": "Conditions générales",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 139,
+     "h": 28,
+     "txt": "Politique de confidentialité",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "Juriste, encodage réglementaire"
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 390,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "Juriste, encodage réglementaire"
+   },
+   "nbH1": 1
+  }
+ },
+ "22-legal": {
+  "desktop": {
+   "corps": 1,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [
+    {
+     "t": "DIV",
+     "c": "titre",
+     "px": "12px",
+     "txt": "Sur cette page"
+    }
+   ],
+   "cibles": 6,
+   "ciblesCadre": 48,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 59,
+     "h": 24,
+     "txt": "Produit",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 53,
+     "h": 24,
+     "txt": "Textes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "RSGP",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passeport Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Allégations vertes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "EPI",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Loi 96 (Québec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 84,
+     "h": 24,
+     "txt": "Ressources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Entreprise",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 66,
+     "h": 24,
+     "txt": "Connexion",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "actif",
+     "w": 200,
+     "h": 40,
+     "txt": "Éditeur",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 40,
+     "txt": "Objet",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 40,
+     "txt": "Accès au service",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 40,
+     "txt": "Données",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 40,
+     "txt": "Portée des réponses",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 40,
+     "txt": "Droit applicable",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 63,
+     "h": 30,
+     "txt": "Fabricants",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 172,
+     "h": 30,
+     "txt": "Importateurs et distributeurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 117,
+     "h": 30,
+     "txt": "Conformité produit",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 53,
+     "h": 30,
+     "txt": "Secteurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "Union européenne",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 150,
+     "h": 30,
+     "txt": "PPWR, article par article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Travaux de recherche",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Journal des changements",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 125,
+     "h": 30,
+     "txt": "Plan d'action MARIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "À propos",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 127,
+     "h": 30,
+     "txt": "Cas client Decathlon",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 50,
+     "h": 30,
+     "txt": "Sécurité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 78,
+     "h": 30,
+     "txt": "Recrutement",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Demander un accès",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "Réserver 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 111,
+     "h": 28,
+     "txt": "Conditions générales",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 139,
+     "h": 28,
+     "txt": "Politique de confidentialité",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "Conditions générales"
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 390,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "Conditions générales"
+   },
+   "nbH1": 1
+  }
+ },
+ "23-research": {
+  "desktop": {
+   "corps": 7,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Article de recherche"
+    },
+    {
+     "t": "SPAN",
+     "c": "pilule",
+     "px": "12px",
+     "txt": "Étape 1"
+    },
+    {
+     "t": "SPAN",
+     "c": "pilule",
+     "px": "12px",
+     "txt": "Étape 2"
+    },
+    {
+     "t": "SPAN",
+     "c": "pilule",
+     "px": "12px",
+     "txt": "Étape 3"
+    },
+    {
+     "t": "SPAN",
+     "c": "pilule",
+     "px": "12px",
+     "txt": "Étape 4"
+    },
+    {
+     "t": "SPAN",
+     "c": "pilule",
+     "px": "12px",
+     "txt": "Étape 5"
+    },
+    {
+     "t": "SUB",
+     "c": "",
+     "px": "12.5px",
+     "txt": "reg"
+    }
+   ],
+   "cibles": 8,
+   "ciblesCadre": 49,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 59,
+     "h": 24,
+     "txt": "Produit",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 53,
+     "h": 24,
+     "txt": "Textes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "RSGP",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passeport Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Allégations vertes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "EPI",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Loi 96 (Québec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 84,
+     "h": 24,
+     "txt": "Ressources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Entreprise",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 37,
+     "h": 21,
+     "txt": "EN",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 66,
+     "h": 24,
+     "txt": "Connexion",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Tout",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Blog",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "actif",
+     "w": 200,
+     "h": 26,
+     "txt": "Travaux de recherche",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Skills",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Legal Data",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Rencontres",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Modèles",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Glossaire",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 63,
+     "h": 30,
+     "txt": "Fabricants",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 172,
+     "h": 30,
+     "txt": "Importateurs et distributeurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 117,
+     "h": 30,
+     "txt": "Conformité produit",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 53,
+     "h": 30,
+     "txt": "Secteurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "Union européenne",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 150,
+     "h": 30,
+     "txt": "PPWR, article par article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Travaux de recherche",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Journal des changements",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 125,
+     "h": 30,
+     "txt": "Plan d'action MARIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "À propos",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 127,
+     "h": 30,
+     "txt": "Cas client Decathlon",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 50,
+     "h": 30,
+     "txt": "Sécurité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 78,
+     "h": 30,
+     "txt": "Recrutement",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Demander un accès",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "Réserver 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 111,
+     "h": 28,
+     "txt": "Conditions générales",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 139,
+     "h": 28,
+     "txt": "Politique de confidentialité",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "La science derrière l'intelligence."
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 404,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "La science derrière l'intelligence."
+   },
+   "nbH1": 1
+  }
+ },
+ "23-research-en": {
+  "desktop": {
+   "corps": 7,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Research paper"
+    },
+    {
+     "t": "SPAN",
+     "c": "pilule",
+     "px": "12px",
+     "txt": "Stage 1"
+    },
+    {
+     "t": "SPAN",
+     "c": "pilule",
+     "px": "12px",
+     "txt": "Stage 2"
+    },
+    {
+     "t": "SPAN",
+     "c": "pilule",
+     "px": "12px",
+     "txt": "Stage 3"
+    },
+    {
+     "t": "SPAN",
+     "c": "pilule",
+     "px": "12px",
+     "txt": "Stage 4"
+    },
+    {
+     "t": "SPAN",
+     "c": "pilule",
+     "px": "12px",
+     "txt": "Stage 5"
+    },
+    {
+     "t": "SUB",
+     "c": "",
+     "px": "12.5px",
+     "txt": "reg"
+    }
+   ],
+   "cibles": 8,
+   "ciblesCadre": 49,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Product",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 86,
+     "h": 24,
+     "txt": "Regulations",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR News",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "GPSR",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passport News",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Green Claims",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "PPE",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS News",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Bill 96 (Quebec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 78,
+     "h": 24,
+     "txt": "Resources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 61,
+     "h": 24,
+     "txt": "Company",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 35,
+     "h": 21,
+     "txt": "FR",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 38,
+     "h": 24,
+     "txt": "Log in",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "All",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Blog",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "actif",
+     "w": 200,
+     "h": 26,
+     "txt": "Research",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Skills",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Legal Data",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Events",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Templates",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Glossary",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 88,
+     "h": 30,
+     "txt": "Manufacturers",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Importers and distributors",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Product compliance",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 59,
+     "h": 30,
+     "txt": "Industries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 99,
+     "h": 30,
+     "txt": "European Union",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 144,
+     "h": 30,
+     "txt": "PPWR, article by article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 80,
+     "h": 30,
+     "txt": "Our research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 68,
+     "h": 30,
+     "txt": "Changelog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "MARIA action plan",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 37,
+     "h": 30,
+     "txt": "About",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Decathlon case study",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 49,
+     "h": 30,
+     "txt": "Security",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 48,
+     "h": 30,
+     "txt": "Careers",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 95,
+     "h": 30,
+     "txt": "Request access",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 98,
+     "h": 16,
+     "txt": "Book 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 44,
+     "h": 28,
+     "txt": "Terms",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 72,
+     "h": 28,
+     "txt": "Privacy policy",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "The science behind the intelligence."
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 395,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "The science behind the intelligence."
+   },
+   "nbH1": 1
+  }
+ },
+ "24-blog": {
+  "desktop": {
+   "corps": 16,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Entreprise"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Entreprise"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Entreprise"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Conformité produit"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Conformité produit"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Conformité produit"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Conformité produit"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Conformité produit"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Conformité produit"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Conformité produit"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Produit"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Conformité produit"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Conformité produit"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Conformité produit"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Conformité produit"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Conformité produit"
+    }
+   ],
+   "cibles": 0,
+   "ciblesCadre": 49,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 59,
+     "h": 24,
+     "txt": "Produit",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 53,
+     "h": 24,
+     "txt": "Textes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "RSGP",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passeport Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Allégations vertes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "EPI",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Loi 96 (Québec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 84,
+     "h": 24,
+     "txt": "Ressources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Entreprise",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 37,
+     "h": 21,
+     "txt": "EN",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 66,
+     "h": 24,
+     "txt": "Connexion",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 63,
+     "h": 30,
+     "txt": "Fabricants",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 172,
+     "h": 30,
+     "txt": "Importateurs et distributeurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 117,
+     "h": 30,
+     "txt": "Conformité produit",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 53,
+     "h": 30,
+     "txt": "Secteurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "Union européenne",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 150,
+     "h": 30,
+     "txt": "PPWR, article par article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Travaux de recherche",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Journal des changements",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 125,
+     "h": 30,
+     "txt": "Plan d'action MARIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "À propos",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 127,
+     "h": 30,
+     "txt": "Cas client Decathlon",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 50,
+     "h": 30,
+     "txt": "Sécurité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 78,
+     "h": 30,
+     "txt": "Recrutement",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Demander un accès",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "Réserver 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 111,
+     "h": 28,
+     "txt": "Conditions générales",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 139,
+     "h": 28,
+     "txt": "Politique de confidentialité",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "Actualités & analyses"
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 404,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "Actualités & analyses"
+   },
+   "nbH1": 1
+  }
+ },
+ "24-blog-en": {
+  "desktop": {
+   "corps": 16,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Company"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Company"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Company"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Product Compliance"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Product Compliance"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Product Compliance"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Product Compliance"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Product Compliance"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Product Compliance"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Product Compliance"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Product"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Product Compliance"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Product Compliance"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Product Compliance"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Product Compliance"
+    },
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Product Compliance"
+    }
+   ],
+   "cibles": 0,
+   "ciblesCadre": 49,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Product",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 86,
+     "h": 24,
+     "txt": "Regulations",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR News",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "GPSR",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passport News",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Green Claims",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "PPE",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS News",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Bill 96 (Quebec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 78,
+     "h": 24,
+     "txt": "Resources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 61,
+     "h": 24,
+     "txt": "Company",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 35,
+     "h": 21,
+     "txt": "FR",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 38,
+     "h": 24,
+     "txt": "Log in",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 88,
+     "h": 30,
+     "txt": "Manufacturers",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Importers and distributors",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Product compliance",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 59,
+     "h": 30,
+     "txt": "Industries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 99,
+     "h": 30,
+     "txt": "European Union",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 144,
+     "h": 30,
+     "txt": "PPWR, article by article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 80,
+     "h": 30,
+     "txt": "Our research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 68,
+     "h": 30,
+     "txt": "Changelog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "MARIA action plan",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 37,
+     "h": 30,
+     "txt": "About",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Decathlon case study",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 49,
+     "h": 30,
+     "txt": "Security",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 48,
+     "h": 30,
+     "txt": "Careers",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 95,
+     "h": 30,
+     "txt": "Request access",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 98,
+     "h": 16,
+     "txt": "Book 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 44,
+     "h": 28,
+     "txt": "Terms",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 72,
+     "h": 28,
+     "txt": "Privacy policy",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "News & analysis"
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 395,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "News & analysis"
+   },
+   "nbH1": 1
+  }
+ },
+ "25-skills": {
+  "desktop": {
+   "corps": 1,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Open source · MCP · Licence MIT"
+    }
+   ],
+   "cibles": 8,
+   "ciblesCadre": 49,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 59,
+     "h": 24,
+     "txt": "Produit",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 53,
+     "h": 24,
+     "txt": "Textes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "RSGP",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passeport Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Allégations vertes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "EPI",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Loi 96 (Québec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 84,
+     "h": 24,
+     "txt": "Ressources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Entreprise",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 37,
+     "h": 21,
+     "txt": "EN",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 66,
+     "h": 24,
+     "txt": "Connexion",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Tout",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Blog",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Travaux de recherche",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "actif",
+     "w": 200,
+     "h": 26,
+     "txt": "Skills",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Legal Data",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Rencontres",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Modèles",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Glossaire",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 63,
+     "h": 30,
+     "txt": "Fabricants",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 172,
+     "h": 30,
+     "txt": "Importateurs et distributeurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 117,
+     "h": 30,
+     "txt": "Conformité produit",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 53,
+     "h": 30,
+     "txt": "Secteurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "Union européenne",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 150,
+     "h": 30,
+     "txt": "PPWR, article par article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Travaux de recherche",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Journal des changements",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 125,
+     "h": 30,
+     "txt": "Plan d'action MARIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "À propos",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 127,
+     "h": 30,
+     "txt": "Cas client Decathlon",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 50,
+     "h": 30,
+     "txt": "Sécurité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 78,
+     "h": 30,
+     "txt": "Recrutement",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Demander un accès",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "Réserver 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 111,
+     "h": 28,
+     "txt": "Conditions générales",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 139,
+     "h": 28,
+     "txt": "Politique de confidentialité",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "Skills"
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 404,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "Skills"
+   },
+   "nbH1": 1
+  }
+ },
+ "25-skills-en": {
+  "desktop": {
+   "corps": 1,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Open source · MCP · MIT licence"
+    }
+   ],
+   "cibles": 8,
+   "ciblesCadre": 49,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Product",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 86,
+     "h": 24,
+     "txt": "Regulations",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR News",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "GPSR",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passport News",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Green Claims",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "PPE",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS News",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Bill 96 (Quebec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 78,
+     "h": 24,
+     "txt": "Resources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 61,
+     "h": 24,
+     "txt": "Company",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 35,
+     "h": 21,
+     "txt": "FR",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 38,
+     "h": 24,
+     "txt": "Log in",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "All",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Blog",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Research",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "actif",
+     "w": 200,
+     "h": 26,
+     "txt": "Skills",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Legal Data",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Events",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Templates",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Glossary",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 88,
+     "h": 30,
+     "txt": "Manufacturers",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Importers and distributors",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Product compliance",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 59,
+     "h": 30,
+     "txt": "Industries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 99,
+     "h": 30,
+     "txt": "European Union",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 144,
+     "h": 30,
+     "txt": "PPWR, article by article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 80,
+     "h": 30,
+     "txt": "Our research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 68,
+     "h": 30,
+     "txt": "Changelog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "MARIA action plan",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 37,
+     "h": 30,
+     "txt": "About",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Decathlon case study",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 49,
+     "h": 30,
+     "txt": "Security",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 48,
+     "h": 30,
+     "txt": "Careers",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 95,
+     "h": 30,
+     "txt": "Request access",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 98,
+     "h": 16,
+     "txt": "Book 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 44,
+     "h": 28,
+     "txt": "Terms",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 72,
+     "h": 28,
+     "txt": "Privacy policy",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "Skills"
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 395,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "Skills"
+   },
+   "nbH1": 1
+  }
+ },
+ "26-legal-data": {
+  "desktop": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [],
+   "cibles": 5,
+   "ciblesCadre": 49,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 59,
+     "h": 24,
+     "txt": "Produit",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 53,
+     "h": 24,
+     "txt": "Textes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "RSGP",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passeport Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Allégations vertes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "EPI",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Loi 96 (Québec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 84,
+     "h": 24,
+     "txt": "Ressources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Entreprise",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 37,
+     "h": 21,
+     "txt": "EN",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 66,
+     "h": 24,
+     "txt": "Connexion",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "actif",
+     "w": 200,
+     "h": 26,
+     "txt": "Le périmètre",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Veille par marché",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Matrice",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Produit → autorités",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Explorateur SH6",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 63,
+     "h": 30,
+     "txt": "Fabricants",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 172,
+     "h": 30,
+     "txt": "Importateurs et distributeurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 117,
+     "h": 30,
+     "txt": "Conformité produit",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 53,
+     "h": 30,
+     "txt": "Secteurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "Union européenne",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 150,
+     "h": 30,
+     "txt": "PPWR, article par article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Travaux de recherche",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Journal des changements",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 125,
+     "h": 30,
+     "txt": "Plan d'action MARIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "À propos",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 127,
+     "h": 30,
+     "txt": "Cas client Decathlon",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 50,
+     "h": 30,
+     "txt": "Sécurité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 78,
+     "h": 30,
+     "txt": "Recrutement",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Demander un accès",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "Réserver 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 111,
+     "h": 28,
+     "txt": "Conditions générales",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 139,
+     "h": 28,
+     "txt": "Politique de confidentialité",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "51.84px",
+    "cls": "t-hero",
+    "txt": "Chaque produit, chaque autorité, et ce qu'on surveille en di"
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 404,
+   "h1": {
+    "px": "36px",
+    "cls": "t-hero",
+    "txt": "Chaque produit, chaque autorité, et ce qu'on surveille en di"
+   },
+   "nbH1": 1
+  }
+ },
+ "26-legal-data-en": {
+  "desktop": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [],
+   "cibles": 5,
+   "ciblesCadre": 49,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Product",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 86,
+     "h": 24,
+     "txt": "Regulations",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR News",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "GPSR",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passport News",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Green Claims",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "PPE",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS News",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Bill 96 (Quebec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 78,
+     "h": 24,
+     "txt": "Resources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 61,
+     "h": 24,
+     "txt": "Company",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 35,
+     "h": 21,
+     "txt": "FR",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 38,
+     "h": 24,
+     "txt": "Log in",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "actif",
+     "w": 200,
+     "h": 26,
+     "txt": "The scope",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Monitoring by market",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Matrix",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "Product → authorities",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 200,
+     "h": 26,
+     "txt": "HS6 explorer",
+     "cadre": false
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 88,
+     "h": 30,
+     "txt": "Manufacturers",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Importers and distributors",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Product compliance",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 59,
+     "h": 30,
+     "txt": "Industries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 99,
+     "h": 30,
+     "txt": "European Union",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 144,
+     "h": 30,
+     "txt": "PPWR, article by article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 80,
+     "h": 30,
+     "txt": "Our research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 68,
+     "h": 30,
+     "txt": "Changelog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "MARIA action plan",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 37,
+     "h": 30,
+     "txt": "About",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Decathlon case study",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 49,
+     "h": 30,
+     "txt": "Security",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 48,
+     "h": 30,
+     "txt": "Careers",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 95,
+     "h": 30,
+     "txt": "Request access",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 98,
+     "h": 16,
+     "txt": "Book 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 44,
+     "h": 28,
+     "txt": "Terms",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 72,
+     "h": 28,
+     "txt": "Privacy policy",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "51.84px",
+    "cls": "t-hero",
+    "txt": "Every product, every authority, and what we track live."
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 395,
+   "h1": {
+    "px": "36px",
+    "cls": "t-hero",
+    "txt": "Every product, every authority, and what we track live."
+   },
+   "nbH1": 1
+  }
+ },
+ "27-article-levee": {
+  "desktop": {
+   "corps": 1,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Entreprise"
+    }
+   ],
+   "cibles": 0,
+   "ciblesCadre": 49,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 59,
+     "h": 24,
+     "txt": "Produit",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 53,
+     "h": 24,
+     "txt": "Textes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "RSGP",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passeport Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Allégations vertes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "EPI",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Loi 96 (Québec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 84,
+     "h": 24,
+     "txt": "Ressources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Entreprise",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 37,
+     "h": 21,
+     "txt": "EN",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 66,
+     "h": 24,
+     "txt": "Connexion",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 63,
+     "h": 30,
+     "txt": "Fabricants",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 172,
+     "h": 30,
+     "txt": "Importateurs et distributeurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 117,
+     "h": 30,
+     "txt": "Conformité produit",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 53,
+     "h": 30,
+     "txt": "Secteurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "Union européenne",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 150,
+     "h": 30,
+     "txt": "PPWR, article par article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Travaux de recherche",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Journal des changements",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 125,
+     "h": 30,
+     "txt": "Plan d'action MARIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "À propos",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 127,
+     "h": 30,
+     "txt": "Cas client Decathlon",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 50,
+     "h": 30,
+     "txt": "Sécurité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 78,
+     "h": 30,
+     "txt": "Recrutement",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Demander un accès",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "Réserver 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 111,
+     "h": 28,
+     "txt": "Conditions générales",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 139,
+     "h": 28,
+     "txt": "Politique de confidentialité",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "Cleo Labs lève 1,5 M€ pour automatiser la conformité régleme"
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 404,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "Cleo Labs lève 1,5 M€ pour automatiser la conformité régleme"
+   },
+   "nbH1": 1
+  }
+ },
+ "27-article-levee-en": {
+  "desktop": {
+   "corps": 1,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Company"
+    }
+   ],
+   "cibles": 0,
+   "ciblesCadre": 49,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Product",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 86,
+     "h": 24,
+     "txt": "Regulations",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR News",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "GPSR",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passport News",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Green Claims",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "PPE",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS News",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Bill 96 (Quebec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 78,
+     "h": 24,
+     "txt": "Resources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 61,
+     "h": 24,
+     "txt": "Company",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 35,
+     "h": 21,
+     "txt": "FR",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 38,
+     "h": 24,
+     "txt": "Log in",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 88,
+     "h": 30,
+     "txt": "Manufacturers",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Importers and distributors",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Product compliance",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 59,
+     "h": 30,
+     "txt": "Industries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 99,
+     "h": 30,
+     "txt": "European Union",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 144,
+     "h": 30,
+     "txt": "PPWR, article by article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 80,
+     "h": 30,
+     "txt": "Our research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 68,
+     "h": 30,
+     "txt": "Changelog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "MARIA action plan",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 37,
+     "h": 30,
+     "txt": "About",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Decathlon case study",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 49,
+     "h": 30,
+     "txt": "Security",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 48,
+     "h": 30,
+     "txt": "Careers",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 95,
+     "h": 30,
+     "txt": "Request access",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 98,
+     "h": 16,
+     "txt": "Book 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 44,
+     "h": 28,
+     "txt": "Terms",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 72,
+     "h": 28,
+     "txt": "Privacy policy",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "Cleo Labs raises €1.5M to automate product regulatory compli"
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 395,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "Cleo Labs raises €1.5M to automate product regulatory compli"
+   },
+   "nbH1": 1
+  }
+ },
+ "28-article-vivatech": {
+  "desktop": {
+   "corps": 1,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Entreprise"
+    }
+   ],
+   "cibles": 0,
+   "ciblesCadre": 49,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 59,
+     "h": 24,
+     "txt": "Produit",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 53,
+     "h": 24,
+     "txt": "Textes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "RSGP",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passeport Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Allégations vertes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "EPI",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Loi 96 (Québec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 84,
+     "h": 24,
+     "txt": "Ressources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Entreprise",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 37,
+     "h": 21,
+     "txt": "EN",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 66,
+     "h": 24,
+     "txt": "Connexion",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 63,
+     "h": 30,
+     "txt": "Fabricants",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 172,
+     "h": 30,
+     "txt": "Importateurs et distributeurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 117,
+     "h": 30,
+     "txt": "Conformité produit",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 53,
+     "h": 30,
+     "txt": "Secteurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "Union européenne",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 150,
+     "h": 30,
+     "txt": "PPWR, article par article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Travaux de recherche",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Journal des changements",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 125,
+     "h": 30,
+     "txt": "Plan d'action MARIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "À propos",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 127,
+     "h": 30,
+     "txt": "Cas client Decathlon",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 50,
+     "h": 30,
+     "txt": "Sécurité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 78,
+     "h": 30,
+     "txt": "Recrutement",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Demander un accès",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "Réserver 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 111,
+     "h": 28,
+     "txt": "Conditions générales",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 139,
+     "h": 28,
+     "txt": "Politique de confidentialité",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "Cleo Labs remporte le Scaleway Startup Challenge et sera pré"
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 404,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "Cleo Labs remporte le Scaleway Startup Challenge et sera pré"
+   },
+   "nbH1": 1
+  }
+ },
+ "28-article-vivatech-en": {
+  "desktop": {
+   "corps": 1,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Company"
+    }
+   ],
+   "cibles": 0,
+   "ciblesCadre": 49,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Product",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 86,
+     "h": 24,
+     "txt": "Regulations",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR News",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "GPSR",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passport News",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Green Claims",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "PPE",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS News",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Bill 96 (Quebec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 78,
+     "h": 24,
+     "txt": "Resources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 61,
+     "h": 24,
+     "txt": "Company",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 35,
+     "h": 21,
+     "txt": "FR",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 38,
+     "h": 24,
+     "txt": "Log in",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 88,
+     "h": 30,
+     "txt": "Manufacturers",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Importers and distributors",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Product compliance",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 59,
+     "h": 30,
+     "txt": "Industries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 99,
+     "h": 30,
+     "txt": "European Union",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 144,
+     "h": 30,
+     "txt": "PPWR, article by article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 80,
+     "h": 30,
+     "txt": "Our research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 68,
+     "h": 30,
+     "txt": "Changelog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "MARIA action plan",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 37,
+     "h": 30,
+     "txt": "About",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Decathlon case study",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 49,
+     "h": 30,
+     "txt": "Security",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 48,
+     "h": 30,
+     "txt": "Careers",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 95,
+     "h": 30,
+     "txt": "Request access",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 98,
+     "h": 16,
+     "txt": "Book 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 44,
+     "h": 28,
+     "txt": "Terms",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 72,
+     "h": 28,
+     "txt": "Privacy policy",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "Cleo Labs wins the Scaleway Startup Challenge and joins Viva"
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 395,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "Cleo Labs wins the Scaleway Startup Challenge and joins Viva"
+   },
+   "nbH1": 1
+  }
+ },
+ "29-article-deel": {
+  "desktop": {
+   "corps": 1,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Entreprise"
+    }
+   ],
+   "cibles": 0,
+   "ciblesCadre": 49,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 59,
+     "h": 24,
+     "txt": "Produit",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 53,
+     "h": 24,
+     "txt": "Textes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "RSGP",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passeport Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Allégations vertes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "EPI",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS Actualité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Loi 96 (Québec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 84,
+     "h": 24,
+     "txt": "Ressources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Entreprise",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 37,
+     "h": 21,
+     "txt": "EN",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 66,
+     "h": 24,
+     "txt": "Connexion",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 63,
+     "h": 30,
+     "txt": "Fabricants",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 172,
+     "h": 30,
+     "txt": "Importateurs et distributeurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 117,
+     "h": 30,
+     "txt": "Conformité produit",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 53,
+     "h": 30,
+     "txt": "Secteurs",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "Union européenne",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 150,
+     "h": 30,
+     "txt": "PPWR, article par article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Travaux de recherche",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Journal des changements",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 125,
+     "h": 30,
+     "txt": "Plan d'action MARIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "À propos",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 127,
+     "h": 30,
+     "txt": "Cas client Decathlon",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 50,
+     "h": 30,
+     "txt": "Sécurité",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 78,
+     "h": 30,
+     "txt": "Recrutement",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Demander un accès",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "Réserver 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 111,
+     "h": 28,
+     "txt": "Conditions générales",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 139,
+     "h": 28,
+     "txt": "Politique de confidentialité",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "Conformité produit mondiale en 2026 : pourquoi nous avons ga"
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 404,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "Conformité produit mondiale en 2026 : pourquoi nous avons ga"
+   },
+   "nbH1": 1
+  }
+ },
+ "29-article-deel-en": {
+  "desktop": {
+   "corps": 1,
+   "app": 0,
+   "cadre": 3,
+   "listeCorps": [
+    {
+     "t": "SPAN",
+     "c": "etiquette",
+     "px": "12px",
+     "txt": "Company"
+    }
+   ],
+   "cibles": 0,
+   "ciblesCadre": 49,
+   "listeCibles": [
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 63,
+     "h": 24,
+     "txt": "Product",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 86,
+     "h": 24,
+     "txt": "Regulations",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PPWR News",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "REACH",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "GPSR",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "ESPR / Passport News",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "EN 71",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Green Claims",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Batteries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "PPE",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "AI Act",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "Proposition 65",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "PFAS News",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 34,
+     "txt": "TSCA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "ASTM F963",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "TB 117",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "Bill 96 (Quebec)",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "CPSIA",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 194,
+     "h": 32,
+     "txt": "FTC Green Guides",
+     "cadre": true
+    },
+    {
+     "t": "BUTTON",
+     "c": "nav-declencheur",
+     "w": 78,
+     "h": 24,
+     "txt": "Resources",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "nav-declencheur",
+     "w": 61,
+     "h": 24,
+     "txt": "Company",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 35,
+     "h": 21,
+     "txt": "FR",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "lien-secondaire",
+     "w": 38,
+     "h": 24,
+     "txt": "Log in",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 30,
+     "txt": "Regulatory Change",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 56,
+     "h": 30,
+     "txt": "Research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 106,
+     "h": 30,
+     "txt": "Compliance Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 149,
+     "h": 30,
+     "txt": "Compliance as a service",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 88,
+     "h": 30,
+     "txt": "Manufacturers",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 158,
+     "h": 30,
+     "txt": "Importers and distributors",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 81,
+     "h": 30,
+     "txt": "Marketplaces",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 123,
+     "h": 30,
+     "txt": "Product compliance",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 59,
+     "h": 30,
+     "txt": "Industries",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 99,
+     "h": 30,
+     "txt": "European Union",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 144,
+     "h": 30,
+     "txt": "PPWR, article by article",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 65,
+     "h": 30,
+     "txt": "Legal Data",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 28,
+     "h": 30,
+     "txt": "Blog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 80,
+     "h": 30,
+     "txt": "Our research",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 30,
+     "h": 30,
+     "txt": "Skills",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 68,
+     "h": 30,
+     "txt": "Changelog",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 114,
+     "h": 30,
+     "txt": "MARIA action plan",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 37,
+     "h": 30,
+     "txt": "About",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 131,
+     "h": 30,
+     "txt": "Decathlon case study",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 49,
+     "h": 30,
+     "txt": "Security",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 48,
+     "h": 30,
+     "txt": "Careers",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 95,
+     "h": 30,
+     "txt": "Request access",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 118,
+     "h": 16,
+     "txt": "contact@cleolabs.co",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 98,
+     "h": 16,
+     "txt": "Book 30 minutes",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 44,
+     "h": 28,
+     "txt": "Terms",
+     "cadre": true
+    },
+    {
+     "t": "A",
+     "c": "",
+     "w": 72,
+     "h": 28,
+     "txt": "Privacy policy",
+     "cadre": true
+    }
+   ],
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "40px",
+    "cls": "t-titre-page",
+    "txt": "Global product compliance in 2026: the wave is here, and we "
+   },
+   "nbH1": 1
+  },
+  "tel": {
+   "corps": 0,
+   "app": 0,
+   "cadre": 0,
+   "listeCorps": [],
+   "cibles": 0,
+   "ciblesCadre": 0,
+   "listeCibles": [],
+   "debordement": false,
+   "largeurDoc": 395,
+   "h1": {
+    "px": "30px",
+    "cls": "t-titre-page",
+    "txt": "Global product compliance in 2026: the wave is here, and we "
+   },
+   "nbH1": 1
+  }
+ }
+}

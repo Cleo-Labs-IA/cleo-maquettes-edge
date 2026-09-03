@@ -1,0 +1,2040 @@
+{
+  "02-entreprise": {
+    "nom": "02-entreprise",
+    "desktop": {
+      "petits": [
+        {
+          "px": "12px",
+          "t": "Recherche",
+          "c": "div.conteneur > div > a.ligne-liste > span.pilule"
+        },
+        {
+          "px": "12px",
+          "t": "Conditions générales",
+          "c": "footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Politique de confidentialité",
+          "c": "footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Cleo Corp SAS, SIREN 984567883",
+          "c": "footer.pied > div.conteneur > div.pied-bas > span"
+        }
+      ],
+      "petitesCibles": [
+        {
+          "w": 59,
+          "h": 24,
+          "t": "Produit",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 53,
+          "h": 24,
+          "t": "Textes",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "PPWR Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "REACH",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "RSGP",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "ESPR / Passeport Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "EN 71",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "Allégations vertes",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Batteries",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "EPI",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "AI Act",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "Proposition 65",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "PFAS Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "TSCA",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "ASTM F963",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "TB 117",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Loi 96 (Québec)",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "CPSIA",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "FTC Green Guides",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 84,
+          "h": 24,
+          "t": "Ressources",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 63,
+          "h": 24,
+          "t": "Entreprise",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > a.nav-declencheur"
+        },
+        {
+          "w": 66,
+          "h": 24,
+          "t": "Connexion",
+          "c": "nav.nav > div.conteneur > div.nav-fin > a.lien-secondaire"
+        },
+        {
+          "w": 118,
+          "h": 30,
+          "t": "Regulatory Change",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 56,
+          "h": 30,
+          "t": "Research",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 106,
+          "h": 30,
+          "t": "Compliance Data",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 149,
+          "h": 30,
+          "t": "Compliance as a service",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 63,
+          "h": 30,
+          "t": "Fabricants",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 172,
+          "h": 30,
+          "t": "Importateurs et distributeurs",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 81,
+          "h": 30,
+          "t": "Marketplaces",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 117,
+          "h": 30,
+          "t": "Conformité produit",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 53,
+          "h": 30,
+          "t": "Secteurs",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 114,
+          "h": 30,
+          "t": "Union européenne",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 150,
+          "h": 30,
+          "t": "PPWR, article par article",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 65,
+          "h": 30,
+          "t": "Legal Data",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 28,
+          "h": 30,
+          "t": "Blog",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 131,
+          "h": 30,
+          "t": "Travaux de recherche",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 30,
+          "h": 30,
+          "t": "Skills",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 158,
+          "h": 30,
+          "t": "Journal des changements",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 125,
+          "h": 30,
+          "t": "Plan d'action MARIA",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 56,
+          "h": 30,
+          "t": "À propos",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 127,
+          "h": 30,
+          "t": "Cas client Decathlon",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 50,
+          "h": 30,
+          "t": "Sécurité",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 78,
+          "h": 30,
+          "t": "Recrutement",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 123,
+          "h": 30,
+          "t": "Demander un accès",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 118,
+          "h": 16,
+          "t": "contact@cleolabs.co",
+          "c": "div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "w": 118,
+          "h": 16,
+          "t": "Réserver 30 minutes",
+          "c": "div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "w": 111,
+          "h": 28,
+          "t": "Conditions générales",
+          "c": "footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "w": 139,
+          "h": 28,
+          "t": "Politique de confidentialité",
+          "c": "footer.pied > div.conteneur > div.pied-bas > a"
+        }
+      ],
+      "parasLarges": [],
+      "largeurMax": 600,
+      "deborde": [
+        {
+          "sw": 370,
+          "cw": 330,
+          "c": "section.seg.section > div.conteneur > div.g3.seg-equipe.vu > div.carte-lavande.seg-equipe-mot",
+          "t": "Et l'équipe qui encode, relit et met"
+        }
+      ],
+      "debordementH": false,
+      "hauteur": 6577
+    },
+    "citation": null,
+    "equipe": {
+      "colonnes": "332px 332px 332px",
+      "cartes": [
+        {
+          "classe": "seg-portrait",
+          "carte": {
+            "x": 200,
+            "y": 1052,
+            "w": 332,
+            "h": 443
+          },
+          "nom": {
+            "texte": "Anaëlle Guez",
+            "y": 1380,
+            "h": 25
+          },
+          "role": {
+            "texte": "CEO, cofondatrice LinkedIn",
+            "y": 1405,
+            "h": 22,
+            "lignes": 1
+          },
+          "marqueurs": {
+            "y": 1439,
+            "h": 36
+          },
+          "bas": {
+            "y": 1380,
+            "h": 95
+          }
+        },
+        {
+          "classe": "seg-portrait",
+          "carte": {
+            "x": 554,
+            "y": 1052,
+            "w": 332,
+            "h": 443
+          },
+          "nom": {
+            "texte": "Naomie Halioua",
+            "y": 1380,
+            "h": 25
+          },
+          "role": {
+            "texte": "CDO, cofondatrice LinkedIn",
+            "y": 1405,
+            "h": 22,
+            "lignes": 1
+          },
+          "marqueurs": {
+            "y": 1439,
+            "h": 36
+          },
+          "bas": {
+            "y": 1380,
+            "h": 95
+          }
+        },
+        {
+          "classe": "seg-portrait",
+          "carte": {
+            "x": 908,
+            "y": 1052,
+            "w": 332,
+            "h": 443
+          },
+          "nom": {
+            "texte": "Alexandre Bloch",
+            "y": 1428,
+            "h": 25
+          },
+          "role": {
+            "texte": "CTO",
+            "y": 1453,
+            "h": 22,
+            "lignes": 1
+          },
+          "marqueurs": null,
+          "bas": {
+            "y": 1428,
+            "h": 47
+          }
+        },
+        {
+          "classe": "seg-portrait",
+          "carte": {
+            "x": 200,
+            "y": 1517,
+            "w": 332,
+            "h": 443
+          },
+          "nom": {
+            "texte": "Darcial Mondjo",
+            "y": 1893,
+            "h": 25
+          },
+          "role": {
+            "texte": "Global Head of Product & Sanitary Compliance",
+            "y": 1918,
+            "h": 22,
+            "lignes": 1
+          },
+          "marqueurs": null,
+          "bas": {
+            "y": 1893,
+            "h": 47
+          }
+        },
+        {
+          "classe": "seg-portrait",
+          "carte": {
+            "x": 554,
+            "y": 1517,
+            "w": 332,
+            "h": 443
+          },
+          "nom": {
+            "texte": "Thezi Mabuza",
+            "y": 1871,
+            "h": 25
+          },
+          "role": {
+            "texte": "Stalwart in Consumer Protection & Product Safety",
+            "y": 1896,
+            "h": 43,
+            "lignes": 2
+          },
+          "marqueurs": null,
+          "bas": {
+            "y": 1871,
+            "h": 69
+          }
+        },
+        {
+          "classe": "carte-lavande seg-equipe-mot",
+          "carte": {
+            "x": 908,
+            "y": 1517,
+            "w": 332,
+            "h": 443
+          },
+          "nom": {
+            "texte": "Et l'équipe qui encode, reli",
+            "y": 1604,
+            "h": 92
+          },
+          "role": null,
+          "marqueurs": null,
+          "bas": null
+        }
+      ]
+    },
+    "mobile": {
+      "petits": [],
+      "petitesCibles": [],
+      "parasLarges": [],
+      "largeurMax": 334,
+      "deborde": [
+        {
+          "sw": 372,
+          "cw": 332,
+          "c": "section.seg.section > div.conteneur > div.g3.seg-equipe.vu > div.carte-lavande.seg-equipe-mot",
+          "t": "Et l'équipe qui encode, relit et met"
+        }
+      ],
+      "debordementH": false,
+      "hauteur": 10795
+    }
+  },
+  "04-secteur": {
+    "nom": "04-secteur",
+    "desktop": {
+      "petits": [
+        {
+          "px": "12px",
+          "t": "Regulatory Change",
+          "c": "div.conteneur > div.alterne > div.texte.vu > span.etiquette"
+        },
+        {
+          "px": "12px",
+          "t": "Research",
+          "c": "div.conteneur > div.alterne.inverse > div.texte.vu > span.etiquette"
+        },
+        {
+          "px": "12px",
+          "t": "Compliance Data",
+          "c": "div.conteneur > div.alterne > div.texte.vu > span.etiquette"
+        },
+        {
+          "px": "12px",
+          "t": "Substances",
+          "c": "div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "Étiquetage",
+          "c": "div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "2023/988",
+          "c": "div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "Passeport",
+          "c": "div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "Conditions générales",
+          "c": "footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Politique de confidentialité",
+          "c": "footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Cleo Corp SAS, SIREN 984567883",
+          "c": "footer.pied > div.conteneur > div.pied-bas > span"
+        }
+      ],
+      "petitesCibles": [
+        {
+          "w": 59,
+          "h": 24,
+          "t": "Produit",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 53,
+          "h": 24,
+          "t": "Textes",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "PPWR Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "REACH",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "RSGP",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "ESPR / Passeport Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "EN 71",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "Allégations vertes",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Batteries",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "EPI",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "AI Act",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "Proposition 65",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "PFAS Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "TSCA",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "ASTM F963",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "TB 117",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Loi 96 (Québec)",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "CPSIA",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "FTC Green Guides",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 84,
+          "h": 24,
+          "t": "Ressources",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 63,
+          "h": 24,
+          "t": "Entreprise",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > a.nav-declencheur"
+        },
+        {
+          "w": 66,
+          "h": 24,
+          "t": "Connexion",
+          "c": "nav.nav > div.conteneur > div.nav-fin > a.lien-secondaire"
+        },
+        {
+          "w": 118,
+          "h": 30,
+          "t": "Regulatory Change",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 56,
+          "h": 30,
+          "t": "Research",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 106,
+          "h": 30,
+          "t": "Compliance Data",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 149,
+          "h": 30,
+          "t": "Compliance as a service",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 63,
+          "h": 30,
+          "t": "Fabricants",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 172,
+          "h": 30,
+          "t": "Importateurs et distributeurs",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 81,
+          "h": 30,
+          "t": "Marketplaces",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 117,
+          "h": 30,
+          "t": "Conformité produit",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 53,
+          "h": 30,
+          "t": "Secteurs",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 114,
+          "h": 30,
+          "t": "Union européenne",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 150,
+          "h": 30,
+          "t": "PPWR, article par article",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 65,
+          "h": 30,
+          "t": "Legal Data",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 28,
+          "h": 30,
+          "t": "Blog",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 131,
+          "h": 30,
+          "t": "Travaux de recherche",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 30,
+          "h": 30,
+          "t": "Skills",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 158,
+          "h": 30,
+          "t": "Journal des changements",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 125,
+          "h": 30,
+          "t": "Plan d'action MARIA",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 56,
+          "h": 30,
+          "t": "À propos",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 127,
+          "h": 30,
+          "t": "Cas client Decathlon",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 50,
+          "h": 30,
+          "t": "Sécurité",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 78,
+          "h": 30,
+          "t": "Recrutement",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 123,
+          "h": 30,
+          "t": "Demander un accès",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 118,
+          "h": 16,
+          "t": "contact@cleolabs.co",
+          "c": "div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "w": 118,
+          "h": 16,
+          "t": "Réserver 30 minutes",
+          "c": "div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "w": 111,
+          "h": 28,
+          "t": "Conditions générales",
+          "c": "footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "w": 139,
+          "h": 28,
+          "t": "Politique de confidentialité",
+          "c": "footer.pied > div.conteneur > div.pied-bas > a"
+        }
+      ],
+      "parasLarges": [],
+      "largeurMax": 620,
+      "deborde": [],
+      "debordementH": false,
+      "hauteur": 6564
+    },
+    "citation": null,
+    "equipe": null,
+    "mobile": {
+      "petits": [],
+      "petitesCibles": [],
+      "parasLarges": [],
+      "largeurMax": 334,
+      "deborde": [],
+      "debordementH": false,
+      "hauteur": 10761
+    }
+  },
+  "05-marche": {
+    "nom": "05-marche",
+    "desktop": {
+      "petits": [
+        {
+          "px": "12px",
+          "t": "Regulatory Change",
+          "c": "div.conteneur > div.alterne > div.texte.vu > span.etiquette"
+        },
+        {
+          "px": "12px",
+          "t": "Research",
+          "c": "div.conteneur > div.alterne.inverse > div.texte.vu > span.etiquette"
+        },
+        {
+          "px": "12px",
+          "t": "Compliance Data",
+          "c": "div.conteneur > div.alterne > div.texte.vu > span.etiquette"
+        },
+        {
+          "px": "12px",
+          "t": "1907/2006",
+          "c": "div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "2023/988",
+          "c": "div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "2025/40",
+          "c": "div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "2023/1542",
+          "c": "div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "Conditions générales",
+          "c": "footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Politique de confidentialité",
+          "c": "footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Cleo Corp SAS, SIREN 984567883",
+          "c": "footer.pied > div.conteneur > div.pied-bas > span"
+        }
+      ],
+      "petitesCibles": [
+        {
+          "w": 59,
+          "h": 24,
+          "t": "Produit",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 53,
+          "h": 24,
+          "t": "Textes",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "PPWR Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "REACH",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "RSGP",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "ESPR / Passeport Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "EN 71",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "Allégations vertes",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Batteries",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "EPI",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "AI Act",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "Proposition 65",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "PFAS Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "TSCA",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "ASTM F963",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "TB 117",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Loi 96 (Québec)",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "CPSIA",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "FTC Green Guides",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 84,
+          "h": 24,
+          "t": "Ressources",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 63,
+          "h": 24,
+          "t": "Entreprise",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > a.nav-declencheur"
+        },
+        {
+          "w": 66,
+          "h": 24,
+          "t": "Connexion",
+          "c": "nav.nav > div.conteneur > div.nav-fin > a.lien-secondaire"
+        },
+        {
+          "w": 118,
+          "h": 30,
+          "t": "Regulatory Change",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 56,
+          "h": 30,
+          "t": "Research",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 106,
+          "h": 30,
+          "t": "Compliance Data",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 149,
+          "h": 30,
+          "t": "Compliance as a service",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 63,
+          "h": 30,
+          "t": "Fabricants",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 172,
+          "h": 30,
+          "t": "Importateurs et distributeurs",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 81,
+          "h": 30,
+          "t": "Marketplaces",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 117,
+          "h": 30,
+          "t": "Conformité produit",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 53,
+          "h": 30,
+          "t": "Secteurs",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 114,
+          "h": 30,
+          "t": "Union européenne",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 150,
+          "h": 30,
+          "t": "PPWR, article par article",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 65,
+          "h": 30,
+          "t": "Legal Data",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 28,
+          "h": 30,
+          "t": "Blog",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 131,
+          "h": 30,
+          "t": "Travaux de recherche",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 30,
+          "h": 30,
+          "t": "Skills",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 158,
+          "h": 30,
+          "t": "Journal des changements",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 125,
+          "h": 30,
+          "t": "Plan d'action MARIA",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 56,
+          "h": 30,
+          "t": "À propos",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 127,
+          "h": 30,
+          "t": "Cas client Decathlon",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 50,
+          "h": 30,
+          "t": "Sécurité",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 78,
+          "h": 30,
+          "t": "Recrutement",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 123,
+          "h": 30,
+          "t": "Demander un accès",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 118,
+          "h": 16,
+          "t": "contact@cleolabs.co",
+          "c": "div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "w": 118,
+          "h": 16,
+          "t": "Réserver 30 minutes",
+          "c": "div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "w": 111,
+          "h": 28,
+          "t": "Conditions générales",
+          "c": "footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "w": 139,
+          "h": 28,
+          "t": "Politique de confidentialité",
+          "c": "footer.pied > div.conteneur > div.pied-bas > a"
+        }
+      ],
+      "parasLarges": [],
+      "largeurMax": 620,
+      "deborde": [],
+      "debordementH": false,
+      "hauteur": 6391
+    },
+    "citation": null,
+    "equipe": null,
+    "mobile": {
+      "petits": [],
+      "petitesCibles": [],
+      "parasLarges": [],
+      "largeurMax": 334,
+      "deborde": [],
+      "debordementH": false,
+      "hauteur": 10212
+    }
+  },
+  "06-cas-client": {
+    "nom": "06-cas-client",
+    "desktop": {
+      "petits": [
+        {
+          "px": "12px",
+          "t": "Familles de produits",
+          "c": "div.cas-corps > aside.fiche-laterale > div.bloc > div.cle"
+        },
+        {
+          "px": "12px",
+          "t": "Taille",
+          "c": "div.cas-corps > aside.fiche-laterale > div.bloc > div.cle"
+        },
+        {
+          "px": "12px",
+          "t": "Features utilisées",
+          "c": "div.cas-corps > aside.fiche-laterale > div.bloc > div.cle"
+        },
+        {
+          "px": "12px",
+          "t": "Marchés couverts",
+          "c": "div.cas-corps > aside.fiche-laterale > div.bloc > div.cle"
+        },
+        {
+          "px": "12px",
+          "t": "À propos",
+          "c": "div.cas-corps > aside.fiche-laterale > div.bloc > div.cle"
+        },
+        {
+          "px": "12px",
+          "t": "Conditions générales",
+          "c": "footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Politique de confidentialité",
+          "c": "footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Cleo Corp SAS, SIREN 984567883",
+          "c": "footer.pied > div.conteneur > div.pied-bas > span"
+        }
+      ],
+      "petitesCibles": [
+        {
+          "w": 59,
+          "h": 24,
+          "t": "Produit",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 53,
+          "h": 24,
+          "t": "Textes",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "PPWR Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "REACH",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "RSGP",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "ESPR / Passeport Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "EN 71",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "Allégations vertes",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Batteries",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "EPI",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "AI Act",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "Proposition 65",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "PFAS Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "TSCA",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "ASTM F963",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "TB 117",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Loi 96 (Québec)",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "CPSIA",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "FTC Green Guides",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 84,
+          "h": 24,
+          "t": "Ressources",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 63,
+          "h": 24,
+          "t": "Entreprise",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > a.nav-declencheur"
+        },
+        {
+          "w": 66,
+          "h": 24,
+          "t": "Connexion",
+          "c": "nav.nav > div.conteneur > div.nav-fin > a.lien-secondaire"
+        },
+        {
+          "w": 118,
+          "h": 30,
+          "t": "Regulatory Change",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 56,
+          "h": 30,
+          "t": "Research",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 106,
+          "h": 30,
+          "t": "Compliance Data",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 149,
+          "h": 30,
+          "t": "Compliance as a service",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 63,
+          "h": 30,
+          "t": "Fabricants",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 172,
+          "h": 30,
+          "t": "Importateurs et distributeurs",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 81,
+          "h": 30,
+          "t": "Marketplaces",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 117,
+          "h": 30,
+          "t": "Conformité produit",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 53,
+          "h": 30,
+          "t": "Secteurs",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 114,
+          "h": 30,
+          "t": "Union européenne",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 150,
+          "h": 30,
+          "t": "PPWR, article par article",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 65,
+          "h": 30,
+          "t": "Legal Data",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 28,
+          "h": 30,
+          "t": "Blog",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 131,
+          "h": 30,
+          "t": "Travaux de recherche",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 30,
+          "h": 30,
+          "t": "Skills",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 158,
+          "h": 30,
+          "t": "Journal des changements",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 125,
+          "h": 30,
+          "t": "Plan d'action MARIA",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 56,
+          "h": 30,
+          "t": "À propos",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 127,
+          "h": 30,
+          "t": "Cas client Decathlon",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 50,
+          "h": 30,
+          "t": "Sécurité",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 78,
+          "h": 30,
+          "t": "Recrutement",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 123,
+          "h": 30,
+          "t": "Demander un accès",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 118,
+          "h": 16,
+          "t": "contact@cleolabs.co",
+          "c": "div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "w": 118,
+          "h": 16,
+          "t": "Réserver 30 minutes",
+          "c": "div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "w": 111,
+          "h": 28,
+          "t": "Conditions générales",
+          "c": "footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "w": 139,
+          "h": 28,
+          "t": "Politique de confidentialité",
+          "c": "footer.pied > div.conteneur > div.pied-bas > a"
+        }
+      ],
+      "parasLarges": [],
+      "largeurMax": 640,
+      "deborde": [],
+      "debordementH": false,
+      "hauteur": 4150
+    },
+    "citation": {
+      "bande": {
+        "w": 1440,
+        "h": 653
+      },
+      "conteneur": {
+        "x": 160,
+        "r": 1280,
+        "w": 1120
+      },
+      "grille": {
+        "x": 200,
+        "r": 1020,
+        "w": 820,
+        "h": 525
+      },
+      "citation": {
+        "x": 332,
+        "r": 952,
+        "w": 620
+      },
+      "portrait": {
+        "x": 200,
+        "w": 100,
+        "h": 100
+      },
+      "videADroite": 260,
+      "enfants": [
+        {
+          "c": "IMG",
+          "x": 200,
+          "r": 300,
+          "w": 100,
+          "h": 100
+        },
+        {
+          "c": "DIV",
+          "x": 332,
+          "r": 1020,
+          "w": 688,
+          "h": 525
+        }
+      ],
+      "paraPx": "15px",
+      "colonnes": "100px 688px"
+    },
+    "equipe": null,
+    "mobile": {
+      "petits": [],
+      "petitesCibles": [],
+      "parasLarges": [],
+      "largeurMax": 334,
+      "deborde": [],
+      "debordementH": false,
+      "hauteur": 7564
+    }
+  },
+  "09-texte": {
+    "nom": "09-texte",
+    "desktop": {
+      "petits": [
+        {
+          "px": "12px",
+          "t": "Regulatory Change",
+          "c": "div.conteneur > div.alterne > div.texte.vu > span.etiquette"
+        },
+        {
+          "px": "12px",
+          "t": "Research",
+          "c": "div.conteneur > div.alterne.inverse > div.texte.vu > span.etiquette"
+        },
+        {
+          "px": "12px",
+          "t": "Compliance Data",
+          "c": "div.conteneur > div.alterne > div.texte.vu > span.etiquette"
+        },
+        {
+          "px": "12px",
+          "t": "Substances",
+          "c": "div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "Signalétique",
+          "c": "div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "Recyclabilité",
+          "c": "div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "Recyclé",
+          "c": "div.carte > div.sceau > div.dedans > div.sous"
+        },
+        {
+          "px": "12px",
+          "t": "Conditions générales",
+          "c": "footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Politique de confidentialité",
+          "c": "footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Cleo Corp SAS, SIREN 984567883",
+          "c": "footer.pied > div.conteneur > div.pied-bas > span"
+        }
+      ],
+      "petitesCibles": [
+        {
+          "w": 59,
+          "h": 24,
+          "t": "Produit",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 53,
+          "h": 24,
+          "t": "Textes",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "PPWR Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "REACH",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "RSGP",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "ESPR / Passeport Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "EN 71",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "Allégations vertes",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Batteries",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "EPI",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "AI Act",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "Proposition 65",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "PFAS Actualité",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 34,
+          "t": "TSCA",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "ASTM F963",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "TB 117",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "Loi 96 (Québec)",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "CPSIA",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 194,
+          "h": 32,
+          "t": "FTC Green Guides",
+          "c": "div.mega-colonnes > div > div.mega-liste > a"
+        },
+        {
+          "w": 84,
+          "h": 24,
+          "t": "Ressources",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > button.nav-declencheur"
+        },
+        {
+          "w": 63,
+          "h": 24,
+          "t": "Entreprise",
+          "c": "div.conteneur > div.nav-liens > div.nav-item > a.nav-declencheur"
+        },
+        {
+          "w": 66,
+          "h": 24,
+          "t": "Connexion",
+          "c": "nav.nav > div.conteneur > div.nav-fin > a.lien-secondaire"
+        },
+        {
+          "w": 118,
+          "h": 30,
+          "t": "Regulatory Change",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 56,
+          "h": 30,
+          "t": "Research",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 106,
+          "h": 30,
+          "t": "Compliance Data",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 149,
+          "h": 30,
+          "t": "Compliance as a service",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 63,
+          "h": 30,
+          "t": "Fabricants",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 172,
+          "h": 30,
+          "t": "Importateurs et distributeurs",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 81,
+          "h": 30,
+          "t": "Marketplaces",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 117,
+          "h": 30,
+          "t": "Conformité produit",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 53,
+          "h": 30,
+          "t": "Secteurs",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 114,
+          "h": 30,
+          "t": "Union européenne",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 150,
+          "h": 30,
+          "t": "PPWR, article par article",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 65,
+          "h": 30,
+          "t": "Legal Data",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 28,
+          "h": 30,
+          "t": "Blog",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 131,
+          "h": 30,
+          "t": "Travaux de recherche",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 30,
+          "h": 30,
+          "t": "Skills",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 158,
+          "h": 30,
+          "t": "Journal des changements",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 125,
+          "h": 30,
+          "t": "Plan d'action MARIA",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 56,
+          "h": 30,
+          "t": "À propos",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 127,
+          "h": 30,
+          "t": "Cas client Decathlon",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 50,
+          "h": 30,
+          "t": "Sécurité",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 78,
+          "h": 30,
+          "t": "Recrutement",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 123,
+          "h": 30,
+          "t": "Demander un accès",
+          "c": "div > ul > li > a"
+        },
+        {
+          "w": 118,
+          "h": 16,
+          "t": "contact@cleolabs.co",
+          "c": "div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "w": 118,
+          "h": 16,
+          "t": "Réserver 30 minutes",
+          "c": "div.pied-coordonnees > div > div.t-micro > a"
+        },
+        {
+          "w": 111,
+          "h": 28,
+          "t": "Conditions générales",
+          "c": "footer.pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "w": 139,
+          "h": 28,
+          "t": "Politique de confidentialité",
+          "c": "footer.pied > div.conteneur > div.pied-bas > a"
+        }
+      ],
+      "parasLarges": [],
+      "largeurMax": 620,
+      "deborde": [],
+      "debordementH": false,
+      "hauteur": 5987
+    },
+    "citation": null,
+    "equipe": null,
+    "mobile": {
+      "petits": [],
+      "petitesCibles": [],
+      "parasLarges": [],
+      "largeurMax": 334,
+      "deborde": [],
+      "debordementH": false,
+      "hauteur": 10219
+    }
+  },
+  "20-campagne": {
+    "nom": "20-campagne",
+    "desktop": {
+      "petits": [
+        {
+          "px": "12px",
+          "t": "Conditions générales",
+          "c": "footer.seg.pied.seg-p20-pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Politique de confidentialité",
+          "c": "footer.seg.pied.seg-p20-pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "px": "12px",
+          "t": "Cleo Corp SAS, SIREN 984567883",
+          "c": "footer.seg.pied.seg-p20-pied > div.conteneur > div.pied-bas > span"
+        }
+      ],
+      "petitesCibles": [
+        {
+          "w": 111,
+          "h": 28,
+          "t": "Conditions générales",
+          "c": "footer.seg.pied.seg-p20-pied > div.conteneur > div.pied-bas > a"
+        },
+        {
+          "w": 139,
+          "h": 28,
+          "t": "Politique de confidentialité",
+          "c": "footer.seg.pied.seg-p20-pied > div.conteneur > div.pied-bas > a"
+        }
+      ],
+      "parasLarges": [],
+      "largeurMax": 460,
+      "deborde": [],
+      "debordementH": false,
+      "hauteur": 1538
+    },
+    "citation": null,
+    "equipe": null,
+    "mobile": {
+      "petits": [],
+      "petitesCibles": [],
+      "parasLarges": [],
+      "largeurMax": 334,
+      "deborde": [],
+      "debordementH": false,
+      "hauteur": 2489
+    }
+  }
+}

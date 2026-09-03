@@ -1,0 +1,3632 @@
+{
+ "01-accueil": {
+  "desktop": {
+   "hauteur": 8149,
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "68px",
+    "graisse": "700",
+    "n": 1
+   },
+   "paraMax": 600,
+   "temoin": {
+    "bloc": {
+     "x": 330,
+     "y": 1402,
+     "w": 780,
+     "h": 506.1
+    },
+    "citation": {
+     "x": 330,
+     "y": 1580,
+     "w": 780,
+     "h": 217
+    },
+    "align": "center",
+    "taille": "20px",
+    "interligne": "31px",
+    "maxw": "none",
+    "lignes": 7,
+    "signes": 595
+   },
+   "logos": [
+    {
+     "alt": "Decathlon",
+     "w": 176.2,
+     "h": 35,
+     "x": 285,
+     "y": 1245,
+     "aire": 6167,
+     "opacite": "0.52",
+     "cellule": {
+      "x": 263,
+      "y": 1210,
+      "w": 220.2,
+      "h": 104
+     }
+    },
+    {
+     "alt": "Balzac Paris",
+     "w": 200,
+     "h": 30,
+     "x": 505,
+     "y": 1247,
+     "aire": 6000,
+     "opacite": "0.52",
+     "cellule": {
+      "x": 483,
+      "y": 1210,
+      "w": 244,
+      "h": 104
+     }
+    },
+    {
+     "alt": "Mercedes-Benz",
+     "w": 59.6,
+     "h": 40,
+     "x": 757,
+     "y": 1242,
+     "aire": 2384,
+     "opacite": "0.52",
+     "cellule": {
+      "x": 727,
+      "y": 1210,
+      "w": 120,
+      "h": 104
+     }
+    },
+    {
+     "alt": "L'Occitane",
+     "w": 166.4,
+     "h": 32,
+     "x": 869,
+     "y": 1246,
+     "aire": 5325,
+     "opacite": "0.52",
+     "cellule": {
+      "x": 847,
+      "y": 1210,
+      "w": 210.4,
+      "h": 104
+     }
+    },
+    {
+     "alt": "NVIDIA",
+     "w": 61.5,
+     "h": 48,
+     "x": 1087,
+     "y": 1238,
+     "aire": 2952,
+     "opacite": "0.52",
+     "cellule": {
+      "x": 1057,
+      "y": 1210,
+      "w": 120,
+      "h": 104
+     }
+    }
+   ],
+   "tetes": [
+    {
+     "texte": "01Ce qui est publié",
+     "y": 6495,
+     "x": 200,
+     "h": 22.4
+    },
+    {
+     "texte": "02L'encodage",
+     "y": 6471,
+     "x": 591,
+     "h": 22.4
+    },
+    {
+     "texte": "03La règle encodée",
+     "y": 6454,
+     "x": 955,
+     "h": 22.4
+    }
+   ],
+   "etages": [
+    {
+     "y": 6495,
+     "h": 303.7,
+     "w": 330.9
+    },
+    {
+     "y": 6471,
+     "h": 350.4,
+     "w": 304.5
+    },
+    {
+     "y": 6454,
+     "h": 384,
+     "w": 284.6
+    }
+   ],
+   "pipe": {
+    "align": "center",
+    "rect": {
+     "x": 200,
+     "y": 6454,
+     "w": 1040,
+     "h": 384
+    }
+   },
+   "agents": [
+    {
+     "titre": "Regulatory Change",
+     "inverse": false,
+     "colonnes": "461.391px 530.594px",
+     "rangee": {
+      "x": 200,
+      "y": 2811,
+      "w": 1040,
+      "h": 658.4
+     },
+     "texte": {
+      "x": 200,
+      "y": 2917,
+      "w": 461.4,
+      "h": 447
+     },
+     "visuel": {
+      "x": 709,
+      "y": 2811,
+      "w": 530.6,
+      "h": 658.4
+     },
+     "image": {
+      "rect": {
+       "x": 709,
+       "y": 2811,
+       "w": 530.6,
+       "h": 658.4
+      },
+      "alt": "",
+      "aAlt": true
+     }
+    },
+    {
+     "titre": "Compliance Data",
+     "inverse": true,
+     "colonnes": "461.391px 530.594px",
+     "rangee": {
+      "x": 200,
+      "y": 3492,
+      "w": 1040,
+      "h": 572.5
+     },
+     "texte": {
+      "x": 709,
+      "y": 3562,
+      "w": 530.6,
+      "h": 432.2
+     },
+     "visuel": {
+      "x": 200,
+      "y": 3492,
+      "w": 461.4,
+      "h": 572.5
+     },
+     "image": {
+      "rect": {
+       "x": 200,
+       "y": 3492,
+       "w": 461.4,
+       "h": 572.5
+      },
+      "alt": "",
+      "aAlt": true
+     }
+    },
+    {
+     "titre": "Research",
+     "inverse": false,
+     "colonnes": "461.391px 530.594px",
+     "rangee": {
+      "x": 200,
+      "y": 4086,
+      "w": 1040,
+      "h": 658.4
+     },
+     "texte": {
+      "x": 200,
+      "y": 4199,
+      "w": 461.4,
+      "h": 432.2
+     },
+     "visuel": {
+      "x": 709,
+      "y": 4086,
+      "w": 530.6,
+      "h": 658.4
+     },
+     "image": {
+      "rect": {
+       "x": 709,
+       "y": 4086,
+       "w": 530.6,
+       "h": 658.4
+      },
+      "alt": "",
+      "aAlt": true
+     }
+    }
+   ],
+   "images": [
+    {
+     "src": "cleo-logo.png",
+     "alt": "Cleo",
+     "aAlt": true,
+     "w": 77.2,
+     "h": 22
+    },
+    {
+     "src": "jean.png",
+     "alt": "",
+     "aAlt": true,
+     "w": 44,
+     "h": 44
+    },
+    {
+     "src": "logo-decathlon.svg",
+     "alt": "Decathlon",
+     "aAlt": true,
+     "w": 176.2,
+     "h": 35
+    },
+    {
+     "src": "logo-balzac.svg",
+     "alt": "Balzac Paris",
+     "aAlt": true,
+     "w": 200,
+     "h": 30
+    },
+    {
+     "src": "logo-mercedes.svg",
+     "alt": "Mercedes-Benz",
+     "aAlt": true,
+     "w": 59.6,
+     "h": 40
+    },
+    {
+     "src": "logo-loccitane.svg",
+     "alt": "L'Occitane",
+     "aAlt": true,
+     "w": 166.4,
+     "h": 32
+    },
+    {
+     "src": "logo-nvidia.svg",
+     "alt": "NVIDIA",
+     "aAlt": true,
+     "w": 61.5,
+     "h": 48
+    },
+    {
+     "src": "philippine.webp",
+     "alt": "Philippine Tamic",
+     "aAlt": true,
+     "w": 112,
+     "h": 112
+    },
+    {
+     "src": "logo-decathlon.svg",
+     "alt": "Decathlon",
+     "aAlt": true,
+     "w": 110.7,
+     "h": 22
+    },
+    {
+     "src": "classeurs.webp",
+     "alt": "",
+     "aAlt": true,
+     "w": 530.6,
+     "h": 658.4
+    },
+    {
+     "src": "semelles.webp",
+     "alt": "",
+     "aAlt": true,
+     "w": 461.4,
+     "h": 572.5
+    },
+    {
+     "src": "cables.webp",
+     "alt": "",
+     "aAlt": true,
+     "w": 530.6,
+     "h": 658.4
+    },
+    {
+     "src": "darcial.webp",
+     "alt": "Darcial Mondjo",
+     "aAlt": true,
+     "w": 167.3,
+     "h": 223
+    },
+    {
+     "src": "thezi.webp",
+     "alt": "Thezi Mabuza",
+     "aAlt": true,
+     "w": 167.3,
+     "h": 223
+    },
+    {
+     "src": "anaelle.png",
+     "alt": "Anaëlle Guez, cofondatrice de Cleo Labs",
+     "aAlt": true,
+     "w": 180,
+     "h": 180
+    },
+    {
+     "src": "cleo-logo.png",
+     "alt": "",
+     "aAlt": true,
+     "w": 540.8,
+     "h": 154.1
+    },
+    {
+     "src": "cleo-logo.png",
+     "alt": "Cleo",
+     "aAlt": true,
+     "w": 84.2,
+     "h": 24
+    }
+   ],
+   "sous13": [
+    {
+     "t": "Vous ne savez pas par où commencer ? Parlez-en",
+     "px": 12,
+     "sel": "div.mega-pied",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Un texte qui ne figure pas ici ? Dites-nous le",
+     "px": 12,
+     "sel": "div.mega-pied",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Cleo · Jean droit enfant · DNM-4412",
+     "px": 12,
+     "sel": "span.fil-ariane",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "US",
+     "px": 12,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "UE",
+     "px": 12,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "pays suivis",
+     "px": 12,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "réglementations indexées",
+     "px": 12,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "autorités réglementaires",
+     "px": 12,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "01",
+     "px": 12,
+     "sel": "div.flux-rang",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "02",
+     "px": 12,
+     "sel": "div.flux-rang",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "03",
+     "px": 12,
+     "sel": "div.flux-rang",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "01",
+     "px": 12,
+     "sel": "span.pl-num",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "02",
+     "px": 12,
+     "sel": "span.pl-num",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "03",
+     "px": 12,
+     "sel": "span.pl-num",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Conditions générales",
+     "px": 12,
+     "sel": "a",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Politique de confidentialité",
+     "px": 12,
+     "sel": "a",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Cleo Corp SAS, SIREN 984567883",
+     "px": 12,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    }
+   ],
+   "sous14": [
+    {
+     "t": "Chaque parution rattachée à vos références",
+     "px": 13,
+     "sel": "i",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "La question posée, l'article en réponse",
+     "px": 13,
+     "sel": "i",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Le verdict par référence, appelable depuis vos",
+     "px": 13,
+     "sel": "i",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Nos experts rédigent, relisent et signent",
+     "px": 13,
+     "sel": "i",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Vous ne savez pas par où commencer ? Parlez-en",
+     "px": 12,
+     "sel": "div.mega-pied",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Actualité",
+     "px": 13,
+     "sel": "span.mega-badge",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Actualité",
+     "px": 13,
+     "sel": "span.mega-badge",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Actualité",
+     "px": 13,
+     "sel": "span.mega-badge",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Un texte qui ne figure pas ici ? Dites-nous le",
+     "px": 12,
+     "sel": "div.mega-pied",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "FR",
+     "px": 13,
+     "sel": "span.actif",
+     "dansApp": false,
+     "dansSelecteur": true
+    },
+    {
+     "t": "EN",
+     "px": 13,
+     "sel": "a",
+     "dansApp": false,
+     "dansSelecteur": true
+    },
+    {
+     "t": "Voir une démo",
+     "px": 13,
+     "sel": "a.btn.btn-marque.btn-sm",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Cleo · Jean droit enfant · DNM-4412",
+     "px": 12,
+     "sel": "span.fil-ariane",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Référence DNM-4412",
+     "px": 13,
+     "sel": "div.fiche-ref",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "18 / 25 couvertes",
+     "px": 13,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "US",
+     "px": 12,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "CPSIA, plomb",
+     "px": 13,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Couvert",
+     "px": 13,
+     "sel": "span.marqueur.m-couvert",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Proposition 65",
+     "px": 13,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Donnée manquante",
+     "px": 13,
+     "sel": "span.marqueur.m-manquant",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "UE",
+     "px": 12,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "REACH annexe XVII",
+     "px": 13,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Couvert",
+     "px": 13,
+     "sel": "span.marqueur.m-couvert",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Étiquetage textile 1007/2011",
+     "px": 13,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "À vérifier",
+     "px": 13,
+     "sel": "span.marqueur.m-attente",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "« La teneur en plomb ne dépasse pas 100 ppm en",
+     "px": 13,
+     "sel": "div.t-caption",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "CPSIA, section 101 (a)",
+     "px": 13,
+     "sel": "div.t-caption",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "champ",
+     "px": 13,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "matière accessible",
+     "px": 13,
+     "sel": "b",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "opérateur",
+     "px": 13,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "ne dépasse pas",
+     "px": 13,
+     "sel": "b",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "seuil",
+     "px": 13,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "100 ppm en poids",
+     "px": 13,
+     "sel": "b",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "article",
+     "px": 13,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "CPSIA, section 101 (a)",
+     "px": 13,
+     "sel": "b",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "en vigueur",
+     "px": 13,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "14 août 2011",
+     "px": 13,
+     "sel": "b",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Aux côtés de marques et de fabricants internat",
+     "px": 13,
+     "sel": "div.centre.t-label",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Product Compliance Operations Manager chez Dec",
+     "px": 13,
+     "sel": "div.t-caption",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Pensé pour le travail quotidien de la conformi",
+     "px": 13,
+     "sel": "div.surtitre",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Fonctions clés",
+     "px": 13,
+     "sel": "div.surtitre",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "pays suivis",
+     "px": 12,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "réglementations indexées",
+     "px": 12,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "autorités réglementaires",
+     "px": 12,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Compliance service",
+     "px": 13,
+     "sel": "div.surtitre",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "01",
+     "px": 12,
+     "sel": "div.flux-rang",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "02",
+     "px": 12,
+     "sel": "div.flux-rang",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "03",
+     "px": 12,
+     "sel": "div.flux-rang",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Global Head of Product & Sanitary Compliance",
+     "px": 13,
+     "sel": "div.t-caption",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "LinkedIn",
+     "px": 13,
+     "sel": "a.t-caption",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Stalwart in Consumer Protection & Product Safe",
+     "px": 13,
+     "sel": "div.t-caption",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "LinkedIn",
+     "px": 13,
+     "sel": "a.t-caption",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "L'équipe qui signe",
+     "px": 13,
+     "sel": "div.surtitre.sur-clair",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Notre méthode",
+     "px": 13,
+     "sel": "div.surtitre",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "01",
+     "px": 12,
+     "sel": "span.pl-num",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Ce qui est publié",
+     "px": 13,
+     "sel": "span.t-label",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Journal officiel de l'Union européenne",
+     "px": 13,
+     "sel": "div.pl-n.vu",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Autorité de surveillance du marché",
+     "px": 13,
+     "sel": "div.pl-n.vu",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Projet de texte en consultation",
+     "px": 13,
+     "sel": "div.pl-n.vu",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Annexe modifiée",
+     "px": 13,
+     "sel": "div.pl-n.vu",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Avis d'organisme notifié",
+     "px": 13,
+     "sel": "div.pl-n.vu",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Norme harmonisée",
+     "px": 13,
+     "sel": "div.pl-n.vu",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "02",
+     "px": 12,
+     "sel": "span.pl-num",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "L'encodage",
+     "px": 13,
+     "sel": "span.t-label",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "le texte à la référence qu'il touche",
+     "px": 13,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "l'article qui porte l'obligation",
+     "px": 13,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "la condition, l'opérateur, le seuil",
+     "px": 13,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "la parution et l'entrée en vigueur",
+     "px": 13,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "un expert tranche, puis signe",
+     "px": 13,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "03",
+     "px": 12,
+     "sel": "span.pl-num",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "La règle encodée",
+     "px": 13,
+     "sel": "span.t-label",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "champ",
+     "px": 13,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "matière accessible",
+     "px": 13,
+     "sel": "b",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "opérateur",
+     "px": 13,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "ne dépasse pas",
+     "px": 13,
+     "sel": "b",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "seuil",
+     "px": 13,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "100 ppm en poids",
+     "px": 13,
+     "sel": "b",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "article",
+     "px": 13,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "CPSIA, section 101 (a)",
+     "px": 13,
+     "sel": "b",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "en vigueur",
+     "px": 13,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "14 août 2011",
+     "px": 13,
+     "sel": "b",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Neuilly-sur-Seine, France",
+     "px": 13,
+     "sel": "div.t-micro",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "contact@cleolabs.co",
+     "px": 13,
+     "sel": "a",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Réserver 30 minutes",
+     "px": 13,
+     "sel": "a",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Conditions générales",
+     "px": 12,
+     "sel": "a",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Politique de confidentialité",
+     "px": 12,
+     "sel": "a",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Cleo Corp SAS, SIREN 984567883",
+     "px": 12,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    }
+   ],
+   "cibles": [
+    {
+     "t": "Produit",
+     "w": 59,
+     "h": 24,
+     "sel": "button.nav-declencheur"
+    },
+    {
+     "t": "Textes",
+     "w": 53,
+     "h": 24,
+     "sel": "button.nav-declencheur"
+    },
+    {
+     "t": "PPWR Actualité",
+     "w": 194,
+     "h": 34,
+     "sel": "a"
+    },
+    {
+     "t": "REACH",
+     "w": 194,
+     "h": 34,
+     "sel": "a"
+    },
+    {
+     "t": "RSGP",
+     "w": 194,
+     "h": 34,
+     "sel": "a"
+    },
+    {
+     "t": "ESPR / Passeport Actualité",
+     "w": 194,
+     "h": 34,
+     "sel": "a"
+    },
+    {
+     "t": "EN 71",
+     "w": 194,
+     "h": 34,
+     "sel": "a"
+    },
+    {
+     "t": "Allégations vertes",
+     "w": 194,
+     "h": 34,
+     "sel": "a"
+    },
+    {
+     "t": "Batteries",
+     "w": 194,
+     "h": 32,
+     "sel": "a"
+    },
+    {
+     "t": "EPI",
+     "w": 194,
+     "h": 32,
+     "sel": "a"
+    },
+    {
+     "t": "AI Act",
+     "w": 194,
+     "h": 32,
+     "sel": "a"
+    },
+    {
+     "t": "Proposition 65",
+     "w": 194,
+     "h": 34,
+     "sel": "a"
+    },
+    {
+     "t": "PFAS Actualité",
+     "w": 194,
+     "h": 34,
+     "sel": "a"
+    },
+    {
+     "t": "TSCA",
+     "w": 194,
+     "h": 34,
+     "sel": "a"
+    },
+    {
+     "t": "ASTM F963",
+     "w": 194,
+     "h": 32,
+     "sel": "a"
+    },
+    {
+     "t": "TB 117",
+     "w": 194,
+     "h": 32,
+     "sel": "a"
+    },
+    {
+     "t": "Loi 96 (Québec)",
+     "w": 194,
+     "h": 32,
+     "sel": "a"
+    },
+    {
+     "t": "CPSIA",
+     "w": 194,
+     "h": 32,
+     "sel": "a"
+    },
+    {
+     "t": "FTC Green Guides",
+     "w": 194,
+     "h": 32,
+     "sel": "a"
+    },
+    {
+     "t": "Ressources",
+     "w": 84,
+     "h": 24,
+     "sel": "button.nav-declencheur"
+    },
+    {
+     "t": "Entreprise",
+     "w": 63,
+     "h": 24,
+     "sel": "a.nav-declencheur"
+    },
+    {
+     "t": "EN",
+     "w": 37,
+     "h": 21,
+     "sel": "a"
+    },
+    {
+     "t": "Connexion",
+     "w": 66,
+     "h": 24,
+     "sel": "a.lien-secondaire"
+    },
+    {
+     "t": "",
+     "w": 294,
+     "h": 21,
+     "sel": "input"
+    },
+    {
+     "t": "Voir le cas client en entier",
+     "w": 205,
+     "h": 25,
+     "sel": "a.cta-texte"
+    },
+    {
+     "t": "En savoir plus",
+     "w": 122,
+     "h": 25,
+     "sel": "a.cta-texte"
+    },
+    {
+     "t": "En savoir plus",
+     "w": 122,
+     "h": 25,
+     "sel": "a.cta-texte"
+    },
+    {
+     "t": "En savoir plus",
+     "w": 122,
+     "h": 25,
+     "sel": "a.cta-texte"
+    },
+    {
+     "t": "Regulatory Change",
+     "w": 118,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Research",
+     "w": 56,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Compliance Data",
+     "w": 106,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Compliance as a service",
+     "w": 149,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Fabricants",
+     "w": 63,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Importateurs et distributeurs",
+     "w": 172,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Marketplaces",
+     "w": 81,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Conformité produit",
+     "w": 117,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Secteurs",
+     "w": 53,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Union européenne",
+     "w": 114,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "PPWR, article par article",
+     "w": 150,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Legal Data",
+     "w": 65,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Blog",
+     "w": 28,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Travaux de recherche",
+     "w": 131,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Skills",
+     "w": 30,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Journal des changements",
+     "w": 158,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Plan d'action MARIA",
+     "w": 125,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "À propos",
+     "w": 56,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Cas client Decathlon",
+     "w": 127,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Sécurité",
+     "w": 50,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Recrutement",
+     "w": 78,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Demander un accès",
+     "w": 123,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "contact@cleolabs.co",
+     "w": 118,
+     "h": 16,
+     "sel": "a"
+    },
+    {
+     "t": "Réserver 30 minutes",
+     "w": 118,
+     "h": 16,
+     "sel": "a"
+    },
+    {
+     "t": "Conditions générales",
+     "w": 111,
+     "h": 28,
+     "sel": "a"
+    },
+    {
+     "t": "Politique de confidentialité",
+     "w": 139,
+     "h": 28,
+     "sel": "a"
+    }
+   ]
+  },
+  "telephone": {
+   "hauteur": 13596,
+   "debordement": false,
+   "largeurDoc": 404,
+   "h1": {
+    "px": "40px",
+    "graisse": "700",
+    "n": 1
+   },
+   "paraMax": 334,
+   "temoin": {
+    "bloc": {
+     "x": 28,
+     "y": 2011,
+     "w": 334,
+     "h": 699.2
+    },
+    "citation": {
+     "x": 28,
+     "y": 2189,
+     "w": 334,
+     "h": 368.8
+    },
+    "align": "left",
+    "taille": "17px",
+    "interligne": "26.35px",
+    "maxw": "none",
+    "lignes": 14,
+    "signes": 595
+   },
+   "logos": [
+    {
+     "alt": "Decathlon",
+     "w": 150,
+     "h": 35,
+     "x": 40,
+     "y": 1718,
+     "aire": 5250,
+     "opacite": "0.52",
+     "cellule": {
+      "x": 28,
+      "y": 1699,
+      "w": 165,
+      "h": 72
+     }
+    },
+    {
+     "alt": "Balzac Paris",
+     "w": 150,
+     "h": 30,
+     "x": 209,
+     "y": 1720,
+     "aire": 4500,
+     "opacite": "0.52",
+     "cellule": {
+      "x": 197,
+      "y": 1699,
+      "w": 165,
+      "h": 72
+     }
+    },
+    {
+     "alt": "Mercedes-Benz",
+     "w": 53.7,
+     "h": 36,
+     "x": 84,
+     "y": 1793,
+     "aire": 1933,
+     "opacite": "0.52",
+     "cellule": {
+      "x": 28,
+      "y": 1775,
+      "w": 165,
+      "h": 72
+     }
+    },
+    {
+     "alt": "L'Occitane",
+     "w": 150,
+     "h": 32,
+     "x": 209,
+     "y": 1795,
+     "aire": 4800,
+     "opacite": "0.52",
+     "cellule": {
+      "x": 197,
+      "y": 1775,
+      "w": 165,
+      "h": 72
+     }
+    },
+    {
+     "alt": "NVIDIA",
+     "w": 46.1,
+     "h": 36,
+     "x": 172,
+     "y": 1869,
+     "aire": 1660,
+     "opacite": "0.52",
+     "cellule": {
+      "x": 28,
+      "y": 1851,
+      "w": 334,
+      "h": 72
+     }
+    }
+   ],
+   "tetes": [
+    {
+     "texte": "01Ce qui est publié",
+     "y": 10146,
+     "x": 28,
+     "h": 23.8
+    },
+    {
+     "texte": "02L'encodage",
+     "y": 10513,
+     "x": 28,
+     "h": 23.8
+    },
+    {
+     "texte": "03La règle encodée",
+     "y": 10926,
+     "x": 28,
+     "h": 23.8
+    }
+   ],
+   "etages": [
+    {
+     "y": 10142,
+     "h": 321.1,
+     "w": 334
+    },
+    {
+     "y": 10509,
+     "h": 368.3,
+     "w": 334
+    },
+    {
+     "y": 10922,
+     "h": 405.4,
+     "w": 334
+    }
+   ],
+   "pipe": {
+    "align": "center",
+    "rect": {
+     "x": 28,
+     "y": 10142,
+     "w": 334,
+     "h": 1184.8
+    }
+   },
+   "agents": [
+    {
+     "titre": "Regulatory Change",
+     "inverse": false,
+     "colonnes": "278px",
+     "rangee": {
+      "x": 28,
+      "y": 3828,
+      "w": 334,
+      "h": 1105.9
+     },
+     "texte": {
+      "x": 56,
+      "y": 4201,
+      "w": 278,
+      "h": 705
+     },
+     "visuel": {
+      "x": 56,
+      "y": 3856,
+      "w": 278,
+      "h": 345
+     },
+     "image": {
+      "rect": {
+       "x": 56,
+       "y": 3856,
+       "w": 278,
+       "h": 345
+      },
+      "alt": "",
+      "aAlt": true
+     }
+    },
+    {
+     "titre": "Compliance Data",
+     "inverse": true,
+     "colonnes": "278px",
+     "rangee": {
+      "x": 28,
+      "y": 4956,
+      "w": 334,
+      "h": 1035
+     },
+     "texte": {
+      "x": 56,
+      "y": 5328,
+      "w": 278,
+      "h": 634
+     },
+     "visuel": {
+      "x": 56,
+      "y": 4984,
+      "w": 278,
+      "h": 345
+     },
+     "image": {
+      "rect": {
+       "x": 56,
+       "y": 4984,
+       "w": 278,
+       "h": 345
+      },
+      "alt": "",
+      "aAlt": true
+     }
+    },
+    {
+     "titre": "Research",
+     "inverse": false,
+     "colonnes": "278px",
+     "rangee": {
+      "x": 28,
+      "y": 6012,
+      "w": 334,
+      "h": 1011
+     },
+     "texte": {
+      "x": 56,
+      "y": 6385,
+      "w": 278,
+      "h": 610
+     },
+     "visuel": {
+      "x": 56,
+      "y": 6040,
+      "w": 278,
+      "h": 345
+     },
+     "image": {
+      "rect": {
+       "x": 56,
+       "y": 6040,
+       "w": 278,
+       "h": 345
+      },
+      "alt": "",
+      "aAlt": true
+     }
+    }
+   ],
+   "images": [
+    {
+     "src": "cleo-logo.png",
+     "alt": "Cleo",
+     "aAlt": true,
+     "w": 44,
+     "h": 22
+    },
+    {
+     "src": "jean.png",
+     "alt": "",
+     "aAlt": true,
+     "w": 44,
+     "h": 44
+    },
+    {
+     "src": "logo-decathlon.svg",
+     "alt": "Decathlon",
+     "aAlt": true,
+     "w": 150,
+     "h": 35
+    },
+    {
+     "src": "logo-balzac.svg",
+     "alt": "Balzac Paris",
+     "aAlt": true,
+     "w": 150,
+     "h": 30
+    },
+    {
+     "src": "logo-mercedes.svg",
+     "alt": "Mercedes-Benz",
+     "aAlt": true,
+     "w": 53.7,
+     "h": 36
+    },
+    {
+     "src": "logo-loccitane.svg",
+     "alt": "L'Occitane",
+     "aAlt": true,
+     "w": 150,
+     "h": 32
+    },
+    {
+     "src": "logo-nvidia.svg",
+     "alt": "NVIDIA",
+     "aAlt": true,
+     "w": 46.1,
+     "h": 36
+    },
+    {
+     "src": "philippine.webp",
+     "alt": "Philippine Tamic",
+     "aAlt": true,
+     "w": 112,
+     "h": 112
+    },
+    {
+     "src": "logo-decathlon.svg",
+     "alt": "Decathlon",
+     "aAlt": true,
+     "w": 110.7,
+     "h": 22
+    },
+    {
+     "src": "classeurs.webp",
+     "alt": "",
+     "aAlt": true,
+     "w": 278,
+     "h": 345
+    },
+    {
+     "src": "semelles.webp",
+     "alt": "",
+     "aAlt": true,
+     "w": 278,
+     "h": 345
+    },
+    {
+     "src": "cables.webp",
+     "alt": "",
+     "aAlt": true,
+     "w": 278,
+     "h": 345
+    },
+    {
+     "src": "darcial.webp",
+     "alt": "Darcial Mondjo",
+     "aAlt": true,
+     "w": 262,
+     "h": 349.3
+    },
+    {
+     "src": "thezi.webp",
+     "alt": "Thezi Mabuza",
+     "aAlt": true,
+     "w": 262,
+     "h": 349.3
+    },
+    {
+     "src": "anaelle.png",
+     "alt": "Anaëlle Guez, cofondatrice de Cleo Labs",
+     "aAlt": true,
+     "w": 140,
+     "h": 140
+    },
+    {
+     "src": "cleo-logo.png",
+     "alt": "",
+     "aAlt": true,
+     "w": 200.4,
+     "h": 57.1
+    },
+    {
+     "src": "cleo-logo.png",
+     "alt": "Cleo",
+     "aAlt": true,
+     "w": 84.2,
+     "h": 24
+    }
+   ],
+   "sous13": [],
+   "sous14": [],
+   "cibles": []
+  }
+ },
+ "01-accueil-en": {
+  "desktop": {
+   "hauteur": 7993,
+   "debordement": false,
+   "largeurDoc": 1440,
+   "h1": {
+    "px": "68px",
+    "graisse": "700",
+    "n": 1
+   },
+   "paraMax": 600,
+   "temoin": {
+    "bloc": {
+     "x": 330,
+     "y": 1402,
+     "w": 780,
+     "h": 475.1
+    },
+    "citation": {
+     "x": 330,
+     "y": 1580,
+     "w": 780,
+     "h": 186
+    },
+    "align": "center",
+    "taille": "20px",
+    "interligne": "31px",
+    "maxw": "none",
+    "lignes": 6,
+    "signes": 496
+   },
+   "logos": [
+    {
+     "alt": "Decathlon",
+     "w": 176.2,
+     "h": 35,
+     "x": 285,
+     "y": 1245,
+     "aire": 6167,
+     "opacite": "0.52",
+     "cellule": {
+      "x": 263,
+      "y": 1210,
+      "w": 220.2,
+      "h": 104
+     }
+    },
+    {
+     "alt": "Balzac Paris",
+     "w": 200,
+     "h": 30,
+     "x": 505,
+     "y": 1247,
+     "aire": 6000,
+     "opacite": "0.52",
+     "cellule": {
+      "x": 483,
+      "y": 1210,
+      "w": 244,
+      "h": 104
+     }
+    },
+    {
+     "alt": "Mercedes-Benz",
+     "w": 59.6,
+     "h": 40,
+     "x": 757,
+     "y": 1242,
+     "aire": 2384,
+     "opacite": "0.52",
+     "cellule": {
+      "x": 727,
+      "y": 1210,
+      "w": 120,
+      "h": 104
+     }
+    },
+    {
+     "alt": "L'Occitane",
+     "w": 166.4,
+     "h": 32,
+     "x": 869,
+     "y": 1246,
+     "aire": 5325,
+     "opacite": "0.52",
+     "cellule": {
+      "x": 847,
+      "y": 1210,
+      "w": 210.4,
+      "h": 104
+     }
+    },
+    {
+     "alt": "NVIDIA",
+     "w": 61.5,
+     "h": 48,
+     "x": 1087,
+     "y": 1238,
+     "aire": 2952,
+     "opacite": "0.52",
+     "cellule": {
+      "x": 1057,
+      "y": 1210,
+      "w": 120,
+      "h": 104
+     }
+    }
+   ],
+   "tetes": [
+    {
+     "texte": "01What is published",
+     "y": 6387,
+     "x": 200,
+     "h": 22.4
+    },
+    {
+     "texte": "02Encoding",
+     "y": 6364,
+     "x": 591,
+     "h": 22.4
+    },
+    {
+     "texte": "03The encoded rule",
+     "y": 6358,
+     "x": 955,
+     "h": 22.4
+    }
+   ],
+   "etages": [
+    {
+     "y": 6387,
+     "h": 303.7,
+     "w": 330.9
+    },
+    {
+     "y": 6364,
+     "h": 350.4,
+     "w": 304.5
+    },
+    {
+     "y": 6358,
+     "h": 361.6,
+     "w": 284.6
+    }
+   ],
+   "pipe": {
+    "align": "center",
+    "rect": {
+     "x": 200,
+     "y": 6358,
+     "w": 1040,
+     "h": 361.6
+    }
+   },
+   "agents": [
+    {
+     "titre": "Regulatory Change",
+     "inverse": false,
+     "colonnes": "461.391px 530.594px",
+     "rangee": {
+      "x": 200,
+      "y": 2753,
+      "w": 1040,
+      "h": 658.4
+     },
+     "texte": {
+      "x": 200,
+      "y": 2859,
+      "w": 461.4,
+      "h": 447
+     },
+     "visuel": {
+      "x": 709,
+      "y": 2753,
+      "w": 530.6,
+      "h": 658.4
+     },
+     "image": {
+      "rect": {
+       "x": 709,
+       "y": 2753,
+       "w": 530.6,
+       "h": 658.4
+      },
+      "alt": "",
+      "aAlt": true
+     }
+    },
+    {
+     "titre": "Compliance Data",
+     "inverse": true,
+     "colonnes": "461.391px 530.594px",
+     "rangee": {
+      "x": 200,
+      "y": 3433,
+      "w": 1040,
+      "h": 572.5
+     },
+     "texte": {
+      "x": 709,
+      "y": 3504,
+      "w": 530.6,
+      "h": 432.2
+     },
+     "visuel": {
+      "x": 200,
+      "y": 3433,
+      "w": 461.4,
+      "h": 572.5
+     },
+     "image": {
+      "rect": {
+       "x": 200,
+       "y": 3433,
+       "w": 461.4,
+       "h": 572.5
+      },
+      "alt": "",
+      "aAlt": true
+     }
+    },
+    {
+     "titre": "Research",
+     "inverse": false,
+     "colonnes": "461.391px 530.594px",
+     "rangee": {
+      "x": 200,
+      "y": 4028,
+      "w": 1040,
+      "h": 658.4
+     },
+     "texte": {
+      "x": 200,
+      "y": 4141,
+      "w": 461.4,
+      "h": 432.2
+     },
+     "visuel": {
+      "x": 709,
+      "y": 4028,
+      "w": 530.6,
+      "h": 658.4
+     },
+     "image": {
+      "rect": {
+       "x": 709,
+       "y": 4028,
+       "w": 530.6,
+       "h": 658.4
+      },
+      "alt": "",
+      "aAlt": true
+     }
+    }
+   ],
+   "images": [
+    {
+     "src": "cleo-logo.png",
+     "alt": "Cleo",
+     "aAlt": true,
+     "w": 77.2,
+     "h": 22
+    },
+    {
+     "src": "jean.png",
+     "alt": "",
+     "aAlt": true,
+     "w": 44,
+     "h": 44
+    },
+    {
+     "src": "logo-decathlon.svg",
+     "alt": "Decathlon",
+     "aAlt": true,
+     "w": 176.2,
+     "h": 35
+    },
+    {
+     "src": "logo-balzac.svg",
+     "alt": "Balzac Paris",
+     "aAlt": true,
+     "w": 200,
+     "h": 30
+    },
+    {
+     "src": "logo-mercedes.svg",
+     "alt": "Mercedes-Benz",
+     "aAlt": true,
+     "w": 59.6,
+     "h": 40
+    },
+    {
+     "src": "logo-loccitane.svg",
+     "alt": "L'Occitane",
+     "aAlt": true,
+     "w": 166.4,
+     "h": 32
+    },
+    {
+     "src": "logo-nvidia.svg",
+     "alt": "NVIDIA",
+     "aAlt": true,
+     "w": 61.5,
+     "h": 48
+    },
+    {
+     "src": "philippine.webp",
+     "alt": "Philippine Tamic",
+     "aAlt": true,
+     "w": 112,
+     "h": 112
+    },
+    {
+     "src": "logo-decathlon.svg",
+     "alt": "Decathlon",
+     "aAlt": true,
+     "w": 110.7,
+     "h": 22
+    },
+    {
+     "src": "classeurs.webp",
+     "alt": "",
+     "aAlt": true,
+     "w": 530.6,
+     "h": 658.4
+    },
+    {
+     "src": "semelles.webp",
+     "alt": "",
+     "aAlt": true,
+     "w": 461.4,
+     "h": 572.5
+    },
+    {
+     "src": "cables.webp",
+     "alt": "",
+     "aAlt": true,
+     "w": 530.6,
+     "h": 658.4
+    },
+    {
+     "src": "darcial.webp",
+     "alt": "Darcial Mondjo",
+     "aAlt": true,
+     "w": 167.3,
+     "h": 223
+    },
+    {
+     "src": "thezi.webp",
+     "alt": "Thezi Mabuza",
+     "aAlt": true,
+     "w": 167.3,
+     "h": 223
+    },
+    {
+     "src": "anaelle.png",
+     "alt": "Anaëlle Guez, co-founder of Cleo Labs",
+     "aAlt": true,
+     "w": 180,
+     "h": 180
+    },
+    {
+     "src": "cleo-logo.png",
+     "alt": "",
+     "aAlt": true,
+     "w": 540.8,
+     "h": 154.1
+    },
+    {
+     "src": "cleo-logo.png",
+     "alt": "Cleo",
+     "aAlt": true,
+     "w": 84.2,
+     "h": 24
+    }
+   ],
+   "sous13": [
+    {
+     "t": "Not sure where to start? Talk to the team, we ",
+     "px": 12,
+     "sel": "div.mega-pied",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "A text you cannot find here? Tell us which one",
+     "px": 12,
+     "sel": "div.mega-pied",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Cleo · Kids straight jeans · DNM-4412",
+     "px": 12,
+     "sel": "span.fil-ariane",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "US",
+     "px": 12,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "EU",
+     "px": 12,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "countries tracked",
+     "px": 12,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "regulations indexed",
+     "px": 12,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "regulatory authorities",
+     "px": 12,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "01",
+     "px": 12,
+     "sel": "div.flux-rang",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "02",
+     "px": 12,
+     "sel": "div.flux-rang",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "03",
+     "px": 12,
+     "sel": "div.flux-rang",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "01",
+     "px": 12,
+     "sel": "span.pl-num",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "02",
+     "px": 12,
+     "sel": "span.pl-num",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "03",
+     "px": 12,
+     "sel": "span.pl-num",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Terms",
+     "px": 12,
+     "sel": "a",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Privacy policy",
+     "px": 12,
+     "sel": "a",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Cleo Corp SAS, SIREN 984567883",
+     "px": 12,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    }
+   ],
+   "sous14": [
+    {
+     "t": "Every publication tied to your references",
+     "px": 13,
+     "sel": "i",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "The question asked, the article in answer",
+     "px": 13,
+     "sel": "i",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "The verdict per reference, callable from your ",
+     "px": 13,
+     "sel": "i",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Our experts draft, review and sign off",
+     "px": 13,
+     "sel": "i",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Not sure where to start? Talk to the team, we ",
+     "px": 12,
+     "sel": "div.mega-pied",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "News",
+     "px": 13,
+     "sel": "span.mega-badge",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "News",
+     "px": 13,
+     "sel": "span.mega-badge",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "News",
+     "px": 13,
+     "sel": "span.mega-badge",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "A text you cannot find here? Tell us which one",
+     "px": 12,
+     "sel": "div.mega-pied",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "EN",
+     "px": 13,
+     "sel": "span.actif",
+     "dansApp": false,
+     "dansSelecteur": true
+    },
+    {
+     "t": "FR",
+     "px": 13,
+     "sel": "a",
+     "dansApp": false,
+     "dansSelecteur": true
+    },
+    {
+     "t": "Book a demo",
+     "px": 13,
+     "sel": "a.btn.btn-marque.btn-sm",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Cleo · Kids straight jeans · DNM-4412",
+     "px": 12,
+     "sel": "span.fil-ariane",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Reference DNM-4412",
+     "px": 13,
+     "sel": "div.fiche-ref",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "18 / 25 covered",
+     "px": 13,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "US",
+     "px": 12,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "CPSIA, lead",
+     "px": 13,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Covered",
+     "px": 13,
+     "sel": "span.marqueur.m-couvert",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Proposition 65",
+     "px": 13,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Data missing",
+     "px": 13,
+     "sel": "span.marqueur.m-manquant",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "EU",
+     "px": 12,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "REACH Annex XVII",
+     "px": 13,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Covered",
+     "px": 13,
+     "sel": "span.marqueur.m-couvert",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Textile labelling 1007/2011",
+     "px": 13,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "To check",
+     "px": 13,
+     "sel": "span.marqueur.m-attente",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "“Lead content does not exceed 100 ppm by weigh",
+     "px": 13,
+     "sel": "div.t-caption",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "CPSIA, section 101 (a)",
+     "px": 13,
+     "sel": "div.t-caption",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "field",
+     "px": 13,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "accessible material",
+     "px": 13,
+     "sel": "b",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "operator",
+     "px": 13,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "does not exceed",
+     "px": 13,
+     "sel": "b",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "threshold",
+     "px": 13,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "100 ppm by weight",
+     "px": 13,
+     "sel": "b",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "article",
+     "px": 13,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "CPSIA, section 101 (a)",
+     "px": 13,
+     "sel": "b",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "in force",
+     "px": 13,
+     "sel": "span",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "14 August 2011",
+     "px": 13,
+     "sel": "b",
+     "dansApp": true,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Trusted by international brands and manufactur",
+     "px": 13,
+     "sel": "div.centre.t-label",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Product Compliance Operations Manager at Decat",
+     "px": 13,
+     "sel": "div.t-caption",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Built for product compliance daily work",
+     "px": 13,
+     "sel": "div.surtitre",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Key features",
+     "px": 13,
+     "sel": "div.surtitre",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "countries tracked",
+     "px": 12,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "regulations indexed",
+     "px": 12,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "regulatory authorities",
+     "px": 12,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Compliance service",
+     "px": 13,
+     "sel": "div.surtitre",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "01",
+     "px": 12,
+     "sel": "div.flux-rang",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "02",
+     "px": 12,
+     "sel": "div.flux-rang",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "03",
+     "px": 12,
+     "sel": "div.flux-rang",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Global Head of Product & Sanitary Compliance",
+     "px": 13,
+     "sel": "div.t-caption",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "LinkedIn",
+     "px": 13,
+     "sel": "a.t-caption",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Stalwart in Consumer Protection & Product Safe",
+     "px": 13,
+     "sel": "div.t-caption",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "LinkedIn",
+     "px": 13,
+     "sel": "a.t-caption",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "The team that signs",
+     "px": 13,
+     "sel": "div.surtitre.sur-clair",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Our method",
+     "px": 13,
+     "sel": "div.surtitre",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "01",
+     "px": 12,
+     "sel": "span.pl-num",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "What is published",
+     "px": 13,
+     "sel": "span.t-label",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Official Journal of the European Union",
+     "px": 13,
+     "sel": "div.pl-n.vu",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Market surveillance authority",
+     "px": 13,
+     "sel": "div.pl-n.vu",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Draft text in consultation",
+     "px": 13,
+     "sel": "div.pl-n.vu",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Amended annex",
+     "px": 13,
+     "sel": "div.pl-n.vu",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Notified body opinion",
+     "px": 13,
+     "sel": "div.pl-n.vu",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Harmonised standard",
+     "px": 13,
+     "sel": "div.pl-n.vu",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "02",
+     "px": 12,
+     "sel": "span.pl-num",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Encoding",
+     "px": 13,
+     "sel": "span.t-label",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "the text to the reference it touches",
+     "px": 13,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "the article carrying the obligation",
+     "px": 13,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "the condition, the operator, the threshold",
+     "px": 13,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "publication and entry into force",
+     "px": 13,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "an expert decides, then signs off",
+     "px": 13,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "03",
+     "px": 12,
+     "sel": "span.pl-num",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "The encoded rule",
+     "px": 13,
+     "sel": "span.t-label",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "field",
+     "px": 13,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "accessible material",
+     "px": 13,
+     "sel": "b",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "operator",
+     "px": 13,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "does not exceed",
+     "px": 13,
+     "sel": "b",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "threshold",
+     "px": 13,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "100 ppm by weight",
+     "px": 13,
+     "sel": "b",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "article",
+     "px": 13,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "CPSIA, section 101 (a)",
+     "px": 13,
+     "sel": "b",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "in force",
+     "px": 13,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "14 August 2011",
+     "px": 13,
+     "sel": "b",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Neuilly-sur-Seine, France",
+     "px": 13,
+     "sel": "div.t-micro",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "contact@cleolabs.co",
+     "px": 13,
+     "sel": "a",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Book 30 minutes",
+     "px": 13,
+     "sel": "a",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Terms",
+     "px": 12,
+     "sel": "a",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Privacy policy",
+     "px": 12,
+     "sel": "a",
+     "dansApp": false,
+     "dansSelecteur": false
+    },
+    {
+     "t": "Cleo Corp SAS, SIREN 984567883",
+     "px": 12,
+     "sel": "span",
+     "dansApp": false,
+     "dansSelecteur": false
+    }
+   ],
+   "cibles": [
+    {
+     "t": "Product",
+     "w": 63,
+     "h": 24,
+     "sel": "button.nav-declencheur"
+    },
+    {
+     "t": "Regulations",
+     "w": 86,
+     "h": 24,
+     "sel": "button.nav-declencheur"
+    },
+    {
+     "t": "PPWR News",
+     "w": 194,
+     "h": 34,
+     "sel": "a"
+    },
+    {
+     "t": "REACH",
+     "w": 194,
+     "h": 34,
+     "sel": "a"
+    },
+    {
+     "t": "GPSR",
+     "w": 194,
+     "h": 34,
+     "sel": "a"
+    },
+    {
+     "t": "ESPR / Passport News",
+     "w": 194,
+     "h": 34,
+     "sel": "a"
+    },
+    {
+     "t": "EN 71",
+     "w": 194,
+     "h": 34,
+     "sel": "a"
+    },
+    {
+     "t": "Green Claims",
+     "w": 194,
+     "h": 34,
+     "sel": "a"
+    },
+    {
+     "t": "Batteries",
+     "w": 194,
+     "h": 32,
+     "sel": "a"
+    },
+    {
+     "t": "PPE",
+     "w": 194,
+     "h": 32,
+     "sel": "a"
+    },
+    {
+     "t": "AI Act",
+     "w": 194,
+     "h": 32,
+     "sel": "a"
+    },
+    {
+     "t": "Proposition 65",
+     "w": 194,
+     "h": 34,
+     "sel": "a"
+    },
+    {
+     "t": "PFAS News",
+     "w": 194,
+     "h": 34,
+     "sel": "a"
+    },
+    {
+     "t": "TSCA",
+     "w": 194,
+     "h": 34,
+     "sel": "a"
+    },
+    {
+     "t": "ASTM F963",
+     "w": 194,
+     "h": 32,
+     "sel": "a"
+    },
+    {
+     "t": "TB 117",
+     "w": 194,
+     "h": 32,
+     "sel": "a"
+    },
+    {
+     "t": "Bill 96 (Quebec)",
+     "w": 194,
+     "h": 32,
+     "sel": "a"
+    },
+    {
+     "t": "CPSIA",
+     "w": 194,
+     "h": 32,
+     "sel": "a"
+    },
+    {
+     "t": "FTC Green Guides",
+     "w": 194,
+     "h": 32,
+     "sel": "a"
+    },
+    {
+     "t": "Resources",
+     "w": 78,
+     "h": 24,
+     "sel": "button.nav-declencheur"
+    },
+    {
+     "t": "Company",
+     "w": 61,
+     "h": 24,
+     "sel": "a.nav-declencheur"
+    },
+    {
+     "t": "FR",
+     "w": 35,
+     "h": 21,
+     "sel": "a"
+    },
+    {
+     "t": "Log in",
+     "w": 38,
+     "h": 24,
+     "sel": "a.lien-secondaire"
+    },
+    {
+     "t": "",
+     "w": 335,
+     "h": 21,
+     "sel": "input"
+    },
+    {
+     "t": "Read the full case study",
+     "w": 192,
+     "h": 25,
+     "sel": "a.cta-texte"
+    },
+    {
+     "t": "Learn more",
+     "w": 106,
+     "h": 25,
+     "sel": "a.cta-texte"
+    },
+    {
+     "t": "Learn more",
+     "w": 106,
+     "h": 25,
+     "sel": "a.cta-texte"
+    },
+    {
+     "t": "Learn more",
+     "w": 106,
+     "h": 25,
+     "sel": "a.cta-texte"
+    },
+    {
+     "t": "Regulatory Change",
+     "w": 118,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Research",
+     "w": 56,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Compliance Data",
+     "w": 106,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Compliance as a service",
+     "w": 149,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Manufacturers",
+     "w": 88,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Importers and distributors",
+     "w": 158,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Marketplaces",
+     "w": 81,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Product compliance",
+     "w": 123,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Industries",
+     "w": 59,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "European Union",
+     "w": 99,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "PPWR, article by article",
+     "w": 144,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Legal Data",
+     "w": 65,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Blog",
+     "w": 28,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Our research",
+     "w": 80,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Skills",
+     "w": 30,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Changelog",
+     "w": 68,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "MARIA action plan",
+     "w": 114,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "About",
+     "w": 37,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Decathlon case study",
+     "w": 131,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Security",
+     "w": 49,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Careers",
+     "w": 48,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "Request access",
+     "w": 95,
+     "h": 30,
+     "sel": "a"
+    },
+    {
+     "t": "contact@cleolabs.co",
+     "w": 118,
+     "h": 16,
+     "sel": "a"
+    },
+    {
+     "t": "Book 30 minutes",
+     "w": 98,
+     "h": 16,
+     "sel": "a"
+    },
+    {
+     "t": "Terms",
+     "w": 44,
+     "h": 28,
+     "sel": "a"
+    },
+    {
+     "t": "Privacy policy",
+     "w": 72,
+     "h": 28,
+     "sel": "a"
+    }
+   ]
+  },
+  "telephone": {
+   "hauteur": 13363,
+   "debordement": false,
+   "largeurDoc": 395,
+   "h1": {
+    "px": "40px",
+    "graisse": "700",
+    "n": 1
+   },
+   "paraMax": 334,
+   "temoin": {
+    "bloc": {
+     "x": 28,
+     "y": 2011,
+     "w": 334,
+     "h": 646.5
+    },
+    "citation": {
+     "x": 28,
+     "y": 2189,
+     "w": 334,
+     "h": 316.1
+    },
+    "align": "left",
+    "taille": "17px",
+    "interligne": "26.35px",
+    "maxw": "none",
+    "lignes": 12,
+    "signes": 496
+   },
+   "logos": [
+    {
+     "alt": "Decathlon",
+     "w": 150,
+     "h": 35,
+     "x": 40,
+     "y": 1718,
+     "aire": 5250,
+     "opacite": "0.52",
+     "cellule": {
+      "x": 28,
+      "y": 1699,
+      "w": 165,
+      "h": 72
+     }
+    },
+    {
+     "alt": "Balzac Paris",
+     "w": 150,
+     "h": 30,
+     "x": 209,
+     "y": 1720,
+     "aire": 4500,
+     "opacite": "0.52",
+     "cellule": {
+      "x": 197,
+      "y": 1699,
+      "w": 165,
+      "h": 72
+     }
+    },
+    {
+     "alt": "Mercedes-Benz",
+     "w": 53.7,
+     "h": 36,
+     "x": 84,
+     "y": 1793,
+     "aire": 1933,
+     "opacite": "0.52",
+     "cellule": {
+      "x": 28,
+      "y": 1775,
+      "w": 165,
+      "h": 72
+     }
+    },
+    {
+     "alt": "L'Occitane",
+     "w": 150,
+     "h": 32,
+     "x": 209,
+     "y": 1795,
+     "aire": 4800,
+     "opacite": "0.52",
+     "cellule": {
+      "x": 197,
+      "y": 1775,
+      "w": 165,
+      "h": 72
+     }
+    },
+    {
+     "alt": "NVIDIA",
+     "w": 46.1,
+     "h": 36,
+     "x": 172,
+     "y": 1869,
+     "aire": 1660,
+     "opacite": "0.52",
+     "cellule": {
+      "x": 28,
+      "y": 1851,
+      "w": 334,
+      "h": 72
+     }
+    }
+   ],
+   "tetes": [
+    {
+     "texte": "01What is published",
+     "y": 9974,
+     "x": 28,
+     "h": 23.8
+    },
+    {
+     "texte": "02Encoding",
+     "y": 10341,
+     "x": 28,
+     "h": 23.8
+    },
+    {
+     "texte": "03The encoded rule",
+     "y": 10753,
+     "x": 28,
+     "h": 23.8
+    }
+   ],
+   "etages": [
+    {
+     "y": 9970,
+     "h": 321.1,
+     "w": 334
+    },
+    {
+     "y": 10337,
+     "h": 368.3,
+     "w": 334
+    },
+    {
+     "y": 10749,
+     "h": 383,
+     "w": 334
+    }
+   ],
+   "pipe": {
+    "align": "center",
+    "rect": {
+     "x": 28,
+     "y": 9970,
+     "w": 334,
+     "h": 1162.4
+    }
+   },
+   "agents": [
+    {
+     "titre": "Regulatory Change",
+     "inverse": false,
+     "colonnes": "278px",
+     "rangee": {
+      "x": 28,
+      "y": 3802,
+      "w": 334,
+      "h": 1081.9
+     },
+     "texte": {
+      "x": 56,
+      "y": 4175,
+      "w": 278,
+      "h": 681
+     },
+     "visuel": {
+      "x": 56,
+      "y": 3830,
+      "w": 278,
+      "h": 345
+     },
+     "image": {
+      "rect": {
+       "x": 56,
+       "y": 3830,
+       "w": 278,
+       "h": 345
+      },
+      "alt": "",
+      "aAlt": true
+     }
+    },
+    {
+     "titre": "Compliance Data",
+     "inverse": true,
+     "colonnes": "278px",
+     "rangee": {
+      "x": 28,
+      "y": 4906,
+      "w": 334,
+      "h": 1011
+     },
+     "texte": {
+      "x": 56,
+      "y": 5279,
+      "w": 278,
+      "h": 610
+     },
+     "visuel": {
+      "x": 56,
+      "y": 4934,
+      "w": 278,
+      "h": 345
+     },
+     "image": {
+      "rect": {
+       "x": 56,
+       "y": 4934,
+       "w": 278,
+       "h": 345
+      },
+      "alt": "",
+      "aAlt": true
+     }
+    },
+    {
+     "titre": "Research",
+     "inverse": false,
+     "colonnes": "278px",
+     "rangee": {
+      "x": 28,
+      "y": 5939,
+      "w": 334,
+      "h": 1011
+     },
+     "texte": {
+      "x": 56,
+      "y": 6312,
+      "w": 278,
+      "h": 610
+     },
+     "visuel": {
+      "x": 56,
+      "y": 5967,
+      "w": 278,
+      "h": 345
+     },
+     "image": {
+      "rect": {
+       "x": 56,
+       "y": 5967,
+       "w": 278,
+       "h": 345
+      },
+      "alt": "",
+      "aAlt": true
+     }
+    }
+   ],
+   "images": [
+    {
+     "src": "cleo-logo.png",
+     "alt": "Cleo",
+     "aAlt": true,
+     "w": 44,
+     "h": 22
+    },
+    {
+     "src": "jean.png",
+     "alt": "",
+     "aAlt": true,
+     "w": 44,
+     "h": 44
+    },
+    {
+     "src": "logo-decathlon.svg",
+     "alt": "Decathlon",
+     "aAlt": true,
+     "w": 150,
+     "h": 35
+    },
+    {
+     "src": "logo-balzac.svg",
+     "alt": "Balzac Paris",
+     "aAlt": true,
+     "w": 150,
+     "h": 30
+    },
+    {
+     "src": "logo-mercedes.svg",
+     "alt": "Mercedes-Benz",
+     "aAlt": true,
+     "w": 53.7,
+     "h": 36
+    },
+    {
+     "src": "logo-loccitane.svg",
+     "alt": "L'Occitane",
+     "aAlt": true,
+     "w": 150,
+     "h": 32
+    },
+    {
+     "src": "logo-nvidia.svg",
+     "alt": "NVIDIA",
+     "aAlt": true,
+     "w": 46.1,
+     "h": 36
+    },
+    {
+     "src": "philippine.webp",
+     "alt": "Philippine Tamic",
+     "aAlt": true,
+     "w": 112,
+     "h": 112
+    },
+    {
+     "src": "logo-decathlon.svg",
+     "alt": "Decathlon",
+     "aAlt": true,
+     "w": 110.7,
+     "h": 22
+    },
+    {
+     "src": "classeurs.webp",
+     "alt": "",
+     "aAlt": true,
+     "w": 278,
+     "h": 345
+    },
+    {
+     "src": "semelles.webp",
+     "alt": "",
+     "aAlt": true,
+     "w": 278,
+     "h": 345
+    },
+    {
+     "src": "cables.webp",
+     "alt": "",
+     "aAlt": true,
+     "w": 278,
+     "h": 345
+    },
+    {
+     "src": "darcial.webp",
+     "alt": "Darcial Mondjo",
+     "aAlt": true,
+     "w": 262,
+     "h": 349.3
+    },
+    {
+     "src": "thezi.webp",
+     "alt": "Thezi Mabuza",
+     "aAlt": true,
+     "w": 262,
+     "h": 349.3
+    },
+    {
+     "src": "anaelle.png",
+     "alt": "Anaëlle Guez, co-founder of Cleo Labs",
+     "aAlt": true,
+     "w": 140,
+     "h": 140
+    },
+    {
+     "src": "cleo-logo.png",
+     "alt": "",
+     "aAlt": true,
+     "w": 200.4,
+     "h": 57.1
+    },
+    {
+     "src": "cleo-logo.png",
+     "alt": "Cleo",
+     "aAlt": true,
+     "w": 84.2,
+     "h": 24
+    }
+   ],
+   "sous13": [],
+   "sous14": [],
+   "cibles": []
+  }
+ }
+}

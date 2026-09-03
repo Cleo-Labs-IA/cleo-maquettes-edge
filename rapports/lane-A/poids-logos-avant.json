@@ -1,0 +1,57 @@
+[
+ {
+  "alt": "Decathlon",
+  "w": 176.2,
+  "h": 35,
+  "y": 1245,
+  "bas": 1280,
+  "fond": 248,
+  "encrePx": 1908,
+  "masse": 159,
+  "grisMoyen": 84
+ },
+ {
+  "alt": "Balzac Paris",
+  "w": 200,
+  "h": 30,
+  "y": 1247,
+  "bas": 1277,
+  "fond": 248,
+  "encrePx": 583,
+  "masse": 40,
+  "grisMoyen": 69
+ },
+ {
+  "alt": "Mercedes-Benz",
+  "w": 59.6,
+  "h": 40,
+  "y": 1242,
+  "bas": 1282,
+  "fond": 248,
+  "encrePx": 349,
+  "masse": 30,
+  "grisMoyen": 85
+ },
+ {
+  "alt": "L'Occitane",
+  "w": 166.4,
+  "h": 32,
+  "y": 1246,
+  "bas": 1278,
+  "fond": 248,
+  "encrePx": 544,
+  "masse": 20,
+  "grisMoyen": 38
+ },
+ {
+  "alt": "NVIDIA",
+  "w": 61.5,
+  "h": 48,
+  "y": 1238,
+  "bas": 1286,
+  "fond": 248,
+  "encrePx": 1348,
+  "masse": 87,
+  "grisMoyen": 64
+ }
+]

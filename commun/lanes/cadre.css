@@ -59,6 +59,42 @@ html.menu-ouvert .nav-fin .btn{display:none}
 .nav-logo{min-height:44px}
 .nav-logo img{height:22px; width:auto}
 
+/* ────────────────────────────────────────────────────────────────
+   1 bis. LES MÉGA-MENUS NE S'OUVRAIENT QU'AU SURVOL.
+   composants.css:74 ne connaît que .nav-item:hover .mega. Mesuré le
+   03/09 en ligne : Entrée et Espace sur un déclencheur laissaient le
+   compte de panneaux ouverts à 0, et les 25 liens des trois panneaux
+   étaient hors d'atteinte au clavier en desktop.
+   mouvement.js pose maintenant la classe .ouvert et aria-expanded ;
+   ici on donne à .ouvert le même rendu qu'à :hover, sans y toucher.
+   :focus-within sur le PANNEAU (et non sur l'item) garde le panneau
+   ouvert quand le Tab entre dedans, sans l'ouvrir au seul passage du
+   focus sur le déclencheur : le focus arrive, Entrée décide.
+   ──────────────────────────────────────────────────────────────── */
+.nav-item.ouvert .mega,
+.mega:focus-within{opacity:1; visibility:visible; transform:translateY(0)}
+.nav-item.ouvert .nav-declencheur{color:var(--c-blue)}
+.nav-item.ouvert .chev{transform:rotate(180deg)}
+/* Le déclencheur est un <button> sans type : la flèche du chevron ne
+   doit pas hériter d'un curseur de texte quand le panneau est ouvert. */
+.nav-item.ouvert .nav-declencheur .chev{opacity:0.75}
+
+/* La ligne d'appel au bas des panneaux rendait 12 px, le plus petit
+   texte de la barre en desktop (mesuré le 03/09 : deux occurrences,
+   « Vous ne savez pas par où commencer ? » et « Un texte qui ne
+   figure pas ici ? »). Le plancher du chantier est 13 px en desktop. */
+.mega-pied{font-size:0.8125rem}
+
+/* Le méga « Ressources » ne porte que quatre entrées d'un mot : étalé
+   sur les 1 360 px de la barre, il rendait 164 px de haut pour une
+   ligne de vignettes perdue au milieu du vide (capture
+   mega-3-ressources.png). Un panneau court se cale sous son
+   déclencheur. .nav-item vaut position:static dans composants.css :
+   c'est ce qui envoyait le panneau sur toute la largeur de .nav. */
+.nav-item-court{position:relative}
+.mega-court{left:0; right:auto; width:520px; top:calc(100% + 20px); padding:24px}
+.mega-court .mega-grille.g4{grid-template-columns:repeat(2,minmax(0,1fr))}
+
 /* Dans un méga-menu, .mega-item centre son icône et son texte : quand une
    entrée porte deux lignes de description et sa voisine une seule, leurs
    titres ne sont plus sur la même ligne (mesuré le 03/09 sur « Produit » :

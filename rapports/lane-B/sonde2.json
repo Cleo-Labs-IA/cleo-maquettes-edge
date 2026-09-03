@@ -1,0 +1,3550 @@
+{
+ "404": {
+  "desktop": {
+   "largeur": 1440,
+   "hauteur": 1322,
+   "debordement": false,
+   "horsAppSousSeuil": [
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Conditions générales",
+     "w": 111,
+     "h": 28
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Politique de confidentialité",
+     "w": 139,
+     "h": 28
+    },
+    {
+     "tag": "SPAN",
+     "cls": "",
+     "px": 12,
+     "txt": "Cleo Corp SAS, SIREN 984567883",
+     "w": 193,
+     "h": 20
+    }
+   ],
+   "dansAppSous11": [],
+   "dansAppTailles": [],
+   "nbDansApp": 0,
+   "ciblesPetites": [
+    {
+     "tag": "BUTTON",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Produit",
+     "w": 59,
+     "h": 24
+    },
+    {
+     "tag": "BUTTON",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Textes",
+     "w": 53,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "PPWR Actualité",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "REACH",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "RSGP",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "ESPR / Passeport Actualité",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "EN 71",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Allégations vertes",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Batteries",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "EPI",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "AI Act",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Proposition 65",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "PFAS Actualité",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "TSCA",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "ASTM F963",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "TB 117",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Loi 96 (Québec)",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "CPSIA",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "FTC Green Guides",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "BUTTON",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Ressources",
+     "w": 84,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Entreprise",
+     "w": 63,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "lien-secondaire",
+     "px": 14,
+     "txt": "Connexion",
+     "w": 66,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Regulatory Change",
+     "w": 118,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Research",
+     "w": 56,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Compliance Data",
+     "w": 106,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Compliance as a service",
+     "w": 149,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Fabricants",
+     "w": 63,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Importateurs et distributeurs",
+     "w": 172,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Marketplaces",
+     "w": 81,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Conformité produit",
+     "w": 117,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Secteurs",
+     "w": 53,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Union européenne",
+     "w": 114,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "PPWR, article par article",
+     "w": 150,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Legal Data",
+     "w": 65,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Blog",
+     "w": 28,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Travaux de recherche",
+     "w": 131,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Skills",
+     "w": 30,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Journal des changements",
+     "w": 158,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Plan d'action MARIA",
+     "w": 125,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "À propos",
+     "w": 56,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Cas client Decathlon",
+     "w": 127,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Sécurité",
+     "w": 50,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Recrutement",
+     "w": 78,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Demander un accès",
+     "w": 123,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 13,
+     "txt": "contact@cleolabs.co",
+     "w": 118,
+     "h": 16
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 13,
+     "txt": "Réserver 30 minutes",
+     "w": 118,
+     "h": 16
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Conditions générales",
+     "w": 111,
+     "h": 28
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Politique de confidentialité",
+     "w": 139,
+     "h": 28
+    }
+   ],
+   "btns": [
+    {
+     "cls": "btn btn-marque btn-sm",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 123,
+     "h": 42
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 0,
+     "h": 0
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Retour à l'accueil",
+     "href": "/fr",
+     "bg": "rgb(255, 255, 255)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 163,
+     "h": 52
+    },
+    {
+     "cls": "btn btn-contour",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgba(0, 0, 0, 0)",
+     "bord": "rgba(255, 255, 255, 0.4)",
+     "w": 148,
+     "h": 52
+    }
+   ],
+   "veille": null,
+   "ecrans": []
+  },
+  "tel": {
+   "largeur": 390,
+   "hauteur": 2139,
+   "debordement": false,
+   "horsAppSousSeuil": [],
+   "dansAppSous11": [],
+   "dansAppTailles": [],
+   "nbDansApp": 0,
+   "ciblesPetites": [],
+   "btns": [
+    {
+     "cls": "btn btn-marque btn-sm",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 125,
+     "h": 44
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 0,
+     "h": 0
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Retour à l'accueil",
+     "href": "/fr",
+     "bg": "rgb(255, 255, 255)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 163,
+     "h": 52
+    },
+    {
+     "cls": "btn btn-contour",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgba(0, 0, 0, 0)",
+     "bord": "rgba(255, 255, 255, 0.4)",
+     "w": 148,
+     "h": 52
+    }
+   ],
+   "veille": null,
+   "ecrans": []
+  }
+ },
+ "03-offre": {
+  "desktop": {
+   "largeur": 1440,
+   "hauteur": 5672,
+   "debordement": false,
+   "horsAppSousSeuil": [
+    {
+     "tag": "SPAN",
+     "cls": "pilule pilule-contour",
+     "px": 12,
+     "txt": "Recherche dans les annexes",
+     "w": 182,
+     "h": 34
+    },
+    {
+     "tag": "SPAN",
+     "cls": "pilule pilule-contour",
+     "px": 12,
+     "txt": "Extraits retrouvables",
+     "w": 139,
+     "h": 34
+    },
+    {
+     "tag": "SPAN",
+     "cls": "pilule pilule-contour",
+     "px": 12,
+     "txt": "Dit quand la donnée manque",
+     "w": 187,
+     "h": 34
+    },
+    {
+     "tag": "SPAN",
+     "cls": "pilule pilule-contour",
+     "px": 12,
+     "txt": "Verbatim vérifié par script",
+     "w": 169,
+     "h": 34
+    },
+    {
+     "tag": "SPAN",
+     "cls": "pilule pilule-contour",
+     "px": 12,
+     "txt": "Preuve attendue par règle",
+     "w": 170,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Conditions générales",
+     "w": 111,
+     "h": 28
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Politique de confidentialité",
+     "w": 139,
+     "h": 28
+    },
+    {
+     "tag": "SPAN",
+     "cls": "",
+     "px": 12,
+     "txt": "Cleo Corp SAS, SIREN 984567883",
+     "w": 193,
+     "h": 20
+    }
+   ],
+   "dansAppSous11": [],
+   "dansAppTailles": [
+    11,
+    12.5,
+    13,
+    14
+   ],
+   "nbDansApp": 28,
+   "ciblesPetites": [
+    {
+     "tag": "BUTTON",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Produit",
+     "w": 59,
+     "h": 24
+    },
+    {
+     "tag": "BUTTON",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Textes",
+     "w": 53,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "PPWR Actualité",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "REACH",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "RSGP",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "ESPR / Passeport Actualité",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "EN 71",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Allégations vertes",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Batteries",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "EPI",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "AI Act",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Proposition 65",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "PFAS Actualité",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "TSCA",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "ASTM F963",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "TB 117",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Loi 96 (Québec)",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "CPSIA",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "FTC Green Guides",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "BUTTON",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Ressources",
+     "w": 84,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Entreprise",
+     "w": 63,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "lien-secondaire",
+     "px": 14,
+     "txt": "Connexion",
+     "w": 66,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Regulatory Change",
+     "w": 118,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Research",
+     "w": 56,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Compliance Data",
+     "w": 106,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Compliance as a service",
+     "w": 149,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Fabricants",
+     "w": 63,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Importateurs et distributeurs",
+     "w": 172,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Marketplaces",
+     "w": 81,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Conformité produit",
+     "w": 117,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Secteurs",
+     "w": 53,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Union européenne",
+     "w": 114,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "PPWR, article par article",
+     "w": 150,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Legal Data",
+     "w": 65,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Blog",
+     "w": 28,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Travaux de recherche",
+     "w": 131,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Skills",
+     "w": 30,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Journal des changements",
+     "w": 158,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Plan d'action MARIA",
+     "w": 125,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "À propos",
+     "w": 56,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Cas client Decathlon",
+     "w": 127,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Sécurité",
+     "w": 50,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Recrutement",
+     "w": 78,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Demander un accès",
+     "w": 123,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 13,
+     "txt": "contact@cleolabs.co",
+     "w": 118,
+     "h": 16
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 13,
+     "txt": "Réserver 30 minutes",
+     "w": 118,
+     "h": 16
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Conditions générales",
+     "w": 111,
+     "h": 28
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Politique de confidentialité",
+     "w": 139,
+     "h": 28
+    }
+   ],
+   "btns": [
+    {
+     "cls": "btn btn-marque btn-sm",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 123,
+     "h": 42
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 0,
+     "h": 0
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Réserver un créneau",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 187,
+     "h": 52
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 148,
+     "h": 52
+    },
+    {
+     "cls": "btn btn-contour",
+     "txt": "Réserver un créneau",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgba(0, 0, 0, 0)",
+     "bord": "rgba(0, 0, 0, 0.45)",
+     "w": 187,
+     "h": 52
+    }
+   ],
+   "veille": {
+    "bloc": {
+     "w": 1040,
+     "h": 640
+    },
+    "scene": {
+     "w": 984,
+     "h": 522,
+     "top": 1204,
+     "bas": 1726
+    },
+    "liste": {
+     "w": 660,
+     "h": 340,
+     "top": 1234,
+     "bas": 1574
+    },
+    "listeMinH": "340px",
+    "nbItems": 3,
+    "basDernierItem": 1483,
+    "prod": {
+     "w": 272,
+     "h": 291,
+     "top": 1204,
+     "bas": 1495
+    },
+    "fiche": {
+     "w": 272,
+     "h": 219,
+     "top": 1508,
+     "bas": 1726
+    },
+    "colDroite": {
+     "w": 272,
+     "h": 522,
+     "bas": 1726
+    },
+    "videSousListe": 91
+   },
+   "ecrans": [
+    {
+     "cls": "ecran-app",
+     "w": 1040,
+     "h": 640,
+     "top": 1114,
+     "bas": 1754
+    }
+   ]
+  },
+  "desktop_t2": {
+   "largeur": 1440,
+   "hauteur": 5672,
+   "debordement": false,
+   "horsAppSousSeuil": [
+    {
+     "tag": "SPAN",
+     "cls": "pilule pilule-contour",
+     "px": 12,
+     "txt": "Recherche dans les annexes",
+     "w": 182,
+     "h": 34
+    },
+    {
+     "tag": "SPAN",
+     "cls": "pilule pilule-contour",
+     "px": 12,
+     "txt": "Extraits retrouvables",
+     "w": 139,
+     "h": 34
+    },
+    {
+     "tag": "SPAN",
+     "cls": "pilule pilule-contour",
+     "px": 12,
+     "txt": "Dit quand la donnée manque",
+     "w": 187,
+     "h": 34
+    },
+    {
+     "tag": "SPAN",
+     "cls": "pilule pilule-contour",
+     "px": 12,
+     "txt": "Verbatim vérifié par script",
+     "w": 169,
+     "h": 34
+    },
+    {
+     "tag": "SPAN",
+     "cls": "pilule pilule-contour",
+     "px": 12,
+     "txt": "Preuve attendue par règle",
+     "w": 170,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Conditions générales",
+     "w": 111,
+     "h": 28
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Politique de confidentialité",
+     "w": 139,
+     "h": 28
+    },
+    {
+     "tag": "SPAN",
+     "cls": "",
+     "px": 12,
+     "txt": "Cleo Corp SAS, SIREN 984567883",
+     "w": 193,
+     "h": 20
+    }
+   ],
+   "dansAppSous11": [],
+   "dansAppTailles": [
+    11,
+    12.5,
+    13,
+    14
+   ],
+   "nbDansApp": 28,
+   "ciblesPetites": [
+    {
+     "tag": "BUTTON",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Produit",
+     "w": 59,
+     "h": 24
+    },
+    {
+     "tag": "BUTTON",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Textes",
+     "w": 53,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "PPWR Actualité",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "REACH",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "RSGP",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "ESPR / Passeport Actualité",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "EN 71",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Allégations vertes",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Batteries",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "EPI",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "AI Act",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Proposition 65",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "PFAS Actualité",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "TSCA",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "ASTM F963",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "TB 117",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Loi 96 (Québec)",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "CPSIA",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "FTC Green Guides",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "BUTTON",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Ressources",
+     "w": 84,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Entreprise",
+     "w": 63,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "lien-secondaire",
+     "px": 14,
+     "txt": "Connexion",
+     "w": 66,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Regulatory Change",
+     "w": 118,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Research",
+     "w": 56,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Compliance Data",
+     "w": 106,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Compliance as a service",
+     "w": 149,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Fabricants",
+     "w": 63,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Importateurs et distributeurs",
+     "w": 172,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Marketplaces",
+     "w": 81,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Conformité produit",
+     "w": 117,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Secteurs",
+     "w": 53,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Union européenne",
+     "w": 114,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "PPWR, article par article",
+     "w": 150,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Legal Data",
+     "w": 65,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Blog",
+     "w": 28,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Travaux de recherche",
+     "w": 131,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Skills",
+     "w": 30,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Journal des changements",
+     "w": 158,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Plan d'action MARIA",
+     "w": 125,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "À propos",
+     "w": 56,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Cas client Decathlon",
+     "w": 127,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Sécurité",
+     "w": 50,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Recrutement",
+     "w": 78,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Demander un accès",
+     "w": 123,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 13,
+     "txt": "contact@cleolabs.co",
+     "w": 118,
+     "h": 16
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 13,
+     "txt": "Réserver 30 minutes",
+     "w": 118,
+     "h": 16
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Conditions générales",
+     "w": 111,
+     "h": 28
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Politique de confidentialité",
+     "w": 139,
+     "h": 28
+    }
+   ],
+   "btns": [
+    {
+     "cls": "btn btn-marque btn-sm",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 123,
+     "h": 42
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 0,
+     "h": 0
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Réserver un créneau",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 187,
+     "h": 52
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 148,
+     "h": 52
+    },
+    {
+     "cls": "btn btn-contour",
+     "txt": "Réserver un créneau",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgba(0, 0, 0, 0)",
+     "bord": "rgba(0, 0, 0, 0.45)",
+     "w": 187,
+     "h": 52
+    }
+   ],
+   "veille": {
+    "bloc": {
+     "w": 1040,
+     "h": 640
+    },
+    "scene": {
+     "w": 984,
+     "h": 522,
+     "top": 1204,
+     "bas": 1726
+    },
+    "liste": {
+     "w": 660,
+     "h": 340,
+     "top": 1234,
+     "bas": 1574
+    },
+    "listeMinH": "340px",
+    "nbItems": 3,
+    "basDernierItem": 1483,
+    "prod": {
+     "w": 272,
+     "h": 291,
+     "top": 1204,
+     "bas": 1495
+    },
+    "fiche": {
+     "w": 272,
+     "h": 219,
+     "top": 1507,
+     "bas": 1726
+    },
+    "colDroite": {
+     "w": 272,
+     "h": 522,
+     "bas": 1726
+    },
+    "videSousListe": 91
+   },
+   "ecrans": [
+    {
+     "cls": "ecran-app",
+     "w": 1040,
+     "h": 640,
+     "top": 1114,
+     "bas": 1754
+    }
+   ]
+  },
+  "tel": {
+   "largeur": 390,
+   "hauteur": 8966,
+   "debordement": false,
+   "horsAppSousSeuil": [],
+   "dansAppSous11": [],
+   "dansAppTailles": [
+    11,
+    12,
+    12.5,
+    13,
+    14
+   ],
+   "nbDansApp": 28,
+   "ciblesPetites": [],
+   "btns": [
+    {
+     "cls": "btn btn-marque btn-sm",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 125,
+     "h": 44
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 0,
+     "h": 0
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Réserver un créneau",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 187,
+     "h": 52
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 148,
+     "h": 52
+    },
+    {
+     "cls": "btn btn-contour",
+     "txt": "Réserver un créneau",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgba(0, 0, 0, 0)",
+     "bord": "rgba(0, 0, 0, 0.45)",
+     "w": 187,
+     "h": 52
+    }
+   ],
+   "veille": {
+    "bloc": {
+     "w": 334,
+     "h": 1320
+    },
+    "scene": {
+     "w": 294,
+     "h": 1145,
+     "top": 1412,
+     "bas": 2557
+    },
+    "liste": {
+     "w": 294,
+     "h": 567,
+     "top": 1443,
+     "bas": 2010
+    },
+    "listeMinH": "0px",
+    "nbItems": 3,
+    "basDernierItem": 2010,
+    "prod": {
+     "w": 294,
+     "h": 293,
+     "top": 2032,
+     "bas": 2325
+    },
+    "fiche": {
+     "w": 294,
+     "h": 220,
+     "top": 2337,
+     "bas": 2557
+    },
+    "colDroite": {
+     "w": 294,
+     "h": 525,
+     "bas": 2557
+    },
+    "videSousListe": 0
+   },
+   "ecrans": [
+    {
+     "cls": "ecran-app",
+     "w": 334,
+     "h": 1320,
+     "top": 1257,
+     "bas": 2577
+    }
+   ]
+  },
+  "tel_t2": {
+   "largeur": 390,
+   "hauteur": 8966,
+   "debordement": false,
+   "horsAppSousSeuil": [],
+   "dansAppSous11": [],
+   "dansAppTailles": [
+    11,
+    12,
+    12.5,
+    13,
+    14
+   ],
+   "nbDansApp": 28,
+   "ciblesPetites": [],
+   "btns": [
+    {
+     "cls": "btn btn-marque btn-sm",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 125,
+     "h": 44
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 0,
+     "h": 0
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Réserver un créneau",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 187,
+     "h": 52
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 148,
+     "h": 52
+    },
+    {
+     "cls": "btn btn-contour",
+     "txt": "Réserver un créneau",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgba(0, 0, 0, 0)",
+     "bord": "rgba(0, 0, 0, 0.45)",
+     "w": 187,
+     "h": 52
+    }
+   ],
+   "veille": {
+    "bloc": {
+     "w": 334,
+     "h": 1320
+    },
+    "scene": {
+     "w": 294,
+     "h": 1145,
+     "top": 1412,
+     "bas": 2557
+    },
+    "liste": {
+     "w": 294,
+     "h": 567,
+     "top": 1443,
+     "bas": 2010
+    },
+    "listeMinH": "0px",
+    "nbItems": 3,
+    "basDernierItem": 2010,
+    "prod": {
+     "w": 294,
+     "h": 293,
+     "top": 2032,
+     "bas": 2325
+    },
+    "fiche": {
+     "w": 294,
+     "h": 220,
+     "top": 2337,
+     "bas": 2557
+    },
+    "colDroite": {
+     "w": 294,
+     "h": 525,
+     "bas": 2557
+    },
+    "videSousListe": 0
+   },
+   "ecrans": [
+    {
+     "cls": "ecran-app",
+     "w": 334,
+     "h": 1320,
+     "top": 1257,
+     "bas": 2577
+    }
+   ]
+  }
+ },
+ "07-chat": {
+  "desktop": {
+   "largeur": 1440,
+   "hauteur": 4992,
+   "debordement": false,
+   "horsAppSousSeuil": [
+    {
+     "tag": "SPAN",
+     "cls": "pilule pilule-contour",
+     "px": 12,
+     "txt": "Recherche dans les annexes",
+     "w": 182,
+     "h": 34
+    },
+    {
+     "tag": "SPAN",
+     "cls": "pilule pilule-contour",
+     "px": 12,
+     "txt": "Extraits retrouvables",
+     "w": 139,
+     "h": 34
+    },
+    {
+     "tag": "SPAN",
+     "cls": "pilule pilule-contour",
+     "px": 12,
+     "txt": "Dit quand la donnée manque",
+     "w": 187,
+     "h": 34
+    },
+    {
+     "tag": "SPAN",
+     "cls": "pilule pilule-contour",
+     "px": 12,
+     "txt": "Verbatim vérifié par script",
+     "w": 169,
+     "h": 34
+    },
+    {
+     "tag": "SPAN",
+     "cls": "pilule pilule-contour",
+     "px": 12,
+     "txt": "Preuve attendue par règle",
+     "w": 170,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Conditions générales",
+     "w": 111,
+     "h": 28
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Politique de confidentialité",
+     "w": 139,
+     "h": 28
+    },
+    {
+     "tag": "SPAN",
+     "cls": "",
+     "px": 12,
+     "txt": "Cleo Corp SAS, SIREN 984567883",
+     "w": 193,
+     "h": 20
+    }
+   ],
+   "dansAppSous11": [],
+   "dansAppTailles": [
+    11,
+    12
+   ],
+   "nbDansApp": 12,
+   "ciblesPetites": [
+    {
+     "tag": "BUTTON",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Produit",
+     "w": 59,
+     "h": 24
+    },
+    {
+     "tag": "BUTTON",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Textes",
+     "w": 53,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "PPWR Actualité",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "REACH",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "RSGP",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "ESPR / Passeport Actualité",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "EN 71",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Allégations vertes",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Batteries",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "EPI",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "AI Act",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Proposition 65",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "PFAS Actualité",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "TSCA",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "ASTM F963",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "TB 117",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Loi 96 (Québec)",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "CPSIA",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "FTC Green Guides",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "BUTTON",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Ressources",
+     "w": 84,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Entreprise",
+     "w": 63,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "lien-secondaire",
+     "px": 14,
+     "txt": "Connexion",
+     "w": 66,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Regulatory Change",
+     "w": 118,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Research",
+     "w": 56,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Compliance Data",
+     "w": 106,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Compliance as a service",
+     "w": 149,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Fabricants",
+     "w": 63,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Importateurs et distributeurs",
+     "w": 172,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Marketplaces",
+     "w": 81,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Conformité produit",
+     "w": 117,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Secteurs",
+     "w": 53,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Union européenne",
+     "w": 114,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "PPWR, article par article",
+     "w": 150,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Legal Data",
+     "w": 65,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Blog",
+     "w": 28,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Travaux de recherche",
+     "w": 131,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Skills",
+     "w": 30,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Journal des changements",
+     "w": 158,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Plan d'action MARIA",
+     "w": 125,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "À propos",
+     "w": 56,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Cas client Decathlon",
+     "w": 127,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Sécurité",
+     "w": 50,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Recrutement",
+     "w": 78,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Demander un accès",
+     "w": 123,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 13,
+     "txt": "contact@cleolabs.co",
+     "w": 118,
+     "h": 16
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 13,
+     "txt": "Réserver 30 minutes",
+     "w": 118,
+     "h": 16
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Conditions générales",
+     "w": 111,
+     "h": 28
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Politique de confidentialité",
+     "w": 139,
+     "h": 28
+    }
+   ],
+   "btns": [
+    {
+     "cls": "btn btn-marque btn-sm",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 123,
+     "h": 42
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 0,
+     "h": 0
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Réserver un créneau",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 187,
+     "h": 52
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 148,
+     "h": 52
+    },
+    {
+     "cls": "btn btn-contour",
+     "txt": "Réserver un créneau",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgba(0, 0, 0, 0)",
+     "bord": "rgba(0, 0, 0, 0.45)",
+     "w": 187,
+     "h": 52
+    }
+   ],
+   "veille": null,
+   "ecrans": [
+    {
+     "cls": "ecran-app chat-accueil",
+     "w": 509,
+     "h": 284,
+     "top": 632,
+     "bas": 916
+    },
+    {
+     "cls": "ecran-app chat-fil-ecran",
+     "w": 509,
+     "h": 450,
+     "top": 632,
+     "bas": 1082
+    }
+   ]
+  },
+  "tel": {
+   "largeur": 390,
+   "hauteur": 7880,
+   "debordement": false,
+   "horsAppSousSeuil": [],
+   "dansAppSous11": [],
+   "dansAppTailles": [
+    11,
+    12
+   ],
+   "nbDansApp": 12,
+   "ciblesPetites": [],
+   "btns": [
+    {
+     "cls": "btn btn-marque btn-sm",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 125,
+     "h": 44
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 0,
+     "h": 0
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Réserver un créneau",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 187,
+     "h": 52
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 148,
+     "h": 52
+    },
+    {
+     "cls": "btn btn-contour",
+     "txt": "Réserver un créneau",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgba(0, 0, 0, 0)",
+     "bord": "rgba(0, 0, 0, 0.45)",
+     "w": 187,
+     "h": 52
+    }
+   ],
+   "veille": null,
+   "ecrans": [
+    {
+     "cls": "ecran-app chat-accueil",
+     "w": 334,
+     "h": 303,
+     "top": 698,
+     "bas": 1001
+    },
+    {
+     "cls": "ecran-app chat-fil-ecran",
+     "w": 334,
+     "h": 489,
+     "top": 1023,
+     "bas": 1512
+    }
+   ]
+  }
+ },
+ "08-reglementation": {
+  "desktop": {
+   "largeur": 1440,
+   "hauteur": 5456,
+   "debordement": false,
+   "horsAppSousSeuil": [
+    {
+     "tag": "SPAN",
+     "cls": "pilule pilule-contour",
+     "px": 12,
+     "txt": "Recherche dans les annexes",
+     "w": 182,
+     "h": 34
+    },
+    {
+     "tag": "SPAN",
+     "cls": "pilule pilule-contour",
+     "px": 12,
+     "txt": "Extraits retrouvables",
+     "w": 139,
+     "h": 34
+    },
+    {
+     "tag": "SPAN",
+     "cls": "pilule pilule-contour",
+     "px": 12,
+     "txt": "Dit quand la donnée manque",
+     "w": 187,
+     "h": 34
+    },
+    {
+     "tag": "SPAN",
+     "cls": "pilule pilule-contour",
+     "px": 12,
+     "txt": "Verbatim vérifié par script",
+     "w": 169,
+     "h": 34
+    },
+    {
+     "tag": "SPAN",
+     "cls": "pilule pilule-contour",
+     "px": 12,
+     "txt": "Preuve attendue par règle",
+     "w": 170,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Conditions générales",
+     "w": 111,
+     "h": 28
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Politique de confidentialité",
+     "w": 139,
+     "h": 28
+    },
+    {
+     "tag": "SPAN",
+     "cls": "",
+     "px": 12,
+     "txt": "Cleo Corp SAS, SIREN 984567883",
+     "w": 193,
+     "h": 20
+    }
+   ],
+   "dansAppSous11": [],
+   "dansAppTailles": [
+    11,
+    12
+   ],
+   "nbDansApp": 27,
+   "ciblesPetites": [
+    {
+     "tag": "BUTTON",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Produit",
+     "w": 59,
+     "h": 24
+    },
+    {
+     "tag": "BUTTON",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Textes",
+     "w": 53,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "PPWR Actualité",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "REACH",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "RSGP",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "ESPR / Passeport Actualité",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "EN 71",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Allégations vertes",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Batteries",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "EPI",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "AI Act",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Proposition 65",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "PFAS Actualité",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "TSCA",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "ASTM F963",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "TB 117",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Loi 96 (Québec)",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "CPSIA",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "FTC Green Guides",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "BUTTON",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Ressources",
+     "w": 84,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Entreprise",
+     "w": 63,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "lien-secondaire",
+     "px": 14,
+     "txt": "Connexion",
+     "w": 66,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Regulatory Change",
+     "w": 118,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Research",
+     "w": 56,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Compliance Data",
+     "w": 106,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Compliance as a service",
+     "w": 149,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Fabricants",
+     "w": 63,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Importateurs et distributeurs",
+     "w": 172,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Marketplaces",
+     "w": 81,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Conformité produit",
+     "w": 117,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Secteurs",
+     "w": 53,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Union européenne",
+     "w": 114,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "PPWR, article par article",
+     "w": 150,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Legal Data",
+     "w": 65,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Blog",
+     "w": 28,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Travaux de recherche",
+     "w": 131,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Skills",
+     "w": 30,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Journal des changements",
+     "w": 158,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Plan d'action MARIA",
+     "w": 125,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "À propos",
+     "w": 56,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Cas client Decathlon",
+     "w": 127,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Sécurité",
+     "w": 50,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Recrutement",
+     "w": 78,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Demander un accès",
+     "w": 123,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 13,
+     "txt": "contact@cleolabs.co",
+     "w": 118,
+     "h": 16
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 13,
+     "txt": "Réserver 30 minutes",
+     "w": 118,
+     "h": 16
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Conditions générales",
+     "w": 111,
+     "h": 28
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Politique de confidentialité",
+     "w": 139,
+     "h": 28
+    }
+   ],
+   "btns": [
+    {
+     "cls": "btn btn-marque btn-sm",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 123,
+     "h": 42
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 0,
+     "h": 0
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Réserver un créneau",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 187,
+     "h": 52
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 148,
+     "h": 52
+    },
+    {
+     "cls": "btn btn-contour",
+     "txt": "Réserver un créneau",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgba(0, 0, 0, 0)",
+     "bord": "rgba(0, 0, 0, 0.45)",
+     "w": 187,
+     "h": 52
+    }
+   ],
+   "veille": null,
+   "ecrans": [
+    {
+     "cls": "ecran-app",
+     "w": 1040,
+     "h": 381,
+     "top": 1134,
+     "bas": 1514
+    }
+   ]
+  },
+  "tel": {
+   "largeur": 390,
+   "hauteur": 7851,
+   "debordement": false,
+   "horsAppSousSeuil": [],
+   "dansAppSous11": [],
+   "dansAppTailles": [
+    11,
+    12
+   ],
+   "nbDansApp": 9,
+   "ciblesPetites": [],
+   "btns": [
+    {
+     "cls": "btn btn-marque btn-sm",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 125,
+     "h": 44
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 0,
+     "h": 0
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Réserver un créneau",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 187,
+     "h": 52
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 148,
+     "h": 52
+    },
+    {
+     "cls": "btn btn-contour",
+     "txt": "Réserver un créneau",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgba(0, 0, 0, 0)",
+     "bord": "rgba(0, 0, 0, 0.45)",
+     "w": 187,
+     "h": 52
+    }
+   ],
+   "veille": null,
+   "ecrans": [
+    {
+     "cls": "ecran-app",
+     "w": 334,
+     "h": 200,
+     "top": 1169,
+     "bas": 1369
+    }
+   ]
+  }
+ },
+ "21-inscription": {
+  "desktop": {
+   "largeur": 1440,
+   "hauteur": 1588,
+   "debordement": false,
+   "horsAppSousSeuil": [
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Conditions générales",
+     "w": 111,
+     "h": 28
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Politique de confidentialité",
+     "w": 139,
+     "h": 28
+    },
+    {
+     "tag": "SPAN",
+     "cls": "",
+     "px": 12,
+     "txt": "Cleo Corp SAS, SIREN 984567883",
+     "w": 193,
+     "h": 20
+    }
+   ],
+   "dansAppSous11": [],
+   "dansAppTailles": [],
+   "nbDansApp": 0,
+   "ciblesPetites": [
+    {
+     "tag": "BUTTON",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Produit",
+     "w": 59,
+     "h": 24
+    },
+    {
+     "tag": "BUTTON",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Textes",
+     "w": 53,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "PPWR Actualité",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "REACH",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "RSGP",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "ESPR / Passeport Actualité",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "EN 71",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Allégations vertes",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Batteries",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "EPI",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "AI Act",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Proposition 65",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "PFAS Actualité",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "TSCA",
+     "w": 194,
+     "h": 34
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "ASTM F963",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "TB 117",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Loi 96 (Québec)",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "CPSIA",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "FTC Green Guides",
+     "w": 194,
+     "h": 32
+    },
+    {
+     "tag": "BUTTON",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Ressources",
+     "w": 84,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "nav-declencheur",
+     "px": 14,
+     "txt": "Entreprise",
+     "w": 63,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "lien-secondaire",
+     "px": 14,
+     "txt": "Connexion",
+     "w": 66,
+     "h": 24
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Regulatory Change",
+     "w": 118,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Research",
+     "w": 56,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Compliance Data",
+     "w": 106,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Compliance as a service",
+     "w": 149,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Fabricants",
+     "w": 63,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Importateurs et distributeurs",
+     "w": 172,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Marketplaces",
+     "w": 81,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Conformité produit",
+     "w": 117,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Secteurs",
+     "w": 53,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Union européenne",
+     "w": 114,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "PPWR, article par article",
+     "w": 150,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Legal Data",
+     "w": 65,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Blog",
+     "w": 28,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Travaux de recherche",
+     "w": 131,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Skills",
+     "w": 30,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Journal des changements",
+     "w": 158,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Plan d'action MARIA",
+     "w": 125,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "À propos",
+     "w": 56,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Cas client Decathlon",
+     "w": 127,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Sécurité",
+     "w": 50,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Recrutement",
+     "w": 78,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 14,
+     "txt": "Demander un accès",
+     "w": 123,
+     "h": 30
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 13,
+     "txt": "contact@cleolabs.co",
+     "w": 118,
+     "h": 16
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 13,
+     "txt": "Réserver 30 minutes",
+     "w": 118,
+     "h": 16
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Conditions générales",
+     "w": 111,
+     "h": 28
+    },
+    {
+     "tag": "A",
+     "cls": "",
+     "px": 12,
+     "txt": "Politique de confidentialité",
+     "w": 139,
+     "h": 28
+    }
+   ],
+   "btns": [
+    {
+     "cls": "btn btn-marque btn-sm",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 123,
+     "h": 42
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 0,
+     "h": 0
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Demander l'accès",
+     "href": "",
+     "bg": "rgb(255, 255, 255)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 408,
+     "h": 52
+    }
+   ],
+   "veille": null,
+   "ecrans": []
+  },
+  "tel": {
+   "largeur": 390,
+   "hauteur": 2994,
+   "debordement": false,
+   "horsAppSousSeuil": [],
+   "dansAppSous11": [],
+   "dansAppTailles": [],
+   "nbDansApp": 0,
+   "ciblesPetites": [],
+   "btns": [
+    {
+     "cls": "btn btn-marque btn-sm",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 125,
+     "h": 44
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Voir une démo",
+     "href": "https://meetings.hubspot.com/anaelle-guez/rendez-vous",
+     "bg": "rgb(0, 8, 207)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 0,
+     "h": 0
+    },
+    {
+     "cls": "btn btn-marque",
+     "txt": "Demander l'accès",
+     "href": "",
+     "bg": "rgb(255, 255, 255)",
+     "bord": "rgba(0, 0, 0, 0)",
+     "w": 270,
+     "h": 52
+    }
+   ],
+   "veille": null,
+   "ecrans": []
+  }
+ }
+}

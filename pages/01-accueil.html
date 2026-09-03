@@ -21,52 +21,15 @@
     </form>
   </div>
 
-  <!-- L'INTERFACE SOUS LE TITRE, depuis le 03/09/2026 : le geste de Legora et
-       de Harvey, le produit visible dès le premier écran. Le globe aux produits
-       reste porté par construire.mjs (<!--GLOBE-PRODUITS-->), il n'est plus
-       posé ici. La règle encodée est celle de la section « Notre méthode »,
-       recopiée par le script d'édition : une seule source. -->
-  <div class="hero-produit" data-anim="monte-court">
-    <div class="ecran-app">
-      <div class="ecran-tete"><div class="pastilles"><i></i><i></i><i></i></div><span class="fil-ariane">Cleo · Jean droit enfant · DNM-4412</span></div>
-      <div class="hp-corps">
-        <div class="fiche hp-fiche">
-          <div class="fiche-tete">
-            <img class="fiche-vignette" src="img:jean" alt="">
-            <div style="flex:1">
-              <div class="fiche-nom">Jean droit enfant</div>
-              <div class="fiche-ref">Référence DNM-4412</div>
-            </div>
-          </div>
-          <div class="fiche-ligne" style="border-top:none;padding-top:0">
-            <div class="jauge"><span style="width:72%"></span></div>
-            <span style="font-weight:600;color:var(--cleo-ink);white-space:nowrap">18 / 25 couvertes</span>
-          </div>
-          <div class="fiche-entete-pays"><span>US</span> États-Unis</div>
-          <div class="fiche-ligne"><span>CPSIA, plomb</span><span class="marqueur m-couvert">Couvert</span></div>
-          <div class="fiche-ligne"><span>Proposition 65</span><span class="marqueur m-manquant">Donnée manquante</span></div>
-          <div class="fiche-entete-pays"><span>UE</span> Union européenne</div>
-          <div class="fiche-ligne"><span>REACH annexe XVII</span><span class="marqueur m-couvert">Couvert</span></div>
-          <div class="fiche-ligne"><span>Étiquetage textile 1007/2011</span><span class="marqueur m-attente">À vérifier</span></div>
-        </div>
-        <div class="hp-droite">
-          <div class="hp-citation">
-            <div class="t-caption" style="line-height:1.55">« La teneur en plomb ne dépasse pas 100 ppm en poids des parties accessibles. »</div>
-            <div class="t-caption" style="margin-top:9px;color:var(--c-blue);font-weight:600">CPSIA, section 101 (a)</div>
-          </div>
-          <div class="pl-regle hp-regle">
-            <div class="t-h3">Teneur en plomb des parties accessibles</div>
-          <div class="pl-champ"><span>champ</span><b>matière accessible</b></div>
-          <div class="pl-champ"><span>opérateur</span><b>ne dépasse pas</b></div>
-          <div class="pl-champ"><span>seuil</span><b>100 ppm en poids</b></div>
-          <div class="pl-champ"><span>article</span><b>CPSIA, section 101 (a)</b></div>
-          <div class="pl-champ"><span>en vigueur</span><b>14 août 2011</b></div>
-          <div class="pl-verdict"><span class="pl-pastille"></span>testable sur une référence</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- Le globe au centre, sous le texte, comme Morpho pose son objet.
+       Depuis le 01/09 c'est LE GLOBE AUX PRODUITS de cleo-landing : sept
+       produits en orbite, un point sur le globe là où chacun se vend, le nom
+       de la ville contre ce point, un trait qui relie les deux. Chaque produit
+       est accroché au marché QUI FAIT LA RÈGLE pour lui. Le bloc entier
+       (feuille, markup, script) est porté par construire.mjs, voir la coupe
+       « LE GLOBE AUX PRODUITS ». Les noms de produits et de villes sont des
+       noms : la page anglaise sert exactement les mêmes. -->
+  <!--GLOBE-PRODUITS-->
 </section>
 
 <!-- ═══ BANDE LOGOS ═══ la ligne de confiance reprend, mot pour mot, celle
@@ -86,36 +49,84 @@
   </div>
 </section>
 
-<!-- ═══ TEMOIGNAGE ═══ citation VERBATIM de DecathlonQuote.tsx. Compact depuis
-     le 03/09/2026 : portrait rond, la citation en grand, le lien vers le cas.
-     Avant : 540 px de photo pour deux phrases. -->
+<!-- ═══ TEMOIGNAGE ═══ citation VERBATIM de DecathlonQuote.tsx,
+     grand portrait à gauche. Le tiret et les apostrophes courbes restent. -->
 <section class="section" style="padding-top:0">
   <div class="conteneur">
-    <div class="temoin-compact" data-anim="monte-court">
-      <img class="temoin-portrait" src="img:philippine" alt="Philippine Tamic">
-      <img src="img:logo-decathlon" alt="Decathlon" style="height:22px;width:auto;opacity:0.5">
-      <blockquote class="citation" style="margin:0">« Chez Decathlon, notre défi est de capter des informations très précises au milieu d'un volume massif de réglementations produits à l'international, avec un enjeu à la fois juridique et technique : piloter nos mises en conformité mondiales tout en accompagnant nos ingénieurs dans le développement des produits. C'est le pont que nous construisons avec le PoC mené avec Cleo : leur moteur d'IA agit comme un traducteur intelligent qui filtre le bruit pour extraire une donnée structurée, directement exploitable par nos équipes et indispensable pour guider la conception au sein de notre PLM. »</blockquote>
-      <div>
-        <div class="t-h3">Philippine Tamic</div>
-        <div class="t-caption">Product Compliance Operations Manager chez Decathlon</div>
+    <div class="carte" style="overflow:hidden">
+      <div class="duo duo-temoin">
+        <div class="scene" data-anim="grandit" style="border-radius:0;box-shadow:none;min-height:540px">
+          <img class="fond" src="img:philippine" alt="Philippine Tamic">
+        </div>
+        <div style="padding:56px;display:flex;flex-direction:column;justify-content:center">
+          <img class="logo-marque" src="img:logo-decathlon" alt="Decathlon" style="height:22px;width:auto;opacity:0.5;margin-bottom:32px">
+          <blockquote class="citation" style="margin:0">
+            « Chez Decathlon, notre défi est de capter des informations très précises au milieu d'un volume massif de réglementations produits à l'international, avec un enjeu à la fois juridique et technique : piloter nos mises en conformité mondiales tout en accompagnant nos ingénieurs dans le développement des produits. C'est le pont que nous construisons avec le PoC mené avec Cleo : leur moteur d'IA agit comme un traducteur intelligent qui filtre le bruit pour extraire une donnée structurée, directement exploitable par nos équipes et indispensable pour guider la conception au sein de notre PLM. »
+          </blockquote>
+          <div>
+            <div class="t-h3">Philippine Tamic</div>
+            <div class="t-caption">Product Compliance Operations Manager chez Decathlon</div>
+          </div>
+          <a href="06-cas-client.html" class="t-body" style="margin-top:28px;display:inline-flex;align-items:center;gap:8px;color:var(--c-blue);font-weight:500">
+            Voir le use case en entier
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M13.3 4.3a1 1 0 0 1 1.4 0l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4-1.4l5.3-5.3H4a1 1 0 1 1 0-2h14.6l-5.3-5.3a1 1 0 0 1 0-1.4Z"/></svg>
+          </a>
+        </div>
       </div>
-      <a class="cta-texte" href="06-cas-client.html"><svg class="fleche fl-gauche" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Voir le cas client en entier</span><svg class="fleche fl-droite" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="filet fi-gauche"></span><span class="filet fi-droite"></span></a>
     </div>
   </div>
 </section>
 
-<!-- ═══ LE TRAVAIL QUOTIDIEN ═══ trois raisons, trois cartes. L'écran produit
-     qui vivait ici est monté dans le hero le 03/09/2026. -->
-<section class="section sur-clair-fond" style="padding-top:0">
+<!-- ═══ BLOC PRINCIPAL : la carte large avec l'ecran produit ═══ -->
+<section class="section sur-clair-fond" style="padding-top:56px">
   <div class="conteneur">
-    <div class="entete-section" data-anim="monte">
-      <div class="surtitre">Pensé pour le travail quotidien de la conformité produit</div>
-      <h2 class="t-display">De la parution au Journal officiel au verdict sur votre référence.</h2>
-    </div>
-    <div class="g3" data-anim-groupe>
-      <div class="carte p32" data-anim="monte-court"><p class="t-body-lg" style="margin:0">Une parution au Journal officiel arrive rattachée aux références qu'elle touche, pas dans une liste à trier.</p></div>
-      <div class="carte p32" data-anim="monte-court"><p class="t-body-lg" style="margin:0">La même règle sert vos équipes produit, qualité et juridique : champ, opérateur, seuil, article, date.</p></div>
-      <div class="carte p32" data-anim="monte-court"><p class="t-body-lg" style="margin:0">Rien à rapprocher à la main entre deux outils : tout part de la même règle.</p></div>
+    <div class="carte-encre p48" data-anim="monte-court" style="border-radius:var(--r-lg)">
+      <div class="duo" style="gap:56px">
+        <div>
+          <div class="surtitre sur-clair" style="margin-bottom:16px">Pensé pour le travail quotidien de la conformité produit</div>
+          <h3 class="t-h1">De la parution au Journal officiel au verdict sur votre référence.</h3>
+          <ul class="coches" style="margin:28px 0 34px">
+            <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                Une parution au Journal officiel arrive rattachée aux références qu'elle touche, pas dans une liste à trier</li>
+          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                La même règle sert vos équipes produit, qualité et juridique : champ, opérateur, seuil, article, date</li>
+          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                Rien à rapprocher à la main entre deux outils : tout part de la même règle</li>
+          </ul>
+          <a class="btn btn-clair" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo
+            <span class="rond"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="#0008CF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
+        </div>
+
+        <!-- Ecran produit compositie -->
+        <div style="position:relative">
+          <div class="fiche" style="max-width:340px;margin-left:auto;margin-bottom:26px">
+            <div class="fiche-tete">
+              <img class="fiche-vignette" src="img:jean" alt="">
+              <div style="flex:1">
+                <div class="fiche-nom">Jean droit enfant</div>
+                <div class="fiche-ref">Référence DNM-4412</div>
+              </div>
+            </div>
+            <div class="fiche-ligne" style="border-top:none;padding-top:0">
+              <div class="jauge"><span style="width:72%"></span></div>
+              <span style="font-weight:600;color:var(--cleo-ink);white-space:nowrap">18 / 25 couvertes</span>
+            </div>
+            <div class="fiche-entete-pays"><span>US</span> États-Unis</div>
+            <div class="fiche-ligne"><span>CPSIA, plomb</span><span class="marqueur m-couvert">Couvert</span></div>
+            <div class="fiche-ligne"><span>Proposition 65</span><span class="marqueur m-manquant">Donnée manquante</span></div>
+            <div class="fiche-entete-pays"><span>UE</span> Union européenne</div>
+            <div class="fiche-ligne"><span>REACH annexe XVII</span><span class="marqueur m-couvert">Couvert</span></div>
+            <div class="fiche-ligne"><span>Étiquetage textile 1007/2011</span><span class="marqueur m-attente">À vérifier</span></div>
+          </div>
+          <div class="carte-claire" style="margin-top:18px;padding:18px 20px;background:var(--c-white);border-radius:var(--r-md);border-left:2px solid var(--c-blue);max-width:340px;margin-left:auto">
+            <div class="t-caption" style="line-height:1.55;color:var(--c-text)">
+              « La teneur en plomb ne dépasse pas 100 ppm en poids des parties accessibles. »
+            </div>
+            <div class="t-caption" style="margin-top:9px;color:var(--c-blue);font-weight:600">CPSIA, section 101 (a)</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>

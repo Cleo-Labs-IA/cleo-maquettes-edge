@@ -733,7 +733,7 @@ const ldjson = (o, langue) => JSON.stringify(sansNotes(o, langue)).replace(/<\/s
    .nav-fin, le panneau ferme le <nav>. */
 function avecMenuMobile(navHtml) {
   const groupes = []
-  for (const bloc of navHtml.split('<div class="nav-item">').slice(1)) {
+  for (const bloc of navHtml.split(/<div class="nav-item(?:\s[^"]*)?">/).slice(1)) {
     const m = bloc.match(/<(button|a) class="nav-declencheur"(?: href="([^"]*)")?>([\s\S]*?)<\/\1>/)
     if (!m) continue
     const titre = m[3].replace(/<svg[\s\S]*?<\/svg>/g, '').trim()
