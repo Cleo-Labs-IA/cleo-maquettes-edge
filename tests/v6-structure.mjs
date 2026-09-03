@@ -36,6 +36,9 @@ for (const fichier of sorties) {
   if (famille && !FAMILLES.has(famille)) erreurs.push(`${fichier} : famille V6 invalide (${famille})`)
 
   const html = fs.readFileSync(path.join(SORTIE, fichier), 'utf8')
+  const htmlVisible = html
+    .replace(/<script\b[\s\S]*?<\/script>/gi, '')
+    .replace(/<style\b[\s\S]*?<\/style>/gi, '')
   const page = fichier.replace(/\.html$/, '')
   const corps = html.match(/<body\b[^>]*>/i)?.[0] || ''
   for (const attribut of [
@@ -45,6 +48,28 @@ for (const fichier of sorties) {
   ]) {
     if (!corps.includes(attribut)) erreurs.push(`${fichier} : ${attribut} absent du body`)
   }
+  if (fichier === '01-accueil-noir.html' && /--c-surface:\s*#181818/i.test(html)) {
+    erreurs.push(`${fichier} : l'ancien régime noir ne doit pas recouvrir la direction V6`)
+  }
+  if (/\bV5\b/.test(htmlVisible)) erreurs.push(`${fichier} : mention V5 visible dans une sortie V6`)
+  if (/Les 22 pages/.test(htmlVisible)) erreurs.push(`${fichier} : ancien libellé de galerie incomplet`)
+}
+
+const adaptationsFamilles = fs.readFileSync(path.join(ICI, 'commun', 'lanes', 'v6-families.css'), 'utf8')
+if (!/data-v6-page="20-campagne"[^{}]*\.pilule-dispo\s+\.point\s*\{[^}]*background:var\(--cleo-v6-signal\)/s.test(adaptationsFamilles)) {
+  erreurs.push('20-campagne.html : le point decoratif vert doit employer le signal bleu V6')
+}
+if (!/data-v6-page="00-composants"[^{}]*>\s*section:first-of-type[^{}]*\{[^}]*background:[^}]*--cleo-v6-deep/s.test(adaptationsFamilles)) {
+  erreurs.push('00-composants.html : le hero hors main doit recevoir le champ profond V6')
+}
+
+const sourceCitation = fs.readFileSync(path.join(ICI, 'depot-src', 'DecathlonQuote.tsx'), 'utf8')
+const citationEn = sourceCitation.match(/en:\s*'([^']+)'/)?.[1]
+  ?.replace(/\\u([0-9a-fA-F]{4})/g, (_, code) => String.fromCharCode(parseInt(code, 16)))
+  .slice(1, 80)
+const serviceEn = fs.readFileSync(path.join(SORTIE, '37-compliance-service-en.html'), 'utf8')
+if (!citationEn || !serviceEn.includes(citationEn)) {
+  erreurs.push('37-compliance-service-en.html : citation anglaise non verbatim')
 }
 
 console.log(`Audit structure V6 : ${sorties.length} HTML générés, ${sortiesSansFamille.length} manquant(s), ${entreesSupplementaires.length} en trop.`)

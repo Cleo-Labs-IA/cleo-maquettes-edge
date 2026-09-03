@@ -11,10 +11,24 @@ body[data-cleo-ds="v6"]:is([data-v6-family="preview"],[data-v6-family="company-p
   z-index:2;
 }
 
+body[data-cleo-ds="v6"]:is([data-v6-family="preview"],[data-v6-family="company-proof"],[data-v6-family="product"],[data-v6-family="audience"],[data-v6-family="regulation"],[data-v6-family="resource-index"],[data-v6-family="article"],[data-v6-family="trust-conversion"]) main > section:first-child > .conteneur,
+body[data-cleo-ds="v6"]:is([data-v6-family="preview"],[data-v6-family="company-proof"],[data-v6-family="product"],[data-v6-family="audience"],[data-v6-family="regulation"],[data-v6-family="resource-index"],[data-v6-family="article"],[data-v6-family="trust-conversion"]) main > section:first-child .centre{
+  text-align:left !important;
+}
+
 body[data-cleo-ds="v6"]:is([data-v6-family="preview"],[data-v6-family="company-proof"],[data-v6-family="product"],[data-v6-family="audience"],[data-v6-family="regulation"],[data-v6-family="resource-index"],[data-v6-family="article"],[data-v6-family="trust-conversion"],[data-v6-family="not-found"]) main > section:first-child .t-hero,
 body[data-cleo-ds="v6"]:is([data-v6-family="preview"],[data-v6-family="company-proof"],[data-v6-family="product"],[data-v6-family="audience"],[data-v6-family="regulation"],[data-v6-family="resource-index"],[data-v6-family="article"],[data-v6-family="trust-conversion"],[data-v6-family="not-found"]) main > section:first-child .t-titre-page{
   max-width:820px !important;
   text-wrap:balance;
+}
+
+body[data-cleo-ds="v6"]:is([data-v6-family="preview"],[data-v6-family="company-proof"],[data-v6-family="product"],[data-v6-family="audience"],[data-v6-family="regulation"],[data-v6-family="resource-index"],[data-v6-family="article"],[data-v6-family="trust-conversion"]) main > section:first-child :is(.t-hero,.t-titre-page,.t-body,.t-lead){
+  margin-right:0 !important;
+  margin-left:0 !important;
+}
+
+body[data-cleo-ds="v6"]:is([data-v6-family="preview"],[data-v6-family="company-proof"],[data-v6-family="product"],[data-v6-family="audience"],[data-v6-family="regulation"],[data-v6-family="resource-index"],[data-v6-family="article"],[data-v6-family="trust-conversion"]) main > section:first-child .rang-boutons{
+  justify-content:flex-start;
 }
 
 body[data-cleo-ds="v6"]:is([data-v6-family="preview"],[data-v6-family="company-proof"],[data-v6-family="product"],[data-v6-family="audience"],[data-v6-family="regulation"],[data-v6-family="resource-index"],[data-v6-family="article"],[data-v6-family="trust-conversion"],[data-v6-family="not-found"]) main > section:first-child .duo{
@@ -51,6 +65,24 @@ body[data-cleo-ds="v6"][data-v6-family="preview"] .kit-nav a:focus-visible{
   color:var(--cleo-v6-blue);
   background:var(--cleo-v6-field-pale);
 }
+
+body[data-cleo-ds="v6"][data-v6-family="preview"][data-v6-page="00-composants"] > section:first-of-type{
+  position:relative;
+  isolation:isolate;
+  width:min(var(--cleo-v6-page),calc(100% - (var(--cleo-v6-gutter) * 2)));
+  margin:24px auto 0;
+  padding:clamp(64px,8vw,96px) 0 !important;
+  overflow:hidden;
+  color:var(--cleo-v6-white);
+  background:
+    radial-gradient(70% 115% at 13% 6%,rgba(77,87,255,.18),transparent 58%),
+    linear-gradient(139deg,var(--cleo-v6-deep),var(--cleo-v6-deep-2)) !important;
+  border-radius:var(--cleo-v6-radius-lg);
+  box-shadow:var(--cleo-v6-shadow-hero);
+}
+
+body[data-cleo-ds="v6"][data-v6-family="preview"][data-v6-page="00-composants"] > section:first-of-type :is(.t-label,.t-display){color:var(--cleo-v6-white)}
+body[data-cleo-ds="v6"][data-v6-family="preview"][data-v6-page="00-composants"] > section:first-of-type :is(.t-body,.attenue){color:var(--cleo-v6-on-dark-2)}
 
 body[data-cleo-ds="v6"][data-v6-family="preview"] .kit-famille{padding-top:88px}
 
@@ -522,6 +554,11 @@ body[data-cleo-ds="v6"][data-v6-family="trust-conversion"][data-v6-page="20-camp
 body[data-cleo-ds="v6"][data-v6-family="trust-conversion"][data-v6-page="20-campagne"] > section:first-of-type .btn-marque{
   color:var(--cleo-v6-white);
   background:var(--cleo-v6-signal);
+}
+
+body[data-cleo-ds="v6"][data-v6-family="trust-conversion"][data-v6-page="20-campagne"] .pilule-dispo .point{
+  background:var(--cleo-v6-signal);
+  box-shadow:0 0 0 4px rgba(77,87,255,.2);
 }
 
 body[data-cleo-ds="v6"][data-v6-family="trust-conversion"][data-v6-page="20-campagne"] .seg-couverture .couverture{

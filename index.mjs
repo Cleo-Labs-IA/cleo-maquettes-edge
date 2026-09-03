@@ -11,11 +11,11 @@ const v6Lanes = fs.readdirSync('commun/lanes')
   .map(fichier => fs.readFileSync(`commun/lanes/${fichier}`, 'utf8'))
   .join('\n')
 
-const PAGES = [
+const PAGES_DETAILLEES = [
   { f:'01-accueil.html',       t:'Accueil',      g:'Accueil',    src:'edgecomply.com/', blocs:14,
     note:"La masse et l'unique en hero, photo à règles flottantes, comparatif, témoignage." },
-  { f:'01-accueil-noir.html', t:'Accueil, régime noir', g:'Accueil', src:'morpho.org', blocs:14,
-    note:"Même fragment que l'accueil, sous la surcouche de tokens du régime noir." },
+  { f:'01-accueil-noir.html', t:'Accueil, variante', g:'Accueil', src:'morpho.org', blocs:14,
+    note:"Même fragment que l'accueil, conservé comme variante de travail dans la direction V6." },
   { f:'02-entreprise.html',    t:'Entreprise',   g:'Entreprise', src:'edgecomply.com/about-us', blocs:8,
     note:"Hero pleine largeur, grille de portraits, chiffres en escalier, photo à cartes." },
   { f:'03-offre.html',         t:'Regulatory Change', g:'Feature', src:'edgecomply.com/services/*', blocs:11,
@@ -68,6 +68,41 @@ const PAGES = [
     note:"Sommaire collant, corps de texte réglementaire mesuré." },
 ]
 
+const manifeste = JSON.parse(fs.readFileSync('commun/v6-routes.json', 'utf8'))
+const chemins = JSON.parse(fs.readFileSync('commun/chemins.json', 'utf8')).pages
+const details = new Map(PAGES_DETAILLEES.map(page => [page.f, page]))
+const libellesFamille = {
+  home: 'Accueil',
+  'company-proof': 'Entreprise',
+  product: 'Produit',
+  audience: 'Audience',
+  regulation: 'Réglementation',
+  'resource-index': 'Ressources',
+  article: 'Article',
+  'trust-conversion': 'Confiance',
+  'not-found': 'Système',
+}
+
+function retirerBalises(texte) {
+  return texte.replace(/<[^>]+>/g, '').replace(/\s*\|\s*Cleo Labs\s*$/, '').trim()
+}
+
+const PAGES = Object.keys(manifeste)
+  .filter(fichier => !['index.html', '00-composants.html'].includes(fichier))
+  .map(fichier => {
+    const detail = details.get(fichier)
+    const html = fs.readFileSync(`sortie/${fichier}`, 'utf8')
+    const titre = retirerBalises(html.match(/<title>([\s\S]*?)<\/title>/i)?.[1] || fichier.replace('.html', ''))
+    const description = html.match(/<meta\s+name="description"\s+content="([^"]*)"/i)?.[1]
+    return {
+      f: fichier,
+      t: detail?.t || titre,
+      g: libellesFamille[manifeste[fichier]] || manifeste[fichier],
+      note: detail?.note || description || 'Ouvrir cette page dans la direction visuelle V6.',
+      route: chemins[fichier]?.chemin || '/404',
+    }
+  })
+
 const vignettes = {}
 for (const p of PAGES) {
   const src = `captures/${p.f.replace('.html','')}-1.png`
@@ -79,14 +114,16 @@ for (const p of PAGES) {
 
 const cartes = PAGES.map(p => `
     <a class="carte-maquette" href="${p.f}">
-      <div class="vignette"><img src="${vignettes[p.f] || ''}" alt=""></div>
+      <div class="vignette">${vignettes[p.f]
+        ? `<img src="${vignettes[p.f]}" alt="">`
+        : `<div class="vignette-placeholder"><span>${p.g}</span></div>`}</div>
       <div class="corps">
         <div class="ligne-tete">
           <h3>${p.t}</h3>
-          <span class="compte">${p.g} · ${p.blocs} blocs</span>
+          <span class="compte">${p.g}</span>
         </div>
         <p class="note">${p.note}</p>
-        <div class="source">Composition relevée sur <span class="ref">${p.src}</span></div>
+        <div class="source">Route locale <span class="ref">${p.route}</span></div>
       </div>
     </a>`).join('')
 
@@ -95,8 +132,8 @@ const doc = `<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Maquettes Cleo V5 — champ profond</title>
-<meta name="description" content="Porte d'entrée des maquettes de travail Cleo Labs : 24 gabarits en design system V5, champ profond, régime clair et régime noir.">
+<title>Maquettes Cleo V6 — toutes les pages</title>
+<meta name="description" content="Galerie exhaustive des pages de travail Cleo Labs dans la direction visuelle V6.">
 <meta name="robots" content="noindex,nofollow">
 <style>
 @font-face{font-family:"Satoshi";src:url(data:font/woff2;base64,${POLICE}) format("woff2");font-weight:300 900;font-display:swap}
@@ -113,6 +150,9 @@ code,kbd,samp,pre{font-family:var(--font);font-variant-numeric:tabular-nums}
 .carte-maquette:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
 .vignette{aspect-ratio:640/460;overflow:hidden;background:var(--c-card)}
 .vignette img{width:100%;height:100%;object-fit:cover;object-position:top}
+.vignette-placeholder{display:grid;width:100%;height:100%;place-items:center;color:var(--cleo-v6-on-dark-2);
+  background:radial-gradient(70% 90% at 20% 5%,rgba(77,87,255,.26),transparent 70%),linear-gradient(139deg,var(--cleo-v6-deep),var(--cleo-v6-deep-2))}
+.vignette-placeholder span{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
 .corps{padding:24px 26px 26px}
 .ligne-tete{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:10px}
 .corps h3{font-size:1.375rem;font-weight:500;letter-spacing:-0.02em;color:var(--c-ink)}
@@ -134,10 +174,9 @@ code,kbd,samp,pre{font-family:var(--font);font-variant-numeric:tabular-nums}
 <div class="conteneur">
   <header class="entete">
     <div class="t-label" style="margin-bottom:18px">Maquettes de travail</div>
-    <h1 class="t-hero" style="max-width:900px">Le site EdgeComply, <span class="attenue">en DS Cleo V5, champ profond.</span></h1>
+    <h1 class="t-hero" style="max-width:900px">Toutes les pages du site, <span class="attenue">en DS Cleo V6.</span></h1>
     <p class="t-body" style="max-width:640px;margin-top:22px">
-      Vingt-deux gabarits couvrant les 261 URL de leur site, plus un kit qui montre chaque composant seul. La composition, les proportions et le rythme viennent
-      d'eux. Tout l'habillage vient du Design System Cleo V5, décliné sur le champ profond.
+      Une galerie exhaustive pour vérifier la nouvelle direction visuelle, sur desktop comme sur mobile. Chaque carte ouvre directement la sortie générée correspondante.
     </p>
   </header>
 
@@ -159,24 +198,24 @@ code,kbd,samp,pre{font-family:var(--font);font-variant-numeric:tabular-nums}
 
   <div class="regle">
     <div>
-      <h4>Ce qui vient d'EdgeComply</h4>
+      <h4>La direction V6</h4>
       <ul>
-        <li>L'ordre des sections de chaque gabarit</li>
-        <li>Les proportions : conteneur 1340&nbsp;px, colonne texte 600&nbsp;px</li>
-        <li>Le rythme typographique 58 / 48 / 36&nbsp;px, interlignes serrés</li>
-        <li>Les gestes : titre en deux teintes, listes à puces cochées, sceaux de textes, tableau comparatif, fiche latérale collante</li>
-        <li>Ce qui ne vient pas d'eux : leur fond sombre est un choix de marque, le nôtre est le champ profond du V5</li>
+        <li>Un seul champ profond par page, utilisé comme point d'ancrage</li>
+        <li>Des compositions éditoriales franches et beaucoup d'espace utile</li>
+        <li>Des surfaces chaudes et calmes pour laisser respirer le contenu</li>
+        <li>Des cartes peu nombreuses, réservées aux objets réellement manipulables</li>
+        <li>Une inspiration Cleonardo retravaillée avec les codes propres à Cleo</li>
       </ul>
     </div>
     <div>
-      <h4>Ce qui vient du Design System V5</h4>
+      <h4>Ce qui reste propre à Cleo</h4>
       <ul>
         <li>Satoshi seule, aucune monospace, chiffres tabulaires</li>
         <li>Champ profond <b>#08093B</b>, strate interne <b>#12134F</b></li>
-        <li>Signal <b>#4D57FF</b> sur ce fond, la valeur que le V5 emploie pour l'élément trouvé</li>
-        <li>Statuts éclaircis à teinte constante : <b>#3FD08A</b> · <b>#E0A63C</b> · <b>#FF6B60</b>, tous ≥ 6,7:1</li>
-        <li>Rayons 8 / 16 / 24 / pilule, espacement ×4, section à 128&nbsp;px</li>
-        <li>Verre à trois couches et boutons à arête haute, recettes V5</li>
+        <li>Signal <b>#4D57FF</b>, réservé aux actions et aux éléments actifs</li>
+        <li>Rayons cohérents de <b>8 / 16 / 24&nbsp;px</b> et pilules intégrales</li>
+        <li>Iconographie technique, preuves réglementaires et objets produit réels</li>
+        <li>Une hiérarchie accessible, lisible au clavier et sur petit écran</li>
       </ul>
     </div>
   </div>

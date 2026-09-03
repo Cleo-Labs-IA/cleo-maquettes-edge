@@ -825,6 +825,7 @@ for (const p of PAGES) {
   const familleV6 = V6_ROUTES[nomSortie]
   if (!familleV6) throw new Error(`FAMILLE V6 ABSENTE : ${nomSortie}`)
   const pageV6 = nomSortie.replace(/\.html$/, '')
+  const regimeDePage = p.noir && !familleV6 ? regimeNoir : ''
   const seoP = SEO.pages[nomSortie]
   const langue = p.en ? 'en' : 'fr'
   const titre = seoP && seoP.titre ? seoP.titre : `Cleo — ${p.titre}`
@@ -933,7 +934,7 @@ ${structure}
 <style>
 @font-face{font-family:"Satoshi";src:url(/fonts/Satoshi-Variable.woff2) format("woff2");
   font-weight:300 900;font-style:normal;font-display:swap}
-${sansCommentairesCss(base + '\n' + composants + '\n' + lanesCss + '\n' + (p.noir ? regimeNoir : '') + '\n' + mouvement)}
+${sansCommentairesCss(base + '\n' + composants + '\n' + lanesCss + '\n' + regimeDePage + '\n' + mouvement)}
 </style>
 </head>
 <body data-cleo-ds="v6" data-v6-family="${familleV6}" data-v6-page="${pageV6}">

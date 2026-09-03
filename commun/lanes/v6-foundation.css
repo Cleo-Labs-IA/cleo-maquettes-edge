@@ -363,6 +363,19 @@ body[data-cleo-ds="v6"] main > section:first-child .carte-encre :is(.t-body,.t-b
 body[data-cleo-ds="v6"] main > section:first-child .form-carte :is(.t-body,.t-body-lg,.t-lead,.t-sm),
 body[data-cleo-ds="v6"] main > section:first-child .ecran-app :is(.t-body,.t-body-lg,.t-lead,.t-sm){color:var(--cleo-v6-ink-2)}
 
+body[data-cleo-ds="v6"] main > section:first-child .carte :is(.t-caption,.t-micro,.t-label,.surtitre,.attenue),
+body[data-cleo-ds="v6"] main > section:first-child .carte-claire :is(.t-caption,.t-micro,.t-label,.surtitre,.attenue),
+body[data-cleo-ds="v6"] main > section:first-child .carte-encre :is(.t-caption,.t-micro,.t-label,.surtitre,.attenue),
+body[data-cleo-ds="v6"] main > section:first-child .form-carte :is(.t-caption,.t-micro,.t-label,.surtitre,.attenue),
+body[data-cleo-ds="v6"] main > section:first-child .ecran-app :is(.t-caption,.t-micro,.t-label,.surtitre,.attenue){color:var(--cleo-v6-ink-3)}
+
+/* Une surface explicitement sombre conserve toujours son encre claire, meme
+   lorsqu'elle vit dans un chapitre clair remappe par V6. */
+body[data-cleo-ds="v6"] .surface-sombre{color:var(--cleo-v6-white)}
+body[data-cleo-ds="v6"] .surface-sombre :is(.t-hero,.t-titre-page,.t-display,.t-h1,.t-h2,.t-h3,.t-h4){color:var(--cleo-v6-white)}
+body[data-cleo-ds="v6"] .surface-sombre :is(.t-body,.t-body-lg,.t-lead,.t-sm,li){color:var(--cleo-v6-on-dark-2)}
+body[data-cleo-ds="v6"] .surface-sombre :is(.t-caption,.t-micro,.t-label,.surtitre,.attenue){color:var(--cleo-v6-on-dark-3)}
+
 body[data-cleo-ds="v6"] main > section:first-child .champ-demo input{color:var(--cleo-v6-white); background:transparent; border-color:transparent}
 body[data-cleo-ds="v6"] main > section:first-child .champ-demo input::placeholder{color:rgba(255,255,255,.56)}
 
@@ -382,6 +395,10 @@ body[data-cleo-ds="v6"] main > section:not(:first-child).sur-sombre :is(.carte,.
   border-color:rgba(255,255,255,.90);
   box-shadow:var(--cleo-v6-shadow-card);
 }
+
+body[data-cleo-ds="v6"] .seg-citation .citation,
+body[data-cleo-ds="v6"] .seg-citation .citation p{color:var(--cleo-v6-ink)}
+body[data-cleo-ds="v6"] .seg-citation .t-sm{color:var(--cleo-v6-ink-2)}
 
 body[data-cleo-ds="v6"] main > section:not(:first-child).sur-sombre .surface-sombre :is(.t-hero,.t-titre-page,.t-display,.t-h1,.t-h2,.t-h3,.t-h4){color:var(--cleo-v6-white)}
 body[data-cleo-ds="v6"] main > section:not(:first-child).sur-sombre .surface-sombre :is(.t-body,.t-body-lg,.t-lead,.t-sm,.t-caption,.t-micro,.t-label){color:var(--cleo-v6-on-dark-2)}

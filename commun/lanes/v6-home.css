@@ -51,6 +51,9 @@ body[data-cleo-ds="v6"][data-v6-family="home"] main > .hero-epure .champ-demo:fo
 body[data-cleo-ds="v6"][data-v6-family="home"] main > .hero-epure .champ-demo input{
   min-height:44px;
   color:var(--cleo-v6-white);
+  background:transparent;
+  border-color:transparent;
+  box-shadow:none;
 }
 
 body[data-cleo-ds="v6"][data-v6-family="home"] main > .hero-epure .hero-globe{

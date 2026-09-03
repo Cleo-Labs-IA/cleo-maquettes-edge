@@ -464,7 +464,7 @@
   },
   "01-accueil-noir.html": {
    "titre": "Conformité produit automatisée, variante sombre | Cleo Labs",
-   "description": "La page d'accueil de la maquette en régime sombre : même contenu, même hiérarchie, les surfaces claires passées en champ profond DS Cleo V5.",
+   "description": "Variante de travail de la page d'accueil dans le Design System Cleo V6, avec un champ profond unique et une toile claire.",
    "source": "redige",
    "url_source": null,
    "appariement": "variante de rendu de 01-accueil.html, pas une page du site. Titre distinct pour ne pas dupliquer celui de l'accueil.",

@@ -10,6 +10,7 @@ import { chromium } from '/Users/naomiehalioua/cleo-landing/node_modules/playwri
 import sharp from '/Users/naomiehalioua/cleo-landing/node_modules/sharp/lib/index.js'
 import fs from 'fs'
 import path from 'path'
+import { htmlPourStructure, imageCasseeChargee } from './commun/audit-html.mjs'
 
 const SORTIE = '/Users/naomiehalioua/cleo-maquettes-edge/sortie'
 import { servir } from './commun/servir.mjs'
@@ -27,7 +28,7 @@ const existants = new Set(pages)
 const CHEMINS = JSON.parse(fs.readFileSync(path.join(SORTIE, '..', 'commun/chemins.json'), 'utf8'))
 const cheminsConnus = new Set(Object.values(CHEMINS.pages).map(c => c.chemin))
 for (const f of pages) {
-  const t = fs.readFileSync(path.join(SORTIE, f), 'utf8')
+  const t = htmlPourStructure(fs.readFileSync(path.join(SORTIE, f), 'utf8'))
   // Deux formes de lien interne coexistent : le fichier plat « 02-entreprise.html »
   // et le chemin propre « /fr/company ». L'ancienne regexp ne voyait que la
   // premiere, donc un chemin propre casse serait passe SANS AUCUN controle.
@@ -95,7 +96,7 @@ for (const f of pages) {
 
 // ── 4. STRUCTURE : équilibre des balises
 for (const f of pages) {
-  const t = fs.readFileSync(path.join(SORTIE, f), 'utf8')
+  const t = htmlPourStructure(fs.readFileSync(path.join(SORTIE, f), 'utf8'))
   for (const bal of ['div','section','ul','li','p','a','table','blockquote','aside','nav','footer','h1','h2','h3']) {
     const o = (t.match(new RegExp(`<${bal}\\b`, 'g')) || []).length
     const c = (t.match(new RegExp(`</${bal}>`, 'g')) || []).length
@@ -116,7 +117,6 @@ for (const w of [390, 768, 1280, 1920]) {
       largeur: document.documentElement.scrollWidth,
       police: getComputedStyle(document.body).fontFamily.split(',')[0].replace(/["']/g, ''),
       mono: [...document.querySelectorAll('*')].filter(e => /mono/i.test(getComputedStyle(e).fontFamily)).length,
-      imgKo: [...document.images].filter(i => !i.complete || i.naturalWidth === 0).length,
       emoji: (document.body.innerText.match(/[\u{1F300}-\u{1FAFF}\u{1F1E6}-\u{1F1FF}]/gu) || []).length,
       navs: [...document.body.children].filter(e => e.tagName === 'NAV').length,
       vides: [...document.querySelectorAll('h1,h2,h3')].filter(e => !e.textContent.trim()).length,
@@ -125,7 +125,6 @@ for (const w of [390, 768, 1280, 1920]) {
     if (w === 1280) {
       if (d.police !== 'Satoshi') note(f, 'police', d.police)
       if (d.mono) note(f, 'monospace', d.mono)
-      if (d.imgKo) note(f, 'image cassée', d.imgKo)
       if (d.emoji) note(f, 'emoji', d.emoji)
       if (d.navs > 1) note(f, 'barres en double', d.navs)
       if (d.vides) note(f, 'titre vide', d.vides)
@@ -141,10 +140,14 @@ for (const f of pages) {
   await p3.goto(URL_SORTIE + '/' + f); await p3.waitForTimeout(200)
   await p3.evaluate(async () => { const h = document.body.scrollHeight
     for (let y = 0; y < h; y += 480) { window.scrollTo(0, y); await new Promise(r => setTimeout(r, 45)) } })
-  await p3.waitForTimeout(900)
-  const bloques = await p3.evaluate(() =>
-    [...document.querySelectorAll('[data-anim],[data-anim-groupe]')].filter(e => getComputedStyle(e).opacity === '0').length)
-  if (bloques) note(f, 'bloc resté invisible', bloques)
+  await p3.waitForTimeout(1200)
+  const etat = await p3.evaluate(() => ({
+    bloques: [...document.querySelectorAll('[data-anim],[data-anim-groupe]')].filter(e => getComputedStyle(e).opacity === '0').length,
+    images: [...document.images].map(image => ({ complete: image.complete, naturalWidth: image.naturalWidth })),
+  }))
+  if (etat.bloques) note(f, 'bloc resté invisible', etat.bloques)
+  const imagesCassees = etat.images.filter(imageCasseeChargee).length
+  if (imagesCassees) note(f, 'image cassée', imagesCassees)
 }
 
 // ── 7. CONTRASTE des titres posés sur photo, mesuré AU PIXEL
@@ -306,6 +309,7 @@ if (soucis.length) {
   for (const s of soucis) (parType[s.quoi] ||= []).push(`${s.page} (${s.detail})`)
   for (const [t, l] of Object.entries(parType)) {
     console.log(`  ${t} — ${l.length}`)
-    l.slice(0, 6).forEach(x => console.log(`      ${x}`))
+    l.forEach(x => console.log(`      ${x}`))
   }
+  process.exitCode = 1
 } else console.log('  rien à signaler')

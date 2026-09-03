@@ -7,13 +7,31 @@ import fs from 'fs'
 import path from 'path'
 const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.mjs': 'text/javascript',
   '.webp': 'image/webp', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.json': 'application/json', '.txt': 'text/plain' }
+
+export function resoudreFichier(dossier, url) {
+  const racine = path.resolve(dossier)
+  const config = JSON.parse(fs.readFileSync(path.join(racine, 'vercel.json'), 'utf8'))
+  let u = decodeURIComponent(url.split('?')[0])
+  const redirection = config.redirects?.find(regle => regle.source === u)
+  if (redirection) u = redirection.destination
+  const reecriture = config.rewrites?.find(regle => regle.source === u)
+  if (reecriture) u = reecriture.destination
+
+  const fichier = path.resolve(racine, `.${u}`)
+  if (fichier.startsWith(`${racine}${path.sep}`) && fs.existsSync(fichier) && !fs.statSync(fichier).isDirectory()) return fichier
+  return path.join(racine, '404.html')
+}
+
+export function statutReponse(url, fichier) {
+  const u = decodeURIComponent(url.split('?')[0])
+  return path.basename(fichier) === '404.html' && u !== '/404.html' ? 404 : 200
+}
+
 export function servir(dossier) {
   return new Promise((res) => {
     const s = http.createServer((q, r) => {
-      let u = decodeURIComponent(q.url.split('?')[0])
-      if (u === '/') u = '/index.html'
-      const f = path.join(dossier, u)
-      if (!f.startsWith(dossier) || !fs.existsSync(f) || fs.statSync(f).isDirectory()) { r.statusCode = 404; r.end('404'); return }
+      const f = resoudreFichier(dossier, q.url)
+      r.statusCode = statutReponse(q.url, f)
       r.setHeader('Content-Type', TYPES[path.extname(f)] || 'application/octet-stream')
       fs.createReadStream(f).pipe(r)
     })
