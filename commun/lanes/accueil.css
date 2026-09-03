@@ -203,92 +203,53 @@
 
 
 /* ════════════════════════════════════════════════════════════════
-   « PENSÉ POUR LE TRAVAIL QUOTIDIEN », version du 03/09/2026 14:30 (« cette animation
-   est pas claire »). L'écran raconte UNE histoire, une chose à la fois, l'étape écrite
-   dans l'écran : 01 une parution arrive et se rattache à la référence · 02 elle devient
-   une règle, lue par produit, qualité, juridique · 03 le verdict tombe sur la référence.
-   Trois classes cumulées .p1 .p2 .p3 posées par le script, puis .fin ; boucle 6 fois
-   tant que l'écran est visible, un clic rejoue. Mouvement réduit : état final d'emblée.
-   Le bleu ne sert qu'à l'état actif (la ligne rattachée, l'étape en cours, la carte).
+   « PENSÉ POUR LE TRAVAIL QUOTIDIEN », direction B (03/09/2026, 14:05) : le produit au
+   centre, six parutions autour. Une parution s'allume, un trait part vers le produit :
+   il l'atteint et la ligne de la fiche apparaît avec son verdict, ou il s'arrête à
+   mi-chemin en gris. Le compteur tient le score. Le bleu = l'état actif, rien d'autre.
    ════════════════════════════════════════════════════════════════ */
-.quotidien-cartes .quotidien-carte{position:relative; border:1px solid var(--c-border); transition:border-color 0.35s ease-out, box-shadow 0.35s ease-out}
-.quotidien-carte .flux-rang{color:var(--c-text-3)}
-.quotidien-carte.actif{border-color:var(--c-blue); box-shadow:0 0 0 3px var(--c-blue-light), var(--shadow-md)}
-.quotidien-carte.actif .flux-rang{color:var(--c-blue)}
-.quotidien-anim{max-width:960px; margin:40px auto 0; cursor:pointer}
-.quotidien-ecran{position:relative; z-index:1; text-align:left}
-.quotidien-ecran .ecran-app{box-shadow:var(--shadow-xl)}
-.quotidien-legende{max-width:720px; margin:16px auto 0}
-
-/* Les trois étapes, écrites dans l'écran */
-.qe-etapes{display:flex; gap:8px; padding:12px 18px; background:var(--c-white); border-bottom:1px solid var(--c-border); flex-wrap:wrap}
-.qe-etape{display:inline-flex; align-items:center; gap:8px; font-size:0.8125rem; color:var(--c-text-3); padding:6px 12px 6px 8px; border-radius:var(--r-pill); border:1px solid transparent; transition:color 0.3s ease-out, border-color 0.3s ease-out, background 0.3s ease-out}
-.qe-etape b{font-weight:600; letter-spacing:0.08em; font-size:0.75rem; color:var(--c-text-3); transition:color 0.3s ease-out}
-.p1 .qe-etape[data-n="1"],.p2 .qe-etape[data-n="2"],.p3 .qe-etape[data-n="3"]{color:var(--c-ink)}
-.p1:not(.p2) .qe-etape[data-n="1"],.p2:not(.p3) .qe-etape[data-n="2"],.p3:not(.fin) .qe-etape[data-n="3"]{border-color:var(--c-signal-line); background:var(--c-blue-light)}
-.p1:not(.p2) .qe-etape[data-n="1"] b,.p2:not(.p3) .qe-etape[data-n="2"] b,.p3:not(.fin) .qe-etape[data-n="3"] b{color:var(--c-blue)}
-
-.qe-corps{display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:18px; padding:18px; background:var(--c-surface); align-items:start}
-.qe-corps > *{min-width:0}
-.qe-gauche{display:flex; flex-direction:column; gap:14px}
-.qe-fiche{max-width:none; box-shadow:var(--shadow-sm)}
-
-/* 01 · la parution */
-.qe-parution{background:#fff; border-radius:var(--r-md); padding:16px 18px; box-shadow:var(--shadow-sm); border-left:2px solid var(--c-border);
-  opacity:0; transform:translateY(-10px); transition:opacity 0.5s var(--ease-reveal), transform 0.5s var(--ease-reveal), border-color 0.3s ease-out}
-.qe-parution-tete{display:flex; justify-content:space-between; gap:12px; align-items:baseline; margin-bottom:8px}
-.qe-parution-titre{font-weight:600; color:var(--c-ink); margin-bottom:6px}
-.qe-cit{color:var(--c-text); line-height:1.5}
-.qe-rattache{display:flex; align-items:center; gap:8px; margin-top:12px; padding-top:10px; border-top:1px solid var(--c-border); font-size:0.8125rem; color:var(--c-text-2);
-  opacity:0; transform:translateX(-8px); transition:opacity 0.4s var(--ease-reveal), transform 0.4s var(--ease-reveal)}
-.qe-rattache b{color:var(--c-ink); font-weight:600}
-.qe-rattache svg{color:var(--c-blue); flex:none}
-.p1 .qe-parution{opacity:1; transform:none; border-left-color:var(--c-blue)}
-.p1 .qe-rattache{opacity:1; transform:none; transition-delay:0.7s}
-.qe-cible{transition:background 0.4s ease-out, box-shadow 0.4s ease-out}
-.p1 .qe-cible{background:var(--c-blue-light); box-shadow:inset 3px 0 0 var(--c-blue); transition-delay:0.9s}
-
-/* 02 · la règle, lue par tous */
-.qe-regle{opacity:0; transform:translateY(10px); transition:opacity 0.5s var(--ease-reveal), transform 0.5s var(--ease-reveal)}
-.qe-regle .pl-champ{opacity:0; transform:translateY(5px); transition:opacity 0.4s var(--ease-reveal), transform 0.4s var(--ease-reveal)}
-.qe-lecteurs{display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:14px; padding-top:12px; border-top:1px solid var(--c-border)}
-.qe-lecteur{display:inline-flex; align-items:center; padding:5px 12px; border-radius:var(--r-pill); background:var(--c-field-pale); border:1px solid var(--c-border); font-size:0.8125rem; font-weight:500; color:var(--c-text);
-  opacity:0; transform:scale(0.85); transition:opacity 0.35s var(--ease-ui), transform 0.35s var(--ease-ui)}
-.p2 .qe-regle{opacity:1; transform:none}
-.p2 .qe-regle .pl-champ{opacity:1; transform:none}
-.p2 .qe-regle .pl-champ:nth-of-type(1){transition-delay:0.3s}
-.p2 .qe-regle .pl-champ:nth-of-type(2){transition-delay:0.5s}
-.p2 .qe-regle .pl-champ:nth-of-type(3){transition-delay:0.7s}
-.p2 .qe-regle .pl-champ:nth-of-type(4){transition-delay:0.9s}
-.p2 .qe-regle .pl-champ:nth-of-type(5){transition-delay:1.1s}
-.p2 .qe-lecteur{opacity:1; transform:none}
-.p2 .qe-lecteur:nth-of-type(1){transition-delay:1.5s}
-.p2 .qe-lecteur:nth-of-type(2){transition-delay:1.7s}
-.p2 .qe-lecteur:nth-of-type(3){transition-delay:1.9s}
-
-/* 03 · le verdict sur la référence */
-.qe-badges{position:relative; display:inline-flex; justify-content:flex-end}
-.qe-apres{position:absolute; right:0; top:0; opacity:0; transform:scale(0.7); transition:opacity 0.35s var(--ease-ui), transform 0.35s var(--ease-ui)}
-.qe-avant{transition:opacity 0.3s ease-out}
-.p3 .qe-avant{opacity:0}
-.p3 .qe-apres{opacity:1; transform:none; transition-delay:0.2s}
-.p3 .qe-cible{background:transparent; box-shadow:none; transition-delay:0.4s}
-.qe-jauge{display:block; width:68%; height:100%; background:var(--c-ink); border-radius:var(--r-pill); transition:width 0.8s var(--ease-reveal)}
-.p3 .qe-jauge{width:72%; transition-delay:0.3s}
-.qe-verdict{padding:12px 14px 2px; opacity:0; transition:opacity 0.4s var(--ease-reveal)}
-.qe-verdict .pl-pastille{background:rgba(0,0,0,0.18); transition:background 0.4s ease-out}
-.p3 .qe-verdict{opacity:1; transition-delay:0.7s}
-.p3 .qe-verdict .pl-pastille{background:var(--c-pass); transition-delay:0.9s}
-
+.radar{position:relative; height:620px; padding:0; overflow:hidden; cursor:pointer; background:var(--c-surface)}
+.radar-traits{position:absolute; inset:0; width:100%; height:100%; pointer-events:none}
+.radar-trait{stroke:var(--c-border-hover); stroke-width:1.5; fill:none; transition:stroke-dashoffset 0.7s var(--ease-reveal), stroke 0.3s ease-out}
+.radar-trait.plein{stroke:var(--c-blue)}
+.radar-trait.partiel{stroke:var(--c-border-hover); stroke-dasharray:4 4 !important}
+.radar-source{position:absolute; left:var(--x); top:var(--y); width:236px; background:#fff; border:1px solid var(--c-border); border-radius:var(--r-md);
+  padding:12px 14px; box-shadow:var(--shadow-sm); opacity:0.55; transition:opacity 0.4s ease-out, border-color 0.3s ease-out, box-shadow 0.3s ease-out, transform 0.3s ease-out}
+.radar-source.radar-droite{transform:translateX(-100%)}
+.radar-autorite{display:block; font-size:0.75rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--c-text-3)}
+.radar-texte{display:block; font-size:0.875rem; line-height:1.4; color:var(--c-text); margin-top:4px}
+.radar-etat{display:block; font-size:0.8125rem; margin-top:8px; min-height:1.3em; color:var(--c-text-3)}
+.radar-source.actif{opacity:1; border-color:var(--c-blue); box-shadow:0 0 0 3px var(--c-blue-light), var(--shadow-md)}
+.radar-source.touche{border-color:var(--c-blue); box-shadow:var(--shadow-sm)}
+.radar-source.touche .radar-etat{color:var(--c-blue); font-weight:500}
+.radar-source.hors{opacity:0.7; border-color:var(--c-border); box-shadow:none}
+.radar-source.hors .radar-texte{color:var(--c-text-3)}
+.radar-produit{position:absolute; left:50%; top:7%; transform:translateX(-50%); width:240px; text-align:center}
+.radar-produit img{width:132px; height:132px; object-fit:contain; margin:0 auto 10px; display:block; background:#fff; border-radius:var(--r-md); padding:10px; border:1px solid var(--c-border); box-shadow:var(--shadow-md)}
+.radar-nom{font-weight:600; color:var(--c-ink)}
+.radar-ref{font-size:0.8125rem; color:var(--c-text-3)}
+.radar-fiche{position:absolute; left:50%; top:52%; transform:translateX(-50%); width:360px; background:#fff; border:1px solid var(--c-border); border-radius:var(--r-md); box-shadow:var(--shadow-sm); overflow:hidden}
+.radar-fiche-tete{display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding:10px 14px; background:var(--c-surface); border-bottom:1px solid var(--c-border)}
+.radar-compte{font-size:0.8125rem; color:var(--c-text-2)}
+.radar-compte b{color:var(--c-ink); font-weight:600}
+/* Une ligne n'occupe de place qu'une fois arrivée : la fiche grandit au fil des verdicts. */
+.radar-ligne{display:none; justify-content:space-between; align-items:center; gap:10px; padding:10px 14px; font-size:0.875rem; color:var(--c-text-2); border-top:1px solid var(--c-border)}
+.radar-ligne.vu{display:flex; animation:radar-arrive 0.45s var(--ease-reveal)}
+@keyframes radar-arrive{from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none}}
+.radar-fiche-tete .t-label{white-space:nowrap}
+.radar-legende{max-width:720px; margin:14px auto 0}
+.radar-points{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:32px; margin-top:48px}
+.radar-points > *{min-width:0}
+@media (max-width:1024px){ .radar-source{width:200px} .radar-fiche{width:320px} }
 @media (max-width:760px){
-  .qe-corps{grid-template-columns:minmax(0,1fr)}
-  .qe-etapes{gap:4px; padding:10px 12px}
-  .qe-etape{font-size:0.875rem}
-  .qe-rattache,.qe-lecteur,.qe-parution .t-caption,.qe-parution .t-label{font-size:0.875rem}
+  .radar{height:auto; padding:16px; cursor:default}
+  .radar-traits{display:none}
+  .radar-source,.radar-source.radar-droite{position:static; transform:none; width:auto; margin-bottom:8px; opacity:1}
+  .radar-produit,.radar-fiche{position:static; transform:none; width:auto; margin:16px auto 0}
+  .radar-points{grid-template-columns:minmax(0,1fr); gap:20px; margin-top:32px}
+  .radar-autorite{font-size:0.875rem} .radar-etat,.radar-ref,.radar-compte,.radar-ligne{font-size:0.875rem}
 }
-@media (prefers-reduced-motion: reduce){
-  .quotidien-anim *{transition:none !important}
-}
+@media (prefers-reduced-motion: reduce){ .radar *{transition:none !important} }
 
 /* ── LA SÉCURITÉ DANS LE HERO (03/09/2026) : six garanties du vrai site, sur le champ
       profond, chaque carte portant sa propre encre. Les icônes sont neutres : le bleu

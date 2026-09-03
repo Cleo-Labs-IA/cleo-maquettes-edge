@@ -70,114 +70,128 @@
   </div>
 </section>
 
-<!-- ═══ LE TRAVAIL QUOTIDIEN ═══ trois raisons, trois cartes, et l'écran produit
-     animé qui les rejoue. Le 03/09/2026 : « rends-le plus visuel, avec à la fin
-     l'animation ». -->
+<!-- ═══ LE TRAVAIL QUOTIDIEN ═══ direction B, choisie par Naomie le 03/09/2026 : le
+     produit au centre, les parutions autour. Celle qui le touche trace un trait jusqu'à lui
+     et devient une ligne de sa fiche avec son verdict ; celle qui ne le touche pas s'arrête
+     à mi-chemin, en gris. Le geste validé le 03/08 sur la veille. Les six parutions sont
+     des textes réels déjà présents sur le site ; aucun chiffre nouveau. -->
 <section class="section sur-clair-fond" style="padding-top:0">
   <div class="conteneur">
-    <div class="entete-section" data-anim="monte">
+    <div class="entete-section centre" data-anim="monte" style="align-items:center">
       <div class="surtitre">Built for product compliance daily work</div>
-      <h2 class="t-display">From the Official Journal notice to the verdict on your reference.</h2>
-    </div>
-    <div class="g3 quotidien-cartes" data-anim-groupe>
-      <div class="carte p32 quotidien-carte" data-anim="monte-court">
-        <div class="flux-rang">01</div>
-        <h3 class="t-h2" style="margin:8px 0 10px">The notice arrives attached</h3>
-        <p class="t-body" style="margin:0">An Official Journal notice arrives tied to the references it touches, not in a list to sort.</p>
-      </div>
-      <div class="carte p32 quotidien-carte" data-anim="monte-court">
-        <div class="flux-rang">02</div>
-        <h3 class="t-h2" style="margin:8px 0 10px">The same rule for everyone</h3>
-        <p class="t-body" style="margin:0">The same rule serves your product, quality and legal teams: field, operator, threshold, article, date.</p>
-      </div>
-      <div class="carte p32 quotidien-carte" data-anim="monte-court">
-        <div class="flux-rang">03</div>
-        <h3 class="t-h2" style="margin:8px 0 10px">Nothing to reconcile</h3>
-        <p class="t-body" style="margin:0">Nothing to reconcile by hand between two tools: it all starts from the same rule.</p>
-      </div>
+      <h2 class="t-display mesure-centree">From the Official Journal notice to the verdict on your reference.</h2>
     </div>
 
-    <!-- L'ÉCRAN PRODUIT, animé en trois temps qui suivent les trois cartes : la fiche
-         se remplit (01), la citation puis la règle encodée champ par champ (02), le
-         verdict (03). Le déroulé est en CSS, déclenché par la classe .vu du moteur de
-         mouvement ; le script n'allume que la carte du moment. Mouvement réduit : tout
-         est là d'emblée. -->
-    <div class="quotidien-anim" data-anim="monte-court">
-      <div class="quotidien-ecran">
-        <div class="ecran-app">
-          <div class="ecran-tete"><div class="pastilles"><i></i><i></i><i></i></div><span class="fil-ariane">Cleo · Kids straight jeans · DNM-4412</span></div>
-          <div class="qe-etapes" aria-hidden="true">
-            <span class="qe-etape" data-n="1"><b>01</b>A notice arrives, attached to the reference</span>
-            <span class="qe-etape" data-n="2"><b>02</b>It becomes a rule, the same for everyone</span>
-            <span class="qe-etape" data-n="3"><b>03</b>The verdict lands on the reference</span>
-          </div>
-          <div class="qe-corps">
-            <div class="qe-gauche">
-              <div class="qe-parution">
-                <div class="qe-parution-tete"><span class="t-label">Notice · Official Journal</span><span class="t-caption">14 August 2011</span></div>
-                <div class="qe-parution-titre">CPSIA, section 101 (a)</div>
-                <div class="t-caption qe-cit">“Lead content does not exceed 100 ppm by weight of accessible parts.”</div>
-                <div class="qe-rattache"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Attached to <b>Kids straight jeans · DNM-4412</b></span></div>
-              </div>
-              <div class="pl-regle qe-regle">
-                <div class="t-h3">Lead content of accessible parts</div>
-                <div class="pl-champ"><span>field</span><b>accessible material</b></div>
-                <div class="pl-champ"><span>operator</span><b>does not exceed</b></div>
-                <div class="pl-champ"><span>threshold</span><b>100 ppm by weight</b></div>
-                <div class="pl-champ"><span>article</span><b>CPSIA, section 101 (a)</b></div>
-                <div class="pl-champ"><span>in force</span><b>14 August 2011</b></div>
-                <div class="qe-lecteurs"><span class="t-caption">Read by</span><span class="qe-lecteur">Product</span><span class="qe-lecteur">Quality</span><span class="qe-lecteur">Legal</span></div>
-              </div>
-            </div>
-            <div class="fiche hp-fiche qe-fiche">
-              <div class="fiche-tete">
-                <img class="fiche-vignette" src="img:jean" alt="">
-                <div style="flex:1">
-                  <div class="fiche-nom">Kids straight jeans</div>
-                  <div class="fiche-ref">Reference DNM-4412</div>
-                </div>
-              </div>
-              <div class="fiche-ligne" style="border-top:none;padding-top:0">
-                <div class="jauge"><span class="qe-jauge"></span></div>
-                <span class="qe-compte" style="font-weight:600;color:var(--cleo-ink);white-space:nowrap"><b>17</b> / 25 covered</span>
-              </div>
-              <div class="fiche-entete-pays"><span>US</span> United States</div>
-              <div class="fiche-ligne qe-cible"><span>CPSIA, lead</span><span class="qe-badges"><span class="marqueur m-attente qe-avant">To check</span><span class="marqueur m-couvert qe-apres">Covered</span></span></div>
-              <div class="fiche-ligne"><span>Proposition 65</span><span class="marqueur m-manquant">Data missing</span></div>
-              <div class="fiche-entete-pays"><span>EU</span> European Union</div>
-              <div class="fiche-ligne"><span>REACH Annex XVII</span><span class="marqueur m-couvert">Covered</span></div>
-              <div class="fiche-ligne"><span>Textile labelling 1007/2011</span><span class="marqueur m-attente">To check</span></div>
-              <div class="pl-verdict qe-verdict"><span class="pl-pastille"></span>testable against a reference</div>
-            </div>
-          </div>
-        </div>
+    <div class="radar" data-anim="monte-court" data-touche="touches this product" data-hors="does not touch this product">
+      <svg class="radar-traits" aria-hidden="true">
+        <line class="radar-trait" data-i="0"></line>
+        <line class="radar-trait" data-i="1"></line>
+        <line class="radar-trait" data-i="2"></line>
+        <line class="radar-trait" data-i="3"></line>
+        <line class="radar-trait" data-i="4"></line>
+        <line class="radar-trait" data-i="5"></line>
+      </svg>
+      <div class="radar-source" data-i="0" data-ligne="0" style="--x:5%;--y:9%">
+        <span class="radar-autorite">CPSC · United States</span>
+        <span class="radar-texte">CPSIA, section 101 (a), lead content</span>
+        <span class="radar-etat"></span>
       </div>
-      <p class="t-caption centre quotidien-legende">One notice, one rule, one verdict on the reference: what the screen replays on a loop.</p>
+      <div class="radar-source radar-droite" data-i="1" data-ligne="1" style="--x:95%;--y:9%">
+        <span class="radar-autorite">ECHA · European Union</span>
+        <span class="radar-texte">REACH, Annex XVII</span>
+        <span class="radar-etat"></span>
+      </div>
+      <div class="radar-source" data-i="2" data-ligne="2" style="--x:5%;--y:40%">
+        <span class="radar-autorite">OEHHA · California</span>
+        <span class="radar-texte">Proposition 65</span>
+        <span class="radar-etat"></span>
+      </div>
+      <div class="radar-source radar-droite" data-i="3" data-ligne="3" style="--x:95%;--y:40%">
+        <span class="radar-autorite">Official Journal of the EU</span>
+        <span class="radar-texte">Regulation (EU) 1007/2011, textile labelling</span>
+        <span class="radar-etat"></span>
+      </div>
+      <div class="radar-source" data-i="4" data-ligne="-1" style="--x:5%;--y:71%">
+        <span class="radar-autorite">Official Journal of the EU</span>
+        <span class="radar-texte">Delegated Regulation (EU) 2025/1920, UDI rules for medical devices</span>
+        <span class="radar-etat"></span>
+      </div>
+      <div class="radar-source radar-droite" data-i="5" data-ligne="-1" style="--x:95%;--y:71%">
+        <span class="radar-autorite">FDA · United States</span>
+        <span class="radar-texte">21 CFR 101, food labelling</span>
+        <span class="radar-etat"></span>
+      </div>
+      <div class="radar-produit">
+        <img src="img:jean" alt="">
+        <div class="radar-nom">Kids straight jeans</div>
+        <div class="radar-ref">Reference DNM-4412</div>
+      </div>
+      <div class="radar-fiche">
+        <div class="radar-fiche-tete"><span class="t-label">Its record</span><span class="radar-compte"><b>0</b> / 6 notices touch this product</span></div>
+        <div class="radar-ligne" data-i="0"><span>CPSIA, lead</span><span class="marqueur m-couvert">Covered</span></div>
+        <div class="radar-ligne" data-i="1"><span>REACH Annex XVII</span><span class="marqueur m-couvert">Covered</span></div>
+        <div class="radar-ligne" data-i="2"><span>Proposition 65</span><span class="marqueur m-manquant">Data missing</span></div>
+        <div class="radar-ligne" data-i="3"><span>Textile labelling 1007/2011</span><span class="marqueur m-attente">To check</span></div>
+      </div>
     </div>
+    <p class="t-caption centre radar-legende">Six real notices, one product: what the screen replays. Click to restart.</p>
+
+    <div class="radar-points" data-anim-groupe>
+      <div><span class="flux-rang">01</span><p class="t-body" style="margin:8px 0 0">An Official Journal notice arrives tied to the references it touches, not in a list to sort.</p></div>
+      <div><span class="flux-rang">02</span><p class="t-body" style="margin:8px 0 0">The same rule serves your product, quality and legal teams: field, operator, threshold, article, date.</p></div>
+      <div><span class="flux-rang">03</span><p class="t-body" style="margin:8px 0 0">Nothing to reconcile by hand between two tools: it all starts from the same rule.</p></div>
+    </div>
+
     <script>
     (function(){
-      var w = document.querySelector('.quotidien-anim'); if (!w) return;
-      var cartes = document.querySelectorAll('.quotidien-carte');
-      var compte = w.querySelector('.qe-compte b');
+      var r = document.querySelector('.radar'); if (!r) return;
+      var sources = [].slice.call(r.querySelectorAll('.radar-source')), traits = [].slice.call(r.querySelectorAll('.radar-trait'));
+      var lignes = [].slice.call(r.querySelectorAll('.radar-ligne')), compte = r.querySelector('.radar-compte b'), img = r.querySelector('.radar-produit img');
+      var TOUCHE = r.getAttribute('data-touche'), HORS = r.getAttribute('data-hors');
       var reduit = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var allume = function(n){ for (var k = 0; k < cartes.length; k++) cartes[k].classList.toggle('actif', k === n); };
-      var etat = function(c){ w.classList.remove('p1', 'p2', 'p3', 'fin'); if (c) w.classList.add.apply(w.classList, c); };
-      if (reduit) { etat(['p1', 'p2', 'p3', 'fin']); if (compte) compte.textContent = '18'; return; }
-      var minuteries = [], tour = 0;
+      var etroit = function(){ return window.innerWidth < 760; };
+      /* Les traits : du bord de la parution au centre du produit, mesurés à la mise en page. */
+      var longueurs = [];
+      function poser(){
+        var R = r.getBoundingClientRect(), P = img.getBoundingClientRect();
+        var cx = P.left + P.width / 2 - R.left, cy = P.top + P.height / 2 - R.top;
+        sources.forEach(function(s, i){
+          var B = s.getBoundingClientRect(), droite = s.classList.contains('radar-droite');
+          var x1 = (droite ? B.left : B.right) - R.left, y1 = B.top + B.height / 2 - R.top;
+          var t = traits[i]; t.setAttribute('x1', x1); t.setAttribute('y1', y1); t.setAttribute('x2', cx); t.setAttribute('y2', cy);
+          var L = Math.hypot(cx - x1, cy - y1); longueurs[i] = L;
+          t.style.strokeDasharray = L; if (!t.classList.contains('plein') && !t.classList.contains('partiel')) t.style.strokeDashoffset = L;
+        });
+      }
+      function tracer(i, touche){ var t = traits[i]; t.classList.add(touche ? 'plein' : 'partiel'); t.style.strokeDashoffset = touche ? 0 : longueurs[i] * 0.55; }
+      function effacer(i){ var t = traits[i]; t.classList.remove('plein', 'partiel'); t.style.strokeDashoffset = longueurs[i]; }
+      var minuteries = [], n = 0, tours = 0, visible = false, lance = false;
       var plus = function(ms, fn){ minuteries.push(setTimeout(fn, ms)); };
-      var joue = function(){
-        minuteries.forEach(clearTimeout); minuteries = [];
-        etat(null); if (compte) compte.textContent = '17'; allume(-1);
-        plus(400, function(){ w.classList.add('p1'); allume(0); });
-        plus(2600, function(){ w.classList.add('p2'); allume(1); });
-        plus(5200, function(){ w.classList.add('p3'); allume(2); if (compte) compte.textContent = '18'; });
-        plus(7400, function(){ w.classList.add('fin'); allume(-1); });
-        plus(9600, function(){ tour++; if (tour < 6 && visible) joue(); else etat(['p1', 'p2', 'p3', 'fin']); });
-      };
-      var visible = false, lance = false;
-      var io = new IntersectionObserver(function(es){ es.forEach(function(e){ visible = e.isIntersecting; if (visible && !lance) { lance = true; joue(); } }); }, { threshold: 0.35 });
-      io.observe(w);
-      w.addEventListener('click', function(){ tour = 0; joue(); });
+      function raz(){
+        minuteries.forEach(clearTimeout); minuteries = []; n = 0; compte.textContent = '0';
+        sources.forEach(function(s){ s.classList.remove('actif', 'touche', 'hors'); s.querySelector('.radar-etat').textContent = ''; });
+        lignes.forEach(function(l){ l.classList.remove('vu'); }); traits.forEach(function(t, i){ effacer(i); });
+      }
+      function resoudre(s, i){
+        var li = +s.getAttribute('data-ligne'), touche = li >= 0;
+        s.classList.add(touche ? 'touche' : 'hors'); s.querySelector('.radar-etat').textContent = touche ? TOUCHE : HORS;
+        tracer(i, touche);
+        if (touche) { n++; compte.textContent = String(n); var l = lignes[li]; if (l) l.classList.add('vu'); }
+      }
+      function final(){ raz(); sources.forEach(function(s, i){ s.classList.add('actif'); resoudre(s, i); }); }
+      function joue(){
+        raz(); poser();
+        sources.forEach(function(s, i){
+          plus(500 + i * 1500, function(){ s.classList.add('actif'); });
+          plus(500 + i * 1500 + 750, function(){ resoudre(s, i); });
+        });
+        plus(500 + sources.length * 1500 + 2600, function(){ tours++; if (tours < 5 && visible) joue(); });
+      }
+      poser(); if (typeof ResizeObserver !== 'undefined') new ResizeObserver(poser).observe(r); else window.addEventListener('resize', poser);
+      if (reduit) { final(); return; }
+      var io = new IntersectionObserver(function(es){ es.forEach(function(e){ visible = e.isIntersecting; if (visible && !lance) { lance = true; joue(); } }); }, { threshold: 0.3 });
+      io.observe(r);
+      r.addEventListener('click', function(){ tours = 0; joue(); });
     })();
     </script>
   </div>

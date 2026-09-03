@@ -70,114 +70,128 @@
   </div>
 </section>
 
-<!-- ═══ LE TRAVAIL QUOTIDIEN ═══ trois raisons, trois cartes, et l'écran produit
-     animé qui les rejoue. Le 03/09/2026 : « rends-le plus visuel, avec à la fin
-     l'animation ». -->
+<!-- ═══ LE TRAVAIL QUOTIDIEN ═══ direction B, choisie par Naomie le 03/09/2026 : le
+     produit au centre, les parutions autour. Celle qui le touche trace un trait jusqu'à lui
+     et devient une ligne de sa fiche avec son verdict ; celle qui ne le touche pas s'arrête
+     à mi-chemin, en gris. Le geste validé le 03/08 sur la veille. Les six parutions sont
+     des textes réels déjà présents sur le site ; aucun chiffre nouveau. -->
 <section class="section sur-clair-fond" style="padding-top:0">
   <div class="conteneur">
-    <div class="entete-section" data-anim="monte">
+    <div class="entete-section centre" data-anim="monte" style="align-items:center">
       <div class="surtitre">Pensé pour le travail quotidien de la conformité produit</div>
-      <h2 class="t-display">De la parution au Journal officiel au verdict sur votre référence.</h2>
-    </div>
-    <div class="g3 quotidien-cartes" data-anim-groupe>
-      <div class="carte p32 quotidien-carte" data-anim="monte-court">
-        <div class="flux-rang">01</div>
-        <h3 class="t-h2" style="margin:8px 0 10px">La parution arrive rattachée</h3>
-        <p class="t-body" style="margin:0">Une parution au Journal officiel arrive rattachée aux références qu'elle touche, pas dans une liste à trier.</p>
-      </div>
-      <div class="carte p32 quotidien-carte" data-anim="monte-court">
-        <div class="flux-rang">02</div>
-        <h3 class="t-h2" style="margin:8px 0 10px">La même règle pour tous</h3>
-        <p class="t-body" style="margin:0">La même règle sert vos équipes produit, qualité et juridique : champ, opérateur, seuil, article, date.</p>
-      </div>
-      <div class="carte p32 quotidien-carte" data-anim="monte-court">
-        <div class="flux-rang">03</div>
-        <h3 class="t-h2" style="margin:8px 0 10px">Rien à rapprocher</h3>
-        <p class="t-body" style="margin:0">Rien à rapprocher à la main entre deux outils : tout part de la même règle.</p>
-      </div>
+      <h2 class="t-display mesure-centree">De la parution au Journal officiel au verdict sur votre référence.</h2>
     </div>
 
-    <!-- L'ÉCRAN PRODUIT, animé en trois temps qui suivent les trois cartes : la fiche
-         se remplit (01), la citation puis la règle encodée champ par champ (02), le
-         verdict (03). Le déroulé est en CSS, déclenché par la classe .vu du moteur de
-         mouvement ; le script n'allume que la carte du moment. Mouvement réduit : tout
-         est là d'emblée. -->
-    <div class="quotidien-anim" data-anim="monte-court">
-      <div class="quotidien-ecran">
-        <div class="ecran-app">
-          <div class="ecran-tete"><div class="pastilles"><i></i><i></i><i></i></div><span class="fil-ariane">Cleo · Jean droit enfant · DNM-4412</span></div>
-          <div class="qe-etapes" aria-hidden="true">
-            <span class="qe-etape" data-n="1"><b>01</b>Une parution arrive, rattachée à la référence</span>
-            <span class="qe-etape" data-n="2"><b>02</b>Elle devient une règle, la même pour tous</span>
-            <span class="qe-etape" data-n="3"><b>03</b>Le verdict tombe sur la référence</span>
-          </div>
-          <div class="qe-corps">
-            <div class="qe-gauche">
-              <div class="qe-parution">
-                <div class="qe-parution-tete"><span class="t-label">Parution · Journal officiel</span><span class="t-caption">14 août 2011</span></div>
-                <div class="qe-parution-titre">CPSIA, section 101 (a)</div>
-                <div class="t-caption qe-cit">« La teneur en plomb ne dépasse pas 100 ppm en poids des parties accessibles. »</div>
-                <div class="qe-rattache"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Rattachée à <b>Jean droit enfant · DNM-4412</b></span></div>
-              </div>
-              <div class="pl-regle qe-regle">
-                <div class="t-h3">Teneur en plomb des parties accessibles</div>
-                <div class="pl-champ"><span>champ</span><b>matière accessible</b></div>
-                <div class="pl-champ"><span>opérateur</span><b>ne dépasse pas</b></div>
-                <div class="pl-champ"><span>seuil</span><b>100 ppm en poids</b></div>
-                <div class="pl-champ"><span>article</span><b>CPSIA, section 101 (a)</b></div>
-                <div class="pl-champ"><span>en vigueur</span><b>14 août 2011</b></div>
-                <div class="qe-lecteurs"><span class="t-caption">Lue par</span><span class="qe-lecteur">Produit</span><span class="qe-lecteur">Qualité</span><span class="qe-lecteur">Juridique</span></div>
-              </div>
-            </div>
-            <div class="fiche hp-fiche qe-fiche">
-              <div class="fiche-tete">
-                <img class="fiche-vignette" src="img:jean" alt="">
-                <div style="flex:1">
-                  <div class="fiche-nom">Jean droit enfant</div>
-                  <div class="fiche-ref">Référence DNM-4412</div>
-                </div>
-              </div>
-              <div class="fiche-ligne" style="border-top:none;padding-top:0">
-                <div class="jauge"><span class="qe-jauge"></span></div>
-                <span class="qe-compte" style="font-weight:600;color:var(--cleo-ink);white-space:nowrap"><b>17</b> / 25 couvertes</span>
-              </div>
-              <div class="fiche-entete-pays"><span>US</span> États-Unis</div>
-              <div class="fiche-ligne qe-cible"><span>CPSIA, plomb</span><span class="qe-badges"><span class="marqueur m-attente qe-avant">À vérifier</span><span class="marqueur m-couvert qe-apres">Couvert</span></span></div>
-              <div class="fiche-ligne"><span>Proposition 65</span><span class="marqueur m-manquant">Donnée manquante</span></div>
-              <div class="fiche-entete-pays"><span>UE</span> Union européenne</div>
-              <div class="fiche-ligne"><span>REACH annexe XVII</span><span class="marqueur m-couvert">Couvert</span></div>
-              <div class="fiche-ligne"><span>Étiquetage textile 1007/2011</span><span class="marqueur m-attente">À vérifier</span></div>
-              <div class="pl-verdict qe-verdict"><span class="pl-pastille"></span>testable sur une référence</div>
-            </div>
-          </div>
-        </div>
+    <div class="radar" data-anim="monte-court" data-touche="touche ce produit" data-hors="ne touche pas ce produit">
+      <svg class="radar-traits" aria-hidden="true">
+        <line class="radar-trait" data-i="0"></line>
+        <line class="radar-trait" data-i="1"></line>
+        <line class="radar-trait" data-i="2"></line>
+        <line class="radar-trait" data-i="3"></line>
+        <line class="radar-trait" data-i="4"></line>
+        <line class="radar-trait" data-i="5"></line>
+      </svg>
+      <div class="radar-source" data-i="0" data-ligne="0" style="--x:5%;--y:9%">
+        <span class="radar-autorite">CPSC · États-Unis</span>
+        <span class="radar-texte">CPSIA, section 101 (a), teneur en plomb</span>
+        <span class="radar-etat"></span>
       </div>
-      <p class="t-caption centre quotidien-legende">Une parution, une règle, un verdict sur la référence : ce que l'écran rejoue en boucle.</p>
+      <div class="radar-source radar-droite" data-i="1" data-ligne="1" style="--x:95%;--y:9%">
+        <span class="radar-autorite">ECHA · Union européenne</span>
+        <span class="radar-texte">REACH, annexe XVII</span>
+        <span class="radar-etat"></span>
+      </div>
+      <div class="radar-source" data-i="2" data-ligne="2" style="--x:5%;--y:40%">
+        <span class="radar-autorite">OEHHA · Californie</span>
+        <span class="radar-texte">Proposition 65</span>
+        <span class="radar-etat"></span>
+      </div>
+      <div class="radar-source radar-droite" data-i="3" data-ligne="3" style="--x:95%;--y:40%">
+        <span class="radar-autorite">Journal officiel de l'UE</span>
+        <span class="radar-texte">Règlement (UE) 1007/2011, étiquetage textile</span>
+        <span class="radar-etat"></span>
+      </div>
+      <div class="radar-source" data-i="4" data-ligne="-1" style="--x:5%;--y:71%">
+        <span class="radar-autorite">Journal officiel de l'UE</span>
+        <span class="radar-texte">Règlement délégué (UE) 2025/1920, règles UDI des dispositifs médicaux</span>
+        <span class="radar-etat"></span>
+      </div>
+      <div class="radar-source radar-droite" data-i="5" data-ligne="-1" style="--x:95%;--y:71%">
+        <span class="radar-autorite">FDA · États-Unis</span>
+        <span class="radar-texte">21 CFR 101, étiquetage des denrées alimentaires</span>
+        <span class="radar-etat"></span>
+      </div>
+      <div class="radar-produit">
+        <img src="img:jean" alt="">
+        <div class="radar-nom">Jean droit enfant</div>
+        <div class="radar-ref">Référence DNM-4412</div>
+      </div>
+      <div class="radar-fiche">
+        <div class="radar-fiche-tete"><span class="t-label">Sa fiche</span><span class="radar-compte"><b>0</b> / 6 parutions touchent ce produit</span></div>
+        <div class="radar-ligne" data-i="0"><span>CPSIA, plomb</span><span class="marqueur m-couvert">Couvert</span></div>
+        <div class="radar-ligne" data-i="1"><span>REACH annexe XVII</span><span class="marqueur m-couvert">Couvert</span></div>
+        <div class="radar-ligne" data-i="2"><span>Proposition 65</span><span class="marqueur m-manquant">Donnée manquante</span></div>
+        <div class="radar-ligne" data-i="3"><span>Étiquetage textile 1007/2011</span><span class="marqueur m-attente">À vérifier</span></div>
+      </div>
     </div>
+    <p class="t-caption centre radar-legende">Six parutions réelles, un produit : ce que l'écran rejoue. Un clic relance.</p>
+
+    <div class="radar-points" data-anim-groupe>
+      <div><span class="flux-rang">01</span><p class="t-body" style="margin:8px 0 0">Une parution au Journal officiel arrive rattachée aux références qu'elle touche, pas dans une liste à trier.</p></div>
+      <div><span class="flux-rang">02</span><p class="t-body" style="margin:8px 0 0">La même règle sert vos équipes produit, qualité et juridique : champ, opérateur, seuil, article, date.</p></div>
+      <div><span class="flux-rang">03</span><p class="t-body" style="margin:8px 0 0">Rien à rapprocher à la main entre deux outils : tout part de la même règle.</p></div>
+    </div>
+
     <script>
     (function(){
-      var w = document.querySelector('.quotidien-anim'); if (!w) return;
-      var cartes = document.querySelectorAll('.quotidien-carte');
-      var compte = w.querySelector('.qe-compte b');
+      var r = document.querySelector('.radar'); if (!r) return;
+      var sources = [].slice.call(r.querySelectorAll('.radar-source')), traits = [].slice.call(r.querySelectorAll('.radar-trait'));
+      var lignes = [].slice.call(r.querySelectorAll('.radar-ligne')), compte = r.querySelector('.radar-compte b'), img = r.querySelector('.radar-produit img');
+      var TOUCHE = r.getAttribute('data-touche'), HORS = r.getAttribute('data-hors');
       var reduit = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var allume = function(n){ for (var k = 0; k < cartes.length; k++) cartes[k].classList.toggle('actif', k === n); };
-      var etat = function(c){ w.classList.remove('p1', 'p2', 'p3', 'fin'); if (c) w.classList.add.apply(w.classList, c); };
-      if (reduit) { etat(['p1', 'p2', 'p3', 'fin']); if (compte) compte.textContent = '18'; return; }
-      var minuteries = [], tour = 0;
+      var etroit = function(){ return window.innerWidth < 760; };
+      /* Les traits : du bord de la parution au centre du produit, mesurés à la mise en page. */
+      var longueurs = [];
+      function poser(){
+        var R = r.getBoundingClientRect(), P = img.getBoundingClientRect();
+        var cx = P.left + P.width / 2 - R.left, cy = P.top + P.height / 2 - R.top;
+        sources.forEach(function(s, i){
+          var B = s.getBoundingClientRect(), droite = s.classList.contains('radar-droite');
+          var x1 = (droite ? B.left : B.right) - R.left, y1 = B.top + B.height / 2 - R.top;
+          var t = traits[i]; t.setAttribute('x1', x1); t.setAttribute('y1', y1); t.setAttribute('x2', cx); t.setAttribute('y2', cy);
+          var L = Math.hypot(cx - x1, cy - y1); longueurs[i] = L;
+          t.style.strokeDasharray = L; if (!t.classList.contains('plein') && !t.classList.contains('partiel')) t.style.strokeDashoffset = L;
+        });
+      }
+      function tracer(i, touche){ var t = traits[i]; t.classList.add(touche ? 'plein' : 'partiel'); t.style.strokeDashoffset = touche ? 0 : longueurs[i] * 0.55; }
+      function effacer(i){ var t = traits[i]; t.classList.remove('plein', 'partiel'); t.style.strokeDashoffset = longueurs[i]; }
+      var minuteries = [], n = 0, tours = 0, visible = false, lance = false;
       var plus = function(ms, fn){ minuteries.push(setTimeout(fn, ms)); };
-      var joue = function(){
-        minuteries.forEach(clearTimeout); minuteries = [];
-        etat(null); if (compte) compte.textContent = '17'; allume(-1);
-        plus(400, function(){ w.classList.add('p1'); allume(0); });
-        plus(2600, function(){ w.classList.add('p2'); allume(1); });
-        plus(5200, function(){ w.classList.add('p3'); allume(2); if (compte) compte.textContent = '18'; });
-        plus(7400, function(){ w.classList.add('fin'); allume(-1); });
-        plus(9600, function(){ tour++; if (tour < 6 && visible) joue(); else etat(['p1', 'p2', 'p3', 'fin']); });
-      };
-      var visible = false, lance = false;
-      var io = new IntersectionObserver(function(es){ es.forEach(function(e){ visible = e.isIntersecting; if (visible && !lance) { lance = true; joue(); } }); }, { threshold: 0.35 });
-      io.observe(w);
-      w.addEventListener('click', function(){ tour = 0; joue(); });
+      function raz(){
+        minuteries.forEach(clearTimeout); minuteries = []; n = 0; compte.textContent = '0';
+        sources.forEach(function(s){ s.classList.remove('actif', 'touche', 'hors'); s.querySelector('.radar-etat').textContent = ''; });
+        lignes.forEach(function(l){ l.classList.remove('vu'); }); traits.forEach(function(t, i){ effacer(i); });
+      }
+      function resoudre(s, i){
+        var li = +s.getAttribute('data-ligne'), touche = li >= 0;
+        s.classList.add(touche ? 'touche' : 'hors'); s.querySelector('.radar-etat').textContent = touche ? TOUCHE : HORS;
+        tracer(i, touche);
+        if (touche) { n++; compte.textContent = String(n); var l = lignes[li]; if (l) l.classList.add('vu'); }
+      }
+      function final(){ raz(); sources.forEach(function(s, i){ s.classList.add('actif'); resoudre(s, i); }); }
+      function joue(){
+        raz(); poser();
+        sources.forEach(function(s, i){
+          plus(500 + i * 1500, function(){ s.classList.add('actif'); });
+          plus(500 + i * 1500 + 750, function(){ resoudre(s, i); });
+        });
+        plus(500 + sources.length * 1500 + 2600, function(){ tours++; if (tours < 5 && visible) joue(); });
+      }
+      poser(); if (typeof ResizeObserver !== 'undefined') new ResizeObserver(poser).observe(r); else window.addEventListener('resize', poser);
+      if (reduit) { final(); return; }
+      var io = new IntersectionObserver(function(es){ es.forEach(function(e){ visible = e.isIntersecting; if (visible && !lance) { lance = true; joue(); } }); }, { threshold: 0.3 });
+      io.observe(r);
+      r.addEventListener('click', function(){ tours = 0; joue(); });
     })();
     </script>
   </div>
