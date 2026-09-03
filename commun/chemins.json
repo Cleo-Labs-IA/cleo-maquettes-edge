@@ -36,6 +36,12 @@
     "08-reglementation.html": {
       "chemin": "/fr/platform/regulations"
     },
+    "37-compliance-service.html": {
+      "chemin": "/fr/platform/compliance-service"
+    },
+    "37-compliance-service-en.html": {
+      "chemin": "/en/platform/compliance-service"
+    },
     "09-texte.html": {
       "chemin": "/fr/jurisdictions/european-union/regulations/ppwr"
     },

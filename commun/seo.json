@@ -544,6 +544,26 @@
    "_mesure": "titre 58 caracteres, description 144 caracteres",
    "_gabarit_le": "2026-09-03"
   },
+  "37-compliance-service.html": {
+   "titre": "Compliance as a service, du jet à la signature | Cleo Labs",
+   "description": "Une déclaration de conformité, une question sur une entrée REACH, un marché à ouvrir. Cleo rédige le premier jet, un expert le relit et signe le document remis.",
+   "source": "redige",
+   "url_source": null,
+   "appariement": "aucune route reelle : cette page n'existait nulle part sur cleolabs.co, le contenu ne vivait qu'en ancre (id=compliance-service) sur /fr. Creee le 03/09/2026 pour remplacer cette ancre par une vraie page.",
+   "appui_contenu": "pages/01-accueil.html, section id=compliance-service : surtitre « Compliance service », h2 « Du premier jet à la signature. », les trois etapes du .flux et la carte experts-duo (Darcial Mondjo, Thezi Mabuza), reprises mot pour mot. Le h1 et le chapeau adaptent ce meme contenu, pas de fait nouveau.",
+   "_mesure": "titre 58 caracteres, description 160 caracteres",
+   "_gabarit_le": "2026-09-03"
+  },
+  "37-compliance-service-en.html": {
+   "titre": "Compliance as a service, draft to sign-off | Cleo Labs",
+   "description": "A declaration of conformity, a question on a REACH entry, a market to open. Cleo drafts the first version, an expert reviews and signs the document delivered.",
+   "source": "redige",
+   "url_source": null,
+   "appariement": "no real route : this page existed nowhere on cleolabs.co, the content only lived as an anchor (id=compliance-service) on /en. Created 2026-09-03 to replace that anchor with a real page.",
+   "appui_contenu": "pages/01-accueil-en.html, section id=compliance-service : surtitre « Compliance service », h2 « From draft to signature. », the three .flux steps and the experts-duo card (Darcial Mondjo, Thezi Mabuza), carried over word for word. The h1 and chapeau adapt this same content, no new claim.",
+   "_mesure": "titre 54 caracteres, description 158 caracteres",
+   "_gabarit_le": "2026-09-03"
+  },
   "09-texte.html": {
    "titre": "PPWR, conformité des emballages article par article | Cleo Labs",
    "description": "Le règlement sur les emballages s'applique le 12 août 2026. Cleo en a encodé les obligations testables et les confronte à vos emballages, un par un.",

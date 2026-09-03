@@ -26,6 +26,8 @@ const PAGES = [
   { fichier: '06-cas-client.html', titre: 'Cas client',  source: 'edgecomply.com/customer-stories/avery-row' },
   { fichier: '07-chat.html',        titre: 'Research',    source: 'edgecomply.com/services/*' },
   { fichier: '08-reglementation.html', titre: 'Compliance', source: 'edgecomply.com/services/*' },
+  { fichier: '37-compliance-service.html', titre: 'Compliance as a service', source: 'pages/01-accueil.html#compliance-service' },
+  { fichier: '37-compliance-service-en.html', titre: 'Compliance as a service EN', source: 'pages/01-accueil-en.html#compliance-service', en: true },
   { fichier: '09-texte.html',       titre: 'Un texte',    source: 'edgecomply.com/topics/reach-regulation-compliance' },
   { fichier: '10-ressources.html',  titre: 'Ressources',  source: 'edgecomply.com/library' },
   { fichier: '11-blog.html',        titre: 'Publications',source: 'edgecomply.com/library/blog' },

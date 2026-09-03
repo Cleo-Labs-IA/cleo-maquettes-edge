@@ -1,0 +1,10 @@
+/* ════════════════════════════════════════════════════════════════
+   PAGE « COMPLIANCE AS A SERVICE » (37-compliance-service.html et son
+   jumeau EN). Posée le 03/09/2026 pour remplacer l'ancre #compliance-service
+   de l'accueil par une vraie page, sur le gabarit des trois pages feature
+   (features.css). La page réutilise .bf-faits, .bf-intro, .bf-appel-txt,
+   .flux, .experts-duo, .g3, .coches, .faq, .temoignage, .cta-final tels
+   quels : aucune règle propre n'était nécessaire après capture et mesure.
+   Le fichier reste présent, vide de règles, pour que le territoire de la
+   page garde sa propre feuille comme les autres lanes.
+   ════════════════════════════════════════════════════════════════ */
