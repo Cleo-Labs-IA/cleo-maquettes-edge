@@ -61,6 +61,8 @@ const PAGES = [
   { fichier: '24-blog-en.html',       titre: 'Blog EN',       source: 'cleolabs.co/en/blog', en: true },
   { fichier: '25-skills-en.html',     titre: 'Skills EN',     source: 'cleolabs.co/en/skills', en: true },
   { fichier: '26-legal-data-en.html', titre: 'Legal Data EN', source: 'cleolabs.co/en/legal-data', en: true },
+  // Vercel sert 404.html à la racine du dossier statique pour toute adresse inconnue.
+  { fichier: '99-404.html', titre: '404', source: 'page introuvable', sortie: '404.html' },
 ]
 
 /* Table des images : nom logique -> fichier source + largeur de rendu.
@@ -210,26 +212,33 @@ const IMAGES = {
 }
 
 const cacheImg = new Map()
-async function dataUri(nom) {
+const DOSSIER_IMAGES = path.join(ICI, 'sortie', 'images')
+fs.mkdirSync(DOSSIER_IMAGES, { recursive: true })
+/* LES IMAGES SONT DES FICHIERS, plus des data URI. Mesuré le 03/09/2026 sur
+   sortie-liart.vercel.app : 1,6 Mo de HTML pour l'accueil, 3,4 Mo pour le blog,
+   et chaque page rechargeait ses images embarquées. En fichiers WebP le HTML
+   retombe sous 300 Ko et le navigateur garde les images en cache d'une page à
+   l'autre. Le chemin est absolu à la racine (/images/…) parce que les URL
+   propres ont une profondeur variable (/fr, /fr/platform/research) : un chemin
+   relatif se casserait. Les outils du chantier servent donc sortie/ en HTTP,
+   voir commun/servir.mjs, et n'ouvrent plus les pages en file://. */
+async function cheminImage(nom) {
   if (cacheImg.has(nom)) return cacheImg.get(nom)
   const entree = IMAGES[nom]
   if (!entree) throw new Error(`IMAGE INCONNUE : "${nom}" — ajoute-la dans la table IMAGES`)
   const [rel, largeur, format] = entree
   const abs = rel.startsWith('local/') ? path.join(LOCAL, rel.slice(6)) : path.join(PUB, rel)
   if (!fs.existsSync(abs)) throw new Error(`IMAGE ABSENTE : ${abs}`)
-  let uri
-  if (format === 'svg') {
-    uri = 'data:image/svg+xml;base64,' + fs.readFileSync(abs).toString('base64')
-  } else if (format === 'png') {
-    const buf = await sharp(abs).resize({ width: largeur, withoutEnlargement: true }).png({ compressionLevel: 9, quality: 82 }).toBuffer()
-    uri = 'data:image/png;base64,' + buf.toString('base64')
-  } else {
-    const buf = await sharp(abs).resize({ width: largeur, withoutEnlargement: true }).webp({ quality: 72 }).toBuffer()
-    uri = 'data:image/webp;base64,' + buf.toString('base64')
-  }
-  cacheImg.set(nom, uri)
-  return uri
+  const ext = format === 'svg' ? 'svg' : format === 'png' ? 'png' : 'webp'
+  const dest = path.join(DOSSIER_IMAGES, `${nom}.${ext}`)
+  if (format === 'svg') fs.copyFileSync(abs, dest)
+  else if (format === 'png') await sharp(abs).resize({ width: largeur, withoutEnlargement: true }).png({ compressionLevel: 9, quality: 82 }).toFile(dest)
+  else await sharp(abs).resize({ width: largeur, withoutEnlargement: true }).webp({ quality: 72 }).toFile(dest)
+  const chemin = `/images/${nom}.${ext}`
+  cacheImg.set(nom, chemin)
+  return chemin
 }
+const dataUri = cheminImage
 
 /* ── §18. La masse et l'unique.
    « Le contenu de la grille vient du réel : vraies références, vrais
@@ -312,6 +321,8 @@ async function veille() {
   let m = veilleMarkup
   const img = await dataUri('veille-produit')
   m = m.replace('/veille/produit-3b9ed4d5.png', img)
+  // Le lien du Journal officiel pointe sur le texte réel (PPWR, CELEX 32025R0040) et plus sur « # ».
+  m = m.replace('id="cv-f-lien" href="#"', 'id="cv-f-lien" href="https://eur-lex.europa.eu/eli/reg/2025/40/oj"')
   return `<style>${veilleCss}\n.cv,.cv *{font-family:var(--font) !important}</style>
 <div class="ecran-app">${m}</div>
 <script>${veilleScript}</script>`
@@ -538,7 +549,32 @@ async function globeProduits() {
 <script>${globeScript}</script>`
 }
 
-const police = fs.readFileSync(POLICE).toString('base64')
+/* LA POLICE EST UN FICHIER, plus un data URI : 170 Ko par page qui ne se
+   mettaient jamais en cache. Mesuré le 03/09/2026 : chaque page pesait 180 Ko
+   à vide, la police seule. */
+fs.mkdirSync(path.join(ICI, 'sortie', 'fonts'), { recursive: true })
+fs.copyFileSync(POLICE, path.join(ICI, 'sortie', 'fonts', 'Satoshi-Variable.woff2'))
+/* Le favicon est celui du vrai site, relevé le 03/09/2026 sur www.cleolabs.co/favicon.svg. */
+const FAVICON = 'data:image/svg+xml;base64,' + fs.readFileSync(path.join(LOCAL, 'favicon.svg')).toString('base64')
+fs.mkdirSync(path.join(ICI, 'sortie'), { recursive: true })
+fs.copyFileSync(path.join(LOCAL, 'favicon.svg'), path.join(ICI, 'sortie', 'favicon.svg'))
+/* UN SEUL BUILD À LA FOIS. Plusieurs lanes construisent en parallèle depuis le
+   03/09/2026 : deux écritures croisées de sortie/ donneraient une page à moitié
+   écrite à l'outil de capture de l'autre. Le verrou est un dossier, atomique. */
+const VERROU = path.join(ICI, 'sortie', '.construction-en-cours')
+for (let i = 0; ; i++) {
+  try { fs.mkdirSync(VERROU); break }
+  catch { if (i >= 180) throw new Error('verrou tenu depuis 3 min, retirer ' + VERROU + ' si aucun build ne tourne'); await new Promise(r => setTimeout(r, 1000)) }
+}
+process.on('exit', () => { try { fs.rmdirSync(VERROU) } catch {} })
+/* LE CSS DES LANES : chaque lane écrit le sien dans commun/lanes/<lane>.css,
+   concaténé après composants.css. Personne ne touche composants.css pendant
+   qu'une lane tourne : c'est ce qui rend les territoires réellement disjoints. */
+const dossierLanes = path.join(ICI, 'commun/lanes')
+const lanesCss = fs.existsSync(dossierLanes)
+  ? fs.readdirSync(dossierLanes).filter(f => f.endsWith('.css')).sort()
+      .map(f => `/* ── lane ${f} ── */\n` + fs.readFileSync(path.join(dossierLanes, f), 'utf8')).join('\n')
+  : ''
 const base = fs.readFileSync(path.join(ICI, 'commun/base.css'), 'utf8')
 const regimeNoir = fs.existsSync(path.join(ICI, 'commun/regime-noir.css'))
   ? fs.readFileSync(path.join(ICI, 'commun/regime-noir.css'), 'utf8') : ''
@@ -673,7 +709,46 @@ const ech = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 // Un <script> ne se termine que sur la séquence </script> : c'est la seule à neutraliser.
 const ldjson = (o, langue) => JSON.stringify(sansNotes(o, langue)).replace(/<\/script/gi, '<\\/script')
 
-const nav = fs.readFileSync(path.join(ICI, 'commun/bandeau-nav.html'), 'utf8')
+/* LE MENU SUR TÉLÉPHONE est déduit des méga-menus : mêmes libellés, mêmes
+   liens, jamais une seconde liste à tenir à jour. Le bouton entre dans
+   .nav-fin, le panneau ferme le <nav>. */
+function avecMenuMobile(navHtml) {
+  const groupes = []
+  for (const bloc of navHtml.split('<div class="nav-item">').slice(1)) {
+    const m = bloc.match(/<(button|a) class="nav-declencheur"(?: href="([^"]*)")?>([\s\S]*?)<\/\1>/)
+    if (!m) continue
+    const titre = m[3].replace(/<svg[\s\S]*?<\/svg>/g, '').trim()
+    if (m[2]) { groupes.push({ titre, href: m[2] }); continue }
+    const liens = []
+    for (const a of bloc.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)) {
+      const b = a[2].match(/<b>([\s\S]*?)<\/b>/)
+      const texte = (b ? b[1] : a[2]).replace(/<span class="mega-badge">[\s\S]*?<\/span>/g, '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim()
+      if (texte) liens.push({ href: a[1], texte })
+    }
+    groupes.push({ titre, liens })
+  }
+  const fin = navHtml.match(/<div class="nav-fin">([\s\S]*?)<\/div>/)
+  if (!fin) throw new Error('nav : .nav-fin introuvable')
+  const actions = [...fin[1].matchAll(/<a class="([^"]*)" href="([^"]+)">([\s\S]*?)<\/a>/g)]
+    .map(a => ({ classe: a[1], href: a[2], texte: a[3].replace(/<[^>]+>/g, '').trim() }))
+  const panneau = `<div class="menu-mobile" id="menu-mobile" hidden>
+${groupes.map(g => g.href
+    ? `  <div class="mm-groupe"><a href="${g.href}">${g.titre}</a></div>`
+    : `  <div class="mm-groupe"><div class="mm-titre">${g.titre}</div>
+${g.liens.map(l => `    <a href="${l.href}">${l.texte}</a>`).join('\n')}
+  </div>`).join('\n')}
+  <div class="mm-actions">
+${actions.map(a => `    <a class="${a.classe.includes('btn') ? 'btn btn-marque' : 'mm-lien'}" href="${a.href}">${a.texte}</a>`).join('\n')}
+  </div>
+</div>`
+  const bouton = '<button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu-mobile"><span></span><span></span></button>'
+  let out = navHtml.replace(/(<a class="btn btn-marque btn-sm" href="[^"]+">[^<]*<\/a>)(\s*<\/div>)/, `$1\n      ${bouton}$2`)
+  if (out === navHtml) throw new Error('nav : bouton de menu non posé')
+  const n = out.lastIndexOf('</nav>')
+  if (n < 0) throw new Error('nav : </nav> introuvable')
+  return out.slice(0, n) + panneau + '\n' + out.slice(n)
+}
+const nav = avecMenuMobile(fs.readFileSync(path.join(ICI, 'commun/bandeau-nav.html'), 'utf8'))
 const pied = fs.readFileSync(path.join(ICI, 'commun/pied.html'), 'utf8')
 /* Les fragments anglais quand ils existent, les français sinon : une page
    en:true se construit même avant que l'anglais soit écrit. */
@@ -681,7 +756,8 @@ function litOuRepli(rel, repli) {
   const abs = path.join(ICI, rel)
   return fs.existsSync(abs) ? fs.readFileSync(abs, 'utf8') : repli
 }
-const navEn = litOuRepli('commun/bandeau-nav-en.html', nav)
+const navEn = fs.existsSync(path.join(ICI, 'commun/bandeau-nav-en.html'))
+  ? avecMenuMobile(fs.readFileSync(path.join(ICI, 'commun/bandeau-nav-en.html'), 'utf8')) : nav
 const piedEn = litOuRepli('commun/pied-en.html', pied)
 
 function barre(courante) {
@@ -697,7 +773,12 @@ for (const p of PAGES) {
   const src = path.join(ICI, 'pages', p.fichier)
   if (!fs.existsSync(src)) { console.log(`  (pas encore ecrite : ${p.fichier})`); continue }
   let corps = fs.readFileSync(src, 'utf8')
-  corps = corps.replace('<!--NAV-->', p.en ? navEn : nav).replace('<!--PIED-->', p.en ? piedEn : pied)
+  /* Le repère <main> et le lien d'évitement : le contenu vit entre la barre et
+     le pied. Mesuré le 03/09 : aucune page n'avait de <main>. */
+  const aNav = corps.includes('<!--NAV-->')
+  const evitement = `<a class="lien-evitement" href="#contenu">${p.en ? 'Skip to content' : 'Aller au contenu'}</a>`
+  corps = corps.replace('<!--NAV-->', evitement + '\n' + (p.en ? navEn : nav) + '\n<main id="contenu">')
+  corps = corps.replace('<!--PIED-->', (aNav ? '</main>\n' : '') + (p.en ? piedEn : pied))
   corps = corps.replace('<!--MASSE-->', masse()).replace('<!--MASSE-REFS-->', masseRefs())
   corps = corps.replace(/ico:([a-z]+)(?::(\d+))?/g, (_, n, t) => icone(n, t ? +t : 20))
   /* LE SÉLECTEUR DE LANGUE. Il n'apparaît QUE là où un jumeau existe :
@@ -812,6 +893,7 @@ for (const p of PAGES) {
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="${FAVICON}">
 <!-- MAQUETTE DE TRAVAIL, JAMAIS UN SITE PUBLIC. Ces pages reprennent le
      contenu de www.cleolabs.co : indexees, elles entreraient en duplication
      avec le vrai site et lui nuiraient. Le noindex part avec la page. -->
@@ -824,10 +906,11 @@ ${og}
 ${structure}
 <!-- Maquette de travail. Composition relevee sur ${p.source}, habillage DA Cleo. -->
 <style>
-@font-face{font-family:"Satoshi";src:url(data:font/woff2;base64,${police}) format("woff2");
+@font-face{font-family:"Satoshi";src:url(/fonts/Satoshi-Variable.woff2) format("woff2");
   font-weight:300 900;font-style:normal;font-display:swap}
 ${base}
 ${composants}
+${lanesCss}
 ${p.noir ? regimeNoir : ''}
 ${mouvement}
 </style>
@@ -838,6 +921,10 @@ ${corps}
 <script>${corps.includes('data-globe') ? globeJs : ''}</script>
 </body>
 </html>`
+  /* Chargement différé : toute image après la première section. La première
+     section porte le hero, qui doit peindre tout de suite. */
+  { const coupe = doc.indexOf('</section>')
+    if (coupe > 0) doc = doc.slice(0, coupe) + doc.slice(coupe).replace(/<img\b(?![^>]*\bloading=)/g, '<img loading="lazy" decoding="async"') }
   /* Liens propres. La maquette s'ouvre sur des URL calquees sur les routes
      REELLES de www.cleolabs.co, pour qu'elle se lise comme le site final et
      que le portage garde les memes adresses. Les ancres sont preservees. */
@@ -906,6 +993,14 @@ for (const j of journal) {
   // les references reglementaires sont en Satoshi, chiffres tabulaires.
   if (/font-family\s*:[^;'"]*monospace/i.test(t)) { console.log(`  ECHEC ${j.fichier} : monospace, interdite par le DS V5`); erreurs++ }
   if (/ico:[a-z]+/.test(t)) { console.log(`  ECHEC ${j.fichier} : marqueur d'icône non résolu`); erreurs++ }
+  // Passe du 03/09/2026 : plus aucun lien mort, aucun champ figé, aucune note interne servie.
+  if (!j.fichier.startsWith('00-')) {
+    const morts = (t.match(/href="#"/g) || []).length
+    if (morts) { console.log(`  ECHEC ${j.fichier} : ${morts} lien(s) href="#"`); erreurs++ }
+    if (/<input[^>]*\bdisabled\b/.test(t)) { console.log(`  ECHEC ${j.fichier} : champ de formulaire disabled`); erreurs++ }
+    if (/Feature \d sur 3|Fiche à confirmer|à confirmer avec Decathlon|Grille tarifaire à|Le même écran, une fois|Cleo Comply/.test(t)) {
+      console.log(`  ECHEC ${j.fichier} : note interne ou mention retirée encore servie`); erreurs++ }
+  }
   // DA V5 §18 : un seul element colore par grille, sans exception.
   for (const bloc of t.match(/<div class="mass[^"]*">[\s\S]*?(?=<\/div>\s*<\/div>)/g) || []) {
     const n = (bloc.match(/\bfound\b/g) || []).length

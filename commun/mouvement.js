@@ -31,3 +31,19 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', lance);
   else lance();
 })();
+
+/* Le menu sur téléphone, posé le 03/09/2026. Le panneau est dans la page,
+   généré par construire.mjs : ici on ne fait que l'ouvrir et le fermer. */
+(function(){
+  var b = document.querySelector('.nav-burger'), m = document.getElementById('menu-mobile');
+  if (!b || !m) return;
+  function fermer(){ m.hidden = true; b.setAttribute('aria-expanded', 'false'); document.documentElement.classList.remove('menu-ouvert'); }
+  b.addEventListener('click', function(){
+    var ouvrir = m.hidden;
+    m.hidden = !ouvrir; b.setAttribute('aria-expanded', ouvrir ? 'true' : 'false');
+    document.documentElement.classList.toggle('menu-ouvert', ouvrir);
+  });
+  m.addEventListener('click', function(e){ if (e.target.closest('a')) fermer(); });
+  window.addEventListener('resize', function(){ if (window.innerWidth > 1024) fermer(); });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') fermer(); });
+})();

@@ -25,6 +25,7 @@
         </div>
       </div>
 
+      <form id="f-demo" method="get" action="https://meetings.hubspot.com/anaelle-guez/rendez-vous" hidden></form>
       <div class="carte-encre form-carte" data-anim="droite">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px">
           <div class="avatars"><img src="img:anaelle" alt=""><img src="img:naomie" alt=""><img src="img:thezi" alt=""></div>
@@ -37,14 +38,14 @@
           <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Les prochaines étapes pour ouvrir le marché</li>
         </ul>
         <div class="paire">
-          <div><label>Prénom</label><input type="text" placeholder="Camille" disabled></div>
-          <div><label>Nom</label><input type="text" placeholder="Bernard" disabled></div>
+          <div><label for="f-demo-prenom">Prénom</label><input id="f-demo-prenom" form="f-demo" name="firstname" autocomplete="given-name" type="text" placeholder="Camille"></div>
+          <div><label for="f-demo-nom">Nom</label><input id="f-demo-nom" form="f-demo" name="lastname" autocomplete="family-name" type="text" placeholder="Bernard"></div>
         </div>
-        <label>Email professionnel</label>
-        <input type="email" placeholder="camille@marque.com" disabled>
-        <label>Site de la marque</label>
-        <input type="text" placeholder="marque.com" disabled>
-        <button class="btn btn-marque" style="width:100%;justify-content:center;margin-top:6px">Choisir un créneau</button>
+        <label for="f-demo-email">Email professionnel</label>
+        <input id="f-demo-email" form="f-demo" name="email" autocomplete="email" type="email" placeholder="camille@marque.com" required>
+        <label for="f-demo-site">Site de la marque</label>
+        <input id="f-demo-site" form="f-demo" name="site" autocomplete="organization" type="text" placeholder="marque.com">
+        <button class="btn btn-marque" type="submit" form="f-demo" style="width:100%;justify-content:center;margin-top:6px">Choisir un créneau</button>
       </div>
     </div>
   </div>
@@ -70,7 +71,7 @@
 <section class="section fond-lavande">
   <div class="conteneur">
     <div class="entete-section centre" data-anim="monte" style="align-items:center;margin-bottom:32px">
-      <h2 class="t-display mesure-centree" style="max-width:760px">La mise en conformité, <span class="attenue">en quatre temps</span></h2>
+      <h2 class="t-display mesure-centree" style="max-width:760px">La mise en conformité, en quatre temps</h2>
       <p class="t-lead mesure-centree">Du relevé des obligations au suivi des textes en préparation.</p>
     </div>
 
@@ -128,7 +129,7 @@
       <div class="dessus">
         <div style="max-width:500px">
           <div class="t-label" style="margin-bottom:16px">Vingt-sept États membres</div>
-          <h3 class="t-h1">Chacun a ses transpositions et sa langue. <span style="color:rgba(255,255,255,0.65)">Un texte européen ne dit pas encore quoi faire à Milan.</span></h3>
+          <h3 class="t-h1">Chacun a ses transpositions et sa langue. Un texte européen ne dit pas encore quoi faire à Milan.</h3>
         </div>
       </div>
     </div>
@@ -138,7 +139,7 @@
 <!-- ═══ LES TEXTES ═══ -->
 <section class="section gc-doux">
   <div class="conteneur">
-    <h2 class="t-display" style="max-width:640px">Les textes qui structurent <span class="attenue">le marché européen</span></h2>
+    <h2 class="t-display" style="max-width:640px">Les textes qui structurent le marché européen</h2>
     <p class="t-body" style="margin:18px 0 44px;max-width:560px">Une sélection des règlements les plus souvent rencontrés sur les produits de grande consommation.</p>
 
     <div class="g4" data-anim-groupe>
@@ -213,12 +214,12 @@
         <img class="portrait" src="img:anaelle" alt="">
         <div>
           <div class="t-sm" style="margin-bottom:10px"><b>30 minutes</b> pour voir ce qui bloque aujourd'hui</div>
-          <h2 class="t-display">Un nouveau pays n'est plus un projet. <span class="attenue">C'est une décision.</span></h2>
+          <h2 class="t-display">Un nouveau pays n'est plus un projet. C'est une décision.</h2>
           <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap">
             <a class="btn btn-marque" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo
               <span class="rond"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </a>
-            <a class="btn btn-contour" href="#">Réserver un créneau</a>
+            <a class="btn btn-contour" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Réserver un créneau</a>
           </div>
         </div>
       </div>

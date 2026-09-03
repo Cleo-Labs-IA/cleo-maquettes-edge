@@ -21,22 +21,59 @@
     </form>
   </div>
 
-  <!-- Le globe au centre, sous le texte, comme Morpho pose son objet.
-       Depuis le 01/09 c'est LE GLOBE AUX PRODUITS de cleo-landing : sept
-       produits en orbite, un point sur le globe là où chacun se vend, le nom
-       de la ville contre ce point, un trait qui relie les deux. Chaque produit
-       est accroché au marché QUI FAIT LA RÈGLE pour lui. Le bloc entier
-       (feuille, markup, script) est porté par construire.mjs, voir la coupe
-       « LE GLOBE AUX PRODUITS ». Les noms de produits et de villes sont des
-       noms : la page anglaise sert exactement les mêmes. -->
-  <!--GLOBE-PRODUITS-->
+  <!-- L'INTERFACE SOUS LE TITRE, depuis le 03/09/2026 : le geste de Legora et
+       de Harvey, le produit visible dès le premier écran. Le globe aux produits
+       reste porté par construire.mjs (<!--GLOBE-PRODUITS-->), il n'est plus
+       posé ici. La règle encodée est celle de la section « Notre méthode »,
+       recopiée par le script d'édition : une seule source. -->
+  <div class="hero-produit" data-anim="monte-court">
+    <div class="ecran-app">
+      <div class="ecran-tete"><div class="pastilles"><i></i><i></i><i></i></div><span class="fil-ariane">Cleo · Kids straight jeans · DNM-4412</span></div>
+      <div class="hp-corps">
+        <div class="fiche hp-fiche">
+          <div class="fiche-tete">
+            <img class="fiche-vignette" src="img:jean" alt="">
+            <div style="flex:1">
+              <div class="fiche-nom">Kids straight jeans</div>
+              <div class="fiche-ref">Reference DNM-4412</div>
+            </div>
+          </div>
+          <div class="fiche-ligne" style="border-top:none;padding-top:0">
+            <div class="jauge"><span style="width:72%"></span></div>
+            <span style="font-weight:600;color:var(--cleo-ink);white-space:nowrap">18 / 25 covered</span>
+          </div>
+          <div class="fiche-entete-pays"><span>US</span> United States</div>
+          <div class="fiche-ligne"><span>CPSIA, lead</span><span class="marqueur m-couvert">Covered</span></div>
+          <div class="fiche-ligne"><span>Proposition 65</span><span class="marqueur m-manquant">Data missing</span></div>
+          <div class="fiche-entete-pays"><span>EU</span> European Union</div>
+          <div class="fiche-ligne"><span>REACH Annex XVII</span><span class="marqueur m-couvert">Covered</span></div>
+          <div class="fiche-ligne"><span>Textile labelling 1007/2011</span><span class="marqueur m-attente">To check</span></div>
+        </div>
+        <div class="hp-droite">
+          <div class="hp-citation">
+            <div class="t-caption" style="line-height:1.55">“Lead content does not exceed 100 ppm by weight of accessible parts.”</div>
+            <div class="t-caption" style="margin-top:9px;color:var(--c-blue);font-weight:600">CPSIA, section 101 (a)</div>
+          </div>
+          <div class="pl-regle hp-regle">
+            <div class="t-h3">Lead content of accessible parts</div>
+          <div class="pl-champ"><span>field</span><b>accessible material</b></div>
+          <div class="pl-champ"><span>operator</span><b>does not exceed</b></div>
+          <div class="pl-champ"><span>threshold</span><b>100 ppm by weight</b></div>
+          <div class="pl-champ"><span>article</span><b>CPSIA, section 101 (a)</b></div>
+          <div class="pl-champ"><span>in force</span><b>14 August 2011</b></div>
+          <div class="pl-verdict"><span class="pl-pastille"></span>testable against a reference</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ═══ BANDE LOGOS ═══ la ligne de confiance reprend, mot pour mot, celle
      que portent déjà 04-secteur, 05-marche, 09-texte et 20-campagne. Elle se
      tient sans chiffre, et elle en accueillera un le jour où il sera tranché :
      « Aux côtés de N marques et de fabricants internationaux ». -->
-<section class="section" style="padding:0 0 84px">
+<section class="section" style="padding:0 0 88px">
   <div class="conteneur">
     <div class="centre t-label" style="margin-bottom:24px">Trusted by international brands and manufacturers</div>
     <div class="bande-logos">
@@ -49,84 +86,36 @@
   </div>
 </section>
 
-<!-- ═══ TEMOIGNAGE ═══ citation VERBATIM de DecathlonQuote.tsx,
-     grand portrait à gauche. Le tiret et les apostrophes courbes restent. -->
+<!-- ═══ TEMOIGNAGE ═══ citation VERBATIM de DecathlonQuote.tsx. Compact depuis
+     le 03/09/2026 : portrait rond, la citation en grand, le lien vers le cas.
+     Avant : 540 px de photo pour deux phrases. -->
 <section class="section" style="padding-top:0">
   <div class="conteneur">
-    <div class="carte" style="overflow:hidden">
-      <div class="duo duo-temoin">
-        <div class="scene" data-anim="grandit" style="border-radius:0;box-shadow:none;min-height:540px">
-          <img class="fond" src="img:philippine" alt="Philippine Tamic">
-        </div>
-        <div style="padding:56px;display:flex;flex-direction:column;justify-content:center">
-          <img class="logo-marque" src="img:logo-decathlon" alt="Decathlon" style="height:22px;width:auto;opacity:0.5;margin-bottom:32px">
-          <blockquote class="citation" style="margin:0 0 32px;line-height:1.62;font-weight:400">
-            "At Decathlon, our challenge is capturing very precise information out of a massive volume of international product regulations, with both a legal and a technical stake: steering our global compliance while supporting our engineers in product development. That’s the bridge we’re building with the PoC we ran with Cleo: their AI engine acts as an intelligent translator that filters noise to extract structured data, directly actionable by our teams and essential to guide design inside our PLM."
-          </blockquote>
-          <div>
-            <div class="t-h3">Philippine Tamic</div>
-            <div class="t-caption">Product Compliance Operations Manager at Decathlon</div>
-          </div>
-          <a href="06-cas-client.html" class="t-body" style="margin-top:28px;display:inline-flex;align-items:center;gap:8px;color:var(--c-blue);font-weight:500">
-            See other cases
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M13.3 4.3a1 1 0 0 1 1.4 0l7 7a1 1 0 0 1 0 1.4l-7 7a1 1 0 0 1-1.4-1.4l5.3-5.3H4a1 1 0 1 1 0-2h14.6l-5.3-5.3a1 1 0 0 1 0-1.4Z"/></svg>
-          </a>
-        </div>
+    <div class="temoin-compact" data-anim="monte-court">
+      <img class="temoin-portrait" src="img:philippine" alt="Philippine Tamic">
+      <img src="img:logo-decathlon" alt="Decathlon" style="height:22px;width:auto;opacity:0.5">
+      <blockquote class="citation" style="margin:0">"At Decathlon, our challenge is capturing very precise information out of a massive volume of international product regulations, with both a legal and a technical stake: steering our global compliance while supporting our engineers in product development. That’s the bridge we’re building with the PoC we ran with Cleo: their AI engine acts as an intelligent translator that filters noise to extract structured data, directly actionable by our teams and essential to guide design inside our PLM."</blockquote>
+      <div>
+        <div class="t-h3">Philippine Tamic</div>
+        <div class="t-caption">Product Compliance Operations Manager at Decathlon</div>
       </div>
+      <a class="cta-texte" href="06-cas-client.html"><svg class="fleche fl-gauche" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Read the full case study</span><svg class="fleche fl-droite" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="filet fi-gauche"></span><span class="filet fi-droite"></span></a>
     </div>
   </div>
 </section>
 
-<!-- ═══ BLOC PRINCIPAL : la carte large avec l'ecran produit ═══ -->
-<section class="section sur-clair-fond" style="padding-top:56px">
+<!-- ═══ LE TRAVAIL QUOTIDIEN ═══ trois raisons, trois cartes. L'écran produit
+     qui vivait ici est monté dans le hero le 03/09/2026. -->
+<section class="section sur-clair-fond" style="padding-top:0">
   <div class="conteneur">
-    <div class="carte-encre p48" data-anim="monte-court" style="border-radius:var(--r-lg)">
-      <div class="duo" style="gap:56px">
-        <div>
-          <div class="surtitre sur-clair" style="margin-bottom:16px">Built for product compliance daily work</div>
-          <h3 class="t-h1">From the Official Journal notice <span class="attenue">to the verdict on your reference.</span></h3>
-          <ul class="coches" style="margin:28px 0 34px">
-            <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                An Official Journal notice arrives tied to the references it touches, not in a list to sort</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                The same rule serves your product, quality and legal teams: field, operator, threshold, article, date</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                Nothing to reconcile by hand between two tools: it all starts from the same rule</li>
-          </ul>
-          <a class="btn btn-clair" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Book a demo
-            <span class="rond"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="#0008CF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-          </a>
-        </div>
-
-        <!-- Ecran produit compositie -->
-        <div style="position:relative">
-          <div class="fiche" style="max-width:340px;margin-left:auto;margin-bottom:26px">
-            <div class="fiche-tete">
-              <img class="fiche-vignette" src="img:jean" alt="">
-              <div style="flex:1">
-                <div class="fiche-nom">Kids straight jeans</div>
-                <div class="fiche-ref">Reference DNM-4412</div>
-              </div>
-            </div>
-            <div class="fiche-ligne" style="border-top:none;padding-top:0">
-              <div class="jauge"><span style="width:72%"></span></div>
-              <span style="font-weight:600;color:var(--cleo-ink);white-space:nowrap">18 / 25 covered</span>
-            </div>
-            <div class="fiche-entete-pays"><span>US</span> United States</div>
-            <div class="fiche-ligne"><span>CPSIA, lead</span><span class="marqueur m-couvert">Covered</span></div>
-            <div class="fiche-ligne"><span>Proposition 65</span><span class="marqueur m-manquant">Data missing</span></div>
-            <div class="fiche-entete-pays"><span>EU</span> European Union</div>
-            <div class="fiche-ligne"><span>REACH Annex XVII</span><span class="marqueur m-couvert">Covered</span></div>
-            <div class="fiche-ligne"><span>Textile labelling 1007/2011</span><span class="marqueur m-attente">To check</span></div>
-          </div>
-          <div class="carte-claire" style="margin-top:18px;padding:18px 20px;background:var(--c-white);border-radius:var(--r-md);border-left:2px solid var(--c-blue);max-width:340px;margin-left:auto">
-            <div class="t-caption" style="line-height:1.55;color:var(--c-text)">
-              “Lead content does not exceed 100 ppm by weight of accessible parts.”
-            </div>
-            <div class="t-caption" style="margin-top:9px;color:var(--c-blue);font-weight:600">CPSIA, section 101 (a)</div>
-          </div>
-        </div>
-      </div>
+    <div class="entete-section" data-anim="monte">
+      <div class="surtitre">Built for product compliance daily work</div>
+      <h2 class="t-display">From the Official Journal notice to the verdict on your reference.</h2>
+    </div>
+    <div class="g3" data-anim-groupe>
+      <div class="carte p32" data-anim="monte-court"><p class="t-body-lg" style="margin:0">An Official Journal notice arrives tied to the references it touches, not in a list to sort.</p></div>
+      <div class="carte p32" data-anim="monte-court"><p class="t-body-lg" style="margin:0">The same rule serves your product, quality and legal teams: field, operator, threshold, article, date.</p></div>
+      <div class="carte p32" data-anim="monte-court"><p class="t-body-lg" style="margin:0">Nothing to reconcile by hand between two tools: it all starts from the same rule.</p></div>
     </div>
   </div>
 </section>
@@ -148,7 +137,7 @@
 
     <div class="entete-section centre" data-anim="monte" style="align-items:center">
       <div class="surtitre">Key features</div>
-      <h2 class="t-display mesure-centree">Every answer carries its article, its date <span class="attenue">and the reference it applies to</span></h2>
+      <h2 class="t-display mesure-centree">Every answer carries its article, its date and the reference it applies to</h2>
     </div>
 
     <div class="g-agents">
@@ -227,7 +216,7 @@
 
     <div class="entete-section centre" data-anim="monte" style="align-items:center">
       <div class="surtitre">Compliance service</div>
-      <h2 class="t-display mesure-centree">From draft <span class="attenue">to signature.</span></h2>
+      <h2 class="t-display mesure-centree">From draft to signature.</h2>
     </div>
 
     <div class="flux" data-anim-groupe>
@@ -270,7 +259,7 @@
 
         <div class="experts-texte">
           <div class="surtitre sur-clair" style="margin-bottom:16px">The team that signs</div>
-          <h3 class="t-h1">A dedicated legal team, <span class="attenue">that knows your profile.</span></h3>
+          <h3 class="t-h1">A dedicated legal team, that knows your profile.</h3>
           <ul class="coches" style="max-width:460px;margin-top:24px">
             <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
                 Your declaration and technical file templates, kept in your own format</li>
@@ -300,7 +289,7 @@
 
     <div class="entete-section centre" data-anim="monte" style="align-items:center">
       <div class="surtitre">Our method</div>
-      <h2 class="t-display mesure-centree">The text is scattered. <span class="attenue">The rule is in one place.</span></h2>
+      <h2 class="t-display mesure-centree">The text is scattered. The rule is in one place.</h2>
       <p class="t-lead mesure-centree" style="margin-top:18px">
         Product compliance data lives in the official journals, with market authorities,
         in draft texts and in consultations. Cleo encodes it into a single interface.
@@ -359,7 +348,7 @@
           <div class="pl-champ"><span>operator</span><b>does not exceed</b></div>
           <div class="pl-champ"><span>threshold</span><b>100 ppm by weight</b></div>
           <div class="pl-champ"><span>article</span><b>CPSIA, section 101 (a)</b></div>
-          <div class="pl-champ"><span>in force</span><b>12 August 2026</b></div>
+          <div class="pl-champ"><span>in force</span><b>14 August 2011</b></div>
           <div class="pl-verdict"><span class="pl-pastille"></span>testable against a reference</div>
         </div>
       </div>
@@ -375,7 +364,7 @@
       <div class="cta-final">
         <img class="portrait" src="img:anaelle" alt="Anaëlle Guez, co-founder of Cleo Labs">
         <div>
-          <h2 class="t-display">Make compliance <span class="attenue">your competitive advantage.</span></h2>
+          <h2 class="t-display">Make compliance your competitive advantage.</h2>
           <p class="t-body" style="margin:20px 0 0;max-width:560px">
             With Cleo, a range is assessed across 106 countries from the same rule base, and every
             obligation retained carries the article and the date behind it.

@@ -8,7 +8,7 @@
           <span class="pilule">À venir</span>
           <span class="t-caption">Side event · International Product Safety Week</span>
         </div>
-        <h1 class="t-display">Product Safety <span class="attenue">in the Age of AI</span></h1>
+        <h1 class="t-titre-page">Product Safety <span class="attenue">in the Age of AI</span></h1>
         <p class="t-body" style="margin:22px 0 28px;max-width:520px">
           Une soirée courte, après la réception officielle. On y montre une chose et une seule :
           comment une obligation de l'article 19 du RSGP devient une règle qui se teste sur une offre en ligne.
@@ -20,16 +20,17 @@
         </div>
       </div>
 
+      <form id="f-evenement" method="get" action="https://meetings.hubspot.com/anaelle-guez/rendez-vous" hidden></form>
       <div class="carte-encre form-carte" data-anim="droite">
         <h2 class="t-h1" style="margin-bottom:20px">S'inscrire</h2>
         <p class="t-caption" style="margin:0 0 22px">Places limitées. L'inscription vaut confirmation.</p>
         <div class="paire">
-          <div><label>Prénom</label><input type="text" placeholder="Camille" disabled></div>
-          <div><label>Nom</label><input type="text" placeholder="Bernard" disabled></div>
+          <div><label for="f-evenement-prenom">Prénom</label><input id="f-evenement-prenom" form="f-evenement" name="firstname" autocomplete="given-name" type="text" placeholder="Camille"></div>
+          <div><label for="f-evenement-nom">Nom</label><input id="f-evenement-nom" form="f-evenement" name="lastname" autocomplete="family-name" type="text" placeholder="Bernard"></div>
         </div>
-        <label>Email professionnel</label><input type="email" placeholder="camille@marque.com" disabled>
-        <label>Organisation</label><input type="text" placeholder="Marque, autorité, cabinet" disabled>
-        <button class="btn btn-marque" style="width:100%;justify-content:center;margin-top:6px">Réserver ma place</button>
+        <label for="f-evenement-email">Email professionnel</label><input id="f-evenement-email" form="f-evenement" name="email" autocomplete="email" type="email" placeholder="camille@marque.com" required>
+        <label for="f-evenement-org">Organisation</label><input id="f-evenement-org" form="f-evenement" name="organisation" autocomplete="organization" type="text" placeholder="Marque, autorité, cabinet">
+        <button class="btn btn-marque" type="submit" form="f-evenement" style="width:100%;justify-content:center;margin-top:6px">Réserver ma place</button>
       </div>
     </div>
   </div>

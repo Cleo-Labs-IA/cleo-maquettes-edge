@@ -12,6 +12,8 @@ import fs from 'fs'
 import path from 'path'
 
 const SORTIE = '/Users/naomiehalioua/cleo-maquettes-edge/sortie'
+import { servir } from './commun/servir.mjs'
+const { url: URL_SORTIE } = await servir(SORTIE)
 const pages = fs.readdirSync(SORTIE).filter(f => f.endsWith('.html')).sort()
 const soucis = []
 const note = (page, quoi, detail) => soucis.push({ page, quoi, detail })
@@ -108,7 +110,7 @@ for (const w of [390, 768, 1280, 1920]) {
   p.on('pageerror', e => errs.push(String(e).slice(0, 60)))
   for (const f of pages) {
     errs.length = 0
-    await p.goto('file://' + path.join(SORTIE, f)); await p.waitForTimeout(140)
+    await p.goto(URL_SORTIE + '/' + f); await p.waitForTimeout(140)
     const d = await p.evaluate(() => ({
       deborde: document.documentElement.scrollWidth > window.innerWidth + 1,
       largeur: document.documentElement.scrollWidth,
@@ -136,7 +138,7 @@ for (const w of [390, 768, 1280, 1920]) {
 // ── 6. MOUVEMENT : après défilement, rien ne doit rester invisible
 const p3 = await (await b.newContext({ viewport: { width: 1280, height: 900 } })).newPage()
 for (const f of pages) {
-  await p3.goto('file://' + path.join(SORTIE, f)); await p3.waitForTimeout(200)
+  await p3.goto(URL_SORTIE + '/' + f); await p3.waitForTimeout(200)
   await p3.evaluate(async () => { const h = document.body.scrollHeight
     for (let y = 0; y < h; y += 480) { window.scrollTo(0, y); await new Promise(r => setTimeout(r, 45)) } })
   await p3.waitForTimeout(900)
@@ -147,7 +149,7 @@ for (const f of pages) {
 
 // ── 7. CONTRASTE des titres posés sur photo, mesuré AU PIXEL
 for (const f of pages) {
-  await p3.goto('file://' + path.join(SORTIE, f)); await p3.waitForTimeout(200)
+  await p3.goto(URL_SORTIE + '/' + f); await p3.waitForTimeout(200)
   await p3.evaluate(async () => { const h = document.body.scrollHeight
     for (let y = 0; y < h; y += 480) { window.scrollTo(0, y); await new Promise(r => setTimeout(r, 40)) } })
   await p3.waitForTimeout(600)
@@ -175,7 +177,7 @@ for (const f of pages) {
 //       capture par élément mettait le contrôle au-delà de 10 minutes et
 //       rouvrait la porte aux re-mises en page entre la mesure et la photo.
 for (const f of pages) {
-  await p3.goto('file://' + path.join(SORTIE, f)); await p3.waitForTimeout(200)
+  await p3.goto(URL_SORTIE + '/' + f); await p3.waitForTimeout(200)
   // Même cadence que capturer.mjs : 55 ms par palier puis 1,2 s. Vécu le 26/08 :
   // à 40 ms / 700 ms, le bloc .faq de 07-chat était photographié PENDANT son
   // fondu de 0,5 s et rendait un écart de 0,0 — la page était pourtant saine.

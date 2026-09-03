@@ -1,6 +1,8 @@
 import { chromium } from '/Users/naomiehalioua/cleo-landing/node_modules/playwright/index.mjs'
 import sharp from '/Users/naomiehalioua/cleo-landing/node_modules/sharp/lib/index.js'
 import fs from 'fs'
+import { servir } from './commun/servir.mjs'
+const { url: URL_SORTIE } = await servir('/Users/naomiehalioua/cleo-maquettes-edge/sortie')
 
 const cibles = process.argv.slice(2)
 const TRANCHE = 2600, SORTIE_W = 820
@@ -14,7 +16,7 @@ page.on('pageerror', e => soucis.push(String(e)))
 
 for (const c of cibles) {
   const nom = c.replace(/\.html$/, '')
-  await page.goto(`file:///Users/naomiehalioua/cleo-maquettes-edge/sortie/${nom}.html`, { waitUntil: 'load' })
+  await page.goto(`${URL_SORTIE}/${nom}.html`, { waitUntil: 'load' })
   await page.waitForTimeout(700)
   // la barre de navigation entre maquettes ne fait pas partie de la maquette
   await page.evaluate(() => document.documentElement.classList.add('capture'))

@@ -22,6 +22,7 @@
       </div>
 
       <!-- Carte formulaire -->
+      <form id="f-demo" method="get" action="https://meetings.hubspot.com/anaelle-guez/rendez-vous" hidden></form>
       <div class="carte-encre form-carte" data-anim="droite">
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px">
           <div class="avatars"><img src="img:anaelle" alt=""><img src="img:naomie" alt=""><img src="img:darcial" alt=""></div>
@@ -34,14 +35,14 @@
           <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>La signalétique de tri attendue, marché par marché</li>
         </ul>
         <div class="paire">
-          <div><label>Prénom</label><input type="text" placeholder="Camille" disabled></div>
-          <div><label>Nom</label><input type="text" placeholder="Bernard" disabled></div>
+          <div><label for="f-demo-prenom">Prénom</label><input id="f-demo-prenom" form="f-demo" name="firstname" autocomplete="given-name" type="text" placeholder="Camille"></div>
+          <div><label for="f-demo-nom">Nom</label><input id="f-demo-nom" form="f-demo" name="lastname" autocomplete="family-name" type="text" placeholder="Bernard"></div>
         </div>
-        <label>Email professionnel</label>
-        <input type="email" placeholder="camille@marque.com" disabled>
-        <label>Site de la marque</label>
-        <input type="text" placeholder="marque.com" disabled>
-        <button class="btn btn-marque" style="width:100%;justify-content:center;margin-top:6px">Choisir un créneau</button>
+        <label for="f-demo-email">Email professionnel</label>
+        <input id="f-demo-email" form="f-demo" name="email" autocomplete="email" type="email" placeholder="camille@marque.com" required>
+        <label for="f-demo-site">Site de la marque</label>
+        <input id="f-demo-site" form="f-demo" name="site" autocomplete="organization" type="text" placeholder="marque.com">
+        <button class="btn btn-marque" type="submit" form="f-demo" style="width:100%;justify-content:center;margin-top:6px">Choisir un créneau</button>
       </div>
     </div>
   </div>
@@ -67,7 +68,7 @@
 <section class="section fond-lavande">
   <div class="conteneur">
     <div class="entete-section centre" data-anim="monte" style="align-items:center;margin-bottom:32px">
-      <h2 class="t-display mesure-centree" style="max-width:760px">La mise en conformité, <span class="attenue">en quatre temps</span></h2>
+      <h2 class="t-display mesure-centree" style="max-width:760px">La mise en conformité, en quatre temps</h2>
       <p class="t-lead mesure-centree">Du texte publié au verdict rendu sur un emballage.</p>
     </div>
 
@@ -119,7 +120,7 @@
 <!-- ═══ LES TEXTES ═══ -->
 <section class="section gc-doux">
   <div class="conteneur">
-    <h2 class="t-display" style="max-width:640px">Ce que le PPWR <span class="attenue">demande vraiment</span></h2>
+    <h2 class="t-display" style="max-width:640px">Ce que le PPWR demande vraiment</h2>
     <p class="t-body" style="margin:18px 0 44px;max-width:560px">
       Quatre familles d'obligations, chacune encodée avec sa condition, ses entrées et sa preuve attendue.
     </p>
@@ -163,7 +164,7 @@
 <section class="section fond-lavande">
   <div class="conteneur">
     <div class="entete-section centre" data-anim="monte" style="align-items:center">
-      <h2 class="t-display mesure-centree" style="max-width:700px">Chaque fonction a été automatisée. <span class="attenue">La conformité produit, non.</span></h2>
+      <h2 class="t-display mesure-centree" style="max-width:700px">Chaque fonction a été automatisée. La conformité produit, non.</h2>
     </div>
     <div class="g3" data-anim-groupe>
       <div class="carte p32" style="position:relative">
@@ -177,13 +178,13 @@
         <span style="width:44px;height:44px;border-radius:var(--r-sm);background:var(--accent-muted);display:grid;place-items:center;font-size:1.25rem;margin-bottom:22px">ico:research</span>
         <h3 class="t-h2" style="margin-bottom:12px">Research</h3>
         <p class="t-sm" style="margin:0 0 20px">Un produit, un marché, une question. La réponse cite l'article, jamais un résumé.</p>
-        <a class="btn btn-contour btn-sm" href="#">En savoir plus</a>
+        <a class="btn btn-contour btn-sm" href="07-chat.html">En savoir plus</a>
       </div>
       <div class="carte p32">
         <span style="width:44px;height:44px;border-radius:var(--r-sm);background:var(--brand-muted);display:grid;place-items:center;font-size:1.25rem;margin-bottom:22px">ico:reglementation</span>
         <h3 class="t-h2" style="margin-bottom:12px">Compliance Data</h3>
         <p class="t-sm" style="margin:0 0 20px">Le verdict par référence, appelable depuis vos systèmes, avec leur verbatim et leur condition.</p>
-        <a class="btn btn-contour btn-sm" href="#">En savoir plus</a>
+        <a class="btn btn-contour btn-sm" href="08-reglementation.html">En savoir plus</a>
       </div>
     </div>
   </div>
@@ -214,12 +215,12 @@
         <img class="portrait" src="img:anaelle" alt="">
         <div>
           <div class="t-sm" style="margin-bottom:10px"><b>30 minutes</b> pour voir ce qui bloque aujourd'hui</div>
-          <h2 class="t-display">Un nouveau pays n'est plus un projet. <span class="attenue">C'est une décision.</span></h2>
+          <h2 class="t-display">Un nouveau pays n'est plus un projet. C'est une décision.</h2>
           <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap">
             <a class="btn btn-marque" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo
               <span class="rond"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
             </a>
-            <a class="btn btn-contour" href="#">Réserver un créneau</a>
+            <a class="btn btn-contour" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Réserver un créneau</a>
           </div>
         </div>
       </div>

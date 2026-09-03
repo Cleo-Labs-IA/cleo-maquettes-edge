@@ -12,6 +12,8 @@ import path from 'path'
 
 const ICI = '/Users/naomiehalioua/cleo-maquettes-edge'
 const SORTIE = path.join(ICI, 'sortie')
+import { servir } from './commun/servir.mjs'
+const { url: URL_SORTIE } = await servir(SORTIE)
 const quoi = process.argv[2] || 'avant'
 const pages = fs.readdirSync(SORTIE).filter(f => f.endsWith('.html')).sort()
 
@@ -25,7 +27,7 @@ const p = await (await b.newContext({ viewport: { width: 1440, height: 900 } }))
 const releve = {}
 
 for (const f of pages) {
-  await p.goto('file://' + path.join(SORTIE, f)); await p.waitForTimeout(180)
+  await p.goto(URL_SORTIE + '/' + f); await p.waitForTimeout(180)
   await p.evaluate(async () => { const h = document.body.scrollHeight
     for (let y = 0; y < h; y += 480) { window.scrollTo(0, y); await new Promise(r => setTimeout(r, 45)) } })
   await p.evaluate(() => window.scrollTo(0, 0))

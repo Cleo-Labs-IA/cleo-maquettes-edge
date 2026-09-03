@@ -523,13 +523,14 @@
    "_mesure": "titre 58 caracteres, description 140 caracteres"
   },
   "07-chat.html": {
-   "titre": "Recherche réglementaire, la source avant le résumé | Cleo Labs",
+   "titre": "Research, la source avant le résumé | Cleo Labs",
    "description": "Un produit, un marché, une question. Le Research cherche dans le texte, jusque dans les annexes, et rend l'extrait avec sa référence.",
    "source": "redige",
    "url_source": null,
    "appariement": "pas d'equivalent servi : /fr/product/chat rend 404. Le depot declare la page (product/chat/page.tsx:30-33) mais elle n'est pas deployee.",
    "appui_contenu": "pages/07-chat.html, h1 « Recherche réglementaire. La source avant le résumé. » et son chapeau, repris mot pour mot.",
-   "_mesure": "titre 62 caracteres, description 133 caracteres"
+   "_mesure": "titre 62 caracteres, description 133 caracteres",
+   "_renomme_le": "2026-09-03 : un seul nom pour la feature, « Research », dans la nav, l'URL, le hero et le corps."
   },
   "08-reglementation.html": {
    "titre": "Réglementation encodée, 2 812 règles testables | Cleo Labs",
@@ -566,13 +567,15 @@
    "_mesure": "titre 16 caracteres, description 101 caracteres, releves sur la page servie le 27/08/2026"
   },
   "12-article.html": {
-   "titre": "La loi européenne sur les emballages s'applique dans 20 jours : le vrai piège du 12 août n'est pas l'échéance, c'est qu'une « conformité UE » signifie déposer le même dossier séparément dans chaque État membre où vous vendez | Cleo Labs",
+   "titre": "PPWR : ce que le 12 août 2026 change pour vos emballages | Cleo Labs",
    "description": "Le 12 août 2026, le règlement européen sur les emballages (2025/40) devient directement applicable dans toute l'UE, exigeant une déclaration de conformité et une documentation technique par type d'emballage unique. La plupart des analyses n'y voient qu'une échéance. Ce qu'elles manquent : il n'existe aucun registre européen unique des emballages, les producteurs doivent inscrire le même emballage séparément dans le système national de chaque État membre.",
    "source": "site",
    "url_source": "https://www.cleolabs.co/fr/blog/eu-ppwr-packaging-conformity-2026",
    "appariement": "https://www.cleolabs.co/fr/blog/eu-ppwr-packaging-conformity-2026, le seul article PPWR du corpus (108 articles au sitemap).",
    "_mesure": "titre 236 caracteres, description 458 caracteres, releves sur la page servie le 27/08/2026",
-   "_alerte": "titre reel de 236 caracteres et description reelle de 458 caracteres. Transcrits tels quels parce que ce sont les valeurs servies, mais tres au-dessus des normes d'affichage (60 et 155). A trancher par Naomie avant que le generateur les pose."
+   "_alerte": "titre reel de 236 caracteres et description reelle de 458 caracteres. Transcrits tels quels parce que ce sont les valeurs servies, mais tres au-dessus des normes d'affichage (60 et 155). A trancher par Naomie avant que le generateur les pose.",
+   "_titre_servi": "La loi européenne sur les emballages s'applique dans 20 jours : le vrai piège du 12 août n'est pas l'échéance, c'est qu'une « conformité UE » signifie déposer le même dossier séparément dans chaque État membre où vous vendez | Cleo Labs",
+   "_note_titre": "2026-09-03 : le titre servi fait 250 caractères, tronqué partout ; on sert le h1 de la page. Le canonical reste celui du vrai site."
   },
   "13-glossaire.html": {
    "titre": "Glossaire de Conformité Réglementaire | 20+ Termes Clés Expliqués",
@@ -701,6 +704,70 @@
    "titre": "Legal Data: the product regulatory corpus | Cleo Labs",
    "description": "The Cleo Labs corpus: indexed regulations, tracked authorities, customs codes and covered markets, each tied to its official source.",
    "source": "redige"
+  },
+  "30-securite.html": {
+   "titre": "Sécurité des données chez Cleo Labs | Cleo Labs",
+   "description": "Six garanties écrites et vérifiables, les pratiques de sécurité et le socle technique de Cleo Labs, posés dès la conception pour des données réglementaires et de conformité sensibles.",
+   "source": "redige",
+   "url_source": null,
+   "_appui": "pages/30-securite.html, h1 et h2",
+   "_ecrit_le": "2026-09-03"
+  },
+  "31-journal.html": {
+   "titre": "Journal des modifications | Cleo Labs",
+   "description": "Ce qui change dans le produit Cleo, daté et détaillé : nouvelles couvertures, nouveaux textes encodés, corrections.",
+   "source": "redige",
+   "url_source": null,
+   "_appui": "pages/31-journal.html, h1",
+   "_ecrit_le": "2026-09-03"
+  },
+  "32-plan-action.html": {
+   "titre": "Plan d'action MARIA, marché par marché | Cleo Labs",
+   "description": "La méthode qui rapproche vos produits des textes qui les touchent, note le risque avec sa source et rend un plan d'action daté, en quatre étapes.",
+   "source": "redige",
+   "url_source": null,
+   "_appui": "pages/32-plan-action.html, h1 et chapeau",
+   "_ecrit_le": "2026-09-03"
+  },
+  "33-fabricants.html": {
+   "titre": "Conformité produit pour les fabricants | Cleo Labs",
+   "description": "Chaque obligation produit, du marquage CE aux seuils REACH. L'écart est signalé avant le lancement, et dès qu'un texte bouge.",
+   "source": "redige",
+   "url_source": null,
+   "_appui": "pages/33-fabricants.html, chapeau",
+   "_ecrit_le": "2026-09-03"
+  },
+  "34-importateurs.html": {
+   "titre": "Conformité produit pour les importateurs et distributeurs | Cleo Labs",
+   "description": "Code HS, droits, certifications, double usage : une réponse vérifiée par produit, avant l'expédition, du classement au dédouanement.",
+   "source": "redige",
+   "url_source": null,
+   "_appui": "pages/34-importateurs.html, chapeau",
+   "_ecrit_le": "2026-09-03"
+  },
+  "35-marketplaces.html": {
+   "titre": "Conformité produit pour les marketplaces | Cleo Labs",
+   "description": "Ce qui est vendable et où, les tendances avant la loi, les sanctions tombées chez les concurrents. Sur des milliers d'annonces, marché par marché.",
+   "source": "redige",
+   "url_source": null,
+   "_appui": "pages/35-marketplaces.html, chapeau",
+   "_ecrit_le": "2026-09-03"
+  },
+  "36-solutions.html": {
+   "titre": "La conformité produit sur 106 pays, au même endroit | Cleo Labs",
+   "description": "Donnez votre nom de domaine. Chaque produit est rapproché de chaque réglementation qui le touche : par marché, par référence, par échéance.",
+   "source": "redige",
+   "url_source": null,
+   "_appui": "pages/36-solutions.html, chapeau",
+   "_ecrit_le": "2026-09-03"
+  },
+  "404.html": {
+   "titre": "Page introuvable | Cleo Labs",
+   "description": "Cette page n'existe pas ou a changé d'adresse.",
+   "source": "redige",
+   "url_source": null,
+   "_appui": "pages/99-404.html",
+   "_ecrit_le": "2026-09-03"
   }
  },
  "structure": {

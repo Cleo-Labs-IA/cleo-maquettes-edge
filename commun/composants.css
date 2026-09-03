@@ -56,14 +56,14 @@
 .nav-logo img{filter:none !important}
 .nav-liens{display:flex; align-items:center; gap:24px; margin-left:6px}
 .nav-item{position:static}
-.nav-declencheur{background:none; border:none; cursor:pointer; padding:0; font-size:0.75rem;
+.nav-declencheur{background:none; border:none; cursor:pointer; padding:0; font-size:0.875rem;
   font-weight:450; color:var(--c-text); display:flex; align-items:center; gap:5px;
   transition:color var(--dur-fast) var(--ease-apple)}
 .nav-item:hover .nav-declencheur{color:var(--c-blue)}
 .nav-item:hover .chev{transform:rotate(180deg)}
 .nav-declencheur .chev{width:9px; height:9px; opacity:0.45; transition:transform var(--dur-fast) var(--ease-apple)}
 .nav-fin{margin-left:auto; display:flex; align-items:center; gap:16px}
-.nav-fin .lien-secondaire{font-size:0.75rem; color:var(--c-text-2)}
+.nav-fin .lien-secondaire{font-size:0.875rem; color:var(--c-text-2)}
 
 /* ── Méga-menus ── */
 .mega{position:absolute; top:calc(100% - 1px); left:var(--gouttiere); right:var(--gouttiere);
@@ -83,41 +83,43 @@
 .mega-icone{width:36px; height:36px; border-radius:var(--r-sm); background:var(--c-field-pale);
   display:grid; place-items:center; font-size:1rem; flex:none}
 .mega-item span:last-child{min-width:0}
-.mega-item b{display:block; font-size:0.75rem; font-weight:500; color:var(--c-text); line-height:1.35}
-.mega-item i{display:block; font-style:normal; font-size:0.75rem; color:var(--c-text-3); line-height:1.4; margin-top:2px}
+.mega-item b{display:block; font-size:0.875rem; font-weight:500; color:var(--c-text); line-height:1.35}
+.mega-item i{display:block; font-style:normal; font-size:0.8125rem; color:var(--c-text-3); line-height:1.4; margin-top:2px}
 .mega-colonnes{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:48px}
 .mega-liste{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:9px 20px;
   padding-top:14px; border-top:1px solid var(--c-border)}
-.mega-liste a{font-size:0.75rem; color:var(--c-text-2); display:flex; align-items:center; gap:7px; padding:4px 0}
+.mega-liste a{font-size:0.875rem; color:var(--c-text-2); display:flex; align-items:center; gap:7px; padding:4px 0}
 .mega-liste a:hover{color:var(--c-blue)}
 .mega-liste-seule{grid-template-columns:minmax(0,1fr); border-top:none; padding-top:0}
-.mega-badge{font-size:0.625rem; font-weight:600; background:var(--c-blue-light); color:var(--c-blue);
+.mega-badge{font-size:0.6875rem; font-weight:600; background:var(--c-blue-light); color:var(--c-blue);
   padding:2px 7px; border-radius:4px}
 .mega-pied{margin-top:20px; padding:14px 16px; background:var(--c-surface); border-radius:var(--r-sm);
   font-size:0.75rem; color:var(--c-text-3)}
 @media (max-width:1024px){ .mega{display:none} }
 
-/* ── Boutons. Le primaire de cleolabs.co est ENCRE, en pilule. ── */
-.btn{display:inline-flex; align-items:center; justify-content:center; gap:9px; border:none; cursor:pointer;
+/* ── Boutons, refondus le 03/09/2026. Mesuré avant : quatre styles sur la même
+      page (bleu, blanc plein, blanc bordé, noir) et deux tailles de texte.
+      Maintenant UN primaire, le bleu, la couche « signal » du DS V5 (action),
+      UN secondaire au contour, et deux tailles : 15 px / 48 px, 13 px / 40 px.
+      Sur champ profond le primaire devient blanc, le secondaire un contour blanc. ── */
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:9px; border:1px solid transparent; cursor:pointer;
   font-family:var(--font); font-weight:500; letter-spacing:-0.005em; text-decoration:none;
-  font-size:0.9375rem; padding:12px 24px; border-radius:var(--r-pill); min-height:var(--touch-min);
+  font-size:0.9375rem; padding:12px 24px; border-radius:var(--r-pill); min-height:48px;
   transition:var(--transition-hover)}
 .btn:hover{transform:translateY(-1px)}
 .btn:active{transform:translateY(0)}
-.btn-primaire,.btn-marque{background:var(--c-ink); color:#fff; box-shadow:var(--shadow-sm)}
-.btn-primaire:hover,.btn-marque:hover{background:#2A2A2A; box-shadow:var(--shadow-md)}
-.btn-bleu{background:var(--c-blue); color:#fff}
-.btn-bleu:hover{background:var(--c-blue-hover)}
-.btn-clair{background:var(--c-white); color:var(--c-ink); border:1px solid var(--c-border); box-shadow:var(--shadow-sm)}
-.btn-contour{background:var(--c-white); color:var(--c-text); border:1px solid var(--c-border-hover)}
-.btn-contour:hover{border-color:var(--c-ink)}
-.btn-sm{padding:9px 17px; font-size:0.75rem; min-height:auto}
+.btn-primaire,.btn-marque,.btn-bleu{background:var(--c-blue); color:#fff; box-shadow:var(--shadow-sm)}
+.btn-primaire:hover,.btn-marque:hover,.btn-bleu:hover{background:var(--c-blue-hover); box-shadow:var(--shadow-md)}
+.btn-clair,.btn-contour{background:transparent; color:var(--c-ink); border-color:var(--c-border-hover)}
+.btn-clair:hover,.btn-contour:hover{border-color:var(--c-ink); background:var(--c-white)}
+.btn-sm{padding:9px 18px; font-size:0.8125rem; min-height:40px}
 .btn .rond{display:none}
 /* Sur champ profond, les boutons s'inversent */
-.sur-sombre .btn-primaire,.sur-sombre .btn-marque{background:#fff; color:var(--c-ink)}
-.sur-sombre .btn-primaire:hover,.sur-sombre .btn-marque:hover{background:#EDEBE7}
+.sur-sombre .btn-primaire,.sur-sombre .btn-marque,.sur-sombre .btn-bleu{background:#fff; color:var(--c-ink)}
+.sur-sombre .btn-primaire:hover,.sur-sombre .btn-marque:hover,.sur-sombre .btn-bleu:hover{background:#EDEBE7}
 .sur-sombre .btn-contour,.sur-sombre .btn-clair{background:transparent; color:#fff; border-color:rgba(255,255,255,0.28)}
-.sur-sombre .btn-contour:hover{border-color:rgba(255,255,255,0.55)}
+.sur-sombre .btn-contour:hover,.sur-sombre .btn-clair:hover{border-color:rgba(255,255,255,0.6); background:transparent}
+/* La barre garde le bleu même quand la page est sombre */
 .nav .btn-marque{background:var(--c-blue); color:#fff}
 .nav .btn-marque:hover{background:var(--c-blue-hover)}
 
@@ -416,11 +418,11 @@
 .cta-final .portrait{width:180px; height:180px; border-radius:var(--r-md); object-fit:cover}
 
 /* ── Pied de page : champ profond, c'est sa place chez les trois. ── */
-.pied{background:var(--c-field-deep); color:var(--c-text-on-dark); padding-top:var(--s-96); padding-bottom:44px}
-.pied-colonnes{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:var(--s-32); padding-bottom:var(--s-48)}
-.pied h4{font-size:0.9375rem; font-weight:500; margin-bottom:18px; color:var(--c-text-on-dark)}
-.pied ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:11px}
-.pied ul a{font-size:0.9375rem; color:var(--c-text-on-dark-2)}
+.pied{background:var(--c-field-deep); color:var(--c-text-on-dark); padding-top:var(--s-64); padding-bottom:32px}
+.pied-colonnes{display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:var(--s-24); padding-bottom:40px}
+.pied h4{font-size:0.875rem; font-weight:500; margin:0 0 14px; color:var(--c-text-on-dark)}
+.pied ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px}
+.pied ul a{font-size:0.875rem; color:var(--c-text-on-dark-2); display:inline-block; padding:3px 0}
 .pied ul a:hover{color:var(--c-text-on-dark)}
 .pied .t-sm{color:var(--c-text-on-dark-2)} .pied .t-micro,.pied .t-caption{color:var(--c-text-on-dark-3)}
 .pied .pilule{background:rgba(255,255,255,0.06); border-color:var(--c-filet-sombre); color:var(--c-text-on-dark-2)}
@@ -437,8 +439,9 @@
 .infolettre input::placeholder{color:var(--c-text-on-dark-3)}
 .infolettre button{width:100%; padding:11px; border-radius:var(--r-xs); border:none; background:#fff;
   color:var(--c-ink) !important; font-weight:600; font-size:0.9375rem; cursor:pointer}
-.signature-cleo{background:var(--c-field-deep); padding:56px 0 0; overflow:hidden}
-.signature-cleo .wordmark{width:100%; height:auto; opacity:0.07; filter:brightness(0) invert(1); transform:translateY(14%)}
+.signature-cleo{background:var(--c-field-deep); padding:32px 0 0; overflow:hidden}
+.signature-cleo .wordmark{width:52%; max-width:560px; height:auto; display:block; margin:0 auto; opacity:0.07;
+  filter:brightness(0) invert(1); transform:translateY(18%)}
 
 /* ── Formulaires ── */
 .form-carte{border-radius:var(--r-md); padding:var(--s-32)}
@@ -624,7 +627,7 @@
   .nav-fin .btn{white-space:nowrap; padding:8px 14px; font-size:0.75rem}
   .nav-fin .lien-secondaire{display:none}
   .nav-langue{margin-right:4px; padding:1px}
-  .nav-langue span,.nav-langue a{padding:3px 7px; font-size:0.625rem}
+  .nav-langue span,.nav-langue a{padding:3px 7px; font-size:0.6875rem}
   .g2,.g3,.g4,.escalier,.pied-colonnes,.pied-regs,.form-carte .paire,.kit-duo,.kit-trio{grid-template-columns:minmax(0,1fr)}
   .bande-logos .cellule{min-width:110px}
   .mass-20{grid-template-columns:repeat(8,minmax(0,1fr))}
@@ -731,8 +734,8 @@
    simplement laisse a l'heritage, parce que regime-noir.css:59 redeclare
    .t-hero a clamp(2.25rem, 4.4vw, 3.75rem) : sans cette ligne, la page
    01-accueil-noir partirait a 60 px. Toute retouche du jeton se repercute ici. */
-.hero-epure .t-hero{font-size:clamp(2.125rem, 3.4vw, 3.125rem);
-  font-weight:400; letter-spacing:-0.018em; line-height:1.22}
+.hero-epure .t-hero{font-size:clamp(2.25rem, 3.6vw, 3.25rem);
+  font-weight:500; letter-spacing:-0.025em; line-height:1.12}
 .hero-globe{position:relative; height:clamp(320px, 40vw, 520px); margin:24px auto 0;
   max-width:860px; z-index:1}
 .hero-globe::after{content:''; position:absolute; inset:0; pointer-events:none;
@@ -759,7 +762,7 @@
    encore 13 et 11 ; c'est base.css qu'il faut réparer, pas ces deux lignes.
    Tant que ce n'est pas fait, elles doivent rester ici pour gagner. */
 .t-caption{font-size:0.75rem}
-.t-label{font-size:0.625rem; letter-spacing:0.13em}
+.t-label{font-size:0.75rem; letter-spacing:0.12em}
 
 /* Une surface sombre posée à la main porte sa propre encre. Sans ça, ses enfants
    gardent l'encre du régime clair et rendent sombre sur sombre. Symétrique de
@@ -990,7 +993,7 @@
   gap:0; align-items:center; margin-top:56px}
 .pl-etage{min-width:0}
 .pl-tete{display:flex; align-items:baseline; gap:10px; margin-bottom:16px}
-.pl-num{font-size:0.625rem; font-weight:600; letter-spacing:0.13em; color:var(--c-blue)}
+.pl-num{font-size:0.6875rem; font-weight:600; letter-spacing:0.13em; color:var(--c-blue)}
 .pl-lien{color:rgba(255,255,255,0.42); align-self:stretch; display:flex; align-items:center}
 .pl-lien svg{width:100%; height:230px}
 
@@ -1236,4 +1239,94 @@
   .trio-socle > div{border-left:0; border-top:1px solid rgba(255,255,255,0.14);
     padding:16px 0 0}
   .trio-socle > div:first-child{padding-left:0}
+}
+
+
+/* ════════════════════════════════════════════════════════════════
+   PASSE UX/UI DU 03/09/2026. Tout ce qui suit répond à une mesure.
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── Le menu sur téléphone. Mesuré le 03/09 à 390 px : la barre ne gardait que
+      le logo, la langue et le bouton de démo ; Produit, Textes, Ressources et
+      Entreprise disparaissaient sans rien à leur place. Le panneau est GÉNÉRÉ
+      par construire.mjs à partir des méga-menus : une seule source. ── */
+.nav-burger{display:none; width:44px; height:44px; border:0; background:none; cursor:pointer; padding:10px;
+  flex-direction:column; justify-content:center; gap:5px; margin-left:2px; border-radius:var(--r-sm)}
+.nav-burger span{display:block; height:2px; background:var(--c-ink); border-radius:2px;
+  transition:transform var(--dur-fast) var(--ease-apple), opacity var(--dur-fast)}
+.nav-burger[aria-expanded="true"] span:first-child{transform:translateY(3.5px) rotate(45deg)}
+.nav-burger[aria-expanded="true"] span:last-child{transform:translateY(-3.5px) rotate(-45deg)}
+.menu-mobile{display:none}
+@media (max-width:1024px){
+  .nav-burger{display:flex}
+  .menu-mobile{display:block; position:fixed; top:60px; left:0; right:0; bottom:0; overflow-y:auto; z-index:80;
+    background:var(--c-white); padding:4px var(--gouttiere) 40px; border-top:1px solid var(--c-border)}
+  .menu-mobile[hidden]{display:none}
+  html.menu-ouvert{overflow:hidden}
+  .mm-groupe{padding:12px 0; border-bottom:1px solid var(--c-border)}
+  .mm-titre{font-size:0.75rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--c-text-3); padding:8px 0 4px}
+  .menu-mobile a{display:flex; align-items:center; min-height:48px; font-size:1.0625rem; color:var(--c-text); padding:2px 0}
+  .mm-groupe > a{font-weight:500}
+  .mm-actions{display:flex; flex-direction:column; gap:10px; padding-top:20px}
+  .mm-actions .btn{justify-content:center}
+  .mm-actions .mm-lien{justify-content:center; color:var(--c-text-2)}
+}
+
+/* ── L'interface dans le hero de l'accueil. Legora et Harvey posent le produit
+      sous le titre ; ici il n'apparaissait qu'au troisième écran. La surface
+      porte sa propre encre : le hero est un champ profond. ── */
+.hero-produit{max-width:960px; margin:48px auto 0; position:relative; z-index:1; text-align:left;
+  --c-text:rgba(0,0,0,0.87); --c-text-2:rgba(0,0,0,0.62); --c-text-3:rgba(0,0,0,0.54); --c-ink:#0A0A0A; --cleo-ink:#0A0A0A; color:var(--c-text)}
+.hero-produit .ecran-app{box-shadow:0 30px 80px rgba(0,0,0,0.45)}
+.sur-sombre .hero-produit .t-caption{color:var(--c-text-3)}
+.sur-sombre .hero-produit .t-h3{color:var(--c-ink)}
+.hp-corps{display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,0.9fr); gap:18px; padding:18px; background:var(--c-surface); align-items:start}
+.hp-corps > *{min-width:0}
+.hp-fiche{max-width:none; box-shadow:var(--shadow-sm)}
+.hp-droite{display:flex; flex-direction:column; gap:14px}
+.hp-citation{padding:16px 18px; background:#fff; border-radius:var(--r-md); border-left:2px solid var(--c-blue); box-shadow:var(--shadow-sm)}
+.hp-citation .t-caption:first-child{color:var(--c-text)}
+.hp-regle{box-shadow:var(--shadow-sm)}
+@media (max-width:760px){ .hp-corps{grid-template-columns:minmax(0,1fr)} .hero-produit{margin-top:32px} }
+
+/* ── Le témoignage de l'accueil, compact : portrait rond, la citation en grand,
+      le lien vers le cas. Avant, 540 px de photo pour deux phrases. ── */
+.temoin-compact{max-width:780px; margin:0 auto; text-align:center; display:flex; flex-direction:column; align-items:center; gap:22px}
+.temoin-portrait{width:112px; height:112px; border-radius:50%; object-fit:cover; object-position:top}
+.temoin-compact .citation{font-size:1.25rem; line-height:1.55; letter-spacing:-0.012em; color:var(--c-text)}
+@media (max-width:640px){ .temoin-compact .citation{font-size:1.0625rem} }
+
+/* ── Le bloc identité du pied, sur une ligne ── */
+.pied-identite{display:flex; gap:48px; flex-wrap:wrap; align-items:flex-start; padding:32px 0 28px; border-top:1px solid var(--c-filet-sombre)}
+.pied-identite > div:first-child{flex:1; min-width:220px}
+.pied-coordonnees{display:flex; gap:40px; flex-wrap:wrap}
+.pied-coordonnees a{color:var(--c-text-on-dark-2)}
+.pied-coordonnees a:hover{color:var(--c-text-on-dark)}
+.pied-bas a{padding:4px 0}
+
+/* ── Le champ email du hero : sur téléphone il devient un vrai champ bordé.
+      Mesuré le 03/09 : sans bord ni fond, 21 px de haut, il se lisait comme un
+      texte. ── */
+@media (max-width:560px){
+  .champ-demo input{border:1px solid rgba(255,255,255,0.22); border-radius:var(--r-pill); padding:12px 16px;
+    text-align:left; background:rgba(255,255,255,0.05); min-height:48px}
+  .champ-demo input:focus{border-color:rgba(255,255,255,0.5)}
+}
+
+/* ── Téléphone : les logos en grille, les cibles à 44 px, rien sous 14 px.
+      Mesuré le 03/09 à 390 px : cinq logos empilés sur 500 px, 50 cibles de
+      moins de 40 px, 68 textes sous 14 px sur l'accueil et 215 sur Legal Data. ── */
+@media (max-width:640px){
+  .bande-logos{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:4px}
+  .bande-logos .cellule{height:72px; min-width:0; padding:14px 12px}
+  .bande-logos .cellule:last-child:nth-child(odd){grid-column:1 / -1}
+  .bande-logos img{max-height:36px; max-width:150px}
+  .t-caption,.t-micro,.t-sm,.pilule,.tag,.etiquette,.fiche-ref,.fiche,.mega-badge{font-size:0.875rem}
+  .t-label,.surtitre{font-size:0.75rem}
+  .badge,.marqueur,.vv-etat{font-size:0.8125rem}
+  .comparatif td,.comparatif th,.tab-donnees td,.tab-donnees th,table td,table th{font-size:0.875rem}
+  .pied ul a,.res-nav a,.sommaire a,.fiche-laterale a,.cta-texte,.mega-liste a{min-height:44px; display:inline-flex; align-items:center}
+  .pied-bas a{min-height:44px; display:inline-flex; align-items:center}
+  .btn-sm{min-height:44px}
+  .nav-langue span,.nav-langue a{min-height:32px; display:inline-flex; align-items:center}
 }
