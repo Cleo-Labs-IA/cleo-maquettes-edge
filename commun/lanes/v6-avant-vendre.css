@@ -239,3 +239,11 @@ body[data-cleo-ds="v6"] .av-socle-panneau .av-legende{margin-bottom:14px}
   body[data-cleo-ds="v6"] .av-piliers li{grid-template-columns:minmax(0,1fr)}
   body[data-cleo-ds="v6"] .av-socle-panneau{padding:24px 20px}
 }
+
+/* ═══ LE GLOBE REMIS ═══ 14/09/2026, « remets le globe ». Le globe aux produits du V6 validé reprend la colonne
+   droite du haut de page. Sa vignette sombre (::after, prévue pour le champ profond) est retirée sur fond blanc. */
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-grille .hero-globe{width:100%;height:clamp(440px, 42vw, 620px);margin:0}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-grille .hero-globe::after{display:none}
+@media (max-width:980px){
+  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-grille .hero-globe{height:clamp(320px, 88vw, 460px)}
+}
