@@ -36,7 +36,7 @@ const PAGES = [
   { fichier: '39-data.html',        titre: 'Data',        source: 'maquette trois entrées, 14/09/2026' },
   { fichier: '40-enterprise.html',  titre: 'Enterprise',  source: 'maquette trois entrées, 14/09/2026' },
   { fichier: '41-accueil-resultat.html', titre: 'Accueil, angle résultat', source: 'maquette angle résultat, 14/09/2026' },
-  { fichier: '43-accueil-avant-vendre.html', titre: 'Accueil, avant de vendre', source: 'maquette avant de vendre, 14/09/2026' },
+  { fichier: '43-accueil-avant-vendre.html', titre: 'Accueil, avant de vendre', source: 'maquette avant de vendre, 14/09/2026', nav: 'commun/bandeau-nav-avant-vendre.html' },
   { fichier: '09-texte.html',       titre: 'Un texte',    source: 'edgecomply.com/topics/reach-regulation-compliance' },
   { fichier: '10-ressources.html',  titre: 'Ressources',  source: 'edgecomply.com/library' },
   { fichier: '11-blog.html',        titre: 'Publications',source: 'edgecomply.com/library/blog' },
@@ -789,6 +789,9 @@ function litOuRepli(rel, repli) {
 const navEn = fs.existsSync(path.join(ICI, 'commun/bandeau-nav-en.html'))
   ? avecMenuMobile(fs.readFileSync(path.join(ICI, 'commun/bandeau-nav-en.html'), 'utf8')) : nav
 const piedEn = litOuRepli('commun/pied-en.html', pied)
+/* Une page peut porter sa propre barre (maquette « avant de vendre », 14/09/2026). */
+const navsPropres = {}
+const navPropre = (rel) => navsPropres[rel] || (navsPropres[rel] = avecMenuMobile(fs.readFileSync(path.join(ICI, rel), 'utf8')))
 
 
 fs.mkdirSync(path.join(ICI, 'sortie'), { recursive: true })
@@ -802,7 +805,7 @@ for (const p of PAGES) {
      le pied. Mesuré le 03/09 : aucune page n'avait de <main>. */
   const aNav = corps.includes('<!--NAV-->')
   const evitement = `<a class="lien-evitement" href="#contenu">${p.en ? 'Skip to content' : 'Aller au contenu'}</a>`
-  corps = corps.replace('<!--NAV-->', evitement + '\n' + (p.en ? navEn : nav) + '\n<main id="contenu">')
+  corps = corps.replace('<!--NAV-->', evitement + '\n' + (p.nav ? navPropre(p.nav) : (p.en ? navEn : nav)) + '\n<main id="contenu">')
   corps = corps.replace('<!--PIED-->', (aNav ? '</main>\n' : '') + (p.en ? piedEn : pied))
   corps = corps.replace('<!--MASSE-->', masse()).replace('<!--MASSE-REFS-->', masseRefs())
   corps = corps.replace(/ico:([a-z]+)(?::(\d+))?/g, (_, n, t) => icone(n, t ? +t : 20))
