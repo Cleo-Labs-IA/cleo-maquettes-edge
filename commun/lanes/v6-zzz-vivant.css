@@ -137,6 +137,61 @@ body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .pa-colonnes h4{
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .pa-colonnes ul{gap:14px;padding:20px 20px 28px;font-size:.9375rem}
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .pa-bas{margin-top:0;padding:20px;border:1px solid rgba(26,26,26,.10);border-top:0}
 
+/* ─── Le dossier remis (repris de la v2 le 14/09/2026) : l'interface du dossier dans une carte, sur zone teintée ─── */
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #dossier{scroll-margin-top:96px}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #dossier .av-titre2{margin-bottom:20px !important}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-intro{max-width:680px;margin:0 0 48px;font-size:1.0625rem;line-height:1.55;color:#737373}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable-zone{margin:0 -32px -64px;padding:40px 32px 48px;background:#F9F8F6;border-top:1px solid rgba(26,26,26,.10)}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable{display:grid;grid-template-columns:260px minmax(0,1fr);max-width:1080px;margin:0 auto;border-radius:12px;background:#FFFFFF;box-shadow:0 0 0 1px rgba(26,26,26,.07), 0 2px 5px rgba(26,26,26,.05);overflow:hidden}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable-nav{padding:24px 16px;border-right:1px solid rgba(26,26,26,.08);background:#FBFAF8}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable-logo{display:flex;align-items:center;gap:10px;padding:0 8px 20px;border-bottom:1px solid rgba(26,26,26,.08);font-size:.8125rem;font-weight:500;color:#1A1A1A}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable-logo img{height:16px;width:auto}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable-nav ul{list-style:none;margin:0;padding:14px 0 0;display:grid;gap:2px}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable-nav li{padding:9px 10px;border-radius:8px;font-size:.8125rem;color:#6B6B6B}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable-nav li.actif{background:#F1EFEA;color:#1A1A1A;font-weight:500}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable-corps{min-width:0;padding:32px 36px 36px}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable-surtitre{margin:0;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:#6B6B6B}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable-corps h3{margin:8px 0 0;font-size:1.625rem;font-weight:500;letter-spacing:-.025em;color:#1A1A1A}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable-etiquettes{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable-etiquettes span{padding:5px 9px;border-radius:9999px;background:#F4F3EF;font-size:.75rem;color:#525252}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-exigence{margin-top:26px;border:1px solid rgba(26,26,26,.10);border-radius:12px;overflow:hidden}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-exigence-tete{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid rgba(26,26,26,.10);background:#FBFAF8}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-exigence-tete b{font-size:.9375rem;font-weight:500;color:#1A1A1A}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-exigence-tete span{margin-left:auto;padding:3px 9px;border:1px solid rgba(26,26,26,.12);border-radius:9999px;background:#FFFFFF;font-size:.75rem;color:#1A1A1A}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-exigence-grille{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-exigence-grille > div{padding:16px 18px;border-right:1px solid rgba(26,26,26,.10);border-bottom:1px solid rgba(26,26,26,.10)}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-exigence-grille > div:nth-child(2n){border-right:0}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-exigence-grille > div:nth-last-child(-n+2){border-bottom:0}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-exigence-grille small{display:block;margin-bottom:6px;font-size:.6875rem;letter-spacing:.06em;text-transform:uppercase;color:#6B6B6B}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-exigence-grille p{margin:0;font-size:.875rem;line-height:1.45;color:#1A1A1A}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-exigence-grille .av-action{background:#EFF0FF}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-exigence-grille .av-action p{color:#0008CF;font-weight:500}
+
+/* ─── Qui fait quoi (repris de la v2) : trois cellules sur zone teintée, sous les experts ─── */
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #experts .av-roles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:56px -32px -64px;background:#F9F8F6;border-top:1px solid rgba(26,26,26,.10)}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #experts .av-roles > div{padding:28px 32px 32px;border-left:1px solid rgba(26,26,26,.10)}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #experts .av-roles > div:first-child{border-left:0}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #experts .av-roles b{display:block;margin-bottom:8px;font-size:.9375rem;font-weight:500;color:#1A1A1A}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #experts .av-roles span{display:block;font-size:.875rem;line-height:1.5;color:#6B6B6B}
+
+@media (max-width:980px){
+  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable-zone{margin:0 -20px -44px;padding:20px 16px 24px}
+  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable{grid-template-columns:minmax(0,1fr)}
+  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable-nav{padding:16px;border-right:0;border-bottom:1px solid rgba(26,26,26,.08)}
+  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable-nav ul{display:flex;gap:4px;overflow-x:auto}
+  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable-nav li{white-space:nowrap}
+  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable-corps{padding:22px 18px 24px}
+  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #experts .av-roles{grid-template-columns:minmax(0,1fr);margin:40px -20px -44px}
+  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #experts .av-roles > div{padding:22px 20px;border-left:0;border-top:1px solid rgba(26,26,26,.10)}
+  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #experts .av-roles > div:first-child{border-top:0}
+}
+@media (max-width:560px){
+  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-exigence-grille{grid-template-columns:minmax(0,1fr)}
+  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-exigence-grille > div,
+  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-exigence-grille > div:nth-last-child(-n+2){border-right:0;border-bottom:1px solid rgba(26,26,26,.10)}
+  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-exigence-grille > div:last-child{border-bottom:0}
+}
+
 @media (max-width:980px){
   body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] main > section:first-child{--av-media-h:380px;padding:56px 0 16px !important}
   body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] main > section:first-child::before{height:calc(var(--av-media-h) + 32px)}
