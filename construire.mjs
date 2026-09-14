@@ -835,7 +835,7 @@ for (const p of PAGES) {
   const regimeDePage = p.noir && !familleV6 ? regimeNoir : ''
   const seoP = SEO.pages[nomSortie]
   const langue = p.en ? 'en' : 'fr'
-  const titre = seoP && seoP.titre ? seoP.titre : `Cleo — ${p.titre}`
+  const titre = seoP && seoP.titre ? seoP.titre : `Cleo · ${p.titre}`
   if (!seoP) notesSeo.push(`  (pas de fiche SEO : ${nomSortie}, titre de repli)`)
   /* L'URL CANONIQUE EST CELLE DU VRAI SITE, ou rien.
      Vécu le 27/08 : j'ai d'abord construit le canonical depuis le nom de
