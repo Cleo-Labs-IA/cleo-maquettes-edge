@@ -70,209 +70,104 @@
   </div>
 </section>
 
-<!-- ═══ LE TRAVAIL QUOTIDIEN ═══ direction B, choisie par Naomie le 03/09/2026 : le
-     produit au centre, les parutions autour. Celle qui le touche trace un trait jusqu'à lui
-     et devient une ligne de sa fiche avec son verdict ; celle qui ne le touche pas s'arrête
-     à mi-chemin, en gris. Le geste validé le 03/08 sur la veille. Les six parutions sont
-     des textes réels déjà présents sur le site ; aucun chiffre nouveau. -->
-<section class="section sur-clair-fond" style="padding-top:0">
-  <div class="conteneur">
-    <div class="entete-section centre" data-anim="monte" style="align-items:center">
-      <div class="surtitre">La donnée réglementaire, agrégée</div>
-      <h2 class="t-display mesure-centree">Plus aucun angle mort sur la conformité de vos produits. Une fois pour toutes.</h2>
-      <p class="t-lead mesure-centree" style="margin-top:18px">Nous trouvons et corrigeons vos écarts de conformité dans plus de 106 pays, des restrictions chimiques à l'étiquetage et aux règles environnementales.</p>
-    </div>
-
-    <div class="radar" data-anim="monte-court" data-touche="Touche ce produit" data-hors="Ne touche pas ce produit">
-      <div class="radar-boite">
-        <div class="radar-stats" data-anim-groupe>
-          <div><b>106</b><span>pays suivis</span></div>
-          <div><b>25 000</b><span>réglementations indexées</span></div>
-          <div><b>19 000</b><span>autorités suivies</span></div>
-          <div><b>3 700</b><span>sources officielles</span></div>
-        </div>
-        <div class="radar-col radar-parutions">
-          <div class="t-label radar-titre">Agrégé depuis 3 700 sources officielles</div>
-          <div class="radar-source" data-i="0" data-ligne="0">
-            <span class="radar-autorite">CPSC · États-Unis</span>
-            <span class="radar-texte">CPSIA, section 101 (a), teneur en plomb</span>
-            <span class="radar-etat"></span>
-          </div>
-          <div class="radar-source" data-i="1" data-ligne="1">
-            <span class="radar-autorite">ECHA · Union européenne</span>
-            <span class="radar-texte">REACH, annexe XVII</span>
-            <span class="radar-etat"></span>
-          </div>
-          <div class="radar-source" data-i="2" data-ligne="2">
-            <span class="radar-autorite">OEHHA · Californie</span>
-            <span class="radar-texte">Proposition 65</span>
-            <span class="radar-etat"></span>
-          </div>
-          <div class="radar-source" data-i="3" data-ligne="-1">
-            <span class="radar-autorite">FDA · États-Unis</span>
-            <span class="radar-texte">21 CFR 101, étiquetage des denrées alimentaires</span>
-            <span class="radar-etat"></span>
-          </div>
-        </div>
-        <svg class="radar-traits" aria-hidden="true">
-          <line class="radar-trait" data-i="0"></line>
-          <line class="radar-trait" data-i="1"></line>
-          <line class="radar-trait" data-i="2"></line>
-          <line class="radar-trait" data-i="3"></line>
-        </svg>
-        <div class="radar-col radar-cible">
-          <div class="t-label radar-titre">Votre référence</div>
-          <div class="radar-fiche">
-            <div class="radar-produit">
-              <img src="img:jean" alt="">
-              <div><div class="radar-nom">Jean droit enfant</div><div class="radar-ref">DNM-4412</div></div>
-            </div>
-            <div class="radar-ligne" data-i="0"><span>CPSIA, plomb</span><span class="marqueur m-couvert">Couvert</span></div>
-            <div class="radar-ligne" data-i="1"><span>REACH annexe XVII</span><span class="marqueur m-couvert">Couvert</span></div>
-            <div class="radar-ligne" data-i="2"><span>Proposition 65</span><span class="marqueur m-manquant">Donnée manquante</span></div>
-            <div class="radar-compte"><b>0</b> sur 4 touchent ce produit</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <p class="t-caption centre radar-legende">Quatre parutions réelles, un produit. Un clic relance.</p>
-
-    <script>
-    (function(){
-      var r = document.querySelector('.radar'); if (!r) return;
-      var sources = [].slice.call(r.querySelectorAll('.radar-source')), traits = [].slice.call(r.querySelectorAll('.radar-trait'));
-      var lignes = [].slice.call(r.querySelectorAll('.radar-ligne')), compte = r.querySelector('.radar-compte b'), img = r.querySelector('.radar-produit img');
-      var TOUCHE = r.getAttribute('data-touche'), HORS = r.getAttribute('data-hors');
-      var reduit = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var longueurs = [];
-      function poser(){
-        var R = r.querySelector('.radar-boite').getBoundingClientRect(), P = img.getBoundingClientRect();
-        var cx = P.left - R.left, cy = P.top + P.height / 2 - R.top;
-        sources.forEach(function(s, i){
-          var B = s.getBoundingClientRect(), x1 = B.right - R.left, y1 = B.top + B.height / 2 - R.top;
-          var t = traits[i]; t.setAttribute('x1', x1); t.setAttribute('y1', y1); t.setAttribute('x2', cx); t.setAttribute('y2', cy);
-          var L = Math.hypot(cx - x1, cy - y1); longueurs[i] = L; t.style.strokeDasharray = L;
-          if (!t.classList.contains('plein') && !t.classList.contains('partiel')) t.style.strokeDashoffset = L;
-        });
-      }
-      function tracer(i, touche){ var t = traits[i]; t.classList.add(touche ? 'plein' : 'partiel'); t.style.strokeDashoffset = touche ? 0 : longueurs[i] * 0.5; }
-      function effacer(i){ var t = traits[i]; t.classList.remove('plein', 'partiel', 'fini'); t.style.strokeDashoffset = longueurs[i]; }
-      var minuteries = [], n = 0, tours = 0, visible = false, lance = false;
-      var plus = function(ms, fn){ minuteries.push(setTimeout(fn, ms)); };
-      function raz(){
-        minuteries.forEach(clearTimeout); minuteries = []; n = 0; compte.textContent = '0';
-        sources.forEach(function(s){ s.classList.remove('actif', 'touche', 'hors'); s.querySelector('.radar-etat').textContent = ''; });
-        lignes.forEach(function(l){ l.classList.remove('vu'); }); traits.forEach(function(t, i){ effacer(i); });
-      }
-      function resoudre(s, i){
-        var li = +s.getAttribute('data-ligne'), touche = li >= 0;
-        s.classList.add(touche ? 'touche' : 'hors'); s.querySelector('.radar-etat').textContent = touche ? TOUCHE : HORS;
-        tracer(i, touche);
-        if (touche) { n++; compte.textContent = String(n); var l = lignes[li]; if (l) l.classList.add('vu'); }
-      }
-      function final(){ raz(); sources.forEach(function(s, i){ resoudre(s, i); traits[i].classList.add('fini'); }); }
-      function joue(){
-        raz(); poser();
-        sources.forEach(function(s, i){
-          plus(500 + i * 1700, function(){ s.classList.add('actif'); if (i > 0) { sources[i - 1].classList.remove('actif'); traits[i - 1].classList.add('fini'); } });
-          plus(500 + i * 1700 + 800, function(){ resoudre(s, i); });
-        });
-        plus(500 + sources.length * 1700 + 2400, function(){ tours++; if (tours < 5 && visible) joue(); });
-      }
-      poser(); if (typeof ResizeObserver !== 'undefined') new ResizeObserver(poser).observe(r); else window.addEventListener('resize', poser);
-      if (reduit) { final(); return; }
-      var io = new IntersectionObserver(function(es){ es.forEach(function(e){ visible = e.isIntersecting; if (visible && !lance) { lance = true; joue(); } }); }, { threshold: 0.3 });
-      io.observe(r);
-      r.addEventListener('click', function(){ tours = 0; joue(); });
-    })();
-    </script>
-  </div>
-</section>
-
-<!-- ═══ KEY FEATURES ═══ les trois agents, composition dictée le 28/08 :
-     GRANDE IMAGE, peu de texte, des puces courtes. Trois rangs pleine
-     largeur, l'image change de côté d'un rang à l'autre. La grille vit
-     dans .g-agents (composants.css) et JAMAIS en style= inline :
-     l'inline gagnerait sur la media query et le bloc ne se replierait
-     pas sur téléphone.
-     Les images sont celles de « la masse et l'unique » : une masse grise,
-     un seul objet bleu. C'est le motif de la DA, jamais une décoration.
-     Les quatre puces de Research sont dictées, elles sont écrites
-     mot pour mot. Celles des deux autres agents condensent les listes
-     déjà écrites plus haut sur cette page : rien n'y est inventé, et
-     aucun chiffre n'entre dans cette section. -->
+<!-- ═══ TROIS ENTRÉES ═══ maquette d'exemple du 14/09/2026 (réunion d'équipe du jour) :
+     le site en trois entrées. La composition « Fonctions clés » est gardée (grande
+     image, puces courtes, l'image change de côté), les contenus changent. Enterprise
+     n'est pas posée au milieu des deux autres : bandeau à part, sous elles.
+     Chiffres : uniquement ceux que cette page servait déjà. -->
 <section class="section sur-clair-fond">
   <div class="conteneur">
 
     <div class="entete-section centre" data-anim="monte" style="align-items:center">
-      <h2 class="surtitre" style="margin:0">Fonctions clés</h2>
+      <h2 class="surtitre" style="margin:0">Travailler avec Cleo</h2>
     </div>
 
     <div class="g-agents">
 
       <div class="carte-encre p32 agent" data-anim="monte-court">
         <div class="agent-texte">
-          <h3 class="t-h1">Regulatory Change</h3>
+          <h3 class="t-h1">Compliance as a Service</h3>
           <ul class="coches">
             <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                Suivez ce qui change dans 106 pays, avec le temps restant avant l'entrée en vigueur</li>
+                Choisissez la prestation : un nouveau pays, une déclaration de conformité, un marquage CE</li>
             <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                Recevez la parution rattachée à la gamme qu'elle touche, avec sa date d'application</li>
+                Voyez son prix et son délai avant de commander</li>
             <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                Travaillez sur la version en vigueur, avec l'article et la date d'application qui la fondent</li>
+                L'agent rédige le premier jet, un expert conformité relit et signe</li>
           </ul>
-          <div class="agent-kpi">
-            <div><b>106</b><span>pays suivis</span></div>
-            <div><b>25 000</b><span>réglementations indexées</span></div>
-            <div><b>19 000</b><span>autorités réglementaires</span></div>
-          </div>
-          <a class="cta-texte" href="03-offre.html"><svg class="fleche fl-gauche" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>En savoir plus</span><svg class="fleche fl-droite" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="filet fi-gauche"></span><span class="filet fi-droite"></span></a>
+          <a class="cta-texte" href="37-compliance-service.html"><svg class="fleche fl-gauche" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Voir le catalogue</span><svg class="fleche fl-droite" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="filet fi-gauche"></span><span class="filet fi-droite"></span></a>
         </div>
         <div class="agent-visuel"><img src="img:classeurs" alt=""></div>
       </div>
 
       <div class="carte-encre p32 agent agent-inverse" data-anim="monte-court">
         <div class="agent-texte">
-          <h3 class="t-h1">Compliance Data</h3>
+          <h3 class="t-h1">Data</h3>
           <ul class="coches">
             <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                Voyez ce qui s'applique à chaque référence : PPWR (UE) 2025/40, REACH annexe XVII, RSGP (UE) 2023/988</li>
+                Branchez la donnée réglementaire produit à vos outils, par API ou par serveur MCP</li>
             <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                Testez vos matières contre les restrictions PFAS, dont PFHxA (UE) 2024/2462, famille par famille</li>
+                Recevez chaque règle avec son article et sa date d'entrée en vigueur</li>
             <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                Sachez quoi changer sur le produit : le seuil de plomb du CPSIA, la mention de tri du PPWR</li>
-            <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                Obtenez ce qui est couvert et ce qui reste à faire, de la Proposition 65 à l'étiquetage 1007/2011</li>
+                Pour les legaltechs et les logiciels qui ont besoin de la règle à jour</li>
           </ul>
-          <a class="cta-texte" href="08-reglementation.html"><svg class="fleche fl-gauche" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>En savoir plus</span><svg class="fleche fl-droite" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="filet fi-gauche"></span><span class="filet fi-droite"></span></a>
-        </div>
-        <div class="agent-visuel"><img src="img:semelles" alt=""></div>
-      </div>
-
-      <div class="carte-encre p32 agent" data-anim="monte-court">
-        <div class="agent-texte">
-          <h3 class="t-h1">Research</h3>
-          <ul class="coches">
-            <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                L'information juridique en temps réel, depuis 19 000 autorités réglementaires</li>
-            <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                Obtenez une synthèse par question : les quatre familles du PPWR, les entrées REACH qui touchent vos références</li>
-            <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                Repérez ce qui vous concerne dans REACH, le RSGP, le CPSIA ou la Proposition 65</li>
-            <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                Vérifiez chaque réponse au mot près : « PPWR (UE) 2025/40, article 12 », citation cliquable</li>
-          </ul>
-          <a class="cta-texte" href="07-chat.html"><svg class="fleche fl-gauche" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>En savoir plus</span><svg class="fleche fl-droite" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="filet fi-gauche"></span><span class="filet fi-droite"></span></a>
+          <div class="agent-kpi">
+            <div><b>106</b><span>pays suivis</span></div>
+            <div><b>25 000</b><span>réglementations indexées</span></div>
+            <div><b>3 700</b><span>sources officielles</span></div>
+          </div>
+          <a class="cta-texte" href="39-data.html"><svg class="fleche fl-gauche" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Découvrir l'offre Data</span><svg class="fleche fl-droite" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="filet fi-gauche"></span><span class="filet fi-droite"></span></a>
         </div>
         <div class="agent-visuel"><img src="img:cables" alt=""></div>
       </div>
 
     </div>
+
+    <div class="carte p40 entree-enterprise" data-anim="monte-court">
+      <div>
+        <div class="surtitre" style="margin-bottom:10px">Enterprise</div>
+        <h3 class="t-h2">Notre expertise tech et nos experts conformité, à l'échelle de votre entreprise.</h3>
+      </div>
+      <a class="btn btn-contour" href="40-enterprise.html">Contacter l'équipe</a>
+    </div>
+
   </div>
 </section>
 
-<!-- Le CAS CLIENT est parti le 28/08 : Naomie le garde pour une autre page.
-     Le témoignage, lui, reste ici, et sa citation n'a pas bougé d'un caractère. -->
+<!-- ═══ CATALOGUE, APERÇU ═══ trois prestations mises en avant, « un service, un prix »
+     (réunion). Les trois ne sont pas choisies (checklist pub-1) : c'est un exemple.
+     Aucun prix ni délai n'est arrêté. -->
+<section class="section sur-clair-fond" style="padding-top:0">
+  <div class="conteneur">
+    <div class="entete-section centre" data-anim="monte" style="align-items:center">
+      <div class="surtitre">Compliance as a Service</div>
+      <h2 class="t-display mesure-centree">Une prestation, un prix, un délai.</h2>
+    </div>
+    <div class="g3 catalogue" data-anim-groupe>
+      <div class="carte p40 service" data-anim="monte-court">
+        <h3 class="t-h2">Lancer un produit dans un nouveau pays</h3>
+        <p class="t-body">Les exigences du marché visé pour la référence, et la liste des documents à remettre.</p>
+        <div class="service-conditions"><span class="a-fixer">Prix <b>à fixer</b></span><span class="a-fixer">Délai <b>à fixer</b></span></div>
+        <a class="cta-texte" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous"><svg class="fleche fl-gauche" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Demander cette prestation</span><svg class="fleche fl-droite" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="filet fi-gauche"></span><span class="filet fi-droite"></span></a>
+      </div>
+      <div class="carte p40 service" data-anim="monte-court">
+        <h3 class="t-h2">Mettre à jour une déclaration de conformité</h3>
+        <p class="t-body">La déclaration reprise sur les textes en vigueur, relue et signée par un expert.</p>
+        <div class="service-conditions"><span class="a-fixer">Prix <b>à fixer</b></span><span class="a-fixer">Délai <b>à fixer</b></span></div>
+        <a class="cta-texte" href="38-service.html"><svg class="fleche fl-gauche" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Voir la fiche</span><svg class="fleche fl-droite" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="filet fi-gauche"></span><span class="filet fi-droite"></span></a>
+      </div>
+      <div class="carte p40 service" data-anim="monte-court">
+        <h3 class="t-h2">Préparer le marquage CE</h3>
+        <p class="t-body">Le dossier technique et la déclaration UE de conformité, prêts pour la relecture de l'expert.</p>
+        <div class="service-conditions"><span class="a-fixer">Prix <b>à fixer</b></span><span class="a-fixer">Délai <b>à fixer</b></span></div>
+        <a class="cta-texte" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous"><svg class="fleche fl-gauche" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Demander cette prestation</span><svg class="fleche fl-droite" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="filet fi-gauche"></span><span class="filet fi-droite"></span></a>
+      </div>
+    </div>
+    <div class="centre" style="margin-top:36px">
+      <a class="cta-texte" href="37-compliance-service.html"><svg class="fleche fl-gauche" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Voir tout le catalogue</span><svg class="fleche fl-droite" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="filet fi-gauche"></span><span class="filet fi-droite"></span></a>
+    </div>
+  </div>
+</section>
 
 <!-- ═══ COMPLIANCE SERVICE ═══ brief du 01/09. Ce n'est plus « les experts »
      posés à côté du produit : c'est une FEATURE PRODUIT, et ce sont eux qui la
@@ -344,93 +239,123 @@
   </div>
 </section>
 
-<!-- ═══ NOTRE MÉTHODE ═══ l'encodage, remonté AVANT les key features
-     le 01/09 : la méthode se dit avant les fonctions. Brief du 28/08 : les données de conformité produit sont
-     dispersées dans les journaux officiels et chez les autorités de marché ;
-     Cleo les encode dans une interface unique. L'animation fait comprendre le
-     passage d'une réglementation à une règle encodée.
-     ⚠️ Naomie référençait une image d'exemple qui n'est pas passée dans le
-     message : la composition est construite sur sa description, à confirmer.
-     Le moteur d'animation est celui du chantier (mouvement.js, révélation au
-     défilement) : on ne réécrit pas de moteur. Aucun chiffre dans ce bloc. -->
-<section class="section sur-sombre acc-methode">
+<!-- ═══ LE TRAVAIL QUOTIDIEN ═══ 14/09/2026 : descendu sous le service et présenté comme la veille OFFERTE (réunion : la veille ne se vend plus, elle se donne). direction B, choisie par Naomie le 03/09/2026 : le
+     produit au centre, les parutions autour. Celle qui le touche trace un trait jusqu'à lui
+     et devient une ligne de sa fiche avec son verdict ; celle qui ne le touche pas s'arrête
+     à mi-chemin, en gris. Le geste validé le 03/08 sur la veille. Les six parutions sont
+     des textes réels déjà présents sur le site ; aucun chiffre nouveau. -->
+<section class="section sur-clair-fond" style="padding-top:0">
   <div class="conteneur">
-
     <div class="entete-section centre" data-anim="monte" style="align-items:center">
-      <div class="surtitre">Notre méthode</div>
-      <h2 class="t-display mesure-centree">Le texte est dispersé. La règle est au même endroit.</h2>
-      <p class="t-lead mesure-centree" style="margin-top:18px">
-        Les données de conformité produit vivent dans les journaux officiels, chez les autorités de
-        marché, dans les projets de texte et les consultations. Cleo les encode dans une interface unique.
-      </p>
+      <div class="surtitre">Offerte avec chaque prestation : la veille</div>
+      <h2 class="t-display mesure-centree">Plus aucun angle mort sur la conformité de vos produits. Une fois pour toutes.</h2>
+      <p class="t-lead mesure-centree" style="margin-top:18px">Nous trouvons et corrigeons vos écarts de conformité dans plus de 106 pays, des restrictions chimiques à l'étiquetage et aux règles environnementales.</p>
     </div>
 
-    <div class="pipeline" data-anim-groupe>
-
-      <div class="pl-etage">
-        <div class="pl-tete"><span class="pl-num">01</span><span class="t-label">Ce qui est publié</span></div>
-        <div class="pl-noeuds">
-          <div class="pl-n" data-anim="monte-court">Journal officiel de l'Union européenne</div>
-          <div class="pl-n" data-anim="monte-court">Autorité de surveillance du marché</div>
-          <div class="pl-n" data-anim="monte-court">Projet de texte en consultation</div>
-          <div class="pl-n" data-anim="monte-court">Annexe modifiée</div>
-          <div class="pl-n" data-anim="monte-court">Avis d'organisme notifié</div>
-          <div class="pl-n" data-anim="monte-court">Norme harmonisée</div>
+    <div class="radar" data-anim="monte-court" data-touche="Touche ce produit" data-hors="Ne touche pas ce produit">
+      <div class="radar-boite">
+        <div class="radar-stats" data-anim-groupe>
+          <div><b>106</b><span>pays suivis</span></div>
+          <div><b>25 000</b><span>réglementations indexées</span></div>
+          <div><b>19 000</b><span>autorités suivies</span></div>
+          <div><b>3 700</b><span>sources officielles</span></div>
+        </div>
+        <div class="radar-col radar-parutions">
+          <div class="t-label radar-titre">Agrégé depuis 3 700 sources officielles</div>
+          <div class="radar-source" data-i="0" data-ligne="0">
+            <span class="radar-autorite">CPSC · États-Unis</span>
+            <span class="radar-texte">CPSIA, section 101 (a), teneur en plomb</span>
+            <span class="radar-etat"></span>
+          </div>
+          <div class="radar-source" data-i="1" data-ligne="1">
+            <span class="radar-autorite">ECHA · Union européenne</span>
+            <span class="radar-texte">REACH, annexe XVII</span>
+            <span class="radar-etat"></span>
+          </div>
+          <div class="radar-source" data-i="2" data-ligne="2">
+            <span class="radar-autorite">OEHHA · Californie</span>
+            <span class="radar-texte">Proposition 65</span>
+            <span class="radar-etat"></span>
+          </div>
+          <div class="radar-source" data-i="3" data-ligne="-1">
+            <span class="radar-autorite">FDA · États-Unis</span>
+            <span class="radar-texte">21 CFR 101, étiquetage des denrées alimentaires</span>
+            <span class="radar-etat"></span>
+          </div>
+        </div>
+        <svg class="radar-traits" aria-hidden="true">
+          <line class="radar-trait" data-i="0"></line>
+          <line class="radar-trait" data-i="1"></line>
+          <line class="radar-trait" data-i="2"></line>
+          <line class="radar-trait" data-i="3"></line>
+        </svg>
+        <div class="radar-col radar-cible">
+          <div class="t-label radar-titre">Votre référence</div>
+          <div class="radar-fiche">
+            <div class="radar-produit">
+              <img src="img:jean" alt="">
+              <div><div class="radar-nom">Jean droit enfant</div><div class="radar-ref">DNM-4412</div></div>
+            </div>
+            <div class="radar-ligne" data-i="0"><span>CPSIA, plomb</span><span class="marqueur m-couvert">Couvert</span></div>
+            <div class="radar-ligne" data-i="1"><span>REACH annexe XVII</span><span class="marqueur m-couvert">Couvert</span></div>
+            <div class="radar-ligne" data-i="2"><span>Proposition 65</span><span class="marqueur m-manquant">Donnée manquante</span></div>
+            <div class="radar-compte"><b>0</b> sur 4 touchent ce produit</div>
+          </div>
         </div>
       </div>
-
-      <div class="pl-lien pl-lien-faisceau" aria-hidden="true">
-        <svg viewBox="0 0 60 230" preserveAspectRatio="none" fill="none">
-          <path d="M0 20 C34 20 26 115 60 115" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M0 58 C34 58 26 115 60 115" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M0 96 C34 96 26 115 60 115" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M0 134 C34 134 26 115 60 115" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M0 172 C34 172 26 115 60 115" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M0 210 C34 210 26 115 60 115" stroke="currentColor" stroke-width="1.4"/>
-          <circle cx="57" cy="115" r="3.5" fill="currentColor"/>
-        </svg>
-        <svg class="pl-lien-tel" viewBox="0 0 200 46" fill="none" aria-hidden="true">
-          <path d="M14 2 C14 24 100 18 100 34" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M57 2 C57 24 100 20 100 34" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M100 2 L100 34" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M143 2 C143 24 100 20 100 34" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M186 2 C186 24 100 18 100 34" stroke="currentColor" stroke-width="1.4"/>
-          <circle cx="100" cy="37.5" r="3.5" fill="currentColor"/>
-        </svg>
-      </div>
-
-      <div class="pl-etage pl-moteur">
-        <div class="pl-tete"><span class="pl-num">02</span><span class="t-label">L'encodage</span></div>
-        <ol class="pl-etapes">
-          <li data-anim="monte-court"><b>Rattacher</b><span>le texte à la référence qu'il touche</span></li>
-          <li data-anim="monte-court"><b>Isoler</b><span>l'article qui porte l'obligation</span></li>
-          <li data-anim="monte-court"><b>Écrire</b><span>la condition, l'opérateur, le seuil</span></li>
-          <li data-anim="monte-court"><b>Dater</b><span>la parution et l'entrée en vigueur</span></li>
-          <li data-anim="monte-court"><b>Relire</b><span>un expert tranche, puis signe</span></li>
-        </ol>
-      </div>
-
-      <div class="pl-lien" aria-hidden="true">
-        <svg viewBox="0 0 60 230" preserveAspectRatio="none" fill="none">
-          <path d="M0 115 L50 115" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M43 109 L51 115 L43 121" stroke="currentColor" stroke-width="1.4"/>
-        </svg>
-      </div>
-
-      <div class="pl-etage">
-        <div class="pl-tete"><span class="pl-num">03</span><span class="t-label">La règle encodée</span></div>
-        <div class="pl-regle carte-claire" data-anim="monte-court">
-          <div class="t-h3">Teneur en plomb des parties accessibles</div>
-          <div class="pl-champ"><span>champ</span><b>matière accessible</b></div>
-          <div class="pl-champ"><span>opérateur</span><b>ne dépasse pas</b></div>
-          <div class="pl-champ"><span>seuil</span><b>100 ppm en poids</b></div>
-          <div class="pl-champ"><span>article</span><b>CPSIA, section 101 (a)</b></div>
-          <div class="pl-champ"><span>en vigueur</span><b>14 août 2011</b></div>
-          <div class="pl-verdict"><span class="pl-pastille"></span>testable sur une référence</div>
-        </div>
-      </div>
-
     </div>
+    <p class="t-caption centre radar-legende">Quatre parutions réelles, un produit. Un clic relance.</p>
+    <p class="t-body centre" style="max-width:620px;margin:18px auto 0">Chaque semaine, une newsletter personnalisée rassemble les parutions qui touchent vos références.</p>
+
+    <script>
+    (function(){
+      var r = document.querySelector('.radar'); if (!r) return;
+      var sources = [].slice.call(r.querySelectorAll('.radar-source')), traits = [].slice.call(r.querySelectorAll('.radar-trait'));
+      var lignes = [].slice.call(r.querySelectorAll('.radar-ligne')), compte = r.querySelector('.radar-compte b'), img = r.querySelector('.radar-produit img');
+      var TOUCHE = r.getAttribute('data-touche'), HORS = r.getAttribute('data-hors');
+      var reduit = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var longueurs = [];
+      function poser(){
+        var R = r.querySelector('.radar-boite').getBoundingClientRect(), P = img.getBoundingClientRect();
+        var cx = P.left - R.left, cy = P.top + P.height / 2 - R.top;
+        sources.forEach(function(s, i){
+          var B = s.getBoundingClientRect(), x1 = B.right - R.left, y1 = B.top + B.height / 2 - R.top;
+          var t = traits[i]; t.setAttribute('x1', x1); t.setAttribute('y1', y1); t.setAttribute('x2', cx); t.setAttribute('y2', cy);
+          var L = Math.hypot(cx - x1, cy - y1); longueurs[i] = L; t.style.strokeDasharray = L;
+          if (!t.classList.contains('plein') && !t.classList.contains('partiel')) t.style.strokeDashoffset = L;
+        });
+      }
+      function tracer(i, touche){ var t = traits[i]; t.classList.add(touche ? 'plein' : 'partiel'); t.style.strokeDashoffset = touche ? 0 : longueurs[i] * 0.5; }
+      function effacer(i){ var t = traits[i]; t.classList.remove('plein', 'partiel', 'fini'); t.style.strokeDashoffset = longueurs[i]; }
+      var minuteries = [], n = 0, tours = 0, visible = false, lance = false;
+      var plus = function(ms, fn){ minuteries.push(setTimeout(fn, ms)); };
+      function raz(){
+        minuteries.forEach(clearTimeout); minuteries = []; n = 0; compte.textContent = '0';
+        sources.forEach(function(s){ s.classList.remove('actif', 'touche', 'hors'); s.querySelector('.radar-etat').textContent = ''; });
+        lignes.forEach(function(l){ l.classList.remove('vu'); }); traits.forEach(function(t, i){ effacer(i); });
+      }
+      function resoudre(s, i){
+        var li = +s.getAttribute('data-ligne'), touche = li >= 0;
+        s.classList.add(touche ? 'touche' : 'hors'); s.querySelector('.radar-etat').textContent = touche ? TOUCHE : HORS;
+        tracer(i, touche);
+        if (touche) { n++; compte.textContent = String(n); var l = lignes[li]; if (l) l.classList.add('vu'); }
+      }
+      function final(){ raz(); sources.forEach(function(s, i){ resoudre(s, i); traits[i].classList.add('fini'); }); }
+      function joue(){
+        raz(); poser();
+        sources.forEach(function(s, i){
+          plus(500 + i * 1700, function(){ s.classList.add('actif'); if (i > 0) { sources[i - 1].classList.remove('actif'); traits[i - 1].classList.add('fini'); } });
+          plus(500 + i * 1700 + 800, function(){ resoudre(s, i); });
+        });
+        plus(500 + sources.length * 1700 + 2400, function(){ tours++; if (tours < 5 && visible) joue(); });
+      }
+      poser(); if (typeof ResizeObserver !== 'undefined') new ResizeObserver(poser).observe(r); else window.addEventListener('resize', poser);
+      if (reduit) { final(); return; }
+      var io = new IntersectionObserver(function(es){ es.forEach(function(e){ visible = e.isIntersecting; if (visible && !lance) { lance = true; joue(); } }); }, { threshold: 0.3 });
+      io.observe(r);
+      r.addEventListener('click', function(){ tours = 0; joue(); });
+    })();
+    </script>
   </div>
 </section>
 

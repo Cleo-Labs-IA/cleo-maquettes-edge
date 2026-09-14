@@ -1,44 +1,60 @@
-<!-- Navigation à méga-menus, composition relevée sur edgecomply.com -->
+<!-- Navigation à méga-menus, composition relevée sur edgecomply.com.
+     14/09/2026, maquette d'exemple « trois entrées » (réunion d'équipe du 14/09) :
+     Compliance as a Service et Data en tête ; Enterprise à droite, près de la démo,
+     pour ne pas la poser « au milieu » ; la page société passe de « Entreprise » à
+     « À propos », sinon « Entreprise » et « Enterprise » se côtoient dans la barre. -->
 <nav class="nav">
   <div class="conteneur">
     <a class="nav-logo" href="01-accueil.html" aria-label="Cleo, accueil"><img src="img:cleo-logo" alt="Cleo"></a>
 
     <div class="nav-liens">
 
-      <!-- Produit -->
+      <!-- Entrée 1 : Compliance as a Service -->
       <div class="nav-item">
-        <button class="nav-declencheur">Produit <svg class="chev" viewBox="0 0 10 10" fill="none"><path d="M2 4l3 3 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></button>
+        <button class="nav-declencheur">Compliance as a Service <svg class="chev" viewBox="0 0 10 10" fill="none"><path d="M2 4l3 3 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></button>
         <div class="mega">
-          <div class="mega-titre">Trois features et nos experts, sur le même socle de règles</div>
+          <div class="mega-titre">Des prestations relues et signées par un expert, avec leur prix et leur délai</div>
           <div class="mega-grille g4">
-            <a class="mega-item" href="03-offre.html">
-              <span class="mega-icone">ico:monitoring</span>
-              <span><b>Regulatory Change</b><i>Chaque parution rattachée à vos références</i></span>
+            <a class="mega-item" href="37-compliance-service.html#lancement">
+              <span class="mega-icone">ico:monde</span>
+              <span><b>Lancement produit</b><i>Nouveau pays, déclaration de conformité, marquage CE</i></span>
             </a>
-            <a class="mega-item" href="07-chat.html">
-              <span class="mega-icone">ico:research</span>
-              <span><b>Research</b><i>La question posée, l'article en réponse</i></span>
+            <a class="mega-item" href="37-compliance-service.html#conception">
+              <span class="mega-icone">ico:etiquette</span>
+              <span><b>Conception et développement</b><i>Étiquetage, emballage, notices, spécifications</i></span>
             </a>
-            <a class="mega-item" href="08-reglementation.html">
-              <span class="mega-icone">ico:reglementation</span>
-              <span><b>Compliance Data</b><i>Le verdict par référence, appelable depuis vos systèmes</i></span>
+            <a class="mega-item" href="38-service.html">
+              <span class="mega-icone">ico:liste</span>
+              <span><b>Déclaration de conformité</b><i>La mise à jour, relue et signée</i></span>
             </a>
             <a class="mega-item" href="37-compliance-service.html">
               <span class="mega-icone">ico:equipe</span>
-              <span><b>Compliance as a service</b><i>Nos experts rédigent, relisent et signent</i></span>
+              <span><b>Tout le catalogue</b><i>Chaque prestation, son prix, son délai</i></span>
             </a>
           </div>
-          <div class="mega-pied">Vous ne savez pas par où commencer ? Parlez-en à l'équipe, on regarde votre catalogue.</div>
+          <div class="mega-pied">Vous ne trouvez pas la prestation ? Parlez-en à l'équipe, on regarde votre catalogue.</div>
         </div>
       </div>
 
-      <!-- Secteurs -->
+      <!-- Entrée 2 : Data -->
+      <div class="nav-item nav-item-court">
+        <button class="nav-declencheur">Data <svg class="chev" viewBox="0 0 10 10" fill="none"><path d="M2 4l3 3 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></button>
+        <div class="mega mega-court">
+          <div class="mega-titre">La donnée réglementaire produit, prête à brancher</div>
+          <div class="mega-grille g4">
+            <a class="mega-item" href="39-data.html"><span class="mega-icone">ico:base</span><span><b>L'offre Data</b></span></a>
+            <a class="mega-item" href="39-data.html#developpeurs"><span class="mega-icone">ico:engrenage</span><span><b>Développeurs</b></span></a>
+            <a class="mega-item" href="26-legal-data.html"><span class="mega-icone">ico:reglementation</span><span><b>Couverture</b></span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ressources : Legal Data est passée sous Data. -->
       <div class="nav-item nav-item-court">
         <button class="nav-declencheur">Ressources <svg class="chev" viewBox="0 0 10 10" fill="none"><path d="M2 4l3 3 3-3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></button>
         <div class="mega mega-court">
           <div class="mega-titre">Comprendre la conformité produit</div>
           <div class="mega-grille g4">
-            <a class="mega-item" href="26-legal-data.html"><span class="mega-icone">ico:reglementation</span><span><b>Legal Data</b></span></a>
             <a class="mega-item" href="23-research.html"><span class="mega-icone">ico:research</span><span><b>Travaux de recherche</b></span></a>
             <a class="mega-item" href="24-blog.html"><span class="mega-icone">ico:publications</span><span><b>Blog</b></span></a>
             <a class="mega-item" href="25-skills.html"><span class="mega-icone">ico:modeles</span><span><b>Skills</b></span></a>
@@ -46,14 +62,15 @@
         </div>
       </div>
 
-      <!-- Entreprise : lien direct, sans deroulant. Demande du 01/09. -->
+      <!-- La société : lien direct, sans déroulant. -->
       <div class="nav-item">
-        <a class="nav-declencheur" href="02-entreprise.html">Entreprise</a>
+        <a class="nav-declencheur" href="02-entreprise.html">À propos</a>
       </div>
     </div>
 
     <div class="nav-fin">
       <!--LANGUE-->
+      <a class="lien-secondaire" href="40-enterprise.html">Enterprise</a>
       <a class="lien-secondaire" href="https://insight.cleolabs.co">Connexion</a>
       <a class="btn btn-marque btn-sm" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo</a>
     </div>

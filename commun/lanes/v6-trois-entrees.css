@@ -1,0 +1,68 @@
+/* ═══ MAQUETTE D'EXEMPLE « TROIS ENTRÉES » ═══ 14/09/2026.
+   Réunion d'équipe du 14/09 : le site en trois entrées (Compliance as a Service,
+   Data, Enterprise). Ces règles ne servent que les blocs neufs de la branche
+   design/v6-trois-entrees ; tout est préfixé V6 comme les autres feuilles v6-*.
+   Le bleu reste un signal : les pastilles « à fixer » sont en encre et en
+   pointillé, pour dire « place réservée », jamais un statut. */
+
+/* Barre : v6-foundation donne 44 px de haut aux liens de .nav-fin sans centrer le texte,
+   qui remonte en haut de la boîte (mesuré au rendu le 14/09 sur « Connexion », déjà
+   présent sur la version validée, et sur « Enterprise »). */
+/* Au-dessus de 640 px seulement : en dessous, composants.css masque ces liens (ils passent
+   dans le menu), et les réafficher poussait le bouton du menu hors de l'écran. */
+@media (min-width:641px){
+  body[data-cleo-ds="v6"] .nav-fin .lien-secondaire{display:inline-flex;align-items:center}
+}
+
+body[data-cleo-ds="v6"] .service{display:flex;flex-direction:column;align-items:flex-start;height:100%}
+body[data-cleo-ds="v6"] .service-ico{width:44px;height:44px;border-radius:12px;background:#EFEEFB;color:#1A1A1A;display:grid;place-items:center;margin-bottom:22px;flex:none}
+body[data-cleo-ds="v6"] .service .t-h2{margin:0 0 10px}
+body[data-cleo-ds="v6"] .service .t-body{margin:0 0 20px}
+body[data-cleo-ds="v6"] .service .cta-texte{margin-top:auto}
+body[data-cleo-ds="v6"] .service-conditions{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+body[data-cleo-ds="v6"] .a-fixer{display:inline-flex;align-items:center;gap:6px;min-height:32px;padding:0 13px;border-radius:9999px;border:1px dashed rgba(26,26,26,.34);background:transparent;color:rgba(26,26,26,.66);font-size:.875rem;line-height:1.2;white-space:nowrap}
+body[data-cleo-ds="v6"] .a-fixer b{font-weight:600;color:#1A1A1A}
+body[data-cleo-ds="v6"] .inclus{display:inline-flex;align-items:center;min-height:32px;padding:0 13px;border-radius:9999px;background:#F1EEE3;color:#1A1A1A;font-size:.875rem;font-weight:600}
+
+body[data-cleo-ds="v6"] .catalogue-entete{margin-bottom:36px}
+body[data-cleo-ds="v6"] .catalogue{align-items:stretch}
+
+body[data-cleo-ds="v6"] .entree-enterprise{display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;margin-top:22px}
+body[data-cleo-ds="v6"] .entree-enterprise .t-h2{max-width:640px;margin:0}
+
+body[data-cleo-ds="v6"] .fiche-service{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:#FFFFFF;border:1px solid rgba(8,9,59,.08);border-radius:24px;box-shadow:0 1px 2px rgba(8,9,59,.035),0 18px 48px rgba(8,9,59,.075);overflow:hidden;margin:0 0 64px}
+body[data-cleo-ds="v6"] .fiche-service > div{padding:26px 28px;border-left:1px solid rgba(8,9,59,.08);display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+body[data-cleo-ds="v6"] .fiche-service > div:first-child{border-left:0}
+body[data-cleo-ds="v6"] .fiche-service .fs-valeur{font-size:1.125rem;font-weight:700;color:#1A1A1A;line-height:1.3}
+
+body[data-cleo-ds="v6"] .data-chiffres{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;margin-top:48px}
+body[data-cleo-ds="v6"] .data-chiffres > div{background:#FFFFFF;border:1px solid rgba(8,9,59,.08);border-radius:24px;padding:26px 28px;box-shadow:0 1px 2px rgba(8,9,59,.035),0 18px 48px rgba(8,9,59,.075)}
+body[data-cleo-ds="v6"] .data-chiffres b{display:block;font-size:clamp(2rem, 1.4rem + 2vw, 3rem);font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:#1A1A1A;line-height:1}
+body[data-cleo-ds="v6"] .data-chiffres span{display:block;margin-top:10px;font-size:.9375rem;color:rgba(26,26,26,.66)}
+
+/* La méthode quitte l'accueil pour la page Data : mêmes réglages que sur l'accueil V6
+   (v6-home.css), sinon la section retomberait en second champ profond. */
+body[data-cleo-ds="v6"][data-v6-page="39-data"] main > .acc-methode{width:min(var(--cleo-v6-page),calc(100% - (var(--cleo-v6-gutter) * 2)));margin:24px auto;background:var(--cleo-v6-field-pale) !important;border-radius:var(--cleo-v6-radius-lg)}
+body[data-cleo-ds="v6"][data-v6-page="39-data"] .acc-methode .pipeline{gap:28px;padding:34px;background:rgba(255,255,255,.52);border:1px solid rgba(255,255,255,.72);border-radius:var(--cleo-v6-radius-lg)}
+body[data-cleo-ds="v6"][data-v6-page="39-data"] .acc-methode .pl-num{color:var(--cleo-v6-blue)}
+body[data-cleo-ds="v6"][data-v6-page="39-data"] .acc-methode .pl-n{color:var(--cleo-v6-ink-2);background:var(--cleo-v6-white);border-color:var(--cleo-v6-border)}
+body[data-cleo-ds="v6"][data-v6-page="39-data"] .acc-methode .pl-etapes::before{background:var(--cleo-v6-border)}
+body[data-cleo-ds="v6"][data-v6-page="39-data"] .acc-methode .pl-etapes li::before{background:var(--cleo-v6-field-pale);border-color:var(--cleo-v6-border)}
+body[data-cleo-ds="v6"][data-v6-page="39-data"] .acc-methode .pl-etapes b{color:var(--cleo-v6-ink)}
+body[data-cleo-ds="v6"][data-v6-page="39-data"] .acc-methode .pl-etapes span{color:var(--cleo-v6-ink-3)}
+body[data-cleo-ds="v6"][data-v6-page="39-data"] .acc-methode .pl-lien{color:var(--cleo-v6-ink-3)}
+body[data-cleo-ds="v6"][data-v6-page="39-data"] .acc-methode .pl-regle{border-radius:var(--cleo-v6-radius-md);box-shadow:var(--cleo-v6-shadow-card)}
+
+@media (max-width:900px){
+  body[data-cleo-ds="v6"] .fiche-service{grid-template-columns:repeat(2,minmax(0,1fr))}
+  body[data-cleo-ds="v6"] .fiche-service > div:nth-child(3){border-left:0}
+  body[data-cleo-ds="v6"] .fiche-service > div:nth-child(n+3){border-top:1px solid rgba(8,9,59,.08)}
+  body[data-cleo-ds="v6"] .data-chiffres{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:560px){
+  body[data-cleo-ds="v6"] .fiche-service{grid-template-columns:minmax(0,1fr)}
+  body[data-cleo-ds="v6"] .fiche-service > div{border-left:0}
+  body[data-cleo-ds="v6"] .fiche-service > div + div{border-top:1px solid rgba(8,9,59,.08)}
+  body[data-cleo-ds="v6"] .entree-enterprise{align-items:flex-start}
+  body[data-cleo-ds="v6"] .a-fixer{white-space:normal}
+}

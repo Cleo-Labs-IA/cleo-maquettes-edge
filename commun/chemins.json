@@ -42,6 +42,15 @@
     "37-compliance-service-en.html": {
       "chemin": "/en/platform/compliance-service"
     },
+    "38-service.html": {
+      "chemin": "/fr/compliance-as-a-service/declaration-de-conformite"
+    },
+    "39-data.html": {
+      "chemin": "/fr/data"
+    },
+    "40-enterprise.html": {
+      "chemin": "/fr/enterprise"
+    },
     "09-texte.html": {
       "chemin": "/fr/jurisdictions/european-union/regulations/ppwr"
     },

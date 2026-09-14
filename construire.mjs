@@ -29,6 +29,10 @@ const PAGES = [
   { fichier: '08-reglementation.html', titre: 'Compliance', source: 'edgecomply.com/services/*' },
   { fichier: '37-compliance-service.html', titre: 'Compliance as a service', source: 'pages/01-accueil.html#compliance-service' },
   { fichier: '37-compliance-service-en.html', titre: 'Compliance as a service EN', source: 'pages/01-accueil-en.html#compliance-service', en: true },
+  // Maquette d'exemple « trois entrées », réunion d'équipe du 14/09/2026.
+  { fichier: '38-service.html',     titre: 'Fiche prestation', source: 'maquette trois entrées, 14/09/2026' },
+  { fichier: '39-data.html',        titre: 'Data',        source: 'maquette trois entrées, 14/09/2026' },
+  { fichier: '40-enterprise.html',  titre: 'Enterprise',  source: 'maquette trois entrées, 14/09/2026' },
   { fichier: '09-texte.html',       titre: 'Un texte',    source: 'edgecomply.com/topics/reach-regulation-compliance' },
   { fichier: '10-ressources.html',  titre: 'Ressources',  source: 'edgecomply.com/library' },
   { fichier: '11-blog.html',        titre: 'Publications',source: 'edgecomply.com/library/blog' },

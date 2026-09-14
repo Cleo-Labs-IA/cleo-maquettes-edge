@@ -1,0 +1,90 @@
+<!--NAV-->
+
+<!-- ═══ HERO ═══ maquette d'exemple du 14/09/2026 : l'entrée Enterprise, qui remplace
+     « Tech ». Réunion : « notre expertise tech et notre pool d'experts permettent de
+     faire ça en entreprise, contactez-nous ». Une page courte, avec un formulaire.
+     Le formulaire reprend celui de 21-inscription, balise pour balise. -->
+<section class="section sur-sombre p-demande">
+  <div class="conteneur">
+    <div class="duo" style="gap:72px">
+      <div>
+        <h1 class="t-hero">Enterprise. <span class="attenue">Notre expertise tech et nos experts, à l'échelle de votre entreprise.</span></h1>
+        <p class="t-body" style="margin:22px 0 0;max-width:480px">
+          Nos ingénieurs branchent la base de règles de Cleo à vos systèmes. Notre équipe d'experts conformité
+          relit et signe, à votre format.
+        </p>
+      </div>
+
+      <form id="f-enterprise" method="get" action="https://meetings.hubspot.com/anaelle-guez/rendez-vous" hidden></form>
+      <div class="carte-encre form-carte" data-anim="droite">
+        <h2 class="t-h1" style="margin-bottom:22px">Contacter l'équipe</h2>
+        <div class="paire">
+          <div><label for="f-ent-prenom">Prénom</label><input id="f-ent-prenom" form="f-enterprise" name="firstname" autocomplete="given-name" type="text" placeholder="Camille"></div>
+          <div><label for="f-ent-nom">Nom</label><input id="f-ent-nom" form="f-enterprise" name="lastname" autocomplete="family-name" type="text" placeholder="Bernard"></div>
+        </div>
+        <label for="f-ent-email">Email professionnel</label><input id="f-ent-email" form="f-enterprise" name="email" autocomplete="email" type="email" placeholder="camille@groupe.com" required>
+        <label for="f-ent-societe">Entreprise</label><input id="f-ent-societe" form="f-enterprise" name="company" autocomplete="organization" type="text" placeholder="Groupe">
+        <label for="f-ent-besoin">Votre besoin</label><input id="f-ent-besoin" form="f-enterprise" name="besoin" type="text" placeholder="Marques, marchés, systèmes à brancher…">
+        <button class="btn btn-marque" type="submit" form="f-enterprise" style="width:100%;justify-content:center;margin-top:6px">Envoyer</button>
+        <div class="t-caption" style="text-align:center;margin-top:14px">
+          Vos données servent à vous répondre, à rien d'autre.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CE QUE NOUS METTONS EN PLACE ═══ les puces reprennent des phrases déjà servies
+     sur le site (Compliance Data, l'équipe qui signe, la citation Decathlon). L'installation
+     sur site, dite en réunion (ferme de Mac chez le client), n'est pas tranchée. -->
+<section class="section" style="padding-top:88px">
+  <div class="conteneur">
+    <h2 class="t-display" style="margin-bottom:40px">Ce que nous mettons en place</h2>
+    <div class="bf-faits" data-anim-groupe>
+      <div class="bf-bloc">
+        <h3 class="t-h2">Notre expertise tech</h3>
+        <ul class="coches">
+          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Le verdict par référence, appelable depuis vos systèmes</li>
+          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Une donnée structurée, exploitable jusque dans le PLM</li>
+        </ul>
+      </div>
+      <div class="bf-bloc">
+        <h3 class="t-h2">Notre équipe d'experts</h3>
+        <ul class="coches">
+          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Une équipe juridique dédiée, qui connaît votre profil</li>
+          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Vos trames de déclaration et de dossier technique, reprises à votre format</li>
+        </ul>
+      </div>
+      <div class="bf-bloc">
+        <h3 class="t-h2">Votre environnement</h3>
+        <ul class="coches">
+          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Des données hébergées en UE, jamais utilisées pour entraîner nos modèles</li>
+        </ul>
+        <div class="service-conditions" style="margin:16px 0 0"><span class="a-fixer">Installation sur site <b>à trancher</b></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TÉMOIGNAGE ═══ citation verbatim, identique à la page Compliance as a service. -->
+<section class="section" style="padding-top:0">
+  <div class="conteneur">
+    <div class="temoignage" data-anim-groupe>
+      <div class="scene" data-anim="grandit" style="aspect-ratio:4/3"><img class="fond" src="img:masse-gant" alt=""></div>
+      <div>
+        <p class="citation" style="margin:0">
+          « Chez Decathlon, notre défi est de capter des informations très précises au milieu d’un volume massif de réglementations produits à l’international, avec un enjeu à la fois juridique et technique : piloter nos mises en conformité mondiales tout en accompagnant nos ingénieurs dans le développement des produits. C’est le pont que nous construisons avec le PoC mené avec Cleo : leur moteur d’IA agit comme un traducteur intelligent qui filtre le bruit pour extraire une donnée structurée, directement exploitable par nos équipes et indispensable pour guider la conception au sein de notre PLM. »
+        </p>
+        <div class="auteur">
+          <img src="img:philippine" alt="">
+          <div>
+            <div class="t-sm" style="font-weight:600">Philippine Tamic</div>
+            <div class="t-micro">Product Compliance Operations Manager, Decathlon</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--PIED-->
