@@ -205,3 +205,37 @@ body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] :is(.av-titre2,.
    toujours là ; seules les animations du haut de page (keyframes) et les barres du prix restent. */
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] main :is([data-anim], [data-anim-groupe] > *){opacity:1 !important;transform:none !important;transition:none !important}
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-barres .av-barre-plein{transform:scaleX(1) !important}
+
+/* ═══ ÉCRAN « LE SOCLE » ═══ 14/09/2026, variante A. Même registre : chiffres graisse 400 (« 1000+ Data Sources »
+   sur quradata.com), lignes à filet, panneau #F5F5F5 à angles droits. */
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #socle{scroll-margin-top:96px}
+body[data-cleo-ds="v6"] .av-socle{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(40px, 5vw, 88px);align-items:start}
+body[data-cleo-ds="v6"] .av-chiffres{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;padding-bottom:32px;border-bottom:1px solid rgba(26,26,26,.10)}
+body[data-cleo-ds="v6"] .av-chiffres b{display:block;font-size:clamp(1.75rem, 1.1rem + 1.6vw, 2.75rem);font-weight:400;letter-spacing:-.035em;line-height:1;font-variant-numeric:tabular-nums;color:#1A1A1A;white-space:nowrap}
+body[data-cleo-ds="v6"] .av-chiffres span{display:block;margin-top:10px;font-size:.875rem;color:rgb(115,115,115)}
+body[data-cleo-ds="v6"] .av-piliers{list-style:none;margin:0;padding:0}
+body[data-cleo-ds="v6"] .av-piliers li{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:8px 24px;padding:20px 0;border-bottom:1px solid rgba(26,26,26,.10)}
+body[data-cleo-ds="v6"] .av-piliers b{font-size:1.0625rem;font-weight:400;color:#1A1A1A}
+body[data-cleo-ds="v6"] .av-piliers span{font-size:.9375rem;line-height:1.55;color:rgb(115,115,115)}
+body[data-cleo-ds="v6"] .av-preuve{margin:24px 0 0;font-size:.875rem;line-height:1.55;color:rgb(115,115,115)}
+body[data-cleo-ds="v6"] .av-preuve a{color:#1A1A1A;text-decoration:underline;text-underline-offset:3px}
+
+body[data-cleo-ds="v6"] .av-socle-panneau{background:#F5F5F5;padding:30px 34px}
+body[data-cleo-ds="v6"] .av-publie{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+body[data-cleo-ds="v6"] .av-publie li{padding:7px 12px;border:1px solid rgba(26,26,26,.12);background:#FFFFFF;font-size:.8125rem;color:rgb(115,115,115)}
+body[data-cleo-ds="v6"] .av-fleche{display:flex;justify-content:center;margin:16px 0 8px;color:rgb(128,128,128)}
+body[data-cleo-ds="v6"] .av-regle{background:#FFFFFF;border:1px solid rgba(26,26,26,.10);padding:22px 24px}
+body[data-cleo-ds="v6"] .av-regle-nom{margin-bottom:12px;font-size:1.0625rem;color:#1A1A1A}
+body[data-cleo-ds="v6"] .av-regle-champ{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;padding:10px 0;border-top:1px solid rgba(26,26,26,.08);font-size:.875rem}
+body[data-cleo-ds="v6"] .av-regle-champ span{color:rgb(128,128,128)}
+body[data-cleo-ds="v6"] .av-regle-champ b{font-weight:500;color:#1A1A1A}
+body[data-cleo-ds="v6"] .av-socle-panneau .av-legende{margin-bottom:14px}
+
+@media (max-width:980px){
+  body[data-cleo-ds="v6"] .av-socle{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  body[data-cleo-ds="v6"] .av-chiffres{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:24px}
+  body[data-cleo-ds="v6"] .av-piliers li{grid-template-columns:minmax(0,1fr)}
+  body[data-cleo-ds="v6"] .av-socle-panneau{padding:24px 20px}
+}
