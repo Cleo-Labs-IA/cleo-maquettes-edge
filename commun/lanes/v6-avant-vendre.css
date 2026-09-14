@@ -72,3 +72,36 @@ body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-titre2 .atte
 
 /* Menu mobile : le panneau laissait voir la page au travers (vu au clic, 390 px, le 14/09). */
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .menu-mobile{background:#FFFFFF !important;-webkit-backdrop-filter:none !important;backdrop-filter:none !important;opacity:1 !important}
+
+/* ═══ TROISIÈME ÉCRAN : LE PRIX ═══ 14/09/2026, « 1/3 du prix, c'est l'argument de vente ». Composition de
+   « Measurable Results » sur quradata.com : grand chiffre graisse 400 sur panneau #F5F5F5. Les barres
+   se remplissent à l'entrée dans l'écran (classe .vu posée par mouvement.js). */
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] main > section.av-prix{padding:0 0 128px !important}
+body[data-cleo-ds="v6"] .av-prix-panneau{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px, 5vw, 80px);align-items:center;padding:clamp(32px, 5vw, 64px);background:#F5F5F5}
+body[data-cleo-ds="v6"] .av-tiers{display:block;font-size:clamp(5rem, 2.5rem + 7vw, 10rem);font-weight:400;line-height:.9;letter-spacing:-.05em;color:#1A1A1A}
+body[data-cleo-ds="v6"] .av-tiers-legende{display:block;max-width:260px;margin-top:18px;font-size:1rem;line-height:1.45;color:rgb(115,115,115)}
+body[data-cleo-ds="v6"] .av-barres{display:grid;gap:16px;margin:0 0 32px}
+body[data-cleo-ds="v6"] .av-barre{display:grid;grid-template-columns:96px minmax(0,1fr);align-items:center;gap:16px;font-size:.9375rem;color:#1A1A1A}
+body[data-cleo-ds="v6"] .av-barre-piste{display:block;height:14px}
+body[data-cleo-ds="v6"] .av-barre-plein{display:block;width:100%;height:100%;background:#CFCFCF;transform:scaleX(0);transform-origin:left;transition:transform .8s cubic-bezier(.625,.05,0,1) .15s}
+body[data-cleo-ds="v6"] .av-barre-cleo .av-barre-plein{width:33.333%;background:#0008CF;transition-delay:.45s}
+body[data-cleo-ds="v6"] .av-barres.vu .av-barre-plein{transform:scaleX(1)}
+body[data-cleo-ds="v6"] .av-avantages{list-style:none;margin:0;padding:0;border-top:1px solid rgba(26,26,26,.12)}
+body[data-cleo-ds="v6"] .av-avantages li{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid rgba(26,26,26,.12);font-size:.9375rem;color:#1A1A1A}
+body[data-cleo-ds="v6"] .av-avantages i{display:grid;place-items:center;flex:none;width:17px;height:17px;border-radius:50%;background:#1A1A1A;color:#FFFFFF}
+body[data-cleo-ds="v6"] .av-avantages svg{width:9px;height:9px}
+body[data-cleo-ds="v6"] .av-prix-bouton{margin-top:30px}
+body[data-cleo-ds="v6"] .av-note{margin:16px 0 0;font-size:.75rem;color:rgb(128,128,128)}
+@media (max-width:980px){
+  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] main > section.av-prix{padding:0 0 80px !important}
+  body[data-cleo-ds="v6"] .av-prix-panneau{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  body[data-cleo-ds="v6"] .av-barre{grid-template-columns:78px minmax(0,1fr)}
+}
+@media (prefers-reduced-motion: reduce){
+  body[data-cleo-ds="v6"] .av-barre-plein{transform:none;transition:none}
+}
+
+/* Les ancres de la barre (#comment, #prix) : la barre collante masquait le titre à l'arrivée (vu le 14/09). */
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] :is(#comment,#prix){scroll-margin-top:96px}
