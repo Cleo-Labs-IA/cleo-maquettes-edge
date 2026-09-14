@@ -53,6 +53,67 @@ body[data-cleo-ds="v6"][data-v6-page="39-data"] .acc-methode .pl-etapes span{col
 body[data-cleo-ds="v6"][data-v6-page="39-data"] .acc-methode .pl-lien{color:var(--cleo-v6-ink-3)}
 body[data-cleo-ds="v6"][data-v6-page="39-data"] .acc-methode .pl-regle{border-radius:var(--cleo-v6-radius-md);box-shadow:var(--cleo-v6-shadow-card)}
 
+/* ═══ FICHE PRESTATION ET CATALOGUE, COMPOSITION ECOCOMPLY ═══ 14/09/2026.
+   ecocomply.ai/ce-marking et /pricing, désignées par Naomie comme le « straight to the
+   point » de la réunion : prix en évidence, ce qui est inclus en liste, étapes numérotées.
+   Composition reprise, habillage Cleo : Satoshi, encre, champ profond, crème. */
+body[data-cleo-ds="v6"] .fiche-hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:56px;align-items:center}
+body[data-cleo-ds="v6"] main > section:first-child .fiche-hero .t-hero{font-size:clamp(2.5rem, 1.5rem + 2.6vw, 3.75rem);line-height:1.04}
+body[data-cleo-ds="v6"] .prix-bloc{display:inline-flex;align-items:baseline;flex-wrap:wrap;gap:8px 16px;margin:28px 0 0;padding:16px 22px;border:1px solid rgba(255,255,255,.18);border-radius:16px;background:rgba(255,255,255,.06)}
+body[data-cleo-ds="v6"] .prix-bloc .pb-montant{font-size:2rem;font-weight:800;letter-spacing:-.02em;color:#FFFFFF;line-height:1.1}
+body[data-cleo-ds="v6"] .prix-bloc .pb-a-fixer{color:rgba(255,255,255,.72);border-bottom:2px dashed rgba(255,255,255,.4);padding-bottom:2px}
+body[data-cleo-ds="v6"] .prix-bloc .pb-unite{font-size:.9375rem;color:rgba(255,255,255,.66)}
+body[data-cleo-ds="v6"] .fiche-boutons{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+body[data-cleo-ds="v6"] .fiche-note{margin-top:12px;font-size:.875rem;color:rgba(255,255,255,.6)}
+body[data-cleo-ds="v6"] .fiche-inclus{background:#FFFFFF;border-radius:24px;padding:32px 34px;box-shadow:0 18px 48px rgba(8,9,59,.22)}
+body[data-cleo-ds="v6"] .fiche-inclus .t-label{display:block;margin-bottom:18px;color:rgba(26,26,26,.6)}
+body[data-cleo-ds="v6"] .fiche-inclus ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+body[data-cleo-ds="v6"] .fiche-inclus li{display:flex;gap:12px;align-items:flex-start;font-size:.9375rem;line-height:1.45;color:#1A1A1A}
+body[data-cleo-ds="v6"] .fi-coche{flex:none;width:20px;height:20px;border-radius:50%;background:#1A1A1A;display:grid;place-items:center;margin-top:1px}
+body[data-cleo-ds="v6"] .fi-coche svg{width:11px;height:11px}
+/* Titre de la carte : pas de .t-label, que le champ profond recolore en blanc (invisible sur
+   la carte blanche, mesuré au rendu le 14/09). */
+body[data-cleo-ds="v6"] .fiche-inclus .fi-titre{margin-bottom:18px;font-size:.8125rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(26,26,26,.6)}
+/* Le prix et le lien descendent en bas de carte : les prix s'alignent d'une carte à l'autre. */
+body[data-cleo-ds="v6"] .service .service-prix{margin-top:auto}
+body[data-cleo-ds="v6"] .service .service-prix + .cta-texte{margin-top:0}
+
+body[data-cleo-ds="v6"] .bandeau-parution{display:flex;align-items:center;justify-content:center;gap:8px 18px;flex-wrap:wrap;padding:16px 24px;border:1px solid rgba(8,9,59,.1);border-radius:16px;background:#F1EEE3;text-align:center;font-size:.9375rem;line-height:1.45;color:#1A1A1A}
+body[data-cleo-ds="v6"] .bandeau-parution a{font-weight:600;color:#0008CF;text-decoration:underline;text-underline-offset:3px}
+
+body[data-cleo-ds="v6"] .etapes-4{grid-template-columns:repeat(4,minmax(0,1fr))}
+body[data-cleo-ds="v6"] .e4-num{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#EFEEFB;color:#0008CF;font-weight:700;font-size:.875rem;margin-bottom:18px}
+
+body[data-cleo-ds="v6"] .inclus-grille{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;max-width:1000px;margin:0 auto}
+body[data-cleo-ds="v6"] .ig-item{display:flex;gap:14px;align-items:flex-start;background:#FFFFFF;border:1px solid rgba(8,9,59,.08);border-radius:16px;padding:18px 22px;box-shadow:0 1px 2px rgba(8,9,59,.035)}
+body[data-cleo-ds="v6"] .ig-item b{display:block;font-weight:650;font-size:1rem;color:#1A1A1A}
+body[data-cleo-ds="v6"] .ig-item .ig-txt{display:block;margin-top:4px;font-size:.9375rem;line-height:1.45;color:rgba(26,26,26,.66)}
+
+body[data-cleo-ds="v6"] .textes-grille{display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+body[data-cleo-ds="v6"] .texte-chip{background:#FFFFFF;border:1px solid rgba(8,9,59,.08);border-radius:16px;padding:20px 22px;text-align:center;width:200px;box-shadow:0 1px 2px rgba(8,9,59,.035)}
+body[data-cleo-ds="v6"] .texte-chip b{display:block;font-size:1.25rem;font-weight:800;color:#1A1A1A}
+body[data-cleo-ds="v6"] .texte-chip span{display:block;margin-top:8px;font-size:.875rem;line-height:1.4;color:rgba(26,26,26,.66)}
+
+/* Le prix sur les cartes du catalogue, comme sur ecocomply.ai/pricing. */
+body[data-cleo-ds="v6"] .service-prix{display:flex;flex-direction:column;align-items:flex-start;gap:6px;width:100%;margin:0 0 22px;padding-top:18px;border-top:1px solid rgba(8,9,59,.08)}
+body[data-cleo-ds="v6"] .service-prix .sp-montant{font-size:1.5rem;font-weight:800;letter-spacing:-.01em;line-height:1.15;color:#1A1A1A}
+body[data-cleo-ds="v6"] .service-prix .sp-a-fixer{color:rgba(26,26,26,.46);border-bottom:2px dashed rgba(26,26,26,.28);padding-bottom:2px}
+body[data-cleo-ds="v6"] .service-prix .sp-unite{font-size:.875rem;color:rgba(26,26,26,.6)}
+
+@media (max-width:1100px){
+  body[data-cleo-ds="v6"] .etapes-4{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  body[data-cleo-ds="v6"] .fiche-hero{grid-template-columns:minmax(0,1fr);gap:36px}
+  body[data-cleo-ds="v6"] .inclus-grille{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:560px){
+  body[data-cleo-ds="v6"] .etapes-4{grid-template-columns:minmax(0,1fr)}
+  body[data-cleo-ds="v6"] .fiche-inclus{padding:26px 22px}
+  body[data-cleo-ds="v6"] .prix-bloc .pb-montant{font-size:1.625rem}
+  body[data-cleo-ds="v6"] .texte-chip{width:calc(50% - 7px);padding:16px 14px}
+}
+
 @media (max-width:900px){
   body[data-cleo-ds="v6"] .fiche-service{grid-template-columns:repeat(2,minmax(0,1fr))}
   body[data-cleo-ds="v6"] .fiche-service > div:nth-child(3){border-left:0}
