@@ -1,0 +1,125 @@
+/* ═══ RÉGIME ÉPURÉ ═══ 14/09/2026.
+   Demande de Naomie : « inspire-toi de ce branding, c'est plus épuré » (quradata.com), puis
+   « numeral.com aussi, straight to the point et clean ». Relevé au navigateur le même jour :
+   - Qura : fond #FFFFFF, Inter graisse 400 partout, h1 72 px (−3 px), h2 56 px (−2 px), h3 24 px,
+     texte secondaire #808080, cartes à angle droit, filet 1 px rgba(0,0,0,.1), AUCUNE ombre,
+     panneaux #F5F5F5, bouton pilule à contour noir, un accent bleu minuscule.
+   - Numeral : fond #FFFFFF, graisse 500, h1 116 px, h2 36 px, h3 20 px, secondaire ardoise #64748B,
+     cellules à filet #E2E8F0, petites cartes r12 sans ombre portée, boutons 12-14 px, principal sombre.
+   Ce qui vient d'eux : la RETENUE (blanc, graisses 400-500, filets au lieu d'ombres, petits boutons
+   sombres, un seul accent). Ce qui reste Cleo : Satoshi, l'encre #1A1A1A, le bleu en signal rare,
+   la masse et l'unique, le globe (son disque bleu devient le seul objet coloré du haut de page).
+   Feuille chargée en DERNIER (zz) : elle recouvre la V6 sans la modifier. La retirer rend la V6. */
+
+body[data-cleo-ds="v6"]{
+  --cleo-v6-surface:#FFFFFF;
+  --cleo-v6-surface-soft:#FAFAF9;
+  --cleo-v6-field-pale:#FAFAF9;
+  --cleo-v6-cream:#FAFAF9;
+  --cleo-v6-ink-2:rgba(26,26,26,.62);
+  --cleo-v6-ink-3:rgba(26,26,26,.44);
+  --cleo-v6-border:rgba(26,26,26,.10);
+  --cleo-v6-shadow-card:none;
+  --cleo-v6-shadow-hero:none;
+  --cleo-v6-radius-sm:6px;
+  --cleo-v6-radius-md:12px;
+  --cleo-v6-radius-lg:12px;
+  background:#FFFFFF;
+}
+
+/* ── Typographie : graisses 400-500, plus aucune à 700-900. ── */
+body[data-cleo-ds="v6"] .t-hero{font-weight:500 !important; letter-spacing:-.045em !important}
+body[data-cleo-ds="v6"] :is(.t-titre-page,.t-display){font-weight:500 !important; letter-spacing:-.035em}
+body[data-cleo-ds="v6"] .t-display{font-size:clamp(2rem, 1.35rem + 1.9vw, 2.875rem)}
+body[data-cleo-ds="v6"] .t-h1{font-weight:500 !important; letter-spacing:-.025em}
+body[data-cleo-ds="v6"] :is(.t-h2,.t-h3,.t-h4){font-weight:500 !important; letter-spacing:-.01em}
+body[data-cleo-ds="v6"] .attenue{color:rgba(26,26,26,.34)}
+body[data-cleo-ds="v6"] :is(.surtitre,.t-label){font-weight:500}
+
+/* ── Le premier écran passe au blanc : plus de grand champ profond. ── */
+body[data-cleo-ds="v6"] main > section:first-child{
+  background:#FFFFFF !important;
+  border-radius:0 !important;
+  box-shadow:none !important;
+}
+body[data-cleo-ds="v6"] main > section:first-child::before,
+body[data-cleo-ds="v6"] main > section:first-child::after{display:none !important}
+body[data-cleo-ds="v6"] main > section:first-child :is(.t-hero,.t-titre-page,.t-display,.t-h1,.t-h2,.t-h3,.t-h4){color:#1A1A1A !important}
+body[data-cleo-ds="v6"] main > section:first-child :is(.t-body,.t-body-lg,.t-lead,.t-sm){color:rgba(26,26,26,.62) !important}
+body[data-cleo-ds="v6"] main > section:first-child :is(.t-caption,.t-micro,.t-label,.surtitre){color:rgba(26,26,26,.46) !important}
+body[data-cleo-ds="v6"] main > section:first-child .attenue{color:rgba(26,26,26,.34) !important}
+body[data-cleo-ds="v6"] main > section:first-child :focus-visible{outline-color:#0008CF}
+
+/* ── Boutons : petits, principal sombre, secondaire à filet, sans ombre ni saut. ── */
+body[data-cleo-ds="v6"] .btn{min-height:42px; padding:0 18px; font-weight:500; box-shadow:none !important}
+body[data-cleo-ds="v6"] .btn:hover{transform:none}
+body[data-cleo-ds="v6"] :is(.btn-primaire,.btn-marque,.btn-bleu),
+body[data-cleo-ds="v6"] main > section:first-child :is(.btn-primaire,.btn-marque,.btn-bleu),
+body[data-cleo-ds="v6"] .sur-sombre :is(.btn-primaire,.btn-marque,.btn-bleu){
+  color:#FFFFFF !important; background:#1A1A1A !important; border-color:#1A1A1A !important;
+}
+body[data-cleo-ds="v6"] :is(.btn-primaire,.btn-marque,.btn-bleu):hover{background:#000000 !important}
+body[data-cleo-ds="v6"] :is(.btn-contour,.btn-clair),
+body[data-cleo-ds="v6"] main > section:first-child :is(.btn-contour,.btn-clair),
+body[data-cleo-ds="v6"] .sur-sombre :is(.btn-contour,.btn-clair){
+  color:#1A1A1A !important; background:#FFFFFF !important; border-color:rgba(26,26,26,.16) !important;
+}
+body[data-cleo-ds="v6"] :is(.btn-contour,.btn-clair):hover{border-color:rgba(26,26,26,.4) !important}
+body[data-cleo-ds="v6"] .cta-texte{color:#1A1A1A}
+
+/* ── Barre : blanche, un filet, pas de verre dépoli. ── */
+body[data-cleo-ds="v6"] .nav{
+  background:#FFFFFF; border-bottom:1px solid rgba(26,26,26,.08);
+  backdrop-filter:none; -webkit-backdrop-filter:none;
+}
+body[data-cleo-ds="v6"] .nav .conteneur{height:64px}
+body[data-cleo-ds="v6"] :is(.nav-declencheur,.nav-fin .lien-secondaire){font-weight:450; color:rgba(26,26,26,.72)}
+body[data-cleo-ds="v6"] .nav-fin .btn-sm{min-height:36px; padding:0 14px; font-size:.875rem}
+
+/* ── Cartes : un filet d'un pixel à la place de l'ombre. ── */
+body[data-cleo-ds="v6"] :is(.carte,.carte-claire,.carte-encre,.carte-sombre,.carte-tiede,.terme-carte,.form-carte,.flux-etape,.bf-bloc,.hs-item,.temoin-compact,.radar-boite,.radar-fiche),
+body[data-cleo-ds="v6"] main > section:not(:first-child) :is(.g2,.g3,.g4) > :is(.carte,.carte-encre,.carte-claire){
+  box-shadow:none !important; border:1px solid rgba(26,26,26,.10) !important;
+}
+body[data-cleo-ds="v6"] :is(.carte,.carte-encre,.terme-carte):hover{box-shadow:none !important; border-color:rgba(26,26,26,.22) !important}
+body[data-cleo-ds="v6"] .radar-source.actif{box-shadow:none !important}
+body[data-cleo-ds="v6"] main > section:not(:first-child) .carte-encre:has(.cta-final){background:#FAFAF9 !important; border-color:rgba(26,26,26,.08) !important}
+body[data-cleo-ds="v6"] .bf-note{box-shadow:none; background:#FAFAF9; border-color:rgba(26,26,26,.10)}
+body[data-cleo-ds="v6"] :is(.agent-kpi b,.radar-stats b){font-weight:500}
+
+/* ── Accueil. ── */
+body[data-cleo-ds="v6"][data-v6-family="home"] main > .hero-epure .champ-demo{background:#FFFFFF; border-color:rgba(26,26,26,.14); box-shadow:none}
+body[data-cleo-ds="v6"][data-v6-family="home"] main > .hero-epure .champ-demo:focus-within{background:#FFFFFF; border-color:rgba(26,26,26,.4)}
+body[data-cleo-ds="v6"][data-v6-family="home"] main > .hero-epure .champ-demo input{color:#1A1A1A !important}
+body[data-cleo-ds="v6"][data-v6-family="home"] main > .hero-epure .champ-demo input::placeholder{color:rgba(26,26,26,.44)}
+body[data-cleo-ds="v6"][data-v6-family="home"] main > .hero-epure .hero-globe::after{display:none}
+body[data-cleo-ds="v6"][data-v6-family="home"] main > .hero-epure .gp-carte{box-shadow:none; border-color:rgba(26,26,26,.10)}
+body[data-cleo-ds="v6"] .gp-trait{stroke:rgba(0,8,207,.4) !important}
+body[data-cleo-ds="v6"][data-v6-family="home"] .bande-logos{background:transparent; border-radius:0; border-top:1px solid rgba(26,26,26,.08); border-bottom:1px solid rgba(26,26,26,.08); box-shadow:none}
+body[data-cleo-ds="v6"][data-v6-family="home"] .bande-logos .cellule{border:0 !important; background:transparent}
+body[data-cleo-ds="v6"][data-v6-family="home"] .g-agents .agent{box-shadow:none !important; border:1px solid rgba(26,26,26,.10) !important}
+body[data-cleo-ds="v6"][data-v6-family="home"] main > .securite-bas{background:#FAFAF9}
+
+/* ── Photos : pas d'ombre non plus. ── */
+body[data-cleo-ds="v6"] :is(.scene,.temoignage .scene,.agent-visuel img){box-shadow:none !important}
+
+/* ── Titres longs du premier écran (Enterprise) : cinq lignes à 72 px pesaient trop. ── */
+body[data-cleo-ds="v6"][data-v6-page="40-enterprise"] main > section:first-child .t-hero{font-size:clamp(2.5rem, 1.5rem + 2.6vw, 3.75rem); line-height:1.04}
+
+/* ── Pied : gris très clair, comme les deux références. ── */
+body[data-cleo-ds="v6"] :is(.signature-cleo,.pied){background:#FAFAF9}
+
+/* ── Blocs de la maquette « trois entrées », repassés dans ce régime. ── */
+body[data-cleo-ds="v6"] .fiche-inclus{background:#FAFAF9; border:1px solid rgba(26,26,26,.10); border-radius:12px; box-shadow:none}
+body[data-cleo-ds="v6"] .prix-bloc{background:#FFFFFF; border-color:rgba(26,26,26,.12); border-radius:12px}
+body[data-cleo-ds="v6"] .prix-bloc .pb-montant{color:#1A1A1A; font-weight:500}
+body[data-cleo-ds="v6"] .prix-bloc .pb-a-fixer{color:rgba(26,26,26,.46); border-bottom-color:rgba(26,26,26,.28)}
+body[data-cleo-ds="v6"] .prix-bloc .pb-unite{color:rgba(26,26,26,.6)}
+body[data-cleo-ds="v6"] .fiche-note{color:rgba(26,26,26,.5)}
+body[data-cleo-ds="v6"] :is(.fiche-service,.data-chiffres > div,.ig-item,.texte-chip){box-shadow:none; border-radius:12px}
+body[data-cleo-ds="v6"] :is(.data-chiffres b,.service-prix .sp-montant){font-weight:500}
+body[data-cleo-ds="v6"] .texte-chip b{font-weight:600}
+body[data-cleo-ds="v6"] .bandeau-parution{background:#FAFAF9; border-radius:12px}
+body[data-cleo-ds="v6"] .bandeau-parution a{color:#1A1A1A}
+body[data-cleo-ds="v6"] .inclus{background:#F3F3F1}
+body[data-cleo-ds="v6"] .e4-num{background:#F3F3F1; color:#1A1A1A}
