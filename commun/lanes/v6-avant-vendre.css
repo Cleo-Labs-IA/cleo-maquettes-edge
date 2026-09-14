@@ -198,3 +198,10 @@ body[data-cleo-ds="v6"] .av-cols-5{grid-template-columns:repeat(5,minmax(0,1fr))
 /* Titres : plus de mot seul en fin de ligne (« produit. », « modèles. », « projet. » vus au rendu). */
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-titre2{max-width:1100px}
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] :is(.av-titre2,.av-titre2 .attenue,.av-final-titre,.av-final-titre .attenue){text-wrap:balance}
+
+/* ═══ TOUT LE CONTENU VISIBLE D'EMBLÉE ═══ 14/09/2026. Naomie : « y a plus rien, c'est trop bizarre ». Mesuré :
+   sans défilement, 19 blocs restaient à opacité 0 (colonnes, cartes, portraits, témoignage, sécurité) en
+   attendant l'apparition au défilement ; la page ne montrait que ses titres. Sur cette page, le contenu est
+   toujours là ; seules les animations du haut de page (keyframes) et les barres du prix restent. */
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] main :is([data-anim], [data-anim-groupe] > *){opacity:1 !important;transform:none !important;transition:none !important}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-barres .av-barre-plein{transform:scaleX(1) !important}
