@@ -35,6 +35,7 @@ const PAGES = [
   { fichier: '38-service.html',     titre: 'Fiche prestation', source: 'maquette trois entrées, 14/09/2026' },
   { fichier: '39-data.html',        titre: 'Data',        source: 'maquette trois entrées, 14/09/2026' },
   { fichier: '40-enterprise.html',  titre: 'Enterprise',  source: 'maquette trois entrées, 14/09/2026' },
+  { fichier: '41-accueil-resultat.html', titre: 'Accueil, angle résultat', source: 'maquette angle résultat, 14/09/2026' },
   { fichier: '09-texte.html',       titre: 'Un texte',    source: 'edgecomply.com/topics/reach-regulation-compliance' },
   { fichier: '10-ressources.html',  titre: 'Ressources',  source: 'edgecomply.com/library' },
   { fichier: '11-blog.html',        titre: 'Publications',source: 'edgecomply.com/library/blog' },

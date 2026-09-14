@@ -41,6 +41,9 @@
     "40-enterprise.html": {
       "chemin": "/fr/enterprise"
     },
+    "41-accueil-resultat.html": {
+      "chemin": "/apercu/accueil-resultat"
+    },
     "09-texte.html": {
       "chemin": "/fr/jurisdictions/european-union/regulations/ppwr"
     },
