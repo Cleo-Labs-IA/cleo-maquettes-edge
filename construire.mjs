@@ -36,7 +36,7 @@ const PAGES = [
   { fichier: '39-data.html',        titre: 'Data',        source: 'maquette trois entrées, 14/09/2026' },
   { fichier: '40-enterprise.html',  titre: 'Enterprise',  source: 'maquette trois entrées, 14/09/2026' },
   { fichier: '41-accueil-resultat.html', titre: 'Accueil, angle résultat', source: 'maquette angle résultat, 14/09/2026' },
-  { fichier: '43-accueil-avant-vendre.html', titre: 'Accueil, avant de vendre', source: 'maquette avant de vendre, 14/09/2026', nav: 'commun/bandeau-nav-avant-vendre.html' },
+  { fichier: '43-accueil-avant-vendre.html', titre: 'Accueil, avant de vendre', source: 'maquette avant de vendre, 14/09/2026', nav: 'commun/bandeau-nav-avant-vendre.html', pied: 'commun/pied-avant-vendre.html' },
   { fichier: '09-texte.html',       titre: 'Un texte',    source: 'edgecomply.com/topics/reach-regulation-compliance' },
   { fichier: '10-ressources.html',  titre: 'Ressources',  source: 'edgecomply.com/library' },
   { fichier: '11-blog.html',        titre: 'Publications',source: 'edgecomply.com/library/blog' },
@@ -101,6 +101,9 @@ const IMAGES = {
   'alex':             ['author-alex.png', 200, 'png'],
   'darcial':          ['experts/darcial-mondjo.jpg', 200],
   'thezi':            ['experts/thezi-mabuza.jpg', 200],
+  // Les deux portraits en grand, pour la maquette « avant de vendre » (14/09/2026).
+  'darcial-grand':    ['experts/darcial-mondjo.jpg', 560],
+  'thezi-grand':      ['experts/thezi-mabuza.jpg', 560],
   'veille-produit':   ['veille/produit-3b9ed4d5.png', 320, 'png'],
   // Les deux photographies de Naomie : la masse et l'unique, en vrai.
   'parc-voitures':    ['local/parc-voitures.jpg', 1100],
@@ -791,6 +794,8 @@ const navEn = fs.existsSync(path.join(ICI, 'commun/bandeau-nav-en.html'))
 const piedEn = litOuRepli('commun/pied-en.html', pied)
 /* Une page peut porter sa propre barre (maquette « avant de vendre », 14/09/2026). */
 const navsPropres = {}
+const piedsPropres = {}
+const piedPropre = (rel) => piedsPropres[rel] || (piedsPropres[rel] = fs.readFileSync(path.join(ICI, rel), 'utf8'))
 const navPropre = (rel) => navsPropres[rel] || (navsPropres[rel] = avecMenuMobile(fs.readFileSync(path.join(ICI, rel), 'utf8')))
 
 
@@ -806,7 +811,7 @@ for (const p of PAGES) {
   const aNav = corps.includes('<!--NAV-->')
   const evitement = `<a class="lien-evitement" href="#contenu">${p.en ? 'Skip to content' : 'Aller au contenu'}</a>`
   corps = corps.replace('<!--NAV-->', evitement + '\n' + (p.nav ? navPropre(p.nav) : (p.en ? navEn : nav)) + '\n<main id="contenu">')
-  corps = corps.replace('<!--PIED-->', (aNav ? '</main>\n' : '') + (p.en ? piedEn : pied))
+  corps = corps.replace('<!--PIED-->', (aNav ? '</main>\n' : '') + (p.pied ? piedPropre(p.pied) : (p.en ? piedEn : pied)))
   corps = corps.replace('<!--MASSE-->', masse()).replace('<!--MASSE-REFS-->', masseRefs())
   corps = corps.replace(/ico:([a-z]+)(?::(\d+))?/g, (_, n, t) => icone(n, t ? +t : 20))
   /* LE SÉLECTEUR DE LANGUE. Il n'apparaît QUE là où un jumeau existe :

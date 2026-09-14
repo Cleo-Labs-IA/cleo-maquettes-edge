@@ -105,3 +105,85 @@ body[data-cleo-ds="v6"] .av-note{margin:16px 0 0;font-size:.75rem;color:rgb(128,
 
 /* Les ancres de la barre (#comment, #prix) : la barre collante masquait le titre à l'arrivée (vu le 14/09). */
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] :is(#comment,#prix){scroll-margin-top:96px}
+
+/* ═══ ÉCRANS 4 À 9 ═══ 14/09/2026, « fini ». Même registre, valeurs relevées sur quradata.com : sections de
+   128 px, titres 56 px graisse 400 en deux tons, cartes à filet 1 px à angles droits, panneaux #F5F5F5,
+   texte courant 14 à 15 px, gris 115 pour tenir 4,5:1. */
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] main > section.av-bloc{padding:0 0 128px !important}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] :is(#prestations,#pour-qui,#experts,#temoignage,#securite,#contact){scroll-margin-top:96px}
+
+/* Prestations */
+body[data-cleo-ds="v6"] .av-cartes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+body[data-cleo-ds="v6"] .av-carte{padding:52px 44px;border:1px solid rgba(26,26,26,.10);background:#FFFFFF}
+body[data-cleo-ds="v6"] .av-carte h3{margin:0 0 30px;font-size:1.5rem;font-weight:400;letter-spacing:-.02em;color:#1A1A1A}
+body[data-cleo-ds="v6"] .av-presta{list-style:none;margin:0;padding:0;display:grid;gap:22px}
+body[data-cleo-ds="v6"] .av-presta li{display:grid;grid-template-columns:18px minmax(0,1fr);gap:12px;align-items:start}
+body[data-cleo-ds="v6"] .av-presta i{display:grid;place-items:center;width:17px;height:17px;margin-top:2px;border-radius:50%;background:#1A1A1A;color:#FFFFFF}
+body[data-cleo-ds="v6"] .av-presta svg{width:9px;height:9px}
+body[data-cleo-ds="v6"] .av-presta b{display:block;font-size:.9375rem;font-weight:500;color:#1A1A1A}
+body[data-cleo-ds="v6"] .av-presta span{display:block;margin-top:4px;font-size:.875rem;line-height:1.5;color:rgb(115,115,115)}
+
+/* Pour qui */
+body[data-cleo-ds="v6"] .av-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+body[data-cleo-ds="v6"] .av-categories{display:flex;align-items:flex-end;justify-content:space-between;gap:20px 48px;flex-wrap:wrap;margin-top:64px;padding-top:28px;border-top:1px solid rgba(26,26,26,.10)}
+body[data-cleo-ds="v6"] .av-categories p{margin:0;max-width:980px;font-size:.9375rem;line-height:1.7;color:rgb(115,115,115)}
+body[data-cleo-ds="v6"] .av-categories b{font-weight:500;color:#1A1A1A;margin-right:6px}
+body[data-cleo-ds="v6"] .av-lien{display:inline-flex;align-items:center;gap:10px;font-size:.875rem;color:#1A1A1A;white-space:nowrap}
+body[data-cleo-ds="v6"] .av-lien:hover{text-decoration:underline;text-underline-offset:4px}
+
+/* Experts */
+body[data-cleo-ds="v6"] .av-experts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) minmax(0,1.2fr);gap:16px 32px;align-items:start}
+body[data-cleo-ds="v6"] .av-portrait{margin:0}
+body[data-cleo-ds="v6"] .av-portrait img{display:block;width:100%;aspect-ratio:1 / 1.05;object-fit:cover;object-position:50% 20%;background:#F5F5F5}
+body[data-cleo-ds="v6"] .av-portrait figcaption{margin-top:14px;font-size:.875rem;line-height:1.45;color:rgb(115,115,115)}
+body[data-cleo-ds="v6"] .av-portrait figcaption b{font-weight:500;color:#1A1A1A}
+body[data-cleo-ds="v6"] .av-experts-texte{padding-left:clamp(0px, 3vw, 40px)}
+body[data-cleo-ds="v6"] .av-grand{margin:0 0 18px;font-size:clamp(1.25rem, 1rem + .7vw, 1.625rem);line-height:1.35;letter-spacing:-.015em;color:#1A1A1A}
+body[data-cleo-ds="v6"] .av-experts-texte p:not(.av-grand){margin:0;font-size:.9375rem;line-height:1.55;color:rgb(115,115,115)}
+
+/* Témoignage */
+body[data-cleo-ds="v6"] .av-temoin{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px, 5vw, 72px);align-items:center}
+body[data-cleo-ds="v6"] .av-temoin-photo{display:block;width:100%;aspect-ratio:4 / 4.4;object-fit:cover;object-position:50% 25%}
+body[data-cleo-ds="v6"] .av-temoin-logo{display:block;height:22px;width:auto;margin-bottom:26px;filter:grayscale(1) contrast(1.1);opacity:.85}
+body[data-cleo-ds="v6"] .av-citation{margin:0;font-size:clamp(1.0625rem, .9rem + .5vw, 1.3125rem);line-height:1.55;letter-spacing:-.01em;color:#1A1A1A}
+body[data-cleo-ds="v6"] .av-temoin-nom{margin:24px 0 18px;font-size:.875rem;color:rgb(115,115,115)}
+body[data-cleo-ds="v6"] .av-temoin-nom b{font-weight:500;color:#1A1A1A}
+
+/* Sécurité */
+body[data-cleo-ds="v6"] .av-securite{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+body[data-cleo-ds="v6"] .av-garantie{display:flex;flex-direction:column;justify-content:space-between;gap:40px;min-height:220px;padding:24px 26px;background:#F5F5F5;color:#1A1A1A}
+body[data-cleo-ds="v6"] .av-garantie b{font-size:.9375rem;font-weight:500}
+body[data-cleo-ds="v6"] .av-garantie span{font-size:.875rem;line-height:1.5;color:rgb(115,115,115)}
+body[data-cleo-ds="v6"] .av-garantie:hover b{text-decoration:underline;text-underline-offset:4px}
+
+/* Appel final */
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] main > section.av-final{padding:40px 0 160px !important;text-align:center}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-final-titre{margin:0 auto;max-width:1000px;font-size:clamp(2.5rem, 1.2rem + 3.6vw, 4.5rem) !important;font-weight:400 !important;line-height:1.08 !important;letter-spacing:-.042em !important;color:#1A1A1A !important}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-final-titre .attenue{display:block;color:rgb(204,204,204) !important}
+body[data-cleo-ds="v6"] .av-final-texte{max-width:620px;margin:28px auto 34px;font-size:1.125rem;line-height:1.5;color:rgb(115,115,115)}
+
+/* Pied */
+body[data-cleo-ds="v6"] .pa-pied{padding:64px 0 32px;background:#F5F5F5;color:#1A1A1A}
+body[data-cleo-ds="v6"] .pa-phrase{margin:0 0 48px;font-size:1.5rem;font-weight:400;letter-spacing:-.02em}
+body[data-cleo-ds="v6"] .pa-colonnes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
+body[data-cleo-ds="v6"] .pa-colonnes h4{margin:0 0 16px;font-size:.75rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgb(128,128,128)}
+body[data-cleo-ds="v6"] .pa-colonnes ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:.875rem;color:#1A1A1A}
+body[data-cleo-ds="v6"] .pa-colonnes a{color:#1A1A1A}
+body[data-cleo-ds="v6"] .pa-colonnes a:hover{text-decoration:underline;text-underline-offset:4px}
+body[data-cleo-ds="v6"] .pa-bas{display:flex;align-items:center;gap:12px 28px;flex-wrap:wrap;margin-top:56px;padding-top:24px;border-top:1px solid rgba(26,26,26,.10);font-size:.8125rem;color:rgb(115,115,115)}
+body[data-cleo-ds="v6"] .pa-bas img{height:20px;width:auto;margin-right:auto}
+body[data-cleo-ds="v6"] .pa-bas a{color:rgb(115,115,115)}
+
+@media (max-width:980px){
+  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] main > section.av-bloc{padding:0 0 80px !important}
+  body[data-cleo-ds="v6"] :is(.av-cartes,.av-cols-3,.av-securite,.av-temoin){grid-template-columns:minmax(0,1fr)}
+  body[data-cleo-ds="v6"] .av-experts{grid-template-columns:repeat(2,minmax(0,1fr))}
+  body[data-cleo-ds="v6"] .av-experts-texte{grid-column:1 / -1;padding-left:0}
+  body[data-cleo-ds="v6"] .pa-colonnes{grid-template-columns:repeat(2,minmax(0,1fr))}
+  body[data-cleo-ds="v6"] .av-carte{padding:36px 28px}
+  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] main > section.av-final{padding:24px 0 96px !important}
+}
+@media (max-width:560px){
+  body[data-cleo-ds="v6"] .av-carte{padding:28px 22px}
+  body[data-cleo-ds="v6"] .av-garantie{min-height:0;gap:18px}
+}
