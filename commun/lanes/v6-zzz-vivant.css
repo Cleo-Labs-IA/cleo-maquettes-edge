@@ -1,12 +1,12 @@
-/* ═══ RÉGIME VIVANT, PAGE 43 ═══ 14/09/2026. Naomie : « utilise les best practices des sites dernier genre, Framer,
-   ce qui est à la mode ; site clair mais pas non plus comme un hôpital ». Le blanc pur, le gris #F5F5F5 et
-   l'absence de couleur faisaient clinique. Valeurs reprises de références déjà validées :
-   - fond chaud #F9F8F6 (cleolabs.co, mesuré le 26/08) et crème #F1EEE3 (DS V6) ;
-   - « le clair domine, le sombre ponctue » : UN seul champ profond #08093B (DS V5), sur l'écran du prix ;
-   - bleu d'action #0008CF sur clair, #4D57FF sur profond (DS V5) ;
-   - survols 0,15 s ease-out (legora.com, mesuré) ; photos « la masse et l'unique » ;
-   - tout le contenu reste visible sans défiler (voir « tout le contenu visible d'émblée »).
-   Feuille chargée en dernier (zzz), limitée à la page 43 : la retirer rend la version précédente. */
+/* ═══ RÉGIME SOBRE ET CHAUD, PAGE 43 ═══ 14/09/2026, deuxième réglage.
+   1er réglage (« pas comme un hôpital ») : fond chaud, cartes ombrées partout, photos sur chaque carte, logos qui
+   défilent, halos, bloc sombre à dégradé avec encadré, boutons lumineux. Verdict : « trop le bordel, trop dingo ».
+   Règle déjà notée (feedback_da_references_mesurees) : « un rendu jugé très moche l'était par excès de cartes, de
+   bleu et de densité ; ce qui fait épuré, c'est la retenue : peu d'éléments, beaucoup de vide, un seul accent ;
+   le clair domine, le sombre ponctue ».
+   Donc : fond chaud #F9F8F6 (pas le blanc clinique) ; un seul accent, le bleu, sur les boutons d'action ; un seul
+   bloc sombre en aplat (le prix) ; filets fins et rayons modestes ; aucune ombre, aucun dégradé, aucune photo
+   ajoutée, aucun mouvement continu. Tout le contenu reste visible sans défiler. Limité à la page 43. */
 
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"]{background:#F9F8F6}
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] main > section{background:transparent !important}
@@ -14,87 +14,41 @@ body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .nav{background:
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] :is(.av-titre2,.av-final-titre) .attenue,
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] main > section:first-child .t-hero .attenue{color:rgba(26,26,26,.30) !important}
 
-/* Boutons : l'action principale pleine, en bleu ; la flèche glisse au survol. */
+/* L'accent : le bleu, sur les boutons d'action seulement. Plein, sans halo. */
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .nav .btn-marque{background:#0008CF !important;color:#FFFFFF !important;border-color:#0008CF !important}
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .nav .btn-marque:hover{background:#0007B5 !important;border-color:#0007B5 !important}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .hq-bouton{gap:14px;padding:13px 18px 13px 24px;border:0;background:#0008CF;color:#FFFFFF;font-size:.9375rem;box-shadow:0 8px 24px rgba(0,8,207,.22);transition:background .15s ease-out,box-shadow .15s ease-out}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .hq-bouton:hover{background:#0007B5;color:#FFFFFF;box-shadow:0 10px 28px rgba(0,8,207,.30)}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .hq-bouton svg{transition:transform .15s ease-out}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .hq-bouton:hover svg{transform:translateX(3px)}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .hq-bouton{border:0;background:#0008CF;color:#FFFFFF;padding:12px 18px 12px 22px;transition:background .15s ease-out}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .hq-bouton:hover{background:#0007B5;color:#FFFFFF}
 
-/* Haut de page : un halo bleu très doux derrière le globe (les « gradient canvases » du DS V5). */
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-grille .hero-globe{background:radial-gradient(closest-side, rgba(77,87,255,.16), rgba(77,87,255,.05) 62%, transparent 100%)}
+/* Filets et rayons modestes, sans ombre. */
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-ico{display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:#F1EEE3}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-ico svg{width:22px;height:22px}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-carte{border:1px solid rgba(26,26,26,.08);border-radius:16px;background:#FFFFFF}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-socle-panneau{background:#F1EEE3;border-radius:16px}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-publie li{border-radius:9999px;border-color:rgba(26,26,26,.08)}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-regle{border-radius:12px;border-color:rgba(26,26,26,.06)}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] :is(.av-portrait img,.av-temoin-photo){border-radius:16px}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-garantie{background:#F1EEE3;border-radius:16px}
 
-/* Logos : un bandeau qui défile, estompé sur les bords. */
-body[data-cleo-ds="v6"] .av-marquee{flex:1 1 520px;min-width:0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
-body[data-cleo-ds="v6"] .av-marquee-piste{display:flex;width:max-content;animation:avDefile 36s linear infinite}
-body[data-cleo-ds="v6"] .av-marquee-lot{display:flex;align-items:center;gap:64px;padding-right:64px}
-body[data-cleo-ds="v6"] .av-marquee-lot img{height:32px;width:auto;max-width:150px;object-fit:contain;filter:grayscale(1) contrast(1.1);opacity:.7}
-body[data-cleo-ds="v6"] .av-marquee:hover .av-marquee-piste{animation-play-state:paused}
-@keyframes avDefile{to{transform:translateX(-50%)}}
-
-/* Cartes : blanches, arrondies, ombre douce, légère levée au survol. */
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] :is(.av-col,.av-carte,.av-garantie,.av-regle){border-radius:20px}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] :is(#comment,#pour-qui) .av-col{background:#FFFFFF;padding:28px 26px 30px;border:1px solid rgba(26,26,26,.05);box-shadow:0 1px 2px rgba(8,9,59,.04),0 12px 32px rgba(8,9,59,.05);transition:transform .15s ease-out,box-shadow .15s ease-out}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] :is(#comment,#pour-qui) .av-col:hover{transform:translateY(-3px) !important;box-shadow:0 1px 2px rgba(8,9,59,.05),0 18px 40px rgba(8,9,59,.09)}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #comment .av-cols{gap:16px}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-ico{display:grid;place-items:center;width:48px;height:48px;border-radius:14px;background:#F1EEE3}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-ico svg{width:24px;height:24px}
-
-/* Prestations : une photo « la masse et l'unique » en tête de chaque carte. */
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-carte{padding:0 0 40px;overflow:hidden;border:1px solid rgba(26,26,26,.05);box-shadow:0 1px 2px rgba(8,9,59,.04),0 12px 32px rgba(8,9,59,.05)}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-carte-visuel{aspect-ratio:16 / 7;overflow:hidden;margin-bottom:36px}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-carte-visuel img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.625,.05,0,1)}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-carte:hover .av-carte-visuel img{transform:scale(1.03)}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-carte > :is(h3,ul){margin-left:40px;margin-right:40px}
-
-/* Pour qui : une photo par profil. */
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #pour-qui .av-col{padding:0 0 28px;overflow:hidden}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #pour-qui .av-col-visuel{aspect-ratio:4 / 3;overflow:hidden;margin-bottom:22px}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #pour-qui .av-col-visuel img{display:block;width:100%;height:100%;object-fit:cover}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #pour-qui .av-col > :is(h3,p){margin-left:26px;margin-right:26px}
-
-/* Le socle : panneau crème arrondi, pastilles en pilule. */
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-socle-panneau{background:#F1EEE3;border-radius:24px}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-publie li{border-radius:9999px;border-color:rgba(26,26,26,.08);color:#1A1A1A}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-regle{box-shadow:0 12px 32px rgba(8,9,59,.07);border-color:rgba(26,26,26,.05)}
-
-/* ═══ LE PRIX, SEUL CHAMP PROFOND DE LA PAGE ═══ */
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] main > section#prix{width:min(1320px, calc(100% - 40px));margin:0 auto 128px;padding:104px 0 88px !important;border-radius:28px;background:radial-gradient(70% 90% at 12% 0%, rgba(77,87,255,.22), transparent 60%),linear-gradient(139deg,#08093B,#12134F) !important}
+/* ═══ LE PRIX, SEUL BLOC SOMBRE ═══ aplat, sans dégradé ; plus d'encadré dans le bloc. */
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] main > section#prix{width:min(1320px, calc(100% - 40px));margin:0 auto 128px;padding:96px 0 80px !important;border-radius:20px;background:#08093B !important}
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #prix .av-titre2{color:#FFFFFF !important}
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #prix .av-titre2 .attenue{color:rgba(255,255,255,.55) !important}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #prix .av-prix-panneau{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.10);border-radius:24px}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #prix .av-prix-panneau{background:transparent;padding:0}
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #prix :is(.av-tiers,.av-barre,.av-avantages li){color:#FFFFFF}
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #prix .av-tiers-legende{color:rgba(255,255,255,.68)}
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #prix .av-barre-plein{background:rgba(255,255,255,.24)}
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #prix .av-barre-cleo .av-barre-plein{background:#4D57FF}
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #prix :is(.av-avantages,.av-avantages li){border-color:rgba(255,255,255,.12)}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #prix .av-avantages i{background:#4D57FF}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #prix .hq-bouton{background:#FFFFFF;color:#08093B;box-shadow:none}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #prix .av-avantages i{background:#FFFFFF;color:#08093B}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #prix .hq-bouton{background:#FFFFFF;color:#08093B}
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #prix .hq-bouton:hover{background:#EFEEFB;color:#08093B}
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #prix .av-note{color:rgba(255,255,255,.55)}
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #prix :focus-visible{outline-color:#FFFFFF}
 
-/* Experts, témoignage, sécurité */
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-portrait img{border-radius:20px}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-temoin{background:#FFFFFF;border-radius:28px;padding:clamp(20px, 3vw, 32px);box-shadow:0 1px 2px rgba(8,9,59,.04),0 12px 32px rgba(8,9,59,.05)}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-temoin-photo{border-radius:20px}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-garantie{background:#F1EEE3;transition:transform .15s ease-out}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-garantie:hover{transform:translateY(-3px) !important}
-
-/* Appel final : une grande carte crème avec un halo bleu. */
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] main > section#contact{width:min(1320px, calc(100% - 40px));margin:0 auto 128px;padding:clamp(64px, 8vw, 112px) 0 !important;border-radius:28px;background:radial-gradient(60% 90% at 50% 0%, rgba(77,87,255,.14), transparent 70%),#F1EEE3 !important}
-
-/* Pied : crème, dans la continuité. */
+/* Pied : crème, dans la continuité du fond. */
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .pa-pied{background:#F1EEE3}
 
 @media (max-width:980px){
-  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] main > section#prix{width:calc(100% - 24px);border-radius:22px;padding:64px 0 56px !important;margin-bottom:80px}
-  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-carte > :is(h3,ul){margin-left:24px;margin-right:24px}
-  body[data-cleo-ds="v6"] .av-marquee{flex-basis:100%}
-  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] main > section#contact{width:calc(100% - 24px);border-radius:22px;margin-bottom:80px}
-}
-@media (prefers-reduced-motion: reduce){
-  body[data-cleo-ds="v6"] .av-marquee-piste{animation:none}
-  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] :is(.av-col,.av-garantie,.av-carte-visuel img,.hq-bouton svg){transition:none}
+  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] main > section#prix{width:calc(100% - 24px);border-radius:16px;padding:64px 0 56px !important;margin-bottom:80px}
 }
