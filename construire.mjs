@@ -21,12 +21,14 @@ const PAGES = [
   { fichier: '01-accueil.html',   titre: 'Accueil noir', source: 'edgecomply.com/', noir: true, sortie: '01-accueil-noir.html' },
   { fichier: '01-accueil-en.html', titre: 'Accueil EN', source: 'edgecomply.com/', en: true },
   { fichier: '02-entreprise.html', titre: 'Entreprise',  source: 'edgecomply.com/about-us' },
-  { fichier: '03-offre.html',      titre: 'Offre',       source: 'edgecomply.com/services/product-compliance-audit' },
+  /* 14/09/2026, trois entrées : Regulatory Change, Research et Compliance Data ne sont plus des
+     pages. Les fragments restent dans pages/ ; leurs routes redirigent (voir vercel.json). */
+  // { fichier: '03-offre.html',      titre: 'Offre',       source: 'edgecomply.com/services/product-compliance-audit' },
   { fichier: '04-secteur.html',    titre: 'Secteur',     source: 'edgecomply.com/industries/apparel-and-textiles' },
   { fichier: '05-marche.html',     titre: 'Marche',      source: 'edgecomply.com/markets/european-union-product-compliance' },
   { fichier: '06-cas-client.html', titre: 'Cas client',  source: 'edgecomply.com/customer-stories/avery-row' },
-  { fichier: '07-chat.html',        titre: 'Research',    source: 'edgecomply.com/services/*' },
-  { fichier: '08-reglementation.html', titre: 'Compliance', source: 'edgecomply.com/services/*' },
+  // { fichier: '07-chat.html',        titre: 'Research',    source: 'edgecomply.com/services/*' },
+  // { fichier: '08-reglementation.html', titre: 'Compliance', source: 'edgecomply.com/services/*' },
   { fichier: '37-compliance-service.html', titre: 'Compliance as a service', source: 'pages/01-accueil.html#compliance-service' },
   { fichier: '37-compliance-service-en.html', titre: 'Compliance as a service EN', source: 'pages/01-accueil-en.html#compliance-service', en: true },
   // Maquette d'exemple « trois entrées », réunion d'équipe du 14/09/2026.
@@ -990,7 +992,11 @@ const reecritures = Object.entries(CHEMINS.pages)
 fs.writeFileSync(path.join(ICI, 'sortie', 'vercel.json'), JSON.stringify({
   headers: [{ source: '/(.*)', headers: [
     { key: 'X-Robots-Tag', value: 'noindex, nofollow, noarchive, nosnippet' }] }],
-  redirects: [{ source: '/', destination: CHEMINS.racine, permanent: false }],
+  redirects: [{ source: '/', destination: CHEMINS.racine, permanent: false },
+    // Les routes des trois features retirées le 14/09/2026 mènent aux entrées qui les remplacent.
+    { source: '/fr/platform', destination: '/fr/platform/compliance-service', permanent: false },
+    { source: '/fr/platform/research', destination: '/fr/platform/compliance-service', permanent: false },
+    { source: '/fr/platform/regulations', destination: '/fr/data', permanent: false }],
   rewrites: [...reecritures, { source: '/apercu', destination: '/index.html' }]
 }, null, 2))
 console.log(`  ${reecritures.length} URL propres, calquees sur les routes de www.cleolabs.co`)

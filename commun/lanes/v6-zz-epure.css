@@ -100,6 +100,37 @@ body[data-cleo-ds="v6"][data-v6-family="home"] .bande-logos .cellule{border:0 !i
 body[data-cleo-ds="v6"][data-v6-family="home"] .g-agents .agent{box-shadow:none !important; border:1px solid rgba(26,26,26,.10) !important}
 body[data-cleo-ds="v6"][data-v6-family="home"] main > .securite-bas{background:#FAFAF9}
 
+/* ── À propos : le premier écran pose le texte sur une photo sombre voilée de noir. Passé au blanc,
+   le titre en encre y devenait illisible (audit des 47 pages, 14/09). La photo s'efface sous un voile
+   blanc qui part de la gauche, le texte garde son encre. ── */
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] main > section:first-child > img{opacity:.16 !important; filter:grayscale(1)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] main > section:first-child > div[style*="linear-gradient"]{
+  background:linear-gradient(90deg,#FFFFFF 34%,rgba(255,255,255,.88) 62%,rgba(255,255,255,.35) 100%) !important;
+}
+
+/* ── Page de campagne : sans <main>, son premier écran échappait au passage au blanc. La règle V6
+   qui le peint porte aussi [data-v6-family] : la même spécificité est nécessaire pour la battre
+   (vu au rendu le 14/09, le fond bleu nuit restait sous un titre passé en encre). ── */
+body[data-cleo-ds="v6"][data-v6-family="trust-conversion"][data-v6-page="20-campagne"] > section:first-of-type{background:#FFFFFF !important; border-radius:0 !important; box-shadow:none !important; color:#1A1A1A}
+body[data-cleo-ds="v6"][data-v6-family="trust-conversion"][data-v6-page="20-campagne"] > section:first-of-type::before,
+body[data-cleo-ds="v6"][data-v6-family="trust-conversion"][data-v6-page="20-campagne"] > section:first-of-type::after{display:none !important}
+body[data-cleo-ds="v6"][data-v6-family="trust-conversion"][data-v6-page="20-campagne"] > section:first-of-type :is(.t-hero,.t-titre-page,.t-display,.t-h1,.t-h2,.t-h3){color:#1A1A1A !important}
+body[data-cleo-ds="v6"][data-v6-family="trust-conversion"][data-v6-page="20-campagne"] > section:first-of-type :is(.t-body,.t-lead,.t-caption,.t-label){color:rgba(26,26,26,.62) !important}
+body[data-cleo-ds="v6"][data-v6-family="trust-conversion"][data-v6-page="20-campagne"] > section:first-of-type .attenue{color:rgba(26,26,26,.34) !important}
+/* La pastille « Guide gratuit | Emballage » gardait l'encre blanche du champ profond (vue invisible au rendu). */
+body[data-cleo-ds="v6"][data-v6-family="trust-conversion"][data-v6-page="20-campagne"] > section:first-of-type .pilule-dispo{color:rgba(26,26,26,.62) !important; background:#FFFFFF !important; border-color:rgba(26,26,26,.12) !important}
+body[data-cleo-ds="v6"][data-v6-family="trust-conversion"][data-v6-page="20-campagne"] > section:first-of-type .pilule-dispo .sep{background:rgba(26,26,26,.2) !important}
+/* La couverture du guide : un livre blanc à filet, cohérent avec le reste de la page. */
+body[data-cleo-ds="v6"][data-v6-family="trust-conversion"][data-v6-page="20-campagne"] .seg-couverture .couverture{background:#FAFAF9 !important; border:1px solid rgba(26,26,26,.10) !important; border-radius:12px}
+body[data-cleo-ds="v6"][data-v6-family="trust-conversion"][data-v6-page="20-campagne"] .seg-couverture .livre{background:#FFFFFF !important; border:1px solid rgba(26,26,26,.12); box-shadow:none !important; border-radius:8px}
+body[data-cleo-ds="v6"][data-v6-family="trust-conversion"][data-v6-page="20-campagne"] .seg-couverture .livre *{color:#1A1A1A !important}
+body[data-cleo-ds="v6"][data-v6-family="trust-conversion"][data-v6-page="20-campagne"] .seg-couverture .livre .t-caption{color:rgba(26,26,26,.55) !important}
+body[data-cleo-ds="v6"][data-v6-family="trust-conversion"][data-v6-page="20-campagne"] .seg-couverture .flottant{box-shadow:none !important; border:1px solid rgba(26,26,26,.10) !important}
+
+/* ── Logos clients : composants.css les passe en blanc dans une section sombre. Dans ce régime,
+   plus aucune section n'est sombre : ils redeviennent gris (page secteur, vu au rendu le 14/09). ── */
+body[data-cleo-ds="v6"] .sur-sombre .bande-logos img{filter:grayscale(1) !important; opacity:.52 !important}
+
 /* ── Photos : pas d'ombre non plus. ── */
 body[data-cleo-ds="v6"] :is(.scene,.temoignage .scene,.agent-visuel img){box-shadow:none !important}
 

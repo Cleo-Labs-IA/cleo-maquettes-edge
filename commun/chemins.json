@@ -14,10 +14,6 @@
       "chemin": "/fr/company",
       "reelle": true
     },
-    "03-offre.html": {
-      "chemin": "/fr/platform",
-      "reelle": true
-    },
     "04-secteur.html": {
       "chemin": "/fr/industries",
       "reelle": true
@@ -29,12 +25,6 @@
     "06-cas-client.html": {
       "chemin": "/fr/customers",
       "reelle": true
-    },
-    "07-chat.html": {
-      "chemin": "/fr/platform/research"
-    },
-    "08-reglementation.html": {
-      "chemin": "/fr/platform/regulations"
     },
     "37-compliance-service.html": {
       "chemin": "/fr/platform/compliance-service"
