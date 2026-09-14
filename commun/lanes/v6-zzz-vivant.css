@@ -167,6 +167,22 @@ body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-exigence-gri
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-exigence-grille .av-action{background:#EFF0FF}
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-exigence-grille .av-action p{color:#0008CF;font-weight:500}
 
+/* ─── « Plus design ? » (14/09/2026) : le geste Legora sur UN seul bloc. La photo « la masse et l'unique » des
+   briques sous le dossier, la carte alignée à gauche pour laisser voir la brique bleue, la source qui flotte en
+   haut à droite. Sur le globe, le papier quadrillé des médias de numeral.com. ─── */
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable-zone{position:relative;overflow:hidden;padding:72px 64px}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 74%}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable{position:relative;z-index:1;grid-template-columns:230px minmax(0,1fr);max-width:800px;margin:0;box-shadow:0 0 0 1px rgba(26,26,26,.06), 0 24px 60px rgba(0,0,0,.28)}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-source-flottante{position:absolute;z-index:2;top:48px;right:48px;width:240px;padding:16px 18px;border-radius:12px;background:rgba(255,255,255,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 12px 36px rgba(0,0,0,.22)}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-source-flottante small{display:block;margin-bottom:8px;font-size:.6875rem;letter-spacing:.06em;text-transform:uppercase;color:#6B6B6B}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-source-flottante b{display:block;font-size:.9375rem;font-weight:500;color:#1A1A1A}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-source-flottante span{display:block;margin-top:4px;font-size:.8125rem;color:#6B6B6B}
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-grille .hero-globe{background:linear-gradient(rgba(26,26,26,.045) 1px, transparent 1px) 0 0 / 32px 32px, linear-gradient(90deg, rgba(26,26,26,.045) 1px, transparent 1px) 0 0 / 32px 32px, #FBFAF8}
+@media (max-width:980px){
+  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable{max-width:none}
+  body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-source-flottante{position:relative;top:auto;right:auto;width:auto;max-width:260px;margin:0 0 12px}
+}
+
 /* ─── Qui fait quoi (repris de la v2) : trois cellules sur zone teintée, sous les experts ─── */
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #experts .av-roles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:56px -32px -64px;background:#F9F8F6;border-top:1px solid rgba(26,26,26,.10)}
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #experts .av-roles > div{padding:28px 32px 32px;border-left:1px solid rgba(26,26,26,.10)}
@@ -210,3 +226,6 @@ body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] #experts .av-rol
   body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-carte{padding:26px 22px}
   body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-garantie{min-height:0}
 }
+
+/* Sommaire du dossier : « Dossier de lancement » passait sur deux lignes à côté du logo (vu au rendu le 14/09). */
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-livrable-logo span{white-space:nowrap}
