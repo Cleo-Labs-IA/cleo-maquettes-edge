@@ -204,7 +204,9 @@ body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] :is(.av-titre2,.
    attendant l'apparition au défilement ; la page ne montrait que ses titres. Sur cette page, le contenu est
    toujours là ; seules les animations du haut de page (keyframes) et les barres du prix restent. */
 body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] main :is([data-anim], [data-anim-groupe] > *){opacity:1 !important;transform:none !important;transition:none !important}
-body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-barres .av-barre-plein{transform:scaleX(1) !important}
+/* Sans !important depuis le 14/09 (soir) : une déclaration importante bat les animations, et les barres se
+   remplissent désormais au défilement (v6-zzzz-mouvement-43.css). Posées pleines par défaut. */
+body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre"] .av-barres .av-barre-plein{transform:scaleX(1)}
 
 /* ═══ ÉCRAN « LE SOCLE » ═══ 14/09/2026, variante A. Même registre : chiffres graisse 400 (« 1000+ Data Sources »
    sur quradata.com), lignes à filet, panneau #F5F5F5 à angles droits. */
