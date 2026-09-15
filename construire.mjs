@@ -592,6 +592,9 @@ async function globeProduits() {
    à vide, la police seule. */
 fs.mkdirSync(path.join(ICI, 'sortie', 'fonts'), { recursive: true })
 fs.copyFileSync(POLICE, path.join(ICI, 'sortie', 'fonts', 'Satoshi-Variable.woff2'))
+/* Polices de la marque « mood Tenkara » (15/09/2026) : fichiers libres (OFL) servis comme Satoshi, depuis commun/polices. */
+const dossierPolices = path.join(ICI, 'commun/polices')
+if (fs.existsSync(dossierPolices)) for (const f of fs.readdirSync(dossierPolices).filter(n => n.endsWith('.woff2'))) fs.copyFileSync(path.join(dossierPolices, f), path.join(ICI, 'sortie', 'fonts', f))
 /* Le favicon est celui du vrai site, relevé le 03/09/2026 sur www.cleolabs.co/favicon.svg. */
 const FAVICON = 'data:image/svg+xml;base64,' + fs.readFileSync(path.join(LOCAL, 'favicon.svg')).toString('base64')
 fs.mkdirSync(path.join(ICI, 'sortie'), { recursive: true })
