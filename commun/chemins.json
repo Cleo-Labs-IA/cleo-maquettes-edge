@@ -35,17 +35,29 @@
     "38-service.html": {
       "chemin": "/fr/compliance-as-a-service/declaration-de-conformite"
     },
+    "38-service-en.html": {
+      "chemin": "/en/compliance-as-a-service/declaration-of-conformity"
+    },
     "39-data.html": {
       "chemin": "/fr/data"
     },
+    "39-data-en.html": {
+      "chemin": "/en/data"
+    },
     "40-enterprise.html": {
       "chemin": "/fr/enterprise"
+    },
+    "40-enterprise-en.html": {
+      "chemin": "/en/enterprise"
     },
     "41-accueil-resultat.html": {
       "chemin": "/apercu/accueil-resultat"
     },
     "43-accueil-avant-vendre.html": {
       "chemin": "/apercu/avant-de-vendre"
+    },
+    "43-accueil-avant-vendre-en.html": {
+      "chemin": "/apercu/before-you-sell"
     },
     "09-texte.html": {
       "chemin": "/fr/jurisdictions/european-union/regulations/ppwr"
