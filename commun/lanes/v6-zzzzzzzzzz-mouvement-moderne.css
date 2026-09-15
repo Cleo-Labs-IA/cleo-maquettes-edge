@@ -1,0 +1,57 @@
+/* ═══ MOUVEMENT « DERNIÈRE GÉNÉRATION » ═══ 15/09/2026. Naomie : « on y est presque, rends plus animé, encore plus
+   moderne, selon les derniers blogs Framer de ce qui marche bien ».
+   Lu sur framer.com le 15/09/2026 :
+   - « 12 of our favorite tech and SaaS websites in 2026 » (8/09/2026) : « Use proof, detail, and motion to build
+     confidence without adding noise », « Give visitors one clear next step at every stage » ;
+   - « 11 strategic animation techniques » : page transitions, text animations, mouse-triggered animations,
+     microinteractions, 3D effects ; « Give each animation a purpose », « Ensure accessibility » ;
+   - « 10 parallax scrolling examples » : « Respect the reduced-motion setting with a static fallback », « Test scroll
+     performance on a mid-range phone ».
+   Six gestes, pas plus (leçon du 14/09 : « trop le bordel ») : transitions entre pages, titres révélés mot à mot, lueur
+   et légère inclinaison des cartes sous la souris, boutons aimantés, fil de lecture sous la barre, soulignés qui se
+   tracent. Tout sous prefers-reduced-motion: no-preference ; les effets de curseur, à la souris seulement.
+   Le script (découpe des titres, curseur, fil) vit dans commun/mouvement.js. Satoshi partout. */
+
+/* Le fil de lecture existe toujours, invisible tant que rien ne l'anime. */
+body[data-cleo-ds="v6"] .mm-progres{position:absolute;left:0;right:0;bottom:-1px;height:2px;background:#0008CF;transform-origin:0 50%;scale:0 1;pointer-events:none;z-index:2}
+
+@media (prefers-reduced-motion: no-preference){
+
+  /* 1. Transitions entre pages, sans script (View Transitions entre documents). La barre ne bouge pas. */
+  @view-transition{navigation:auto}
+  body[data-cleo-ds="v6"] .nav{view-transition-name:cleo-nav}
+  ::view-transition-group(cleo-nav){animation:none}
+  ::view-transition-old(root){animation:mmPageSort .26s cubic-bezier(.4,0,1,1) both}
+  ::view-transition-new(root){animation:mmPageEntre .5s cubic-bezier(.22,1,.36,1) both}
+  @keyframes mmPageSort{to{opacity:0;transform:translateY(-10px)}}
+  @keyframes mmPageEntre{from{opacity:0;transform:translateY(18px)}}
+
+  /* 2. Titres révélés mot à mot : du flou au net. Le titre du haut au chargement, les autres au défilement. */
+  body[data-cleo-ds="v6"] .mm-mot{display:inline-block}
+  body[data-cleo-ds="v6"] main h1 .mm-mot{animation:mmMot .8s cubic-bezier(.22,1,.36,1) both;animation-delay:calc(.08s + min(var(--i), 14) * 45ms)}
+  @keyframes mmMot{from{opacity:0;filter:blur(10px);transform:translateY(.32em)}}
+  @supports (animation-timeline: view()){
+    body[data-cleo-ds="v6"] main h2 .mm-mot{animation:mmMot linear both;animation-timeline:view();animation-range:entry calc(min(var(--i), 14) * 3%) cover calc(18% + min(var(--i), 14) * 1%)}
+  }
+
+  /* 3 et 4. Sous la souris : les cartes s'inclinent à peine et une lueur bleue suit le curseur ; les boutons se laissent
+     attirer de quelques pixels. :not(#_) passe devant les survols déjà écrits page par page. */
+  @media (hover: hover) and (pointer: fine){
+    body[data-cleo-ds="v6"] main :is(.av-carte, .dt-usage, .av-garantie, .dt-client-carte, .dt-skill, .dt-offre-carte, .tk-case):not(#_){transform:perspective(900px) rotateX(var(--mm-rx, 0deg)) rotateY(var(--mm-ry, 0deg)) translateY(var(--mm-ty, 0px));transition:transform .55s cubic-bezier(.22,1,.36,1)}
+    body[data-cleo-ds="v6"] main .mm-survol:not(#_){--mm-ty:-3px;transition:transform .18s ease-out}
+    body[data-cleo-ds="v6"] main :is(.av-carte, .dt-usage, .av-garantie, .dt-client-carte, .dt-skill, .dt-offre-carte).mm-survol:not(#_){background-image:radial-gradient(380px circle at var(--mm-x, 50%) var(--mm-y, 50%), rgba(0,8,207,.075), transparent 65%)}
+    body[data-cleo-ds="v6"] :is(.hq-bouton, .tk-bouton, .btn-marque, [class*="-bouton"]):not(#_){transform:translate3d(var(--mm-bx, 0px), var(--mm-by, 0px), 0);transition:transform .35s cubic-bezier(.22,1,.36,1), background-color .15s ease, color .15s ease, border-color .15s ease}
+  }
+
+  /* 5. Le fil de lecture sous la barre, et la barre qui prend une ombre dès qu'on quitte le haut de page. */
+  @supports (animation-timeline: scroll()){
+    body[data-cleo-ds="v6"] .mm-progres{animation:mmProgres linear both;animation-timeline:scroll(root)}
+    body[data-cleo-ds="v6"] .nav{animation:mmNav linear both;animation-timeline:scroll(root);animation-range:0 160px}
+    @keyframes mmProgres{to{scale:1 1}}
+    @keyframes mmNav{to{box-shadow:0 12px 32px -20px rgba(8,9,59,.3)}}
+  }
+
+  /* 6. Les liens « voir… » se soulignent de gauche à droite au survol. */
+  body[data-cleo-ds="v6"] main :is(.av-lien, .dt-lien):not(#_){text-decoration:none;background:linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;transition:background-size .35s cubic-bezier(.22,1,.36,1)}
+  body[data-cleo-ds="v6"] main :is(.av-lien, .dt-lien):not(#_):hover{background-size:100% 1px}
+}

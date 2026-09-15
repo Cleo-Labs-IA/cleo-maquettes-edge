@@ -130,3 +130,93 @@
     fermerLesAutres(null);
   });
 })();
+
+/* ────────────────────────────────────────────────────────────────
+   MOUVEMENT « DERNIÈRE GÉNÉRATION », posé le 15/09/2026 (Naomie : « plus
+   animé, plus moderne, selon les blogs Framer »). Titres découpés mot à
+   mot, cartes et boutons sous la souris, fil de lecture sous la barre.
+   Rien si l'utilisateur demande de réduire les animations. Le rendu vit
+   dans commun/lanes/v6-zzzzzzzzzz-mouvement-moderne.css.
+   ──────────────────────────────────────────────────────────────── */
+(function () {
+  var corps = document.body;
+  if (!corps || corps.getAttribute('data-cleo-ds') !== 'v6') return;
+  var nav = document.querySelector('.nav');
+  if (nav && !nav.querySelector('.mm-progres')) {
+    var fil = document.createElement('span');
+    fil.className = 'mm-progres';
+    fil.setAttribute('aria-hidden', 'true');
+    nav.appendChild(fil);
+  }
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  // Les titres : chaque mot dans un span, les espaces gardées entre eux pour que le texte se coupe comme avant.
+  var titres = document.querySelectorAll('main h1, main h2');
+  for (var t = 0; t < titres.length; t++) {
+    var h = titres[t];
+    if (h.querySelector('.mm-mot, .av-mot, .av-compte') || h.closest('[aria-hidden="true"]')) continue;
+    var rang = 0;
+    (function decoupe(noeud) {
+      var enfants = Array.prototype.slice.call(noeud.childNodes);
+      for (var k = 0; k < enfants.length; k++) {
+        var n = enfants[k];
+        if (n.nodeType === 3) {
+          if (!n.textContent.trim()) continue;
+          var morceaux = n.textContent.split(/(\s+)/), frag = document.createDocumentFragment();
+          for (var m = 0; m < morceaux.length; m++) {
+            if (!morceaux[m]) continue;
+            if (/^\s+$/.test(morceaux[m])) { frag.appendChild(document.createTextNode(morceaux[m])); continue; }
+            var s = document.createElement('span');
+            s.className = 'mm-mot';
+            s.style.setProperty('--i', rang++);
+            s.textContent = morceaux[m];
+            frag.appendChild(s);
+          }
+          noeud.replaceChild(frag, n);
+        } else if (n.nodeType === 1 && !/^(svg|img|br)$/i.test(n.tagName)) decoupe(n);
+      }
+    })(h);
+  }
+
+  // Sous la souris seulement.
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  var CARTES = '.av-carte, .dt-usage, .av-garantie, .dt-client-carte, .dt-skill, .dt-offre-carte, .tk-case';
+  var BOUTONS = '.hq-bouton, .tk-bouton, .btn-marque, [class*="-bouton"]';
+  var carte = null, bouton = null;
+  function lacheCarte() {
+    if (!carte) return;
+    carte.classList.remove('mm-survol');
+    ['--mm-x', '--mm-y', '--mm-rx', '--mm-ry'].forEach(function (p) { carte.style.removeProperty(p); });
+    carte = null;
+  }
+  function lacheBouton() {
+    if (!bouton) return;
+    bouton.style.removeProperty('--mm-bx');
+    bouton.style.removeProperty('--mm-by');
+    bouton = null;
+  }
+  document.addEventListener('pointermove', function (e) {
+    var cible = e.target && e.target.closest ? e.target : null;
+    var c = cible && cible.closest(CARTES);
+    if (c && !c.closest('main')) c = null;
+    if (carte && carte !== c) lacheCarte();
+    if (c) {
+      carte = c;
+      c.classList.add('mm-survol');
+      var r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+      c.style.setProperty('--mm-x', (x * 100).toFixed(1) + '%');
+      c.style.setProperty('--mm-y', (y * 100).toFixed(1) + '%');
+      c.style.setProperty('--mm-rx', ((0.5 - y) * 4).toFixed(2) + 'deg');
+      c.style.setProperty('--mm-ry', ((x - 0.5) * 5).toFixed(2) + 'deg');
+    }
+    var b = cible && cible.closest(BOUTONS);
+    if (bouton && bouton !== b) lacheBouton();
+    if (b) {
+      bouton = b;
+      var rb = b.getBoundingClientRect();
+      b.style.setProperty('--mm-bx', (((e.clientX - rb.left) / rb.width - 0.5) * 8).toFixed(1) + 'px');
+      b.style.setProperty('--mm-by', (((e.clientY - rb.top) / rb.height - 0.5) * 6).toFixed(1) + 'px');
+    }
+  }, { passive: true });
+  document.addEventListener('pointerout', function (e) { if (!e.relatedTarget) { lacheCarte(); lacheBouton(); } });
+})();
