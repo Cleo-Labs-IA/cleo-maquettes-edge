@@ -1,223 +1,276 @@
 <!--NAV-->
-
-<!-- ═══ HERO ═══ 15/09/2026, reprise dans le design de la page 43 (agent « service »). « Service. » gardé.
-     « Nos experts rédigent, relisent et signent » devient « Un expert revoit chaque dossier », formulation déjà
-     validée sur la page 43 : la déclaration UE de conformité est signée par le fabricant ou son mandataire, pas
-     par Cleo. Chapeau réduit à sa première phrase (la seconde disait qu'un expert signe le document remis).
-     Les trois pastilles reprennent les trois demandes du chapeau ; l'image est tramée (composants Tenkara). -->
-<section class="section sv-hero">
-  <div class="conteneur">
-    <h1 class="t-hero sv-titre">Service. <span class="attenue">Un expert revoit chaque dossier.</span></h1>
-    <p class="sv-lead">Une déclaration de conformité, une question sur une entrée REACH, un marché à ouvrir.</p>
-    <a class="sv-bouton" href="#catalogue">Voir le catalogue <svg viewBox="0 0 26 14" width="26" height="14" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    <figure class="sv-media">
-      <div class="tk-trame" aria-hidden="true"><img src="img:semelles" alt=""></div>
-      <ul class="sv-media-puces" aria-hidden="true">
-        <li><i><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i>Déclaration de conformité</li>
-        <li><i><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i>Entrée REACH</li>
-        <li><i><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i>Marché à ouvrir</li>
-      </ul>
-    </figure>
+<!-- ═══ SERVICE, CAS PAR CAS ═══ 15/09/2026, Naomie : « inspire-toi de moritzlegal, un truc pratico-pratique par use case,
+     là c'est un peu le bordel ». Généré par scratchpad/service-cas.mjs. Composition relevée sur moritzlegal.com, DA Cleo.
+     Textes lus dans la page Service d'avant et dans les fiches 38, 44 à 50 ; titres pratiques des cas et étapes écrits.
+     La déclaration UE de conformité est signée par le fabricant ou son mandataire, l'expert Cleo relit. -->
+<section class="sc-s sc-hero">
+  <div class="sc-conteneur">
+    <span class="sc-surtitre">Service</span>
+    <h1 class="sc-h1">Le travail de conformité, cas par cas. <span class="sc-gris">Un expert revoit chaque dossier.</span></h1>
+    <p class="sc-hero-lead">Une déclaration de conformité, une question sur une entrée REACH, un marché à ouvrir. Choisissez le cas : l'agent prépare, un expert relit.</p>
+    <div class="sc-actions"><a class="sc-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Décrire mon besoin <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sc-bouton sc-bouton-clair" href="#catalogue">Voir les cas</a></div>
+    <ul class="sc-chiffres">
+      <li><b class="sc-compte sc-c-106"><span class="sc-compte-texte">106</span></b><span>pays</span></li>
+      <li><b class="sc-compte sc-c-25000"><span class="sc-compte-texte">25 000</span></b><span>réglementations</span></li>
+      <li><b class="sc-compte sc-c-3700"><span class="sc-compte-texte">3 700</span></b><span>sources officielles</span></li>
+    </ul>
   </div>
 </section>
 
-<!-- ═══ LE CATALOGUE ═══ les deux familles et leurs sous-catégories DONNÉES PAR NAOMIE (captures du cabinet
-     Product Law Firm), dans leur ordre. Deux grandes cartes à image ; les descriptions et les chapeaux des familles
-     sont retirés, les états (offerte, prix à fixer, périmètre à valider) gardés. « Contrats » : périmètre du conseil
-     juridique à vérifier avant de le vendre. « Jurisprudentielle » : couverture à vérifier. -->
-<section class="section sv-bloc" id="catalogue">
-  <div class="conteneur">
-    <h2 class="sv-titre2">Le catalogue.</h2>
-    <div class="sv-familles">
-      <article class="sv-famille" id="conception">
-        <div class="sv-famille-image"><img src="img:masse-vernis" alt=""><span class="tk-etiquette sv-famille-num">01</span></div>
-        <div class="sv-famille-corps">
-          <h3>Conception et développement</h3>
-          <ul class="sv-prestations">
-            <li><a href="44-service-veille.html">Veille réglementaire et jurisprudentielle</a><em class="sv-etat sv-offerte">Offerte</em></li>
-            <li><a href="38-service.html">Conformité produit</a><em class="sv-etat">Prix à fixer</em></li>
-            <li><a href="45-service-etiquetage.html">Étiquetage et publicité</a><em class="sv-etat">Prix à fixer</em></li>
-            <li><a href="46-service-emballage.html">Emballage</a><em class="sv-etat">Prix à fixer</em></li>
-            <li><a href="48-service-contrats.html">Contrats</a><em class="sv-etat sv-a-valider">Périmètre à valider</em></li>
-            <li><a href="47-service-specifications.html">Spécifications</a><em class="sv-etat">Prix à fixer</em></li>
+<!-- ═══ LES CAS ═══ la liste à gauche, le détail du cas choisi à droite (au survol ou au clic ; au téléphone, en
+     accordéon). Chaque cas : sa photo et un exemple de demande, la phrase de sa fiche, quatre éléments du livrable,
+     son état au catalogue, le lien vers sa fiche. -->
+<section class="sc-s sc-cas-section" id="catalogue">
+  <div class="sc-conteneur">
+    <h2 class="sc-titre">Les cas que nous traitons. <span class="sc-gris">Un cas, une fiche, un prix affiché avant la commande.</span></h2>
+    <div class="sc-cas" style="--rangs:10" role="radiogroup" aria-label="Les cas que nous traitons">
+      <p class="sc-famille" id="conception" style="--r:1">01 · Conception et développement</p>
+      <input type="radio" name="sc-cas" id="sc-cas-1" checked>
+      <label class="sc-cas-label" for="sc-cas-1" style="--r:2"><span>01</span>Mettre à jour une déclaration de conformité</label>
+      <div class="sc-panneau">
+        <div class="sc-panneau-image"><img src="img:masse-ecouteurs" alt=""><p class="sc-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> Mets à jour la déclaration de conformité de mes écouteurs sur les textes en vigueur.</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
+        <div class="sc-panneau-corps">
+          <p class="sc-panneau-famille">Conception et développement · Conformité produit</p>
+          <h3>Mettre à jour une déclaration de conformité</h3>
+          <p class="sc-lead">L'agent la reprend sur les textes en vigueur, un expert conformité la relit et la valide.</p>
+          <ul class="sc-recevez">
+            <li>Relecture de la déclaration actuelle</li>
+            <li>Textes applicables</li>
+            <li>Déclaration mise à jour</li>
+            <li>Références citées</li>
           </ul>
+          <div class="sc-panneau-pied"><em class="sc-etat">Prix à fixer</em><a class="sc-bouton" href="38-service.html">Voir la fiche <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sc-lien" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Demander ce cas</a></div>
         </div>
-      </article>
-      <article class="sv-famille" id="lancement">
-        <div class="sv-famille-image"><img src="img:masse-skate" alt=""><span class="tk-etiquette sv-famille-num">02</span></div>
-        <div class="sv-famille-corps">
-          <h3>Lancement produit</h3>
-          <ul class="sv-prestations">
-            <li><a href="49-service-formalites.html">Formalités administratives</a><em class="sv-etat">Prix à fixer</em></li>
-            <li><a href="48-service-contrats.html">Contrats</a><em class="sv-etat sv-a-valider">Périmètre à valider</em></li>
-            <li><a href="50-service-recyclage.html">Recyclage des déchets</a><em class="sv-etat">Prix à fixer</em></li>
+      </div>
+      <input type="radio" name="sc-cas" id="sc-cas-2">
+      <label class="sc-cas-label" for="sc-cas-2" style="--r:3"><span>02</span>Relire une étiquette avant impression</label>
+      <div class="sc-panneau">
+        <div class="sc-panneau-image"><img src="img:masse-shampooing" alt=""><p class="sc-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> Relève les mentions obligatoires de l'étiquette de mon shampooing pour la France, l'Allemagne et l'Italie.</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
+        <div class="sc-panneau-corps">
+          <p class="sc-panneau-famille">Conception et développement</p>
+          <h3>Relire une étiquette avant impression</h3>
+          <p class="sc-lead">Votre étiquette et vos allégations relues, avec les corrections à faire.</p>
+          <ul class="sc-recevez">
+            <li>Mentions obligatoires</li>
+            <li>Allégations relues</li>
+            <li>Corrections listées</li>
+            <li>Langues par marché</li>
           </ul>
+          <div class="sc-panneau-pied"><em class="sc-etat">Prix à fixer</em><a class="sc-bouton" href="45-service-etiquetage.html">Voir la fiche <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sc-lien" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Demander ce cas</a></div>
         </div>
-      </article>
+      </div>
+      <input type="radio" name="sc-cas" id="sc-cas-3">
+      <label class="sc-cas-label" for="sc-cas-3" style="--r:4"><span>03</span>Vérifier un emballage</label>
+      <div class="sc-panneau">
+        <div class="sc-panneau-image"><img src="img:masse-canette" alt=""><p class="sc-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> Vérifie les logos de tri de ma canette pour la France.</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
+        <div class="sc-panneau-corps">
+          <p class="sc-panneau-famille">Conception et développement</p>
+          <h3>Vérifier un emballage</h3>
+          <p class="sc-lead">Votre emballage vérifié : matériaux, logos de tri, mentions.</p>
+          <ul class="sc-recevez">
+            <li>Matériaux</li>
+            <li>Logos de tri</li>
+            <li>Mentions</li>
+            <li>Textes applicables</li>
+          </ul>
+          <div class="sc-panneau-pied"><em class="sc-etat">Prix à fixer</em><a class="sc-bouton" href="46-service-emballage.html">Voir la fiche <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sc-lien" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Demander ce cas</a></div>
+        </div>
+      </div>
+      <input type="radio" name="sc-cas" id="sc-cas-4">
+      <label class="sc-cas-label" for="sc-cas-4" style="--r:5"><span>04</span>Écrire le cahier des charges d'un produit</label>
+      <div class="sc-panneau">
+        <div class="sc-panneau-image"><img src="img:masse-biberon" alt=""><p class="sc-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> Traduis les exigences de mon biberon en cahier des charges pour le bureau d'études.</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
+        <div class="sc-panneau-corps">
+          <p class="sc-panneau-famille">Conception et développement</p>
+          <h3>Écrire le cahier des charges d'un produit</h3>
+          <p class="sc-lead">Les exigences réglementaires traduites en cahier des charges pour votre bureau d'études.</p>
+          <ul class="sc-recevez">
+            <li>Exigences par marché</li>
+            <li>Seuils chiffrés</li>
+            <li>Essais à prévoir</li>
+            <li>Normes citées</li>
+          </ul>
+          <div class="sc-panneau-pied"><em class="sc-etat">Prix à fixer</em><a class="sc-bouton" href="47-service-specifications.html">Voir la fiche <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sc-lien" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Demander ce cas</a></div>
+        </div>
+      </div>
+      <input type="radio" name="sc-cas" id="sc-cas-5">
+      <label class="sc-cas-label" for="sc-cas-5" style="--r:6"><span>05</span>Ajouter les clauses de conformité à un contrat</label>
+      <div class="sc-panneau">
+        <div class="sc-panneau-image"><img src="img:masse-chargeur" alt=""><p class="sc-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> Liste les documents à exiger de mon fournisseur de chargeurs.</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
+        <div class="sc-panneau-corps">
+          <p class="sc-panneau-famille">Conception et développement · Lancement produit</p>
+          <h3>Ajouter les clauses de conformité à un contrat</h3>
+          <p class="sc-lead">Les clauses de conformité de vos contrats fournisseurs et de distribution.</p>
+          <ul class="sc-recevez">
+            <li>Obligations par opérateur</li>
+            <li>Documents à exiger</li>
+            <li>Clauses proposées</li>
+            <li>Références citées</li>
+          </ul>
+          <div class="sc-panneau-pied"><em class="sc-etat">Périmètre à valider</em><a class="sc-bouton" href="48-service-contrats.html">Voir la fiche <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sc-lien" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Demander ce cas</a></div>
+        </div>
+      </div>
+      <input type="radio" name="sc-cas" id="sc-cas-6">
+      <label class="sc-cas-label" for="sc-cas-6" style="--r:7"><span>06</span>Suivre les textes qui touchent vos produits</label>
+      <div class="sc-panneau">
+        <div class="sc-panneau-image"><img src="img:masse-telephone" alt=""><p class="sc-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> Quels textes publiés cette semaine touchent mes téléphones vendus en France et en Allemagne ?</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
+        <div class="sc-panneau-corps">
+          <p class="sc-panneau-famille">Conception et développement</p>
+          <h3>Suivre les textes qui touchent vos produits</h3>
+          <p class="sc-lead">Chaque semaine, les nouvelles règles qui touchent vos produits.</p>
+          <ul class="sc-recevez">
+            <li>Suivi par produit</li>
+            <li>Tri de ce qui vous concerne</li>
+            <li>Alerte chaque semaine</li>
+            <li>Marché par marché</li>
+          </ul>
+          <div class="sc-panneau-pied"><em class="sc-etat sc-offerte">Offerte</em><a class="sc-bouton" href="44-service-veille.html">Voir la fiche <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sc-lien" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Demander ce cas</a></div>
+        </div>
+      </div>
+      <p class="sc-famille" id="lancement" style="--r:8">02 · Lancement produit</p>
+      <input type="radio" name="sc-cas" id="sc-cas-7">
+      <label class="sc-cas-label" for="sc-cas-7" style="--r:9"><span>07</span>Préparer les démarches avant la vente</label>
+      <div class="sc-panneau">
+        <div class="sc-panneau-image"><img src="img:masse-rouge-levres" alt=""><p class="sc-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> Quelles démarches faire avant de vendre mon rouge à lèvres en Europe ?</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
+        <div class="sc-panneau-corps">
+          <p class="sc-panneau-famille">Lancement produit</p>
+          <h3>Préparer les démarches avant la vente</h3>
+          <p class="sc-lead">Vos enregistrements et autorisations de mise sur le marché, préparés pour les autorités.</p>
+          <ul class="sc-recevez">
+            <li>Démarches par marché</li>
+            <li>Dossiers préparés</li>
+            <li>Pièces à réunir</li>
+            <li>Références citées</li>
+          </ul>
+          <div class="sc-panneau-pied"><em class="sc-etat">Prix à fixer</em><a class="sc-bouton" href="49-service-formalites.html">Voir la fiche <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sc-lien" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Demander ce cas</a></div>
+        </div>
+      </div>
+      <input type="radio" name="sc-cas" id="sc-cas-8">
+      <label class="sc-cas-label" for="sc-cas-8" style="--r:10"><span>08</span>S'inscrire aux filières de recyclage</label>
+      <div class="sc-panneau">
+        <div class="sc-panneau-image"><img src="img:masse-pile" alt=""><p class="sc-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> À quelles filières inscrire mes piles en France ?</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
+        <div class="sc-panneau-corps">
+          <p class="sc-panneau-famille">Lancement produit</p>
+          <h3>S'inscrire aux filières de recyclage</h3>
+          <p class="sc-lead">Votre inscription aux filières de recyclage et vos déclarations.</p>
+          <ul class="sc-recevez">
+            <li>Filières par produit</li>
+            <li>Inscriptions</li>
+            <li>Déclarations annuelles</li>
+            <li>Pays par pays</li>
+          </ul>
+          <div class="sc-panneau-pied"><em class="sc-etat">Prix à fixer</em><a class="sc-bouton" href="50-service-recyclage.html">Voir la fiche <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sc-lien" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Demander ce cas</a></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ DU PREMIER JET À LA SIGNATURE ═══ la frise avance au défilement : la demande arrive, l'agent rédige (le
-     document se remplit), l'expert relit (le document reçoit sa coche). « Un expert signe » devient « Un expert
-     relit » : le responsable habilité du client signe la déclaration UE. Le partage 80 / 20 part dans la grille
-     à chiffres du témoignage. -->
-<section class="section sv-bloc sv-frise" id="parcours">
-  <div class="conteneur">
-    <h2 class="sv-titre2">Du premier jet à la signature.</h2>
-    <div class="sv-frise-scene">
-      <div class="sv-frise-collant">
-        <figure class="sv-doc-scene">
-          <img src="img:flacons" alt="">
-          <div class="sv-doc" aria-hidden="true">
-            <div class="sv-doc-tete"><img src="img:cleo-logo" alt=""><span class="sv-doc-pastille"></span></div>
-            <span class="sv-doc-ligne"></span><span class="sv-doc-ligne"></span><span class="sv-doc-ligne"></span>
-            <span class="sv-doc-ligne"></span><span class="sv-doc-ligne"></span><span class="sv-doc-ligne"></span>
-            <span class="sv-doc-sceau"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+<!-- ═══ COMMENT ÇA MARCHE ═══ titre tiré des chiffres de l'ancienne page (80 % / 20 %) ; quatre étapes collantes, la
+     carte d'interface posée sur la photo change à chaque étape. -->
+<section class="sc-s sc-comment-section" id="comment">
+  <div class="sc-conteneur">
+    <h2 class="sc-titre sc-centre">80 % du travail par l'agent. <span class="sc-gris">20 % relus par un expert conformité.</span></h2>
+    <div class="sc-comment-scene">
+      <div class="sc-comment-collant">
+        <figure class="sc-comment-image">
+          <img src="img:personne-equipe" alt="">
+          <div class="sc-carte sc-carte-1" aria-hidden="true">
+            <div class="sc-invite"><p>Décrivez votre produit, ou déposez votre déclaration…</p><div class="sc-puces"><span>+</span><span>Fichiers</span><span>Marchés</span><span>Parler à un expert</span></div></div>
+          </div>
+          <div class="sc-carte sc-carte-2" aria-hidden="true">
+            <div class="sc-devis"><div class="sc-devis-tete"><b>Mettre à jour une déclaration de conformité</b><em>Prix à fixer</em></div><ul><li>Un prix par prestation</li><li>Affiché avant la commande</li><li>Un délai annoncé</li></ul></div>
+          </div>
+          <div class="sc-carte sc-carte-3" aria-hidden="true">
+            <span class="sc-flottant sc-f1">Écouteurs sans fil</span><span class="sc-flottant sc-f2">Directive 2014/53/UE</span><span class="sc-flottant sc-f3">Directive 2011/65/UE</span>
+            <div class="sc-doc"><div class="sc-doc-tete"><b>Déclaration UE de conformité</b><em>Premier jet</em></div><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="sc-carte sc-carte-4" aria-hidden="true">
+            <div class="sc-relecteur"><span class="sc-avatar"></span><b>Expert conformité</b><em>relit</em></div>
+            <div class="sc-doc sc-doc-relu"><div class="sc-doc-tete"><b>Déclaration UE de conformité</b><em>Relue</em></div><i class="sc-m"></i><i></i><i class="sc-m"></i><i></i><i></i></div>
+            <div class="sc-sceaux"><span class="sc-ok">Relue par un expert conformité</span><span>À signer par le fabricant</span></div>
           </div>
         </figure>
-        <ol class="sv-etapes">
-          <li><span>01</span>Vous adressez la demande</li>
-          <li><span>02</span>L'agent rédige</li>
-          <li><span>03</span>Un expert relit</li>
+        <ol class="sc-etapes">
+          <li class="sc-etape"><b><span>01</span>Vous décrivez le besoin</b><p>Le produit, les marchés visés et les documents dont vous disposez. Votre catalogue, même partiel, suffit à démarrer.</p></li>
+          <li class="sc-etape"><b><span>02</span>Un prix affiché avant la commande</b><p>Un prix par prestation. Un délai annoncé. La veille offerte.</p></li>
+          <li class="sc-etape"><b><span>03</span>L'agent prépare</b><p>L'agent relève les textes en vigueur et rédige le premier jet, avec l'article qui fonde chaque exigence.</p></li>
+          <li class="sc-etape"><b><span>04</span>Un expert relit</b><p>Un expert conformité relit et valide le livrable avant la remise. La signature reste au fabricant ou à son mandataire.</p></li>
         </ol>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ COMMENT NOUS FACTURONS ═══ les quatre principes décidés en réunion le 14/09/2026, rendus en ticket posé
-     sur une grande image : une ligne par principe, écrite et cochée au défilement. Descriptions retirées. -->
-<section class="section sv-bloc sv-facture" id="facturation">
-  <div class="conteneur">
-    <div class="sv-facture-grille">
-      <h2 class="sv-titre2">Comment nous facturons</h2>
-      <div class="sv-ticket-zone">
-        <img src="img:vis" alt="">
-        <div class="sv-ticket">
-          <div class="sv-ticket-tete"><b>Conformité produit</b><em class="sv-etat">Prix à fixer</em></div>
-          <ul>
-            <li><i><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Un prix par prestation</span></li>
-            <li><i><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Affiché avant la commande</span></li>
-            <li><i><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Un délai annoncé</span></li>
-            <li><i><svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>La veille offerte</span></li>
-          </ul>
-        </div>
+<!-- ═══ TARIFS ═══ la table des cas et leur état au catalogue (aucun montant : les prix ne sont pas fixés) ; la carte
+     sombre reprend l'équipe dédiée, vos trames et les principes de facturation décidés le 14/09/2026. -->
+<section class="sc-s" id="tarifs">
+  <div class="sc-conteneur">
+    <h2 class="sc-titre sc-centre">Un prix par prestation. <span class="sc-gris">Affiché avant la commande.</span></h2>
+    <div class="sc-tarifs">
+      <div class="sc-tarifs-table">
+        <p class="sc-etiquette">Par cas</p>
+        <ul>
+          <li><a href="38-service.html">Mettre à jour une déclaration de conformité</a><em class="sc-etat">Prix à fixer</em></li>
+          <li><a href="45-service-etiquetage.html">Relire une étiquette avant impression</a><em class="sc-etat">Prix à fixer</em></li>
+          <li><a href="46-service-emballage.html">Vérifier un emballage</a><em class="sc-etat">Prix à fixer</em></li>
+          <li><a href="47-service-specifications.html">Écrire le cahier des charges d'un produit</a><em class="sc-etat">Prix à fixer</em></li>
+          <li><a href="48-service-contrats.html">Ajouter les clauses de conformité à un contrat</a><em class="sc-etat">Périmètre à valider</em></li>
+          <li><a href="44-service-veille.html">Suivre les textes qui touchent vos produits</a><em class="sc-etat sc-offerte">Offerte</em></li>
+          <li><a href="49-service-formalites.html">Préparer les démarches avant la vente</a><em class="sc-etat">Prix à fixer</em></li>
+          <li><a href="50-service-recyclage.html">S'inscrire aux filières de recyclage</a><em class="sc-etat">Prix à fixer</em></li>
+        </ul>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ L'ÉQUIPE ═══ portraits, noms, fonctions et liens repris de la page. Le surtitre « L'équipe qui signe » est
-     retiré (l'expert relit, le client signe) ; une seule des deux lignes cochées est gardée. -->
-<section class="section sv-bloc sv-equipe" id="equipe">
-  <div class="conteneur">
-    <h2 class="sv-titre2">Une équipe juridique dédiée, qui connaît votre profil.</h2>
-    <div class="sv-equipe-grille">
-      <figure class="sv-portrait">
-        <img src="img:darcial-grand" alt="Darcial Mondjo">
-        <figcaption><b>Darcial Mondjo</b>Global Head of Product &amp; Sanitary Compliance<a href="https://www.linkedin.com/in/darcial-mondjo/">LinkedIn</a></figcaption>
-      </figure>
-      <figure class="sv-portrait">
-        <img src="img:thezi-grand" alt="Thezi Mabuza">
-        <figcaption><b>Thezi Mabuza</b>Stalwart in Consumer Protection &amp; Product Safety<a href="https://www.linkedin.com/in/thezi-mabuza/">LinkedIn</a></figcaption>
-      </figure>
-      <div class="sv-equipe-texte">
+      <div class="sc-tarifs-volume">
+        <p class="sc-etiquette">Enterprise · volume</p>
+        <p class="sc-grand">Une équipe juridique dédiée, qui connaît votre profil.</p>
         <p>Vos trames de déclaration et de dossier technique, reprises à votre format.</p>
-        <a class="sv-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <svg viewBox="0 0 26 14" width="26" height="14" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <ul>
+          <li>Un prix par prestation</li>
+          <li>Affiché avant la commande</li>
+          <li>Un délai annoncé</li>
+          <li>La veille offerte</li>
+          <li>Un interlocuteur dédié</li>
+        </ul>
+        <a class="sc-bouton sc-bouton-blanc" href="40-enterprise.html">Voir Enterprise <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </div>
+    <div class="sc-autre"><p>Vous ne trouvez pas la prestation ? Parlez-en à l'équipe, on regarde votre catalogue.</p><a class="sc-bouton sc-bouton-clair" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">En parler à l'équipe <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
   </div>
 </section>
 
-<!-- ═══ OFFERT AVEC CHAQUE PRESTATION ═══ réunion du 14/09 : la veille offerte est décidée ; le chat offert ou payant
-     ne l'est pas, d'où la pastille. Trois grandes images, un titre et une ligne chacune (une des deux lignes de la
-     page de départ). La note « Ce que la relecture décide » est retirée : elle disait que la signature de l'expert
-     engage. -->
-<section class="section sv-bloc" id="offert">
-  <div class="conteneur">
-    <h2 class="sv-titre2">Offert avec chaque prestation</h2>
-    <div class="sv-offerts">
-      <article class="sv-offert">
-        <div class="sv-offert-image"><img src="img:masse-canette" alt=""></div>
-        <h3>La veille, chaque semaine</h3>
-        <p>Une newsletter personnalisée sur vos références.</p>
-      </article>
-      <article class="sv-offert">
-        <div class="sv-offert-image">
-          <img src="img:masse-telephone" alt="">
-          <div class="sv-bulle" aria-hidden="true"><span class="sv-bulle-points"><span></span><span></span><span></span></span><span class="sv-bulle-lignes"><span></span><span></span></span><span class="sv-bulle-source"></span></div>
-        </div>
-        <h3>Le chat Cleo</h3>
-        <p>La réponse cite l'article, jamais un résumé.</p>
-        <span class="sv-a-trancher">Offert ou payant <b>à trancher</b></span>
-      </article>
-      <article class="sv-offert">
-        <div class="sv-offert-image"><img src="img:masse-gant" alt=""></div>
-        <h3>Un interlocuteur dédié</h3>
-        <p>Votre catalogue, même partiel, suffit à démarrer.</p>
-      </article>
+<!-- ═══ L'ÉQUIPE ET LE TÉMOIGNAGE ═══ portraits, noms, fonctions et liens de l'ancienne page ; la citation Decathlon telle
+     qu'elle y figurait, sur une photo. -->
+<section class="sc-s" id="experts">
+  <div class="sc-conteneur">
+    <h2 class="sc-titre">Une équipe juridique dédiée, qui connaît votre profil.</h2>
+    <div class="sc-experts">
+      <figure class="sc-expert"><img src="img:darcial-grand" alt="Darcial Mondjo"><figcaption><b>Darcial Mondjo</b><span>Global Head of Product &amp; Sanitary Compliance</span><a class="sc-lien" href="https://www.linkedin.com/in/darcial-mondjo/">LinkedIn</a></figcaption></figure>
+      <figure class="sc-expert"><img src="img:thezi-grand" alt="Thezi Mabuza"><figcaption><b>Thezi Mabuza</b><span>Stalwart in Consumer Protection &amp; Product Safety</span><a class="sc-lien" href="https://www.linkedin.com/in/thezi-mabuza/">LinkedIn</a></figcaption></figure>
+      <div class="sc-experts-texte"><p>Vos trames de déclaration et de dossier technique, reprises à votre format.</p><a class="sc-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    </div>
+    <div class="sc-temoin">
+      <img class="sc-temoin-fond" src="img:humain-bureau" alt="">
+      <blockquote class="sc-citation">« Chez Decathlon, notre défi est de capter des informations très précises au milieu d’un volume massif de réglementations produits à l’international […] »</blockquote>
+      <div class="sc-temoin-carte"><img src="img:philippine" alt=""><div><b>Philippine Tamic</b><span>Decathlon</span></div><a class="sc-lien sc-lien-blanc" href="06-cas-client.html">Voir le cas client</a></div>
     </div>
   </div>
 </section>
 
-<!-- ═══ TÉMOIGNAGE ET CHIFFRES ═══ grille à la Tenkara : la photo tramée porte l'extrait VERBATIM du début de la
-     citation (source depot-src/DecathlonQuote.tsx, coupé avant « avec un enjeu ») ; les deux chiffres sont ceux de
-     la page de départ (80 % du travail par l'agent, 20 % par un expert, « signés » devenu « relus »). Les petits
-     tableaux décoratifs ne portent que des états du catalogue. -->
-<section class="section sv-bloc tk-section" id="temoignage">
-  <div class="conteneur">
-    <div class="tk-bento">
-      <figure class="tk-case tk-photo">
-        <div class="tk-trame" aria-hidden="true"><img src="img:masse-lunettes" alt=""></div>
-        <blockquote class="tk-citation">« Chez Decathlon, notre défi est de capter des informations très précises au milieu d’un volume massif de réglementations produits à l’international […] »</blockquote>
-        <figcaption class="tk-signature"><img src="img:philippine" alt=""><span>Philippine Tamic<br>Decathlon</span></figcaption>
-        <a class="tk-bouton tk-bouton-coin" href="06-cas-client.html">Voir le cas client <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </figure>
-      <div class="tk-case tk-creme">
-        <svg class="tk-fleche" viewBox="0 0 160 70" aria-hidden="true"><path d="M10 60C52 62 104 50 138 16" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="1 6" stroke-linecap="round"/><path d="M124 13h16l-5 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <b class="tk-chiffre">80 %</b>
-        <span class="tk-legende">du travail par l'agent</span>
-      </div>
-      <div class="tk-case tk-bleu">
-        <div class="tk-tableaux" aria-hidden="true">
-          <div class="tk-tableau"><b>Conformité produit</b><span><i>prix</i><i>à fixer</i></span><span><i>délai</i><i>annoncé</i></span></div>
-          <div class="tk-tableau"><b>Veille</b><span><i>chaque</i><i>semaine</i></span><span><i>prix</i><i>offerte</i></span></div>
-        </div>
-        <b class="tk-chiffre">20 %</b>
-        <span class="tk-legende">relus par un expert conformité</span>
-      </div>
+<!-- ═══ QUESTIONS ═══ la signature (réponse de la fiche 38), le prix et l'offert (principes de l'ancienne page), le cas
+     absent (phrase de l'ancien menu). -->
+<section class="sc-s" id="questions">
+  <div class="sc-conteneur">
+    <h2 class="sc-titre sc-centre">Questions fréquentes.</h2>
+    <div class="sc-faq">
+      <details open><summary>Qui signe la déclaration ?</summary><p>Le fabricant, ou son mandataire. L'expert Cleo relit et valide la déclaration mise à jour, qui vous est remise prête à signer.</p></details>
+      <details><summary>Combien coûte une prestation ?</summary><p>Un prix par prestation, affiché avant la commande. La veille est offerte.</p></details>
+      <details><summary>Mon cas n'est pas dans la liste ?</summary><p>Parlez-en à l'équipe, on regarde votre catalogue.</p></details>
+      <details><summary>Qu'est-ce qui est offert ?</summary><p>La veille, chaque semaine : une newsletter personnalisée sur vos références.</p></details>
     </div>
   </div>
 </section>
 
-<!-- ═══ LES AUTRES ENTRÉES ═══ Data et Enterprise, textes repris de la page, en grandes cartes à image tramée avec
-     le petit bouton carré. -->
-<section class="section sv-bloc" id="autres">
-  <div class="conteneur">
-    <h2 class="sv-titre2">Les autres façons de travailler avec Cleo</h2>
-    <div class="sv-entrees">
-      <a class="sv-entree" href="39-data.html">
-        <div class="sv-entree-image"><div class="tk-trame" aria-hidden="true"><img src="img:cables" alt=""></div><span class="tk-bouton tk-bouton-coin">Découvrir l'offre Data <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
-        <div class="sv-entree-corps">
-          <h3>Data</h3>
-          <p>La donnée réglementaire produit, prête à brancher dans vos outils par API ou par serveur MCP.</p>
-        </div>
-      </a>
-      <a class="sv-entree" href="40-enterprise.html">
-        <div class="sv-entree-image"><div class="tk-trame" aria-hidden="true"><img src="img:fenetres" alt=""></div><span class="tk-bouton tk-bouton-coin">Contacter l'équipe <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></div>
-        <div class="sv-entree-corps">
-          <h3>Enterprise</h3>
-          <p>Notre expertise tech et nos experts conformité, à l'échelle de votre entreprise.</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ APPEL FINAL ═══ bandeau à la Tenkara : la photo tramée des pneus (le seul bleu), la tagline en étiquette,
-     la phrase de la page au centre, le petit bouton carré. La FAQ est retirée : sa réponse « Qui signe le document
-     remis ? » disait qu'un expert Cleo signe, et les deux autres répétaient le catalogue. -->
 <section class="section sv-bloc sv-final tk-bandeau" id="contact">
   <div class="conteneur">
     <div class="tk-trame" aria-hidden="true"><img src="img:pneus" alt=""></div>
@@ -226,5 +279,4 @@
     <a class="tk-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </section>
-
 <!--PIED-->

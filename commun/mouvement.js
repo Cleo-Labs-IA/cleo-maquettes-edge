@@ -220,3 +220,18 @@
   }, { passive: true });
   document.addEventListener('pointerout', function (e) { if (!e.relatedTarget) { lacheCarte(); lacheBouton(); } });
 })();
+
+/* ────────────────────────────────────────────────────────────────
+   PAGE SERVICE, LA LISTE DES CAS (15/09/2026, à la Moritz) : à la
+   souris, survoler un cas le choisit, comme un clic. Au clavier et au
+   toucher, le bouton radio suffit. Rendu : v6-zzzzzzzzzz-service-cas.css.
+   ──────────────────────────────────────────────────────────────── */
+(function () {
+  if (!window.matchMedia || !window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  document.addEventListener('pointerover', function (e) {
+    var l = e.target && e.target.closest ? e.target.closest('.sc-cas-label') : null;
+    if (!l) return;
+    var r = document.getElementById(l.htmlFor);
+    if (r && !r.checked) r.checked = true;
+  }, { passive: true });
+})();
