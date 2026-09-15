@@ -839,9 +839,12 @@ for (const p of PAGES) {
   /* LE SÉLECTEUR DE LANGUE. Il n'apparaît QUE là où un jumeau existe :
      seule l'accueil en a un dans cette maquette, et un sélecteur qui mène
      à une page absente est pire que pas de sélecteur. */
+  /* 15/09/2026, « la nav bar n'est pas pareille partout » : le sélecteur n'apparaissait que sur les pages qui ont un
+     jumeau. Il est maintenant partout ; sans jumeau, il mène à l'accueil de l'autre langue (jamais à une page absente). */
   const jum = jumeauLangue(p.sortie || p.fichier)
-  corps = corps.replace('<!--LANGUE-->', jum
-    ? `<div class="nav-langue"><span class="actif">${p.en ? 'EN' : 'FR'}</span><a href="${jum}">${p.en ? 'FR' : 'EN'}</a></div>`
+  const jumOuAccueil = jum || (p.en ? '01-accueil.html' : '01-accueil-en.html')
+  corps = corps.replace('<!--LANGUE-->', jumOuAccueil
+    ? `<div class="nav-langue"><span class="actif">${p.en ? 'EN' : 'FR'}</span><a href="${jumOuAccueil}">${p.en ? 'FR' : 'EN'}</a></div>`
     : '')
   corps = corps.replace('<!--CTA-->', p.en ? CTA_EN : CTA)
   corps = corps.replace('<!--ECRAN-ARBRE-->', ecranArbre).replace('<!--ECRAN-CHAT-->', ecranChat)

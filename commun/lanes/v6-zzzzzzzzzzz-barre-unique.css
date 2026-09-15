@@ -1,0 +1,8 @@
+/* ═══ UNE SEULE BARRE, PARTOUT ═══ 15/09/2026. Naomie : « la nav bar n'est pas pareille partout ».
+   Audit des 56 pages au navigateur (1440 et 390 px) le même jour : deux largeurs de barre (1404 px à 18 px du bord sur
+   les pages restées au gabarit V6, 1440 px sur les pages reprises, où chaque feuille de page posait sa propre règle),
+   donc un logo et des liens décalés de 18 px d'une page à l'autre ; le filet bas absent sur la page 41 ; le sélecteur
+   de langue présent sur 26 pages seulement (réglé dans construire.mjs). Cette feuille, chargée en dernier, pose la
+   barre une fois pour toutes ; :not(#_) passe devant les règles de page. */
+body[data-cleo-ds="v6"] .nav:not(#_){background:#FFFFFF !important;border-bottom:1px solid rgba(26,26,26,.08) !important}
+body[data-cleo-ds="v6"] .nav .conteneur:not(#_){width:auto !important;max-width:none !important;margin-left:0 !important;margin-right:0 !important}
