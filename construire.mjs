@@ -267,6 +267,16 @@ fs.mkdirSync(DOSSIER_IMAGES, { recursive: true })
    propres ont une profondeur variable (/fr, /fr/platform/research) : un chemin
    relatif se casserait. Les outils du chantier servent donc sortie/ en HTTP,
    voir commun/servir.mjs, et n'ouvrent plus les pages en file://. */
+/* LE GRAIN EST CUIT DANS LES PHOTOS (15/09/2026). Naomie : « garde le côté grain partout sur les images, c'est la DA ».
+   Un filtre SVG posé en CSS faisait planter WebKit (Safari) sur la page Service ; la trame est donc appliquée ici, une
+   fois : point blanc de 1,55 px sur bleu nuit #15162E, tuile de 4 px, multipliée sur la photo éclaircie. Restent nets
+   les logos, le logo Cleo, les objets détourés du globe, les captures d'interface, les avatars et les petits ronds. */
+const GRAIN_EXCLUS = /^(logo-|cleo-logo$|globe-|produit-|veille-produit$|rond-|anaelle$|naomie$|alex$|darcial$|thezi$)/
+let tuileGrainCache = null
+async function tuileGrain() {
+  if (!tuileGrainCache) tuileGrainCache = await sharp(Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="4" height="4" fill="#15162E"/><circle cx="2" cy="2" r="1.55" fill="#FFFFFF"/></svg>')).png().toBuffer()
+  return tuileGrainCache
+}
 async function cheminImage(nom) {
   if (cacheImg.has(nom)) return cacheImg.get(nom)
   const entree = IMAGES[nom]
@@ -278,7 +288,8 @@ async function cheminImage(nom) {
   const dest = path.join(DOSSIER_IMAGES, `${nom}.${ext}`)
   if (format === 'svg') fs.copyFileSync(abs, dest)
   else if (format === 'png') await sharp(abs).resize({ width: largeur, withoutEnlargement: true }).png({ compressionLevel: 9, quality: 82 }).toFile(dest)
-  else await sharp(abs).resize({ width: largeur, withoutEnlargement: true }).webp({ quality: 72 }).toFile(dest)
+  else if (GRAIN_EXCLUS.test(nom)) await sharp(abs).resize({ width: largeur, withoutEnlargement: true }).webp({ quality: 72 }).toFile(dest)
+  else await sharp(abs).resize({ width: largeur, withoutEnlargement: true }).linear(1.14, 8).composite([{ input: await tuileGrain(), tile: true, blend: 'multiply' }]).webp({ quality: 74 }).toFile(dest)
   const chemin = `/images/${nom}.${ext}`
   cacheImg.set(nom, chemin)
   return chemin
@@ -329,6 +340,9 @@ function masseRefs() {
 }
 
 async function injecterImages(html) {
+  /* 15/09/2026, « le grain partout sur les images, c'est la DA » : chaque image garde sa clé dans data-img, pour que la
+     couche de grain choisisse les photos (et laisse les logos, les avatars et les objets détourés). */
+  html = html.replace(/src="img:([a-z0-9-]+)"/g, (t, k) => t + ` data-img="${k}"`)
   const noms = [...new Set([...html.matchAll(/img:([a-z0-9-]+)/g)].map(m => m[1]))]
   for (const n of noms) {
     const uri = await dataUri(n)

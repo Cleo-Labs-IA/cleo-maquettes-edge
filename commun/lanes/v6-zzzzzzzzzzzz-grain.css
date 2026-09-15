@@ -1,0 +1,13 @@
+/* ═══ LE GRAIN SUR TOUTES LES IMAGES ═══ 15/09/2026. Naomie : « garde le côté grain partout sur les images, c'est la DA ».
+   Premier essai : un filtre SVG posé en CSS sur chaque photo. Mesuré le même jour : il fait planter WebKit (Safari) sur la
+   page Service (12 photos). Le grain est donc CUIT DANS LES IMAGES au build (construire.mjs, trame de points multipliée
+   par sharp) : aucun coût au rendu, identique dans tous les navigateurs, rien à poser page par page.
+   Conséquence ici : les trames posées en masque CSS (couche Tenkara, .tk-trame et photos de la page 43) feraient une
+   double trame. Leur masque est retiré ; leur animation de zoom au défilement reste. */
+body[data-cleo-ds="v6"] main :is(.tk-trame, .av-carte-image, .av-profil-image, .av-recit-image, .fx-produit, .tk-onglets-vue) img:not(#_),
+body[data-cleo-ds="v6"] main .av-livrable-photo:not(#_){-webkit-mask-image:none !important;mask-image:none !important;filter:none !important}
+body[data-cleo-ds="v6"] main :is(.tk-trame, .av-carte-image, .av-profil-image, .av-recit-image, .fx-produit, .tk-onglets-vue):not(#_){background-color:transparent}
+/* Même retrait pour la trame en masque des pages Ressources et articles (vignettes, cartes du blog, scènes d'en-tête),
+   relevée au navigateur le 15/09/2026 sur 10, 11, 12, 15, 18 et 24 : sa taille animée de 14 px à 4 px doublait le grain
+   cuit. Le zoom au défilement (scale) reste. */
+body[data-cleo-ds="v6"] main :is(.res-carte .vignette, .blog-art-img, .scene) > img:not(#_){-webkit-mask-image:none !important;mask-image:none !important;filter:none !important}
