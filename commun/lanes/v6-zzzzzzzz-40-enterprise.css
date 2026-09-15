@@ -1,0 +1,205 @@
+/* ═══ ENTERPRISE (40, FR ET EN) ═══ 15/09/2026. Reprise dans le design de la page 43 (BRIEF des agents).
+   Fond blanc, sections dans des cadres à filet (coins marqués, bandeau à cellules), titres 38 px graisse 500 en deux
+   tons, grandes images « la masse et l'unique », boutons pleins r10.
+   Composants Tenkara communs (v6-zzzzzzz-tenkara.css) : bento du témoignage avec photo tramée et compteurs canon,
+   photo des câbles tramée avec étiquette, bandeau final tramé, boutons carrés secondaires, une seule carte bleue.
+   Mouvement concret, lié au défilement :
+   - un catalogue gris dont un seul produit s'allume, reçoit son verdict, et dont la donnée part dans le PLM (récit
+     collant) ;
+   - les trois couches de la mise en place qui s'assemblent ;
+   - les chiffres qui défilent jusqu'à leur valeur.
+   Sans support ou en « réduire les animations » : état final posé. Les calques décoratifs animés sont aria-hidden.
+   Le socle « Votre environnement » est le seul champ profond #08093B de la page. */
+
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]){background:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section{background:transparent !important}
+
+/* ─── Barre et bouton du formulaire ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .nav{background:#FFFFFF;border-bottom:1px solid rgba(26,26,26,.08) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .nav .conteneur{max-width:1440px}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-bouton{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:15px 20px 15px 22px;border:0;border-radius:10px;background:#0008CF;color:#FFFFFF;font:inherit;font-size:1rem;font-weight:500;line-height:1.2;cursor:pointer;transition:background .15s ease-out}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-bouton:hover{background:#0007B5;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-bouton-plein{width:100%;margin-top:8px}
+
+/* ─── Haut de page : le titre et le formulaire ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-hero{padding:104px 0 104px !important;border-bottom:1px solid rgba(26,26,26,.08)}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-hero > .conteneur{max-width:1440px}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-hero-grille{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(40px, 6vw, 104px);align-items:center}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-hero .t-hero{margin:0;max-width:none !important;font-size:clamp(3rem, 1.2rem + 4.4vw, 5.25rem) !important;font-weight:500 !important;line-height:1.02 !important;letter-spacing:-.045em !important;color:#1A1A1A !important;text-wrap:balance}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-hero .t-hero .attenue{display:block;color:#8F8F8F !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-lead{margin:30px 0 0;max-width:560px;font-size:1.125rem;line-height:1.5;color:#6B6B6B}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-noir{color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form{padding:32px !important;border:0 !important;border-radius:16px !important;background:#FFFFFF !important;box-shadow:0 0 0 1px rgba(26,26,26,.08), 0 24px 60px rgba(26,26,26,.08) !important;color:#1A1A1A !important;scroll-margin-top:96px}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form-titre{margin:0 0 22px;font-size:1.5rem;font-weight:500;letter-spacing:-.02em;line-height:1.2;color:#1A1A1A !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form label{display:block;margin-bottom:7px;font-size:.8125rem;font-weight:500;color:#525252 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form input{width:100%;margin:0 0 16px;padding:12px 14px;border:1px solid rgba(26,26,26,.14) !important;border-radius:10px;background:#FFFFFF !important;font:inherit;font-size:.9375rem;color:#1A1A1A !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form input:focus-visible{outline:2px solid #0008CF;outline-offset:1px;border-color:#0008CF !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form input::placeholder{color:#9A9A9A !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form .paire{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form-note{margin:14px 0 0;text-align:center;font-size:.8125rem;color:#737373}
+
+/* ─── LE CADRE (motif de la page 43) ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-bloc{padding:0 !important;margin:0 0 120px}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-hero + section.ent-bloc{margin-top:120px}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-bloc > .conteneur{
+  position:relative;box-sizing:border-box;width:min(1360px, calc(100% - 80px));max-width:none;margin:0 auto;padding:94px 32px 64px;
+  border:1px solid rgba(26,26,26,.10);
+  background:
+    linear-gradient(#1A1A1A, #1A1A1A) right 24px top 12px / 6px 6px no-repeat,
+    repeating-linear-gradient(90deg, rgba(26,26,26,.08) 0 1px, transparent 1px 32px) left top / 257px 30px no-repeat,
+    linear-gradient(rgba(26,26,26,.10), rgba(26,26,26,.10)) left 30px / 100% 1px no-repeat,
+    #FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-bloc > .conteneur::before,
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-bloc > .conteneur::after{content:"";position:absolute;width:9px;height:9px;pointer-events:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-bloc > .conteneur::before{top:-2px;left:-2px;border-top:1.5px solid #1A1A1A;border-left:1.5px solid #1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-bloc > .conteneur::after{right:-2px;bottom:-2px;border-right:1.5px solid #1A1A1A;border-bottom:1.5px solid #1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-titre2{margin:0 0 56px !important;max-width:1040px !important;font-size:clamp(1.75rem, 1rem + 1.5vw, 2.375rem) !important;font-weight:500 !important;line-height:1.14 !important;letter-spacing:-.025em !important;color:#1A1A1A !important;text-wrap:balance}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-titre2 .attenue{display:inline !important;color:#8F8F8F !important}
+
+/* ─── Le verdict par référence : catalogue, lien, fiche PLM ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-collant{display:grid;grid-template-columns:minmax(0,1.1fr) 88px minmax(0,.9fr);align-items:center}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-catalogue{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;width:100%;max-width:600px;justify-self:end;padding:20px 20px 30px;border:1px solid rgba(26,26,26,.06);border-radius:18px;background:#F9F8F6}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-tuile{position:relative;aspect-ratio:1 / 1}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-tuile-image{position:absolute;inset:0;overflow:clip;border-radius:12px;background:#E9E6E0}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-tuile img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-allumee{z-index:2}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-allumee .ent-tuile-image{box-shadow:0 0 0 3px #0008CF, 0 18px 40px rgba(0,8,207,.25);scale:1.06}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-allumee img{filter:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-verdict{position:absolute;left:0;right:0;bottom:-18px;z-index:3;display:flex;align-items:center;gap:8px;width:max-content;margin:0 auto;padding:7px 12px 7px 7px;border-radius:9999px;background:#FFFFFF;box-shadow:0 8px 24px rgba(0,0,0,.18);font-size:.8125rem;font-weight:500;color:#1A1A1A;white-space:nowrap}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-verdict i{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#0008CF;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-verdict svg{width:10px;height:10px}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-lien{position:relative;height:2px;margin:0 14px;background:transparent}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-lien span{position:absolute;inset:0;background:#0008CF;transform-origin:left center}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-lien::after{content:"";position:absolute;top:50%;right:-6px;width:10px;height:10px;margin-top:-5px;border-radius:50%;background:#0008CF}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm{padding:22px 24px 10px;border-radius:16px;background:#FFFFFF;box-shadow:0 0 0 1px rgba(26,26,26,.08), 0 18px 48px rgba(26,26,26,.08)}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-tete{display:flex;align-items:center;gap:10px;padding-bottom:16px;border-bottom:1px solid rgba(26,26,26,.08);font-size:.9375rem;font-weight:500;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-point{width:10px;height:10px;border-radius:3px;background:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne{display:grid;grid-template-columns:70px minmax(0,1fr) 16px;align-items:center;gap:14px;padding:15px 0;border-bottom:1px solid rgba(26,26,26,.06)}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne:last-child{border-bottom:0}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-cle{height:8px;border-radius:4px;background:#E6E3DD}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-valeur{height:8px;width:64%;border-radius:4px;background:linear-gradient(#1A1A1A, #1A1A1A) left center / 100% 100% no-repeat, #ECE9E3}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne:nth-child(3) .ent-plm-valeur{width:78%}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne:nth-child(4) .ent-plm-valeur{width:52%}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne:nth-child(5) .ent-plm-valeur{width:86%}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne i{position:relative;width:16px;height:16px;border-radius:50%;box-shadow:inset 0 0 0 1.5px #D6D2CA}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne i::after{content:"";position:absolute;inset:0;border-radius:50%;background:#0008CF url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 6.2 4.8 8.5 9.5 3.8' fill='none' stroke='white' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 9px no-repeat}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-legende{margin:18px 0 0;font-size:1rem;line-height:1.45;color:#525252}
+
+/* ─── Ce que nous mettons en place : la photo tramée et les trois couches ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-assemblage{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px, 4vw, 64px);align-items:center}
+/* overflow:clip et non hidden (alerte du 15/09) : hidden fait du cadre un conteneur de défilement, et la trame animée
+   par view() s'y accrochait sans jamais avancer. clip coupe pareil, rayon compris, sans créer de conteneur. */
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-photo{position:relative;margin:0;aspect-ratio:4 / 5;border-radius:4px;overflow:clip;background:#0B0C2C}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-photo .tk-trame img{object-position:50% 30%}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-photo .tk-etiquette{position:absolute;top:24px;left:24px;margin:0}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couches{display:grid;gap:14px}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche{display:grid;grid-template-columns:52px minmax(0,1fr);gap:20px;align-items:start;padding:26px 28px 28px;border-radius:16px;background:#FFFFFF;box-shadow:0 0 0 1px rgba(26,26,26,.08), 0 10px 30px rgba(26,26,26,.06);transition:transform .2s cubic-bezier(.22,1,.36,1)}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche:hover{transform:translateY(-3px)}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche-ico{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:#F1EFEA;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche-ico svg{width:26px;height:26px}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche h3{margin:4px 0 14px;font-size:1.375rem;font-weight:500;letter-spacing:-.02em;line-height:1.2;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-pastilles{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-pastilles li{padding:7px 13px;border:1px solid rgba(26,26,26,.10);border-radius:9999px;background:#FFFFFF;font-size:.875rem;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-pastilles .ent-a-trancher{border-style:dashed;color:#6B6B6B}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-a-trancher b{font-weight:500;color:inherit}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche.ent-socle{background:#08093B;box-shadow:0 18px 40px rgba(8,9,59,.22)}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-socle h3{color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-socle .ent-couche-ico{background:rgba(255,255,255,.08);color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-socle .ent-pastilles li{border-color:rgba(255,255,255,.18);background:transparent;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-socle .ent-pastilles .ent-a-trancher{border-color:rgba(255,255,255,.35);color:rgba(255,255,255,.72)}
+
+/* ─── Tenkara : bento du témoignage et bandeau final ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) #temoignage > .conteneur{padding-bottom:32px}
+/* Bandeau : fond, rembourrage et voile viennent de la couche commune (corrigée le 15/09). Ici, le coin marqué
+   haut-gauche du cadre est masqué, et le titre garde sa taille. */
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-bloc.tk-bandeau > .conteneur::before{display:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .tk-bandeau .av-final-titre{font-size:clamp(2rem, 1rem + 2vw, 3rem) !important;font-weight:500 !important;line-height:1.08 !important;letter-spacing:-.03em !important;text-wrap:balance}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .tk-bandeau .tk-trame img{object-position:50% 42%}
+/* La flèche pointillée de la carte crème traversait le dernier zéro de « 19 000 » (plus large que « 106 ») : en haut. */
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .tk-creme .tk-fleche{top:22px;right:22px;bottom:auto}
+
+@media (max-width:980px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-hero{padding:56px 0 64px !important}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-hero-grille{grid-template-columns:minmax(0,1fr)}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-bloc{margin-bottom:72px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-hero + section.ent-bloc{margin-top:72px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-bloc > .conteneur{width:calc(100% - 32px);padding:78px 20px 44px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-collant{grid-template-columns:minmax(0,1fr);gap:36px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-catalogue{max-width:none;justify-self:stretch;gap:8px;padding:12px 12px 26px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-lien{display:none}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-assemblage{grid-template-columns:minmax(0,1fr)}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-photo{aspect-ratio:4 / 3}
+}
+@media (max-width:560px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form{padding:22px !important}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form .paire{grid-template-columns:minmax(0,1fr);gap:0}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche{grid-template-columns:minmax(0,1fr);gap:14px;padding:22px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-verdict{font-size:.75rem}
+}
+
+/* ═══ LE MOUVEMENT ═══ */
+@media (prefers-reduced-motion: no-preference){
+  /* Le haut de page arrive au chargement (courbe de Legora mesurée). */
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-hero .t-hero{animation:entArrive .8s cubic-bezier(.625,.05,0,1) both}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-hero .t-hero .attenue{animation:entArrive .8s cubic-bezier(.625,.05,0,1) .09s both}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-lead{animation:entArrive .6s cubic-bezier(.625,.05,0,1) .22s both}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form{animation:entArrive .9s cubic-bezier(.625,.05,0,1) .3s both}
+  @keyframes entArrive{from{opacity:0;translate:0 36px}to{opacity:1;translate:0 0}}
+
+  @supports (animation-timeline: view()){
+    /* Apparitions au défilement. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) :is(.ent-titre2, .ent-legende, .ent-photo){animation:entVoir cubic-bezier(.25,.8,.3,1) both;animation-timeline:view();animation-range:entry 5% entry 70%}
+    /* Les couches s'assemblent, de part et d'autre. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche{animation:entGauche cubic-bezier(.25,.8,.3,1) both;animation-timeline:view();animation-range:entry 0% entry 80%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche:nth-child(2){animation-name:entDroite}
+    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche .ent-pastilles li{animation:entPastille cubic-bezier(.25,.8,.3,1) both;animation-timeline:view();animation-range:entry 20% entry 100%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche .ent-pastilles li:nth-child(2){animation-range:entry 35% cover 20%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche .ent-pastilles li:nth-child(3){animation-range:entry 50% cover 24%}
+    /* Les chiffres canon défilent jusqu'à leur valeur (compteurs déclarés sur la page 43), les rayures continuent. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .av-compte{position:relative;counter-reset:k var(--av-k) u var(--av-u);animation-duration:1ms, 1ms;animation-timing-function:cubic-bezier(.2,.7,.3,1), linear;animation-fill-mode:both, both;animation-timeline:view(), view();animation-range:entry 0% entry 100%, cover 0% cover 100%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .av-compte-texte{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .av-c-19000{--av-k:19;animation-name:entC19, tkRayures}
+    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .av-c-3700{--av-k:3;--av-u:700;animation-name:entC3700, tkRayures}
+    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) :is(.av-c-19000, .av-c-3700)::before{content:counter(k) " " counter(u, av-trois);content:counter(k) " " counter(u, av-trois) / ""}
+    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) :is(.av-c-19000, .av-c-3700).ent-compte-en::before{content:counter(k) "," counter(u, av-trois);content:counter(k) "," counter(u, av-trois) / ""}
+
+    @keyframes entVoir{from{opacity:0;translate:0 32px}to{opacity:1;translate:0 0}}
+    @keyframes entGauche{from{opacity:0;translate:-64px 24px;scale:.96}to{opacity:1;translate:0 0;scale:1}}
+    @keyframes entDroite{from{opacity:0;translate:64px 24px;scale:.96}to{opacity:1;translate:0 0;scale:1}}
+    @keyframes entPastille{from{opacity:0;translate:0 10px}to{opacity:1;translate:0 0}}
+    @keyframes entC19{from{--av-k:0}to{--av-k:19}}
+    @keyframes entC3700{from{--av-k:0;--av-u:0}to{--av-k:3;--av-u:700}}
+
+    /* Le récit collant du catalogue (bureau seulement). */
+    @media (min-width:981px){
+      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-scene{height:250vh;view-timeline-name:--ent-cat}
+      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-collant{position:sticky;top:110px}
+      /* 1. Le catalogue gris est posé dès l'entrée (retour du 15/09 : un panneau vide à l'arrivée). */
+      /* 2. Un seul produit s'allume, les autres s'effacent. */
+      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-tuile:not(.ent-allumee) .ent-tuile-image{animation:entEteinte linear both;animation-timeline:--ent-cat;animation-range:contain 28% contain 38%}
+      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-allumee .ent-tuile-image{animation:entAllume cubic-bezier(.25,.8,.3,1) both;animation-timeline:--ent-cat;animation-range:contain 28% contain 40%}
+      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-allumee img{animation:entCouleur linear both;animation-timeline:--ent-cat;animation-range:contain 28% contain 40%}
+      /* 3. Il reçoit son verdict. */
+      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-verdict{animation:entPuce cubic-bezier(.25,.8,.3,1) both;animation-timeline:--ent-cat;animation-range:contain 40% contain 50%}
+      /* 4. Sa donnée part vers la fiche PLM, posée dès l'entrée, dont les lignes se remplissent et se cochent. */
+      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-lien span{animation:entTrait linear both;animation-timeline:--ent-cat;animation-range:contain 52% contain 62%}
+      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-lien::after{animation:entPoint cubic-bezier(.25,.8,.3,1) both;animation-timeline:--ent-cat;animation-range:contain 60% contain 64%}
+      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-valeur{animation:entBarre cubic-bezier(.25,.8,.3,1) both;animation-timeline:--ent-cat;animation-range:contain 62% contain 72%}
+      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne:nth-child(3) .ent-plm-valeur{animation-range:contain 67% contain 77%}
+      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne:nth-child(4) .ent-plm-valeur{animation-range:contain 72% contain 82%}
+      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne:nth-child(5) .ent-plm-valeur{animation-range:contain 77% contain 87%}
+      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne i::after{animation:entPoint cubic-bezier(.25,.8,.3,1) both;animation-timeline:--ent-cat;animation-range:contain 70% contain 74%}
+      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne:nth-child(3) i::after{animation-range:contain 75% contain 79%}
+      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne:nth-child(4) i::after{animation-range:contain 80% contain 84%}
+      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne:nth-child(5) i::after{animation-range:contain 85% contain 89%}
+
+      @keyframes entEteinte{from{opacity:1}to{opacity:.62}}
+      @keyframes entAllume{from{box-shadow:0 0 0 0 rgba(0,8,207,0), 0 0 0 rgba(0,8,207,0);scale:1}to{box-shadow:0 0 0 3px #0008CF, 0 18px 40px rgba(0,8,207,.25);scale:1.06}}
+      @keyframes entCouleur{from{filter:grayscale(1) contrast(1.05)}to{filter:grayscale(0) contrast(1)}}
+      @keyframes entPuce{from{opacity:0;scale:.6;translate:0 14px}to{opacity:1;scale:1;translate:0 0}}
+      @keyframes entTrait{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+      @keyframes entPoint{from{opacity:0;scale:.2}to{opacity:1;scale:1}}
+      @keyframes entBarre{from{background-size:0% 100%}to{background-size:100% 100%}}
+    }
+  }
+}

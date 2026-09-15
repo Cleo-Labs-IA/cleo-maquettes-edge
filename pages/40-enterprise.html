@@ -1,23 +1,21 @@
 <!--NAV-->
 
-<!-- ═══ HERO ═══ maquette d'exemple du 14/09/2026 : l'entrée Enterprise, qui remplace
-     « Tech ». Réunion : « notre expertise tech et notre pool d'experts permettent de
-     faire ça en entreprise, contactez-nous ». Une page courte, avec un formulaire.
-     Le formulaire reprend celui de 21-inscription, balise pour balise. -->
-<section class="section sur-sombre p-demande">
+<!-- ═══ HERO ═══ 15/09/2026, reprise dans le design de la page 43 : cadres à filet, grandes images « la masse et
+     l'unique », mouvement lié au défilement, composants Tenkara (bento, trame, étiquette, bouton carré, bandeau).
+     Textes RETIRÉS de la page du 14/09, rien d'écrit de neuf. « Relit et signe » devient « relit » : la déclaration UE
+     est signée par le fabricant ou son mandataire. Le formulaire garde ses champs, leurs noms et sa cible (HubSpot),
+     balise pour balise. -->
+<section class="section ent-hero">
   <div class="conteneur">
-    <div class="duo" style="gap:72px">
-      <div>
-        <h1 class="t-hero">Enterprise. <span class="attenue">Notre expertise tech et nos experts, à l'échelle de votre entreprise.</span></h1>
-        <p class="t-body" style="margin:22px 0 0;max-width:480px">
-          Nos ingénieurs branchent la base de règles de Cleo à vos systèmes. Notre équipe d'experts conformité
-          relit et signe, à votre format.
-        </p>
+    <div class="ent-hero-grille">
+      <div class="ent-hero-texte">
+        <h1 class="t-hero">Enterprise. <span class="attenue">À l'échelle de votre entreprise.</span></h1>
+        <p class="ent-lead"><span class="ent-noir">Notre expertise tech et nos experts.</span> Nos ingénieurs branchent la base de règles de Cleo à vos systèmes.</p>
       </div>
 
       <form id="f-enterprise" method="get" action="https://meetings.hubspot.com/anaelle-guez/rendez-vous" hidden></form>
-      <div class="carte-encre form-carte" data-anim="droite">
-        <h2 class="t-h1" style="margin-bottom:22px">Contacter l'équipe</h2>
+      <div class="form-carte ent-form" id="contact-equipe">
+        <h2 class="ent-form-titre">Contacter l'équipe</h2>
         <div class="paire">
           <div><label for="f-ent-prenom">Prénom</label><input id="f-ent-prenom" form="f-enterprise" name="firstname" autocomplete="given-name" type="text" placeholder="Camille"></div>
           <div><label for="f-ent-nom">Nom</label><input id="f-ent-nom" form="f-enterprise" name="lastname" autocomplete="family-name" type="text" placeholder="Bernard"></div>
@@ -25,65 +23,126 @@
         <label for="f-ent-email">Email professionnel</label><input id="f-ent-email" form="f-enterprise" name="email" autocomplete="email" type="email" placeholder="camille@groupe.com" required>
         <label for="f-ent-societe">Entreprise</label><input id="f-ent-societe" form="f-enterprise" name="company" autocomplete="organization" type="text" placeholder="Groupe">
         <label for="f-ent-besoin">Votre besoin</label><input id="f-ent-besoin" form="f-enterprise" name="besoin" type="text" placeholder="Marques, marchés, systèmes à brancher…">
-        <button class="btn btn-marque" type="submit" form="f-enterprise" style="width:100%;justify-content:center;margin-top:6px">Envoyer</button>
-        <div class="t-caption" style="text-align:center;margin-top:14px">
-          Vos données servent à vous répondre, à rien d'autre.
+        <button class="ent-bouton ent-bouton-plein" type="submit" form="f-enterprise">Envoyer</button>
+        <p class="ent-form-note">Vos données servent à vous répondre, à rien d'autre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LE VERDICT PAR RÉFÉRENCE ═══ récit collant. Un catalogue gris ; un seul produit s'allume et reçoit son
+     verdict ; sa donnée structurée part dans le PLM. Titre, pastille et légende reprennent les phrases de la page du
+     14/09 (« Le verdict par référence, appelable depuis vos systèmes », « Une donnée structurée, exploitable jusque
+     dans le PLM »). Le catalogue et la fiche PLM sont des calques décoratifs (aria-hidden) ; la légende porte le sens. -->
+<section class="section ent-bloc" id="verdict">
+  <div class="conteneur">
+    <h2 class="t-display ent-titre2">Le verdict par référence. <span class="attenue">Appelable depuis vos systèmes.</span></h2>
+    <div class="ent-scene">
+      <div class="ent-collant">
+        <div class="ent-catalogue" aria-hidden="true">
+          <div class="ent-tuile"><div class="ent-tuile-image"><img src="img:masse-gourde-carre" alt=""></div></div>
+          <div class="ent-tuile"><div class="ent-tuile-image"><img src="img:masse-ecouteurs-carre" alt=""></div></div>
+          <div class="ent-tuile"><div class="ent-tuile-image"><img src="img:masse-velo-carre" alt=""></div></div>
+          <div class="ent-tuile"><div class="ent-tuile-image"><img src="img:masse-tasse-carre" alt=""></div></div>
+          <div class="ent-tuile ent-allumee"><div class="ent-tuile-image"><img src="img:masse-casque-carre" alt=""></div><span class="ent-verdict"><i><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i>Verdict par référence</span></div>
+          <div class="ent-tuile"><div class="ent-tuile-image"><img src="img:masse-telephone-carre" alt=""></div></div>
+          <div class="ent-tuile"><div class="ent-tuile-image"><img src="img:masse-lunettes-carre" alt=""></div></div>
+          <div class="ent-tuile"><div class="ent-tuile-image"><img src="img:masse-pile-carre" alt=""></div></div>
+          <div class="ent-tuile"><div class="ent-tuile-image"><img src="img:masse-flacon-carre" alt=""></div></div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ CE QUE NOUS METTONS EN PLACE ═══ les puces reprennent des phrases déjà servies
-     sur le site (Compliance Data, l'équipe qui signe, la citation Decathlon). L'installation
-     sur site, dite en réunion (ferme de Mac chez le client), n'est pas tranchée. -->
-<section class="section" style="padding-top:88px">
-  <div class="conteneur">
-    <h2 class="t-display" style="margin-bottom:40px">Ce que nous mettons en place</h2>
-    <div class="bf-faits" data-anim-groupe>
-      <div class="bf-bloc">
-        <h3 class="t-h2">Notre expertise tech</h3>
-        <ul class="coches">
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Le verdict par référence, appelable depuis vos systèmes</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Une donnée structurée, exploitable jusque dans le PLM</li>
-        </ul>
-      </div>
-      <div class="bf-bloc">
-        <h3 class="t-h2">Notre équipe d'experts</h3>
-        <ul class="coches">
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Une équipe juridique dédiée, qui connaît votre profil</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Vos trames de déclaration et de dossier technique, reprises à votre format</li>
-        </ul>
-      </div>
-      <div class="bf-bloc">
-        <h3 class="t-h2">Votre environnement</h3>
-        <ul class="coches">
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Des données hébergées en UE, jamais utilisées pour entraîner nos modèles</li>
-        </ul>
-        <div class="service-conditions" style="margin:16px 0 0"><span class="a-fixer">Installation sur site <b>à trancher</b></span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ TÉMOIGNAGE ═══ citation verbatim, identique à la page Compliance as a service. -->
-<section class="section" style="padding-top:0">
-  <div class="conteneur">
-    <div class="temoignage" data-anim-groupe>
-      <div class="scene" data-anim="grandit" style="aspect-ratio:4/3"><img class="fond" src="img:masse-gant" alt=""></div>
-      <div>
-        <p class="citation" style="margin:0">
-          « Chez Decathlon, notre défi est de capter des informations très précises au milieu d’un volume massif de réglementations produits à l’international, avec un enjeu à la fois juridique et technique : piloter nos mises en conformité mondiales tout en accompagnant nos ingénieurs dans le développement des produits. C’est le pont que nous construisons avec le PoC mené avec Cleo : leur moteur d’IA agit comme un traducteur intelligent qui filtre le bruit pour extraire une donnée structurée, directement exploitable par nos équipes et indispensable pour guider la conception au sein de notre PLM. »
-        </p>
-        <div class="auteur">
-          <img src="img:philippine" alt="">
-          <div>
-            <div class="t-sm" style="font-weight:600">Philippine Tamic</div>
-            <div class="t-micro">Product Compliance Operations Manager, Decathlon</div>
+        <div class="ent-lien" aria-hidden="true"><span></span></div>
+        <div class="ent-plm-colonne">
+          <div class="ent-plm" aria-hidden="true">
+            <div class="ent-plm-tete"><span class="ent-plm-point"></span>Votre PLM</div>
+            <div class="ent-plm-ligne"><span class="ent-plm-cle"></span><span class="ent-plm-valeur"></span><i></i></div>
+            <div class="ent-plm-ligne"><span class="ent-plm-cle"></span><span class="ent-plm-valeur"></span><i></i></div>
+            <div class="ent-plm-ligne"><span class="ent-plm-cle"></span><span class="ent-plm-valeur"></span><i></i></div>
+            <div class="ent-plm-ligne"><span class="ent-plm-cle"></span><span class="ent-plm-valeur"></span><i></i></div>
           </div>
+          <p class="ent-legende">Une donnée structurée, exploitable jusque dans le PLM.</p>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ═══ CE QUE NOUS METTONS EN PLACE ═══ trois couches qui s'assemblent au défilement : l'équipe d'experts, l'expertise
+     tech, votre environnement (le socle, seul champ profond de la page). La photo des câbles est tramée (Tenkara),
+     l'étiquette reprend « vos systèmes » de la page du 14/09. Les pastilles raccourcissent les phrases de la page.
+     « Installation sur site » reste marquée à trancher : dite en réunion, pas arrêtée. -->
+<section class="section ent-bloc" id="mise-en-place">
+  <div class="conteneur">
+    <h2 class="t-display ent-titre2">Ce que nous mettons en place.</h2>
+    <div class="ent-assemblage">
+      <figure class="ent-photo">
+        <div class="tk-trame" aria-hidden="true"><img src="img:cables" alt=""></div>
+        <p class="tk-etiquette">Vos systèmes</p>
+      </figure>
+      <div class="ent-couches">
+        <article class="ent-couche">
+          <span class="ent-couche-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9" r="2.5"/><path d="M15.5 14.2A4.5 4.5 0 0 1 21 18.5"/></svg></span>
+          <div>
+            <h3>Notre équipe d'experts</h3>
+            <ul class="ent-pastilles"><li>Une équipe juridique dédiée</li><li>Vos trames, à votre format</li></ul>
+          </div>
+        </article>
+        <article class="ent-couche">
+          <span class="ent-couche-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 7V3M15 7V3"/><path d="M6 7h12v4a6 6 0 0 1-12 0z"/><path d="M12 17v4"/></svg></span>
+          <div>
+            <h3>Notre expertise tech</h3>
+            <ul class="ent-pastilles"><li>Le verdict par référence</li><li>Une donnée structurée jusque dans le PLM</li></ul>
+          </div>
+        </article>
+        <article class="ent-couche ent-socle">
+          <span class="ent-couche-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="6" rx="1.5"/><rect x="4" y="14" width="16" height="6" rx="1.5"/><path d="M8 7h.01M8 17h.01"/></svg></span>
+          <div>
+            <h3>Votre environnement</h3>
+            <ul class="ent-pastilles"><li>Données hébergées en UE</li><li>Jamais utilisées pour entraîner nos modèles</li><li class="ent-a-trancher">Installation sur site <b>à trancher</b></li></ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TÉMOIGNAGE ═══ bento Tenkara. Extrait VERBATIM de la citation Decathlon (la même phrase que sur la page 43), sur
+     la photo tramée des gants. Chiffres CANON seulement (19 000 autorités, 3 700 sources officielles), en compteurs.
+     Les petits tableaux de la carte bleue (décoratifs) ne portent aucun nombre : des mots de cette page. -->
+<section class="section ent-bloc" id="temoignage">
+  <div class="conteneur">
+    <div class="tk-bento">
+      <figure class="tk-case tk-photo">
+        <div class="tk-trame" aria-hidden="true"><img src="img:masse-gant" alt=""></div>
+        <blockquote class="tk-citation">« Leur moteur d’IA agit comme un traducteur intelligent qui filtre le bruit pour extraire une donnée structurée. »</blockquote>
+        <figcaption class="tk-signature"><img src="img:philippine" alt=""><span>Philippine Tamic<br>Decathlon</span></figcaption>
+        <a class="tk-bouton tk-bouton-coin" href="06-cas-client.html">Voir le cas client <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </figure>
+      <div class="tk-case tk-creme">
+        <svg class="tk-fleche" viewBox="0 0 160 70" aria-hidden="true"><path d="M10 60C52 62 104 50 138 16" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="1 6" stroke-linecap="round"/><path d="M124 13h16l-5 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <b class="tk-chiffre av-compte av-c-19000"><span class="av-compte-texte">19 000</span></b>
+        <span class="tk-legende">autorités</span>
+      </div>
+      <div class="tk-case tk-bleu">
+        <div class="tk-tableaux" aria-hidden="true">
+          <div class="tk-tableau"><b>Verdict par référence</b><span><i>statut</i><i>applicable</i></span><span><i>source</i><i>article</i></span></div>
+          <div class="tk-tableau"><b>Votre PLM</b><span><i>donnée</i><i>structurée</i></span><span><i>format</i><i>le vôtre</i></span></div>
+          <div class="tk-tableau"><b>Votre environnement</b><span><i>hébergement</i><i>UE</i></span><span><i>entraînement</i><i>jamais</i></span></div>
+        </div>
+        <b class="tk-chiffre av-compte av-c-3700"><span class="av-compte-texte">3 700</span></b>
+        <span class="tk-legende">sources officielles</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ APPEL FINAL ═══ bandeau Tenkara sur la photo tramée des fenêtres (le bleu allumé dans la façade). Renvoie au
+     formulaire du haut. -->
+<section class="section ent-bloc tk-bandeau" id="contact">
+  <div class="conteneur">
+    <div class="tk-trame" aria-hidden="true"><img src="img:fenetres" alt=""></div>
+    <p class="tk-etiquette">Enterprise</p>
+    <h2 class="t-display av-final-titre">Notre expertise tech et nos experts. <span class="attenue">À l'échelle de votre entreprise.</span></h2>
+    <a class="tk-bouton" href="#contact-equipe">Contacter l'équipe <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </section>
 
