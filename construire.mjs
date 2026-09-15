@@ -758,6 +758,8 @@ function avecMenuMobile(navHtml) {
     if (m[2]) { groupes.push({ titre, href: m[2] }); continue }
     const liens = []
     for (const a of bloc.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)) {
+      /* La carte visuelle d'un méga-menu (menu Data à la Moonlit, 15/09/2026) redit un lien de la liste : pas au téléphone. */
+      if (/class="mega-carte"/.test(a[0])) continue
       const b = a[2].match(/<b>([\s\S]*?)<\/b>/)
       const texte = (b ? b[1] : a[2]).replace(/<span class="mega-badge">[\s\S]*?<\/span>/g, '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim()
       if (texte) liens.push({ href: a[1], texte })
