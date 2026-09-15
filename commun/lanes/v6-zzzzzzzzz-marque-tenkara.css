@@ -1,40 +1,11 @@
-/* ═══ LA MARQUE « MOOD TENKARA », SUR TOUT LE SITE ═══ 15/09/2026.
+/* ═══ LE MOOD TENKARA SUR TOUT LE SITE, EN SATOSHI ═══ 15/09/2026.
    Naomie, captures de tenkara.ai : « reprends tout le design pour améliorer tout, ce mood-là en brand »
-   (feedback_da_tenkara_reference). Relevé au navigateur le même jour : titres PP Editorial New graisse 400, texte
-   Exposure[0] (serif), étiquettes, barre et boutons Construct Mono en capitales, fond #F7F6F5, crème #FFF9CD, bleu
-   électrique, sections #121212, photos tramées. Polices libres les plus proches, embarquées (commun/polices, OFL) :
-   Instrument Serif (titres), Source Serif 4 (texte), Fragment Mono (étiquettes, la police de secours de Tenkara).
-   ⚠️ ÉCART ASSUMÉ AU DS V5 (Satoshi seule, zéro monospace), sur demande explicite. Satoshi reste pour les formulaires
-   et les menus. Supprimer ce fichier rend l'état précédent. Chargé en dernier. */
+   (feedback_da_tenkara_reference). Premier jet avec les polices de Tenkara (serif et monospace), puis contre-ordre le
+   même jour : « garde la typo d'avant, Satoshi ». Cette couche ne touche donc plus AUCUNE police, graisse ni
+   interlettrage : elle apporte la crème, les photos en trame d'impression, les catégories en grands mots bleus et le
+   bloc sombre à onglets. Chargée en dernier ; la supprimer rend l'état précédent. */
 
-@font-face{font-family:"Instrument Serif";src:url(/fonts/instrument-serif-normal-400.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:"Instrument Serif";src:url(/fonts/instrument-serif-italic-400.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
-@font-face{font-family:"Source Serif 4";src:url(/fonts/source-serif-4-normal-300_700.woff2) format("woff2");font-weight:300 700;font-style:normal;font-display:swap}
-@font-face{font-family:"Source Serif 4";src:url(/fonts/source-serif-4-italic-400.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
-@font-face{font-family:"Fragment Mono";src:url(/fonts/fragment-mono-normal-400.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
-
-body[data-cleo-ds="v6"]{--b-titre:"Instrument Serif", "Times New Roman", Georgia, serif;--b-texte:"Source Serif 4", Georgia, serif;--b-mono:"Fragment Mono", ui-monospace, Menlo, monospace;--b-bleu:#0008CF;--b-creme:#FDF6CF;--b-noir:#121212}
-
-/* ─── Titres : serif, graisse 400, un rien plus grands (l'œil d'Instrument Serif est petit) ─── */
-body[data-cleo-ds="v6"] main :is(h1, h2, h3, .t-hero, .t-display, .av-titre2, .av-final-titre, .dt-h1, .dt-h2, .av-phrase-texte, .tk-citation, .av-citation, .av-grand, .tk-legende, .dt-usage-titre, .av-carte h3, .av-recit-etapes li, .fx-etapes li){font-family:var(--b-titre) !important;font-weight:400 !important;letter-spacing:-.005em !important;font-size-adjust:.5}
-body[data-cleo-ds="v6"] main :is(h1, .t-hero, .dt-h1){line-height:1 !important}
-body[data-cleo-ds="v6"] main :is(h2, .av-titre2, .dt-h2, .av-final-titre){line-height:1.05 !important}
-
-/* ─── Texte courant : serif ─── */
-body[data-cleo-ds="v6"] main :is(p, li, blockquote, figcaption, dd, .hq-lead, .dt-lead){font-family:var(--b-texte)}
-body[data-cleo-ds="v6"] :is(.pa-pied, footer) :is(p, li, a){font-family:var(--b-texte)}
-
-/* ─── Étiquettes, boutons, barre, pastilles, numéros : monospace en capitales ─── */
-body[data-cleo-ds="v6"] :is(.nav .nav-declencheur, .nav .lien-secondaire, .nav .btn-marque, .nav-langue, .hq-bouton, .tk-bouton, .tk-etiquette, .tk-signature, .tk-tableau, .t-label, [class*="surtitre"], [class*="eyebrow"], .av-col-num, .av-legende, .av-livrable-surtitre, .av-exigence-grille small, .av-livrable-etiquettes span, .av-marche, .av-publie li, .av-pastilles li, .av-defile-titre, .mega-client, .mega-pastille, .dt-num, .dt-rond-plus, .fx-textes small, .fx-textes em, .pa-colonnes h4, .mm-titre, main .btn, main button:not(.nav-burger)){font-family:var(--b-mono) !important;font-weight:400 !important;letter-spacing:.04em}
-body[data-cleo-ds="v6"] :is(.hq-bouton, .tk-bouton, .tk-etiquette, .av-livrable-surtitre, .av-pastilles li, .av-publie li, .pa-colonnes h4, main .btn){text-transform:uppercase}
-
-/* ─── Chiffres : monospace rayé, taille resserrée (la chasse fixe est plus large) ─── */
-body[data-cleo-ds="v6"] :is(.tk-chiffre, .av-chiffres b, .av-tiers, [class*="compteur"] b, .dt-compte){font-family:var(--b-mono) !important;font-weight:400 !important;letter-spacing:-.04em !important}
-body[data-cleo-ds="v6"] .tk-chiffre{font-size:clamp(2.75rem, 1rem + 3.3vw, 4.75rem)}
-
-/* ─── Boutons : bleu électrique, carrés, capitales ─── */
-body[data-cleo-ds="v6"] :is(.hq-bouton, main .btn-marque){border-radius:2px !important;font-size:.8125rem !important;padding:12px 16px !important}
-body[data-cleo-ds="v6"] .nav .btn-marque{border-radius:2px !important;font-size:.75rem !important}
+body[data-cleo-ds="v6"]{--b-bleu:#0008CF;--b-creme:#FDF6CF;--b-noir:#121212}
 
 /* ─── Crème Tenkara ─── */
 body[data-cleo-ds="v6"] .tk-creme{background:var(--b-creme)}
@@ -45,24 +16,24 @@ body[data-cleo-ds="v6"] main :is(.av-carte-image, .av-profil-image, .av-recit-im
 body[data-cleo-ds="v6"] main .av-livrable-photo{-webkit-mask-image:radial-gradient(circle closest-side, #000 74%, transparent 100%);mask-image:radial-gradient(circle closest-side, #000 74%, transparent 100%);-webkit-mask-size:4px 4px;mask-size:4px 4px;filter:contrast(1.12) brightness(1.1)}
 
 /* ─── Les catégories : grands mots bleus qui défilent ─── */
-body[data-cleo-ds="v6"] main .av-defile li{padding:0 20px;border:0 !important;background:transparent !important;font-family:var(--b-titre) !important;font-size:clamp(1.75rem, 1rem + 2vw, 2.75rem) !important;line-height:1.1;letter-spacing:0 !important;text-transform:none;color:var(--b-bleu) !important}
+body[data-cleo-ds="v6"] main .av-defile li{padding:0 20px;border:0 !important;background:transparent !important;font-size:clamp(1.5rem, .9rem + 1.8vw, 2.5rem) !important;font-weight:500;line-height:1.15;letter-spacing:-.025em;text-transform:none;color:var(--b-bleu) !important}
 body[data-cleo-ds="v6"] main .av-defile-rangs{gap:6px}
 
 /* ═══ ONGLETS « POUR QUI » ═══ second exemple Tenkara : bloc sombre, trois onglets, la photo tramée et son encart.
    Sans script : trois boutons radio, le premier coché ; clavier et lecteurs d'écran s'en servent comme d'un groupe. */
 body[data-cleo-ds="v6"] .tk-onglets{position:relative;padding:38px;border-radius:4px;background:var(--b-noir);color:#FFFFFF}
-body[data-cleo-ds="v6"] .tk-onglets > input{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+body[data-cleo-ds="v6"] .tk-onglets > input{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap;pointer-events:none}
 body[data-cleo-ds="v6"] .tk-onglets-tetes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-bottom:30px}
 body[data-cleo-ds="v6"] .tk-onglets-tetes label{display:block;cursor:pointer;color:rgba(255,255,255,.36);transition:color .35s ease}
 body[data-cleo-ds="v6"] .tk-onglets-tetes label:hover{color:rgba(255,255,255,.7)}
-body[data-cleo-ds="v6"] .tk-onglets-tetes b{display:block;font-family:var(--b-titre);font-size:clamp(1.625rem, 1rem + 1.4vw, 2.25rem);font-weight:400;line-height:1.05;font-size-adjust:.5}
-body[data-cleo-ds="v6"] .tk-onglets-tetes span{display:block;margin-top:12px;font-family:var(--b-texte);font-size:1.0625rem;line-height:1.45}
+body[data-cleo-ds="v6"] .tk-onglets-tetes b{display:block;font-size:clamp(1.375rem, 1rem + 1vw, 1.875rem);font-weight:500;letter-spacing:-.02em;line-height:1.15}
+body[data-cleo-ds="v6"] .tk-onglets-tetes span{display:block;margin-top:10px;font-size:1rem;line-height:1.45}
 body[data-cleo-ds="v6"] .tk-onglets-scene{position:relative;height:clamp(380px, 38vw, 540px);border-radius:2px;overflow:clip;background:#15162E}
 body[data-cleo-ds="v6"] .tk-onglets-vue{position:absolute;inset:0;margin:0;opacity:0;visibility:hidden;transition:opacity .6s ease, visibility .6s}
 body[data-cleo-ds="v6"] .tk-onglets-vue > img{display:block;width:100%;height:100%;object-fit:cover;scale:1.06;transition:scale 1.4s cubic-bezier(.22,1,.36,1)}
 body[data-cleo-ds="v6"] .tk-onglets-boite{position:absolute;left:14%;top:50%;translate:0 -50%;max-width:min(640px, 72%);padding:28px 32px;background:rgba(18,18,18,.66);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
-body[data-cleo-ds="v6"] .tk-onglets-boite p{margin:0;font-family:var(--b-texte) !important;font-size:clamp(1.25rem, .9rem + 1vw, 1.875rem);line-height:1.25;color:#FFFFFF}
-body[data-cleo-ds="v6"] .tk-onglets-boite small{display:block;margin-top:22px;font-family:var(--b-mono);font-size:.8125rem;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.82)}
+body[data-cleo-ds="v6"] .tk-onglets-boite p{margin:0;font-size:clamp(1.25rem, .9rem + 1vw, 1.75rem);font-weight:500;letter-spacing:-.015em;line-height:1.25;color:#FFFFFF}
+body[data-cleo-ds="v6"] .tk-onglets-boite small{display:block;margin-top:20px;font-size:.8125rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.82)}
 body[data-cleo-ds="v6"] .tk-onglets-barre{display:block;height:2px;margin-top:18px;background:rgba(255,255,255,.14);overflow:clip}
 body[data-cleo-ds="v6"] .tk-onglets-barre::before{content:"";display:block;width:0;height:100%;background:#FFFFFF;transition:width .5s cubic-bezier(.22,1,.36,1)}
 body[data-cleo-ds="v6"] .tk-onglets > input:nth-of-type(1):checked ~ .tk-onglets-tetes label:nth-child(1),
@@ -90,39 +61,3 @@ body[data-cleo-ds="v6"] .tk-onglets > input:nth-of-type(3):focus-visible ~ .tk-o
 @media (prefers-reduced-motion: reduce){
   body[data-cleo-ds="v6"] :is(.tk-onglets-vue, .tk-onglets-vue > img, .tk-onglets-barre::before, .tk-onglets-tetes label){transition:none}
 }
-
-/* ═══ CORRECTIFS VUS AU RENDU (15/09/2026) ═══
-   1. Les feuilles de page imposent letter-spacing:-.045em !important à leurs titres (spécificité 0,4,3) : le serif
-      en sortait écrasé, lettres collées. :not(#_) ajoute (1,0,0) et fait gagner la marque, sans toucher aux pages.
-   2. Instrument Serif a des accents hauts : à line-height 1, le « À » d'Enterprise touchait la ligne du dessus.
-   3. Les boutons et pastilles propres à chaque page (sv-*, ap-*, ent-*…) restaient en Satoshi ou en serif. */
-body[data-cleo-ds="v6"] main :is(h1, h2, h3, .t-hero, .t-display, .av-titre2, .av-final-titre, .dt-h1, .dt-h2, .av-phrase-texte, .tk-citation, .av-citation, .av-grand, .tk-legende, .dt-usage-titre, .av-carte h3, .av-recit-etapes li, .fx-etapes li):not(#_){font-family:var(--b-titre) !important;font-weight:400 !important;letter-spacing:0 !important}
-body[data-cleo-ds="v6"] main :is(h1, .t-hero, .dt-h1):not(#_){line-height:1.06 !important}
-body[data-cleo-ds="v6"] main :is(h2, .av-titre2, .dt-h2, .av-final-titre):not(#_){line-height:1.08 !important}
-body[data-cleo-ds="v6"] main :is(a[class*="bouton"], a[class*="btn"], button[class*="bouton"], form button, [class*="pastille"], [class*="etiquette"], [class*="badge"], [class*="surtitre"], [class*="eyebrow"], [class*="kicker"]):not(#_),
-body[data-cleo-ds="v6"] main :is([class*="pastille"], [class*="etiquette"], [class*="badge"]) :is(p, span, b, i, em, small):not(#_){font-family:var(--b-mono) !important;font-weight:400 !important;letter-spacing:.04em !important;font-style:normal}
-body[data-cleo-ds="v6"] main :is(a[class*="bouton"], a[class*="btn"], button[class*="bouton"], form button):not(#_){text-transform:uppercase;border-radius:2px !important}
-
-/* 4. Les boutons radio des onglets : cachés par découpe et non par opacité (lecteurs d'écran et contrôles). */
-body[data-cleo-ds="v6"] .tk-onglets > input{opacity:1;clip-path:inset(50%);overflow:hidden;white-space:nowrap}
-
-/* 5. La monospace passe de Fragment Mono à Geist Mono (OFL) : Fragment barre ses zéros, « 25 000 » se lisait
-      « 25 ØØØ » (comparé au rendu le 15/09 avec DM Mono, Geist Mono et IBM Plex Mono). Geist Mono garde des zéros pleins
-      et le dessin géométrique de Construct Mono. Et l'espace des milliers devient une espace fine : en chasse fixe,
-      l'espace normale ouvrait un trou au milieu du chiffre. */
-@font-face{font-family:"Geist Mono";src:url(/fonts/geist-mono-normal-400.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
-body[data-cleo-ds="v6"]{--b-mono:"Geist Mono", ui-monospace, Menlo, monospace}
-@media (prefers-reduced-motion: no-preference){
-  @supports (animation-timeline: view()){
-    body[data-cleo-ds="v6"]:not([data-v6-page$="-en"]) :is(.av-c-25000, .av-c-19000, .av-c-3700)::before{content:counter(k) "\202F" counter(u, av-trois);content:counter(k) "\202F" counter(u, av-trois) / ""}
-  }
-}
-
-/* 6. Les pastilles posées sur les photos (page Service : « Entrée REACH »…) passent en monospace capitales. */
-body[data-cleo-ds="v6"] main :is(.sv-media-puces li, .av-recit-puces li, .fx-textes b):not(#_){font-family:var(--b-mono) !important;font-weight:400 !important;letter-spacing:.04em !important;text-transform:uppercase}
-
-/* 7. Mesuré dans la page le 15/09 (compteurs rayés, 2×) : Geist Mono et DM Mono barrent aussi leurs zéros, même avec
-      font-feature-settings "zero" 0. IBM Plex Mono (OFL), la police de secours déclarée par Tenkara elle-même, a un
-      zéro pointé qui se lit « 0 ». Elle tient toute la monospace. */
-@font-face{font-family:"IBM Plex Mono";src:url(/fonts/ibm-plex-mono-normal-400.woff2) format("woff2");font-weight:400;font-style:normal;font-display:swap}
-body[data-cleo-ds="v6"]{--b-mono:"IBM Plex Mono", ui-monospace, Menlo, monospace}
