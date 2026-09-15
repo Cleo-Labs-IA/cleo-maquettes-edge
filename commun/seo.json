@@ -861,6 +861,166 @@
    "url_source": "https://www.cleolabs.co/en",
    "appariement": "English home since 15/09/2026 (replaces 01-accueil-en).",
    "_mesure": "titre 44 caractères, description 70 caractères (hero sentence, verbatim)"
+  },
+  "44-service-veille.html": {
+   "titre": "Veille réglementaire et jurisprudentielle | Cleo Labs",
+   "description": "Chaque semaine, les nouvelles règles qui touchent vos produits.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
+   "_mesure": "titre 53 caractères, description 63 caractères"
+  },
+  "44-service-veille-en.html": {
+   "titre": "Regulatory and case law monitoring | Cleo Labs",
+   "description": "Every week, the new rules that affect your products.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
+   "_mesure": "titre 46 caractères, description 52 caractères"
+  },
+  "45-service-etiquetage.html": {
+   "titre": "Étiquetage et publicité | Cleo Labs",
+   "description": "Votre étiquette et vos allégations relues, avec les corrections à faire.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
+   "_mesure": "titre 35 caractères, description 72 caractères"
+  },
+  "45-service-etiquetage-en.html": {
+   "titre": "Labelling and advertising | Cleo Labs",
+   "description": "Your label and your claims reviewed, with the corrections to make.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
+   "_mesure": "titre 37 caractères, description 66 caractères"
+  },
+  "46-service-emballage.html": {
+   "titre": "Emballage | Cleo Labs",
+   "description": "Votre emballage vérifié : matériaux, logos de tri, mentions.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
+   "_mesure": "titre 21 caractères, description 60 caractères"
+  },
+  "46-service-emballage-en.html": {
+   "titre": "Packaging | Cleo Labs",
+   "description": "Your packaging checked: materials, sorting logos, mentions.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
+   "_mesure": "titre 21 caractères, description 59 caractères"
+  },
+  "47-service-specifications.html": {
+   "titre": "Spécifications | Cleo Labs",
+   "description": "Les exigences réglementaires traduites en cahier des charges pour votre bureau d'études.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
+   "_mesure": "titre 26 caractères, description 88 caractères"
+  },
+  "47-service-specifications-en.html": {
+   "titre": "Specifications | Cleo Labs",
+   "description": "Regulatory requirements translated into specifications for your design office.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
+   "_mesure": "titre 26 caractères, description 78 caractères"
+  },
+  "48-service-contrats.html": {
+   "titre": "Contrats | Cleo Labs",
+   "description": "Les clauses de conformité de vos contrats fournisseurs et de distribution.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
+   "_mesure": "titre 20 caractères, description 74 caractères"
+  },
+  "48-service-contrats-en.html": {
+   "titre": "Contracts | Cleo Labs",
+   "description": "The compliance clauses of your supplier and distribution contracts.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
+   "_mesure": "titre 21 caractères, description 67 caractères"
+  },
+  "49-service-formalites.html": {
+   "titre": "Formalités administratives | Cleo Labs",
+   "description": "Vos enregistrements et autorisations de mise sur le marché, préparés pour les autorités.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
+   "_mesure": "titre 38 caractères, description 88 caractères"
+  },
+  "49-service-formalites-en.html": {
+   "titre": "Administrative formalities | Cleo Labs",
+   "description": "Your registrations and market authorisations, prepared for the authorities.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
+   "_mesure": "titre 38 caractères, description 75 caractères"
+  },
+  "50-service-recyclage.html": {
+   "titre": "Recyclage des déchets | Cleo Labs",
+   "description": "Votre inscription aux filières de recyclage et vos déclarations.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
+   "_mesure": "titre 33 caractères, description 64 caractères"
+  },
+  "50-service-recyclage-en.html": {
+   "titre": "Waste recycling | Cleo Labs",
+   "description": "Your registration with recycling schemes and your declarations.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
+   "_mesure": "titre 27 caractères, description 63 caractères"
+  },
+  "38-service.html": {
+   "titre": "Déclaration de conformité | Cleo Labs",
+   "description": "L'agent la reprend sur les textes en vigueur, un expert conformité la relit et la valide.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "15/09/2026 : description = phrase sous le titre de la page, reprise telle quelle (titre de la page : « Mettre à jour une déclaration de conformité. Un prix, un délai, un expert. »).",
+   "_mesure": "titre 37 caractères, description 89 caractères"
+  },
+  "38-service-en.html": {
+   "titre": "Declaration of conformity | Cleo Labs",
+   "description": "The agent rebuilds it on the texts in force, and a compliance expert reviews and validates it.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "15/09/2026 : description = phrase sous le titre de la page, reprise telle quelle (titre de la page : « Update a declaration of conformity. One price, one lead time, one expert. »).",
+   "_mesure": "titre 37 caractères, description 94 caractères"
+  },
+  "39-data.html": {
+   "titre": "Data : la donnée réglementaire produit | Cleo Labs",
+   "description": "Les règles produit de 106 pays, rattachées à leur article et à leur date d'entrée en vigueur, par API ou par serveur MCP.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "15/09/2026 : description = phrase sous le titre de la page, reprise telle quelle (titre de la page : « Data. La donnée réglementaire produit, dans l'IA que vous utilisez déjà. »).",
+   "_mesure": "titre 50 caractères, description 121 caractères"
+  },
+  "39-data-en.html": {
+   "titre": "Data: product regulatory data | Cleo Labs",
+   "description": "Product rules from 106 countries, linked to their article and their entry-into-force date, via API or MCP server.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "15/09/2026 : description = phrase sous le titre de la page, reprise telle quelle (titre de la page : « Data. Product regulatory data, inside the AI you already use. »).",
+   "_mesure": "titre 41 caractères, description 113 caractères"
+  },
+  "40-enterprise.html": {
+   "titre": "Enterprise | Cleo Labs",
+   "description": "Notre expertise tech et nos experts. Nos ingénieurs branchent la base de règles de Cleo à vos systèmes.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "15/09/2026 : description = phrase sous le titre de la page, reprise telle quelle (titre de la page : « Enterprise. À l'échelle de votre entreprise. »).",
+   "_mesure": "titre 22 caractères, description 103 caractères"
+  },
+  "40-enterprise-en.html": {
+   "titre": "Enterprise | Cleo Labs",
+   "description": "Our tech expertise and our experts. Our engineers connect Cleo's rules base to your systems.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "15/09/2026 : description = phrase sous le titre de la page, reprise telle quelle (titre de la page : « Enterprise. At the scale of your company. »).",
+   "_mesure": "titre 22 caractères, description 92 caractères"
   }
  },
  "structure": {

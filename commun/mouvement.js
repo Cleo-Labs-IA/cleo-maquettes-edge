@@ -154,7 +154,7 @@
   var titres = document.querySelectorAll('main h1, main h2');
   for (var t = 0; t < titres.length; t++) {
     var h = titres[t];
-    if (h.querySelector('.mm-mot, .av-mot, .av-compte') || h.closest('[aria-hidden="true"]')) continue;
+    if (h.querySelector('.mm-mot, .av-mot, .fx-mot, .av-compte') || h.closest('[aria-hidden="true"]')) continue;
     var rang = 0;
     (function decoupe(noeud) {
       var enfants = Array.prototype.slice.call(noeud.childNodes);
