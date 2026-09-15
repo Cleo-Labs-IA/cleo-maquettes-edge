@@ -156,3 +156,8 @@ body[data-cleo-ds="v6"] .tk-tableau:nth-child(3){top:96px;left:14px}
     @keyframes tkGlisseInverse{from{translate:-8px 8px}to{translate:8px -8px}}
   }
 }
+
+/* 15/09/2026 : une section parente en overflow:hidden (règles de hero héritées) figeait encore la trame qu'elle contient
+   (mesuré sur la page Service : progression identique à deux positions). Toute section qui porte une trame ou une
+   image animée coupe en clip, qui ne crée pas de conteneur de défilement (le collant continue de marcher). */
+body[data-cleo-ds="v6"] main section:has(.tk-trame, .tk-bento){overflow:clip !important}
