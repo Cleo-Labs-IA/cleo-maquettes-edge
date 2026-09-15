@@ -340,3 +340,40 @@ body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"])
     body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dt-appel-question, .dt-appel-question b, .dt-appel-fleche, .dt-regle, .dt-regle .pl-champ b, .dt-appel-source, .dt-appel-rejet, .dt-appel-rejet s, .dt-appel-pied){animation-timeline:view();animation-range:entry 0% entry 100%}
   }
 }
+
+/* ═══ USAGES « UNE BASE DE RÈGLES, PLUSIEURS FAÇONS DE CONSTRUIRE » ═══ 15/09/2026, intégrateur. Naomie montre le bloc
+   « One data layer, many ways to build » de moonlit.ai : « ça aussi intéressant dans data ». Composition reprise : quatre
+   cartes blanches sur fond crème, rangée de ronds qui se chevauchent avec un « + », titre, phrase, ligne « pour qui ».
+   Écart assumé : chez Moonlit les ronds sont des logos clients ; aucun usage Data client n'est documenté chez Cleo, les
+   ronds portent donc les produits « la masse et l'unique », et la ligne du bas ne cite que le vérifiable (PoC Decathlon,
+   papier MARIA). Au défilement, les ronds glissent et s'empilent, le « + » apparaît ; au survol, ils s'écartent. */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;padding:16px;border-radius:14px;background:#F9F8F6}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usage{display:flex;flex-direction:column;padding:32px 34px 30px;border:1px solid rgba(26,26,26,.06);border-radius:16px;background:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ronds{display:flex;align-items:center;margin-bottom:22px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ronds > *{flex:none;width:64px;height:64px;border:1px solid rgba(26,26,26,.1);border-radius:50%;background:#FFFFFF;transition:margin-left .35s cubic-bezier(.22,1,.36,1)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ronds > * + *{margin-left:-12px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ronds img{display:block;object-fit:cover;box-shadow:0 0 0 3px #FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-rond-plus{display:grid;place-items:center;border-color:transparent;background:#EFF0FF;color:#0008CF;font-size:1.5rem;font-weight:400;line-height:1}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usage:hover .dt-ronds > * + *{margin-left:4px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usage-titre{margin:0 0 12px;font-size:clamp(1.25rem, 1rem + .6vw, 1.5rem);font-weight:500;letter-spacing:-.02em;line-height:1.2;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usage p{margin:0;font-size:.9375rem;line-height:1.55;color:#5C5C5C}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usage p.dt-usage-pour{margin-top:auto;padding-top:28px;font-size:.8125rem;color:#757575}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usage-pour b{font-weight:500;color:#1A1A1A}
+@media (max-width:980px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usages{grid-template-columns:minmax(0,1fr);padding:10px;margin:0 -10px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usage{padding:26px 22px 24px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ronds > *{width:54px;height:54px}
+}
+@media (prefers-reduced-motion: no-preference){
+  @supports (animation-timeline: view()){
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usage{animation:dtUsage cubic-bezier(.25,.8,.3,1) both;animation-timeline:view();animation-range:entry 0% entry 60%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usage:nth-child(2n){animation-range:entry 10% entry 70%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ronds > *{animation:dtRond cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 20% cover 30%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ronds > :nth-child(2){--dt-x:-40px}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ronds > :nth-child(3){--dt-x:-80px}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ronds > .dt-rond-plus{animation-name:dtPlus}
+    @keyframes dtUsage{from{opacity:0;translate:0 36px}to{opacity:1;translate:0 0}}
+    @keyframes dtRond{from{translate:var(--dt-x, 0px) 0;opacity:.35}to{translate:0 0;opacity:1}}
+    @keyframes dtPlus{0%,55%{opacity:0;scale:.4}100%{opacity:1;scale:1}}
+  }
+}
