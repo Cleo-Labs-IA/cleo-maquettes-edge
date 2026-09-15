@@ -3,12 +3,12 @@
   "racine": "/fr",
   "pages": {
     "01-accueil.html": {
-      "chemin": "/fr",
-      "reelle": true
+      "chemin": "/apercu/ancien-accueil",
+      "_note": "Ancien accueil, archivé le 15/09/2026 ; /fr sert la page 43."
     },
     "01-accueil-en.html": {
-      "chemin": "/en",
-      "reelle": true
+      "chemin": "/apercu/old-home",
+      "_note": "Old home, archived on 15/09/2026; /en serves page 43 EN."
     },
     "02-entreprise.html": {
       "chemin": "/fr/company",
@@ -54,10 +54,14 @@
       "chemin": "/apercu/accueil-resultat"
     },
     "43-accueil-avant-vendre.html": {
-      "chemin": "/apercu/avant-de-vendre"
+      "chemin": "/fr",
+      "reelle": true,
+      "_note": "Accueil depuis le 15/09/2026 (Naomie : « do it »), ancien accueil archivé."
     },
     "43-accueil-avant-vendre-en.html": {
-      "chemin": "/apercu/before-you-sell"
+      "chemin": "/en",
+      "reelle": true,
+      "_note": "Home since 15/09/2026, old home archived."
     },
     "09-texte.html": {
       "chemin": "/fr/jurisdictions/european-union/regulations/ppwr"

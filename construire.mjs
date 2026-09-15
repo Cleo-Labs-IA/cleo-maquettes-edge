@@ -991,8 +991,10 @@ ${corps}
   /* Liens propres. La maquette s'ouvre sur des URL calquees sur les routes
      REELLES de www.cleolabs.co, pour qu'elle se lise comme le site final et
      que le portage garde les memes adresses. Les ancres sont preservees. */
+  /* Depuis le 15/09/2026 l'accueil est la page 43 : tout lien vers l'ancien accueil (logo, pied, 404, campagne) mène au nouveau. */
+  const ACCUEIL_ALIAS = { '01-accueil.html': '43-accueil-avant-vendre.html', '01-accueil-en.html': '43-accueil-avant-vendre-en.html' }
   doc = doc.replace(/href="(\d\d-[a-z0-9-]+\.html)(#[^"]*)?"/g, (tout, fichier, ancre) => {
-    const c = CHEMINS.pages[fichier]
+    const c = CHEMINS.pages[ACCUEIL_ALIAS[fichier] || fichier]
     return c ? `href="${c.chemin}${ancre || ''}"` : tout
   })
   const dest = path.join(ICI, 'sortie', p.sortie || p.fichier)
@@ -1029,6 +1031,9 @@ fs.writeFileSync(path.join(ICI, 'sortie', 'vercel.json'), JSON.stringify({
     { key: 'X-Robots-Tag', value: 'noindex, nofollow, noarchive, nosnippet' }] }],
   redirects: [{ source: '/', destination: CHEMINS.racine, permanent: false },
     // Les routes des trois features retirées le 14/09/2026 mènent aux entrées qui les remplacent.
+    // L'ancienne adresse d'aperçu de la page « avant de vendre », devenue l'accueil le 15/09/2026.
+    { source: '/apercu/avant-de-vendre', destination: '/fr', permanent: false },
+    { source: '/apercu/before-you-sell', destination: '/en', permanent: false },
     { source: '/fr/platform', destination: '/fr/platform/compliance-service', permanent: false },
     { source: '/fr/platform/research', destination: '/fr/platform/compliance-service', permanent: false },
     { source: '/fr/platform/regulations', destination: '/fr/data', permanent: false }],

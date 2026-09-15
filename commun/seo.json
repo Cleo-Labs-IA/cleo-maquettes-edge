@@ -457,10 +457,12 @@
   "01-accueil.html": {
    "titre": "Conformité Produit Automatisée pour les Marques Internationales | Cleo Labs",
    "description": "Plateforme IA de conformité produit pour les marques internationales. 106 pays, 25 000+ réglementations, 3 700+ sources. CSRD, AGEC, GPSR.",
-   "source": "site",
-   "url_source": "https://www.cleolabs.co/fr",
+   "source": "archive",
+   "url_source": null,
    "appariement": "https://www.cleolabs.co/fr, la page d'accueil francaise.",
-   "_mesure": "titre 75 caracteres, description 138 caracteres, releves sur la page servie le 27/08/2026"
+   "_mesure": "titre 75 caracteres, description 138 caracteres, releves sur la page servie le 27/08/2026",
+   "_url_source_avant": "https://www.cleolabs.co/fr",
+   "_archive": "Ancien accueil archivé le 15/09/2026 : plus d URL canonique, la page 43 porte celle de l accueil."
   },
   "01-accueil-noir.html": {
    "titre": "Conformité produit automatisée, variante sombre | Cleo Labs",
@@ -474,10 +476,12 @@
   "01-accueil-en.html": {
    "titre": "Automated Product Compliance for Global Brands | Cleo Labs",
    "description": "AI-powered product compliance platform for global brands. 106 countries, 25,000+ regulations, 3,700+ sources. CSRD, AGEC, GPSR coverage.",
-   "source": "site",
-   "url_source": "https://www.cleolabs.co/en",
+   "source": "archive",
+   "url_source": null,
    "appariement": "https://www.cleolabs.co/en, la page d'accueil anglaise.",
-   "_mesure": "titre 58 caracteres, description 136 caracteres, releves sur la page servie le 27/08/2026"
+   "_mesure": "titre 58 caracteres, description 136 caracteres, releves sur la page servie le 27/08/2026",
+   "_url_source_avant": "https://www.cleolabs.co/en",
+   "_archive": "Ancien accueil archivé le 15/09/2026 : plus d URL canonique, la page 43 porte celle de l accueil."
   },
   "02-entreprise.html": {
    "titre": "À Propos de Cleo Labs : Soutenue par Kima Ventures | Cleo Labs",
@@ -841,6 +845,22 @@
    "source": "site",
    "url_source": "https://www.cleolabs.co/en/blog/global-product-compliance-pitch-by-deel",
    "_releve_le": "2026-09-03"
+  },
+  "43-accueil-avant-vendre.html": {
+   "titre": "Vendez partout. Conformez-vous partout. | Cleo Labs",
+   "description": "Cleo prépare le lancement de votre produit jusqu'au dossier prêt à revue.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr",
+   "appariement": "Accueil français depuis le 15/09/2026 (remplace 01-accueil).",
+   "_mesure": "titre 51 caractères, description 73 caractères (phrase du haut de page, reprise telle quelle)"
+  },
+  "43-accueil-avant-vendre-en.html": {
+   "titre": "Sell anywhere, comply everywhere | Cleo Labs",
+   "description": "Cleo prepares your product launch, all the way to a review-ready file.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/en",
+   "appariement": "English home since 15/09/2026 (replaces 01-accueil-en).",
+   "_mesure": "titre 44 caractères, description 70 caractères (hero sentence, verbatim)"
   }
  },
  "structure": {
