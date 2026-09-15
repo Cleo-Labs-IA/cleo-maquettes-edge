@@ -1,205 +1,152 @@
-/* ═══ ENTERPRISE (40, FR ET EN) ═══ 15/09/2026. Reprise dans le design de la page 43 (BRIEF des agents).
-   Fond blanc, sections dans des cadres à filet (coins marqués, bandeau à cellules), titres 38 px graisse 500 en deux
-   tons, grandes images « la masse et l'unique », boutons pleins r10.
-   Composants Tenkara communs (v6-zzzzzzz-tenkara.css) : bento du témoignage avec photo tramée et compteurs canon,
-   photo des câbles tramée avec étiquette, bandeau final tramé, boutons carrés secondaires, une seule carte bleue.
-   Mouvement concret, lié au défilement :
-   - un catalogue gris dont un seul produit s'allume, reçoit son verdict, et dont la donnée part dans le PLM (récit
-     collant) ;
-   - les trois couches de la mise en place qui s'assemblent ;
-   - les chiffres qui défilent jusqu'à leur valeur.
-   Sans support ou en « réduire les animations » : état final posé. Les calques décoratifs animés sont aria-hidden.
-   Le socle « Votre environnement » est le seul champ profond #08093B de la page. */
+/* ═══ ENTERPRISE, SUR LA STRUCTURE DE TENKARA.AI/ABOUT ═══ 15/09/2026. Naomie : « pour Enterprise, reprends cette
+   structure : tenkara.ai/about ». Relevé (scratchpad/agents/enterprise-about/structure.md) : hero photo tramée plein
+   cadre, titre centré, pastille blanche, bande bleu électrique avec chevrons et mot géant rayé ; lettre sur fond crème
+   (titre centré, illustration en points à gauche, paragraphes et signature à droite) ; section sombre avec chevrons et
+   cartes photo en éventail ; grande carte photo tramée d'appel final. DA Cleo : Satoshi seule, bleu #0008CF (la bande
+   et les actions), champ profond #08093B une fois (l'éventail). Pages générées par
+   scratchpad/agents/enterprise-about/generer.mjs. Sans support ou en « réduire les animations », tout est posé. */
 
 body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]){background:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section{background:transparent !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.en-s{width:auto !important;max-width:none !important;margin:0 !important;padding:128px 0 !important;border:0 !important;background:transparent !important;overflow:clip}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-conteneur{box-sizing:border-box;max-width:1280px;margin:0 auto;padding:0 40px}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-titre:not(#_){margin:0 0 72px;font-size:clamp(2rem, 1.2rem + 2.1vw, 3.1875rem) !important;font-weight:500 !important;line-height:1.08 !important;letter-spacing:-.03em !important;color:#1A1A1A !important;text-wrap:balance}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-centre:not(#_){max-width:820px;margin-left:auto;margin-right:auto;text-align:center}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-titre.en-clair:not(#_){color:#FFFFFF !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-gris-clair{color:rgba(255,255,255,.72)}
 
-/* ─── Barre et bouton du formulaire ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .nav{background:#FFFFFF;border-bottom:1px solid rgba(26,26,26,.08) !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .nav .conteneur{max-width:1440px}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-bouton{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:15px 20px 15px 22px;border:0;border-radius:10px;background:#0008CF;color:#FFFFFF;font:inherit;font-size:1rem;font-weight:500;line-height:1.2;cursor:pointer;transition:background .15s ease-out}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-bouton:hover{background:#0007B5;color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-bouton-plein{width:100%;margin-top:8px}
+/* ─── 1. Hero ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.en-hero{padding:0 !important;background:#0B0C2C !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-hero-scene{position:relative;display:grid;place-items:center;min-height:max(560px, calc(100svh - 65px - clamp(72px, 8vw, 116px)));padding:96px 40px;box-sizing:border-box;overflow:clip}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-hero-scene::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg, rgba(8,9,40,.5) 0%, rgba(8,9,40,.62) 55%, rgba(8,9,40,.78) 100%);pointer-events:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-hero-contenu{position:relative;z-index:2;max-width:1040px;text-align:center}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-h1:not(#_){margin:0;font-size:clamp(2.75rem, 1.4rem + 3.6vw, 4.75rem) !important;font-weight:500 !important;line-height:1.04 !important;letter-spacing:-.035em !important;color:#FFFFFF !important;text-wrap:balance}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-h1 .en-gris-clair{display:block}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-hero-lead{margin:26px auto 0;max-width:620px;font-size:1.125rem;line-height:1.5;color:rgba(255,255,255,.88)}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-pastille:not(#_){display:inline-flex;align-items:center;gap:10px;margin-top:30px;padding:9px 14px;border-radius:2px;background:#FFFFFF;color:#1A1A1A;font-size:.9375rem;font-weight:500;letter-spacing:0;text-transform:none;text-decoration:none;transition:background-color .15s ease}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-pastille:not(#_):hover{background:#EFEEFB;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-pastille i{width:7px;height:7px;border-radius:50%;background:#0008CF}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-bande{position:relative;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;height:clamp(72px, 8vw, 116px);padding:0 32px;overflow:clip;background:#0008CF;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-fleches{flex:none;align-self:center;display:flex}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-bande-mot{display:block;margin-top:clamp(10px, 1.2vw, 18px);font-size:clamp(5.5rem, 2rem + 9vw, 12rem);font-weight:500;line-height:.9;letter-spacing:-.04em;white-space:nowrap;color:transparent;-webkit-text-stroke:1.5px #FFFFFF;background:repeating-linear-gradient(180deg, #FFFFFF 0 3px, transparent 3px 8px);-webkit-background-clip:text;background-clip:text}
 
-/* ─── Haut de page : le titre et le formulaire ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-hero{padding:104px 0 104px !important;border-bottom:1px solid rgba(26,26,26,.08)}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-hero > .conteneur{max-width:1440px}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-hero-grille{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(40px, 6vw, 104px);align-items:center}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-hero .t-hero{margin:0;max-width:none !important;font-size:clamp(3rem, 1.2rem + 4.4vw, 5.25rem) !important;font-weight:500 !important;line-height:1.02 !important;letter-spacing:-.045em !important;color:#1A1A1A !important;text-wrap:balance}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-hero .t-hero .attenue{display:block;color:#8F8F8F !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-lead{margin:30px 0 0;max-width:560px;font-size:1.125rem;line-height:1.5;color:#6B6B6B}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-noir{color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form{padding:32px !important;border:0 !important;border-radius:16px !important;background:#FFFFFF !important;box-shadow:0 0 0 1px rgba(26,26,26,.08), 0 24px 60px rgba(26,26,26,.08) !important;color:#1A1A1A !important;scroll-margin-top:96px}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form-titre{margin:0 0 22px;font-size:1.5rem;font-weight:500;letter-spacing:-.02em;line-height:1.2;color:#1A1A1A !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form label{display:block;margin-bottom:7px;font-size:.8125rem;font-weight:500;color:#525252 !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form input{width:100%;margin:0 0 16px;padding:12px 14px;border:1px solid rgba(26,26,26,.14) !important;border-radius:10px;background:#FFFFFF !important;font:inherit;font-size:.9375rem;color:#1A1A1A !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form input:focus-visible{outline:2px solid #0008CF;outline-offset:1px;border-color:#0008CF !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form input::placeholder{color:#9A9A9A !important}
+/* ─── 2. La lettre ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.en-lettre{background:#F9F8F6 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-lettre-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px, 6vw, 96px);align-items:center}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-illustration{position:relative;margin:0;aspect-ratio:1 / 1;-webkit-mask-image:radial-gradient(closest-side, #000 62%, transparent 100%);mask-image:radial-gradient(closest-side, #000 62%, transparent 100%)}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-illustration .tk-trame{background:#F9F8F6}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-illustration .tk-trame img{filter:grayscale(1) contrast(1.35) brightness(.95)}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-lettre-texte{max-width:520px}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-lettre-texte > p{margin:0 0 20px;font-size:1.0625rem;line-height:1.55;color:#2A2A2A}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-lettre-texte > p b{font-weight:600;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-lettre-texte > p.en-fort{margin:0;font-size:1.375rem;font-weight:500;line-height:1.3;letter-spacing:-.015em;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-lettre-texte > p.en-fort + p.en-fort{color:#8F8F8F}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-citation{margin:32px 0 0;padding:0 0 0 18px;border-left:2px solid #0008CF}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-citation p{margin:0;font-size:1rem;line-height:1.5;color:#2A2A2A}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-citation cite{display:block;margin-top:8px;font-size:.875rem;font-style:normal;color:#6B6B6B}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-signature{display:flex;align-items:center;gap:16px;margin-top:36px}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-avatars{display:flex;flex:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-avatars img{width:44px;height:44px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 3px #F9F8F6;background:#E6E3DC}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-avatars img + img{margin-left:-10px}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-signature b{display:block;font-size:1rem;font-weight:500;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-signature em{display:block;margin-top:2px;font-size:.875rem;font-style:normal;color:#6B6B6B}
+
+/* ─── 3. L'éventail ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.en-valeurs{padding:136px 0 120px !important;background:#08093B !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-valeurs .en-titre:not(#_){margin-bottom:28px}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-chevrons{display:flex;justify-content:center;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-cartes{position:relative;height:500px;margin:40px auto 0;max-width:1100px}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-carte{--x:0px;--y:0px;--r:0deg;position:absolute;left:50%;top:40px;z-index:calc(1 + var(--i));width:272px;height:380px;border-radius:6px;overflow:clip;background:#15162E;box-shadow:0 24px 60px rgba(0,0,0,.4);translate:calc(-50% + var(--x)) var(--y);rotate:var(--r)}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-carte:nth-child(1){--x:-402px;--y:58px;--r:-8deg}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-carte:nth-child(2){--x:-136px;--y:20px;--r:-3deg}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-carte:nth-child(3){--x:132px;--y:10px;--r:3deg}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-carte:nth-child(4){--x:398px;--y:-8px;--r:7deg}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-carte:hover{z-index:9}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-carte-fond{position:absolute;inset:0;z-index:0}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-carte::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg, rgba(8,9,40,0) 30%, rgba(8,9,40,.55) 62%, rgba(8,9,40,.92) 100%);pointer-events:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-carte-corps{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:22px 30px 24px 22px}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-carte h3:not(#_){margin:0 0 8px;font-size:1.625rem !important;font-weight:500 !important;line-height:1.1 !important;letter-spacing:-.02em !important;color:#FFFFFF !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-carte p{margin:0;font-size:.875rem;line-height:1.45;color:rgba(255,255,255,.84)}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-a-trancher{display:inline-block;margin-top:10px;padding:4px 9px;border:1px dashed rgba(255,255,255,.5);border-radius:9999px;font-size:.75rem;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-a-trancher b{font-weight:600}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-preuve{max-width:640px;margin:56px auto 0;text-align:center;font-size:1.0625rem;line-height:1.55;color:rgba(255,255,255,.8)}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-preuve a{color:#FFFFFF;text-decoration:underline;text-underline-offset:3px}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-bouton:not(#_){display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:2px;background:#0008CF;color:#FFFFFF;font-size:.9375rem;font-weight:500;letter-spacing:0;text-transform:none;text-decoration:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-valeurs .en-bouton:not(#_){display:flex;width:max-content;margin:24px auto 0}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-bouton:not(#_):hover{background:#0007B5;color:#FFFFFF}
+
+/* ─── 4. Appel final et formulaire ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-final-carte{position:relative;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:56px;align-items:center;min-height:620px;padding:64px;box-sizing:border-box;border-radius:6px;overflow:clip;background:#0B0C2C}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-final-carte::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg, rgba(8,9,40,.8) 0%, rgba(8,9,40,.55) 55%, rgba(8,9,40,.35) 100%);pointer-events:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-final-texte{position:relative;z-index:2}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-final-titre:not(#_){margin:0;font-size:clamp(2.25rem, 1.3rem + 2.6vw, 4rem) !important;font-weight:500 !important;line-height:1.05 !important;letter-spacing:-.035em !important;color:#FFFFFF !important;text-wrap:balance}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-final-titre .en-gris-clair{display:block}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form:not(#_){position:relative;z-index:2;margin:0;padding:32px;border:0;border-radius:10px;background:#FFFFFF;box-shadow:0 30px 70px rgba(0,0,0,.35)}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form-titre:not(#_){margin:0 0 22px;font-size:1.5rem !important;font-weight:500 !important;letter-spacing:-.02em !important;line-height:1.2 !important;color:#1A1A1A !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form label{display:block;margin-bottom:7px;font-size:.8125rem;font-weight:500;color:#525252}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form input{box-sizing:border-box;width:100%;margin:0 0 16px;padding:12px 14px;border:1px solid rgba(26,26,26,.14);border-radius:6px;background:#FFFFFF;font:inherit;font-size:.9375rem;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form input:focus-visible{outline:2px solid #0008CF;outline-offset:1px;border-color:#0008CF}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form input::placeholder{color:#9A9A9A}
 body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form .paire{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-bouton:not(#_){display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 20px;border:0;border-radius:6px;background:#0008CF;color:#FFFFFF;font:inherit;font-size:.9375rem;font-weight:500;letter-spacing:0;text-transform:none;cursor:pointer}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-bouton:not(#_):hover{background:#0007B5;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-bouton-plein:not(#_){width:100%;margin-top:6px}
 body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form-note{margin:14px 0 0;text-align:center;font-size:.8125rem;color:#737373}
 
-/* ─── LE CADRE (motif de la page 43) ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-bloc{padding:0 !important;margin:0 0 120px}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-hero + section.ent-bloc{margin-top:120px}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-bloc > .conteneur{
-  position:relative;box-sizing:border-box;width:min(1360px, calc(100% - 80px));max-width:none;margin:0 auto;padding:94px 32px 64px;
-  border:1px solid rgba(26,26,26,.10);
-  background:
-    linear-gradient(#1A1A1A, #1A1A1A) right 24px top 12px / 6px 6px no-repeat,
-    repeating-linear-gradient(90deg, rgba(26,26,26,.08) 0 1px, transparent 1px 32px) left top / 257px 30px no-repeat,
-    linear-gradient(rgba(26,26,26,.10), rgba(26,26,26,.10)) left 30px / 100% 1px no-repeat,
-    #FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-bloc > .conteneur::before,
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-bloc > .conteneur::after{content:"";position:absolute;width:9px;height:9px;pointer-events:none}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-bloc > .conteneur::before{top:-2px;left:-2px;border-top:1.5px solid #1A1A1A;border-left:1.5px solid #1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-bloc > .conteneur::after{right:-2px;bottom:-2px;border-right:1.5px solid #1A1A1A;border-bottom:1.5px solid #1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-titre2{margin:0 0 56px !important;max-width:1040px !important;font-size:clamp(1.75rem, 1rem + 1.5vw, 2.375rem) !important;font-weight:500 !important;line-height:1.14 !important;letter-spacing:-.025em !important;color:#1A1A1A !important;text-wrap:balance}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-titre2 .attenue{display:inline !important;color:#8F8F8F !important}
-
-/* ─── Le verdict par référence : catalogue, lien, fiche PLM ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-collant{display:grid;grid-template-columns:minmax(0,1.1fr) 88px minmax(0,.9fr);align-items:center}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-catalogue{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;width:100%;max-width:600px;justify-self:end;padding:20px 20px 30px;border:1px solid rgba(26,26,26,.06);border-radius:18px;background:#F9F8F6}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-tuile{position:relative;aspect-ratio:1 / 1}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-tuile-image{position:absolute;inset:0;overflow:clip;border-radius:12px;background:#E9E6E0}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-tuile img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-allumee{z-index:2}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-allumee .ent-tuile-image{box-shadow:0 0 0 3px #0008CF, 0 18px 40px rgba(0,8,207,.25);scale:1.06}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-allumee img{filter:none}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-verdict{position:absolute;left:0;right:0;bottom:-18px;z-index:3;display:flex;align-items:center;gap:8px;width:max-content;margin:0 auto;padding:7px 12px 7px 7px;border-radius:9999px;background:#FFFFFF;box-shadow:0 8px 24px rgba(0,0,0,.18);font-size:.8125rem;font-weight:500;color:#1A1A1A;white-space:nowrap}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-verdict i{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#0008CF;color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-verdict svg{width:10px;height:10px}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-lien{position:relative;height:2px;margin:0 14px;background:transparent}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-lien span{position:absolute;inset:0;background:#0008CF;transform-origin:left center}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-lien::after{content:"";position:absolute;top:50%;right:-6px;width:10px;height:10px;margin-top:-5px;border-radius:50%;background:#0008CF}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm{padding:22px 24px 10px;border-radius:16px;background:#FFFFFF;box-shadow:0 0 0 1px rgba(26,26,26,.08), 0 18px 48px rgba(26,26,26,.08)}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-tete{display:flex;align-items:center;gap:10px;padding-bottom:16px;border-bottom:1px solid rgba(26,26,26,.08);font-size:.9375rem;font-weight:500;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-point{width:10px;height:10px;border-radius:3px;background:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne{display:grid;grid-template-columns:70px minmax(0,1fr) 16px;align-items:center;gap:14px;padding:15px 0;border-bottom:1px solid rgba(26,26,26,.06)}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne:last-child{border-bottom:0}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-cle{height:8px;border-radius:4px;background:#E6E3DD}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-valeur{height:8px;width:64%;border-radius:4px;background:linear-gradient(#1A1A1A, #1A1A1A) left center / 100% 100% no-repeat, #ECE9E3}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne:nth-child(3) .ent-plm-valeur{width:78%}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne:nth-child(4) .ent-plm-valeur{width:52%}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne:nth-child(5) .ent-plm-valeur{width:86%}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne i{position:relative;width:16px;height:16px;border-radius:50%;box-shadow:inset 0 0 0 1.5px #D6D2CA}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne i::after{content:"";position:absolute;inset:0;border-radius:50%;background:#0008CF url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 6.2 4.8 8.5 9.5 3.8' fill='none' stroke='white' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 9px no-repeat}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-legende{margin:18px 0 0;font-size:1rem;line-height:1.45;color:#525252}
-
-/* ─── Ce que nous mettons en place : la photo tramée et les trois couches ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-assemblage{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px, 4vw, 64px);align-items:center}
-/* overflow:clip et non hidden (alerte du 15/09) : hidden fait du cadre un conteneur de défilement, et la trame animée
-   par view() s'y accrochait sans jamais avancer. clip coupe pareil, rayon compris, sans créer de conteneur. */
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-photo{position:relative;margin:0;aspect-ratio:4 / 5;border-radius:4px;overflow:clip;background:#0B0C2C}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-photo .tk-trame img{object-position:50% 30%}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-photo .tk-etiquette{position:absolute;top:24px;left:24px;margin:0}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couches{display:grid;gap:14px}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche{display:grid;grid-template-columns:52px minmax(0,1fr);gap:20px;align-items:start;padding:26px 28px 28px;border-radius:16px;background:#FFFFFF;box-shadow:0 0 0 1px rgba(26,26,26,.08), 0 10px 30px rgba(26,26,26,.06);transition:transform .2s cubic-bezier(.22,1,.36,1)}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche:hover{transform:translateY(-3px)}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche-ico{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:#F1EFEA;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche-ico svg{width:26px;height:26px}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche h3{margin:4px 0 14px;font-size:1.375rem;font-weight:500;letter-spacing:-.02em;line-height:1.2;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-pastilles{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-pastilles li{padding:7px 13px;border:1px solid rgba(26,26,26,.10);border-radius:9999px;background:#FFFFFF;font-size:.875rem;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-pastilles .ent-a-trancher{border-style:dashed;color:#6B6B6B}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-a-trancher b{font-weight:500;color:inherit}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche.ent-socle{background:#08093B;box-shadow:0 18px 40px rgba(8,9,59,.22)}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-socle h3{color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-socle .ent-couche-ico{background:rgba(255,255,255,.08);color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-socle .ent-pastilles li{border-color:rgba(255,255,255,.18);background:transparent;color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-socle .ent-pastilles .ent-a-trancher{border-color:rgba(255,255,255,.35);color:rgba(255,255,255,.72)}
-
-/* ─── Tenkara : bento du témoignage et bandeau final ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) #temoignage > .conteneur{padding-bottom:32px}
-/* Bandeau : fond, rembourrage et voile viennent de la couche commune (corrigée le 15/09). Ici, le coin marqué
-   haut-gauche du cadre est masqué, et le titre garde sa taille. */
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-bloc.tk-bandeau > .conteneur::before{display:none}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .tk-bandeau .av-final-titre{font-size:clamp(2rem, 1rem + 2vw, 3rem) !important;font-weight:500 !important;line-height:1.08 !important;letter-spacing:-.03em !important;text-wrap:balance}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .tk-bandeau .tk-trame img{object-position:50% 42%}
-/* La flèche pointillée de la carte crème traversait le dernier zéro de « 19 000 » (plus large que « 106 ») : en haut. */
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .tk-creme .tk-fleche{top:22px;right:22px;bottom:auto}
-
+/* ─── Tablette et téléphone ─── */
 @media (max-width:980px){
-  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-hero{padding:56px 0 64px !important}
-  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-hero-grille{grid-template-columns:minmax(0,1fr)}
-  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-bloc{margin-bottom:72px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-hero + section.ent-bloc{margin-top:72px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-bloc > .conteneur{width:calc(100% - 32px);padding:78px 20px 44px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-collant{grid-template-columns:minmax(0,1fr);gap:36px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-catalogue{max-width:none;justify-self:stretch;gap:8px;padding:12px 12px 26px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-lien{display:none}
-  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-assemblage{grid-template-columns:minmax(0,1fr)}
-  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-photo{aspect-ratio:4 / 3}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.en-s{padding:80px 0 !important}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.en-hero{padding:0 !important}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-conteneur{padding:0 20px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-hero-scene{min-height:560px;padding:72px 20px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-bande{padding:0 16px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-fleches svg{width:56px;height:12px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-titre:not(#_){margin-bottom:44px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-lettre-grille{grid-template-columns:minmax(0,1fr);gap:24px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-illustration{max-width:420px;width:100%;margin:0 auto}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-lettre-texte{max-width:none}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-cartes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;height:auto;margin-top:32px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-carte{position:relative;left:auto;top:auto;width:auto;height:340px;translate:none;rotate:none}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-final-carte{grid-template-columns:minmax(0,1fr);gap:28px;min-height:0;padding:32px 20px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-final-carte::after{background:rgba(8,9,40,.72)}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form:not(#_){padding:22px}
 }
 @media (max-width:560px){
-  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form{padding:22px !important}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-cartes{grid-template-columns:minmax(0,1fr)}
   body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form .paire{grid-template-columns:minmax(0,1fr);gap:0}
-  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche{grid-template-columns:minmax(0,1fr);gap:14px;padding:22px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-verdict{font-size:.75rem}
 }
 
 /* ═══ LE MOUVEMENT ═══ */
 @media (prefers-reduced-motion: no-preference){
-  /* Le haut de page arrive au chargement (courbe de Legora mesurée). */
-  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-hero .t-hero{animation:entArrive .8s cubic-bezier(.625,.05,0,1) both}
-  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.ent-hero .t-hero .attenue{animation:entArrive .8s cubic-bezier(.625,.05,0,1) .09s both}
-  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-lead{animation:entArrive .6s cubic-bezier(.625,.05,0,1) .22s both}
-  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form{animation:entArrive .9s cubic-bezier(.625,.05,0,1) .3s both}
-  @keyframes entArrive{from{opacity:0;translate:0 36px}to{opacity:1;translate:0 0}}
+  /* Le hero arrive au chargement : la trame se resserre, la ligne et la pastille montent. */
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-hero-scene .tk-trame img{animation:enTrame 1.6s cubic-bezier(.22,1,.36,1) .1s both;animation-timeline:auto;animation-range:normal}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-hero-lead{animation:enArrive .8s cubic-bezier(.22,1,.36,1) .45s both}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-pastille{animation:enArrive .8s cubic-bezier(.22,1,.36,1) .6s both}
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-chevrons svg{animation:enChevrons 2.2s ease-in-out infinite}
+  @keyframes enTrame{from{-webkit-mask-size:16px 16px;mask-size:16px 16px;scale:1.12}to{-webkit-mask-size:4px 4px;mask-size:4px 4px;scale:1}}
+  @keyframes enArrive{from{opacity:0;translate:0 18px}}
+  @keyframes enChevrons{0%,100%{translate:0 -4px;opacity:.55}50%{translate:0 4px;opacity:1}}
 
-  @supports (animation-timeline: view()){
-    /* Apparitions au défilement. */
-    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) :is(.ent-titre2, .ent-legende, .ent-photo){animation:entVoir cubic-bezier(.25,.8,.3,1) both;animation-timeline:view();animation-range:entry 5% entry 70%}
-    /* Les couches s'assemblent, de part et d'autre. */
-    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche{animation:entGauche cubic-bezier(.25,.8,.3,1) both;animation-timeline:view();animation-range:entry 0% entry 80%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche:nth-child(2){animation-name:entDroite}
-    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche .ent-pastilles li{animation:entPastille cubic-bezier(.25,.8,.3,1) both;animation-timeline:view();animation-range:entry 20% entry 100%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche .ent-pastilles li:nth-child(2){animation-range:entry 35% cover 20%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-couche .ent-pastilles li:nth-child(3){animation-range:entry 50% cover 24%}
-    /* Les chiffres canon défilent jusqu'à leur valeur (compteurs déclarés sur la page 43), les rayures continuent. */
-    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .av-compte{position:relative;counter-reset:k var(--av-k) u var(--av-u);animation-duration:1ms, 1ms;animation-timing-function:cubic-bezier(.2,.7,.3,1), linear;animation-fill-mode:both, both;animation-timeline:view(), view();animation-range:entry 0% entry 100%, cover 0% cover 100%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .av-compte-texte{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .av-c-19000{--av-k:19;animation-name:entC19, tkRayures}
-    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .av-c-3700{--av-k:3;--av-u:700;animation-name:entC3700, tkRayures}
-    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) :is(.av-c-19000, .av-c-3700)::before{content:counter(k) " " counter(u, av-trois);content:counter(k) " " counter(u, av-trois) / ""}
-    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) :is(.av-c-19000, .av-c-3700).ent-compte-en::before{content:counter(k) "," counter(u, av-trois);content:counter(k) "," counter(u, av-trois) / ""}
-
-    @keyframes entVoir{from{opacity:0;translate:0 32px}to{opacity:1;translate:0 0}}
-    @keyframes entGauche{from{opacity:0;translate:-64px 24px;scale:.96}to{opacity:1;translate:0 0;scale:1}}
-    @keyframes entDroite{from{opacity:0;translate:64px 24px;scale:.96}to{opacity:1;translate:0 0;scale:1}}
-    @keyframes entPastille{from{opacity:0;translate:0 10px}to{opacity:1;translate:0 0}}
-    @keyframes entC19{from{--av-k:0}to{--av-k:19}}
-    @keyframes entC3700{from{--av-k:0;--av-u:0}to{--av-k:3;--av-u:700}}
-
-    /* Le récit collant du catalogue (bureau seulement). */
-    @media (min-width:981px){
-      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-scene{height:250vh;view-timeline-name:--ent-cat}
-      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-collant{position:sticky;top:110px}
-      /* 1. Le catalogue gris est posé dès l'entrée (retour du 15/09 : un panneau vide à l'arrivée). */
-      /* 2. Un seul produit s'allume, les autres s'effacent. */
-      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-tuile:not(.ent-allumee) .ent-tuile-image{animation:entEteinte linear both;animation-timeline:--ent-cat;animation-range:contain 28% contain 38%}
-      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-allumee .ent-tuile-image{animation:entAllume cubic-bezier(.25,.8,.3,1) both;animation-timeline:--ent-cat;animation-range:contain 28% contain 40%}
-      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-allumee img{animation:entCouleur linear both;animation-timeline:--ent-cat;animation-range:contain 28% contain 40%}
-      /* 3. Il reçoit son verdict. */
-      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-verdict{animation:entPuce cubic-bezier(.25,.8,.3,1) both;animation-timeline:--ent-cat;animation-range:contain 40% contain 50%}
-      /* 4. Sa donnée part vers la fiche PLM, posée dès l'entrée, dont les lignes se remplissent et se cochent. */
-      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-lien span{animation:entTrait linear both;animation-timeline:--ent-cat;animation-range:contain 52% contain 62%}
-      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-lien::after{animation:entPoint cubic-bezier(.25,.8,.3,1) both;animation-timeline:--ent-cat;animation-range:contain 60% contain 64%}
-      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-valeur{animation:entBarre cubic-bezier(.25,.8,.3,1) both;animation-timeline:--ent-cat;animation-range:contain 62% contain 72%}
-      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne:nth-child(3) .ent-plm-valeur{animation-range:contain 67% contain 77%}
-      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne:nth-child(4) .ent-plm-valeur{animation-range:contain 72% contain 82%}
-      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne:nth-child(5) .ent-plm-valeur{animation-range:contain 77% contain 87%}
-      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne i::after{animation:entPoint cubic-bezier(.25,.8,.3,1) both;animation-timeline:--ent-cat;animation-range:contain 70% contain 74%}
-      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne:nth-child(3) i::after{animation-range:contain 75% contain 79%}
-      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne:nth-child(4) i::after{animation-range:contain 80% contain 84%}
-      body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-plm-ligne:nth-child(5) i::after{animation-range:contain 85% contain 89%}
-
-      @keyframes entEteinte{from{opacity:1}to{opacity:.62}}
-      @keyframes entAllume{from{box-shadow:0 0 0 0 rgba(0,8,207,0), 0 0 0 rgba(0,8,207,0);scale:1}to{box-shadow:0 0 0 3px #0008CF, 0 18px 40px rgba(0,8,207,.25);scale:1.06}}
-      @keyframes entCouleur{from{filter:grayscale(1) contrast(1.05)}to{filter:grayscale(0) contrast(1)}}
-      @keyframes entPuce{from{opacity:0;scale:.6;translate:0 14px}to{opacity:1;scale:1;translate:0 0}}
-      @keyframes entTrait{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-      @keyframes entPoint{from{opacity:0;scale:.2}to{opacity:1;scale:1}}
-      @keyframes entBarre{from{background-size:0% 100%}to{background-size:100% 100%}}
-    }
+  @supports (animation-timeline: scroll()){
+    /* La bande : le mot glisse vers la gauche pendant qu'on quitte le haut de page. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-bande-mot{animation:enBande linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
+    @keyframes enBande{from{translate:12% 0}to{translate:-22% 0}}
   }
+  @supports (animation-timeline: view()){
+    /* La lettre : l'illustration se pose, les paragraphes montent un à un. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-illustration{animation:enPose cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% cover 40%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-lettre-texte > *{animation:enMonte cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% entry 80%}
+    /* L'éventail : les cartes partent empilées au centre et s'ouvrent ; la preuve et le bouton suivent. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-carte{animation:enEventail cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 10% cover 45%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-preuve{animation:enMonte cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% entry 90%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-valeurs .en-bouton{animation:enMonte cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% entry 90%}
+    /* L'appel final : la carte photo s'ouvre, le formulaire monte. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-final-carte{animation:enCarte cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% entry 60%}
+    @keyframes enPose{from{scale:.9}}
+    @keyframes enMonte{from{opacity:0;translate:0 24px}}
+    @keyframes enEventail{from{translate:-50% 150px;rotate:0deg}}
+    @keyframes enCarte{from{scale:.94}}
+  }
+}
+@media (prefers-reduced-motion: no-preference) and (max-width:980px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-carte{animation:none}
 }
