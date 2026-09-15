@@ -1,0 +1,256 @@
+/* ═══ FICHE PRESTATION « DÉCLARATION DE CONFORMITÉ », FR ET EN ═══ 15/09/2026.
+   Naomie : « reprends chacune des pages dans le design plus moderne, animé, comme ce que tu viens de faire », et
+   « rajoute l'anglais » ; puis la DA Tenkara (« ça j'aime bien, cette DA »).
+   Motifs recopiés des feuilles de la page 43 (v6-zzz-vivant, v6-zzzz-mouvement-43, v6-zzzzz-images-43,
+   v6-zzzzzz-concret-43) et rescopés ici, sans toucher à ces feuilles ; composants communs .tk-* repris de
+   v6-zzzzzzz-tenkara.css (chargée avant celle-ci) :
+   - fond blanc, cadres à filet avec coins marqués et bandeau à cellules, titres 38 px graisse 500 en deux tons ;
+   - grandes images « la masse et l'unique », dont deux tramées ; boutons carrés en capitales ;
+   - récit collant : sur les écouteurs, cinq textes triés (deux s'appliquent, trois non : le rejet), la déclaration
+     se remplit champ par champ, l'expert la relit, la signature reste au fabricant ;
+   - grille Tenkara : citation sur photo tramée, deux chiffres canon qui défilent, une seule carte bleue ;
+   - appel final en bandeau tramé.
+   Mouvement lié au défilement ; sans support ou en « réduire les animations », tout est posé à l'état final.
+   Apparitions en `translate`, survols en `transform` ; aucun !important sur une propriété animée. La barre (capitales,
+   bouton carré) vient de la feuille commune : cette feuille n'y touche pas. */
+
+/* ─── Fond, boutons ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]){background:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section{background:transparent !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-bouton{display:inline-flex;align-items:center;gap:12px;padding:15px 20px 15px 22px;border-radius:4px;background:#0008CF;color:#FFFFFF;font-size:.875rem;font-weight:500;letter-spacing:.07em;line-height:1.2;text-transform:uppercase;transition:background .15s ease-out}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-bouton:hover{background:#0007B5;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) :is(.fx-bouton,.fx-lien) svg{transition:transform .2s cubic-bezier(.22,1,.36,1)}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) :is(.fx-bouton,.fx-lien):hover svg{transform:translateX(4px)}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-lien{display:inline-flex;align-items:center;gap:10px;font-size:.9375rem;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-lien:hover{text-decoration:underline;text-underline-offset:4px}
+
+/* ─── Haut de page : titre à gauche, la grande image en carte sur bande teintée ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-hero{--fx-media-h:clamp(420px, 40vw, 580px);position:relative;width:auto !important;max-width:none !important;margin:0 !important;padding:104px 0 20px !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-hero::before{content:"";position:absolute;left:0;right:0;bottom:0;height:calc(var(--fx-media-h) + 40px);background:#F9F8F6;border-top:1px solid rgba(26,26,26,.08);pointer-events:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-hero > .conteneur{position:relative;z-index:1;max-width:1440px}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-hero .t-hero{margin:0;max-width:1180px !important;font-size:clamp(2.5rem, .8rem + 3.9vw, 4.5rem) !important;font-weight:500 !important;line-height:1.04 !important;letter-spacing:-.042em !important;color:#1A1A1A !important;text-wrap:balance}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-hero .t-hero .attenue{display:block;color:#8F8F8F !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-lead{margin:26px 0 0;max-width:720px;font-size:1.1875rem;line-height:1.5;color:#525252}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px;margin-top:34px}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-a-fixer{display:inline-flex;align-items:center;padding:9px 14px;border:1px dashed rgba(26,26,26,.28);border-radius:9999px;font-size:.875rem;color:#525252}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-media{position:relative;height:var(--fx-media-h);margin:72px 0 0;border:1px solid rgba(26,26,26,.09);border-radius:18px;overflow:hidden;background:#EDEBE6;box-shadow:0 1px 3px rgba(26,26,26,.06), 0 1px 2px -1px rgba(26,26,26,.06)}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-media-photo{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-media-etiquette{position:absolute;top:32px;left:32px;margin:0}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-media-carte{position:absolute;right:48px;bottom:48px;z-index:2;display:flex;align-items:center;gap:14px;padding:18px 26px 18px 18px;border-radius:4px;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 18px 48px rgba(0,0,0,.28)}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-media-carte i{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:50%;background:#0008CF;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-media-carte i svg{width:18px;height:18px}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-media-carte b{display:block;font-size:1.0625rem;font-weight:500;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-media-carte span{display:block;margin-top:2px;font-size:.875rem;color:#6B6B6B}
+
+/* ─── LE CADRE ─── chaque section dans un filet, coins marqués, bandeau à cellules et petit carré en tête. */
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-cadre{padding:0 !important;margin:0 0 120px}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-phrase{margin-top:120px}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-cadre > .conteneur{
+  position:relative;box-sizing:border-box;width:min(1360px, calc(100% - 80px));max-width:none;margin:0 auto;padding:94px 32px 64px;
+  border:1px solid rgba(26,26,26,.10);
+  background:
+    linear-gradient(#1A1A1A, #1A1A1A) right 24px top 12px / 6px 6px no-repeat,
+    repeating-linear-gradient(90deg, rgba(26,26,26,.08) 0 1px, transparent 1px 32px) left top / 257px 30px no-repeat,
+    linear-gradient(rgba(26,26,26,.10), rgba(26,26,26,.10)) left 30px / 100% 1px no-repeat,
+    #FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-cadre > .conteneur::before,
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-cadre > .conteneur::after{content:"";position:absolute;width:9px;height:9px;pointer-events:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-cadre > .conteneur::before{top:-2px;left:-2px;border-top:1.5px solid #1A1A1A;border-left:1.5px solid #1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-cadre > .conteneur::after{right:-2px;bottom:-2px;border-right:1.5px solid #1A1A1A;border-bottom:1.5px solid #1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-titre2{margin:0 0 56px !important;max-width:1040px !important;font-size:clamp(1.75rem, 1rem + 1.5vw, 2.375rem) !important;font-weight:500 !important;line-height:1.14 !important;letter-spacing:-.025em !important;color:#1A1A1A !important;text-wrap:balance}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-titre2 .attenue{display:inline !important;color:#8F8F8F !important}
+
+/* ─── La phrase, sur papier quadrillé ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-phrase > .conteneur{padding:150px 32px 120px;text-align:center;
+  background:
+    linear-gradient(#1A1A1A, #1A1A1A) right 24px top 12px / 6px 6px no-repeat,
+    repeating-linear-gradient(90deg, rgba(26,26,26,.08) 0 1px, transparent 1px 32px) left top / 257px 30px no-repeat,
+    linear-gradient(rgba(26,26,26,.10), rgba(26,26,26,.10)) left 30px / 100% 1px no-repeat,
+    linear-gradient(rgba(26,26,26,.045) 1px, transparent 1px) 0 31px / 32px 32px,
+    linear-gradient(90deg, rgba(26,26,26,.045) 1px, transparent 1px) 0 31px / 32px 32px,
+    #F9F8F6}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-phrase-texte{margin:0 auto !important;max-width:1000px !important;font-size:clamp(2rem, 1rem + 2.9vw, 3.625rem) !important;font-weight:500 !important;line-height:1.08 !important;letter-spacing:-.035em !important;color:#1A1A1A !important;text-wrap:balance}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-raisons{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:44px 0 0;padding:0;list-style:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-raisons li{padding:10px 18px;border:1px solid rgba(26,26,26,.12);border-radius:9999px;background:#FFFFFF;font-size:.9375rem;color:#1A1A1A}
+
+/* ─── Le récit : le produit, le tri des textes, la déclaration ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-collant{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px, 4vw, 64px);align-items:center}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-produit{position:relative;height:min(700px, calc(100vh - 190px));min-height:540px;margin:0;border-radius:16px;overflow:hidden;background:#EDEBE6}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-produit img{display:block;width:100%;height:100%;object-fit:cover;object-position:58% 32%}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-textes{position:absolute;left:24px;bottom:24px;display:grid;gap:10px;justify-items:start;margin:0;padding:0;list-style:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-in{display:inline-flex;align-items:center;gap:10px;padding:8px 10px 8px 8px;border-radius:9999px;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.22);font-size:.9375rem;color:#1A1A1A;white-space:nowrap}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-in i{display:grid;place-items:center;flex:none;width:24px;height:24px;border-radius:50%;background:#0008CF;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-non .fx-in i{background:#C9C5BD}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-in i svg{width:12px;height:12px}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-in b{font-weight:500}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-in small{font-size:.8125rem;color:#6B6B6B}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-in em{padding:3px 9px;border-radius:9999px;background:#EFF0FF;color:#0008CF;font-size:.75rem;font-style:normal;font-weight:500}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-non .fx-in{opacity:.78}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-non .fx-in b{text-decoration:line-through;text-decoration-color:rgba(26,26,26,.45)}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-non .fx-in em{background:#F1EFEA;color:#6B6B6B}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-etapes{margin:0 0 26px;padding:0;list-style:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-etapes li{display:flex;align-items:baseline;gap:14px;padding:10px 0;border-bottom:1px solid rgba(26,26,26,.08);font-size:clamp(1.25rem, .9rem + .8vw, 1.625rem);font-weight:500;letter-spacing:-.02em;line-height:1.2;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-etapes li:last-child{border-bottom:0}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-etapes span{font-size:.8125rem;font-weight:400;letter-spacing:0;color:#8F8F8F;font-variant-numeric:tabular-nums}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-doc{border-radius:4px;overflow:hidden;background:#FFFFFF;box-shadow:0 0 0 1px rgba(26,26,26,.08), 0 18px 44px rgba(26,26,26,.10)}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-doc-tete{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 12px;padding:16px 20px;border-bottom:1px solid rgba(26,26,26,.08);background:#FBFAF8}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-doc-tete b{font-size:1rem;font-weight:500;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-doc-tete span{font-size:.75rem;letter-spacing:.07em;text-transform:uppercase;color:#6B6B6B}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-doc-ligne{display:grid;grid-template-columns:110px minmax(0,1fr);gap:14px;padding:11px 20px;border-bottom:1px solid rgba(26,26,26,.06);font-size:.875rem}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-doc-ligne span{color:#8F8F8F}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-doc-ligne b{display:block;font-weight:500;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-doc-pied{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px 16px}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-tampon{display:inline-flex;align-items:center;gap:8px;padding:6px 12px 6px 6px;border-radius:9999px;background:#EFF0FF;color:#0008CF;font-size:.8125rem;font-weight:500}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-tampon i{display:grid;place-items:center;width:20px;height:20px;border-radius:50%;background:#0008CF;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-tampon svg{width:10px;height:10px}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-signature{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border:1.5px dashed rgba(26,26,26,.28);border-radius:4px;font-size:.8125rem;color:#6B6B6B}
+
+/* ─── Ce que comprend la prestation : la photo tramée et les pastilles ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-inclus{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px, 5vw, 80px);align-items:center}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-inclus-image{position:relative;aspect-ratio:4 / 4.6;border-radius:4px;overflow:hidden;background:#0B0C2C}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-inclus .fx-titre2{margin-bottom:32px !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-pastilles{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-pastilles li{padding:10px 16px;border:1px solid rgba(26,26,26,.10);border-radius:9999px;background:#FFFFFF;font-size:.9375rem;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-pastilles em{margin-left:6px;padding:2px 8px;border-radius:9999px;background:#EFF0FF;color:#0008CF;font-size:.75rem;font-style:normal;font-weight:500}
+
+/* ─── Témoignage en grille Tenkara ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-bento > .conteneur{padding-bottom:32px}
+
+/* ─── Questions ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-faq .reponse{max-width:760px}
+
+/* ─── Appel final : bandeau tramé ─── le cadre de cette feuille pèse plus lourd que la mise en page commune du
+   bandeau ; on la rétablit ici, et le pseudo-élément ::after (coin marqué, masqué par overflow) redevient le voile. */
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-cadre.tk-bandeau > .conteneur{display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;align-content:center;gap:0;min-height:clamp(440px, 40vw, 580px);padding:64px 32px;overflow:hidden;text-align:center;border-color:#0B0C2C;background:#0B0C2C}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-cadre.tk-bandeau > .conteneur::after{inset:0;z-index:1;width:auto;height:auto;border:0;background:radial-gradient(ellipse at center, rgba(8,9,40,.62) 0%, rgba(8,9,40,.34) 70%)}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .tk-bandeau .av-final-titre{font-size:clamp(2rem, 1rem + 2vw, 3rem) !important;font-weight:500 !important;line-height:1.08 !important;letter-spacing:-.03em !important;text-wrap:balance}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-bandeau-actions{position:relative;z-index:2;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 26px}
+body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-lien-blanc{color:#FFFFFF}
+
+@media (max-width:980px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-hero{--fx-media-h:360px;padding:56px 0 16px !important}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-hero::before{height:calc(var(--fx-media-h) + 32px)}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-media{margin-top:44px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-media-etiquette{top:16px;left:16px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-media-carte{left:16px;right:16px;bottom:16px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-cadre{margin-bottom:72px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-phrase{margin-top:72px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-cadre > .conteneur{width:calc(100% - 32px);padding:78px 20px 44px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-phrase > .conteneur{padding:96px 20px 80px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-cadre.tk-bandeau > .conteneur{padding:56px 20px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-titre2{margin-bottom:36px !important}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-collant{grid-template-columns:minmax(0,1fr);gap:28px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-produit{height:480px;min-height:0}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-textes{left:12px;right:12px;bottom:12px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-in{flex-wrap:wrap;gap:6px 8px;padding:6px 10px 6px 6px;font-size:.8125rem;white-space:normal}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-in i{width:20px;height:20px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-doc-ligne{grid-template-columns:92px minmax(0,1fr)}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-inclus{grid-template-columns:minmax(0,1fr)}
+}
+
+/* Compteurs : syntaxe déclarée hors de toute condition (sans effet si rien ne les anime). */
+@property --fx-k{syntax:'<integer>';inherits:false;initial-value:0}
+@property --fx-u{syntax:'<integer>';inherits:false;initial-value:0}
+@counter-style fx-trois{system:extends decimal;pad:3 "0"}
+
+/* ═══ LE MOUVEMENT ═══ */
+@media (prefers-reduced-motion: no-preference){
+
+  /* Le haut de page arrive au chargement (courbe de Legora mesurée). */
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-hero :is(.t-hero, .fx-lead, .fx-actions){animation:fxArrive .7s cubic-bezier(.625,.05,0,1) both}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-hero .t-hero{animation-duration:.8s}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-hero .fx-lead{animation-delay:.16s}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) main > section.fx-hero .fx-actions{animation-delay:.24s}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-media{animation:fxArrive .9s cubic-bezier(.625,.05,0,1) .32s both}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-media-carte{animation:fxCarte .7s cubic-bezier(.625,.05,0,1) .9s both}
+  @keyframes fxArrive{from{opacity:0;translate:0 36px}to{opacity:1;translate:0 0}}
+  @keyframes fxCarte{from{opacity:0;translate:0 24px;scale:.94}to{opacity:1;translate:0 0;scale:1}}
+
+  @supports (animation-timeline: view()){
+    /* Apparitions au défilement, sur les éléments marqués. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) :is(.fx-titre2, .fx-apparait){animation:fxVoir cubic-bezier(.25,.8,.3,1) both;animation-timeline:view();animation-range:entry 5% entry 70%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-raisons li:nth-child(2){animation-range:entry 12% entry 77%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-raisons li:nth-child(3){animation-range:entry 19% entry 84%}
+
+    /* La phrase : les mots foncent un à un. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-phrase-texte{view-timeline-name:--fx-phrase}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-mot{animation:fxMot linear both;animation-timeline:--fx-phrase;animation-range:cover calc(18% + var(--i) * 3%) cover calc(26% + var(--i) * 3%)}
+
+    /* Le récit colle à l'écran pendant les quatre étapes. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-scene{height:300vh;view-timeline-name:--fx-recit}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-collant{position:sticky;top:110px}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-produit img{animation:fxZoom linear both;animation-timeline:--fx-recit;animation-range:contain 0% contain 100%}
+    /* Les étapes s'allument. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-etapes li{animation:fxEtape linear both;animation-timeline:--fx-recit;animation-range:contain 0% contain 8%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-etapes li:nth-child(2){animation-range:contain 14% contain 22%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-etapes li:nth-child(3){animation-range:contain 48% contain 56%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-etapes li:nth-child(4){animation-range:contain 74% contain 82%}
+    /* 01 : la déclaration arrive. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-doc{animation:fxVoir cubic-bezier(.25,.8,.3,1) both;animation-timeline:--fx-recit;animation-range:contain 0% contain 10%}
+    /* 02 : les cinq textes arrivent, puis le tri : deux s'appliquent, trois non. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-textes li{animation:fxPuce cubic-bezier(.25,.8,.3,1) both;animation-timeline:--fx-recit;animation-range:contain 15% contain 21%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-textes li:nth-child(2){animation-range:contain 18% contain 24%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-textes li:nth-child(3){animation-range:contain 21% contain 27%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-textes li:nth-child(4){animation-range:contain 24% contain 30%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-textes li:nth-child(5){animation-range:contain 27% contain 33%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-in i svg{animation:fxApparaitSeul linear both;animation-timeline:--fx-recit;animation-range:contain 36% contain 42%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-oui .fx-in i{animation:fxBleu linear both;animation-timeline:--fx-recit;animation-range:contain 36% contain 42%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-in em{animation:fxVerdict cubic-bezier(.25,.8,.3,1) both;animation-timeline:--fx-recit;animation-range:contain 38% contain 44%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-non .fx-in{animation:fxEcarte linear both;animation-timeline:--fx-recit;animation-range:contain 40% contain 46%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-non .fx-in b{animation:fxBarre linear both;animation-timeline:--fx-recit;animation-range:contain 40% contain 46%}
+    /* 03 : l'agent rédige, champ par champ. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-doc-ligne b{animation:fxTape linear both;animation-timeline:--fx-recit;animation-range:contain 50% contain 55%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-doc-ligne:nth-child(3) b{animation-range:contain 54% contain 59%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-doc-ligne:nth-child(4) b{animation-range:contain 58% contain 64%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-doc-ligne:nth-child(5) b{animation-range:contain 63% contain 68%}
+    /* 04 : l'expert relit ; la signature reste au fabricant et s'éclaire à la fin. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-tampon{animation:fxTampon cubic-bezier(.25,.8,.3,1) both;animation-timeline:--fx-recit;animation-range:contain 76% contain 84%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-signature{animation:fxSigne linear both;animation-timeline:--fx-recit;animation-range:contain 86% contain 96%}
+
+    /* La photo tramée des inclus : le cadre s'ouvre (la trame elle-même vient de la feuille commune). */
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-inclus-image{animation:fxRideau cubic-bezier(.25,.8,.3,1) both;animation-timeline:view();animation-range:entry 0% entry 70%}
+
+    /* Les chiffres canon défilent jusqu'à leur valeur ; les rayures communes continuent de glisser. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-compte{counter-reset:k var(--fx-k) u var(--fx-u)}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-compte-texte{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-c-106{--fx-k:106;animation:tkRayures linear both, fxC106 cubic-bezier(.2,.7,.3,1) both;animation-timeline:view(), view();animation-range:cover 0% cover 100%, entry 0% entry 100%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-c-3700{--fx-k:3;--fx-u:700;animation:tkRayures linear both, fxC3700 cubic-bezier(.2,.7,.3,1) both;animation-timeline:view(), view();animation-range:cover 0% cover 100%, entry 0% entry 100%}
+    body[data-cleo-ds="v6"][data-v6-page="38-service"] .fx-c-106::before{content:counter(k);content:counter(k) / ""}
+    body[data-cleo-ds="v6"][data-v6-page="38-service"] .fx-c-3700::before{content:counter(k) " " counter(u, fx-trois);content:counter(k) " " counter(u, fx-trois) / ""}
+    body[data-cleo-ds="v6"][data-v6-page="38-service-en"] .fx-c-106::before{content:counter(k);content:counter(k) / ""}
+    body[data-cleo-ds="v6"][data-v6-page="38-service-en"] .fx-c-3700::before{content:counter(k) "," counter(u, fx-trois);content:counter(k) "," counter(u, fx-trois) / ""}
+
+    @keyframes fxVoir{from{opacity:0;translate:0 32px}to{opacity:1;translate:0 0}}
+    @keyframes fxMot{from{color:#D9D6CF}to{color:#1A1A1A}}
+    @keyframes fxZoom{from{scale:1.2}to{scale:1}}
+    @keyframes fxEtape{from{color:#D3CFC7}to{color:#1A1A1A}}
+    @keyframes fxPuce{from{opacity:0;scale:.7;translate:0 16px}to{opacity:1;scale:1;translate:0 0}}
+    @keyframes fxApparaitSeul{from{opacity:0}to{opacity:1}}
+    @keyframes fxBleu{from{background-color:#C9C5BD}to{background-color:#0008CF}}
+    @keyframes fxVerdict{from{opacity:0;scale:.6}to{opacity:1;scale:1}}
+    @keyframes fxEcarte{from{opacity:1}to{opacity:.78}}
+    @keyframes fxBarre{from{text-decoration-color:transparent}to{text-decoration-color:rgba(26,26,26,.45)}}
+    @keyframes fxTape{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+    @keyframes fxTampon{from{opacity:0;scale:.5}to{opacity:1;scale:1}}
+    @keyframes fxSigne{from{border-color:rgba(26,26,26,.28);color:#6B6B6B;background-color:transparent}to{border-color:#0008CF;color:#0008CF;background-color:#EFF0FF}}
+    @keyframes fxRideau{from{clip-path:inset(0 0 30% 0)}to{clip-path:inset(0 0 0 0)}}
+    @keyframes fxC106{from{--fx-k:0}to{--fx-k:106}}
+    @keyframes fxC3700{from{--fx-k:0;--fx-u:0}to{--fx-k:3;--fx-u:700}}
+  }
+}
+
+/* Téléphone : pas de scène collante, le récit est posé à son état final. */
+@media (prefers-reduced-motion: no-preference) and (max-width:980px){
+  @supports (animation-timeline: view()){
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-scene{height:auto}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-collant{position:static}
+    body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) :is(.fx-produit img, .fx-etapes li, .fx-doc, .fx-textes li, .fx-in, .fx-in i, .fx-in i svg, .fx-in em, .fx-in b, .fx-doc-ligne b, .fx-tampon, .fx-signature){animation:none !important}
+  }
+}
+
+/* Intégrateur, 15/09/2026 : à 390 px, la pastille « Basse tension » passait sur deux lignes. Au téléphone, le numéro
+   de directive se retire des pastilles (il reste dans la déclaration). */
+@media (max-width:560px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-textes small{display:none}
+  body[data-cleo-ds="v6"]:is([data-v6-page="38-service"],[data-v6-page="38-service-en"]) .fx-textes .fx-in{flex-wrap:nowrap;white-space:nowrap}
+}

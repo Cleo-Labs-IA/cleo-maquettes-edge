@@ -83,7 +83,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 
     /* ═══ 3. LES CHIFFRES DÉFILENT ═══ */
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .av-compte{position:relative;counter-reset:k var(--av-k) u var(--av-u);animation-duration:1ms;animation-timing-function:cubic-bezier(.2,.7,.3,1);animation-fill-mode:both;animation-timeline:view();animation-range:entry 10% cover 48%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .av-compte-texte{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .av-compte-texte{position:absolute;width:1px;height:1px;overflow:clip;clip-path:inset(50%);white-space:nowrap}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .av-c-106{--av-k:106;animation-name:avC106}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .av-c-25000{--av-k:25;animation-name:avC25}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .av-c-19000{--av-k:19;animation-name:avC19}
