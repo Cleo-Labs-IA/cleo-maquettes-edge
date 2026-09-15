@@ -1,0 +1,342 @@
+/* ═══ PAGE DATA (39, FR et EN) : COMPOSITION DE MOONLIT, DA CLEO ═══ 15/09/2026, agent « data ».
+   Consignes successives de Naomie :
+   - reprendre chaque page dans le design plus moderne et animé de la page 43, rajouter l'anglais ;
+   - la DA Tenkara (composants communs .tk-* dans v6-zzzzzzz-tenkara.css) ;
+   - puis « https://www.moonlit.ai/mcp pour la partie data, fais comme eux » (reference_moonlit_competitor), qui passe
+     AVANT la grille Tenkara.
+   On reprend la COMPOSITION de Moonlit, jamais sa DA : Satoshi, zéro serif, zéro violet, bleu #0008CF, fond blanc,
+   un seul champ #08093B (la section « L'IA ne devine plus »). Cadres à filet de la page 43, étiquettes et boutons
+   Tenkara, bandeau final tramé.
+   Ordre : hero en deux colonnes avec schéma animé (nœud Cleo, pastille MCP, courbes tracées, points qui voyagent) ;
+   clients MCP cités par le README du dépôt legal-mcp ; trois étapes ; skills ; section sombre avec l'appel d'outil
+   qui s'écrit et les chiffres canon ; couverture en panneau 3D qui se redresse et références reliées ; l'offre
+   telle qu'écrite ; bandeau final.
+   Mouvement : chargement pour le haut de page, défilement (animation-timeline) pour le reste. Tout finit avant le
+   tiers bas de l'écran. Sans support ou en « réduire les animations » : tout est posé, rien ne bouge. Les calques
+   décoratifs animés portent aria-hidden. Limité aux pages 39-data et 39-data-en. */
+
+/* ─── Fond, barre, boutons ─── la forme du bouton de la barre (capitales, carré) vient de v6-zzzzzzz-tenkara.css. */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]){background:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section{background:transparent !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .nav{background:#FFFFFF;border-bottom:1px solid rgba(26,26,26,.08) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .nav .conteneur{max-width:1440px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .nav .btn-marque{background:#0008CF !important;color:#FFFFFF !important;border-color:#0008CF !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .nav .btn-marque:hover{background:#0007B5 !important;border-color:#0007B5 !important}
+
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-gris{color:#8F8F8F}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-boutons{display:flex;flex-wrap:wrap;align-items:stretch;gap:12px;margin-top:34px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-bouton{display:inline-flex;align-items:center;gap:12px;padding:14px 18px 14px 20px;border-radius:4px;background:#0008CF;color:#FFFFFF;font-size:.875rem;font-weight:500;line-height:1.2;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;transition:background .15s ease-out}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-bouton:hover{background:#0007B5;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-bouton svg{transition:transform .2s cubic-bezier(.22,1,.36,1)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-bouton:hover svg{transform:translateX(4px)}
+/* Le petit bouton blanc carré de Tenkara, posé sur fond clair : il prend un filet pour exister. */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .tk-bouton.dt-tk-contour{border:1px solid rgba(26,26,26,.18);text-decoration:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-boutons .tk-bouton{padding:14px 16px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-point{display:inline-block;flex:none;width:8px;height:8px;border-radius:50%;background:#4D57FF;box-shadow:0 0 0 4px rgba(77,87,255,.18)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(#brancher,#etapes,#skills,#methode,#couverture,#offre,#contact){scroll-margin-top:96px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ico{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:4px;background:#F1EFEA;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ico svg{width:22px;height:22px}
+
+/* ─── 1. Haut de page : titre à gauche, schéma à droite ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-hero{position:relative;width:auto !important;max-width:none !important;margin:0 !important;padding:88px 0 64px !important;border-radius:0 !important;box-shadow:none !important;overflow:visible !important;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-hero::before,
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-hero::after{display:none !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-hero > .conteneur{position:relative;z-index:1;max-width:1440px;text-align:left !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-hero-grille{display:grid;grid-template-columns:minmax(0,1fr) 560px;gap:56px;align-items:center}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-h1{margin:0;max-width:760px;font-size:clamp(2.5rem, 1rem + 3.4vw, 4.5rem);font-weight:500;line-height:1.03;letter-spacing:-.045em;color:#1A1A1A;text-wrap:balance}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-h1 .dt-gris{display:block}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-lead{margin:26px 0 0;max-width:600px;font-size:1.125rem;line-height:1.5;color:#6B6B6B}
+
+/* Le schéma, sur une scène fixe de 560 × 440 : les chemins des points et les traits partagent les mêmes coordonnées. */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-schema{position:relative;width:560px;height:440px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-schema-traits{position:absolute;inset:0;width:560px;height:440px;overflow:visible}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-trait{fill:none;stroke:rgba(0,8,207,.3);stroke-width:1.5}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-noeud{position:absolute;left:26px;top:176px;display:grid;place-items:center;width:88px;height:88px;border-radius:50%;background:#FFFFFF;box-shadow:0 0 0 1px rgba(26,26,26,.08), 0 16px 40px rgba(0,8,207,.18)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-noeud img{width:54px;height:auto}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-noeud-nom{position:absolute;left:0;top:272px;width:140px;text-align:center;font-size:.75rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#6B6B6B}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-mcp{position:absolute;left:158px;top:205px;display:grid;place-items:center;width:64px;height:30px;border:1px solid rgba(0,8,207,.28);border-radius:4px;background:#FFFFFF;font-size:.75rem;font-weight:500;letter-spacing:.08em;color:#0008CF}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client{position:absolute;left:380px;top:calc(var(--y) - 22px);display:flex;align-items:center;gap:10px;box-sizing:border-box;width:180px;height:44px;padding:0 14px;border:1px solid rgba(26,26,26,.09);border-radius:4px;background:#FFFFFF;box-shadow:0 6px 18px rgba(26,26,26,.06);font-size:.875rem;font-weight:500;color:#1A1A1A;white-space:nowrap}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client i{position:relative;flex:none;width:22px;height:22px;border-radius:4px;background:#F1EFEA}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client i::after{content:"";position:absolute;inset:6px;border:1.5px solid #8F8F8F;border-radius:50%}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-voyageur{position:absolute;left:0;top:0;width:8px;height:8px;border-radius:50%;background:#0008CF;box-shadow:0 0 0 4px rgba(0,8,207,.14);opacity:0;offset-rotate:0deg}
+/* Les points passent sous le nœud et la pastille MCP. */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dt-noeud,.dt-mcp){z-index:2}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-voyageur{z-index:1}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-v1{offset-path:path("M114 220 L222 220 C300 220 300 40 380 40")}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-v2{offset-path:path("M114 220 L222 220 C300 220 300 184 380 184")}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-v3{offset-path:path("M114 220 L222 220 C300 220 300 328 380 328")}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-v4{offset-path:path("M114 220 L222 220 C300 220 300 400 380 400")}
+
+/* ─── LE CADRE ─── chaque section dans un filet, coins marqués, bandeau à cellules et petit carré en tête. */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre{padding:0 !important;margin:0 0 120px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre > .conteneur{
+  position:relative;box-sizing:border-box;width:min(1360px, calc(100% - 80px));max-width:none;margin:0 auto;padding:94px 32px 64px;
+  border:1px solid rgba(26,26,26,.10);
+  background:
+    linear-gradient(#1A1A1A, #1A1A1A) right 24px top 12px / 6px 6px no-repeat,
+    repeating-linear-gradient(90deg, rgba(26,26,26,.08) 0 1px, transparent 1px 32px) left top / 257px 30px no-repeat,
+    linear-gradient(rgba(26,26,26,.10), rgba(26,26,26,.10)) left 30px / 100% 1px no-repeat,
+    #FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre > .conteneur::before,
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre > .conteneur::after{content:"";position:absolute;width:9px;height:9px;pointer-events:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre > .conteneur::before{top:-2px;left:-2px;border-top:1.5px solid #1A1A1A;border-left:1.5px solid #1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre > .conteneur::after{right:-2px;bottom:-2px;border-right:1.5px solid #1A1A1A;border-bottom:1.5px solid #1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-h2{margin:0 0 56px;max-width:1040px;font-size:clamp(1.75rem, 1rem + 1.5vw, 2.375rem);font-weight:500;line-height:1.14;letter-spacing:-.025em;color:#1A1A1A;text-wrap:balance}
+
+/* ─── 2. Brancher Cleo : six cartes, noms en texte, pictogramme neutre ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-clients{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client-carte{display:grid;grid-template-columns:44px minmax(0,1fr);gap:6px 16px;align-content:start;padding:24px;border:1px solid rgba(26,26,26,.09);border-radius:4px;background:#FFFFFF;transition:transform .2s cubic-bezier(.22,1,.36,1)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client-carte:hover{transform:translateY(-3px)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client-carte .dt-ico{grid-row:1 / span 2}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client-carte b{align-self:end;font-size:1.125rem;font-weight:500;letter-spacing:-.015em;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client-carte p{margin:0;font-size:.9375rem;line-height:1.45;color:#6B6B6B}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client-generique{border-style:dashed;background:#F9F8F6}
+
+/* ─── 3. Trois étapes ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin:0;padding:0;list-style:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes::before{content:"";position:absolute;left:18px;right:33%;top:18px;height:1px;background:rgba(26,26,26,.14);transform-origin:left}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes li{position:relative}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-num{position:relative;display:grid;place-items:center;width:36px;height:36px;margin-bottom:26px;border-radius:4px;background:#1A1A1A;color:#FFFFFF;font-size:.9375rem;font-weight:500;font-variant-numeric:tabular-nums}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes b{display:block;margin-bottom:10px;font-size:1.375rem;font-weight:500;letter-spacing:-.02em;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes p{margin:0;max-width:340px;font-size:.9375rem;line-height:1.5;color:#6B6B6B}
+
+/* ─── 4. Skills ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-skill{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:26px;border:1px solid rgba(26,26,26,.09);border-radius:4px;background:#FFFFFF;color:#1A1A1A;text-decoration:none;transition:transform .2s cubic-bezier(.22,1,.36,1), border-color .15s ease}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-skill:hover{transform:translateY(-3px);border-color:rgba(26,26,26,.24);color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-skill-nom{margin-top:18px;font-size:1.125rem;font-weight:500;letter-spacing:-.01em;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-skill p{margin:0 0 8px;font-size:.9375rem;line-height:1.45;color:#6B6B6B}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-skill .tk-bouton{margin-top:auto}
+
+/* ─── 5. La section sombre, le seul champ #08093B de la page ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-sombre > .conteneur{border-color:#08093B;color:#FFFFFF;
+  background:
+    linear-gradient(#FFFFFF, #FFFFFF) right 24px top 12px / 6px 6px no-repeat,
+    repeating-linear-gradient(90deg, rgba(255,255,255,.10) 0 1px, transparent 1px 32px) left top / 257px 30px no-repeat,
+    linear-gradient(rgba(255,255,255,.12), rgba(255,255,255,.12)) left 30px / 100% 1px no-repeat,
+    #08093B}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-sombre-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(40px, 5vw, 80px);align-items:start}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-sombre .tk-etiquette{margin-bottom:26px;font-size:.8125rem}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-sombre .dt-h2{margin-bottom:22px;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-sombre .dt-h2 .dt-gris{color:rgba(255,255,255,.58)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-sombre .dt-lead{margin:0 0 36px;color:rgba(255,255,255,.72)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-publie-titre{margin-bottom:14px;font-size:.75rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-sources{display:flex;flex-wrap:wrap;gap:8px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-sources .pl-n{margin:0;padding:8px 12px;border:1px solid rgba(255,255,255,.18);border-radius:4px;background:rgba(255,255,255,.06);box-shadow:none;font-size:.8125rem;line-height:1.3;color:rgba(255,255,255,.86)}
+/* L'appel d'outil : Satoshi à chiffres tabulaires, jamais de monospace. */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel{padding:22px 24px 18px;border:1px solid rgba(255,255,255,.14);border-radius:6px;background:rgba(255,255,255,.05);font-variant-numeric:tabular-nums}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-tete{display:flex;align-items:center;gap:10px;margin-bottom:14px;font-size:.75rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dt-appel-question,.dt-appel-source,.dt-appel-rejet){display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;padding:11px 14px;border-radius:4px;background:rgba(255,255,255,.08);font-size:.9375rem}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dt-appel-question,.dt-appel-source,.dt-appel-rejet) span{color:rgba(255,255,255,.62)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dt-appel-question,.dt-appel-source,.dt-appel-rejet) b{font-weight:500;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-fleche{margin:10px 0 8px 4px;font-size:.8125rem;color:rgba(255,255,255,.62)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle{padding:16px 18px 10px;border-radius:4px;background:#FFFFFF;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle .t-h3{margin:0 0 8px;font-size:1rem;font-weight:500;line-height:1.3;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle .pl-champ{display:grid;grid-template-columns:92px minmax(0,1fr);gap:14px;padding:8px 0;border-top:1px solid rgba(26,26,26,.08);border-bottom:0;font-size:.875rem;text-align:left}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle .pl-champ span{color:#737373}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle .pl-champ b{font-weight:500;text-align:left;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-rejet s{text-decoration:none;color:rgba(255,255,255,.62);background:linear-gradient(currentColor, currentColor) left 55% / 100% 1.5px no-repeat}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-rejet .dt-statut{margin-left:auto;padding:4px 10px;border-radius:2px;background:rgba(255,255,255,.12);font-size:.75rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.8)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-pied{margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,.12);font-size:.8125rem;color:rgba(255,255,255,.62)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-compteurs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:64px;border-top:1px solid rgba(255,255,255,.14)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-compteurs > div{padding:30px 16px 0;text-align:center}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-compteurs b{position:relative;display:block;font-size:clamp(2.25rem, 1.25rem + 2.4vw, 3.5rem);font-weight:500;line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums;white-space:nowrap;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-compteurs > div > span{display:block;margin-top:12px;font-size:.9375rem;color:rgba(255,255,255,.68)}
+
+/* ─── 6. La couverture : panneau incliné qui se redresse, puis les références reliées ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-couv{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(40px, 5vw, 80px);align-items:center}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-couv .dt-h2{margin-bottom:20px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-couv .dt-lead{margin:0 0 28px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-scene3d{perspective:1400px;perspective-origin:50% 40%}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-panneau3d{padding:18px;border:1px solid rgba(26,26,26,.10);border-radius:6px;background:#FFFFFF;box-shadow:0 40px 80px rgba(8,9,59,.12), 0 2px 6px rgba(8,9,59,.06);transform-origin:50% 60%}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays li{display:grid;justify-items:center;gap:6px;padding:18px 8px 16px;border-radius:4px;background:#F9F8F6;text-align:center}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays b{display:grid;place-items:center;width:52px;height:52px;border:1px solid rgba(26,26,26,.12);border-radius:50%;background:#FFFFFF;font-size:.9375rem;font-weight:500;letter-spacing:.04em;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays span{font-size:.75rem;line-height:1.3;color:#6B6B6B}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays .dt-pays-total{background:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays .dt-pays-total b{border-color:rgba(255,255,255,.3);background:transparent;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays .dt-pays-total span{color:rgba(255,255,255,.72)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-reliee{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(40px, 5vw, 80px);align-items:center;margin:64px -32px -64px;padding:48px 32px 40px;background:#F9F8F6;border-top:1px solid rgba(26,26,26,.10)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-h3{margin:0 0 12px;font-size:1.5rem;font-weight:500;letter-spacing:-.02em;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-reliee p{margin:0;max-width:420px;font-size:1rem;line-height:1.5;color:#6B6B6B}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-graphe{display:block;width:100%;height:auto;overflow:visible}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-graphe line{stroke:rgba(26,26,26,.28);stroke-width:1.2}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-graphe circle{fill:#FFFFFF;stroke:#1A1A1A;stroke-width:1.4}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-graphe .dt-graphe-centre{fill:#0008CF;stroke:#0008CF}
+
+/* ─── 7. L'offre : trois cartes blanches sur zone teintée ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-offre{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0 -32px -64px;padding:24px;background:#F9F8F6;border-top:1px solid rgba(26,26,26,.10)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-offre-carte{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:28px;border:1px solid rgba(26,26,26,.09);border-radius:4px;background:#FFFFFF;transition:transform .2s cubic-bezier(.22,1,.36,1)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-offre-carte:hover{transform:translateY(-3px)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-offre-carte > b{margin-top:32px;font-size:1.25rem;font-weight:500;letter-spacing:-.02em;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-offre-carte p{margin:0;font-size:.9375rem;line-height:1.5;color:#6B6B6B}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-afixer{margin-top:4px;padding:5px 12px;border:1px dashed rgba(26,26,26,.3);border-radius:2px;font-size:.8125rem;color:#6B6B6B}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-afixer b{font-weight:500;color:#1A1A1A}
+
+/* ─── 8. Appel final : le bandeau Tenkara ─── le cadre de la page le repeindrait en blanc ; on lui rend son fond et
+   son voile (le coin marqué ::after devient le voile, masqué par overflow). */
+/* overflow:clip et non hidden : un parent en hidden devient un conteneur de défilement, et la trame animée par
+   view() s'y accroche puis reste figée (mesuré sur la page 37 le 15/09). */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre.tk-bandeau > .conteneur{display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;align-content:center;gap:0;min-height:clamp(440px, 40vw, 580px);padding:64px 32px;overflow:clip;text-align:center;border-color:#0B0C2C;background:#0B0C2C}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre.tk-bandeau > .conteneur::after{inset:0;width:auto;height:auto;border:0;z-index:1;background:radial-gradient(ellipse at center, rgba(8,9,40,.62) 0%, rgba(8,9,40,.34) 70%)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .tk-bandeau .tk-trame img{object-position:50% 72%}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .tk-bandeau .av-final-titre{font-size:clamp(2rem, 1rem + 2.4vw, 3.25rem);font-weight:500;line-height:1.08;letter-spacing:-.03em;text-wrap:balance}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .tk-bandeau .tk-bouton{text-decoration:none}
+
+/* ─── Tablette et téléphone ─── */
+@media (max-width:1240px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-hero-grille{grid-template-columns:minmax(0,1fr) 448px;gap:40px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-schema{zoom:.8}
+}
+@media (max-width:980px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-hero{padding:48px 0 40px !important}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-hero-grille{grid-template-columns:minmax(0,1fr);gap:36px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-schema{zoom:.6;margin:0 auto}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre{margin-bottom:72px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre > .conteneur{width:calc(100% - 32px);padding:78px 20px 44px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-h2{margin-bottom:36px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-clients{grid-template-columns:repeat(2,minmax(0,1fr))}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dt-skills,.dt-sombre-grille,.dt-couv,.dt-reliee){grid-template-columns:minmax(0,1fr)}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-compteurs{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:44px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-compteurs > div{padding:24px 8px 8px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-reliee{gap:24px;margin:44px -20px -44px;padding:32px 20px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-offre{grid-template-columns:minmax(0,1fr);margin:0 -20px -44px;padding:16px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre.tk-bandeau > .conteneur{min-height:480px;padding:56px 20px}
+}
+@media (max-width:760px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes{grid-template-columns:minmax(0,1fr);gap:28px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes::before{display:none}
+}
+@media (max-width:560px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-clients{grid-template-columns:minmax(0,1fr)}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-panneau3d{padding:12px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-compteurs b{font-size:2rem}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle .pl-champ{grid-template-columns:78px minmax(0,1fr);gap:10px}
+}
+
+/* ─── Compteurs : syntaxe déclarée hors condition (sans effet si rien ne les anime) ─── */
+@property --dt-k{syntax:'<integer>';inherits:false;initial-value:0}
+@property --dt-u{syntax:'<integer>';inherits:false;initial-value:0}
+@counter-style dt-trois{system:extends decimal;pad:3 "0"}
+
+/* ═══ LE MOUVEMENT ═══ */
+@media (prefers-reduced-motion: no-preference){
+
+  /* Le haut de page arrive au chargement ; le schéma se trace, les points voyagent de Cleo vers les assistants. */
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-hero .dt-h1{animation:dtArrive .8s cubic-bezier(.625,.05,0,1) both}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-hero .dt-h1 .dt-gris{animation:dtArrive .8s cubic-bezier(.625,.05,0,1) .09s both}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-hero .dt-lead{animation:dtArrive .6s cubic-bezier(.625,.05,0,1) .2s both}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-hero .dt-boutons{animation:dtArrive .6s cubic-bezier(.625,.05,0,1) .28s both}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-noeud{animation:dtPop .6s cubic-bezier(.25,.8,.3,1) .3s both}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-noeud-nom{animation:dtFondu .5s ease-out .5s both}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-mcp{animation:dtPop .5s cubic-bezier(.25,.8,.3,1) .7s both}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-trait{stroke-dasharray:320;animation:dtTraitCharge 1.1s cubic-bezier(.625,.05,0,1) .55s both}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-trait:nth-child(n+2){animation-delay:.85s}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-trait:nth-child(n+4){animation-delay:.95s}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-trait:nth-child(n+6){animation-delay:1.05s}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client{animation:dtPop .5s cubic-bezier(.25,.8,.3,1) 1.1s both}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client:nth-of-type(2){animation-delay:1.18s}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client:nth-of-type(3){animation-delay:1.26s}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client:nth-of-type(4){animation-delay:1.34s}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client:nth-of-type(5){animation-delay:1.42s}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client:nth-of-type(6){animation-delay:1.5s}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-voyageur{animation:dtVoyage 3.4s cubic-bezier(.45,0,.55,1) 1.8s infinite}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-v2{animation-delay:2.7s}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-v3{animation-delay:3.5s}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-v4{animation-delay:4.4s}
+
+  @keyframes dtArrive{from{opacity:0;translate:0 36px}to{opacity:1;translate:0 0}}
+  @keyframes dtFondu{from{opacity:0}to{opacity:1}}
+  @keyframes dtPop{from{opacity:0;scale:.6}to{opacity:1;scale:1}}
+  @keyframes dtTraitCharge{from{stroke-dashoffset:320}to{stroke-dashoffset:0}}
+  @keyframes dtVoyage{0%{offset-distance:0%;opacity:0}12%{opacity:1}86%{opacity:1}100%{offset-distance:100%;opacity:0}}
+  @keyframes dtEcrit{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+
+  @supports (animation-timeline: view()){
+
+    /* Titres et cartes arrivent à leur entrée dans l'écran, en cascade. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dt-h2, .dt-h3, .dt-client-carte, .dt-skill, .dt-offre-carte, .dt-couv .dt-lead, .dt-couv .tk-bouton, .dt-reliee p){animation:dtVoir cubic-bezier(.25,.8,.3,1) both;animation-timeline:view();animation-range:entry 5% entry 70%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dt-client-carte, .dt-skill, .dt-offre-carte):nth-child(3n+2){animation-range:entry 12% entry 77%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dt-client-carte, .dt-skill, .dt-offre-carte):nth-child(3n){animation-range:entry 19% entry 84%}
+    @keyframes dtVoir{from{opacity:0;translate:0 32px}to{opacity:1;translate:0 0}}
+
+    /* Les trois étapes : le fil se tire, les numéros s'allument l'un après l'autre. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes{view-timeline-name:--dt-etapes}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes::before{animation:dtFil linear both;animation-timeline:--dt-etapes;animation-range:entry 20% cover 40%}
+    @keyframes dtFil{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes li{animation:dtVoir cubic-bezier(.25,.8,.3,1) both;animation-timeline:--dt-etapes;animation-range:entry 10% entry 80%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes li:nth-child(2){animation-range:entry 25% entry 95%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes li:nth-child(3){animation-range:entry 40% cover 35%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-num{animation:dtNum linear both;animation-timeline:--dt-etapes;animation-range:entry 30% cover 30%}
+    @keyframes dtNum{0%{background:#1A1A1A}50%{background:#0008CF}100%{background:#1A1A1A}}
+
+    /* Les sources publiées s'allument. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-sources .pl-n{animation:dtSource linear both;animation-timeline:view();animation-range:entry 0% entry 100%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-sources .pl-n:nth-child(even){animation-range:entry 20% cover 30%}
+    @keyframes dtSource{0%{opacity:0;translate:0 10px}50%{opacity:1;translate:0 0;background:rgba(77,87,255,.3);border-color:rgba(77,87,255,.7)}100%{opacity:1;translate:0 0;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18)}}
+
+    /* L'appel d'outil s'écrit ligne par ligne : la question, la règle encodée, sa source, puis le rejet. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel{view-timeline-name:--dt-appel}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dt-appel-question, .dt-appel-fleche, .dt-regle, .dt-appel-source, .dt-appel-rejet, .dt-appel-pied){animation:dtLigne cubic-bezier(.25,.8,.3,1) both;animation-timeline:--dt-appel}
+    @keyframes dtLigne{from{opacity:0;translate:0 12px}to{opacity:1;translate:0 0}}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-question{animation-range:cover 6% cover 12%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-question b{display:inline-block;animation:dtEcrit linear both;animation-timeline:--dt-appel;animation-range:cover 9% cover 15%}
+    /* Dans l'appel, les lignes sont toutes des div : la 1re flèche est la 3e div, la 2e la 5e, la 3e la 7e. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-fleche:nth-of-type(3){animation-range:cover 13% cover 16%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle{animation-range:cover 15% cover 21%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle .pl-champ b{display:inline-block;animation:dtEcrit linear both;animation-timeline:--dt-appel;animation-range:cover 18% cover 22%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle .pl-champ:nth-child(3) b{animation-range:cover 20% cover 24%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle .pl-champ:nth-child(4) b{animation-range:cover 22% cover 26%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle .pl-champ:nth-child(5) b{animation-range:cover 24% cover 28%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle .pl-champ:nth-child(6) b{animation-range:cover 26% cover 30%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-fleche:nth-of-type(5){animation-range:cover 28% cover 31%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-source{animation-range:cover 30% cover 34%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-fleche:nth-of-type(7){animation-range:cover 33% cover 36%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-rejet{animation-range:cover 35% cover 39%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-rejet s{animation:dtBarre linear both;animation-timeline:--dt-appel;animation-range:cover 38% cover 42%}
+    @keyframes dtBarre{from{background-size:0% 1.5px}to{background-size:100% 1.5px}}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-pied{animation-range:cover 41% cover 45%}
+
+    /* Les chiffres canon défilent jusqu'à leur valeur. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-compte{counter-reset:dtk var(--dt-k) dtu var(--dt-u);animation-duration:1ms;animation-timing-function:cubic-bezier(.2,.7,.3,1);animation-fill-mode:both;animation-timeline:view();animation-range:entry 0% entry 100%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-compte-texte{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-c-106{--dt-k:106;animation-name:dtC106}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-c-25000{--dt-k:25;animation-name:dtC25}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-c-19000{--dt-k:19;animation-name:dtC19}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-c-3700{--dt-k:3;--dt-u:700;animation-name:dtC3700}
+    body[data-cleo-ds="v6"][data-v6-page="39-data"] .dt-c-106::before{content:counter(dtk);content:counter(dtk) / ""}
+    body[data-cleo-ds="v6"][data-v6-page="39-data"] :is(.dt-c-25000, .dt-c-19000, .dt-c-3700)::before{content:counter(dtk) " " counter(dtu, dt-trois);content:counter(dtk) " " counter(dtu, dt-trois) / ""}
+    body[data-cleo-ds="v6"][data-v6-page="39-data-en"] .dt-c-106::before{content:counter(dtk);content:counter(dtk) / ""}
+    body[data-cleo-ds="v6"][data-v6-page="39-data-en"] :is(.dt-c-25000, .dt-c-19000, .dt-c-3700)::before{content:counter(dtk) "," counter(dtu, dt-trois);content:counter(dtk) "," counter(dtu, dt-trois) / ""}
+    @keyframes dtC106{from{--dt-k:0}to{--dt-k:106}}
+    @keyframes dtC25{from{--dt-k:0}to{--dt-k:25}}
+    @keyframes dtC19{from{--dt-k:0}to{--dt-k:19}}
+    @keyframes dtC3700{from{--dt-k:0;--dt-u:0}to{--dt-k:3;--dt-u:700}}
+
+    /* La couverture : le panneau incliné se redresse, les pastilles de pays s'allument. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-panneau3d{animation:dtRedresse linear both;animation-timeline:view();animation-range:entry 0% cover 42%}
+    @keyframes dtRedresse{from{transform:rotateX(24deg) rotateY(-20deg) rotateZ(3deg) scale(.92)}to{transform:none}}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-scene3d{view-timeline-name:--dt-scene}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays li{animation:dtPop cubic-bezier(.25,.8,.3,1) both;animation-timeline:--dt-scene;animation-range:cover 10% cover 18%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays li:nth-child(4n+2){animation-range:cover 12% cover 20%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays li:nth-child(4n+3){animation-range:cover 14% cover 22%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays li:nth-child(4n){animation-range:cover 16% cover 24%}
+
+    /* Les références se relient. */
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-graphe{view-timeline-name:--dt-graphe}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-graphe line{stroke-dasharray:240;animation:dtLien linear both;animation-timeline:--dt-graphe;animation-range:cover 12% cover 34%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-graphe line:nth-of-type(3n+2){animation-range:cover 18% cover 40%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-graphe line:nth-of-type(3n){animation-range:cover 24% cover 46%}
+    @keyframes dtLien{from{stroke-dashoffset:240}to{stroke-dashoffset:0}}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-graphe circle{transform-box:fill-box;transform-origin:center;animation:dtPop cubic-bezier(.25,.8,.3,1) both;animation-timeline:--dt-graphe;animation-range:cover 8% cover 20%}
+  }
+}
+
+/* Téléphone : pas de points qui voyagent sur le schéma réduit ; l'appel d'outil s'anime ligne à ligne à sa propre entrée. */
+@media (prefers-reduced-motion: no-preference) and (max-width:980px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-voyageur{display:none}
+  @supports (animation-timeline: view()){
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dt-appel-question, .dt-appel-question b, .dt-appel-fleche, .dt-regle, .dt-regle .pl-champ b, .dt-appel-source, .dt-appel-rejet, .dt-appel-rejet s, .dt-appel-pied){animation-timeline:view();animation-range:entry 0% entry 100%}
+  }
+}

@@ -1,206 +1,222 @@
 <!--NAV-->
 
-<!-- ═══ HERO ═══ maquette d'exemple du 14/09/2026 : l'entrée Data. Réunion du jour :
-     « comme c'est maintenant, avec un espace pour les développeurs », cible les
-     legaltechs et les logiciels qui ont besoin de la donnée. L'offre elle-même
-     (quoi, à qui, à quel prix) n'est pas écrite : checklist dat-1. -->
-<section class="sur-sombre" style="background:linear-gradient(180deg,var(--ink-deep-2) 0%,var(--ink-deep) 100%);padding:88px 0">
-  <div class="conteneur centre" style="background:transparent">
-    <h1 class="t-hero mesure-centree" style="max-width:920px;">
-      Data. <span class="attenue">La donnée réglementaire produit, prête à brancher.</span>
-    </h1>
-    <p class="t-lead mesure-centree" style="margin-top:20px">
-      Les règles produit de 106 pays, rattachées à leur article et à leur date d'entrée en vigueur, pour les
-      logiciels qui en ont besoin.
-    </p>
-    <div class="rang-boutons" style="margin-top:30px">
-      <a class="btn btn-marque" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Parler à l'équipe Data</a>
-      <a class="btn btn-contour" href="26-legal-data.html">Voir la couverture</a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ POUR QUI ═══ les quatre chiffres sont ceux que l'accueil validé sert déjà. -->
-<section class="section" style="padding-top:88px">
+<!-- ═══ HERO ═══ 15/09/2026, composition de moonlit.ai/mcp (« fais comme eux », reference_moonlit_competitor), DA Cleo
+     (feuille commun/lanes/v6-zzzzzzzz-39-data.css). Titre formulé à partir des phrases déjà présentes sur la page.
+     Le schéma ne nomme que les clients cités par le README du dépôt Cleo-Labs-IA/legal-mcp (Claude.ai et Claude
+     Desktop, Cursor, Cline, Continue, Claude Code), plus « tout client MCP ». Décor animé : aria-hidden. -->
+<section class="dt-hero">
   <div class="conteneur">
-    <div class="bf-intro">
-      <div class="surtitre" style="margin-bottom:12px">Pour qui ?</div>
-      <p class="t-lead" style="margin:0">Les legaltechs et les éditeurs de logiciels qui ont besoin de la règle
-      produit à jour, avec sa source.</p>
-    </div>
-    <div class="data-chiffres" data-anim-groupe>
-      <div data-anim="monte-court"><b>106</b><span>pays suivis</span></div>
-      <div data-anim="monte-court"><b>25 000</b><span>réglementations indexées</span></div>
-      <div data-anim="monte-court"><b>19 000</b><span>autorités suivies</span></div>
-      <div data-anim="monte-court"><b>3 700</b><span>sources officielles</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ NOTRE MÉTHODE ═══ 14/09/2026 : reprise VERBATIM de l'accueil, qui ne la porte plus. l'encodage, remonté AVANT les key features
-     le 01/09 : la méthode se dit avant les fonctions. Brief du 28/08 : les données de conformité produit sont
-     dispersées dans les journaux officiels et chez les autorités de marché ;
-     Cleo les encode dans une interface unique. L'animation fait comprendre le
-     passage d'une réglementation à une règle encodée.
-     ⚠️ Naomie référençait une image d'exemple qui n'est pas passée dans le
-     message : la composition est construite sur sa description, à confirmer.
-     Le moteur d'animation est celui du chantier (mouvement.js, révélation au
-     défilement) : on ne réécrit pas de moteur. Aucun chiffre dans ce bloc. -->
-<section class="section sur-sombre acc-methode">
-  <div class="conteneur">
-
-    <div class="entete-section centre" data-anim="monte" style="align-items:center">
-      <div class="surtitre">Notre méthode</div>
-      <h2 class="t-display mesure-centree">Le texte est dispersé. La règle est au même endroit.</h2>
-      <p class="t-lead mesure-centree" style="margin-top:18px">
-        Les données de conformité produit vivent dans les journaux officiels, chez les autorités de
-        marché, dans les projets de texte et les consultations. Cleo les encode dans une interface unique.
-      </p>
-    </div>
-
-    <div class="pipeline" data-anim-groupe>
-
-      <div class="pl-etage">
-        <div class="pl-tete"><span class="pl-num">01</span><span class="t-label">Ce qui est publié</span></div>
-        <div class="pl-noeuds">
-          <div class="pl-n" data-anim="monte-court">Journal officiel de l'Union européenne</div>
-          <div class="pl-n" data-anim="monte-court">Autorité de surveillance du marché</div>
-          <div class="pl-n" data-anim="monte-court">Projet de texte en consultation</div>
-          <div class="pl-n" data-anim="monte-court">Annexe modifiée</div>
-          <div class="pl-n" data-anim="monte-court">Avis d'organisme notifié</div>
-          <div class="pl-n" data-anim="monte-court">Norme harmonisée</div>
+    <div class="dt-hero-grille">
+      <div class="dt-hero-texte">
+        <h1 class="dt-h1">Data. <span class="dt-gris">La donnée réglementaire produit, dans l'IA que vous utilisez déjà.</span></h1>
+        <p class="dt-lead">Les règles produit de 106 pays, rattachées à leur article et à leur date d'entrée en vigueur, par API ou par serveur MCP.</p>
+        <div class="dt-boutons">
+          <a class="dt-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Parler à l'équipe Data <svg viewBox="0 0 26 14" width="26" height="14" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="tk-bouton dt-tk-contour" href="26-legal-data.html">Voir la couverture <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </div>
       </div>
-
-      <div class="pl-lien pl-lien-faisceau" aria-hidden="true">
-        <svg viewBox="0 0 60 230" preserveAspectRatio="none" fill="none">
-          <path d="M0 20 C34 20 26 115 60 115" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M0 58 C34 58 26 115 60 115" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M0 96 C34 96 26 115 60 115" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M0 134 C34 134 26 115 60 115" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M0 172 C34 172 26 115 60 115" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M0 210 C34 210 26 115 60 115" stroke="currentColor" stroke-width="1.4"/>
-          <circle cx="57" cy="115" r="3.5" fill="currentColor"/>
+      <div class="dt-schema" aria-hidden="true">
+        <svg class="dt-schema-traits" viewBox="0 0 560 440" width="560" height="440">
+          <path class="dt-trait" d="M114 220 L158 220"/>
+          <path class="dt-trait" d="M222 220 C300 220 300 40 380 40"/>
+          <path class="dt-trait" d="M222 220 C300 220 300 112 380 112"/>
+          <path class="dt-trait" d="M222 220 C300 220 300 184 380 184"/>
+          <path class="dt-trait" d="M222 220 C300 220 300 256 380 256"/>
+          <path class="dt-trait" d="M222 220 C300 220 300 328 380 328"/>
+          <path class="dt-trait" d="M222 220 C300 220 300 400 380 400"/>
         </svg>
-        <svg class="pl-lien-tel" viewBox="0 0 200 46" fill="none" aria-hidden="true">
-          <path d="M14 2 C14 24 100 18 100 34" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M57 2 C57 24 100 20 100 34" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M100 2 L100 34" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M143 2 C143 24 100 20 100 34" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M186 2 C186 24 100 18 100 34" stroke="currentColor" stroke-width="1.4"/>
-          <circle cx="100" cy="37.5" r="3.5" fill="currentColor"/>
-        </svg>
+        <span class="dt-noeud"><img src="img:cleo-logo" alt=""></span>
+        <span class="dt-noeud-nom">Cleo</span>
+        <span class="dt-mcp">MCP</span>
+        <div class="dt-client" style="--y:40px"><i></i>Claude</div>
+        <div class="dt-client" style="--y:112px"><i></i>Cursor</div>
+        <div class="dt-client" style="--y:184px"><i></i>Cline</div>
+        <div class="dt-client" style="--y:256px"><i></i>Continue</div>
+        <div class="dt-client" style="--y:328px"><i></i>Claude Code</div>
+        <div class="dt-client" style="--y:400px"><i></i>Tout client MCP</div>
+        <span class="dt-voyageur dt-v1"></span><span class="dt-voyageur dt-v2"></span><span class="dt-voyageur dt-v3"></span><span class="dt-voyageur dt-v4"></span>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="pl-etage pl-moteur">
-        <div class="pl-tete"><span class="pl-num">02</span><span class="t-label">L'encodage</span></div>
-        <ol class="pl-etapes">
-          <li data-anim="monte-court"><b>Rattacher</b><span>le texte à la référence qu'il touche</span></li>
-          <li data-anim="monte-court"><b>Isoler</b><span>l'article qui porte l'obligation</span></li>
-          <li data-anim="monte-court"><b>Écrire</b><span>la condition, l'opérateur, le seuil</span></li>
-          <li data-anim="monte-court"><b>Dater</b><span>la parution et l'entrée en vigueur</span></li>
-          <li data-anim="monte-court"><b>Relire</b><span>un expert tranche, puis signe</span></li>
-        </ol>
+<!-- ═══ BRANCHER ═══ « Connect in two clicks » de Moonlit, sans « deux clics » ni badge « Live » : seuls les clients
+     cités par le README de legal-mcp, relevé le 15/09/2026 (gh api repos/Cleo-Labs-IA/legal-mcp/readme). Noms en
+     texte, pictogramme neutre, aucun logo de marque. -->
+<section class="dt-cadre" id="brancher">
+  <div class="conteneur">
+    <h2 class="dt-h2">Branchez Cleo à l'assistant que vous utilisez déjà. <span class="dt-gris">Un serveur MCP, la même donnée partout.</span></h2>
+    <div class="dt-clients">
+      <div class="dt-client-carte"><span class="dt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M6.5 7h.01M9 7h.01"/></svg></span><b>Claude</b><p>Ajoutez Cleo comme connecteur dans Claude.ai ou Claude Desktop.</p></div>
+      <div class="dt-client-carte"><span class="dt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M6.5 7h.01M9 7h.01"/></svg></span><b>Cursor</b><p>Déclarez le serveur dans la configuration MCP de Cursor.</p></div>
+      <div class="dt-client-carte"><span class="dt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M6.5 7h.01M9 7h.01"/></svg></span><b>Cline</b><p>Le serveur MCP standard, branché dans Cline.</p></div>
+      <div class="dt-client-carte"><span class="dt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M6.5 7h.01M9 7h.01"/></svg></span><b>Continue</b><p>Le même serveur, dans Continue.</p></div>
+      <div class="dt-client-carte"><span class="dt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m7 10 3 2-3 2M12.5 14.5h4.5"/></svg></span><b>Claude Code</b><p>Dans le terminal, la donnée arrive dans votre agent de code.</p></div>
+      <div class="dt-client-carte dt-client-generique"><span class="dt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></span><b>Tout client compatible MCP</b><p>Pointez votre client vers le serveur Cleo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TROIS ÉTAPES ═══ cohérent avec le README : une clé d'accès, ou la connexion par navigateur (mode OAuth par
+     défaut), puis le serveur ajouté au client. Ni « gratuit » ni « sans carte bancaire ». La troisième phrase est
+     reprise de l'ancienne page Data. -->
+<section class="dt-cadre" id="etapes">
+  <div class="conteneur">
+    <h2 class="dt-h2">Trois étapes. <span class="dt-gris">De la clé à la première réponse.</span></h2>
+    <ol class="dt-etapes">
+      <li><span class="dt-num">1</span><b>Obtenir une clé</b><p>Une clé d'accès, ou une connexion par navigateur.</p></li>
+      <li><span class="dt-num">2</span><b>Brancher l'assistant</b><p>Ajoutez le serveur Cleo à votre client MCP.</p></li>
+      <li><span class="dt-num">3</span><b>Poser la question</b><p>Chaque réponse cite l'article, jamais un résumé.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═══ SKILLS ═══ trois skills de la page Skills, noms et descriptions repris mot pour mot (pages/25-skills.html). -->
+<section class="dt-cadre" id="skills">
+  <div class="conteneur">
+    <h2 class="dt-h2">Partez d'un skill déjà écrit. <span class="dt-gris">Par famille de produit.</span></h2>
+    <div class="dt-skills">
+      <a class="dt-skill" href="25-skills.html"><span class="dt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z"/><path d="M3 7.5 12 12l9-4.5M12 12v9"/></svg></span><b class="dt-skill-nom">toy-compliance</b><p>Jouets, jeux, puzzles, porteurs</p><span class="tk-bouton dt-tk-contour">Voir les skills <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="dt-skill" href="25-skills.html"><span class="dt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6v4l2 3v10a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V10l2-3z"/><path d="M7 13h10"/></svg></span><b class="dt-skill-nom">cosmetics-compliance</b><p>Cosmétique, soin, capillaire, parfum</p><span class="tk-bouton dt-tk-contour">Voir les skills <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="dt-skill" href="25-skills.html"><span class="dt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3v5M15 3v5M6 8h12v3a6 6 0 0 1-12 0zM12 17v4"/></svg></span><b class="dt-skill-nom">electronics-compliance</b><p>Électronique, objets connectés, appareils sur batterie</p><span class="tk-bouton dt-tk-contour">Voir les skills <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NOTRE MÉTHODE ═══ ⚠️ LE GÉNÉRATEUR DE LA PAGE 43 LIT CE BLOC : garder tels quels, dans cet ordre, les 6
+     « pl-n », le « pl-regle » suivi de son « t-h3 » et les 5 « pl-champ ». Composition de la section sombre de
+     Moonlit (« The LLM stops guessing… »), le seul champ #08093B de la page. Titre formé des phrases déjà sur la
+     page ; l'appel d'outil part d'une question, montre la règle encodée CPSIA, remonte à son article et montre le
+     rejet (la CPSIA, loi fédérale des États-Unis, ne s'applique pas dans l'Union européenne). -->
+<section class="dt-cadre dt-sombre" id="methode">
+  <div class="conteneur">
+    <div class="dt-sombre-grille">
+      <div class="dt-sombre-texte">
+        <p class="tk-etiquette">Notre méthode</p>
+        <h2 class="dt-h2">L'IA ne devine plus. <span class="dt-gris">Elle lit le texte en vigueur et cite l'article.</span></h2>
+        <p class="dt-lead">Le texte est dispersé. La règle est au même endroit.</p>
+        <div class="dt-publie-titre">Ce qui est publié</div>
+        <div class="dt-sources">
+          <div class="pl-n">Journal officiel de l'Union européenne</div>
+          <div class="pl-n">Autorité de surveillance du marché</div>
+          <div class="pl-n">Projet de texte en consultation</div>
+          <div class="pl-n">Annexe modifiée</div>
+          <div class="pl-n">Avis d'organisme notifié</div>
+          <div class="pl-n">Norme harmonisée</div>
+        </div>
       </div>
-
-      <div class="pl-lien" aria-hidden="true">
-        <svg viewBox="0 0 60 230" preserveAspectRatio="none" fill="none">
-          <path d="M0 115 L50 115" stroke="currentColor" stroke-width="1.4"/>
-          <path d="M43 109 L51 115 L43 121" stroke="currentColor" stroke-width="1.4"/>
-        </svg>
-      </div>
-
-      <div class="pl-etage">
-        <div class="pl-tete"><span class="pl-num">03</span><span class="t-label">La règle encodée</span></div>
-        <div class="pl-regle carte-claire" data-anim="monte-court">
+      <div class="dt-appel">
+        <div class="dt-appel-tete"><span class="dt-point"></span>Un appel d'outil</div>
+        <div class="dt-appel-question"><span>question</span><b>Teneur en plomb, article pour enfants, États-Unis</b></div>
+        <div class="dt-appel-fleche">↓ la règle encodée</div>
+        <div class="pl-regle dt-regle">
           <div class="t-h3">Teneur en plomb des parties accessibles</div>
           <div class="pl-champ"><span>champ</span><b>matière accessible</b></div>
           <div class="pl-champ"><span>opérateur</span><b>ne dépasse pas</b></div>
           <div class="pl-champ"><span>seuil</span><b>100 ppm en poids</b></div>
           <div class="pl-champ"><span>article</span><b>CPSIA, section 101 (a)</b></div>
           <div class="pl-champ"><span>en vigueur</span><b>14 août 2011</b></div>
-          <div class="pl-verdict"><span class="pl-pastille"></span>testable sur une référence</div>
         </div>
+        <div class="dt-appel-fleche">↓ l'article qui la fonde</div>
+        <div class="dt-appel-source"><b>CPSIA, section 101 (a)</b><span>en vigueur depuis le 14 août 2011</span></div>
+        <div class="dt-appel-fleche">↓ même question, Union européenne</div>
+        <div class="dt-appel-rejet"><b><s>CPSIA, section 101 (a)</s></b><span class="dt-statut">Ne s'applique pas</span></div>
+        <div class="dt-appel-pied">Chaque champ renvoie à son article.</div>
       </div>
-
+    </div>
+    <div class="dt-compteurs">
+      <div><b class="dt-compte dt-c-106"><span class="dt-compte-texte">106</span></b><span>pays suivis</span></div>
+      <div><b class="dt-compte dt-c-25000"><span class="dt-compte-texte">25 000</span></b><span>réglementations indexées</span></div>
+      <div><b class="dt-compte dt-c-19000"><span class="dt-compte-texte">19 000</span></b><span>autorités suivies</span></div>
+      <div><b class="dt-compte dt-c-3700"><span class="dt-compte-texte">3 700</span></b><span>sources officielles</span></div>
     </div>
   </div>
 </section>
 
-<!-- ═══ DÉVELOPPEURS ═══ l'espace développeurs demandé en réunion. -->
-<section class="section" id="developpeurs">
+<!-- ═══ COUVERTURE ═══ reprise de l'accueil Moonlit : panneau incliné qui se redresse, juridictions en pastilles de
+     codes. Seulement des juridictions déjà nommées sur les pages de la maquette (Union européenne, France, Belgique,
+     Royaume-Uni, États-Unis, Canada, Brésil, Chine, Japon, Corée du Sud, Thaïlande) ; codes UE, UK, US, CA tels
+     qu'écrits sur la maquette ; aucun drapeau. Puis « Chaque référence reliée » : les relations entre textes du
+     README de legal-mcp (modifie, transpose, remplace), en décor aria-hidden. -->
+<section class="dt-cadre" id="couverture">
   <div class="conteneur">
-    <div class="entete-section" data-anim="monte">
-      <div class="surtitre">Développeurs</div>
-      <h2 class="t-display">La règle arrive avec sa source.</h2>
-    </div>
-    <div class="bf-faits" data-anim-groupe>
-      <div class="bf-bloc">
-        <h3 class="t-h2">Par API</h3>
-        <ul class="coches">
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>La règle encodée : la condition, l'opérateur, le seuil</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>L'article et la date d'entrée en vigueur qui la fondent</li>
-        </ul>
+    <div class="dt-couv">
+      <div class="dt-couv-texte">
+        <h2 class="dt-h2">La couverture, pays par pays. <span class="dt-gris">Et par type de produit.</span></h2>
+        <p class="dt-lead">Les autorités suivies pour chaque produit, et la version en vigueur de chaque texte.</p>
+        <a class="tk-bouton dt-tk-contour" href="26-legal-data.html">Voir la couverture <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
-      <div class="bf-bloc">
-        <h3 class="t-h2">Par serveur MCP</h3>
-        <ul class="coches">
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Les agents de vos équipes interrogent la base directement</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Chaque réponse cite l'article, jamais un résumé</li>
-        </ul>
-      </div>
-      <div class="bf-bloc">
-        <h3 class="t-h2">Dans l'explorateur</h3>
-        <ul class="coches">
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>La couverture par pays et par type de produit</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Les autorités suivies pour chaque produit</li>
-        </ul>
-        <a class="cta-texte" href="26-legal-data.html" style="margin-top:18px"><svg class="fleche fl-gauche" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Voir la couverture</span><svg class="fleche fl-droite" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="filet fi-gauche"></span><span class="filet fi-droite"></span></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ L'OFFRE ═══ trois repères, dont deux pas encore tranchés. -->
-<section class="section" style="padding-top:0">
-  <div class="conteneur">
-    <h2 class="t-display" style="margin-bottom:40px">Ce que comprend l'offre Data</h2>
-    <div class="g3" data-anim-groupe>
-      <div class="carte p40 service" data-anim="monte-court">
-        <h3 class="t-h2">Le périmètre</h3>
-        <p class="t-body">Les pays et les familles de produits dont le logiciel a besoin.</p>
-        <div class="service-conditions"><span class="a-fixer">Périmètre <b>à définir</b></span></div>
-      </div>
-      <div class="carte p40 service" data-anim="monte-court">
-        <h3 class="t-h2">L'accès</h3>
-        <p class="t-body">Par API, par serveur MCP, ou les deux.</p>
-      </div>
-      <div class="carte p40 service" data-anim="monte-court">
-        <h3 class="t-h2">Le tarif</h3>
-        <p class="t-body">Le modèle de prix de l'offre Data.</p>
-        <div class="service-conditions"><span class="a-fixer">Tarif <b>à fixer</b></span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ CTA FINAL ═══ -->
-<section class="section" style="padding-top:0">
-  <div class="conteneur">
-    <div class="carte-encre p48" data-anim="monte-court">
-      <div class="cta-final">
-        <img class="portrait" src="img:anaelle" alt="">
-        <div>
-          <h2 class="t-display">La règle, sa source et sa date, au même endroit.</h2>
-          <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap">
-            <a class="btn btn-marque" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Parler à l'équipe Data
-              <span class="rond"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            </a>
-            <a class="btn btn-contour" href="26-legal-data.html">Voir la couverture</a>
-          </div>
+      <div class="dt-scene3d">
+        <div class="dt-panneau3d">
+          <ul class="dt-pays">
+            <li><b>UE</b><span>Union européenne</span></li>
+            <li><b>FR</b><span>France</span></li>
+            <li><b>BE</b><span>Belgique</span></li>
+            <li><b>UK</b><span>Royaume-Uni</span></li>
+            <li><b>US</b><span>États-Unis</span></li>
+            <li><b>CA</b><span>Canada</span></li>
+            <li><b>BR</b><span>Brésil</span></li>
+            <li><b>CN</b><span>Chine</span></li>
+            <li><b>JP</b><span>Japon</span></li>
+            <li><b>KR</b><span>Corée du Sud</span></li>
+            <li><b>TH</b><span>Thaïlande</span></li>
+            <li class="dt-pays-total"><b>106</b><span>pays suivis</span></li>
+          </ul>
         </div>
       </div>
     </div>
+    <div class="dt-reliee">
+      <div class="dt-reliee-texte">
+        <h3 class="dt-h3">Chaque référence reliée.</h3>
+        <p>Chaque texte relié à ceux qu'il modifie, transpose ou remplace.</p>
+      </div>
+      <svg class="dt-graphe" viewBox="0 0 560 240" aria-hidden="true">
+        <line x1="60" y1="130" x2="150" y2="60"/><line x1="60" y1="130" x2="170" y2="190"/><line x1="150" y1="60" x2="270" y2="120"/>
+        <line x1="170" y1="190" x2="270" y2="120"/><line x1="270" y1="120" x2="360" y2="40"/><line x1="270" y1="120" x2="380" y2="200"/>
+        <line x1="360" y1="40" x2="470" y2="110"/><line x1="380" y1="200" x2="470" y2="110"/><line x1="470" y1="110" x2="520" y2="210"/>
+        <line x1="470" y1="110" x2="505" y2="30"/><line x1="150" y1="60" x2="360" y2="40"/><line x1="380" y1="200" x2="520" y2="210"/>
+        <circle cx="60" cy="130" r="7"/><circle cx="150" cy="60" r="7"/><circle cx="170" cy="190" r="7"/><circle class="dt-graphe-centre" cx="270" cy="120" r="10"/>
+        <circle cx="360" cy="40" r="7"/><circle cx="380" cy="200" r="7"/><circle cx="470" cy="110" r="7"/><circle cx="520" cy="210" r="7"/><circle cx="505" cy="30" r="7"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ L'OFFRE ═══ telle qu'elle était déjà écrite : trois repères, dont deux pas encore tranchés (checklist dat-1).
+     Aucun prix : ceux de la Data ne sont pas fixés. -->
+<section class="dt-cadre" id="offre">
+  <div class="conteneur">
+    <h2 class="dt-h2">Ce que comprend l'offre Data.</h2>
+    <div class="dt-offre">
+      <div class="dt-offre-carte">
+        <span class="dt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.5 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.5-3.8-9S9.5 5.5 12 3z"/></svg></span>
+        <b>Le périmètre</b>
+        <p>Les pays et les familles de produits dont le logiciel a besoin.</p>
+        <span class="dt-afixer">Périmètre <b>à définir</b></span>
+      </div>
+      <div class="dt-offre-carte">
+        <span class="dt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3v5M15 3v5M6 8h12v3a6 6 0 0 1-12 0zM12 17v4"/></svg></span>
+        <b>L'accès</b>
+        <p>Par API, par serveur MCP, ou les deux.</p>
+      </div>
+      <div class="dt-offre-carte">
+        <span class="dt-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12.5V4a1 1 0 0 1 1-1h8.5L21 11.5 12.5 20z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></span>
+        <b>Le tarif</b>
+        <p>Le modèle de prix de l'offre Data.</p>
+        <span class="dt-afixer">Tarif <b>à fixer</b></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ APPEL FINAL ═══ bandeau à la Tenkara : la photo tramée des chaînes (le seul maillon bleu), l'étiquette
+     blanche porte la tagline, la phrase au centre, un petit bouton blanc carré. -->
+<section class="dt-cadre tk-bandeau" id="contact">
+  <div class="conteneur">
+    <div class="tk-trame" aria-hidden="true"><img src="img:chaines" alt=""></div>
+    <p class="tk-etiquette">Vendez partout. Conformez-vous partout.</p>
+    <h2 class="av-final-titre">La règle, sa source et sa date, au même endroit.</h2>
+    <a class="tk-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Parler à l'équipe Data <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </section>
 
