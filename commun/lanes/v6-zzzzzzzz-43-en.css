@@ -1,0 +1,8 @@
+/* ═══ PAGE 43 EN ═══ 15/09/2026. Tout le style vient des feuilles de la page 43 (sélecteurs FR et EN).
+   Seule retouche : les compteurs du socle affichent le séparateur de milliers anglais (25,000 et non 25 000),
+   comme le nombre gardé dans la page. Chargée après v6-zzzzzz-concret-43.css, même spécificité. */
+@media (prefers-reduced-motion: no-preference){
+  @supports (animation-timeline: view()){
+    body[data-cleo-ds="v6"][data-v6-page="43-accueil-avant-vendre-en"] :is(.av-c-25000, .av-c-19000, .av-c-3700)::before{content:counter(k) "," counter(u, av-trois);content:counter(k) "," counter(u, av-trois) / ""}
+  }
+}
