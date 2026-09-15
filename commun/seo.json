@@ -1021,6 +1021,20 @@
    "url_source": null,
    "appui_contenu": "15/09/2026 : description = phrase sous le titre de la page, reprise telle quelle (titre de la page : « Enterprise. At the scale of your company. »).",
    "_mesure": "titre 22 caractères, description 92 caractères"
+  },
+  "51-service-mandataire.html": {
+   "titre": "Mandataire dans l'UE | Cleo Labs",
+   "description": "Un opérateur établi dans l'Union pour vendre vos produits en Europe : mandat écrit, adresse, dossier, autorités.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "Fiche du 15/09/2026 sur la structure de ecocomply.ai/eu-authorised-representative (demande de Naomie) ; besoin cité en réunion le 14/09 (représentant UE, prix non arrêté) et au RDV ministère du 15/09."
+  },
+  "51-service-mandataire-en.html": {
+   "titre": "EU authorised representative | Cleo Labs",
+   "description": "An operator established in the Union to sell your products in Europe: written mandate, address, file, authorities.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "Fiche du 15/09/2026 sur la structure de ecocomply.ai/eu-authorised-representative (demande de Naomie) ; besoin cité en réunion le 14/09 (représentant UE, prix non arrêté) et au RDV ministère du 15/09."
   }
  },
  "structure": {

@@ -162,10 +162,13 @@
         var n = enfants[k];
         if (n.nodeType === 3) {
           if (!n.textContent.trim()) continue;
-          var morceaux = n.textContent.split(/(\s+)/), frag = document.createDocumentFragment();
+          // 15/09/2026 : la ponctuation haute du français (« : ; ? ! ») reste collée au mot d'avant par une espace insécable,
+          // sinon le « : » devenait un mot à part et tombait seul en tête de ligne (vu sur la fiche Mandataire).
+          var texte = n.textContent.replace(/[   ]([:;?!»])/g, ' $1').replace(/(«)[   ]/g, '$1 ');
+          var morceaux = texte.split(/([ \t\n\r]+)/), frag = document.createDocumentFragment();
           for (var m = 0; m < morceaux.length; m++) {
             if (!morceaux[m]) continue;
-            if (/^\s+$/.test(morceaux[m])) { frag.appendChild(document.createTextNode(morceaux[m])); continue; }
+            if (/^[ \t\n\r]+$/.test(morceaux[m])) { frag.appendChild(document.createTextNode(morceaux[m])); continue; }
             var s = document.createElement('span');
             s.className = 'mm-mot';
             s.style.setProperty('--i', rang++);

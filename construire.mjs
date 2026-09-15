@@ -52,6 +52,8 @@ const PAGES = [
   { fichier: '49-service-formalites-en.html', titre: 'Service page Administrative formalities EN', source: 'pages/38-service-en.html (template)', en: true },
   { fichier: '50-service-recyclage.html', titre: 'Fiche Recyclage des déchets', source: 'pages/38-service.html (gabarit), 15/09/2026' },
   { fichier: '50-service-recyclage-en.html', titre: 'Service page Waste recycling EN', source: 'pages/38-service-en.html (template)', en: true },
+  { fichier: '51-service-mandataire.html', titre: 'Fiche Mandataire dans l\'UE', source: 'ecocomply.ai/eu-authorised-representative (structure), 15/09/2026' },
+  { fichier: '51-service-mandataire-en.html', titre: 'Service page EU authorised representative EN', source: 'ecocomply.ai/eu-authorised-representative (structure)', en: true },
   { fichier: '39-data-en.html', titre: 'Data EN', source: 'pages/39-data.html', en: true },
   { fichier: '40-enterprise-en.html', titre: 'Enterprise EN', source: 'pages/40-enterprise.html', en: true },
   { fichier: '43-accueil-avant-vendre-en.html', titre: 'Home, before you sell EN', source: 'pages/43-accueil-avant-vendre.html', en: true, pied: 'commun/pied-avant-vendre-en.html' },

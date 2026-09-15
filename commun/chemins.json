@@ -80,6 +80,12 @@
     "50-service-recyclage-en.html": {
       "chemin": "/en/compliance-as-a-service/waste-recycling"
     },
+    "51-service-mandataire.html": {
+      "chemin": "/fr/compliance-as-a-service/mandataire-ue"
+    },
+    "51-service-mandataire-en.html": {
+      "chemin": "/en/compliance-as-a-service/eu-authorised-representative"
+    },
     "39-data.html": {
       "chemin": "/fr/data"
     },
