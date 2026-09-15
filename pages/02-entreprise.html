@@ -1,306 +1,97 @@
 <!--NAV-->
 
-<!-- ═══ HERO PLEINE LARGEUR ═══ photo de fond, voile à gauche, texte posé dessus -->
-<section class="seg sur-sombre" style="position:relative;background:var(--ink-deep);overflow:hidden">
-  <img src="img:chaines" alt="Chaînes d'acier empilées, un maillon bleu au milieu des maillons gris" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 40%;opacity:0.45">
-  <div style="position:absolute;inset:0;background:linear-gradient(90deg,var(--ink-deep) 12%,rgba(15,14,13,0.90) 48%,rgba(15,14,13,0.45) 100%)"></div>
-  <div class="conteneur" style="position:relative;background:transparent;padding-top:112px;padding-bottom:112px">
-    <div style="max-width:600px">
-      <div class="surtitre sur-clair" style="margin-bottom:20px">L'équipe derrière Cleo</div>
-      <h1 class="t-hero">L'infrastructure de la conformité produit. <span class="attenue">Depuis 2023.</span></h1>
-      <p class="t-lead" style="margin:24px 0 32px;max-width:480px">
-        Chaque fonction de l'entreprise a été automatisée, l'une après l'autre.
-        La conformité, non. Elle se faisait encore à la main.
-      </p>
-      <a class="btn btn-marque" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo
-        <span class="rond"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      </a>
+<!-- ═══ HERO ═══ 15/09/2026, design de la page 43 : titre à gauche, média tramé en grande carte. -->
+<section class="section ap-hero">
+  <div class="conteneur">
+    <div class="ap-hero-grille">
+      <div class="ap-hero-texte">
+        <p class="ap-surtitre">L'équipe derrière Cleo</p>
+        <h1 class="ap-h1">L'infrastructure de la conformité produit. <span class="attenue">Depuis 2023.</span></h1>
+        <p class="ap-lead">Chaque fonction de l'entreprise a été automatisée, l'une après l'autre. La conformité, non.</p>
+        <a class="ap-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <span aria-hidden="true">»</span></a>
+      </div>
+      
+    </div>
+    <figure class="ap-hero-media tk-case" aria-hidden="true"><div class="tk-trame"><img src="img:chaines" alt=""></div><p class="tk-etiquette">L'équipe derrière Cleo</p></figure>
+  </div>
+</section>
+
+<!-- ═══ ÉQUIPE ═══ -->
+<section class="section ap-bloc">
+  <div class="conteneur">
+    <h2 class="ap-titre ap-centre">Un juriste et un ingénieur sur le même problème.</h2>
+    <div class="ap-equipe">
+      <figure class="ap-portrait"><div class="ap-portrait-img"><img src="img:anaelle" alt="Portrait de Anaëlle Guez"></div><figcaption><b>Anaëlle Guez</b><span>CEO, cofondatrice</span><a href="https://www.linkedin.com/in/anaelle-guez-ab341746/" target="_blank" rel="noopener">LinkedIn <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></figcaption></figure>
+      <figure class="ap-portrait"><div class="ap-portrait-img"><img src="img:naomie" alt="Portrait de Naomie Halioua"></div><figcaption><b>Naomie Halioua</b><span>CDO, cofondatrice</span><a href="https://www.linkedin.com/in/naomiehalioua/" target="_blank" rel="noopener">LinkedIn <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></figcaption></figure>
+      <figure class="ap-portrait"><div class="ap-portrait-img"><img src="img:alex" alt="Portrait de Alexandre Bloch"></div><figcaption><b>Alexandre Bloch</b><span>CTO</span></figcaption></figure>
+      <figure class="ap-portrait"><div class="ap-portrait-img"><img src="img:darcial-grand" alt="Portrait de Darcial Mondjo"></div><figcaption><b>Darcial Mondjo</b><span>Global Head of Product &amp; Sanitary Compliance</span></figcaption></figure>
+      <figure class="ap-portrait"><div class="ap-portrait-img"><img src="img:thezi-grand" alt="Portrait de Thezi Mabuza"></div><figcaption><b>Thezi Mabuza</b><span>Stalwart in Consumer Protection &amp; Product Safety</span></figcaption></figure>
+      <div class="ap-equipe-mot"><p><b>Et l'équipe</b> qui encode, relit et met à jour les règles chaque semaine.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ═══ TITRE + GRILLE DE PORTRAITS ═══
-     La carte est sombre par la photo dans une section claire : elle porte
-     donc sa propre encre. Avant, le « FR » gardait celle du régime clair
-     et rendait à 1,1:1 (mesuré le 03/09/2026). -->
-<section class="seg section">
+<!-- ═══ CHIFFRES ═══ -->
+<section class="section ap-bloc">
   <div class="conteneur">
-    <div class="entete-section centre" data-anim="monte" style="align-items:center">
-      <h2 class="t-display mesure-centree" style="max-width:820px">Un juriste et un ingénieur sur le même problème.</h2>
-      <p class="t-lead mesure-centree">Ce qui compte le plus, nous l'encodons. Tout ce qui l'entoure, nous le suivons.</p>
+    <h2 class="ap-titre">Ce que le moteur couvre</h2>
+    <div class="tk-bento">
+      <figure class="tk-case tk-photo">
+        <div class="tk-trame" aria-hidden="true"><img src="img:parc-voitures" alt=""></div>
+        <p class="tk-citation">Basées à Neuilly-sur-Seine, au travail sur 106 pays</p>
+        <figcaption class="tk-signature"><span>Cleo Corp SAS, fondée en 2023, société constituée en 2024.</span></figcaption>
+        
+      </figure>
+      <div class="tk-case tk-creme">
+        <svg class="tk-fleche" viewBox="0 0 160 70" aria-hidden="true"><path d="M10 60C52 62 104 50 138 16" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="1 6" stroke-linecap="round"/><path d="M124 13h16l-5 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <b class="tk-chiffre ap-compte ap-c-106"><span class="ap-compte-texte">106</span></b>
+        <span class="tk-legende">pays suivis</span>
+      </div>
+      <div class="tk-case tk-bleu">
+        <div class="tk-tableaux" aria-hidden="true">
+          <div class="tk-tableau"><b>Autorités</b><span><i>suivies</i><i>19 000</i></span></div>
+          <div class="tk-tableau"><b>Règles encodées</b><span><i>condition</i><i>preuve</i></span></div>
+          <div class="tk-tableau"><b>MARIA</b><span><i>veille</i><i>multi-agents</i></span></div>
+        </div>
+        <b class="tk-chiffre ap-compte ap-c-25000"><span class="ap-compte-texte">25 000</span></b>
+        <span class="tk-legende">réglementations indexées</span>
+      </div>
     </div>
-
-    <div class="g3 seg-equipe" data-anim-groupe>
-
-      <div class="seg-portrait">
-        <img src="img:anaelle" alt="Portrait d'Anaëlle Guez">
-        <div class="voile"></div>
-        <div class="bas">
-          <div class="nom">Anaëlle Guez</div>
-          <div class="role">CEO, cofondatrice <a href="https://www.linkedin.com/in/anaelle-guez-ab341746/" target="_blank" rel="noopener">LinkedIn</a></div>
-          <div class="marqueurs">
-            <span class="pilule pilule-contour">Droit</span>
-            <span class="pilule pilule-contour">Ex Havas Group</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="seg-portrait">
-        <img src="img:naomie" alt="Portrait de Naomie Halioua">
-        <div class="voile"></div>
-        <div class="bas">
-          <div class="nom">Naomie Halioua</div>
-          <div class="role">CDO, cofondatrice <a href="https://www.linkedin.com/in/naomiehalioua/" target="_blank" rel="noopener">LinkedIn</a></div>
-          <div class="marqueurs">
-            <span class="pilule pilule-contour">Systèmes multi-agents</span>
-            <span class="pilule pilule-contour">Polytechnique</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="seg-portrait">
-        <img src="img:alex" alt="Portrait d'Alexandre Bloch">
-        <div class="voile"></div>
-        <div class="bas">
-          <div class="nom">Alexandre Bloch</div>
-          <div class="role">CTO</div>
-        </div>
-      </div>
-
-      <div class="seg-portrait">
-        <img src="img:darcial" alt="Portrait de Darcial Mondjo">
-        <div class="voile"></div>
-        <div class="bas">
-          <div class="nom">Darcial Mondjo</div>
-          <div class="role">Global Head of Product &amp; Sanitary Compliance</div>
-        </div>
-      </div>
-
-      <div class="seg-portrait">
-        <img src="img:thezi" alt="Portrait de Thezi Mabuza">
-        <div class="voile"></div>
-        <div class="bas">
-          <div class="nom">Thezi Mabuza</div>
-          <div class="role">Stalwart in Consumer Protection &amp; Product Safety</div>
-        </div>
-      </div>
-
-      <!-- Cellule lavande : la phrase qui tient la grille, sans photo -->
-      <div class="carte-lavande seg-equipe-mot">
-        <div class="avatars" style="margin-bottom:20px">
-          <img src="img:fenetres" alt="Façade d'immeuble la nuit, deux fenêtres éclairées en bleu parmi des dizaines de fenêtres jaunes"><img src="img:pneus" alt="Pneus empilés, un pneu bleu au centre de la pile"><img src="img:briques" alt="Briques de construction grises en vrac, deux briques bleues au milieu">
-        </div>
-        <div class="t-h1 phrase">
-          <b>Et l'équipe</b> qui encode, relit et met à jour les règles chaque semaine.
-        </div>
-        <svg class="orbe" viewBox="0 0 200 200" fill="none" stroke="#08093B" stroke-width="0.6" aria-hidden="true">
-          <circle cx="100" cy="100" r="78"/><ellipse cx="100" cy="100" rx="78" ry="30"/><ellipse cx="100" cy="100" rx="78" ry="56"/>
-          <ellipse cx="100" cy="100" rx="30" ry="78"/><ellipse cx="100" cy="100" rx="56" ry="78"/><line x1="22" y1="100" x2="178" y2="100"/>
-        </svg>
-      </div>
+    <div class="ap-bande-chiffres">
+      <div><b class="tk-chiffre ap-compte ap-c-19000"><span class="ap-compte-texte">19 000</span></b><span>autorités et organismes réglementaires suivis</span></div>
+      <div><b class="tk-chiffre ap-compte ap-c-2812"><span class="ap-compte-texte">2 812</span></b><span>règles encodées, condition et preuve comprises</span></div>
     </div>
   </div>
 </section>
 
-<!-- ═══ LES CHIFFRES, EN ESCALIER ═══ -->
-<section class="seg section" style="padding-top:0">
+<!-- ═══ FINANCEMENT ET PRESSE ═══ -->
+<section class="section ap-bloc">
   <div class="conteneur">
-    <div class="duo" style="align-items:start;margin-bottom:56px">
-      <h2 class="t-display">Ce que le moteur couvre</h2>
-      <div>
-        <p class="t-body" style="margin:0 0 14px">
-          Que vous ouvriez un marché, lanciez une gamme ou repreniez un catalogue existant,
-          la couverture reste la même : les textes en vigueur, les autorités qui les portent, les sources qui les publient.
-        </p>
-        <p class="t-body" style="margin:0">
-          Chiffres de couverture Cleo Labs.
-        </p>
-      </div>
+    <h2 class="ap-titre">1,5 M€ levés en pre-seed, annoncés le 29 avril 2026.</h2>
+    <div class="ap-financement">
+      <ul class="ap-financeurs"><li>Kima Ventures</li><li>La Financière Saint-James</li><li>Larry Berger, fondateur d’Amplify</li></ul>
+      <div class="ap-financement-liens"><span class="ap-etiquette">Lauréate, The Pitch by Deel (Station F, 2026)</span><a class="ap-lien-carre" href="https://www.cleolabs.co/fr/blog/cleo-labs-raises-1-5m-preseed" target="_blank" rel="noopener">Lire l'annonce <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
-
-    <div class="mesures" data-anim-groupe>
-      <div class="ligne"><div class="libelle">Pays dont la réglementation est suivie</div><div class="valeur">106</div></div>
-      <div class="ligne"><div class="libelle">Réglementations indexées, rattachées à leur autorité</div><div class="valeur">25 000</div></div>
-      <div class="ligne"><div class="libelle">Autorités et organismes réglementaires suivis</div><div class="valeur">19 000</div></div>
-      <div class="ligne"><div class="libelle">Règles encodées, condition et preuve comprises</div><div class="valeur">2 812</div></div>
+    <h3 class="ap-sous-titre">Ce qu’on dit de Cleo</h3>
+    <div class="ap-presse">
+      <a class="ap-presse-ligne" href="https://tech.eu/2026/04/29/cleo-labs-secures-eur15m-to-scale-ai-driven-product-compliance-globally/" target="_blank" rel="noopener"><b>Tech.eu</b><span>29 avril 2026</span><svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="ap-presse-ligne" href="https://www.eu-startups.com/2026/04/female-founded-french-startup-cleo-labs-raises-e1-5-million-to-automate-international-product-compliance/" target="_blank" rel="noopener"><b>EU-Startups</b><span>avril 2026</span><svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="ap-presse-ligne" href="https://www.vestbee.com/insights/articles/cleo-labs-raises-1-5-m" target="_blank" rel="noopener"><b>Vestbee</b><span></span><svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="ap-presse-ligne" href="https://fintech.global/2026/04/29/cleo-labs-secures-e1-5m-for-global-product-compliance/" target="_blank" rel="noopener"><b>FinTech Global</b><span>29 avril 2026</span><svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="ap-presse-ligne" href="https://regtechanalyst.com/cleo-labs-raises-e1-5m-to-scale-ai-compliance-platform/" target="_blank" rel="noopener"><b>RegTech Analyst</b><span></span><svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="ap-presse-ligne" href="https://thelegalwire.ai/cleo-labs-raises-e1-5m-to-automate-product-regulatory-compliance-at-a-global-scale/" target="_blank" rel="noopener"><b>The Legal Wire</b><span></span><svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
+    <a class="ap-lien-carre" href="https://www.cleolabs.co/fr/research" target="_blank" rel="noopener">Lire notre article de recherche <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </section>
 
-<!-- ═══ ANCRAGE + PHOTO À CARTES FLOTTANTES ═══
-     Les cartes sont posées sur la photo au-dessus de 900 px et reprennent le
-     fil normal en dessous : en position absolue elles se recouvraient et
-     sortaient du conteneur (344 px de contenu pour 334, mesuré le 03/09). -->
-<section class="seg section sur-clair-fond">
+<!-- ═══ APPEL FINAL ═══ bandeau tramé à la Tenkara : étiquette blanche, phrase, petit bouton carré. -->
+<section class="section ap-bloc ap-final tk-bandeau" id="contact">
   <div class="conteneur">
-    <div class="entete-section centre" data-anim="monte" style="align-items:center">
-      <h2 class="t-display mesure-centree">Basées à Neuilly-sur-Seine, au travail sur 106 pays</h2>
-      <p class="t-lead mesure-centree">Cleo Corp SAS, fondée en 2023, société constituée en 2024.</p>
-    </div>
-
-    <div class="seg-ancrage">
-      <div class="scene" data-anim="grandit" style="aspect-ratio:16/8">
-        <img class="fond" src="img:parc-voitures" alt="Parc de voitures neuves vu du ciel, une seule voiture bleue au milieu des voitures blanches">
-      </div>
-      <div class="seg-ancrage-cartes">
-        <div class="flottant">
-          <span class="jeton" style="background:var(--brand-muted)">ico:euro</span>
-          <span class="t-caption dit">1,5 M€ levés en pre-seed</span>
-        </div>
-        <div class="flottant">
-          <span class="jeton" style="background:var(--accent-muted)">ico:cabinet</span>
-          <span class="t-caption dit">Vu au CES 2026</span>
-        </div>
-        <div class="flottant">
-          <span class="jeton" style="background:var(--brand-muted)">ico:engrenage</span>
-          <span class="t-caption dit">MARIA, architecture multi-agents de veille réglementaire</span>
-        </div>
-      </div>
-      <div class="flottant seg-ancrage-lieu">
-        <span class="t-caption dit"><b>Nous rencontrer</b> à Neuilly-sur-Seine, France</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ LA LEVÉE, LE PRIX, LA PRESSE ═══ relevés sur cleo-landing :
-     company/layout.tsx (montant, financeurs), [locale]/layout.tsx (award),
-     landing/PressSection.tsx (les 6 médias et leurs URL). -->
-<section class="seg section sur-clair-fond" style="padding-top:0">
-  <div class="conteneur">
-
-    <div class="carte" data-anim="monte" style="padding:40px;margin-bottom:72px">
-      <div class="duo" style="align-items:start;gap:64px">
-        <div>
-          <div class="surtitre" style="margin-bottom:18px">Financement</div>
-          <h2 class="t-display">1,5 M€ levés en pre-seed, annoncés le 29 avril 2026.</h2>
-          <div style="margin-top:26px;display:flex;gap:14px;flex-wrap:wrap;align-items:center">
-            <a class="btn btn-contour btn-sm" href="https://www.cleolabs.co/fr/blog/cleo-labs-raises-1-5m-preseed" target="_blank" rel="noopener">Lire l'annonce</a>
-            <span class="pilule t-caption">Lauréate, The Pitch by Deel (Station F, 2026)</span>
-          </div>
-        </div>
-        <div>
-          <div class="t-label" style="margin-bottom:16px">Les financeurs</div>
-          <div class="t-h3" style="margin-bottom:10px">Kima Ventures</div>
-          <div class="t-h3" style="margin-bottom:10px">La Financière Saint-James</div>
-          <div class="t-h3" style="margin-bottom:10px">Larry Berger, fondateur d’Amplify</div>
-          <div class="t-caption" style="margin-top:16px">Tour pre-seed, 1,5 M€.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="entete-section centre" data-anim="monte" style="align-items:center">
-      <div class="surtitre">Dans la presse</div>
-      <h2 class="t-display mesure-centree">Ce qu’on dit de Cleo</h2>
-    </div>
-
-    <div class="g3" data-anim-groupe style="gap:22px">
-      <a class="carte" href="https://tech.eu/2026/04/29/cleo-labs-secures-eur15m-to-scale-ai-driven-product-compliance-globally/" target="_blank" rel="noopener" style="padding:26px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;text-decoration:none">
-        <div class="t-body" style="margin:0;color:var(--c-text)">« Lève 1,5 M€ pour automatiser la conformité produit à l’échelle mondiale »</div>
-        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
-          <span class="t-h3">Tech.eu</span>
-          <span class="t-caption">29 avril 2026</span>
-        </div>
-      </a>
-      <a class="carte" href="https://www.eu-startups.com/2026/04/female-founded-french-startup-cleo-labs-raises-e1-5-million-to-automate-international-product-compliance/" target="_blank" rel="noopener" style="padding:26px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;text-decoration:none">
-        <div class="t-body" style="margin:0;color:var(--c-text)">« La startup française fondée par deux femmes lève 1,5 M€ »</div>
-        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
-          <span class="t-h3">EU-Startups</span>
-          <span class="t-caption">avril 2026</span>
-        </div>
-      </a>
-      <a class="carte" href="https://www.vestbee.com/insights/articles/cleo-labs-raises-1-5-m" target="_blank" rel="noopener" style="padding:26px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;text-decoration:none">
-        <div class="t-body" style="margin:0;color:var(--c-text)">« Construit le système d’exploitation IA de la conformité produit mondiale »</div>
-        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
-          <span class="t-h3">Vestbee</span>
-        </div>
-      </a>
-      <a class="carte" href="https://fintech.global/2026/04/29/cleo-labs-secures-e1-5m-for-global-product-compliance/" target="_blank" rel="noopener" style="padding:26px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;text-decoration:none">
-        <div class="t-body" style="margin:0;color:var(--c-text)">« Lève 1,5 M€ pour la conformité produit mondiale »</div>
-        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
-          <span class="t-h3">FinTech Global</span>
-          <span class="t-caption">29 avril 2026</span>
-        </div>
-      </a>
-      <a class="carte" href="https://regtechanalyst.com/cleo-labs-raises-e1-5m-to-scale-ai-compliance-platform/" target="_blank" rel="noopener" style="padding:26px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;text-decoration:none">
-        <div class="t-body" style="margin:0;color:var(--c-text)">« Lève 1,5 M€ pour faire passer à l’échelle sa plateforme IA »</div>
-        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
-          <span class="t-h3">RegTech Analyst</span>
-        </div>
-      </a>
-      <a class="carte" href="https://thelegalwire.ai/cleo-labs-raises-e1-5m-to-automate-product-regulatory-compliance-at-a-global-scale/" target="_blank" rel="noopener" style="padding:26px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;text-decoration:none">
-        <div class="t-body" style="margin:0;color:var(--c-text)">« Automatise la conformité réglementaire produit à l’échelle mondiale »</div>
-        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px">
-          <span class="t-h3">The Legal Wire</span>
-        </div>
-      </a>
-    </div>
-
-    <div style="max-width:680px;margin:72px auto 0">
-      <a class="ligne-liste" href="https://www.cleolabs.co/fr/research" target="_blank" rel="noopener" style="text-decoration:none">
-        <span class="pilule" style="flex:none">Recherche</span>
-        <div class="principal">
-          <div class="t-h2" style="margin-bottom:4px">Lire notre article de recherche</div>
-          <div class="t-caption">Une approche multi-agents par pipeline pour l’intelligence réglementaire : 19 régions, 8 langues, 30+ appels LLM par exécution.</div>
-        </div>
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!-- ═══ LE TEXTE LONG ═══ -->
-<section class="seg section sur-clair-fond" style="padding-top:0">
-  <div class="conteneur">
-    <div class="duo" style="align-items:start;gap:80px">
-      <div>
-        <h2 class="t-display">La conformité produit tenue, pour que le produit avance.</h2>
-        <div style="display:flex;align-items:center;gap:16px;margin-top:36px">
-          <div class="avatars">
-            <img src="img:anaelle" alt="Anaëlle Guez"><img src="img:naomie" alt="Naomie Halioua"><img src="img:alex" alt="Alexandre Bloch">
-          </div>
-          <span class="t-sm">Écrit par l'équipe Cleo</span>
-        </div>
-      </div>
-      <div>
-        <h3 class="t-h2" style="margin-bottom:22px">Nous prenons la complexité réglementaire à notre charge pour que vos équipes gardent la main sur le produit.</h3>
-        <p class="t-body" style="margin:0 0 16px">
-          Une obligation produit vit dans un texte, souvent long, parfois modifié, presque toujours écrit
-          pour un juriste. Entre ce texte et une référence en catalogue, il y a un travail de lecture,
-          de rattachement et de mise à jour que personne n'a envie de refaire à chaque saison.
-        </p>
-        <p class="t-body" style="margin:0 0 16px">
-          Cleo encode ce travail une fois. Chaque obligation devient une règle testable, avec son opérateur,
-          son seuil, l'article qui la fonde et sa date d'application. Le moteur confronte ensuite ces règles
-          à vos références, et rend ce qui s'applique, avec le texte qui le dit.
-        </p>
-        <p class="t-body" style="margin:0">
-          Vos équipes produit, design et qualité travaillent alors sur une même base, tenue à jour,
-          et gardent le temps pour ce qu'elles savent faire.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ CTA FINAL ═══ -->
-<section class="seg section">
-  <div class="conteneur">
-    <div class="carte-encre p48" data-anim="monte-court">
-      <div class="cta-final">
-        <img class="portrait" src="img:anaelle" alt="Anaëlle Guez, cofondatrice de Cleo Labs">
-        <div>
-          <div class="t-sm" style="margin-bottom:10px"><b>30 minutes</b> pour voir ce qui bloque aujourd'hui</div>
-          <h2 class="t-display">Un nouveau pays n'est plus un projet. C'est une décision.</h2>
-          <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap">
-            <a class="btn btn-marque" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo
-              <span class="rond"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            </a>
-            <a class="btn btn-contour" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Réserver un créneau</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="tk-trame" aria-hidden="true"><img src="img:fenetres" alt=""></div>
+    <p class="tk-etiquette">30 minutes pour voir ce qui bloque aujourd'hui</p>
+    <h2 class="ap-final-titre">Un nouveau pays n'est plus un projet. <span class="attenue">C'est une décision.</span></h2>
+    <a class="tk-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </section>
 

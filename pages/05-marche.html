@@ -1,43 +1,19 @@
 <!--NAV-->
 
-<!-- ═══ HERO : mosaïque de trois images à gauche, formulaire à droite ═══ -->
-<section class="seg section" style="padding:var(--s-64) 0 var(--pad-section-courte)">
+<!-- ═══ HERO ═══ 15/09/2026, design de la page 43 : titre à gauche, média tramé en grande carte. -->
+<section class="section ap-hero ap-hero-form">
   <div class="conteneur">
-    <div class="duo" style="gap:56px;align-items:start">
-      <div>
-        <div class="pilule-dispo" style="margin-bottom:26px">
-          <span class="point"></span> Équipe disponible
-          <span class="sep"></span> Union européenne
-        </div>
-        <h1 class="t-hero">
-          Conformité produit dans l'Union européenne. <span class="attenue">Texte par texte.</span>
-        </h1>
-        <p class="t-lead" style="margin:24px 0 32px;max-width:480px">
-          Vingt-sept États membres, chacun avec ses transpositions et sa langue.
-          Un texte européen ne dit pas encore ce qu'il faut faire à Milan ou à Varsovie.
-        </p>
-
-        <!-- La mosaïque : une grande, deux petites -->
-        <div class="seg-mosaique">
-          <div class="scene pleine" data-anim="grandit" style="aspect-ratio:16/7"><img class="fond" src="img:masse-canette" alt="Canettes grises alignées, une seule canette bleue"></div>
-          <div class="scene" data-anim="grandit" style="aspect-ratio:1/1"><img class="fond" src="img:masse-pile" alt="Piles grises en vrac, une seule pile bleue"></div>
-          <div class="scene" data-anim="grandit" style="aspect-ratio:1/1"><img class="fond" src="img:masse-peluche" alt="Peluches grises entassées, une seule peluche bleue"></div>
-        </div>
+    <div class="ap-hero-grille">
+      <div class="ap-hero-texte">
+        <p class="ap-surtitre">Union européenne</p>
+        <h1 class="ap-h1">Conformité produit dans l'Union européenne. <span class="attenue">Texte par texte.</span></h1>
+        <p class="ap-lead">Vingt-sept États membres, chacun avec ses transpositions et sa langue.</p>
+        
       </div>
-
       <form id="f-demo" method="get" action="https://meetings.hubspot.com/anaelle-guez/rendez-vous" hidden></form>
-      <div class="carte-encre form-carte" data-anim="droite">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px">
-          <div class="avatars"><img src="img:anaelle" alt="Anaëlle Guez"><img src="img:naomie" alt="Naomie Halioua"><img src="img:thezi" alt="Thezi Mabuza"></div>
-          <span class="t-sm">L'équipe qui suit le corpus européen</span>
-        </div>
-        <h2 class="t-h1" style="margin-bottom:22px">Réserver un premier échange</h2>
-        <ul class="coches" style="margin-bottom:28px">
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Les textes européens qui portent sur vos produits</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Les délais et les documents attendus</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Les prochaines étapes pour ouvrir le marché</li>
-        </ul>
-        <div class="paire">
+      <div class="ap-formulaire">
+        <h2 class="ap-form-titre">Réserver un premier échange</h2>
+        <div class="ap-paire">
           <div><label for="f-demo-prenom">Prénom</label><input id="f-demo-prenom" form="f-demo" name="firstname" autocomplete="given-name" type="text" placeholder="Camille"></div>
           <div><label for="f-demo-nom">Nom</label><input id="f-demo-nom" form="f-demo" name="lastname" autocomplete="family-name" type="text" placeholder="Bernard"></div>
         </div>
@@ -45,185 +21,98 @@
         <input id="f-demo-email" form="f-demo" name="email" autocomplete="email" type="email" placeholder="camille@marque.com" required>
         <label for="f-demo-site">Site de la marque</label>
         <input id="f-demo-site" form="f-demo" name="site" autocomplete="organization" type="text" placeholder="marque.com">
-        <button class="btn btn-marque" type="submit" form="f-demo" style="width:100%;justify-content:center;margin-top:6px">Choisir un créneau</button>
+        <button class="ap-bouton ap-bouton-large" type="submit" form="f-demo">Choisir un créneau <span aria-hidden="true">»</span></button>
       </div>
     </div>
+    <figure class="ap-hero-media tk-case" aria-hidden="true"><div class="tk-trame"><img src="img:masse-canette" alt=""></div><p class="tk-etiquette">Union européenne</p></figure>
   </div>
 </section>
 
 <!-- ═══ BANDE LOGOS ═══ -->
-<section class="seg sur-sombre" style="background:linear-gradient(180deg,var(--ink-deep) 0%,var(--ink-deep-2) 100%);padding:64px 0 72px">
+<section class="section ap-logos">
   <div class="conteneur">
-    <div class="centre t-micro" style="letter-spacing:0.12em;text-transform:uppercase;margin-bottom:24px;">
-      Aux côtés de marques et de fabricants internationaux
-    </div>
-    <div class="bande-logos">
-      <div class="cellule"><img src="img:logo-decathlon" alt="Decathlon"></div>
-      <div class="cellule"><img src="img:logo-balzac" alt="Balzac Paris"></div>
-      <div class="cellule"><img src="img:logo-mercedes" alt="Mercedes-Benz"></div>
-      <div class="cellule"><img src="img:logo-loccitane" alt="L'Occitane"></div>
-      <div class="cellule"><img src="img:logo-nvidia" alt="NVIDIA"></div>
+    <p>Aux côtés de marques et de fabricants internationaux</p>
+    <div class="ap-logos-imgs"><img src="img:logo-decathlon" alt="Decathlon"><img src="img:logo-balzac" alt="Balzac Paris"><img src="img:logo-mercedes" alt="Mercedes-Benz"><img src="img:logo-loccitane" alt="L'Occitane"><img src="img:logo-nvidia" alt="NVIDIA"></div>
+  </div>
+</section>
+
+<!-- ═══ QUATRE TEMPS ═══ -->
+<section class="section ap-bloc">
+  <div class="conteneur">
+    <h2 class="ap-titre ap-centre">La mise en conformité, en quatre temps</h2>
+    <div class="ap-alternes">
+      <article class="ap-alterne">
+        <div class="ap-image"><img src="img:masse-detergent" alt="Bidons de lessive gris rangés, un seul bidon bleu"></div>
+        <div class="ap-alterne-texte"><span class="ap-num">01</span><span class="ap-etiquette">Veille offerte</span><h3>Les textes qui arrivent, rattachés à vos produits</h3></div>
+      </article>
+      <article class="ap-alterne ap-inverse">
+        <div class="ap-image"><img src="img:masse-flacon" alt="Flacons gris en rangées, un seul flacon bleu"></div>
+        <div class="ap-alterne-texte"><span class="ap-num">02</span><span class="ap-etiquette">Chat Cleo</span><h3>La question posée, le texte européen en réponse</h3></div>
+      </article>
+      <article class="ap-alterne">
+        <div class="ap-image"><img src="img:masse-couverts" alt="Couverts gris en tas, un seul couvert bleu"></div>
+        <div class="ap-alterne-texte"><span class="ap-num">03</span><span class="ap-etiquette">Data</span><h3>L'obligation européenne écrite sous forme testable</h3></div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ═══ LES QUATRE TEMPS, EN CLAIR ═══ -->
-<section class="seg section fond-lavande">
+<!-- ═══ SCÈNE ═══ la masse et l'unique, en bandeau tramé. -->
+<section class="section ap-bloc ap-scene">
   <div class="conteneur">
-    <div class="entete-section centre" data-anim="monte" style="align-items:center;margin-bottom:32px">
-      <h2 class="t-display mesure-centree" style="max-width:760px">La mise en conformité, en quatre temps</h2>
-      <p class="t-lead mesure-centree">Du relevé des obligations au suivi des textes en préparation.</p>
-    </div>
-
-    <div class="alterne">
-      <div class="texte" data-anim="monte">
-        <span class="etiquette" style="margin-bottom:18px">Veille offerte</span>
-        <h3 class="t-h1" style="margin:18px 0 14px">Les textes qui arrivent, rattachés à vos produits</h3>
-        <p class="t-body" style="margin:0 0 22px">Une parution ne vaut que si elle touche une de vos références. La veille, offerte avec chaque prestation, fait ce rattachement et donne le temps qui reste.</p>
-        <ul class="coches coches-encre">
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Recevez une alerte par gamme, jamais une revue de presse dans 106 pays</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>La date d'application, pas seulement la parution</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Une alerte par gamme, pas une revue de presse</li>
-        </ul>
-      </div>
-      <div class="scene" data-anim="grandit" style="aspect-ratio:4/3"><img class="fond" src="img:masse-detergent" alt="Bidons de lessive gris rangés, un seul bidon bleu"></div>
-    </div>
-
-    <div class="alterne inverse">
-      <div class="texte" data-anim="monte">
-        <span class="etiquette" style="margin-bottom:18px">Chat Cleo</span>
-        <h3 class="t-h1" style="margin:18px 0 14px">La question posée, le texte européen en réponse</h3>
-        <p class="t-body" style="margin:0 0 22px">Marquage CE, mentions par État membre, langues obligatoires : la réponse cite le règlement à l'article et l'extrait reste retrouvable.</p>
-        <ul class="coches coches-encre">
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Recherche jusque dans les annexes des règlements</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Défendez la réponse devant un acheteur ou la douane dans le texte</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Quand la donnée produit manque, la réponse le dit</li>
-        </ul>
-      </div>
-      <div class="scene" data-anim="grandit" style="aspect-ratio:4/3"><img class="fond" src="img:masse-flacon" alt="Flacons gris en rangées, un seul flacon bleu"></div>
-    </div>
-
-    <div class="alterne">
-      <div class="texte" data-anim="monte">
-        <span class="etiquette" style="margin-bottom:18px">Data</span>
-        <h3 class="t-h1" style="margin:18px 0 14px">L'obligation européenne écrite sous forme testable</h3>
-        <p class="t-body" style="margin:0 0 22px">Testez une référence contre 2 812 règles d'un coup, les entrées qu'elle réclame et la preuve attendue. Le verbatim vient du cellar.</p>
-        <ul class="coches coches-encre">
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>180 règles sur le corpus proprement européen</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Le verbatim vérifié par script contre le texte téléchargé</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>La somme des entrées manquantes fait le questionnaire fournisseur</li>
-        </ul>
-      </div>
-      <div class="scene" data-anim="grandit" style="aspect-ratio:4/3"><img class="fond" src="img:masse-couverts" alt="Couverts gris en tas, un seul couvert bleu"></div>
-    </div>
-
-  </div>
-</section>
-
-<!-- §18 en photographie : chaque marché sa fenêtre -->
-<section class="seg section sur-clair-fond" style="padding-top:0">
-  <div class="conteneur">
-    <div class="scene-large" data-anim="grandit" style="min-height:420px">
-      <img src="img:fenetres" alt="Façade d'immeuble la nuit, une fenêtre éclairée en bleu parmi des dizaines de fenêtres jaunes">
-      <div class="voile"></div>
-      <div class="dessus">
-        <div class="seg-scene-texte">
-          <div class="t-label" style="margin-bottom:16px">Vingt-sept États membres</div>
-          <h3 class="t-h1">Chacun a ses transpositions et sa langue. Un texte européen ne dit pas encore quoi faire à Milan.</h3>
-        </div>
-      </div>
-    </div>
+    <div class="tk-trame" aria-hidden="true"><img src="img:fenetres" alt=""></div>
+    <p class="tk-etiquette">Vingt-sept États membres</p>
+    <h2 class="ap-scene-titre">Chacun a ses transpositions et sa langue. Un texte européen ne dit pas encore quoi faire à Milan.</h2>
   </div>
 </section>
 
 <!-- ═══ LES TEXTES ═══ -->
-<section class="seg section">
+<section class="section ap-bloc">
   <div class="conteneur">
-    <h2 class="t-display" style="max-width:640px">Les textes qui structurent le marché européen</h2>
-    <p class="t-body" style="margin:18px 0 44px;max-width:560px">Une sélection des règlements les plus souvent rencontrés sur les produits de grande consommation.</p>
-
-    <div class="g4" data-anim-groupe>
-      <div class="carte" style="padding:28px 24px">
-        <div class="sceau">
-          <svg viewBox="0 0 100 100"><path d="M50 4l6.6 5.4 8.4-1.9 4.3 7.5 8.5 1.6.9 8.6 7.2 4.8-2.7 8.2 5 7-5.6 6.6 2 8.4-7.5 4.3-1.6 8.5-8.6.9-4.8 7.2-8.2-2.7-7 5-6.6-5.6-8.4 2-4.3-7.5-8.5-1.6-.9-8.6-7.2-4.8 2.7-8.2-5-7 5.6-6.6-2-8.4 7.5-4.3 1.6-8.5 8.6-.9L43 5.4z" fill="#C7CBFF"/><circle cx="50" cy="50" r="33" fill="none" stroke="#08093B" stroke-width="1" opacity="0.4"/></svg>
-          <div class="dedans"><div class="nom">REACH</div><div class="sous">1907/2006</div></div>
-        </div>
-        <p class="t-sm" style="margin:0">Enregistrement, évaluation et restriction des substances chimiques dans les articles.</p>
-      </div>
-      <div class="carte" style="padding:28px 24px">
-        <div class="sceau">
-          <svg viewBox="0 0 100 100"><path d="M50 4l6.6 5.4 8.4-1.9 4.3 7.5 8.5 1.6.9 8.6 7.2 4.8-2.7 8.2 5 7-5.6 6.6 2 8.4-7.5 4.3-1.6 8.5-8.6.9-4.8 7.2-8.2-2.7-7 5-6.6-5.6-8.4 2-4.3-7.5-8.5-1.6-.9-8.6-7.2-4.8 2.7-8.2-5-7 5.6-6.6-2-8.4 7.5-4.3 1.6-8.5 8.6-.9L43 5.4z" fill="#C7CBFF"/><circle cx="50" cy="50" r="33" fill="none" stroke="#08093B" stroke-width="1" opacity="0.4"/></svg>
-          <div class="dedans"><div class="nom">RSGP</div><div class="sous">2023/988</div></div>
-        </div>
-        <p class="t-sm" style="margin:0">Sécurité générale des produits, information du consommateur et traçabilité.</p>
-      </div>
-      <div class="carte" style="padding:28px 24px">
-        <div class="sceau">
-          <svg viewBox="0 0 100 100"><path d="M50 4l6.6 5.4 8.4-1.9 4.3 7.5 8.5 1.6.9 8.6 7.2 4.8-2.7 8.2 5 7-5.6 6.6 2 8.4-7.5 4.3-1.6 8.5-8.6.9-4.8 7.2-8.2-2.7-7 5-6.6-5.6-8.4 2-4.3-7.5-8.5-1.6-.9-8.6-7.2-4.8 2.7-8.2-5-7 5.6-6.6-2-8.4 7.5-4.3 1.6-8.5 8.6-.9L43 5.4z" fill="#C7CBFF"/><circle cx="50" cy="50" r="33" fill="none" stroke="#08093B" stroke-width="1" opacity="0.4"/></svg>
-          <div class="dedans"><div class="nom">PPWR</div><div class="sous">2025/40</div></div>
-        </div>
-        <p class="t-sm" style="margin:0">Emballages et déchets d'emballages, dont la signalétique de tri et les taux de recyclé.</p>
-      </div>
-      <div class="carte" style="padding:28px 24px">
-        <div class="sceau">
-          <svg viewBox="0 0 100 100"><path d="M50 4l6.6 5.4 8.4-1.9 4.3 7.5 8.5 1.6.9 8.6 7.2 4.8-2.7 8.2 5 7-5.6 6.6 2 8.4-7.5 4.3-1.6 8.5-8.6.9-4.8 7.2-8.2-2.7-7 5-6.6-5.6-8.4 2-4.3-7.5-8.5-1.6-.9-8.6-7.2-4.8 2.7-8.2-5-7 5.6-6.6-2-8.4 7.5-4.3 1.6-8.5 8.6-.9L43 5.4z" fill="#C7CBFF"/><circle cx="50" cy="50" r="33" fill="none" stroke="#08093B" stroke-width="1" opacity="0.4"/></svg>
-          <div class="dedans"><div class="nom">Batteries</div><div class="sous">2023/1542</div></div>
-        </div>
-        <p class="t-sm" style="margin:0">Batteries et déchets de batteries, marquage, collecte et contenu recyclé.</p>
-      </div>
-    </div>
-
-    <div class="t-sm" style="margin-top:28px">Sur le corpus proprement européen, <b>180 règles</b> sont encodées à ce jour, auxquelles s'ajoutent celles des États membres. Comptage du 26 août 2026.</div>
-  </div>
-</section>
-
-<!-- ═══ CHIFFRES DU MARCHÉ ═══ -->
-<section class="seg section" style="padding-top:0">
-  <div class="conteneur">
-    <div class="mesures" data-anim-groupe>
-      <div class="ligne"><div class="libelle">États membres, chacun avec ses transpositions et sa langue</div><div class="valeur">27</div></div>
-      <div class="ligne"><div class="libelle">Règles encodées sur le corpus proprement européen</div><div class="valeur">180</div></div>
-      <div class="ligne"><div class="libelle">Règles encodées, toutes juridictions confondues</div><div class="valeur">2 812</div></div>
-      <div class="ligne"><div class="libelle">Dossier technique bien tenu, et les vingt-sept marchés s'ouvrent</div><div class="valeur">1</div></div>
+    <h2 class="ap-titre">Les textes qui structurent le marché européen</h2>
+    <div class="ap-codes">
+      <div class="ap-code"><span class="ap-code-num">01</span><b>REACH</b><span>1907/2006</span></div>
+      <div class="ap-code"><span class="ap-code-num">02</span><b>RSGP</b><span>2023/988</span></div>
+      <div class="ap-code"><span class="ap-code-num">03</span><b>PPWR</b><span>2025/40</span></div>
+      <div class="ap-code"><span class="ap-code-num">04</span><b>Batteries</b><span>2023/1542</span></div>
     </div>
   </div>
 </section>
 
-<!-- ═══ TÉMOIGNAGE + CTA ═══ -->
-<section class="seg section" style="padding-top:0">
+<!-- ═══ TÉMOIGNAGE ET CHIFFRES ═══ -->
+<section class="section ap-bloc">
   <div class="conteneur">
-    <div class="temoignage" data-anim-groupe style="margin-bottom:96px">
-      <div class="scene" data-anim="grandit" style="aspect-ratio:4/3"><img class="fond" src="img:masse-gourde" alt="Gourdes grises alignées, une seule gourde bleue"></div>
-      <div>
-        <p class="citation" style="margin:0">
-          « Chez Decathlon, notre défi est de capter des informations très précises au milieu d’un volume massif de réglementations produits à l’international, avec un enjeu à la fois juridique et technique : piloter nos mises en conformité mondiales tout en accompagnant nos ingénieurs dans le développement des produits. C’est le pont que nous construisons avec le PoC mené avec Cleo : leur moteur d’IA agit comme un traducteur intelligent qui filtre le bruit pour extraire une donnée structurée, directement exploitable par nos équipes et indispensable pour guider la conception au sein de notre PLM. »
-        </p>
-        <div class="auteur">
-          <img src="img:philippine" alt="Philippine Tamic">
-          <div>
-            <div class="t-sm" style="font-weight:600">Philippine Tamic</div>
-            <div class="t-micro">Product Compliance Operations Manager, Decathlon</div>
-          </div>
+    <div class="tk-bento">
+      <figure class="tk-case tk-photo">
+        <div class="tk-trame" aria-hidden="true"><img src="img:masse-gourde" alt=""></div>
+        <blockquote class="tk-citation">« Leur moteur d’IA agit comme un traducteur intelligent qui filtre le bruit pour extraire une donnée structurée. »</blockquote>
+        <figcaption class="tk-signature"><img src="img:philippine" alt=""><span>Philippine Tamic<br>Decathlon</span></figcaption>
+        <a class="tk-bouton tk-bouton-coin" href="06-cas-client.html">Voir le cas client <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </figure>
+      <div class="tk-case tk-creme">
+        <svg class="tk-fleche" viewBox="0 0 160 70" aria-hidden="true"><path d="M10 60C52 62 104 50 138 16" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="1 6" stroke-linecap="round"/><path d="M124 13h16l-5 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <b class="tk-chiffre ap-compte ap-c-27"><span class="ap-compte-texte">27</span></b>
+        <span class="tk-legende">États membres, chacun avec ses transpositions et sa langue</span>
+      </div>
+      <div class="tk-case tk-bleu">
+        <div class="tk-tableaux" aria-hidden="true">
+          <div class="tk-tableau"><b>Toutes juridictions</b><span><i>règles</i><i>2 812</i></span></div>
+          <div class="tk-tableau"><b>Comptage</b><span><i>du</i><i>26 août 2026</i></span></div>
         </div>
-        
+        <b class="tk-chiffre ap-compte ap-c-180"><span class="ap-compte-texte">180</span></b>
+        <span class="tk-legende">règles encodées sur le corpus proprement européen</span>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="carte-encre p48" data-anim="monte-court">
-      <div class="cta-final">
-        <img class="portrait" src="img:anaelle" alt="Anaëlle Guez, cofondatrice de Cleo Labs">
-        <div>
-          <div class="t-sm" style="margin-bottom:10px"><b>30 minutes</b> pour voir ce qui bloque aujourd'hui</div>
-          <h2 class="t-display">Un nouveau pays n'est plus un projet. C'est une décision.</h2>
-          <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap">
-            <a class="btn btn-marque" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo
-              <span class="rond"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            </a>
-            <a class="btn btn-contour" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Réserver un créneau</a>
-          </div>
-        </div>
-      </div>
-    </div>
+<!-- ═══ APPEL FINAL ═══ bandeau tramé à la Tenkara : étiquette blanche, phrase, petit bouton carré. -->
+<section class="section ap-bloc ap-final tk-bandeau" id="contact">
+  <div class="conteneur">
+    <div class="tk-trame" aria-hidden="true"><img src="img:cables" alt=""></div>
+    <p class="tk-etiquette">30 minutes pour voir ce qui bloque aujourd'hui</p>
+    <h2 class="ap-final-titre">Un nouveau pays n'est plus un projet. <span class="attenue">C'est une décision.</span></h2>
+    <a class="tk-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </section>
 

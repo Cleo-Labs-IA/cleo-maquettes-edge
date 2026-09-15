@@ -1,40 +1,19 @@
 <!--NAV-->
 
-<!-- ═══ HERO 2 COLONNES : promesse à gauche, formulaire à droite ═══ -->
-<section class="seg section" style="padding:var(--s-64) 0 var(--pad-section-courte)">
+<!-- ═══ HERO ═══ 15/09/2026, design de la page 43 : titre à gauche, média tramé en grande carte. -->
+<section class="section ap-hero ap-hero-form">
   <div class="conteneur">
-    <div class="duo" style="gap:56px;align-items:start">
-      <div>
-        <div class="pilule-dispo" style="margin-bottom:26px">
-          <span class="point"></span> Équipe disponible
-          <span class="sep"></span> Textile et habillement
-        </div>
-        <h1 class="t-hero">
-          Conformité produit textile. <span class="attenue">Marché par marché.</span>
-        </h1>
-        <p class="t-lead" style="margin:24px 0 32px;max-width:480px">
-          Fibres, substances, étiquetage, allégations : les règles du textile changent vite
-          et diffèrent dans chaque région. Personne ne peut les suivre à la main.
-        </p>
-        <div class="scene" data-anim="grandit" style="aspect-ratio:16/9;max-width:400px">
-          <img class="fond" src="img:masse-tshirt" alt="Pile de tee-shirts gris pliés, un seul tee-shirt bleu au milieu">
-        </div>
+    <div class="ap-hero-grille">
+      <div class="ap-hero-texte">
+        <p class="ap-surtitre">Textile et habillement</p>
+        <h1 class="ap-h1">Conformité produit textile. <span class="attenue">Marché par marché.</span></h1>
+        <p class="ap-lead">Fibres, substances, étiquetage, allégations : les règles du textile changent vite et diffèrent dans chaque région.</p>
+        
       </div>
-
-      <!-- Carte formulaire -->
       <form id="f-demo" method="get" action="https://meetings.hubspot.com/anaelle-guez/rendez-vous" hidden></form>
-      <div class="carte-encre form-carte" data-anim="droite">
-        <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px">
-          <div class="avatars"><img src="img:anaelle" alt="Anaëlle Guez"><img src="img:naomie" alt="Naomie Halioua"><img src="img:darcial" alt="Darcial Mondjo"></div>
-          <span class="t-sm">L'équipe qui suivra votre dossier</span>
-        </div>
-        <h2 class="t-h1" style="margin-bottom:22px">Réserver un premier échange</h2>
-        <ul class="coches" style="margin-bottom:28px">
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Les obligations qui touchent vos références</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Les délais et l'ordre de traitement</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Ce qui change dans les douze mois à venir</li>
-        </ul>
-        <div class="paire">
+      <div class="ap-formulaire">
+        <h2 class="ap-form-titre">Réserver un premier échange</h2>
+        <div class="ap-paire">
           <div><label for="f-demo-prenom">Prénom</label><input id="f-demo-prenom" form="f-demo" name="firstname" autocomplete="given-name" type="text" placeholder="Camille"></div>
           <div><label for="f-demo-nom">Nom</label><input id="f-demo-nom" form="f-demo" name="lastname" autocomplete="family-name" type="text" placeholder="Bernard"></div>
         </div>
@@ -42,241 +21,150 @@
         <input id="f-demo-email" form="f-demo" name="email" autocomplete="email" type="email" placeholder="camille@marque.com" required>
         <label for="f-demo-site">Site de la marque</label>
         <input id="f-demo-site" form="f-demo" name="site" autocomplete="organization" type="text" placeholder="marque.com">
-        <button class="btn btn-marque" type="submit" form="f-demo" style="width:100%;justify-content:center;margin-top:6px">Choisir un créneau</button>
+        <button class="ap-bouton ap-bouton-large" type="submit" form="f-demo">Choisir un créneau <span aria-hidden="true">»</span></button>
       </div>
     </div>
+    <figure class="ap-hero-media tk-case" aria-hidden="true"><div class="tk-trame"><img src="img:masse-tshirt" alt=""></div><p class="tk-etiquette">Textile et habillement</p></figure>
   </div>
 </section>
 
 <!-- ═══ BANDE LOGOS ═══ -->
-<section class="seg sur-sombre" style="background:linear-gradient(180deg,var(--ink-deep) 0%,var(--ink-deep-2) 100%);padding:64px 0 72px">
+<section class="section ap-logos">
   <div class="conteneur">
-    <div class="centre t-micro" style="letter-spacing:0.12em;text-transform:uppercase;margin-bottom:24px;">
-      Aux côtés de marques et de fabricants internationaux
-    </div>
-    <div class="bande-logos">
-      <div class="cellule"><img src="img:logo-decathlon" alt="Decathlon"></div>
-      <div class="cellule"><img src="img:logo-balzac" alt="Balzac Paris"></div>
-      <div class="cellule"><img src="img:logo-mercedes" alt="Mercedes-Benz"></div>
-      <div class="cellule"><img src="img:logo-loccitane" alt="L'Occitane"></div>
-      <div class="cellule"><img src="img:logo-nvidia" alt="NVIDIA"></div>
+    <p>Aux côtés de marques et de fabricants internationaux</p>
+    <div class="ap-logos-imgs"><img src="img:logo-decathlon" alt="Decathlon"><img src="img:logo-balzac" alt="Balzac Paris"><img src="img:logo-mercedes" alt="Mercedes-Benz"><img src="img:logo-loccitane" alt="L'Occitane"><img src="img:logo-nvidia" alt="NVIDIA"></div>
+  </div>
+</section>
+
+<!-- ═══ PÉRIMÈTRE PRODUIT ═══ 14/09/2026 : la liste « Consumer Product Scope » donnée par Naomie, dans son ordre.
+     Traduction française proposée ; la liste anglaise fait foi. La page 43 pointe sur l'ancre #perimetre. -->
+<!-- ═══ PÉRIMÈTRE ═══ -->
+<section class="section ap-bloc" id="perimetre">
+  <div class="conteneur">
+    <h2 class="ap-titre">Les produits grand public, du jouet à l'équipement de la maison.</h2>
+    <ul class="ap-perimetre">
+      <li>Jouets</li>
+      <li>Produits pour enfants</li>
+      <li>Articles de sport</li>
+      <li>Bijoux fantaisie et joaillerie, lunettes de soleil, montres, sacs et autres accessoires</li>
+      <li>Produits vus à la télévision, présentoirs et achats d'impulsion</li>
+      <li>Saisonnier et fêtes</li>
+      <li>Loisirs créatifs, tissus et couture</li>
+      <li>Mobilier d'intérieur</li>
+      <li>Extérieur (mobilier, barbecues…)</li>
+      <li>Puériculture : équipements et consommables</li>
+      <li>Papeterie</li>
+      <li>Cuisine et arts de la table</li>
+      <li>Petit électroménager</li>
+      <li>Linge de lit et de bain</li>
+      <li>Décoration intérieure</li>
+      <li>Rangement et organisation</li>
+      <li>Électronique</li>
+      <li>Matériel électrique</li>
+      <li>Éclairage</li>
+      <li>Quincaillerie et peinture</li>
+      <li>Automobile</li>
+      <li>Animaux de compagnie</li>
+      <li>Hygiène, beauté, cosmétiques et soins personnels</li>
+      <li>Produits chimiques ménagers et consommables</li>
+      <li>Hardlines (produits durs)</li>
+      <li>Softlines (textile et habillement)</li>
+      <li>Autres produits de consommation et d'équipement de la maison</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ QUATRE TEMPS ═══ -->
+<section class="section ap-bloc">
+  <div class="conteneur">
+    <h2 class="ap-titre ap-centre">La mise en conformité, en quatre temps</h2>
+    <div class="ap-alternes">
+      <article class="ap-alterne">
+        <div class="ap-image"><img src="img:masse-basket" alt="Paires de baskets grises alignées, une seule paire bleue"></div>
+        <div class="ap-alterne-texte"><span class="ap-num">01</span><span class="ap-etiquette">Veille offerte</span><h3>Les textes qui arrivent, rattachés à vos produits</h3></div>
+      </article>
+      <article class="ap-alterne ap-inverse">
+        <div class="ap-image"><img src="img:masse-chaussette" alt="Chaussettes grises en vrac, une seule chaussette bleue"></div>
+        <div class="ap-alterne-texte"><span class="ap-num">02</span><span class="ap-etiquette">Chat Cleo</span><h3>Vérifiez la source, jusqu'au caractère près</h3></div>
+      </article>
+      <article class="ap-alterne">
+        <div class="ap-image"><img src="img:masse-gant" alt="Gants gris posés, un seul gant bleu"></div>
+        <div class="ap-alterne-texte"><span class="ap-num">03</span><span class="ap-etiquette">Data</span><h3>L'obligation écrite sous forme testable</h3></div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ═══ PÉRIMÈTRE PRODUIT ═══ 14/09/2026 : la liste « Consumer Product Scope » donnée par Naomie,
-     dans son ordre. Traduction française proposée ; la liste anglaise fait foi. -->
-<section class="section" id="perimetre" style="padding-top:0">
+<!-- ═══ SCÈNE ═══ la masse et l'unique, en bandeau tramé. -->
+<section class="section ap-bloc ap-scene">
   <div class="conteneur">
-    <div class="perimetre">
-      <div class="perimetre-tete" data-anim="monte">
-        <div class="surtitre">Périmètre produit</div>
-        <h2 class="t-display">Les produits grand public, du jouet à l'équipement de la maison.</h2>
-      </div>
-      <ul class="perimetre-liste" data-anim-groupe>
-        <li>Jouets</li>
-        <li>Produits pour enfants</li>
-        <li>Articles de sport</li>
-        <li>Bijoux fantaisie et joaillerie, lunettes de soleil, montres, sacs et autres accessoires</li>
-        <li>Produits vus à la télévision, présentoirs et achats d'impulsion</li>
-        <li>Saisonnier et fêtes</li>
-        <li>Loisirs créatifs, tissus et couture</li>
-        <li>Mobilier d'intérieur</li>
-        <li>Extérieur (mobilier, barbecues…)</li>
-        <li>Puériculture : équipements et consommables</li>
-        <li>Papeterie</li>
-        <li>Cuisine et arts de la table</li>
-        <li>Petit électroménager</li>
-        <li>Linge de lit et de bain</li>
-        <li>Décoration intérieure</li>
-        <li>Rangement et organisation</li>
-        <li>Électronique</li>
-        <li>Matériel électrique</li>
-        <li>Éclairage</li>
-        <li>Quincaillerie et peinture</li>
-        <li>Automobile</li>
-        <li>Animaux de compagnie</li>
-        <li>Hygiène, beauté, cosmétiques et soins personnels</li>
-        <li>Produits chimiques ménagers et consommables</li>
-        <li>Hardlines (produits durs)</li>
-        <li>Softlines (textile et habillement)</li>
-        <li>Autres produits de consommation et d'équipement de la maison</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ BASCULE EN CLAIR : les quatre temps ═══ -->
-<section class="seg section fond-lavande">
-  <div class="conteneur">
-    <div class="entete-section centre" data-anim="monte" style="align-items:center;margin-bottom:32px">
-      <h2 class="t-display mesure-centree" style="max-width:760px">La mise en conformité, en quatre temps</h2>
-      <p class="t-lead mesure-centree">Quatre temps, du relevé des obligations au suivi des textes qui arrivent.</p>
-    </div>
-
-    <div class="alterne">
-      <div class="texte" data-anim="monte">
-        <span class="etiquette" style="margin-bottom:18px">Veille offerte</span>
-        <h3 class="t-h1" style="margin:18px 0 14px">Les textes qui arrivent, rattachés à vos produits</h3>
-        <p class="t-body" style="margin:0 0 22px">Une parution ne vaut que si elle touche une de vos références. La veille, offerte avec chaque prestation, fait ce rattachement et donne le temps qui reste.</p>
-        <ul class="coches coches-encre">
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Recevez une alerte par gamme, jamais une revue de presse dans 106 pays</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>La date d'application, pas seulement la parution</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Une alerte par gamme, pas une revue de presse</li>
-        </ul>
-      </div>
-      <div class="scene" data-anim="grandit" style="aspect-ratio:4/3"><img class="fond" src="img:masse-basket" alt="Paires de baskets grises alignées, une seule paire bleue"></div>
-    </div>
-
-    <div class="alterne inverse">
-      <div class="texte" data-anim="monte">
-        <span class="etiquette" style="margin-bottom:18px">Chat Cleo</span>
-        <h3 class="t-h1" style="margin:18px 0 14px">Vérifiez la source, jusqu'au caractère près</h3>
-        <p class="t-body" style="margin:0 0 22px">Un produit, un marché, une question. La réponse cite l'article et l'extrait reste retrouvable dans le texte source.</p>
-        <ul class="coches coches-encre">
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Recherche jusque dans les annexes, là où vivent les limites</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Défendez la réponse devant un acheteur ou la douane dans le texte</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Quand la donnée produit manque, la réponse le dit</li>
-        </ul>
-      </div>
-      <div class="scene" data-anim="grandit" style="aspect-ratio:4/3"><img class="fond" src="img:masse-chaussette" alt="Chaussettes grises en vrac, une seule chaussette bleue"></div>
-    </div>
-
-    <div class="alterne">
-      <div class="texte" data-anim="monte">
-        <span class="etiquette" style="margin-bottom:18px">Data</span>
-        <h3 class="t-h1" style="margin:18px 0 14px">L'obligation écrite sous forme testable</h3>
-        <p class="t-body" style="margin:0 0 22px">Testez une référence contre 2 812 règles d'un coup, les entrées qu'elle réclame et la preuve attendue. Le verbatim est recopié du texte officiel.</p>
-        <ul class="coches coches-encre">
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>2 812 règles encodées sur 43 juridictions</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Le verbatim vérifié par script contre la source téléchargée</li>
-          <li><span class="coche"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>La somme des entrées manquantes fait le questionnaire fournisseur</li>
-        </ul>
-      </div>
-      <div class="scene" data-anim="grandit" style="aspect-ratio:4/3"><img class="fond" src="img:briques" alt="Briques de construction grises en vrac, deux briques bleues au milieu"></div>
-    </div>
-
-  </div>
-</section>
-
-<!-- §18 en photographie : les composants d'un produit -->
-<section class="seg section sur-clair-fond" style="padding-top:0">
-  <div class="conteneur">
-    <div class="scene-large" data-anim="grandit" style="min-height:420px">
-      <img src="img:fenetres" alt="Façade d'immeuble la nuit, une fenêtre éclairée en bleu parmi des dizaines de fenêtres jaunes">
-      <div class="voile"></div>
-      <div class="dessus">
-        <div class="seg-scene-texte">
-          <div class="t-label" style="margin-bottom:16px">Composant par composant</div>
-          <h3 class="t-h1">Un produit, des dizaines de matières. Une seule déclenche une obligation.</h3>
-        </div>
-      </div>
-    </div>
+    <div class="tk-trame" aria-hidden="true"><img src="img:fenetres" alt=""></div>
+    <p class="tk-etiquette">Composant par composant</p>
+    <h2 class="ap-scene-titre">Un produit, des dizaines de matières. Une seule déclenche une obligation.</h2>
   </div>
 </section>
 
 <!-- ═══ LES TEXTES ═══ -->
-<section class="seg section">
+<section class="section ap-bloc">
   <div class="conteneur">
-    <h2 class="t-display" style="max-width:640px">Les textes qui structurent le textile</h2>
-    <p class="t-body" style="margin:18px 0 44px;max-width:560px">Des restrictions de substances aux mentions d'étiquetage et aux allégations environnementales, le paysage réglementaire du textile s'étend chaque année.</p>
-
-    <div class="g4" data-anim-groupe>
-      <div class="carte" style="padding:28px 24px">
-        <div class="sceau">
-          <svg viewBox="0 0 100 100"><path d="M50 4l6.6 5.4 8.4-1.9 4.3 7.5 8.5 1.6.9 8.6 7.2 4.8-2.7 8.2 5 7-5.6 6.6 2 8.4-7.5 4.3-1.6 8.5-8.6.9-4.8 7.2-8.2-2.7-7 5-6.6-5.6-8.4 2-4.3-7.5-8.5-1.6-.9-8.6-7.2-4.8 2.7-8.2-5-7 5.6-6.6-2-8.4 7.5-4.3 1.6-8.5 8.6-.9L43 5.4z" fill="#C7CBFF"/><circle cx="50" cy="50" r="33" fill="none" stroke="#08093B" stroke-width="1" opacity="0.4"/></svg>
-          <div class="dedans"><div class="nom">REACH</div><div class="sous">Substances</div></div>
-        </div>
-        <p class="t-sm" style="margin:0">Annexe XVII et substances extrêmement préoccupantes, avec les seuils applicables aux articles textiles.</p>
-      </div>
-      <div class="carte" style="padding:28px 24px">
-        <div class="sceau">
-          <svg viewBox="0 0 100 100"><path d="M50 4l6.6 5.4 8.4-1.9 4.3 7.5 8.5 1.6.9 8.6 7.2 4.8-2.7 8.2 5 7-5.6 6.6 2 8.4-7.5 4.3-1.6 8.5-8.6.9-4.8 7.2-8.2-2.7-7 5-6.6-5.6-8.4 2-4.3-7.5-8.5-1.6-.9-8.6-7.2-4.8 2.7-8.2-5-7 5.6-6.6-2-8.4 7.5-4.3 1.6-8.5 8.6-.9L43 5.4z" fill="#C7CBFF"/><circle cx="50" cy="50" r="33" fill="none" stroke="#08093B" stroke-width="1" opacity="0.4"/></svg>
-          <div class="dedans"><div class="nom">1007/2011</div><div class="sous">Étiquetage</div></div>
-        </div>
-        <p class="t-sm" style="margin:0">Dénominations de fibres et étiquetage de composition des produits textiles dans l'Union.</p>
-      </div>
-      <div class="carte" style="padding:28px 24px">
-        <div class="sceau">
-          <svg viewBox="0 0 100 100"><path d="M50 4l6.6 5.4 8.4-1.9 4.3 7.5 8.5 1.6.9 8.6 7.2 4.8-2.7 8.2 5 7-5.6 6.6 2 8.4-7.5 4.3-1.6 8.5-8.6.9-4.8 7.2-8.2-2.7-7 5-6.6-5.6-8.4 2-4.3-7.5-8.5-1.6-.9-8.6-7.2-4.8 2.7-8.2-5-7 5.6-6.6-2-8.4 7.5-4.3 1.6-8.5 8.6-.9L43 5.4z" fill="#C7CBFF"/><circle cx="50" cy="50" r="33" fill="none" stroke="#08093B" stroke-width="1" opacity="0.4"/></svg>
-          <div class="dedans"><div class="nom">RSGP</div><div class="sous">2023/988</div></div>
-        </div>
-        <p class="t-sm" style="margin:0">Sécurité générale des produits : information du consommateur, traçabilité et obligations en cas de rappel.</p>
-      </div>
-      <div class="carte" style="padding:28px 24px">
-        <div class="sceau">
-          <svg viewBox="0 0 100 100"><path d="M50 4l6.6 5.4 8.4-1.9 4.3 7.5 8.5 1.6.9 8.6 7.2 4.8-2.7 8.2 5 7-5.6 6.6 2 8.4-7.5 4.3-1.6 8.5-8.6.9-4.8 7.2-8.2-2.7-7 5-6.6-5.6-8.4 2-4.3-7.5-8.5-1.6-.9-8.6-7.2-4.8 2.7-8.2-5-7 5.6-6.6-2-8.4 7.5-4.3 1.6-8.5 8.6-.9L43 5.4z" fill="#C7CBFF"/><circle cx="50" cy="50" r="33" fill="none" stroke="#08093B" stroke-width="1" opacity="0.4"/></svg>
-          <div class="dedans"><div class="nom">ESPR</div><div class="sous">Passeport</div></div>
-        </div>
-        <p class="t-sm" style="margin:0">Écoconception et passeport numérique de produit, dont le textile est une des premières familles visées.</p>
-      </div>
-    </div>
-
-    <div class="t-sm" style="margin-top:28px">Et <b>2 812 règles</b> encodées au total. Comptage du 26 août 2026 sur les dépôts de règles Cleo.</div>
-  </div>
-</section>
-
-<!-- ═══ LES OFFRES ═══ 14/09/2026 : les trois entrées remplacent les trois features. -->
-<section class="seg section fond-lavande">
-  <div class="conteneur">
-    <div class="entete-section centre" data-anim="monte" style="align-items:center">
-      <h2 class="t-display mesure-centree" style="max-width:700px">Chaque fonction a été automatisée. La conformité produit, non.</h2>
-    </div>
-    <div class="g3" data-anim-groupe>
-      <div class="carte p32">
-        <h3 class="t-h2" style="margin-bottom:12px">Compliance as a Service</h3>
-        <p class="t-sm" style="margin:0 0 20px">Des prestations de la conception au lancement, chacune avec son prix et son délai.</p>
-        <a class="btn btn-contour btn-sm" href="37-compliance-service.html">Voir le catalogue</a>
-      </div>
-      <div class="carte p32">
-        <h3 class="t-h2" style="margin-bottom:12px">Data</h3>
-        <p class="t-sm" style="margin:0 0 20px">La donnée réglementaire produit, prête à brancher par API ou par serveur MCP.</p>
-        <a class="btn btn-contour btn-sm" href="39-data.html">Découvrir l'offre Data</a>
-      </div>
-      <div class="carte p32">
-        <h3 class="t-h2" style="margin-bottom:12px">Enterprise</h3>
-        <p class="t-sm" style="margin:0 0 20px">Notre expertise tech et nos experts conformité, à l'échelle de votre entreprise.</p>
-        <a class="btn btn-contour btn-sm" href="40-enterprise.html">Contacter l'équipe</a>
-      </div>
+    <h2 class="ap-titre">Les textes qui structurent le textile</h2>
+    <div class="ap-codes">
+      <div class="ap-code"><span class="ap-code-num">01</span><b>REACH</b><span>Substances</span></div>
+      <div class="ap-code"><span class="ap-code-num">02</span><b>1007/2011</b><span>Étiquetage</span></div>
+      <div class="ap-code"><span class="ap-code-num">03</span><b>RSGP</b><span>2023/988</span></div>
+      <div class="ap-code"><span class="ap-code-num">04</span><b>ESPR</b><span>Passeport</span></div>
     </div>
   </div>
 </section>
 
-<!-- ═══ TÉMOIGNAGE + CTA ═══ -->
-<section class="seg section">
+<!-- ═══ LES OFFRES ═══ -->
+<section class="section ap-bloc">
   <div class="conteneur">
-    <div class="temoignage" data-anim-groupe style="margin-bottom:96px">
-      <div class="scene" data-anim="grandit" style="aspect-ratio:4/3"><img class="fond" src="img:masse-casque" alt="Casques de vélo gris posés en rangées, un seul casque bleu"></div>
-      <div>
-        <p class="citation" style="margin:0">
-          « Chez Decathlon, notre défi est de capter des informations très précises au milieu d’un volume massif de réglementations produits à l’international, avec un enjeu à la fois juridique et technique : piloter nos mises en conformité mondiales tout en accompagnant nos ingénieurs dans le développement des produits. C’est le pont que nous construisons avec le PoC mené avec Cleo : leur moteur d’IA agit comme un traducteur intelligent qui filtre le bruit pour extraire une donnée structurée, directement exploitable par nos équipes et indispensable pour guider la conception au sein de notre PLM. »
-        </p>
-        <div class="auteur">
-          <img src="img:philippine" alt="Philippine Tamic">
-          <div>
-            <div class="t-sm" style="font-weight:600">Philippine Tamic</div>
-            <div class="t-micro">Product Compliance Operations Manager, Decathlon</div>
-          </div>
-        </div>
-        
-      </div>
+    <h2 class="ap-titre ap-centre">Chaque fonction a été automatisée. La conformité produit, non.</h2>
+    <div class="ap-offres">
+      <a class="ap-offre" href="37-compliance-service.html"><h3>Service</h3><span class="ap-lien-carre">Voir le catalogue <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="ap-offre" href="39-data.html"><h3>Data</h3><span class="ap-lien-carre">Découvrir l'offre Data <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="ap-offre" href="40-enterprise.html"><h3>Enterprise</h3><span class="ap-lien-carre">Contacter l'équipe <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
     </div>
+  </div>
+</section>
 
-    <div class="carte-encre p48" data-anim="monte-court">
-      <div class="cta-final">
-        <img class="portrait" src="img:anaelle" alt="Anaëlle Guez, cofondatrice de Cleo Labs">
-        <div>
-          <div class="t-sm" style="margin-bottom:10px"><b>30 minutes</b> pour voir ce qui bloque aujourd'hui</div>
-          <h2 class="t-display">Un nouveau pays n'est plus un projet. C'est une décision.</h2>
-          <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap">
-            <a class="btn btn-marque" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo
-              <span class="rond"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            </a>
-            <a class="btn btn-contour" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Réserver un créneau</a>
-          </div>
+<!-- ═══ TÉMOIGNAGE ═══ -->
+<section class="section ap-bloc">
+  <div class="conteneur">
+    <div class="tk-bento">
+      <figure class="tk-case tk-photo">
+        <div class="tk-trame" aria-hidden="true"><img src="img:masse-casque" alt=""></div>
+        <blockquote class="tk-citation">« Leur moteur d’IA agit comme un traducteur intelligent qui filtre le bruit pour extraire une donnée structurée. »</blockquote>
+        <figcaption class="tk-signature"><img src="img:philippine" alt=""><span>Philippine Tamic<br>Decathlon</span></figcaption>
+        <a class="tk-bouton tk-bouton-coin" href="06-cas-client.html">Voir le cas client <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </figure>
+      <div class="tk-case tk-creme">
+        <svg class="tk-fleche" viewBox="0 0 160 70" aria-hidden="true"><path d="M10 60C52 62 104 50 138 16" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="1 6" stroke-linecap="round"/><path d="M124 13h16l-5 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <b class="tk-chiffre ap-compte ap-c-2812"><span class="ap-compte-texte">2 812</span></b>
+        <span class="tk-legende">règles encodées au total</span>
+      </div>
+      <div class="tk-case tk-bleu">
+        <div class="tk-tableaux" aria-hidden="true">
+          <div class="tk-tableau"><b>Veille offerte</b><span><i>par gamme</i><i>alerte</i></span></div>
+          <div class="tk-tableau"><b>Chat Cleo</b><span><i>article</i><i>cité</i></span></div>
+          <div class="tk-tableau"><b>Data</b><span><i>API</i><i>MCP</i></span></div>
         </div>
+        <b class="tk-chiffre ap-compte ap-c-106"><span class="ap-compte-texte">106</span></b>
+        <span class="tk-legende">pays</span>
       </div>
     </div>
+    <p class="ap-note">Comptage du 26 août 2026 sur les dépôts de règles Cleo.</p>
+  </div>
+</section>
+
+<!-- ═══ APPEL FINAL ═══ bandeau tramé à la Tenkara : étiquette blanche, phrase, petit bouton carré. -->
+<section class="section ap-bloc ap-final tk-bandeau" id="contact">
+  <div class="conteneur">
+    <div class="tk-trame" aria-hidden="true"><img src="img:semelles" alt=""></div>
+    <p class="tk-etiquette">30 minutes pour voir ce qui bloque aujourd'hui</p>
+    <h2 class="ap-final-titre">Un nouveau pays n'est plus un projet. <span class="attenue">C'est une décision.</span></h2>
+    <a class="tk-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </section>
 
