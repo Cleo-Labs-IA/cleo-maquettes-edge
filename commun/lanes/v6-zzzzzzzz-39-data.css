@@ -1,379 +1,235 @@
-/* ═══ PAGE DATA (39, FR et EN) : COMPOSITION DE MOONLIT, DA CLEO ═══ 15/09/2026, agent « data ».
-   Consignes successives de Naomie :
-   - reprendre chaque page dans le design plus moderne et animé de la page 43, rajouter l'anglais ;
-   - la DA Tenkara (composants communs .tk-* dans v6-zzzzzzz-tenkara.css) ;
-   - puis « https://www.moonlit.ai/mcp pour la partie data, fais comme eux » (reference_moonlit_competitor), qui passe
-     AVANT la grille Tenkara.
-   On reprend la COMPOSITION de Moonlit, jamais sa DA : Satoshi, zéro serif, zéro violet, bleu #0008CF, fond blanc,
-   un seul champ #08093B (la section « L'IA ne devine plus »). Cadres à filet de la page 43, étiquettes et boutons
-   Tenkara, bandeau final tramé.
-   Ordre : hero en deux colonnes avec schéma animé (nœud Cleo, pastille MCP, courbes tracées, points qui voyagent) ;
-   clients MCP cités par le README du dépôt legal-mcp ; trois étapes ; skills ; section sombre avec l'appel d'outil
-   qui s'écrit et les chiffres canon ; couverture en panneau 3D qui se redresse et références reliées ; l'offre
-   telle qu'écrite ; bandeau final.
-   Mouvement : chargement pour le haut de page, défilement (animation-timeline) pour le reste. Tout finit avant le
-   tiers bas de l'écran. Sans support ou en « réduire les animations » : tout est posé, rien ne bouge. Les calques
-   décoratifs animés portent aria-hidden. Limité aux pages 39-data et 39-data-en. */
+/* ═══ PAGE DATA (39, FR et EN) « COMME LA PAGE SERVICE » ═══ 15/09/2026, agent « data-simple ». Naomie : « data trop
+   compliqué, tu as fait une landing en fait, mais pas ça, comme l'autre ». La page suit la page Service 37 (à la Moritz,
+   v6-zzzzzzzzzz-service-cas.css) : hero et chiffres ; usages en liste et détail ; trois étapes collantes sur une grande
+   photo où la carte change ; table de l'offre et carte sombre (le seul #08093B) ; questions ; bandeau final tramé.
+   Classes dd- ; les libellés des usages portent aussi sc-cas-label pour le choix au survol de commun/mouvement.js.
+   Page et feuille générées par scratchpad/agents/data-simple/generer.mjs. overflow:clip, jamais hidden, autour de ce qui
+   s'anime ; aucun !important sur une propriété animée. Sans support ou en « réduire les animations », tout est posé. */
 
-/* ─── Fond, barre, boutons ─── la forme du bouton de la barre (capitales, carré) vient de v6-zzzzzzz-tenkara.css. */
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]){background:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section{background:transparent !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .nav{background:#FFFFFF;border-bottom:1px solid rgba(26,26,26,.08) !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .nav .conteneur{max-width:1440px}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .nav .btn-marque{background:#0008CF !important;color:#FFFFFF !important;border-color:#0008CF !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .nav .btn-marque:hover{background:#0007B5 !important;border-color:#0007B5 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dd-s{margin:0 !important;padding:120px 0 !important;border:0 !important;background:transparent !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dd-hero{padding:112px 0 72px !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dd-comment-section{background:#FAF9F7 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dd-s.dd-bandeau{padding:0 0 120px !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-conteneur{box-sizing:border-box;max-width:1280px;margin:0 auto;padding:0 40px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(#usages, #developpeurs, #brancher, #offre, #couverture, #methode){scroll-margin-top:96px}
 
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-gris{color:#8F8F8F}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-boutons{display:flex;flex-wrap:wrap;align-items:stretch;gap:12px;margin-top:34px}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-bouton{display:inline-flex;align-items:center;gap:12px;padding:14px 18px 14px 20px;border-radius:4px;background:#0008CF;color:#FFFFFF;font-size:.875rem;font-weight:500;line-height:1.2;letter-spacing:.07em;text-transform:uppercase;text-decoration:none;transition:background .15s ease-out}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-bouton:hover{background:#0007B5;color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-bouton svg{transition:transform .2s cubic-bezier(.22,1,.36,1)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-bouton:hover svg{transform:translateX(4px)}
-/* Le petit bouton blanc carré de Tenkara, posé sur fond clair : il prend un filet pour exister. */
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .tk-bouton.dt-tk-contour{border:1px solid rgba(26,26,26,.18);text-decoration:none}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-boutons .tk-bouton{padding:14px 16px}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-point{display:inline-block;flex:none;width:8px;height:8px;border-radius:50%;background:#4D57FF;box-shadow:0 0 0 4px rgba(77,87,255,.18)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(#brancher,#etapes,#skills,#methode,#couverture,#offre,#contact){scroll-margin-top:96px}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ico{display:grid;place-items:center;flex:none;width:44px;height:44px;border-radius:4px;background:#F1EFEA;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ico svg{width:22px;height:22px}
+/* ─── Typographie ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-surtitre{display:block;margin-bottom:18px;font-size:.8125rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#555}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-h1:not(#_){margin:0;max-width:1180px;font-size:clamp(2.5rem, 1.3rem + 3.4vw, 4.5rem) !important;font-weight:500 !important;line-height:1.04 !important;letter-spacing:-.035em !important;color:#1A1A1A !important;text-wrap:balance}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-gris{color:#8F8F8F}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-h1 .dd-gris{display:block}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-hero-lead{margin:26px 0 0;max-width:640px;font-size:1.1875rem;line-height:1.5;color:#555}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-titre:not(#_){margin:0 0 56px;max-width:920px;font-size:clamp(2rem, 1.2rem + 2vw, 3rem) !important;font-weight:500 !important;line-height:1.08 !important;letter-spacing:-.03em !important;color:#1A1A1A !important;text-wrap:balance}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-titre.dd-centre:not(#_){margin-left:auto;margin-right:auto;text-align:center}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etiquette{margin:0;font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#6B6B6B}
 
-/* ─── 1. Haut de page : titre à gauche, schéma à droite ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-hero{position:relative;width:auto !important;max-width:none !important;margin:0 !important;padding:88px 0 64px !important;border-radius:0 !important;box-shadow:none !important;overflow:visible !important;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-hero::before,
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-hero::after{display:none !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-hero > .conteneur{position:relative;z-index:1;max-width:1440px;text-align:left !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-hero-grille{display:grid;grid-template-columns:minmax(0,1fr) 560px;gap:56px;align-items:center}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-h1{margin:0;max-width:760px;font-size:clamp(2.5rem, 1rem + 3.4vw, 4.5rem);font-weight:500;line-height:1.03;letter-spacing:-.045em;color:#1A1A1A;text-wrap:balance}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-h1 .dt-gris{display:block}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-lead{margin:26px 0 0;max-width:600px;font-size:1.125rem;line-height:1.5;color:#6B6B6B}
+/* ─── Boutons et liens ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-bouton:not(#_){display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:8px !important;background:#0008CF;color:#FFFFFF;font-size:.9375rem;font-weight:500;letter-spacing:0;text-transform:none;text-decoration:none;white-space:nowrap}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-bouton:not(#_):hover{background:#0007B5;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-bouton.dd-bouton-clair:not(#_){background:#FFFFFF;color:#1A1A1A;box-shadow:inset 0 0 0 1px rgba(26,26,26,.16)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-bouton.dd-bouton-clair:not(#_):hover{background:#F4F3F0;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-bouton.dd-bouton-blanc:not(#_){background:#FFFFFF;color:#08093B}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-bouton.dd-bouton-blanc:not(#_):hover{background:#EFEEFB;color:#08093B}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-lien:not(#_){display:inline-block;padding:0;border:0;border-radius:0;background:none;box-shadow:none;font-size:.9375rem;font-weight:500;color:#1A1A1A;text-decoration:underline;text-underline-offset:4px;white-space:nowrap}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-lien:not(#_):hover{color:#0008CF}
 
-/* Le schéma, sur une scène fixe de 560 × 440 : les chemins des points et les traits partagent les mêmes coordonnées. */
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-schema{position:relative;width:560px;height:440px}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-schema-traits{position:absolute;inset:0;width:560px;height:440px;overflow:visible}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-trait{fill:none;stroke:rgba(0,8,207,.3);stroke-width:1.5}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-noeud{position:absolute;left:26px;top:176px;display:grid;place-items:center;width:88px;height:88px;border-radius:50%;background:#FFFFFF;box-shadow:0 0 0 1px rgba(26,26,26,.08), 0 16px 40px rgba(0,8,207,.18)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-noeud img{width:54px;height:auto}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-noeud-nom{position:absolute;left:0;top:272px;width:140px;text-align:center;font-size:.75rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#6B6B6B}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-mcp{position:absolute;left:158px;top:205px;display:grid;place-items:center;width:64px;height:30px;border:1px solid rgba(0,8,207,.28);border-radius:4px;background:#FFFFFF;font-size:.75rem;font-weight:500;letter-spacing:.08em;color:#0008CF}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client{position:absolute;left:380px;top:calc(var(--y) - 22px);display:flex;align-items:center;gap:10px;box-sizing:border-box;width:180px;height:44px;padding:0 14px;border:1px solid rgba(26,26,26,.09);border-radius:4px;background:#FFFFFF;box-shadow:0 6px 18px rgba(26,26,26,.06);font-size:.875rem;font-weight:500;color:#1A1A1A;white-space:nowrap}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client i{position:relative;flex:none;width:22px;height:22px;border-radius:4px;background:#F1EFEA}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client i::after{content:"";position:absolute;inset:6px;border:1.5px solid #8F8F8F;border-radius:50%}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-voyageur{position:absolute;left:0;top:0;width:8px;height:8px;border-radius:50%;background:#0008CF;box-shadow:0 0 0 4px rgba(0,8,207,.14);opacity:0;offset-rotate:0deg}
-/* Les points passent sous le nœud et la pastille MCP. */
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dt-noeud,.dt-mcp){z-index:2}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-voyageur{z-index:1}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-v1{offset-path:path("M114 220 L222 220 C300 220 300 40 380 40")}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-v2{offset-path:path("M114 220 L222 220 C300 220 300 184 380 184")}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-v3{offset-path:path("M114 220 L222 220 C300 220 300 328 380 328")}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-v4{offset-path:path("M114 220 L222 220 C300 220 300 400 380 400")}
+/* ─── Hero : les chiffres ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-chiffres{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:72px 0 0;padding:32px 0 0;border-top:1px solid rgba(26,26,26,.1);list-style:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-chiffres li{position:relative}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-chiffres b{display:block;font-size:clamp(2.25rem, 1.4rem + 2vw, 3.5rem);font-weight:500;line-height:1;letter-spacing:-.035em;font-variant-numeric:tabular-nums;color:#1A1A1A;white-space:nowrap}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-chiffres span:not(.dd-compte-texte){display:block;margin-top:10px;font-size:.9375rem;color:#6B6B6B}
 
-/* ─── LE CADRE ─── chaque section dans un filet, coins marqués, bandeau à cellules et petit carré en tête. */
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre{padding:0 !important;margin:0 0 120px}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre > .conteneur{
-  position:relative;box-sizing:border-box;width:min(1360px, calc(100% - 80px));max-width:none;margin:0 auto;padding:94px 32px 64px;
-  border:1px solid rgba(26,26,26,.10);
-  background:
-    linear-gradient(#1A1A1A, #1A1A1A) right 24px top 12px / 6px 6px no-repeat,
-    repeating-linear-gradient(90deg, rgba(26,26,26,.08) 0 1px, transparent 1px 32px) left top / 257px 30px no-repeat,
-    linear-gradient(rgba(26,26,26,.10), rgba(26,26,26,.10)) left 30px / 100% 1px no-repeat,
-    #FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre > .conteneur::before,
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre > .conteneur::after{content:"";position:absolute;width:9px;height:9px;pointer-events:none}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre > .conteneur::before{top:-2px;left:-2px;border-top:1.5px solid #1A1A1A;border-left:1.5px solid #1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre > .conteneur::after{right:-2px;bottom:-2px;border-right:1.5px solid #1A1A1A;border-bottom:1.5px solid #1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-h2{margin:0 0 56px;max-width:1040px;font-size:clamp(1.75rem, 1rem + 1.5vw, 2.375rem);font-weight:500;line-height:1.14;letter-spacing:-.025em;color:#1A1A1A;text-wrap:balance}
+/* ─── Les usages : liste à gauche, détail à droite ───
+   La dernière rangée en 1fr prend la hauteur du panneau collant, les libellés gardent la leur. */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas{position:relative;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-rows:repeat(5,auto) minmax(0,1fr);column-gap:64px;align-items:start}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas > input{position:absolute;width:1px;height:1px;margin:0;clip-path:inset(50%);overflow:hidden;white-space:nowrap}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas-label{grid-column:1;grid-row:var(--r);display:flex;align-items:baseline;gap:16px;padding:20px 18px;border-top:1px solid rgba(26,26,26,.08);border-radius:4px;cursor:pointer;font-size:clamp(1.125rem, .85rem + .6vw, 1.5rem);font-weight:500;line-height:1.3;letter-spacing:-.015em;color:#A3A3A3;transition:color .25s ease, background-color .25s ease}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas-label span{flex:none;font-size:.8125rem;font-weight:500;letter-spacing:0;font-variant-numeric:tabular-nums;color:#B5B5B5}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas-label:hover{color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas > input:checked + .dd-cas-label{color:#1A1A1A;background:#F4F3F0;border-top-color:transparent}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas > input:checked + .dd-cas-label span{color:#0008CF}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas > input:focus-visible + .dd-cas-label{outline:2px solid #0008CF;outline-offset:-2px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau{grid-column:2;grid-row:1 / 7;align-self:start;display:none;position:sticky;top:100px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas > input:checked + .dd-cas-label + .dd-panneau{display:block}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau-image{position:relative;aspect-ratio:16 / 9.5;border-radius:12px;overflow:clip;background:#EDEBE6}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau-image > img{display:block;width:100%;height:100%;object-fit:cover}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau-demande{position:absolute;left:24px;right:24px;bottom:22px;display:flex;align-items:center;gap:14px;margin:0;padding:12px 12px 12px 18px;border-radius:26px;background:rgba(255,255,255,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 10px 28px rgba(8,9,59,.16);font-size:.9375rem;line-height:1.4;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau-demande b{font-weight:600}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau-demande i{flex:none;display:grid;place-items:center;width:32px;height:32px;margin-left:auto;border-radius:50%;background:#0008CF;color:#FFFFFF;font-style:normal}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau-corps{padding:28px 4px 0}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau-famille{margin:0;font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#757575}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau h3:not(#_){margin:10px 0 12px;font-size:clamp(1.5rem, 1.1rem + 1vw, 2.125rem) !important;font-weight:500 !important;line-height:1.12 !important;letter-spacing:-.025em !important;color:#1A1A1A !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-lead{margin:0;max-width:600px;font-size:1.0625rem;line-height:1.5;color:#555}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-recevez{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px;margin:24px 0 0;padding:0;list-style:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-recevez li{display:flex;align-items:center;gap:10px;font-size:.9375rem;line-height:1.35;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-recevez li::before{content:"";flex:none;width:17px;height:17px;border-radius:50%;background:#0008CF url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 6.2 4.8 8.5 9.5 3.8' fill='none' stroke='white' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 9px no-repeat}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau-pied{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:28px;padding-top:22px;border-top:1px solid rgba(26,26,26,.08)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau-pied > .dd-bouton:not(#_){flex:none;width:auto;min-width:0;max-width:none}
 
-/* ─── 2. Brancher Cleo : six cartes, noms en texte, pictogramme neutre ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-clients{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client-carte{display:grid;grid-template-columns:44px minmax(0,1fr);gap:6px 16px;align-content:start;padding:24px;border:1px solid rgba(26,26,26,.09);border-radius:4px;background:#FFFFFF;transition:transform .2s cubic-bezier(.22,1,.36,1)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client-carte:hover{transform:translateY(-3px)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client-carte .dt-ico{grid-row:1 / span 2}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client-carte b{align-self:end;font-size:1.125rem;font-weight:500;letter-spacing:-.015em;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client-carte p{margin:0;font-size:.9375rem;line-height:1.45;color:#6B6B6B}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client-generique{border-style:dashed;background:#F9F8F6}
+/* ─── Trois étapes : la carte posée sur la photo ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-comment-collant{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:56px;align-items:center}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-comment-image{position:relative;margin:0;aspect-ratio:16 / 10.5;border-radius:6px;overflow:clip;background:#EDEBE6}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-comment-image > img{display:block;width:100%;height:100%;object-fit:cover}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-comment-image::after{content:"";position:absolute;inset:0;background:rgba(20,16,12,.2);pointer-events:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-carte{position:absolute;inset:0;z-index:1;opacity:0;pointer-events:none;font-size:.8125rem;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-carte-3{opacity:1}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cle{position:absolute;left:50%;top:50%;translate:-50% -50%;width:min(340px, 76%);box-sizing:border-box;padding:20px 22px 22px;border-radius:14px;background:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 22px 50px rgba(0,0,0,.24)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cle-label{margin:0 0 8px;font-size:.75rem;font-weight:600;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cle-champ{padding:11px 12px;border-radius:8px;background:#FFFFFF;box-shadow:inset 0 0 0 1px rgba(26,26,26,.14);font-size:.875rem;letter-spacing:.14em;color:#6B6B6B;white-space:nowrap;overflow:clip}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-ou{display:flex;align-items:center;gap:10px;margin:14px 0;font-size:.75rem;color:#8F8F8F}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-ou::before, body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-ou::after{content:"";flex:1;height:1px;background:rgba(26,26,26,.1)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cle-bouton{padding:11px 12px;border-radius:8px;background:#0008CF;color:#FFFFFF;font-size:.8125rem;font-weight:500;text-align:center}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-clients{position:absolute;left:50%;top:50%;translate:-50% -50%;width:min(300px, 70%);box-sizing:border-box;padding:18px 20px 20px;border-radius:12px;background:#FFFFFF;box-shadow:0 22px 50px rgba(0,0,0,.24)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-clients-tete{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-bottom:12px;border-bottom:1px solid rgba(26,26,26,.08)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-clients-tete b{font-size:.9375rem;font-weight:600}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-clients-tete em{padding:3px 8px;border-radius:9999px;background:#EFF0FF;font-size:.6875rem;font-style:normal;font-weight:600;letter-spacing:.04em;color:#0008CF}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-clients ul{display:grid;gap:9px;margin:12px 0 0;padding:0;list-style:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-clients li{display:flex;align-items:center;gap:9px;font-size:.875rem}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-clients li::before{content:"";flex:none;width:15px;height:15px;border-radius:50%;background:#0008CF url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 6.2 4.8 8.5 9.5 3.8' fill='none' stroke='white' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center / 8px no-repeat}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-regle:not(#_){position:absolute;left:50%;top:50%;translate:-50% -46%;width:min(340px, 62%);box-sizing:border-box;margin:0;padding:16px 18px 8px;border:0;border-radius:12px;background:#FFFFFF;box-shadow:0 22px 50px rgba(0,0,0,.24)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-regle .t-h3:not(#_){margin:0 0 8px;font-size:.875rem !important;font-weight:600 !important;line-height:1.3 !important;letter-spacing:0 !important;color:#1A1A1A !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-regle .pl-champ:not(#_){display:grid;grid-template-columns:84px minmax(0,1fr);gap:10px;align-items:baseline;margin:0;padding:8px 0;border-top:1px solid rgba(26,26,26,.07);font-size:.8125rem}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-regle .pl-champ span{font-size:.6875rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:#8F8F8F}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-regle .pl-champ b{font-weight:500;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-regle .pl-champ:nth-child(5) b{color:#0008CF}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-flottant{position:absolute;display:flex;align-items:center;gap:8px;padding:7px 11px;border-radius:8px;background:rgba(255,255,255,.95);box-shadow:0 8px 22px rgba(0,0,0,.18);font-size:.75rem;font-weight:500;white-space:nowrap}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-flottant em{padding:2px 6px;border-radius:4px;background:#EFF0FF;font-size:.625rem;font-style:normal;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:#0008CF}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-f1{left:6%;top:7%}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-f2{right:6%;bottom:6%}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etapes{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etape{padding:18px 20px;border-radius:6px;background:#FFFFFF;box-shadow:inset 0 0 0 1px rgba(26,26,26,.06);color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etape b{display:flex;align-items:baseline;gap:12px;font-size:1.125rem;font-weight:500;letter-spacing:-.01em;color:inherit}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etape b span{font-size:.8125rem;font-variant-numeric:tabular-nums;color:#0008CF}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etape p{margin:8px 0 0;font-size:.9375rem;line-height:1.5;color:#6B6B6B}
 
-/* ─── 3. Trois étapes ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin:0;padding:0;list-style:none}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes::before{content:"";position:absolute;left:18px;right:33%;top:18px;height:1px;background:rgba(26,26,26,.14);transform-origin:left}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes li{position:relative}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-num{position:relative;display:grid;place-items:center;width:36px;height:36px;margin-bottom:26px;border-radius:4px;background:#1A1A1A;color:#FFFFFF;font-size:.9375rem;font-weight:500;font-variant-numeric:tabular-nums}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes b{display:block;margin-bottom:10px;font-size:1.375rem;font-weight:500;letter-spacing:-.02em;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes p{margin:0;max-width:340px;font-size:.9375rem;line-height:1.5;color:#6B6B6B}
+/* ─── L'offre ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:20px;align-items:stretch}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-table{padding:14px 40px;border:1px solid rgba(26,26,26,.1);border-radius:8px;background:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-table ul{margin:0;padding:0;list-style:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-table li{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;border-bottom:1px solid rgba(26,26,26,.08)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-table li:last-child{border-bottom:0}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-table li > div{display:grid;gap:6px;min-width:0}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-table li b{font-size:1.0625rem;font-weight:500;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-table li > div > span{font-size:.9375rem;line-height:1.45;color:#6B6B6B}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-table li > .dd-lien{flex:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-carte{display:flex;flex-direction:column;align-items:flex-start;padding:36px 40px;border-radius:8px;background:#08093B;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-carte .dd-etiquette{color:rgba(255,255,255,.62)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-carte .dd-grand{margin:18px 0 0;font-size:1.5rem;font-weight:500;line-height:1.25;letter-spacing:-.015em;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-carte ul{display:grid;gap:14px;margin:26px 0 32px;padding:22px 0 0;border-top:1px solid rgba(255,255,255,.14);list-style:none;align-self:stretch}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-carte li{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:.9375rem}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-carte li b{font-weight:500;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etat{padding:4px 10px;border:1px dashed rgba(255,255,255,.4);border-radius:9999px;font-size:.8125rem;font-style:normal;color:rgba(255,255,255,.82);white-space:nowrap}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etat.dd-etat-plein{border-style:solid;border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.08)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-carte > .dd-bouton{margin-top:auto}
 
-/* ─── 4. Skills ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-skill{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:26px;border:1px solid rgba(26,26,26,.09);border-radius:4px;background:#FFFFFF;color:#1A1A1A;text-decoration:none;transition:transform .2s cubic-bezier(.22,1,.36,1), border-color .15s ease}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-skill:hover{transform:translateY(-3px);border-color:rgba(26,26,26,.24);color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-skill-nom{margin-top:18px;font-size:1.125rem;font-weight:500;letter-spacing:-.01em;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-skill p{margin:0 0 8px;font-size:.9375rem;line-height:1.45;color:#6B6B6B}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-skill .tk-bouton{margin-top:auto}
+/* ─── Questions ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-faq{max-width:880px;margin:0 auto;border-top:1px solid rgba(26,26,26,.1)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-faq details{border-bottom:1px solid rgba(26,26,26,.1)}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-faq summary{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 2px;cursor:pointer;list-style:none;font-size:1.1875rem;font-weight:500;color:#1A1A1A}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-faq summary::-webkit-details-marker{display:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-faq summary::after{content:"+";flex:none;font-size:1.5rem;font-weight:400;line-height:1;color:#6B6B6B;transition:rotate .25s ease}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-faq details[open] summary::after{rotate:45deg}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-reponse{max-width:720px;padding:0 0 24px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-reponse p{margin:0;font-size:1rem;line-height:1.55;color:#555}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-reponse > p + p, body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-sources + p{margin-top:14px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-reponse > p.dd-publie:not(#_){margin:18px 0 10px;font-size:.75rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#757575}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-sources{display:flex;flex-wrap:wrap;gap:8px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-sources .pl-n:not(#_){margin:0;padding:7px 13px;border:1px solid rgba(26,26,26,.12);border-radius:9999px;background:#FFFFFF;font-size:.875rem;line-height:1.3;color:#1A1A1A}
 
-/* ─── 5. La section sombre, le seul champ #08093B de la page ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-sombre > .conteneur{border-color:#08093B;color:#FFFFFF;
-  background:
-    linear-gradient(#FFFFFF, #FFFFFF) right 24px top 12px / 6px 6px no-repeat,
-    repeating-linear-gradient(90deg, rgba(255,255,255,.10) 0 1px, transparent 1px 32px) left top / 257px 30px no-repeat,
-    linear-gradient(rgba(255,255,255,.12), rgba(255,255,255,.12)) left 30px / 100% 1px no-repeat,
-    #08093B}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-sombre-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(40px, 5vw, 80px);align-items:start}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-sombre .tk-etiquette{margin-bottom:26px;font-size:.8125rem}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-sombre .dt-h2{margin-bottom:22px;color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-sombre .dt-h2 .dt-gris{color:rgba(255,255,255,.58)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-sombre .dt-lead{margin:0 0 36px;color:rgba(255,255,255,.72)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-publie-titre{margin-bottom:14px;font-size:.75rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.62)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-sources{display:flex;flex-wrap:wrap;gap:8px}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-sources .pl-n{margin:0;padding:8px 12px;border:1px solid rgba(255,255,255,.18);border-radius:4px;background:rgba(255,255,255,.06);box-shadow:none;font-size:.8125rem;line-height:1.3;color:rgba(255,255,255,.86)}
-/* L'appel d'outil : Satoshi à chiffres tabulaires, jamais de monospace. */
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel{padding:22px 24px 18px;border:1px solid rgba(255,255,255,.14);border-radius:6px;background:rgba(255,255,255,.05);font-variant-numeric:tabular-nums}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-tete{display:flex;align-items:center;gap:10px;margin-bottom:14px;font-size:.75rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.62)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dt-appel-question,.dt-appel-source,.dt-appel-rejet){display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;padding:11px 14px;border-radius:4px;background:rgba(255,255,255,.08);font-size:.9375rem}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dt-appel-question,.dt-appel-source,.dt-appel-rejet) span{color:rgba(255,255,255,.62)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dt-appel-question,.dt-appel-source,.dt-appel-rejet) b{font-weight:500;color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-fleche{margin:10px 0 8px 4px;font-size:.8125rem;color:rgba(255,255,255,.62)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle{padding:16px 18px 10px;border-radius:4px;background:#FFFFFF;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle .t-h3{margin:0 0 8px;font-size:1rem;font-weight:500;line-height:1.3;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle .pl-champ{display:grid;grid-template-columns:92px minmax(0,1fr);gap:14px;padding:8px 0;border-top:1px solid rgba(26,26,26,.08);border-bottom:0;font-size:.875rem;text-align:left}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle .pl-champ span{color:#737373}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle .pl-champ b{font-weight:500;text-align:left;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-rejet s{text-decoration:none;color:rgba(255,255,255,.62);background:linear-gradient(currentColor, currentColor) left 55% / 100% 1.5px no-repeat}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-rejet .dt-statut{margin-left:auto;padding:4px 10px;border-radius:2px;background:rgba(255,255,255,.12);font-size:.75rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.8)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-pied{margin-top:14px;padding-top:12px;border-top:1px solid rgba(255,255,255,.12);font-size:.8125rem;color:rgba(255,255,255,.62)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-compteurs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:64px;border-top:1px solid rgba(255,255,255,.14)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-compteurs > div{padding:30px 16px 0;text-align:center}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-compteurs b{position:relative;display:block;font-size:clamp(2.25rem, 1.25rem + 2.4vw, 3.5rem);font-weight:500;line-height:1;letter-spacing:-.04em;font-variant-numeric:tabular-nums;white-space:nowrap;color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-compteurs > div > span{display:block;margin-top:12px;font-size:.9375rem;color:rgba(255,255,255,.68)}
-
-/* ─── 6. La couverture : panneau incliné qui se redresse, puis les références reliées ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-couv{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(40px, 5vw, 80px);align-items:center}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-couv .dt-h2{margin-bottom:20px}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-couv .dt-lead{margin:0 0 28px}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-scene3d{perspective:1400px;perspective-origin:50% 40%}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-panneau3d{padding:18px;border:1px solid rgba(26,26,26,.10);border-radius:6px;background:#FFFFFF;box-shadow:0 40px 80px rgba(8,9,59,.12), 0 2px 6px rgba(8,9,59,.06);transform-origin:50% 60%}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays li{display:grid;justify-items:center;gap:6px;padding:18px 8px 16px;border-radius:4px;background:#F9F8F6;text-align:center}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays b{display:grid;place-items:center;width:52px;height:52px;border:1px solid rgba(26,26,26,.12);border-radius:50%;background:#FFFFFF;font-size:.9375rem;font-weight:500;letter-spacing:.04em;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays span{font-size:.75rem;line-height:1.3;color:#6B6B6B}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays .dt-pays-total{background:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays .dt-pays-total b{border-color:rgba(255,255,255,.3);background:transparent;color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays .dt-pays-total span{color:rgba(255,255,255,.72)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-reliee{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(40px, 5vw, 80px);align-items:center;margin:64px -32px -64px;padding:48px 32px 40px;background:#F9F8F6;border-top:1px solid rgba(26,26,26,.10)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-h3{margin:0 0 12px;font-size:1.5rem;font-weight:500;letter-spacing:-.02em;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-reliee p{margin:0;max-width:420px;font-size:1rem;line-height:1.5;color:#6B6B6B}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-graphe{display:block;width:100%;height:auto;overflow:visible}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-graphe line{stroke:rgba(26,26,26,.28);stroke-width:1.2}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-graphe circle{fill:#FFFFFF;stroke:#1A1A1A;stroke-width:1.4}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-graphe .dt-graphe-centre{fill:#0008CF;stroke:#0008CF}
-
-/* ─── 7. L'offre : trois cartes blanches sur zone teintée ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-offre{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0 -32px -64px;padding:24px;background:#F9F8F6;border-top:1px solid rgba(26,26,26,.10)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-offre-carte{display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding:28px;border:1px solid rgba(26,26,26,.09);border-radius:4px;background:#FFFFFF;transition:transform .2s cubic-bezier(.22,1,.36,1)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-offre-carte:hover{transform:translateY(-3px)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-offre-carte > b{margin-top:32px;font-size:1.25rem;font-weight:500;letter-spacing:-.02em;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-offre-carte p{margin:0;font-size:.9375rem;line-height:1.5;color:#6B6B6B}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-afixer{margin-top:4px;padding:5px 12px;border:1px dashed rgba(26,26,26,.3);border-radius:2px;font-size:.8125rem;color:#6B6B6B}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-afixer b{font-weight:500;color:#1A1A1A}
-
-/* ─── 8. Appel final : le bandeau Tenkara ─── le cadre de la page le repeindrait en blanc ; on lui rend son fond et
-   son voile (le coin marqué ::after devient le voile, masqué par overflow). */
-/* overflow:clip et non hidden : un parent en hidden devient un conteneur de défilement, et la trame animée par
-   view() s'y accroche puis reste figée (mesuré sur la page 37 le 15/09). */
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre.tk-bandeau > .conteneur{display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;align-content:center;gap:0;min-height:clamp(440px, 40vw, 580px);padding:64px 32px;overflow:clip;text-align:center;border-color:#0B0C2C;background:#0B0C2C}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre.tk-bandeau > .conteneur::after{inset:0;width:auto;height:auto;border:0;z-index:1;background:radial-gradient(ellipse at center, rgba(8,9,40,.62) 0%, rgba(8,9,40,.34) 70%)}
+/* ─── Bandeau final tramé ─── repris de la page Data d'avant : le fond et le voile du bandeau Tenkara. overflow:clip,
+   pas hidden : un parent en hidden fige la trame animée par view() (mesuré sur la page 37 le 15/09). */
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dd-bandeau.tk-bandeau > .conteneur{position:relative;box-sizing:border-box;width:min(1360px, calc(100% - 80px));max-width:none;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;align-content:center;gap:0;min-height:clamp(440px, 40vw, 580px);padding:64px 32px;overflow:clip;text-align:center;border:1px solid #0B0C2C;background:#0B0C2C}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dd-bandeau.tk-bandeau > .conteneur::after{content:"";position:absolute;inset:0;width:auto;height:auto;border:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at center, rgba(8,9,40,.62) 0%, rgba(8,9,40,.34) 70%)}
 body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .tk-bandeau .tk-trame img{object-position:50% 72%}
 body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .tk-bandeau .av-final-titre{font-size:clamp(2rem, 1rem + 2.4vw, 3.25rem);font-weight:500;line-height:1.08;letter-spacing:-.03em;text-wrap:balance}
 body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .tk-bandeau .tk-bouton{text-decoration:none}
 
-/* ─── Tablette et téléphone ─── */
-@media (max-width:1240px){
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-hero-grille{grid-template-columns:minmax(0,1fr) 448px;gap:40px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-schema{zoom:.8}
-}
+/* ─── Téléphone et tablette ─── */
 @media (max-width:980px){
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-hero{padding:48px 0 40px !important}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-hero-grille{grid-template-columns:minmax(0,1fr);gap:36px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-schema{zoom:.6;margin:0 auto}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre{margin-bottom:72px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre > .conteneur{width:calc(100% - 32px);padding:78px 20px 44px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-h2{margin-bottom:36px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-clients{grid-template-columns:repeat(2,minmax(0,1fr))}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dt-skills,.dt-sombre-grille,.dt-couv,.dt-reliee){grid-template-columns:minmax(0,1fr)}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-compteurs{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:44px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-compteurs > div{padding:24px 8px 8px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-reliee{gap:24px;margin:44px -20px -44px;padding:32px 20px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-offre{grid-template-columns:minmax(0,1fr);margin:0 -20px -44px;padding:16px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dt-cadre.tk-bandeau > .conteneur{min-height:480px;padding:56px 20px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dd-s{padding:72px 0 !important}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dd-hero{padding:64px 0 48px !important}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dd-s.dd-bandeau{padding:0 0 72px !important}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-conteneur{padding:0 20px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-titre:not(#_){margin-bottom:36px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-chiffres{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 12px;margin-top:48px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-chiffres b{font-size:1.75rem}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-chiffres span:not(.dd-compte-texte){font-size:.8125rem}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas{grid-template-columns:minmax(0,1fr);grid-template-rows:none}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas > :is(.dd-cas-label, .dd-panneau){grid-column:1;grid-row:auto}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau{position:static;padding:4px 0 24px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau-demande{left:12px;right:12px;bottom:12px;padding:10px 10px 10px 14px;font-size:.8125rem}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-recevez{grid-template-columns:minmax(0,1fr)}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-comment-collant{grid-template-columns:minmax(0,1fr);gap:28px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-comment-image{aspect-ratio:4 / 4.4}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-regle:not(#_){top:56%;width:84%}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-f1{left:4%;right:4%;top:4%;white-space:normal}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-f2{display:none}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre{grid-template-columns:minmax(0,1fr)}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dd-offre-table, .dd-offre-carte){padding:22px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-table li{align-items:flex-start;flex-direction:column;gap:10px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-faq summary{font-size:1.0625rem}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dd-bandeau.tk-bandeau > .conteneur{width:calc(100% - 32px);min-height:480px;padding:56px 20px}
 }
-@media (max-width:760px){
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes{grid-template-columns:minmax(0,1fr);gap:28px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes::before{display:none}
-}
-@media (max-width:560px){
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-clients{grid-template-columns:minmax(0,1fr)}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-panneau3d{padding:12px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-compteurs b{font-size:2rem}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle .pl-champ{grid-template-columns:78px minmax(0,1fr);gap:10px}
-}
-
-/* ─── Compteurs : syntaxe déclarée hors condition (sans effet si rien ne les anime) ─── */
-@property --dt-k{syntax:'<integer>';inherits:false;initial-value:0}
-@property --dt-u{syntax:'<integer>';inherits:false;initial-value:0}
-@counter-style dt-trois{system:extends decimal;pad:3 "0"}
 
 /* ═══ LE MOUVEMENT ═══ */
 @media (prefers-reduced-motion: no-preference){
+  /* Chiffres du haut : ils défilent au chargement. */
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-compte{counter-reset:k var(--av-k) u var(--av-u);animation-duration:1.6s;animation-timing-function:cubic-bezier(.2,.7,.3,1);animation-delay:.35s;animation-fill-mode:both}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-compte-texte{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-c-106{--av-k:106;animation-name:ddC106}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-c-25000{--av-k:25;--av-u:0;animation-name:ddC25}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-c-19000{--av-k:19;--av-u:0;animation-name:ddC19}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-c-3700{--av-k:3;--av-u:700;animation-name:ddC3700}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-c-106::before{content:counter(k)}
+  body[data-cleo-ds="v6"][data-v6-page="39-data"] :is(.dd-c-25000, .dd-c-19000, .dd-c-3700)::before{content:counter(k) "\202F" counter(u, av-trois)}
+  body[data-cleo-ds="v6"][data-v6-page="39-data-en"] :is(.dd-c-25000, .dd-c-19000, .dd-c-3700)::before{content:counter(k) "," counter(u, av-trois)}
+  @keyframes ddC106{from{--av-k:0}to{--av-k:106}}
+  @keyframes ddC25{from{--av-k:0}to{--av-k:25}}
+  @keyframes ddC19{from{--av-k:0}to{--av-k:19}}
+  @keyframes ddC3700{from{--av-k:0;--av-u:0}to{--av-k:3;--av-u:700}}
 
-  /* Le haut de page arrive au chargement ; le schéma se trace, les points voyagent de Cleo vers les assistants. */
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-hero .dt-h1{animation:dtArrive .8s cubic-bezier(.625,.05,0,1) both}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-hero .dt-h1 .dt-gris{animation:dtArrive .8s cubic-bezier(.625,.05,0,1) .09s both}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-hero .dt-lead{animation:dtArrive .6s cubic-bezier(.625,.05,0,1) .2s both}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-hero .dt-boutons{animation:dtArrive .6s cubic-bezier(.625,.05,0,1) .28s both}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-noeud{animation:dtPop .6s cubic-bezier(.25,.8,.3,1) .3s both}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-noeud-nom{animation:dtFondu .5s ease-out .5s both}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-mcp{animation:dtPop .5s cubic-bezier(.25,.8,.3,1) .7s both}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-trait{stroke-dasharray:320;animation:dtTraitCharge 1.1s cubic-bezier(.625,.05,0,1) .55s both}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-trait:nth-child(n+2){animation-delay:.85s}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-trait:nth-child(n+4){animation-delay:.95s}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-trait:nth-child(n+6){animation-delay:1.05s}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client{animation:dtPop .5s cubic-bezier(.25,.8,.3,1) 1.1s both}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client:nth-of-type(2){animation-delay:1.18s}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client:nth-of-type(3){animation-delay:1.26s}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client:nth-of-type(4){animation-delay:1.34s}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client:nth-of-type(5){animation-delay:1.42s}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-client:nth-of-type(6){animation-delay:1.5s}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-voyageur{animation:dtVoyage 3.4s cubic-bezier(.45,0,.55,1) 1.8s infinite}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-v2{animation-delay:2.7s}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-v3{animation-delay:3.5s}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-v4{animation-delay:4.4s}
-
-  @keyframes dtArrive{from{opacity:0;translate:0 36px}to{opacity:1;translate:0 0}}
-  @keyframes dtFondu{from{opacity:0}to{opacity:1}}
-  @keyframes dtPop{from{opacity:0;scale:.6}to{opacity:1;scale:1}}
-  @keyframes dtTraitCharge{from{stroke-dashoffset:320}to{stroke-dashoffset:0}}
-  @keyframes dtVoyage{0%{offset-distance:0%;opacity:0}12%{opacity:1}86%{opacity:1}100%{offset-distance:100%;opacity:0}}
-  @keyframes dtEcrit{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+  /* Le détail d'un usage arrive quand on le choisit. */
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas > input:checked + .dd-cas-label + .dd-panneau{animation:ddPanneau .45s cubic-bezier(.22,1,.36,1) both}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas > input:checked + .dd-cas-label + .dd-panneau .dd-panneau-image > img{animation:ddPhoto .9s cubic-bezier(.22,1,.36,1) both}
+  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas > input:checked + .dd-cas-label + .dd-panneau .dd-panneau-demande{animation:ddDemande .6s cubic-bezier(.22,1,.36,1) .12s both}
+  @keyframes ddPanneau{from{opacity:0;translate:0 10px}}
+  @keyframes ddPhoto{from{scale:1.08}}
+  @keyframes ddDemande{from{opacity:0;translate:0 14px}}
 
   @supports (animation-timeline: view()){
-
-    /* Titres et cartes arrivent à leur entrée dans l'écran, en cascade. */
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dt-h2, .dt-h3, .dt-client-carte, .dt-skill, .dt-offre-carte, .dt-couv .dt-lead, .dt-couv .tk-bouton, .dt-reliee p){animation:dtVoir cubic-bezier(.25,.8,.3,1) both;animation-timeline:view();animation-range:entry 5% entry 70%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dt-client-carte, .dt-skill, .dt-offre-carte):nth-child(3n+2){animation-range:entry 12% entry 77%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dt-client-carte, .dt-skill, .dt-offre-carte):nth-child(3n){animation-range:entry 19% entry 84%}
-    @keyframes dtVoir{from{opacity:0;translate:0 32px}to{opacity:1;translate:0 0}}
-
-    /* Les trois étapes : le fil se tire, les numéros s'allument l'un après l'autre. */
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes{view-timeline-name:--dt-etapes}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes::before{animation:dtFil linear both;animation-timeline:--dt-etapes;animation-range:entry 20% cover 40%}
-    @keyframes dtFil{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes li{animation:dtVoir cubic-bezier(.25,.8,.3,1) both;animation-timeline:--dt-etapes;animation-range:entry 10% entry 80%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes li:nth-child(2){animation-range:entry 25% entry 95%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-etapes li:nth-child(3){animation-range:entry 40% cover 35%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-num{animation:dtNum linear both;animation-timeline:--dt-etapes;animation-range:entry 30% cover 30%}
-    @keyframes dtNum{0%{background:#1A1A1A}50%{background:#0008CF}100%{background:#1A1A1A}}
-
-    /* Les sources publiées s'allument. */
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-sources .pl-n{animation:dtSource linear both;animation-timeline:view();animation-range:entry 0% entry 100%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-sources .pl-n:nth-child(even){animation-range:entry 20% cover 30%}
-    @keyframes dtSource{0%{opacity:0;translate:0 10px}50%{opacity:1;translate:0 0;background:rgba(77,87,255,.3);border-color:rgba(77,87,255,.7)}100%{opacity:1;translate:0 0;background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.18)}}
-
-    /* L'appel d'outil s'écrit ligne par ligne : la question, la règle encodée, sa source, puis le rejet. */
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel{view-timeline-name:--dt-appel}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dt-appel-question, .dt-appel-fleche, .dt-regle, .dt-appel-source, .dt-appel-rejet, .dt-appel-pied){animation:dtLigne cubic-bezier(.25,.8,.3,1) both;animation-timeline:--dt-appel}
-    @keyframes dtLigne{from{opacity:0;translate:0 12px}to{opacity:1;translate:0 0}}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-question{animation-range:cover 6% cover 12%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-question b{display:inline-block;animation:dtEcrit linear both;animation-timeline:--dt-appel;animation-range:cover 9% cover 15%}
-    /* Dans l'appel, les lignes sont toutes des div : la 1re flèche est la 3e div, la 2e la 5e, la 3e la 7e. */
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-fleche:nth-of-type(3){animation-range:cover 13% cover 16%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle{animation-range:cover 15% cover 21%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle .pl-champ b{display:inline-block;animation:dtEcrit linear both;animation-timeline:--dt-appel;animation-range:cover 18% cover 22%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle .pl-champ:nth-child(3) b{animation-range:cover 20% cover 24%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle .pl-champ:nth-child(4) b{animation-range:cover 22% cover 26%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle .pl-champ:nth-child(5) b{animation-range:cover 24% cover 28%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-regle .pl-champ:nth-child(6) b{animation-range:cover 26% cover 30%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-fleche:nth-of-type(5){animation-range:cover 28% cover 31%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-source{animation-range:cover 30% cover 34%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-fleche:nth-of-type(7){animation-range:cover 33% cover 36%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-rejet{animation-range:cover 35% cover 39%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-rejet s{animation:dtBarre linear both;animation-timeline:--dt-appel;animation-range:cover 38% cover 42%}
-    @keyframes dtBarre{from{background-size:0% 1.5px}to{background-size:100% 1.5px}}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-appel-pied{animation-range:cover 41% cover 45%}
-
-    /* Les chiffres canon défilent jusqu'à leur valeur. */
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-compte{counter-reset:dtk var(--dt-k) dtu var(--dt-u);animation-duration:1ms;animation-timing-function:cubic-bezier(.2,.7,.3,1);animation-fill-mode:both;animation-timeline:view();animation-range:entry 0% entry 100%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-compte-texte{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-c-106{--dt-k:106;animation-name:dtC106}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-c-25000{--dt-k:25;animation-name:dtC25}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-c-19000{--dt-k:19;animation-name:dtC19}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-c-3700{--dt-k:3;--dt-u:700;animation-name:dtC3700}
-    body[data-cleo-ds="v6"][data-v6-page="39-data"] .dt-c-106::before{content:counter(dtk);content:counter(dtk) / ""}
-    body[data-cleo-ds="v6"][data-v6-page="39-data"] :is(.dt-c-25000, .dt-c-19000, .dt-c-3700)::before{content:counter(dtk) " " counter(dtu, dt-trois);content:counter(dtk) " " counter(dtu, dt-trois) / ""}
-    body[data-cleo-ds="v6"][data-v6-page="39-data-en"] .dt-c-106::before{content:counter(dtk);content:counter(dtk) / ""}
-    body[data-cleo-ds="v6"][data-v6-page="39-data-en"] :is(.dt-c-25000, .dt-c-19000, .dt-c-3700)::before{content:counter(dtk) "," counter(dtu, dt-trois);content:counter(dtk) "," counter(dtu, dt-trois) / ""}
-    @keyframes dtC106{from{--dt-k:0}to{--dt-k:106}}
-    @keyframes dtC25{from{--dt-k:0}to{--dt-k:25}}
-    @keyframes dtC19{from{--dt-k:0}to{--dt-k:19}}
-    @keyframes dtC3700{from{--dt-k:0;--dt-u:0}to{--dt-k:3;--dt-u:700}}
-
-    /* La couverture : le panneau incliné se redresse, les pastilles de pays s'allument. */
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-panneau3d{animation:dtRedresse linear both;animation-timeline:view();animation-range:entry 0% cover 42%}
-    @keyframes dtRedresse{from{transform:rotateX(24deg) rotateY(-20deg) rotateZ(3deg) scale(.92)}to{transform:none}}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-scene3d{view-timeline-name:--dt-scene}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays li{animation:dtPop cubic-bezier(.25,.8,.3,1) both;animation-timeline:--dt-scene;animation-range:cover 10% cover 18%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays li:nth-child(4n+2){animation-range:cover 12% cover 20%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays li:nth-child(4n+3){animation-range:cover 14% cover 22%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-pays li:nth-child(4n){animation-range:cover 16% cover 24%}
-
-    /* Les références se relient. */
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-graphe{view-timeline-name:--dt-graphe}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-graphe line{stroke-dasharray:240;animation:dtLien linear both;animation-timeline:--dt-graphe;animation-range:cover 12% cover 34%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-graphe line:nth-of-type(3n+2){animation-range:cover 18% cover 40%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-graphe line:nth-of-type(3n){animation-range:cover 24% cover 46%}
-    @keyframes dtLien{from{stroke-dashoffset:240}to{stroke-dashoffset:0}}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-graphe circle{transform-box:fill-box;transform-origin:center;animation:dtPop cubic-bezier(.25,.8,.3,1) both;animation-timeline:--dt-graphe;animation-range:cover 8% cover 20%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dd-cas-label, .dd-offre-table, .dd-offre-carte, .dd-faq details){animation:ddMonte cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% entry 70%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-carte{animation-range:entry 10% entry 80%}
+    @keyframes ddMonte{from{opacity:0;translate:0 26px}}
   }
 }
 
-/* Téléphone : pas de points qui voyagent sur le schéma réduit ; l'appel d'outil s'anime ligne à ligne à sa propre entrée. */
-@media (prefers-reduced-motion: no-preference) and (max-width:980px){
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-voyageur{display:none}
+/* Trois étapes : elles collent à l'écran, la carte change avec l'étape active (bureau seulement). */
+@media (prefers-reduced-motion: no-preference) and (min-width:981px){
   @supports (animation-timeline: view()){
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dt-appel-question, .dt-appel-question b, .dt-appel-fleche, .dt-regle, .dt-regle .pl-champ b, .dt-appel-source, .dt-appel-rejet, .dt-appel-rejet s, .dt-appel-pied){animation-timeline:view();animation-range:entry 0% entry 100%}
-  }
-}
-
-/* ═══ USAGES « UNE BASE DE RÈGLES, PLUSIEURS FAÇONS DE CONSTRUIRE » ═══ 15/09/2026, intégrateur. Naomie montre le bloc
-   « One data layer, many ways to build » de moonlit.ai : « ça aussi intéressant dans data ». Composition reprise : quatre
-   cartes blanches sur fond crème, rangée de ronds qui se chevauchent avec un « + », titre, phrase, ligne « pour qui ».
-   Écart assumé : chez Moonlit les ronds sont des logos clients ; aucun usage Data client n'est documenté chez Cleo, les
-   ronds portent donc les produits « la masse et l'unique », et la ligne du bas ne cite que le vérifiable (PoC Decathlon,
-   papier MARIA). Au défilement, les ronds glissent et s'empilent, le « + » apparaît ; au survol, ils s'écartent. */
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usages{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;padding:16px;border-radius:14px;background:#F9F8F6}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usage{display:flex;flex-direction:column;padding:32px 34px 30px;border:1px solid rgba(26,26,26,.06);border-radius:16px;background:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ronds{display:flex;align-items:center;margin-bottom:22px}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ronds > *{flex:none;width:64px;height:64px;border:1px solid rgba(26,26,26,.1);border-radius:50%;background:#FFFFFF;transition:margin-left .35s cubic-bezier(.22,1,.36,1)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ronds > * + *{margin-left:-12px}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ronds img{display:block;object-fit:cover;box-shadow:0 0 0 3px #FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-rond-plus{display:grid;place-items:center;border-color:transparent;background:#EFF0FF;color:#0008CF;font-size:1.5rem;font-weight:400;line-height:1}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usage:hover .dt-ronds > * + *{margin-left:4px}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usage-titre{margin:0 0 12px;font-size:clamp(1.25rem, 1rem + .6vw, 1.5rem);font-weight:500;letter-spacing:-.02em;line-height:1.2;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usage p{margin:0;font-size:.9375rem;line-height:1.55;color:#5C5C5C}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usage p.dt-usage-pour{margin-top:auto;padding-top:28px;font-size:.8125rem;color:#757575}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usage-pour b{font-weight:500;color:#1A1A1A}
-@media (max-width:980px){
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usages{grid-template-columns:minmax(0,1fr);padding:10px;margin:0 -10px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usage{padding:26px 22px 24px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ronds > *{width:54px;height:54px}
-}
-@media (prefers-reduced-motion: no-preference){
-  @supports (animation-timeline: view()){
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usage{animation:dtUsage cubic-bezier(.25,.8,.3,1) both;animation-timeline:view();animation-range:entry 0% entry 60%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-usage:nth-child(2n){animation-range:entry 10% entry 70%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ronds > *{animation:dtRond cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 20% cover 30%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ronds > :nth-child(2){--dt-x:-40px}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ronds > :nth-child(3){--dt-x:-80px}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dt-ronds > .dt-rond-plus{animation-name:dtPlus}
-    @keyframes dtUsage{from{opacity:0;translate:0 36px}to{opacity:1;translate:0 0}}
-    @keyframes dtRond{from{translate:var(--dt-x, 0px) 0;opacity:.35}to{translate:0 0;opacity:1}}
-    @keyframes dtPlus{0%,55%{opacity:0;scale:.4}100%{opacity:1;scale:1}}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-comment-scene{height:240vh;view-timeline-name:--dd-comment}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-comment-collant{position:sticky;top:max(96px, calc(50vh - 250px))}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-carte{opacity:1;animation:ddCarte linear both;animation-timeline:--dd-comment}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-carte-1{animation-name:ddCarteDebut;animation-range:contain 0% contain 33.3%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-carte-2{animation-range:contain 33.3% contain 66.6%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-carte-3{animation-name:ddCarteFin;animation-range:contain 66.6% contain 100%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etape{animation:ddEtape linear both;animation-timeline:--dd-comment}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etape p{max-height:0;margin-top:0;overflow:clip;animation:ddOuvre linear both;animation-timeline:--dd-comment}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etape:nth-child(1){animation-name:ddEtapeDebut}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etape:nth-child(1) p{animation-name:ddOuvreDebut}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etape:nth-child(3){animation-name:ddEtapeFin}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etape:nth-child(3) p{animation-name:ddOuvreFin}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dd-etape:nth-child(1), .dd-etape:nth-child(1) p){animation-range:contain 0% contain 33.3%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dd-etape:nth-child(2), .dd-etape:nth-child(2) p){animation-range:contain 33.3% contain 66.6%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dd-etape:nth-child(3), .dd-etape:nth-child(3) p){animation-range:contain 66.6% contain 100%}
+    @keyframes ddCarte{0%{opacity:0;translate:0 18px}12%,88%{opacity:1;translate:0 0}100%{opacity:0;translate:0 -12px}}
+    @keyframes ddCarteDebut{0%,88%{opacity:1;translate:0 0}100%{opacity:0;translate:0 -12px}}
+    @keyframes ddCarteFin{0%{opacity:0;translate:0 18px}12%,100%{opacity:1;translate:0 0}}
+    @keyframes ddEtape{0%,100%{color:#A3A3A3;background-color:#FFFFFF}12%,88%{color:#1A1A1A;background-color:#F4F3F0}}
+    @keyframes ddEtapeDebut{0%,88%{color:#1A1A1A;background-color:#F4F3F0}100%{color:#A3A3A3;background-color:#FFFFFF}}
+    @keyframes ddEtapeFin{0%{color:#A3A3A3;background-color:#FFFFFF}12%,100%{color:#1A1A1A;background-color:#F4F3F0}}
+    @keyframes ddOuvre{0%,100%{max-height:0;margin-top:0}12%,88%{max-height:9em;margin-top:8px}}
+    @keyframes ddOuvreDebut{0%,88%{max-height:9em;margin-top:8px}100%{max-height:0;margin-top:0}}
+    @keyframes ddOuvreFin{0%{max-height:0;margin-top:0}12%,100%{max-height:9em;margin-top:8px}}
   }
 }
