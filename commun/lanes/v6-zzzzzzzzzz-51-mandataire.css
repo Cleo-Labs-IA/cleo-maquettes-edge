@@ -26,7 +26,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page=
 }
 
 /* ─── Chapitres ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.section:not(.mu-hero):not(.tk-bandeau){padding:var(--e-section) 0 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.section:not(.mu-hero):not(.tk-bandeau):not([class*="sy-"]){padding:var(--e-section) 0 !important}
 body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section#en-bref{padding-bottom:0 !important}
 body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-titre2{margin:0 0 var(--e-titre-contenu) !important;max-width:24ch}
 

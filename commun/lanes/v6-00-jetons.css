@@ -15,6 +15,8 @@
   --c-accent: #0008CF;
   --c-accent-survol: #0006A8;
   --c-profond: #08093B;
+  /* 16/09/2026, identité Tenkara (IDENTITE.md §1) : la crème mesurée sur tenkara.ai, réservée à la carte crème du bento. */
+  --c-creme: #FFF9CD;
   --c-sur-profond-2: rgba(255,255,255,.66);
 
   /* Typographie */
@@ -37,6 +39,8 @@
   --t-legende: 0.8125rem;
   --t-chiffre: clamp(2.5rem, 1.085rem + 3.774vw, 3.5rem);
   --t-citation: clamp(1.375rem, 0.8rem + 1.53vw, 1.75rem);
+  /* Chiffre rayé (identité) : 72 px au téléphone, 120 px au bureau ; plafonné par la largeur de sa carte (31cqi). */
+  --t-chiffre-raye: clamp(4.5rem, 0.255rem + 11.321vw, 7.5rem);
 
   /* Boutons */
   --b-hauteur: 44px;
@@ -46,7 +50,9 @@
   --l-marge: clamp(1.25rem, -0.519rem + 4.717vw, 2.5rem);
   --l-conteneur: min(1200px, 100% - (2 * var(--l-marge)));
   --l-conteneur-large: min(1360px, 100% - (2 * var(--l-marge)));
-  --e-section: clamp(4.5rem, -0.453rem + 13.21vw, 8rem);
+  /* 16/09/2026, identité : 112 px au bureau (128 avant), « trop vide ». */
+  --e-section: clamp(4.5rem, 0.9623rem + 9.434vw, 7rem);
+  --e-bento: 16px;
   --e-hero-haut: clamp(3.5rem, -1.453rem + 13.21vw, 7rem);
   --e-titre-contenu: clamp(2.5rem, 1.085rem + 3.774vw, 3.5rem);
   --e-titre-lead: clamp(0.75rem, 0.396rem + 0.943vw, 1rem);
@@ -55,9 +61,10 @@
 
   /* Matière */
   --r-bouton: 4px;
-  --r-petit: 6px;
-  --r-carte: 12px;
-  --r-media: 12px;
+  /* 16/09/2026, identité Tenkara : rayons presque droits (IDENTITE.md §1). */
+  --r-petit: 2px;
+  --r-carte: 4px;
+  --r-media: 4px;
   --o-flottante: 0 2px 6px rgba(26,26,26,.06);
 
   /* Mouvement */

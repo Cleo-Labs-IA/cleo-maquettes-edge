@@ -9,7 +9,7 @@
     <div class="ap-hero-grille">
       <div class="ap-hero-texte">
         <p class="sy-surtitre">Cas client · Decathlon</p>
-<!-- 16/09/2026 : « la veille réglementaire tourne seule » retiré (aucune source ; Decathlon parle d'un PoC). Titre tiré du témoignage verbatim de Philippine Tamic : « extraire une donnée structurée, aujourd'hui indispensable pour guider la conception au sein de notre PLM ». -->
+<!-- 16/09/2026, correction : « la veille réglementaire tourne seule » AVAIT une source, le dossier de marque, planche 10 (« Client Decathlon. Their regulatory monitoring runs on its own »). L'intégrateur l'a remplacé à tort en le croyant inventé. Titre actuel, plus prudent parce que Decathlon parle d'un PoC : il est tiré du témoignage verbatim de Philippine Tamic (« extraire une donnée structurée, aujourd'hui indispensable pour guider la conception au sein de notre PLM »). À TRANCHER par Naomie : garder ce titre ou revenir à celui de la planche 10. -->
         <h1 class="ap-h1">Chez Decathlon, une donnée réglementaire structurée jusque dans le PLM.</h1>
         <p class="sy-lead">Les équipes produit et qualité travaillent sur la même base, tenue à jour, et gardent leur temps pour les arbitrages qui le demandent.</p>
         <div class="ap-actions"><a class="sy-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <svg class="ap-fleche" viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
@@ -19,13 +19,20 @@
   <figure class="ap-hero-media sy-media" aria-hidden="true"><img src="img:masse-velo" alt=""></figure>
 </section>
 
-<!-- ═══ DECATHLON EN BREF ═══ valeurs de la fiche d'avant. La citation courte en double (déjà dans le témoignage complet) est retirée. -->
-<section class="section ap-bloc">
+<!-- IDENTITE-E 16/09/2026 -->
+<!-- ═══ DECATHLON EN BREF, EN BENTO ═══ passe identité (IDENTITE.md 2.1). Citation : extrait VERBATIM de la version publiée
+     (cleo-landing, src/components/landing/DecathlonQuote.tsx). Carte crème et carte bleue : faits de la fiche d'avant
+     (marchés couverts, familles de produits, taille). 16/09/2026 : « UE » et « PLM » en lettres rayées se lisaient comme un logo ;
+     les cartes portent le COMPTE des listes de la fiche (4 marchés : UE, UK, US, CA ; 3 familles de produits). -->
+<section class="section ap-bloc ap-bento">
   <div class="conteneur" data-apparait>
     <div class="sy-entete"><img class="ap-logo-client" src="img:logo-decathlon" alt="Decathlon"><h2 class="ap-titre">Decathlon en bref</h2></div>
-    <ul class="sy-lignes">
-      <li><b>Familles de produits</b><span>Sport et loisirs, textile technique, équipement</span></li>
-      <li><b>Marchés couverts</b><span>Union européenne, Royaume-Uni, États-Unis, Canada</span></li>
+    <div class="sy-bento">
+      <figure class="sy-bento-photo"><img src="img:masse-basket" alt=""><blockquote>« Leur moteur d'IA agit comme un traducteur intelligent qui filtre le bruit pour extraire une donnée structurée. »</blockquote><figcaption><img class="sy-avatar" src="img:philippine" alt=""><b>Philippine Tamic</b><span>Decathlon</span></figcaption></figure>
+      <div class="sy-bento-creme"><b class="sy-chiffre-raye">4</b><span>marchés couverts : Union européenne, Royaume-Uni, États-Unis, Canada</span></div>
+      <div class="sy-bento-bleu"><b class="sy-chiffre-raye">3</b><span>familles de produits : sport et loisirs, textile technique, équipement</span><div class="sy-fiches" aria-hidden="true"><dl class="sy-fiche"><dt>Marchés</dt><dd><span>UE</span><span>UK US CA</span></dd></dl><dl class="sy-fiche"><dt>Familles</dt><dd><span>Sport</span><span>Textile</span></dd></dl><dl class="sy-fiche"><dt>Taille</dt><dd><span>Compte</span><span>Grand</span></dd></dl></div></div>
+    </div>
+    <ul class="sy-lignes ap-bento-faits">
       <li><b>Taille</b><span>Grand compte</span></li>
     </ul>
   </div>
@@ -101,13 +108,18 @@
   </div>
 </section>
 
-<!-- ═══ BANDEAU FINAL ═══ composant commun du site (tk-bandeau). Titre : wording/principes.md, règle 10. -->
-<section class="section ap-bloc ap-final tk-bandeau" id="contact">
-  <div class="conteneur" data-apparait>
-    <p class="tk-etiquette">30 minutes avec l'équipe, sur vos produits</p>
-    <h2 class="ap-final-titre">Voyez ce que Cleo relève sur vos propres produits</h2>
-    <a class="tk-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <svg class="ap-fleche" viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-  </div>
+<!-- IDENTITE-E 16/09/2026 -->
+<!-- ═══ APPEL FINAL ═══ passe identité du 16/09/2026 (IDENTITE.md 2.4) : photo sombre, titre blanc centré, bouton bleu à
+     chevrons. Titre et phrase repris du bandeau d'avant. Photo « masse-velo » (grain cuit au build). -->
+<section class="section sy-final-photo" id="contact">
+  <figure data-apparait>
+    <img src="img:masse-velo" alt="">
+    <div class="sy-final-texte">
+      <h2>Voyez ce que Cleo relève sur vos propres produits</h2>
+      <p>30 minutes avec l'équipe, sur vos produits</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo</a></div>
+    </div>
+  </figure>
 </section>
 
 <!--PIED-->

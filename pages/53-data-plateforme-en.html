@@ -1,0 +1,75 @@
+<!--NAV-->
+<!-- ═══ DATA · PLATEFORME ═══ 16/09/2026, agent D (scratchpad/agents/refonte/IDENTITE.md §4). Structure de
+     moonlit.ai/platform, relevée le 16/09 (scratchpad/moonlit2/platform-*) : titre, grande bande qui porte l'interface,
+     vue d'ensemble en deux colonnes, quatre capacités, appel final.
+     Faits des capacités (scratchpad/agents/refonte/identite-data/faits.md) : types de textes et filtres de GET /v2/search
+     (cleo-legal-api src/routes/v2/search.ts l. 19-30), search_legal_bulk 1 à 25 requêtes, get_law_as_of,
+     get_document_article, traverse_amendment_graph, get_changes 90 jours (README de ~/legal-mcp).
+     À TRANCHER : vérifier que l'interface de la plateforme (insight.cleolabs.co, lien « Connexion » de la barre) expose
+     ces quatre capacités telles quelles ; elles sont sourcées sur l'API et le serveur MCP.
+     Interface : illustration en HTML, textes réels (directive 2009/48/CE du 18 juin 2009, décret n° 2010-166 du
+     22 février 2010, règlement (UE) 2023/988 du 10 mai 2023), pas une capture d'écran.
+     Générée par scratchpad/agents/refonte/identite-data/generer.mjs. -->
+
+<section class="section dt-hero dt-hero-plateforme" id="haut">
+  <div class="conteneur">
+    <div class="dt-hero-texte">
+      <p class="sy-surtitre">Platform</p>
+      <h1>Product regulatory research, in one place.</h1>
+      <p class="sy-lead">Search the texts that apply to your products and follow the ones that change, across 106 countries.</p>
+      <div class="sy-actions dt-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Book a demo</a><a class="sy-bouton-secondaire" href="https://insight.cleolabs.co">Log in</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ L'INTERFACE SUR LA PHOTO ═══ composition Legora (grande photo, l'interface posée dessus), matière Tenkara. -->
+<section class="section dt-interface-section" id="interface">
+  <div class="conteneur">
+    <figure class="dt-interface" data-apparait>
+      <img src="img:fenetres" alt="">
+      <div class="sy-interface dt-app" aria-hidden="true">
+        <div class="dt-app-barre"><img src="img:cleo-logo" alt=""><span class="dt-app-recherche"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>toy safety</span></div>
+        <div class="dt-app-filtres"><span><em>Country</em>France, EU</span><span><em>Type</em>Legislation</span></div>
+        <ul class="dt-app-resultats">
+          <li class="dt-app-actif"><p class="dt-app-meta"><span>European Union</span><span>Legislation</span><span>18 June 2009</span></p><b>Directive 2009/48/EC on the safety of toys</b><p class="dt-app-actions"><span>Read the article</span><span>Open the source</span></p></li>
+          <li><p class="dt-app-meta"><span>France</span><span>Legislation</span><span>22 February 2010</span></p><b>Décret n° 2010-166 du 22 février 2010 relatif à la sécurité des jouets</b><p class="dt-app-actions"><span>Read the article</span><span>Open the source</span></p></li>
+          <li><p class="dt-app-meta"><span>European Union</span><span>Legislation</span><span>10 May 2023</span></p><b>Regulation (EU) 2023/988 on general product safety</b><p class="dt-app-actions"><span>Read the article</span><span>Open the source</span></p></li>
+        </ul>
+      </div>
+    </figure>
+  </div>
+</section>
+
+<!-- ═══ VUE D'ENSEMBLE ═══ Moonlit « Overview / Work with global legal data » : titre à gauche, phrase à droite.
+     Chiffres canon ; « tenue à jour » : page 06 (« la même base, tenue à jour »). -->
+<section class="section dt-vue-section" id="vue">
+  <div class="conteneur dt-vue" data-apparait>
+    <div><p class="sy-surtitre">Overview</p><h2>Work with product regulatory data</h2></div>
+    <p class="sy-lead">One base for product compliance: 25,000 regulations mapped across 106 countries, kept up to date and ready to connect.</p>
+  </div>
+</section>
+
+<section class="section dt-capacites-section" id="capacites">
+  <div class="conteneur">
+    <div class="sy-entete"><p class="sy-surtitre">What you can do</p><h2>Key capabilities</h2></div>
+    <ul class="dt-capacites" data-apparait>
+      <li><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><b>Search the texts</b><p>Legislation, guidelines, recalls and decisions, filtered by country, type of text and language.</p></li>
+      <li><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.6 2.4 3.8 5.3 3.8 8.5s-1.2 6.1-3.8 8.5M12 3.5C9.4 5.9 8.2 8.8 8.2 12s1.2 6.1 3.8 8.5"/></svg><b>Compare markets</b><p>The same question asked for several countries, up to 25 searches at once.</p></li>
+      <li><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5.5" width="16" height="14.5" rx="1.5"/><path d="M4 10h16M8.5 3.5v4M15.5 3.5v4M8 14h3"/></svg><b>Read the version in force</b><p>The text as it applied on a given date, article by article.</p></li>
+      <li><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17l5-5 4 4 7-8"/><path d="M15 8h5v5"/></svg><b>Follow what changes</b><p>Texts amended, transposed or replaced, and changes from the last 90 days.</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ APPEL FINAL SUR PHOTO ═══ composant d'identité 2.4 (IDENTITE.md), stylé par la feuille système. -->
+<section class="section sy-final-photo" id="contact">
+  <figure>
+    <img src="img:cables" alt="">
+    <div class="sy-final-texte">
+      <h2>See the platform on your own products</h2>
+      <p>One product range and two markets are enough to start.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Book a demo</a><a class="sy-bouton-secondaire" href="39-data-en.html">See the Data API</a></div>
+    </div>
+  </figure>
+</section>
+<!--PIED-->

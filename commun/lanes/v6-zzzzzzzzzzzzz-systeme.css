@@ -1,3 +1,4 @@
+/* IDENTITE-V1-PRET */
 /* SYSTEME-V1-PRET */
 /* ═══ LE SYSTÈME CLEO, IMPOSÉ SUR TOUT LE SITE ═══ 15/09/2026.
    Naomie : « fais encore un effort sur le design pour toutes les pages […] je veux qu'on respire, qu'on sente le
@@ -131,7 +132,7 @@ body[data-cleo-ds="v6"] main :is(.fx-tampon, .mu-pastille, .en-pastille):not(#_)
 
 /* ═══ 6. Couleurs hors palette ═══ */
 /* Jetons des feuilles V6 historiques (v6-foundation.css) : ombres de carte et grands rayons ramenés au système. */
-body[data-cleo-ds="v6"]:not(#_):not(#_){--cleo-v6-shadow-card:none;--cleo-v6-shadow-hero:var(--o-flottante);--cleo-v6-radius-sm:6px;--cleo-v6-radius-md:12px;--cleo-v6-radius-lg:12px}
+body[data-cleo-ds="v6"]:not(#_):not(#_){--cleo-v6-shadow-card:none;--cleo-v6-shadow-hero:var(--o-flottante);--cleo-v6-radius-sm:2px;--cleo-v6-radius-md:4px;--cleo-v6-radius-lg:4px}
 /* Pastilles bleu pâle sur les mots (em, remesuré après la v1 sur 20 pages : 37, 38, 44 à 51) : le mot reste, la pastille part. */
 body[data-cleo-ds="v6"] main em:not(#_):not(#_){background:none !important;padding:0 !important;border-radius:0 !important;box-shadow:none !important}
 /* Les derniers bleus nuit (#0B0C2C, #15162E, remesurés après la v1) : fond des vignettes et images de ressources en crème ; zones sombres de 17 et 40 au seul #08093B. */
@@ -147,16 +148,16 @@ body[data-cleo-ds="v6"] main :is([class*="-flottant"], .fx-in, .sc-ok):not(#_):n
 /* ═══ 7. Le bandeau final unique : crème, centré ═══
    Les 6 familles qui partagent la même structure (photo, étiquette, titre, bouton) rendent le même bandeau ; la photo de
    fond et son voile disparaissent. La page Enterprise (en-final, formulaire) garde sa structure : voir le rapport. */
-body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final):not(#_):not(#_){position:relative;margin:0 !important;padding:var(--e-section) 0 !important;border:0 !important;background:var(--c-fond-2) !important;color:var(--c-texte);overflow:clip}
-body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final) > .conteneur:not(#_):not(#_){display:flex !important;flex-direction:column !important;align-items:center !important;justify-content:center !important;gap:0 !important;min-height:0 !important;padding-top:0 !important;padding-bottom:0 !important;border:0 !important;background:transparent !important;text-align:center !important}
-body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final) > .conteneur:not(#_):not(#_)::before,
-body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final) > .conteneur:not(#_):not(#_)::after{content:none !important;display:none !important}
-body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final) .tk-trame:not(#_):not(#_){display:none !important}
-body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final) h2:not(#_):not(#_){max-width:22ch !important;margin:0 auto !important;color:var(--c-texte) !important;text-align:center !important;text-shadow:none !important}
-body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final) :is(.tk-etiquette, .sy-surtitre):not(#_):not(#_){margin-bottom:16px;color:var(--c-texte-2) !important}
-body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final) > .conteneur > :is(p:not(.tk-etiquette):not(.sy-surtitre), .sy-lead):not(#_):not(#_){max-width:52ch;margin:16px auto 0;font-size:var(--t-lead);line-height:1.45;color:var(--c-texte-2)}
-body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final) :is(.fx-bandeau-actions, .mu-bandeau-actions, .sy-actions):not(#_):not(#_){display:flex !important;flex-wrap:wrap;justify-content:center !important;gap:12px !important;margin-top:32px !important}
-body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final) > .conteneur > :is(.tk-bouton, .sy-bouton, .btn):not(#_):not(#_){margin-top:32px !important;position:static !important}
+body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final):not(.sy-final-photo):not(#_):not(#_){position:relative;margin:0 !important;padding:var(--e-section) 0 !important;border:0 !important;background:var(--c-fond-2) !important;color:var(--c-texte);overflow:clip}
+body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final):not(.sy-final-photo) > .conteneur:not(#_):not(#_){display:flex !important;flex-direction:column !important;align-items:center !important;justify-content:center !important;gap:0 !important;min-height:0 !important;padding-top:0 !important;padding-bottom:0 !important;border:0 !important;background:transparent !important;text-align:center !important}
+body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final):not(.sy-final-photo) > .conteneur:not(#_):not(#_)::before,
+body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final):not(.sy-final-photo) > .conteneur:not(#_):not(#_)::after{content:none !important;display:none !important}
+body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final):not(.sy-final-photo) .tk-trame:not(#_):not(#_){display:none !important}
+body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final):not(.sy-final-photo) h2:not(#_):not(#_){max-width:22ch !important;margin:0 auto !important;color:var(--c-texte) !important;text-align:center !important;text-shadow:none !important}
+body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final):not(.sy-final-photo) :is(.tk-etiquette, .sy-surtitre):not(#_):not(#_){margin-bottom:16px;color:var(--c-texte-2) !important}
+body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final):not(.sy-final-photo) > .conteneur > :is(p:not(.tk-etiquette):not(.sy-surtitre), .sy-lead):not(#_):not(#_){max-width:52ch;margin:16px auto 0;font-size:var(--t-lead);line-height:1.45;color:var(--c-texte-2)}
+body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final):not(.sy-final-photo) :is(.fx-bandeau-actions, .mu-bandeau-actions, .sy-actions):not(#_):not(#_){display:flex !important;flex-wrap:wrap;justify-content:center !important;gap:12px !important;margin-top:32px !important}
+body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final):not(.sy-final-photo) > .conteneur > :is(.tk-bouton, .sy-bouton, .btn):not(#_):not(#_){margin-top:32px !important;position:static !important}
 
 /* La 404 : titre centré. */
 body[data-cleo-ds="v6"][data-v6-page="404"] main :is(h1, p):not(#_):not(#_){text-align:center !important;margin-left:auto !important;margin-right:auto !important}
@@ -196,4 +197,171 @@ body[data-cleo-ds="v6"] main .sy-media:not(#_):not(#_){width:var(--l-conteneur-l
 body[data-cleo-ds="v6"] main .sy-media img:not(#_):not(#_){display:block;width:100%;height:auto}
 @media (max-width:600px){
   body[data-cleo-ds="v6"] main .sy-lignes > li:not(#_):not(#_){grid-template-columns:minmax(0,1fr);gap:6px;padding:16px 0}
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+   ═══ 10. IDENTITÉ CLEO × TENKARA ═══ 16/09/2026. Naomie : « inspire-toi un peu du site Tenkara, mets une identité, là
+   c'est trop vide ». Règle : scratchpad/agents/refonte/IDENTITE.md. On reprend de tenkara.ai la COMPOSITION et la
+   MATIÈRE (bento, chiffres rayés, étiquette blanche, bande photo, onglets sombres, appel final sur photo, cartes photo),
+   jamais la police : Satoshi seule (mémoire feedback_da_tenkara_reference, carrousels V3 validés).
+   Les photos sont des <img src="img:clé"> au grain cuit par construire.mjs ; aucune image de fond CSS.
+   :not(#_) ×3 : passe devant les règles génériques du système (×2) sans toucher aux feuilles de page.
+
+   ── CONTRAT HTML (les pages écrivent ce balisage, cette feuille le style ; ne jamais re-styler sy-* dans une page) ──
+   2.1 BENTO  <div class="sy-bento" data-apparait-groupe>
+                <figure class="sy-bento-photo"><img src="img:…" alt="">
+                  <blockquote>« extrait verbatim »</blockquote>                  (ou <p class="sy-etiquette">…</p><p>phrase</p>)
+                  <figcaption><img class="sy-avatar" src="img:philippine" alt=""><b>Nom</b><span>Société</span></figcaption></figure>
+                <div class="sy-bento-creme"><b class="sy-chiffre-raye">106</b><span>pays suivis</span></div>
+                <div class="sy-bento-bleu"><b class="sy-chiffre-raye">25 000</b><span>réglementations cartographiées</span>
+                  <div class="sy-fiches" aria-hidden="true"><dl class="sy-fiche"><dt>Directive 2009/48/CE</dt>
+                    <dd><span>Objet</span><span>Jouets</span></dd></dl> (2 fiches ; une 3e est masquée)</div></div></div>
+   2.2 BANDE PHOTO  <section class="section sy-bande-photo"><figure><img src="img:…" alt="">
+                <div class="sy-bande-texte"><p class="sy-etiquette">…</p><h2>…</h2><a class="sy-bouton-blanc" href>…</a></div></figure></section>
+   2.3 ONGLETS SOMBRES  <section class="section sy-sombre"><div class="conteneur"><h2>…</h2>
+                <div class="tk-onglets sy-onglets" role="group" aria-label="…"> 3 × <input type="radio" name id> (le 1er checked)
+                <div class="tk-onglets-tetes"> 3 × <label for><b>Titre</b><span>Phrase</span></label></div>
+                <div class="tk-onglets-scene"> 3 × <figure class="tk-onglets-vue"><img src="img:…" alt="">
+                  <div class="sy-verre"><p>texte ou citation verbatim</p><b>Nom</b><span>Rôle</span></div></figure></div></div></div></section>
+   2.4 APPEL FINAL  <section class="section sy-final-photo"><figure><img src="img:…" alt="">
+                <div class="sy-final-texte"><h2>…</h2><p>…</p><div class="sy-actions">
+                  <a class="sy-bouton sy-bouton-chevrons" href>Voir une démo</a></div></div></figure></section>
+   2.5 CARTES PHOTO  <div class="sy-carrousel"> n × <a class="sy-carte-photo" href><img src="img:…" alt="">
+                <span class="sy-etiquette">Blog</span><b>Titre</b></a></div>
+   2.6 .sy-etiquette (pastille blanche, capitales) · .sy-bouton-chevrons (« » » dessiné par la feuille : pas de SVG à
+       ajouter) · .sy-bouton-blanc (bouton blanc, flèche ↗ dessinée par la feuille).
+   ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════ */
+
+/* Le chiffre rayé se dessine en Satoshi Black STATIQUE : la variable a des contours qui se chevauchent et le contour les
+   montre (vécu sur les carrousels du 15/09). Même famille Satoshi, fichier servi depuis commun/polices. */
+@font-face{font-family:"Satoshi Black";src:url(/fonts/Satoshi-Black.woff2) format("woff2");font-weight:900;font-style:normal;font-display:swap}
+
+/* ─── 2.6 Étiquette blanche et boutons d'identité ─── */
+body[data-cleo-ds="v6"] main .sy-etiquette:not(#_):not(#_):not(#_){display:inline-block;width:auto;max-width:max-content;margin:0 !important;padding:6px 10px !important;border:0 !important;border-radius:0 !important;background:#FFFFFF !important;box-shadow:none !important;font-size:var(--t-surtitre) !important;font-weight:500 !important;line-height:1.25 !important;letter-spacing:.06em !important;text-transform:uppercase !important;color:var(--c-texte) !important}
+body[data-cleo-ds="v6"] :is(main, .nav) :is(.sy-bouton-chevrons, .btn-marque):not(#_):not(#_):not(#_)::after{content:"";display:inline-block;flex:none;width:12px;height:12px;margin-left:2px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 2.5 5.5 6 2 9.5M6.5 2.5 10 6 6.5 9.5' fill='none' stroke='black' stroke-width='1.7'/%3E%3C/svg%3E") center / contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 2.5 5.5 6 2 9.5M6.5 2.5 10 6 6.5 9.5' fill='none' stroke='black' stroke-width='1.7'/%3E%3C/svg%3E") center / contain no-repeat}
+body[data-cleo-ds="v6"] main .sy-bouton-blanc:not(#_):not(#_):not(#_){display:inline-flex;align-items:center;justify-content:center;gap:8px;box-sizing:border-box;min-height:var(--b-hauteur) !important;padding:0 20px !important;border:0 !important;border-radius:var(--r-bouton) !important;background:#FFFFFF !important;color:var(--c-texte) !important;box-shadow:none !important;font-size:var(--b-taille) !important;line-height:1.2 !important;font-weight:500 !important;letter-spacing:.04em !important;text-transform:uppercase !important;text-decoration:none !important;white-space:nowrap;transition:background-color .2s ease}
+body[data-cleo-ds="v6"] main .sy-bouton-blanc:not(#_):not(#_):not(#_):hover{background:var(--c-fond-2) !important;color:var(--c-texte) !important}
+body[data-cleo-ds="v6"] main .sy-bouton-blanc:not(:has(svg)):not(#_):not(#_):not(#_)::after{content:"";display:inline-block;flex:none;width:11px;height:11px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 9 9 3M4 3h5v5' fill='none' stroke='black' stroke-width='1.5'/%3E%3C/svg%3E") center / contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M3 9 9 3M4 3h5v5' fill='none' stroke='black' stroke-width='1.5'/%3E%3C/svg%3E") center / contain no-repeat}
+
+/* ─── 2.1 Bento de preuve : 12 colonnes, 16 px ; photo 6, crème 3, bleu 3 ─── */
+body[data-cleo-ds="v6"] main .sy-bento:not(#_):not(#_):not(#_){display:grid;grid-template-columns:repeat(12, minmax(0, 1fr));gap:var(--e-bento);margin:0;padding:0}
+body[data-cleo-ds="v6"] main :is(.sy-bento-photo, .sy-bento-creme, .sy-bento-bleu):not(#_):not(#_):not(#_){position:relative;box-sizing:border-box;min-height:clamp(20rem, 28vw, 26rem);margin:0;padding:var(--p-carte);border:0 !important;border-radius:var(--r-carte) !important;box-shadow:none !important;overflow:clip;display:flex;flex-direction:column}
+body[data-cleo-ds="v6"] main .sy-bento-photo:not(#_):not(#_):not(#_){grid-column:span 6;justify-content:space-between;gap:24px;background:var(--c-profond);color:#FFFFFF}
+body[data-cleo-ds="v6"] main .sy-bento-photo > img:first-child:not(#_):not(#_):not(#_){position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;border-radius:0}
+body[data-cleo-ds="v6"] main .sy-bento-photo:not(#_):not(#_):not(#_)::after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(180deg, rgba(8,9,59,.62) 0%, rgba(8,9,59,.18) 48%, rgba(8,9,59,.66) 100%);pointer-events:none}
+body[data-cleo-ds="v6"] main .sy-bento-photo > :not(img):not(#_):not(#_):not(#_){position:relative;z-index:1}
+body[data-cleo-ds="v6"] main .sy-bento-photo :is(blockquote, p:not(.sy-etiquette)):not(#_):not(#_):not(#_){margin:0;max-width:24ch;font-size:var(--t-citation) !important;font-weight:500 !important;line-height:1.22 !important;letter-spacing:-.012em !important;color:#FFFFFF !important;text-wrap:balance}
+body[data-cleo-ds="v6"] main .sy-bento-photo figcaption:not(#_):not(#_):not(#_){display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:14px;row-gap:2px;align-items:end;margin:0}
+body[data-cleo-ds="v6"] main .sy-bento-photo .sy-avatar:not(#_):not(#_):not(#_){grid-row:1 / span 2;width:56px;height:56px;object-fit:cover;border-radius:var(--r-petit)}
+body[data-cleo-ds="v6"] main .sy-bento-photo figcaption b:not(#_):not(#_):not(#_){font-size:var(--t-surtitre);font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#FFFFFF}
+body[data-cleo-ds="v6"] main .sy-bento-photo figcaption span:not(#_):not(#_):not(#_){font-size:var(--t-surtitre);font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+body[data-cleo-ds="v6"] main :is(.sy-bento-creme, .sy-bento-bleu):not(#_):not(#_):not(#_){grid-column:span 3;justify-content:flex-end;gap:10px;container-type:inline-size}
+body[data-cleo-ds="v6"] main .sy-bento-creme:not(#_):not(#_):not(#_){background:var(--c-creme) !important;color:var(--c-accent);--raye-c:var(--c-accent)}
+body[data-cleo-ds="v6"] main .sy-bento-bleu:not(#_):not(#_):not(#_){background:var(--c-accent) !important;color:#FFFFFF;--raye-c:#FFFFFF}
+body[data-cleo-ds="v6"] main :is(.sy-bento-creme, .sy-bento-bleu) > span:not(#_):not(#_):not(#_){position:relative;z-index:1;font-size:1.125rem;font-weight:500;line-height:1.3;letter-spacing:-.005em;color:inherit}
+/* Le chiffre rayé : contour et rayures horizontales, statique. Plafonné à 28 % de la largeur de contenu de sa carte, pour que
+   « 25 000 » tienne dans une carte de 3 colonnes (≈ 3,15 em de Satoshi Black). */
+body[data-cleo-ds="v6"] main .sy-chiffre-raye:not(#_):not(#_):not(#_){position:relative;z-index:1;display:block;margin:0;font-family:"Satoshi Black", "Satoshi", sans-serif !important;font-size:min(var(--t-chiffre-raye), 28cqi) !important;font-weight:900 !important;line-height:.9 !important;letter-spacing:-.02em !important;font-variant-numeric:tabular-nums;white-space:nowrap;color:transparent !important;-webkit-text-fill-color:transparent;-webkit-text-stroke:1.5px var(--raye-c, var(--c-accent));background:repeating-linear-gradient(180deg, var(--raye-c, var(--c-accent)) 0 .035em, transparent .035em .085em);-webkit-background-clip:text;background-clip:text;padding-bottom:.04em}
+/* Hors d'une carte du bento (ex. rangée de chiffres), le plafond suit la largeur de l'écran. */
+body[data-cleo-ds="v6"] main :not(.sy-bento-creme, .sy-bento-bleu) > .sy-chiffre-raye:not(#_):not(#_):not(#_){font-size:var(--t-chiffre-raye) !important}
+/* Les fiches de la carte bleue : de petits tableaux à filet blanc derrière le chiffre, qui débordent du bord (le cadre
+   sort, le texte reste dans la carte). Toujours dans la moitié haute : le chiffre et sa légende restent nets. */
+body[data-cleo-ds="v6"] main .sy-fiches:not(#_):not(#_):not(#_){position:absolute;inset:16px 0 auto 0;z-index:0;display:flex;flex-direction:column;align-items:flex-start;gap:14px;pointer-events:none}
+body[data-cleo-ds="v6"] main .sy-fiche:not(#_):not(#_):not(#_){position:relative;box-sizing:border-box;width:min(176px, 64%);margin:0;padding:8px 10px;border:1px solid rgba(255,255,255,.4);border-radius:0;font-size:11px;line-height:1.35;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.66)}
+body[data-cleo-ds="v6"] main .sy-fiche dt:not(#_):not(#_):not(#_){margin:0 0 5px;font-weight:700;color:#FFFFFF;overflow-wrap:anywhere}
+body[data-cleo-ds="v6"] main .sy-fiche dd:not(#_):not(#_):not(#_){display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin:0}
+body[data-cleo-ds="v6"] main .sy-fiche dd > span:first-child:not(#_):not(#_):not(#_){color:rgba(255,255,255,.5)}
+body[data-cleo-ds="v6"] main .sy-fiche dd > span:first-child:not(#_):not(#_):not(#_){flex:none}
+body[data-cleo-ds="v6"] main .sy-fiche dd > span:last-child:not(#_):not(#_):not(#_){min-width:0;text-align:right;overflow-wrap:anywhere}
+body[data-cleo-ds="v6"] main .sy-fiche:nth-child(1):not(#_):not(#_):not(#_){margin-left:16px}
+body[data-cleo-ds="v6"] main .sy-fiche:nth-child(2):not(#_):not(#_):not(#_){align-self:flex-end;margin-right:-24px;padding-right:34px}
+body[data-cleo-ds="v6"] main .sy-fiche:nth-child(n+3):not(#_):not(#_):not(#_){display:none}
+/* Carte étroite (1024 à 1200 px d'écran : 160 px de contenu) : une seule fiche, sinon la colonne descend jusqu'au chiffre. */
+@container (max-width: 200px){
+  body[data-cleo-ds="v6"] main .sy-fiche:nth-child(n+2):not(#_):not(#_):not(#_){display:none}
+}
+
+/* ─── 2.2 Bande photo pleine largeur ─── */
+body[data-cleo-ds="v6"] main .sy-bande-photo > figure:not(#_):not(#_):not(#_){position:relative;box-sizing:border-box;width:var(--l-conteneur-large);height:480px;margin:0 auto;border-radius:var(--r-media);overflow:clip;background:var(--c-profond)}
+body[data-cleo-ds="v6"] main .sy-bande-photo > figure > img:first-child:not(#_):not(#_):not(#_){position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:0}
+body[data-cleo-ds="v6"] main .sy-bande-photo > figure:not(#_):not(#_):not(#_)::after{content:"";position:absolute;inset:0;z-index:1;background:rgba(8,9,59,.35);pointer-events:none}
+body[data-cleo-ds="v6"] main .sy-bande-texte:not(#_):not(#_):not(#_){position:relative;z-index:2;box-sizing:border-box;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;padding:40px;text-align:center}
+body[data-cleo-ds="v6"] main .sy-bande-photo > figure:not(:has(h2, a)):not(#_):not(#_):not(#_){height:360px}
+body[data-cleo-ds="v6"] main .sy-bande-texte:not(:has(h2, a)):not(#_):not(#_):not(#_){align-items:flex-start;justify-content:flex-end;padding:28px 32px;text-align:left}
+body[data-cleo-ds="v6"] main .sy-bande-texte h2:not(#_):not(#_):not(#_){max-width:24ch;margin:0 !important;color:#FFFFFF !important;text-align:center !important;text-shadow:0 1px 24px rgba(8,9,59,.35)}
+body[data-cleo-ds="v6"] main .sy-bande-texte > p:not(.sy-etiquette):not(#_):not(#_):not(#_){max-width:52ch;margin:0;font-size:var(--t-lead);line-height:1.45;color:rgba(255,255,255,.86)}
+
+/* ─── 2.3 Section sombre à onglets (mécanique radio de v6-zzzzzzzzz-marque-tenkara.css) ─── */
+body[data-cleo-ds="v6"] main section.sy-sombre:not(#_):not(#_):not(#_){background:var(--c-profond) !important;color:#FFFFFF}
+body[data-cleo-ds="v6"] main .sy-sombre > .conteneur > h2:not(#_):not(#_):not(#_){max-width:22ch;margin:0 auto var(--e-titre-contenu) !important;color:#FFFFFF !important;text-align:center !important}
+body[data-cleo-ds="v6"] main .sy-sombre > .conteneur > :is(p, .sy-lead):not(.sy-etiquette):not(#_):not(#_):not(#_){margin:calc(-1 * var(--e-titre-contenu) + var(--e-titre-lead)) auto var(--e-titre-contenu) !important;text-align:center;color:var(--c-sur-profond-2) !important}
+body[data-cleo-ds="v6"] main .sy-onglets:not(#_):not(#_):not(#_){padding:0 !important;border-radius:0 !important;background:transparent !important}
+body[data-cleo-ds="v6"] main .sy-onglets .tk-onglets-tetes:not(#_):not(#_):not(#_){gap:32px;margin-bottom:32px}
+body[data-cleo-ds="v6"] main .sy-onglets .tk-onglets-tetes label:not(#_):not(#_):not(#_){color:rgba(255,255,255,.4)}
+body[data-cleo-ds="v6"] main .sy-onglets .tk-onglets-tetes label:hover:not(#_):not(#_):not(#_){color:rgba(255,255,255,.72)}
+body[data-cleo-ds="v6"] main .sy-onglets > input:nth-of-type(1):checked ~ .tk-onglets-tetes label:nth-child(1):not(#_):not(#_):not(#_),
+body[data-cleo-ds="v6"] main .sy-onglets > input:nth-of-type(2):checked ~ .tk-onglets-tetes label:nth-child(2):not(#_):not(#_):not(#_),
+body[data-cleo-ds="v6"] main .sy-onglets > input:nth-of-type(3):checked ~ .tk-onglets-tetes label:nth-child(3):not(#_):not(#_):not(#_){color:#FFFFFF}
+body[data-cleo-ds="v6"] main .sy-onglets .tk-onglets-tetes b:not(#_):not(#_):not(#_){font-size:clamp(1.375rem, 1rem + 1vw, 1.75rem);font-weight:500;letter-spacing:-.02em;line-height:1.15}
+body[data-cleo-ds="v6"] main .sy-onglets .tk-onglets-tetes span:not(#_):not(#_):not(#_){font-size:1rem;line-height:1.45;color:inherit}
+body[data-cleo-ds="v6"] main .sy-onglets .tk-onglets-scene:not(#_):not(#_):not(#_){height:auto;aspect-ratio:16 / 9;border-radius:var(--r-media);background:#000}
+body[data-cleo-ds="v6"] main .sy-onglets .tk-onglets-vue:not(#_):not(#_):not(#_)::after{content:"";position:absolute;inset:0;background:rgba(8,9,59,.28);pointer-events:none}
+body[data-cleo-ds="v6"] main .sy-verre:not(#_):not(#_):not(#_){z-index:1;position:absolute;left:12%;top:50%;translate:0 -50%;box-sizing:border-box;max-width:min(640px, 72%);padding:28px 32px;border-radius:var(--r-petit);background:rgba(255,255,255,.12);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#FFFFFF}
+body[data-cleo-ds="v6"] main .sy-verre > p:not(#_):not(#_):not(#_){margin:0;font-size:var(--t-citation);font-weight:500;line-height:1.25;letter-spacing:-.012em;color:#FFFFFF}
+body[data-cleo-ds="v6"] main .sy-verre > b:not(#_):not(#_):not(#_){display:block;margin-top:24px;font-size:1.25rem;font-weight:500;line-height:1.2;color:#FFFFFF}
+body[data-cleo-ds="v6"] main .sy-verre > span:not(#_):not(#_):not(#_){display:block;margin-top:8px;font-size:var(--t-surtitre);font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+
+/* ─── 2.4 Appel final sur photo ─── */
+body[data-cleo-ds="v6"] main section.sy-final-photo:not(#_):not(#_):not(#_){margin:0 !important;padding:var(--e-section) 0 !important;border:0 !important;background:var(--c-fond) !important;overflow:clip}
+body[data-cleo-ds="v6"] main .sy-final-photo > figure:not(#_):not(#_):not(#_){position:relative;box-sizing:border-box;width:var(--l-conteneur-large);height:520px;margin:0 auto;border-radius:var(--r-media);overflow:clip;background:var(--c-profond)}
+body[data-cleo-ds="v6"] main .sy-final-photo > figure > img:first-child:not(#_):not(#_):not(#_){position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:0}
+body[data-cleo-ds="v6"] main .sy-final-photo > figure:not(#_):not(#_):not(#_)::after{content:"";position:absolute;inset:0;z-index:1;background:rgba(8,9,59,.55);pointer-events:none}
+body[data-cleo-ds="v6"] main .sy-final-texte:not(#_):not(#_):not(#_){position:relative;z-index:2;box-sizing:border-box;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:48px;text-align:center;color:#FFFFFF}
+body[data-cleo-ds="v6"] main .sy-final-texte h2:not(#_):not(#_):not(#_){max-width:22ch;margin:0 !important;font-size:var(--t-h2) !important;line-height:var(--t-h2-lh) !important;letter-spacing:var(--t-h2-ls) !important;color:#FFFFFF !important;text-align:center !important}
+body[data-cleo-ds="v6"] main .sy-final-texte h2 :is(.attenue, .sy-suite):not(#_):not(#_):not(#_){color:var(--c-sur-profond-2) !important}
+body[data-cleo-ds="v6"] main .sy-final-texte > p:not(.sy-etiquette):not(#_):not(#_):not(#_){max-width:52ch;margin:16px 0 0;font-size:var(--t-lead);line-height:1.45;color:rgba(255,255,255,.82)}
+body[data-cleo-ds="v6"] main .sy-final-texte > .sy-etiquette:not(#_):not(#_):not(#_){margin-bottom:24px !important}
+body[data-cleo-ds="v6"] main .sy-final-texte .sy-actions:not(#_):not(#_):not(#_){display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:32px}
+body[data-cleo-ds="v6"] main .sy-final-texte .sy-bouton-secondaire:not(#_):not(#_):not(#_){color:#FFFFFF !important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4) !important}
+
+/* ─── 2.5 Rangée de cartes photo ─── */
+body[data-cleo-ds="v6"] main section:has(.sy-carrousel):not(#_):not(#_):not(#_){overflow-x:clip}
+body[data-cleo-ds="v6"] main .sy-carrousel:not(#_):not(#_):not(#_){display:flex;gap:var(--e-bento);margin:0 calc(50% - 50vw) 0 0;padding:0 calc(50vw - 50%) 12px 0;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-left:0;scrollbar-width:thin;scrollbar-color:var(--c-filet) transparent}
+body[data-cleo-ds="v6"] main .sy-carte-photo:not(#_):not(#_):not(#_){position:relative;box-sizing:border-box;flex:0 0 360px;height:340px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;gap:12px;padding:20px;border:0 !important;border-radius:var(--r-carte) !important;box-shadow:none !important;overflow:clip;scroll-snap-align:start;background:var(--c-profond);color:#FFFFFF !important;text-decoration:none !important}
+body[data-cleo-ds="v6"] main .sy-carte-photo > img:first-child:not(#_):not(#_):not(#_){position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:0;transition:scale .6s var(--m-courbe)}
+body[data-cleo-ds="v6"] main .sy-carte-photo:not(#_):not(#_):not(#_)::after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(180deg, rgba(8,9,59,0) 32%, rgba(8,9,59,.84) 100%);pointer-events:none}
+body[data-cleo-ds="v6"] main .sy-carte-photo > :not(img):not(#_):not(#_):not(#_){position:relative;z-index:1}
+body[data-cleo-ds="v6"] main .sy-carte-photo > b:not(#_):not(#_):not(#_){display:block;max-width:22ch;font-size:1.375rem;font-weight:500;line-height:1.2;letter-spacing:-.012em;color:#FFFFFF;text-wrap:balance}
+body[data-cleo-ds="v6"] main .sy-carte-photo:hover > img:first-child:not(#_):not(#_):not(#_){scale:1.03}
+body[data-cleo-ds="v6"] main .sy-carte-photo:focus-visible:not(#_):not(#_):not(#_){outline:2px solid var(--c-accent);outline-offset:3px}
+
+/* ─── Téléphone et tablette ─── */
+@media (max-width:1023px){
+  body[data-cleo-ds="v6"] main .sy-bento-photo:not(#_):not(#_):not(#_){grid-column:span 12}
+  body[data-cleo-ds="v6"] main :is(.sy-bento-creme, .sy-bento-bleu):not(#_):not(#_):not(#_){grid-column:span 6}
+}
+@media (max-width:600px){
+  body[data-cleo-ds="v6"] main :is(.sy-bento-photo, .sy-bento-creme, .sy-bento-bleu):not(#_):not(#_):not(#_){grid-column:span 12}
+  body[data-cleo-ds="v6"] main .sy-bento-photo:not(#_):not(#_):not(#_){min-height:22.5rem}
+  body[data-cleo-ds="v6"] main :is(.sy-bento-creme, .sy-bento-bleu):not(#_):not(#_):not(#_){min-height:16.25rem}
+  body[data-cleo-ds="v6"] main .sy-chiffre-raye:not(#_):not(#_):not(#_){-webkit-text-stroke-width:1px}
+  /* Carte de 260 px : deux fiches seulement, sinon elles passent sous le chiffre (mesuré sur la page témoin, WebKit 390). */
+  /* Carte de 350 px : les deux fiches côte à côte, sur la première rangée, loin du chiffre. */
+  body[data-cleo-ds="v6"] main .sy-fiches:not(#_):not(#_):not(#_){flex-direction:row;justify-content:space-between;align-items:flex-start}
+  body[data-cleo-ds="v6"] main .sy-fiche:not(#_):not(#_):not(#_){width:min(160px, 46%)}
+  body[data-cleo-ds="v6"] main .sy-fiche:nth-child(2):not(#_):not(#_):not(#_){align-self:flex-start}
+  body[data-cleo-ds="v6"] main .sy-bande-photo > figure:not(#_):not(#_):not(#_){height:360px}
+  body[data-cleo-ds="v6"] main .sy-bande-texte:not(#_):not(#_):not(#_){gap:18px;padding:24px 20px}
+  body[data-cleo-ds="v6"] main .sy-bande-photo > figure:not(:has(h2, a)):not(#_):not(#_):not(#_){height:240px}
+  body[data-cleo-ds="v6"] main .sy-bande-texte:not(:has(h2, a)):not(#_):not(#_):not(#_){padding:20px}
+  body[data-cleo-ds="v6"] main .sy-sombre .tk-onglets-tetes:not(#_):not(#_):not(#_){grid-template-columns:minmax(0,1fr);gap:14px;margin-bottom:24px}
+  body[data-cleo-ds="v6"] main .sy-sombre .tk-onglets-tetes span:not(#_):not(#_):not(#_){display:none}
+  body[data-cleo-ds="v6"] main .sy-onglets .tk-onglets-scene:not(#_):not(#_):not(#_){aspect-ratio:auto;height:440px}
+  body[data-cleo-ds="v6"] main .sy-verre:not(#_):not(#_):not(#_){left:14px;right:14px;top:auto;bottom:14px;translate:none;max-width:none;padding:20px;background:rgba(8,9,59,.62)}
+  body[data-cleo-ds="v6"] main .sy-final-photo > figure:not(#_):not(#_):not(#_){height:420px}
+  body[data-cleo-ds="v6"] main .sy-final-texte:not(#_):not(#_):not(#_){padding:28px 20px}
+  body[data-cleo-ds="v6"] main .sy-carte-photo:not(#_):not(#_):not(#_){flex-basis:280px;height:300px}
+}
+@media (prefers-reduced-motion:reduce){
+  body[data-cleo-ds="v6"] main .sy-carte-photo > img:first-child:not(#_):not(#_):not(#_){transition:none}
 }

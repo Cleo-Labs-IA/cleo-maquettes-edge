@@ -1,0 +1,136 @@
+<!--NAV-->
+<!-- ═══ DATA · SERVEUR MCP ═══ 16/09/2026, agent D (scratchpad/agents/refonte/IDENTITE.md §4). Structure de
+     moonlit.ai/mcp, relevée les 15 et 16/09 (scratchpad/moonlit2/mcp-*) : haut de page en deux colonnes avec le schéma,
+     les clients, trois étapes, une citation, la section sombre « le modèle ne devine plus », l'accès, l'appel final.
+     Retiré de la structure Moonlit : l'annuaire de skills (Naomie, 16/09 : les skills vivent dans Ressources), les prix.
+     Faits : scratchpad/agents/refonte/identite-data/faits.md. Adresse du serveur : README de ~/legal-mcp l. 97 et 172,
+     mesurée en direct le 16/09 (401 sans authentification, découverte OAuth en 200). Le paquet npm n'est pas publié
+     (404) : aucune commande « npx » n'est affichée. Clients : README l. 3 et 97. Pas de logos, pas de badge « Live »,
+     pas de nombre d'outils. Générée par scratchpad/agents/refonte/identite-data/generer.mjs. -->
+
+<!-- ═══ HAUT DE PAGE ═══ h1 : variante 1 de refonte/wording/heros.md pour Data (SITE 39), le titre de /mcp chez Moonlit.
+     Schéma : le nœud Cleo, la pastille MCP, les clients du README (repris du méga-menu Data). -->
+<section class="section dt-hero" id="haut">
+  <div class="conteneur dt-duo dt-duo-egal">
+    <div class="dt-hero-texte">
+      <p class="sy-surtitre">MCP server</p>
+      <h1>Product regulatory data, inside the AI you already use.</h1>
+      <p class="sy-lead">Whether you run compliance for a product range or build a tool, find the product rules of 106 countries inside your assistant. The answer cites the article behind the rule.</p>
+      <div class="sy-actions dt-actions"><a class="sy-bouton sy-bouton-chevrons" href="#brancher">Connect Cleo</a><a class="sy-bouton-secondaire" href="21-inscription.html">Request access</a></div>
+    </div>
+    <div class="dt-schema" aria-hidden="true" data-apparait>
+      <svg class="dt-schema-traits" viewBox="0 0 520 320" preserveAspectRatio="none">
+        <path class="dt-trait-mcp" d="M122 160H176"/>
+        <path class="dt-trait" style="--i:0" d="M252 160C318 160 322 28 382 28"/>
+        <path class="dt-trait" style="--i:1" d="M252 160C318 160 322 78 382 78"/>
+        <path class="dt-trait" style="--i:2" d="M252 160C318 160 322 128 382 128"/>
+        <path class="dt-trait" style="--i:3" d="M252 160C318 160 322 178 382 178"/>
+        <path class="dt-trait" style="--i:4" d="M252 160C318 160 322 228 382 228"/>
+        <path class="dt-trait" style="--i:5" d="M252 160C318 160 322 278 382 278"/>
+      </svg>
+      <span class="dt-noeud"><img src="img:cleo-logo" alt=""></span>
+      <span class="dt-pastille">MCP</span>
+      <span class="dt-client" style="--i:0;top:8.75%">Claude</span>
+      <span class="dt-client" style="--i:1;top:24.375%">Cursor</span>
+      <span class="dt-client" style="--i:2;top:40%">Cline</span>
+      <span class="dt-client" style="--i:3;top:55.625%">Continue</span>
+      <span class="dt-client" style="--i:4;top:71.25%">Claude Code</span>
+      <span class="dt-client" style="--i:5;top:86.875%">Any MCP client</span>
+      <span class="dt-point" style="--i:0;offset-path:path('M252 160C318 160 322 28 382 28')"></span>
+      <span class="dt-point" style="--i:1;offset-path:path('M252 160C318 160 322 78 382 78')"></span>
+      <span class="dt-point" style="--i:2;offset-path:path('M252 160C318 160 322 128 382 128')"></span>
+      <span class="dt-point" style="--i:3;offset-path:path('M252 160C318 160 322 178 382 178')"></span>
+      <span class="dt-point" style="--i:4;offset-path:path('M252 160C318 160 322 228 382 228')"></span>
+      <span class="dt-point" style="--i:5;offset-path:path('M252 160C318 160 322 278 382 278')"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LES CLIENTS ═══ Moonlit « Connect Moonlit to your assistant in two clicks » : une carte par client. Guides :
+     Claude.ai par connecteur et lien magique (README l. 97) ; les autres par l'adresse du serveur et la clé ld_live_
+     (le serveur accepte « Bearer ld_live_… », cleo-legal-api src/middleware/auth-mcp.ts l. 3-4). -->
+<section class="section dt-clients-section" id="brancher">
+  <div class="conteneur">
+    <div class="sy-entete"><h2>Connect Cleo to your assistant</h2><p class="sy-lead">Cleo runs as an MCP server, so it works in any compatible client. Pick yours, then add the server address.</p></div>
+    <div class="dt-clients-grille" data-apparait>
+      <article class="sy-carte dt-client-carte"><p class="dt-client-tete"><b>Claude.ai and Claude Desktop</b><span>Connectors</span></p><p>Add Cleo as a connector, then sign in with a magic link.</p><p class="dt-client-adresse"><span>Server address</span><code>https://api.legaldata.cleolabs.co/mcp</code></p></article>
+      <article class="sy-carte dt-client-carte"><p class="dt-client-tete"><b>Claude Code</b><span>Terminal</span></p><p>For teams working in the terminal: add the server address and your access key.</p><p class="dt-client-adresse"><span>Server address</span><code>https://api.legaldata.cleolabs.co/mcp</code></p></article>
+      <article class="sy-carte dt-client-carte"><p class="dt-client-tete"><b>Cursor</b><span>Editor</span></p><p>Add the server address to your MCP configuration, with your access key.</p><p class="dt-client-adresse"><span>Server address</span><code>https://api.legaldata.cleolabs.co/mcp</code></p></article>
+      <article class="sy-carte dt-client-carte"><p class="dt-client-tete"><b>Cline</b><span>Editor</span></p><p>Add the server address to your MCP settings, with your access key.</p><p class="dt-client-adresse"><span>Server address</span><code>https://api.legaldata.cleolabs.co/mcp</code></p></article>
+      <article class="sy-carte dt-client-carte"><p class="dt-client-tete"><b>Continue</b><span>Editor</span></p><p>Add the server address to your MCP configuration, with your access key.</p><p class="dt-client-adresse"><span>Server address</span><code>https://api.legaldata.cleolabs.co/mcp</code></p></article>
+      <article class="sy-carte dt-client-carte"><p class="dt-client-tete"><b>Any MCP client</b><span>Generic</span></p><p>Enter the server address and your access key, or use browser sign-in.</p><p class="dt-client-adresse"><span>Server address</span><code>https://api.legaldata.cleolabs.co/mcp</code></p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TROIS ÉTAPES ═══ Moonlit « Three steps, no procurement ». Textes repris des étapes de la page 39 (15/09/2026). -->
+<section class="section dt-etapes-section" id="etapes">
+  <div class="conteneur">
+    <div class="sy-entete"><h2>Three steps to start</h2></div>
+    <ol class="dt-etapes" data-apparait>
+      <li><span class="dt-numero">1</span><b>Request access</b><p>An access key, or browser sign-in.</p></li>
+      <li><span class="dt-numero">2</span><b>Connect your assistant</b><p>Add the Cleo server to your MCP client.</p></li>
+      <li><span class="dt-numero">3</span><b>Ask your question</b><p>The answer cites the article behind the rule.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ═══ CITATION ═══ Moonlit place une citation client centrée. Seule citation utilisable : Philippine Tamic, Decathlon,
+     extrait verbatim déjà publié sur les pages 43 et 40 (DecathlonQuote.tsx de cleo-landing). -->
+<section class="section dt-citation-section">
+  <div class="conteneur">
+    <figure class="sy-citation dt-citation" data-apparait>
+      <blockquote>“Their AI engine acts as an intelligent translator that filters noise to extract structured data.”</blockquote>
+      <figcaption><img class="dt-avatar" src="img:philippine" alt=""><span><b>Philippine Tamic</b>Decathlon</span></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ═══ LE MODÈLE NE DEVINE PLUS ═══ Moonlit « The LLM stops guessing… » : bloc sombre, panneau de traçage, rangée de
+     chiffres. Seule zone #08093B de la page. Règle CPSIA déjà publiée sur Data ; chiffres canon. -->
+<section class="section sy-sombre dt-trace-section" id="methode">
+  <div class="conteneur sy-sur-profond">
+    <div class="dt-duo dt-trace">
+      <div class="dt-trace-texte"><h2>The model stops guessing: it reads a rule base and cites the article</h2><p class="sy-lead">Cleo connects your assistant to the product rules of 106 countries. Every result points to its source, and every rule to its article.</p></div>
+      <div class="dt-panneau" aria-hidden="true" data-apparait>
+        <p class="dt-panneau-note">one question, the rule and its source</p>
+        <p class="dt-panneau-ligne dt-panneau-question"><i></i>Lead content, children's product, United States</p>
+        <p class="dt-panneau-fleche">rule</p>
+        <p class="dt-panneau-ligne">Lead content of accessible parts</p>
+        <p class="dt-panneau-fleche">article</p>
+        <p class="dt-panneau-ligne">CPSIA, section 101 (a)</p>
+        <p class="dt-panneau-fleche">limit</p>
+        <p class="dt-panneau-ligne">100 ppm by weight, in force on 14 August 2011</p>
+        <p class="dt-panneau-note">every result points to its source</p>
+      </div>
+    </div>
+    <ul class="sy-chiffres dt-chiffres-sombre"><li><b>106</b><span>countries tracked</span></li><li><b>25,000</b><span>regulations mapped</span></li><li><b>19,000</b><span>regulatory authorities tracked</span></li><li><b>3,700</b><span>official sources</span></li></ul>
+  </div>
+</section>
+
+<!-- ═══ L'ACCÈS ═══ Moonlit « Start free. Scale by calls, not seats. », SANS PRIX NI QUOTA. Les deux modes
+     d'authentification du README (l. 101 à 104) ; révocation (l. 199) ; même clé que l'API (auth.ts l. 52).
+     À TRANCHER : le modèle de prix de l'offre Data n'est pas arrêté. -->
+<section class="section dt-offre-section" id="acces">
+  <div class="conteneur">
+    <div class="sy-entete"><h2>Access by browser or by key</h2><p class="sy-lead">Every access gives the same rule base, the same tools and the same tracing back to the source.</p></div>
+    <div class="dt-offre" data-apparait>
+      <article class="sy-carte dt-offre-carte"><p class="sy-surtitre">Browser sign-in</p><p class="dt-offre-grand">OAuth 2.1</p><p class="dt-offre-texte">For use on a workstation: a browser opens on first sign-in, no secret to copy.</p><div class="sy-actions dt-actions"><a class="sy-bouton" href="21-inscription.html">Request access</a></div></article>
+      <article class="sy-carte dt-offre-carte"><p class="sy-surtitre">Access key</p><p class="dt-offre-grand">ld_live_…</p><p class="dt-offre-texte">For automation and servers. The same key as the API, revocable at any time.</p><div class="sy-actions dt-actions"><a class="sy-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team</a></div></article>
+    </div>
+    <p class="dt-renvoi">Building a product on regulatory data? <a class="sy-lien dt-lien" href="39-data-en.html#acces">See the Data API <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
+  </div>
+</section>
+
+<!-- ═══ APPEL FINAL SUR PHOTO ═══ composant d'identité 2.4 (IDENTITE.md), stylé par la feuille système. -->
+<section class="section sy-final-photo" id="contact">
+  <figure>
+    <img src="img:chaines" alt="">
+    <div class="sy-final-texte">
+      <h2>Connect Cleo to the assistant you already use</h2>
+      <p>One MCP server, the same data everywhere.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="21-inscription.html">Request access</a><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team</a></div>
+    </div>
+  </figure>
+</section>
+<!--PIED-->

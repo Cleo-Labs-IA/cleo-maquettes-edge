@@ -20,8 +20,6 @@ body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page=
 body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-lien:hover{text-decoration:underline;text-underline-offset:4px}
 body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-etat{font-size:.875rem;font-style:normal;color:var(--c-texte-2);white-space:nowrap}
 
-/* ─── Chiffres (système .sy-chiffres) ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-chiffres{margin:64px 0 0 !important;padding:32px 0 0 !important;border-top:1px solid var(--c-filet)}
 
 /* ─── La liste des prestations ─── */
 body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-cas{position:relative;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:clamp(40px, 5vw, 80px);align-items:start}
@@ -122,15 +120,6 @@ body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page=
 body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-expert .sc-lien{justify-self:start;margin-top:4px;font-size:.875rem}
 body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-experts-texte{align-self:center;padding-left:clamp(0px, 2vw, 32px)}
 body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-experts-texte p{margin:0 0 24px;font-size:var(--t-lead);line-height:1.45;color:var(--c-texte)}
-body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-temoin{position:relative;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:48px;align-items:end;min-height:440px;margin-top:var(--e-titre-contenu);padding:clamp(28px, 4vw, 56px);border-radius:var(--r-media);overflow:clip;background:var(--c-texte)}
-body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-temoin-fond{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover}
-body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-temoin::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg, rgba(26,26,26,.78) 0%, rgba(26,26,26,.5) 60%, rgba(26,26,26,.3) 100%)}
-body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-citation{position:relative;z-index:2;max-width:30ch;margin:0;font-size:var(--t-citation);font-weight:400;line-height:1.3;letter-spacing:-.01em;color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-temoin-carte{position:relative;z-index:2;justify-self:end;display:grid;grid-template-columns:auto minmax(0,1fr);gap:14px;align-items:center;width:min(100%, 360px);box-sizing:border-box;padding:0;background:transparent !important;color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-temoin-carte img{width:48px;height:48px;border-radius:50%;object-fit:cover;object-position:50% 25%}
-body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-temoin-carte b{display:block;font-size:var(--t-corps);font-weight:500}
-body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-temoin-carte span{display:block;margin-top:2px;font-size:.875rem;color:var(--c-sur-profond-2)}
-body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-temoin-carte > .sc-lien{grid-column:1 / -1;justify-self:start;color:#FFFFFF}
 
 /* ─── Questions ─── */
 body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-faq{max-width:840px;border-top:1px solid var(--c-filet)}
@@ -142,7 +131,6 @@ body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page=
 body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-faq details p{margin:0 0 22px;max-width:68ch;font-size:var(--t-corps);line-height:1.55;color:var(--c-texte-2)}
 
 /* ─── Bandeau final (structure du système) ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sv-final-actions{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px 24px;margin-top:32px}
 
 /* ─── Téléphone et tablette ─── */
 @media (max-width:980px){
@@ -162,8 +150,6 @@ body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page=
   body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-tarifs-table li{align-items:flex-start;flex-direction:column;gap:6px}
   body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-experts{grid-template-columns:repeat(2,minmax(0,1fr))}
   body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-experts-texte{grid-column:1 / -1;padding:12px 0 0}
-  body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-temoin{grid-template-columns:minmax(0,1fr);gap:28px;min-height:0}
-  body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-temoin-carte{justify-self:stretch;width:auto}
 }
 @media (max-width:560px){
   body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-experts{grid-template-columns:minmax(0,1fr)}

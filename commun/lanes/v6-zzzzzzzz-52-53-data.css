@@ -1,0 +1,120 @@
+/* ═══ DATA : SERVEUR MCP (52) ET PLATEFORME (53), FR et EN ═══ 16/09/2026, agent D. Structures de moonlit.ai/mcp et
+   moonlit.ai/platform (scratchpad/moonlit2). Composants communs aux pages Data : v6-zzzzzzzz-39-data.css. Jetons seulement ;
+   les sy-* restent à la feuille système. Le seul mouvement propre ici : les points qui voyagent sur le schéma MCP, en
+   boucle de temps (pas au défilement), coupés en « réduire les animations » et sous 1200 px. */
+
+/* ─────────────────────────────────────── 52 · SERVEUR MCP ─────────────────────────────────────── */
+body[data-cleo-ds="v6"]:is([data-v6-page="52-data-mcp"],[data-v6-page="52-data-mcp-en"]){
+
+  /* Le schéma Cleo → MCP → clients (viewBox 520 × 320 ; les étiquettes sont placées en % de la même boîte) */
+  & main .dt-schema:not(#_):not(#_){position:relative;box-sizing:border-box;width:100%;max-width:520px;height:320px;margin:0 0 0 auto}
+  & main .dt-schema-traits:not(#_):not(#_){position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+  & main .dt-schema-traits path{fill:none;stroke:var(--c-texte);stroke-opacity:.18;stroke-width:1.2;vector-effect:non-scaling-stroke}
+  & main .dt-schema-traits .dt-trait-mcp{stroke:var(--c-accent);stroke-opacity:.5}
+  & main .dt-noeud:not(#_):not(#_){position:absolute;left:0;top:50%;translate:0 -50%;display:grid;place-items:center;width:23.5%;aspect-ratio:1;box-sizing:border-box;border-radius:var(--r-carte);background:var(--c-carte);box-shadow:0 0 0 1px var(--c-filet), var(--o-flottante)}
+  & main .dt-noeud img:not(#_):not(#_){width:62%;height:auto;border-radius:0}
+  & main .dt-pastille:not(#_):not(#_){position:absolute;left:33.8%;top:50%;translate:0 -50%;box-sizing:border-box;width:14.6%;padding:6px 0;border-radius:var(--r-petit);background:var(--c-accent);font-size:12px;font-weight:500;letter-spacing:.06em;text-align:center;color:#FFFFFF}
+  & main .dt-client:not(#_):not(#_){position:absolute;left:73.5%;translate:0 -50%;box-sizing:border-box;max-width:26.5%;padding:7px 12px;border-radius:var(--r-petit);background:var(--c-carte);box-shadow:0 0 0 1px var(--c-filet);font-size:.875rem;font-weight:500;line-height:1.2;white-space:nowrap;color:var(--c-texte)}
+  & main .dt-point:not(#_):not(#_){position:absolute;left:0;top:0;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:var(--c-accent);opacity:0;pointer-events:none}
+  @media (prefers-reduced-motion:no-preference) and (min-width:1200px){
+    & main .dt-point:not(#_):not(#_){animation:dtVoyage 3.2s cubic-bezier(.44,0,.56,1) infinite;animation-delay:calc(var(--i) * .45s)}
+    @keyframes dtVoyage{0%{offset-distance:0%;opacity:0}12%{opacity:1}88%{opacity:1}100%{offset-distance:100%;opacity:0}}
+  }
+
+  /* Les clients */
+  & main .dt-clients-grille:not(#_):not(#_){display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:var(--e-bento)}
+  & main .dt-client-carte:not(#_):not(#_){display:flex;flex-direction:column;margin:0}
+  & main .dt-client-carte > p:not(#_):not(#_){margin:0}
+  & main .dt-client-tete:not(#_):not(#_){display:flex;align-items:center;justify-content:space-between;gap:12px}
+  & main .dt-client-tete b:not(#_):not(#_){font-size:var(--t-h3);line-height:var(--t-h3-lh);letter-spacing:var(--t-h3-ls);font-weight:500;color:var(--c-texte)}
+  & main .dt-client-tete span:not(#_):not(#_){flex:none;padding:2px 8px;border-radius:var(--r-petit);box-shadow:inset 0 0 0 1px var(--c-filet);font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--c-texte-2)}
+  & main .dt-client-carte > p:nth-child(2):not(#_):not(#_){margin-top:12px;font-size:.9375rem;line-height:1.5;color:var(--c-texte-2)}
+  & main .dt-client-adresse:not(#_):not(#_){display:flex;flex-direction:column;gap:6px;margin-top:auto !important;padding-top:20px}
+  & main .dt-client-adresse span:not(#_):not(#_){font-size:var(--t-legende);color:var(--c-texte-3)}
+  & main .dt-client-adresse code:not(#_):not(#_){display:block;padding:8px 10px;border-radius:var(--r-petit);background:var(--c-carte);font:inherit;font-size:.8125rem;line-height:1.4;color:var(--c-texte);word-break:break-all}
+
+  /* Trois étapes */
+  & main .dt-etapes:not(#_):not(#_){display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:48px;margin:0;padding:0;list-style:none}
+  & main .dt-etapes li:not(#_):not(#_){display:flex;flex-direction:column;align-items:flex-start;gap:12px;padding-top:20px;border-top:1px solid var(--c-filet)}
+  & main .dt-etapes b:not(#_):not(#_){font-size:var(--t-h3);line-height:var(--t-h3-lh);letter-spacing:var(--t-h3-ls);font-weight:500;color:var(--c-texte)}
+  & main .dt-etapes p:not(#_):not(#_){margin:0;color:var(--c-texte-2)}
+
+  /* La citation, centrée */
+  & main > section.dt-citation-section:not(#_):not(#_){padding-top:0 !important;background:var(--c-fond) !important}
+  & main .dt-citation:not(#_):not(#_):not(#_){display:flex;flex-direction:column;align-items:center;text-align:center}
+  & main .dt-citation blockquote:not(#_):not(#_):not(#_){margin:0 auto !important;max-width:30ch;text-wrap:balance}
+  & main .dt-citation figcaption:not(#_):not(#_):not(#_){display:flex;align-items:center;gap:12px;margin-top:24px}
+  & main .dt-citation figcaption span:not(#_):not(#_){display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left}
+  & main .dt-citation figcaption b:not(#_):not(#_){font-size:.9375rem;font-weight:500;color:var(--c-texte)}
+  & main .dt-avatar:not(#_):not(#_){width:44px;height:44px;object-fit:cover;border-radius:var(--r-petit)}
+
+  /* La section sombre : chiffres sous le panneau */
+  & main .dt-chiffres-sombre:not(#_):not(#_){margin-top:64px !important;padding-top:40px !important;border-top:1px solid rgba(255,255,255,.16);grid-template-columns:repeat(4, minmax(0, 1fr))}
+  & main .dt-chiffres-sombre > li > b:not(#_):not(#_):not(#_){color:#FFFFFF}
+  & main .dt-chiffres-sombre > li > span:not(#_):not(#_):not(#_){color:var(--c-sur-profond-2)}
+
+  @media (max-width:1023px){
+    & main .dt-schema:not(#_):not(#_){margin:0 auto}
+    & main .dt-clients-grille:not(#_):not(#_){grid-template-columns:repeat(2, minmax(0, 1fr))}
+    & main .dt-chiffres-sombre:not(#_):not(#_){grid-template-columns:repeat(2, minmax(0, 1fr))}
+  }
+  @media (max-width:600px){
+    & main .dt-schema:not(#_):not(#_){height:260px}
+    & main .dt-client:not(#_):not(#_){padding:5px 8px;font-size:.75rem}
+    & main .dt-pastille:not(#_):not(#_){font-size:10px}
+    & main .dt-clients-grille:not(#_):not(#_){grid-template-columns:minmax(0,1fr)}
+    & main .dt-etapes:not(#_):not(#_){grid-template-columns:minmax(0,1fr);gap:24px}
+    & main .dt-chiffres-sombre:not(#_):not(#_){grid-template-columns:minmax(0,1fr)}
+  }
+}
+
+/* ─────────────────────────────────────── 53 · PLATEFORME ─────────────────────────────────────── */
+body[data-cleo-ds="v6"]:is([data-v6-page="53-data-plateforme"],[data-v6-page="53-data-plateforme-en"]){
+  & main .dt-hero-plateforme .dt-hero-texte:not(#_):not(#_){max-width:760px}
+  & main > section.dt-interface-section:not(#_):not(#_){padding-top:0 !important;padding-bottom:var(--e-section) !important;background:linear-gradient(var(--c-fond-2) 0 50%, var(--c-fond) 50%) !important}
+
+  /* La grande photo et l'interface posée dessus (composition Legora, matière Tenkara) */
+  & main .dt-interface:not(#_):not(#_){position:relative;box-sizing:border-box;width:min(1360px, calc(100vw - 2 * var(--l-marge)));height:600px;margin:0 0 0 calc(50% - min(680px, 50vw - var(--l-marge)));border-radius:var(--r-media);overflow:clip;background:var(--c-profond)}
+  & main .dt-interface > img:first-child:not(#_):not(#_){position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:0}
+  & main .dt-interface::after{content:"";position:absolute;inset:0;z-index:1;background:rgba(8,9,59,.3);pointer-events:none}
+  & main .dt-app:not(#_):not(#_){position:absolute;left:50%;top:50%;z-index:2;translate:-50% -50%;box-sizing:border-box;width:min(760px, 88%);padding:20px;background:var(--c-carte);color:var(--c-texte)}
+  & main .dt-app-barre:not(#_):not(#_){display:flex;align-items:center;gap:16px}
+  & main .dt-app-barre > img:not(#_):not(#_){width:52px;height:auto;border-radius:0}
+  & main .dt-app-recherche:not(#_):not(#_){flex:1;display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:var(--r-petit);background:var(--c-fond-2);font-size:.9375rem;color:var(--c-texte)}
+  & main .dt-app-recherche svg:not(#_):not(#_){flex:none;color:var(--c-texte-3)}
+  & main .dt-app-filtres:not(#_):not(#_){display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 6px}
+  & main .dt-app-filtres span:not(#_):not(#_){display:inline-flex;gap:6px;padding:5px 10px;border-radius:var(--r-petit);box-shadow:inset 0 0 0 1px var(--c-filet);font-size:var(--t-legende);color:var(--c-texte)}
+  & main .dt-app-filtres em:not(#_):not(#_){font-style:normal;color:var(--c-texte-3)}
+  & main .dt-app-resultats:not(#_):not(#_){margin:0;padding:0;list-style:none}
+  & main .dt-app-resultats li:not(#_):not(#_){display:flex;flex-direction:column;gap:6px;padding:14px 14px 14px 16px;border-bottom:1px solid var(--c-filet)}
+  & main .dt-app-resultats li:last-child:not(#_):not(#_){border-bottom:0}
+  & main .dt-app-actif:not(#_):not(#_){border-radius:var(--r-petit);background:var(--c-fond-2);box-shadow:inset 2px 0 0 var(--c-accent)}
+  & main .dt-app-resultats p:not(#_):not(#_){margin:0}
+  & main .dt-app-meta:not(#_):not(#_){display:flex;flex-wrap:wrap;gap:4px 14px;font-size:var(--t-legende);color:var(--c-texte-3)}
+  & main .dt-app-resultats b:not(#_):not(#_){font-size:1rem;font-weight:500;line-height:1.35;color:var(--c-texte)}
+  & main .dt-app-actions:not(#_):not(#_){display:flex;gap:16px;font-size:var(--t-legende);font-weight:500;color:var(--c-texte-2)}
+  & main .dt-app-actif .dt-app-actions span:first-child:not(#_):not(#_){color:var(--c-accent)}
+
+  /* Vue d'ensemble : titre à gauche, phrase à droite */
+  & main .dt-vue:not(#_):not(#_){display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:end}
+  & main .dt-vue h2:not(#_):not(#_){margin:16px 0 0 !important;max-width:16ch}
+  & main .dt-vue .sy-lead:not(#_):not(#_){margin:0 !important}
+  & main > section.dt-vue-section:not(#_):not(#_){padding-bottom:0 !important}
+
+  /* Les quatre capacités */
+  & main .dt-capacites:not(#_):not(#_){display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:40px 64px;margin:0;padding:0;list-style:none}
+  & main .dt-capacites li:not(#_):not(#_){display:grid;grid-template-columns:auto 1fr;column-gap:14px;row-gap:8px;align-items:center;align-content:start;padding-top:24px;border-top:1px solid var(--c-filet)}
+  & main .dt-capacites svg:not(#_):not(#_){color:var(--c-accent)}
+  & main .dt-capacites b:not(#_):not(#_){font-size:var(--t-h3);line-height:var(--t-h3-lh);letter-spacing:var(--t-h3-ls);font-weight:500;color:var(--c-texte)}
+  & main .dt-capacites p:not(#_):not(#_){grid-column:1 / -1;margin:0;color:var(--c-texte-2)}
+
+  @media (max-width:1023px){
+    & main .dt-vue:not(#_):not(#_){grid-template-columns:minmax(0,1fr);gap:20px}
+  }
+  @media (max-width:600px){
+    & main .dt-interface:not(#_):not(#_){height:540px}
+    & main .dt-app:not(#_):not(#_){width:calc(100% - 24px);padding:14px}
+    & main .dt-app-resultats li:nth-child(3):not(#_):not(#_){display:none}
+    & main .dt-capacites:not(#_):not(#_){grid-template-columns:minmax(0,1fr);gap:28px}
+  }
+}

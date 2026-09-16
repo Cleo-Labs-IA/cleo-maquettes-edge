@@ -14,7 +14,7 @@
       </div>
     </div>
   </div>
-  <figure class="ap-hero-media sy-media" aria-hidden="true"><img src="img:parc-voitures" alt=""></figure>
+  <figure class="ap-hero-media sy-media" aria-hidden="true"><img src="img:classeurs" alt=""></figure>
 </section>
 
 <!-- ═══ LE TABLEAU ═══ exemple illustratif, rendu cohérent le 15/09/2026 : chaque texte vise un produit qu'il peut toucher
@@ -57,39 +57,57 @@
   </div>
 </section>
 
-<!-- ═══ CE QUE CLEO COUVRE ═══ chiffres canon (CANONICAL-FACTS, dossier de marque planches 10 et 14). -->
-<section class="section ap-bloc">
+<!-- IDENTITE-E 16/09/2026 -->
+<!-- ═══ BENTO ═══ chiffres canon ; fiches : quatre lignes du tableau de la page (réglementation, juridiction, catégorie). -->
+<section class="section ap-bloc ap-bento">
   <div class="conteneur" data-apparait>
     <div class="sy-entete"><h2 class="ap-titre">Ce que Cleo couvre</h2></div>
-    <ul class="sy-chiffres">
-      <li><b>106</b><span>pays</span></li>
-      <li><b>25 000</b><span>réglementations cartographiées</span></li>
-      <li><b>19 000</b><span>autorités réglementaires suivies</span></li>
-    </ul>
+    <div class="sy-bento">
+      <figure class="sy-bento-photo"><img src="img:masse-montre" alt=""><p class="sy-etiquette">Conformité produit</p><p class="sy-bento-phrase">Chaque produit rapproché de chaque réglementation qui le concerne, marché par marché.</p></figure>
+      <div class="sy-bento-creme"><b class="sy-chiffre-raye">106</b><span>pays suivis</span></div>
+      <div class="sy-bento-bleu"><b class="sy-chiffre-raye">25 000</b><span>réglementations cartographiées</span><div class="sy-fiches" aria-hidden="true"><dl class="sy-fiche"><dt>RSGP</dt><dd><span>UE</span><span>2023/988</span></dd></dl><dl class="sy-fiche"><dt>Radio</dt><dd><span>UE</span><span>2014/53</span></dd></dl><dl class="sy-fiche"><dt>FCC</dt><dd><span>US</span><span>Partie 15</span></dd></dl></div></div>
+    </div>
+    <p class="ap-note">19 000 autorités réglementaires suivies.</p>
     <div class="ap-liens"><a class="sy-lien" href="04-secteur.html#perimetre">Voir tout le périmètre produit <svg class="ap-fleche" viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
   </div>
 </section>
 
-<!-- ═══ PAR PROFIL ═══ les trois pages persona ; phrases de leurs hauts de page. La liste du périmètre (déjà sur 04) est
-     remplacée par le lien ci-dessus. -->
-<section class="section ap-bloc">
-  <div class="conteneur" data-apparait>
-    <div class="sy-entete"><h2 class="ap-titre">La conformité produit, par profil</h2></div>
-    <ul class="sy-lignes ap-lignes-liens">
-      <li><a href="33-fabricants.html"><b class="ap-lien-titre">Fabricants</b><span class="ap-lien-texte">Du marquage CE aux seuils REACH</span><svg class="ap-fleche" viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-      <li><a href="34-importateurs.html"><b class="ap-lien-titre">Importateurs et distributeurs</b><span class="ap-lien-texte">Code SH, droits et certifications avant l'expédition</span><svg class="ap-fleche" viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-      <li><a href="35-marketplaces.html"><b class="ap-lien-titre">Marketplaces</b><span class="ap-lien-texte">Ce qui est vendable, et sur quel marché</span><svg class="ap-fleche" viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-    </ul>
+<!-- IDENTITE-E 16/09/2026 -->
+<!-- ═══ PAR PROFIL, EN ONGLETS SOMBRES ═══ passe identité (IDENTITE.md 2.3) : la seule zone profonde de la page. Onglets
+     sans script (boutons radio). Phrases : hauts des pages 33, 34 et 35 ; aucune citation (aucun témoignage par profil). -->
+<section class="section sy-sombre">
+  <div class="conteneur">
+    <h2>La conformité produit, par profil</h2>
+    <div class="tk-onglets sy-onglets" role="group" aria-label="Par profil">
+      <input type="radio" name="ap-profil" id="ap-profil-1" checked>
+      <input type="radio" name="ap-profil" id="ap-profil-2">
+      <input type="radio" name="ap-profil" id="ap-profil-3">
+      <div class="tk-onglets-tetes">
+        <label for="ap-profil-1"><b>Fabricants</b><span>Du marquage CE aux seuils REACH</span><i class="tk-onglets-barre" aria-hidden="true"></i></label>
+        <label for="ap-profil-2"><b>Importateurs et distributeurs</b><span>Code SH, droits et certifications avant l'expédition</span><i class="tk-onglets-barre" aria-hidden="true"></i></label>
+        <label for="ap-profil-3"><b>Marketplaces</b><span>Ce qui est vendable, et sur quel marché</span><i class="tk-onglets-barre" aria-hidden="true"></i></label>
+      </div>
+      <div class="tk-onglets-scene">
+        <figure class="tk-onglets-vue"><img src="img:masse-vernis" alt=""><div class="sy-verre"><p>Cleo relève chaque obligation de vos produits et signale ce qui change avant son entrée en application.</p><b>Fabricants</b><span><a href="33-fabricants.html">Voir la page</a></span></div></figure>
+        <figure class="tk-onglets-vue"><img src="img:masse-poele" alt=""><div class="sy-verre"><p>Une réponse sourcée pour chaque produit, avant l'expédition.</p><b>Importateurs et distributeurs</b><span><a href="34-importateurs.html">Voir la page</a></span></div></figure>
+        <figure class="tk-onglets-vue"><img src="img:masse-telephone" alt=""><div class="sy-verre"><p>Cleo rapproche chaque catégorie d'annonces des règles qui s'y appliquent.</p><b>Marketplaces</b><span><a href="35-marketplaces.html">Voir la page</a></span></div></figure>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ═══ BANDEAU FINAL ═══ composant commun du site (tk-bandeau). -->
-<section class="section ap-bloc ap-final tk-bandeau" id="contact">
-  <div class="conteneur" data-apparait>
-    <p class="tk-etiquette">30 minutes avec l'équipe, sur vos produits</p>
-    <h2 class="ap-final-titre">Voyez vos produits rapprochés des réglementations de chaque marché</h2>
-    <a class="tk-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <svg class="ap-fleche" viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-  </div>
+<!-- IDENTITE-E 16/09/2026 -->
+<!-- ═══ APPEL FINAL ═══ passe identité du 16/09/2026 (IDENTITE.md 2.4) : photo sombre, titre blanc centré, bouton bleu à
+     chevrons. Titre et phrase repris du bandeau d'avant. Photo « masse-casque » (grain cuit au build). -->
+<section class="section sy-final-photo" id="contact">
+  <figure data-apparait>
+    <img src="img:masse-casque" alt="">
+    <div class="sy-final-texte">
+      <h2>Voyez vos produits rapprochés des réglementations de chaque marché</h2>
+      <p>30 minutes avec l'équipe, sur vos produits</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo</a></div>
+    </div>
+  </figure>
 </section>
 
 <!--PIED-->

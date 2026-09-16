@@ -3,7 +3,10 @@
    avant la feuille système. Source : scratchpad/agents/refonte/accueil/ac.css, « § » = portée des pages 43 FR et EN.
    Tout passe par les jetons de v6-00-jetons.css : deux tailles de titre, une crème, un profond (#socle), rayons 4 /
    6 / 12, aucune ombre de carte sauf l'interface posée sur photo, une seule scène liée au défilement (#comment),
-   des apparitions simples ailleurs (data-apparait, rendu par la feuille système). */
+   des apparitions simples ailleurs (data-apparait, rendu par la feuille système).
+   16/09/2026, identité (agent A, IDENTITE.md) : #socle et #securite retirés avec leurs règles ; le bento, la bande photo,
+   les onglets sombres, les cartes photo et l'appel final sur photo sont des composants .sy-* stylés par la feuille
+   système, jamais ici. */
 
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main > section.section{margin:0}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-conteneur{width:var(--l-conteneur);max-width:none;margin-inline:auto;padding-inline:0;box-sizing:border-box}
@@ -152,36 +155,6 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-grille > div:last-child{border-bottom:0}
 }
 
-/* ── La source : la seule zone profonde ── */
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-socle{background:var(--c-profond);color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-socle .ac-h2{color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-chiffres{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:0 0 var(--e-titre-contenu);padding-top:32px;border-top:1px solid rgba(255,255,255,.16)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-chiffres div{margin:0}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-chiffres dt{font-size:var(--t-chiffre);line-height:1;font-weight:400;letter-spacing:-.03em;color:#FFFFFF;font-variant-numeric:tabular-nums}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-chiffres dd{margin:12px 0 0;font-size:var(--t-legende);line-height:1.4;color:var(--c-sur-profond-2)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-socle-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px, 6vw, 96px);align-items:start}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-preuve{margin:0 0 16px;max-width:52ch;font-size:var(--t-corps);line-height:1.55;color:var(--c-sur-profond-2)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-socle .ac-lien{color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-citation{margin:56px 0 24px;padding-top:32px;border-top:1px solid rgba(255,255,255,.16)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-citation blockquote{margin:0;font-size:var(--t-citation);line-height:1.3;font-weight:400;letter-spacing:-.01em;color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-citation figcaption{display:flex;align-items:center;gap:12px;margin-top:20px}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-citation img{display:block;width:36px;height:36px;border-radius:50%;object-fit:cover}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-citation span{display:grid;font-size:var(--t-legende);line-height:1.4;color:var(--c-sur-profond-2)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-citation span b{font-weight:500;color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-panneau{padding:var(--p-carte);border-radius:var(--r-carte);background:var(--c-carte);color:var(--c-texte)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-panneau-legende{margin:0 0 8px;font-size:var(--t-surtitre);font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--c-texte-2)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-panneau-legende-2{margin-top:32px}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-publie{list-style:none;margin:0;padding:0}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-publie li{padding:10px 0;border-bottom:1px solid var(--c-filet);font-size:var(--t-legende);line-height:1.4;color:var(--c-texte-2)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-regle-nom{margin:0 0 8px;font-size:var(--t-corps);font-weight:500;color:var(--c-texte)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-regle-champ{display:grid;grid-template-columns:96px minmax(0,1fr);gap:16px;padding:10px 0;border-top:1px solid var(--c-filet);font-size:var(--t-legende);line-height:1.4}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-regle-champ span{color:var(--c-texte-3)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-regle-champ b{font-weight:500;color:var(--c-texte)}
-@media (max-width:1023px){
-  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-chiffres{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:32px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-socle-grille{grid-template-columns:minmax(0,1fr)}
-}
-
 /* ── Prestations, en lignes ── */
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-familles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px clamp(40px, 6vw, 96px);align-items:start}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-lignes{list-style:none;margin:0;padding:0;border-top:1px solid var(--c-filet)}
@@ -195,17 +168,18 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-familles{grid-template-columns:minmax(0,1fr)}
 }
 
-/* ── Pour qui ── */
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-qui{background:var(--c-fond-2)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-colonnes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px clamp(24px, 4vw, 48px)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-colonnes > div{padding-top:24px;border-top:1px solid var(--c-filet)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-colonnes h3,
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-garanties b{margin:0;font-size:var(--t-h3);line-height:var(--t-h3-lh);letter-spacing:var(--t-h3-ls);font-weight:500;color:var(--c-texte)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-colonnes p{margin:12px 0 0;max-width:36ch;font-size:var(--t-corps);line-height:1.55;color:var(--c-texte-2)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-qui .ac-pied-chapitre{margin-top:56px;padding-top:24px;border-top:1px solid var(--c-filet);justify-content:space-between}
-@media (max-width:800px){
-  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-colonnes{grid-template-columns:minmax(0,1fr)}
-}
+/* ── Pour qui : section sombre à onglets (composant .sy-sombre / .sy-onglets de la feuille système, 16/09/2026) ──
+   Ici seulement les liens et la ligne du périmètre, qui sont des classes de la page. */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-qui .ac-lien{margin-top:16px;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-qui .ac-pied-chapitre{margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,.16);justify-content:space-between}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-qui .ac-pied-chapitre p{color:var(--c-sur-profond-2)}
+
+/* ── La preuve (bento .sy-bento) et les actualités (cartes .sy-carte-photo) : composants de la feuille système ── */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-preuve .ac-pied-chapitre{margin-top:32px}
+/* le bento et la bande photo se suivent comme chez Tenkara : pas de double vide entre les deux */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-preuve{padding-bottom:0}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-articles{background:var(--c-fond-2)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-entete-ligne{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 32px}
 
 /* ── Experts ── */
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-experts-grille{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,3fr) minmax(0,5fr);gap:24px clamp(24px, 4vw, 56px);align-items:end}
@@ -224,15 +198,3 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 @media (max-width:480px){
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-experts-grille{column-gap:12px}
 }
-
-/* ── Sécurité ── */
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-securite{padding-top:0}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-garanties{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px clamp(24px, 4vw, 48px)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-garanties li{display:grid;align-content:start;gap:16px;padding-top:24px;border-top:1px solid var(--c-filet)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-garanties svg{color:var(--c-texte-2)}
-@media (max-width:800px){
-  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-garanties{grid-template-columns:minmax(0,1fr)}
-}
-
-/* ── Bandeau final : composant .sy-bandeau de la feuille système ; seule la rangée de boutons est centrée ici ── */
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-final .ac-actions{justify-content:center}

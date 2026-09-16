@@ -55,6 +55,10 @@ const PAGES = [
   { fichier: '51-service-mandataire.html', titre: 'Fiche Mandataire dans l\'UE', source: 'ecocomply.ai/eu-authorised-representative (structure), 15/09/2026' },
   { fichier: '51-service-mandataire-en.html', titre: 'Service page EU authorised representative EN', source: 'ecocomply.ai/eu-authorised-representative (structure)', en: true },
   { fichier: '39-data-en.html', titre: 'Data EN', source: 'pages/39-data.html', en: true },
+  { fichier: '52-data-mcp.html', titre: 'Data, serveur MCP', source: 'moonlit.ai/mcp (structure), 16/09/2026' },
+  { fichier: '52-data-mcp-en.html', titre: 'Data, MCP server EN', source: 'pages/52-data-mcp.html', en: true },
+  { fichier: '53-data-plateforme.html', titre: 'Data, plateforme', source: 'moonlit.ai/platform (structure), 16/09/2026' },
+  { fichier: '53-data-plateforme-en.html', titre: 'Data, platform EN', source: 'pages/53-data-plateforme.html', en: true },
   { fichier: '40-enterprise-en.html', titre: 'Enterprise EN', source: 'pages/40-enterprise.html', en: true },
   { fichier: '43-accueil-avant-vendre-en.html', titre: 'Home, before you sell EN', source: 'pages/43-accueil-avant-vendre.html', en: true },
   { fichier: '09-texte.html',       titre: 'Un texte',    source: 'edgecomply.com/topics/reach-regulation-compliance' },
@@ -99,6 +103,10 @@ const PAGES = [
 /* Table des images : nom logique -> fichier source + largeur de rendu.
    Toute image citee dans un fragment DOIT figurer ici, sinon la
    construction echoue au lieu de laisser un trou silencieux. */
+/* 16/09/2026 (coordinateur, passe identité) : les clés masse-* non carrées et les photos de décor des bandes
+   (.sy-bande-photo) et de l'appel final (.sy-final-photo) passent de 900 ou 1 100 px à 1 600 px : ces composants les
+   affichent jusqu'à 1 360 px et le grain cuit sortait agrandi et flou. withoutEnlargement reste : une source plus petite
+   garde sa taille. */
 const IMAGES = {
   'cleo-logo':        ['cleo-logo.png', 200, 'png'],
   'humain-bureau':    ['human-desk.webp', 760],
@@ -126,19 +134,19 @@ const IMAGES = {
   'thezi-grand':      ['experts/thezi-mabuza.jpg', 560],
   'veille-produit':   ['veille/produit-3b9ed4d5.png', 320, 'png'],
   // Les deux photographies de Naomie : la masse et l'unique, en vrai.
-  'parc-voitures':    ['local/parc-voitures.jpg', 1100],
-  'echangeur':        ['local/echangeur.jpg', 1100],
+  'parc-voitures':    ['local/parc-voitures.jpg', 1600],
+  'echangeur':        ['local/echangeur.jpg', 1600],
   'pneus':            ['local/pneus.jpg', 1100],
   /* La masse et l'unique, six variations. Images generees, ajoutees le 27/08 :
      aucun droit tiers, aucune marque reconnaissable, le bleu est le notre. */
-  'classeurs':        ['local/classeurs.jpg', 1100],
-  'cables':           ['local/cables.jpg', 1100],
-  'chaines':          ['local/chaines.jpg', 1100],
+  'classeurs':        ['local/classeurs.jpg', 1600],
+  'cables':           ['local/cables.jpg', 1600],
+  'chaines':          ['local/chaines.jpg', 1600],
   'flacons':          ['local/flacons.jpg', 1100],
   'vis':              ['local/vis.jpg', 1100],
-  'semelles':         ['local/semelles.jpg', 1100],
-  'briques':          ['local/briques.jpg', 1100],
-  'fenetres':         ['local/fenetres.jpg', 1100],
+  'semelles':         ['local/semelles.jpg', 1600],
+  'briques':          ['local/briques.jpg', 1600],
+  'fenetres':         ['local/fenetres.jpg', 1600],
   'produit-1':        ['product-1.webp', 520],
   'produit-2':        ['product-2.webp', 520],
   'produit-3':        ['product-3.webp', 520],
@@ -175,47 +183,47 @@ const IMAGES = {
      choisir la vignette sur le SUJET de l'article et non au hasard.
      34 familles, livrees par Naomie le 02/09/2026. Chaque image existe
      en deux tailles : la carte prend la large, la ligne de breve la fine. */
-  'masse-ampoule':           ['local/serie/ampoule.jpg', 900],
+  'masse-ampoule':           ['local/serie/ampoule.jpg', 1600],
   'masse-ampoule-carre':       ['local/serie/ampoule.jpg', 560],
-  'masse-basket':            ['local/serie/basket.jpg', 900],
+  'masse-basket':            ['local/serie/basket.jpg', 1600],
   'masse-basket-carre':        ['local/serie/basket.jpg', 560],
-  'masse-biberon':           ['local/serie/biberon.jpg', 900],
+  'masse-biberon':           ['local/serie/biberon.jpg', 1600],
   'masse-biberon-carre':       ['local/serie/biberon.jpg', 560],
-  'masse-bougie':            ['local/serie/bougie.jpg', 900],
+  'masse-bougie':            ['local/serie/bougie.jpg', 1600],
   'masse-bougie-carre':        ['local/serie/bougie.jpg', 560],
-  'masse-brique-jouet':      ['local/serie/brique-jouet.jpg', 900],
+  'masse-brique-jouet':      ['local/serie/brique-jouet.jpg', 1600],
   'masse-brique-jouet-carre':  ['local/serie/brique-jouet.jpg', 560],
-  'masse-brosse-dents':      ['local/serie/brosse-dents.jpg', 900],
+  'masse-brosse-dents':      ['local/serie/brosse-dents.jpg', 1600],
   'masse-brosse-dents-carre':  ['local/serie/brosse-dents.jpg', 560],
-  'masse-canette':           ['local/serie/canette.jpg', 900],
+  'masse-canette':           ['local/serie/canette.jpg', 1600],
   'masse-canette-carre':       ['local/serie/canette.jpg', 560],
-  'masse-capsule':           ['local/serie/capsule.jpg', 900],
+  'masse-capsule':           ['local/serie/capsule.jpg', 1600],
   'masse-capsule-carre':       ['local/serie/capsule.jpg', 560],
-  'masse-casque':            ['local/serie/casque.jpg', 900],
+  'masse-casque':            ['local/serie/casque.jpg', 1600],
   'masse-casque-carre':        ['local/serie/casque.jpg', 560],
-  'masse-chargeur':          ['local/serie/chargeur.jpg', 900],
+  'masse-chargeur':          ['local/serie/chargeur.jpg', 1600],
   'masse-chargeur-carre':      ['local/serie/chargeur.jpg', 560],
-  'masse-chaussette':        ['local/serie/chaussette.jpg', 900],
+  'masse-chaussette':        ['local/serie/chaussette.jpg', 1600],
   'masse-chaussette-carre':    ['local/serie/chaussette.jpg', 560],
-  'masse-couche':            ['local/serie/couche.jpg', 900],
+  'masse-couche':            ['local/serie/couche.jpg', 1600],
   'masse-couche-carre':        ['local/serie/couche.jpg', 560],
-  'masse-couverts':          ['local/serie/couverts.jpg', 900],
+  'masse-couverts':          ['local/serie/couverts.jpg', 1600],
   'masse-couverts-carre':      ['local/serie/couverts.jpg', 560],
-  'masse-detergent':         ['local/serie/detergent.jpg', 900],
+  'masse-detergent':         ['local/serie/detergent.jpg', 1600],
   'masse-detergent-carre':     ['local/serie/detergent.jpg', 560],
-  'masse-ecouteurs':         ['local/serie/ecouteurs.jpg', 900],
+  'masse-ecouteurs':         ['local/serie/ecouteurs.jpg', 1600],
   'masse-ecouteurs-carre':     ['local/serie/ecouteurs.jpg', 560],
-  'masse-flacon':            ['local/serie/flacon.jpg', 900],
+  'masse-flacon':            ['local/serie/flacon.jpg', 1600],
   'masse-flacon-carre':        ['local/serie/flacon.jpg', 560],
-  'masse-gant':              ['local/serie/gant.jpg', 900],
+  'masse-gant':              ['local/serie/gant.jpg', 1600],
   'masse-gant-carre':          ['local/serie/gant.jpg', 560],
-  'masse-gourde':            ['local/serie/gourde.jpg', 900],
+  'masse-gourde':            ['local/serie/gourde.jpg', 1600],
   'masse-gourde-carre':        ['local/serie/gourde.jpg', 560],
-  'masse-lunettes':          ['local/serie/lunettes.jpg', 900],
+  'masse-lunettes':          ['local/serie/lunettes.jpg', 1600],
   'masse-lunettes-carre':      ['local/serie/lunettes.jpg', 560],
-  'masse-manette':           ['local/serie/manette.jpg', 900],
+  'masse-manette':           ['local/serie/manette.jpg', 1600],
   'masse-manette-carre':       ['local/serie/manette.jpg', 560],
-  'masse-montre':            ['local/serie/montre.jpg', 900],
+  'masse-montre':            ['local/serie/montre.jpg', 1600],
   'masse-montre-carre':        ['local/serie/montre.jpg', 560],
   /* Ronds du bloc « usages » de la page Data (15/09/2026) : 120 px, pour ne pas embarquer douze fois 900 px. */
   'rond-telephone': ['local/serie/telephone.jpg', 120],
@@ -230,31 +238,31 @@ const IMAGES = {
   'rond-peluche': ['local/serie/peluche.jpg', 120],
   'rond-biberon': ['local/serie/biberon.jpg', 120],
   'rond-pile': ['local/serie/pile.jpg', 120],
-  'masse-peluche':           ['local/serie/peluche.jpg', 900],
+  'masse-peluche':           ['local/serie/peluche.jpg', 1600],
   'masse-peluche-carre':       ['local/serie/peluche.jpg', 560],
-  'masse-pile':              ['local/serie/pile.jpg', 900],
+  'masse-pile':              ['local/serie/pile.jpg', 1600],
   'masse-pile-carre':          ['local/serie/pile.jpg', 560],
-  'masse-poele':             ['local/serie/poele.jpg', 900],
+  'masse-poele':             ['local/serie/poele.jpg', 1600],
   'masse-poele-carre':         ['local/serie/poele.jpg', 560],
-  'masse-rasoir':            ['local/serie/rasoir.jpg', 900],
+  'masse-rasoir':            ['local/serie/rasoir.jpg', 1600],
   'masse-rasoir-carre':        ['local/serie/rasoir.jpg', 560],
-  'masse-rouge-levres':      ['local/serie/rouge-levres.jpg', 900],
+  'masse-rouge-levres':      ['local/serie/rouge-levres.jpg', 1600],
   'masse-rouge-levres-carre':  ['local/serie/rouge-levres.jpg', 560],
-  'masse-savon':             ['local/serie/savon.jpg', 900],
+  'masse-savon':             ['local/serie/savon.jpg', 1600],
   'masse-savon-carre':         ['local/serie/savon.jpg', 560],
-  'masse-shampooing':        ['local/serie/shampooing.jpg', 900],
+  'masse-shampooing':        ['local/serie/shampooing.jpg', 1600],
   'masse-shampooing-carre':    ['local/serie/shampooing.jpg', 560],
-  'masse-skate':             ['local/serie/skate.jpg', 900],
+  'masse-skate':             ['local/serie/skate.jpg', 1600],
   'masse-skate-carre':         ['local/serie/skate.jpg', 560],
-  'masse-tasse':             ['local/serie/tasse.jpg', 900],
+  'masse-tasse':             ['local/serie/tasse.jpg', 1600],
   'masse-tasse-carre':         ['local/serie/tasse.jpg', 560],
-  'masse-telephone':         ['local/serie/telephone.jpg', 900],
+  'masse-telephone':         ['local/serie/telephone.jpg', 1600],
   'masse-telephone-carre':     ['local/serie/telephone.jpg', 560],
-  'masse-tshirt':            ['local/serie/tshirt.jpg', 900],
+  'masse-tshirt':            ['local/serie/tshirt.jpg', 1600],
   'masse-tshirt-carre':        ['local/serie/tshirt.jpg', 560],
-  'masse-velo':              ['local/serie/velo.jpg', 900],
+  'masse-velo':              ['local/serie/velo.jpg', 1600],
   'masse-velo-carre':          ['local/serie/velo.jpg', 560],
-  'masse-vernis':            ['local/serie/vernis.jpg', 900],
+  'masse-vernis':            ['local/serie/vernis.jpg', 1600],
   'masse-vernis-carre':        ['local/serie/vernis.jpg', 560],
 }
 
@@ -625,6 +633,10 @@ async function globeProduits() {
    à vide, la police seule. */
 fs.mkdirSync(path.join(ICI, 'sortie', 'fonts'), { recursive: true })
 fs.copyFileSync(POLICE, path.join(ICI, 'sortie', 'fonts', 'Satoshi-Variable.woff2'))
+/* 16/09/2026 : graisse Black statique pour les chiffres rayés de l'identité (la variable superpose ses contours en text-stroke).
+   Copiée depuis le dossier Satoshi comme la variable : la licence Fontshare (FF EULA, art. 02) interdit de redistribuer les
+   fichiers de police, donc aucun .woff2 n'est versionné dans ce dépôt public. */
+fs.copyFileSync(path.join(path.dirname(POLICE), 'Satoshi-Black.woff2'), path.join(ICI, 'sortie', 'fonts', 'Satoshi-Black.woff2'))
 /* Polices de la marque « mood Tenkara » (15/09/2026) : fichiers libres (OFL) servis comme Satoshi, depuis commun/polices. */
 const dossierPolices = path.join(ICI, 'commun/polices')
 if (fs.existsSync(dossierPolices)) for (const f of fs.readdirSync(dossierPolices).filter(n => n.endsWith('.woff2'))) fs.copyFileSync(path.join(dossierPolices, f), path.join(ICI, 'sortie', 'fonts', f))
@@ -723,13 +735,15 @@ const CTA_EN = `
 /* La barre latérale des ressources, alignée sur le méga-menu « Ressources » depuis le
    03/09/2026 (lane D : Recherche et Skills ne marquaient rien d'actif, et les pages
    anglaises recevaient la barre française). Le marqueur de page garde son ancien
-   libellé : « Recherche » et « Publications » sont reconnus par alias. */
+   libellé : « Recherche » et « Publications » sont reconnus par alias.
+   16/09/2026 (passe identité, Data sur la structure de Moonlit) : « Legal Data » quitte cette barre ; la couverture (26)
+   appartient au menu Data. Skills reste ici, et seulement ici (Naomie : « skills que dans ressources, pas dans data »). */
 const resNav = (actif, en) => {
   const liens = en
     ? [['10-ressources.html','Tout','All'],['24-blog-en.html','Blog','Blog'],['23-research-en.html','Recherche','Research'],['25-skills-en.html','Skills','Skills'],
-       ['26-legal-data-en.html','Legal Data','Legal Data'],['15-evenements.html','Rencontres','Events'],['17-modeles.html','Modèles','Templates'],['13-glossaire.html','Glossaire','Glossary']]
+       ['15-evenements.html','Rencontres','Events'],['17-modeles.html','Modèles','Templates'],['13-glossaire.html','Glossaire','Glossary']]
     : [['10-ressources.html','Tout','Tout'],['24-blog.html','Blog','Blog'],['23-research.html','Recherche','Travaux de recherche'],['25-skills.html','Skills','Skills'],
-       ['26-legal-data.html','Legal Data','Legal Data'],['15-evenements.html','Rencontres','Rencontres'],['17-modeles.html','Modèles','Modèles'],['13-glossaire.html','Glossaire','Glossaire']]
+       ['15-evenements.html','Rencontres','Rencontres'],['17-modeles.html','Modèles','Modèles'],['13-glossaire.html','Glossaire','Glossaire']]
   const cle = actif === 'Publications' ? 'Blog' : actif
   return `<nav class="res-nav">
     <div class="titre">${en ? 'Resources' : 'Ressources'}</div>

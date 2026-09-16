@@ -92,6 +92,18 @@
     "39-data-en.html": {
       "chemin": "/en/data"
     },
+    "52-data-mcp.html": {
+      "chemin": "/fr/data/mcp"
+    },
+    "52-data-mcp-en.html": {
+      "chemin": "/en/data/mcp"
+    },
+    "53-data-plateforme.html": {
+      "chemin": "/fr/data/plateforme"
+    },
+    "53-data-plateforme-en.html": {
+      "chemin": "/en/data/platform"
+    },
     "40-enterprise.html": {
       "chemin": "/fr/enterprise"
     },

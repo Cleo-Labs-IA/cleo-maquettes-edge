@@ -108,3 +108,12 @@ body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-ente
   body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-actions{animation:enArrive var(--m-duree) var(--m-courbe) .4s both}
   @keyframes enArrive{from{opacity:0;filter:blur(4px);translate:0 6px}}
 }
+
+/* ═══ PASSE IDENTITÉ ═══ 16/09/2026 (scratchpad/agents/refonte/IDENTITE.md, agent E). Le bento (citation, 106, 25 000) et
+   l'appel final sur photo sont des composants sy-* stylés par le système ; ici seulement leur place dans la page.
+   Le formulaire descend sous l'appel final : une seule colonne, carte centrée, sur crème. */
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.en-bento{background:var(--c-fond) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-bento .en-titre{margin:0 0 var(--e-titre-contenu)}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.en-formulaire{padding-top:0 !important;background:var(--c-fond) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-formulaire .en-final-grille{grid-template-columns:minmax(0,1fr);justify-items:center}
+body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-formulaire .ent-form{width:100%;max-width:640px;box-sizing:border-box}

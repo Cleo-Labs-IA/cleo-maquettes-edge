@@ -1,12 +1,12 @@
 <!--NAV-->
 
-<!-- ═══ REFONTE DU 15/09/2026 (agent F1, scratchpad/agents/refonte/SYSTEME.md) ═══ Page réécrite depuis
-     scratchpad/agents/refonte/accueil/generer.mjs. Les générateurs précédents (avant-vendre.mjs et ses patchs) sont
-     PÉRIMÉS : ne plus les relancer. Sept chapitres entre le haut de page et le bandeau final, une seule scène liée au
-     défilement (#comment), un seul grand média (#dossier), une seule zone profonde (#socle). Retirés : la phrase
-     mot à mot (#phrase, son texte passe dans le chapeau de #comment), le prix au tiers (#prix, chiffre sans source),
-     la grille Tenkara du témoignage (la citation rejoint #socle, les chiffres canon aussi), les pastilles des
-     prestations et des 27 catégories, les coches. -->
+<!-- ═══ REFONTE DU 15/09/2026 (agent F1, scratchpad/agents/refonte/SYSTEME.md), PUIS IDENTITÉ DU 16/09/2026 (agent A,
+     scratchpad/agents/refonte/IDENTITE.md) ═══ Générateurs : accueil/generer.mjs (15/09) puis identite-accueil/identite.mjs
+     (16/09), qui remplace trois blocs par repères. Les générateurs antérieurs (avant-vendre.mjs et ses patchs) sont PÉRIMÉS.
+     Huit chapitres entre le haut de page et l'appel final : #comment (seule scène liée au défilement), #dossier (seul grand
+     média), #preuve (bento), #source (bande photo), #prestations, #pour-qui (seule zone #08093B, onglets), #experts,
+     #actualites (cartes photo). Retirés le 16/09 : #socle (chiffres, citation et panneau passent au bento et à la bande),
+     #securite (ses garanties passent dans la phrase de l'appel final). -->
 
 <!-- ═══ HAUT DE PAGE ═══ Signature dictée par Naomie le 15/09/2026 (heros.md, variante 1). Chapeau : mot-clé SEO
      « automated product compliance for global brands » (sources/04-content-keyword-ia.md) ; le rôle de l'agent et de
@@ -112,53 +112,48 @@
   </div>
 </section>
 
-<!-- ═══ LA SOURCE ═══ la seule zone profonde (#08093B). Titre : releve.md (43, ligne 5), planche 5. Chiffres canon dans
-     leur formule du lexique (§7). Preuve : article de recherche (7 676 réglementations, 93 à 97 % sur les textes
-     contraignants), sans le nom interne (planche 11). Citation VERBATIM de Philippine Tamic (Decathlon), extrait de
-     DecathlonQuote.tsx. Panneau « du texte publié à la règle encodée » repris tel quel. -->
-<section class="section ac-chapitre ac-socle sy-sur-profond" id="socle">
+<!-- ═══ LA PREUVE ═══ bento d'identité (IDENTITE.md 2.1, 16/09/2026, Naomie : « inspire-toi du site Tenkara, mets une
+     identité, là c'est trop vide »). Citation : extrait VERBATIM de Philippine Tamic (DecathlonQuote.tsx de cleo-landing),
+     majuscule et point final encadrent l'extrait comme avant. Chiffres canon dans leur formule du lexique (§7). Fiches de
+     la carte bleue : références déjà sur la page (scène de la peluche, dossier, ancien panneau de la règle encodée) :
+     CPSIA section 101 (a), 100 ppm de plomb dans les parties accessibles, en vigueur le 14 août 2011 ; directive
+     2009/48/CE (sécurité des jouets) ; EN 71-1, EN 71-2, EN 71-3 (normes harmonisées d'essai des jouets). Remplace
+     l'ancienne zone profonde #socle (chiffres, citation, panneau), dont la zone sombre passe à « Pour qui ». -->
+<section class="section ac-chapitre ac-preuve" id="preuve" aria-label="La preuve">
   <div class="ac-conteneur">
-    <div class="ac-entete" data-apparait>
-      <h2 class="ac-h2">Chaque exigence vient du texte officiel qui l'impose</h2>
-    </div>
-    <dl class="ac-chiffres" data-apparait>
-      <div><dt>106</dt><dd>pays</dd></div>
-      <div><dt>25 000</dt><dd>réglementations cartographiées</dd></div>
-      <div><dt>19 000</dt><dd>autorités réglementaires suivies</dd></div>
-      <div><dt>3 700</dt><dd>sources officielles</dd></div>
-    </dl>
-    <div class="ac-socle-grille">
-      <div class="ac-socle-texte" data-apparait>
-        <p class="ac-preuve">Architecture multi-agents publiée, évaluée sur 7 676 réglementations : 93 à 97 % de précision sur les textes contraignants.</p>
-        <a class="ac-lien" href="23-research.html">Lire l'article de recherche <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        <figure class="ac-citation">
-          <blockquote>« Leur moteur d'IA agit comme un traducteur intelligent qui filtre le bruit pour extraire une donnée structurée. »</blockquote>
-          <figcaption><img src="img:philippine" alt=""><span><b>Philippine Tamic</b>Decathlon</span></figcaption>
-        </figure>
-        <a class="ac-lien" href="06-cas-client.html">Voir le cas client <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </div>
-      <div class="ac-panneau" aria-label="Du texte publié à la règle encodée" data-apparait>
-        <p class="ac-panneau-legende">Ce qui est publié</p>
-        <ul class="ac-publie">
-          <li>Journal officiel de l'Union européenne</li>
-          <li>Autorité de surveillance du marché</li>
-          <li>Projet de texte en consultation</li>
-          <li>Annexe modifiée</li>
-          <li>Avis d'organisme notifié</li>
-          <li>Norme harmonisée</li>
-        </ul>
-        <p class="ac-panneau-legende ac-panneau-legende-2">La règle encodée</p>
-        <div class="ac-regle">
-          <p class="ac-regle-nom">Teneur en plomb des parties accessibles</p>
-          <div class="ac-regle-champ"><span>champ</span><b>matière accessible</b></div>
-          <div class="ac-regle-champ"><span>opérateur</span><b>ne dépasse pas</b></div>
-          <div class="ac-regle-champ"><span>seuil</span><b>100 ppm en poids</b></div>
-          <div class="ac-regle-champ"><span>article</span><b>CPSIA, section 101 (a)</b></div>
-          <div class="ac-regle-champ"><span>en vigueur</span><b>14 août 2011</b></div>
+    <div class="sy-bento" data-apparait>
+      <figure class="sy-bento-photo">
+        <img src="img:flacons" alt="">
+        <blockquote>« Leur moteur d'IA agit comme un traducteur intelligent qui filtre le bruit pour extraire une donnée structurée. »</blockquote>
+        <figcaption><img class="sy-avatar" src="img:philippine" alt=""><b>Philippine Tamic</b><span>Decathlon</span></figcaption>
+      </figure>
+      <div class="sy-bento-creme"><b class="sy-chiffre-raye">106</b><span>pays suivis</span></div>
+      <div class="sy-bento-bleu">
+        <b class="sy-chiffre-raye">25 000</b><span>réglementations cartographiées</span>
+        <div class="sy-fiches" aria-hidden="true">
+          <dl class="sy-fiche"><dt>CPSIA 101 (a)</dt><dd><span>Plomb</span><span>100 ppm</span></dd><dd><span>Depuis</span><span>2011</span></dd></dl>
+          <dl class="sy-fiche"><dt>2009/48/CE</dt><dd><span>Objet</span><span>Jouets</span></dd><dd><span>Marché</span><span>UE</span></dd></dl>
+          <dl class="sy-fiche"><dt>EN 71-1, -2, -3</dt><dd><span>Objet</span><span>Essais</span></dd><dd><span>Type</span><span>Normes</span></dd></dl>
         </div>
       </div>
     </div>
+    <div class="ac-pied-chapitre"><a class="ac-lien" href="06-cas-client.html">Voir le cas client <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
   </div>
+</section>
+
+<!-- ═══ LA SOURCE ═══ bande photo (IDENTITE.md 2.2). Titre : planche 5 du dossier de marque (« Everything is traceable »),
+     déjà le titre de ce chapitre avant la passe. Preuve : article de recherche (7 676 réglementations, 93 à 97 % sur les
+     textes contraignants), sans le nom interne (planche 11). Photo : classeurs. -->
+<section class="section sy-bande-photo ac-bande" id="source">
+  <figure>
+    <img src="img:classeurs" alt="">
+    <div class="sy-bande-texte">
+      <p class="sy-etiquette">Architecture multi-agents publiée</p>
+      <h2>Chaque exigence vient du texte officiel qui l'impose</h2>
+      <p>Évaluée sur 7 676 réglementations : 93 à 97 % de précision sur les textes contraignants.</p>
+      <a class="sy-bouton-blanc" href="23-research.html">Lire l'article de recherche <svg class="sy-fleche-haut" viewBox="0 0 12 12" width="11" height="11" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </figure>
 </section>
 
 <!-- ═══ PRESTATIONS ═══ les deux familles de la réunion du 14/09/2026, en lignes (plus de pastilles). Noms et lignes
@@ -196,18 +191,29 @@
   </div>
 </section>
 
-<!-- ═══ POUR QUI ═══ titre : releve.md (43, ligne 10). Les trois publics et leurs phrases repris de l'accueil (la
-     troisième passe à la voix active). Les 27 catégories (pastilles défilantes, anglais sur la page FR) deviennent
-     une phrase et un lien vers le périmètre de 04-secteur. -->
-<section class="section ac-chapitre ac-qui" id="pour-qui">
-  <div class="ac-conteneur">
-    <div class="ac-entete" data-apparait>
-      <h2 class="ac-h2">Pour les marques qui lancent un produit de consommation</h2>
-    </div>
-    <div class="ac-colonnes">
-      <div data-apparait><h3>Marques qui démarrent</h3><p>Ce qu'il faut faire avant la première vente.</p></div>
-      <div data-apparait><h3>Vendeurs sur marketplace</h3><p>Les pièces qu'une place de marché peut demander avant de publier une fiche produit.</p></div>
-      <div data-apparait><h3>Importateurs et distributeurs</h3><p>Les obligations de l'entreprise qui met sur le marché un produit fabriqué ailleurs.</p></div>
+<!-- ═══ POUR QUI ═══ section sombre à onglets (IDENTITE.md 2.3), la SEULE zone #08093B de la page. Titre : releve.md
+     (43, ligne 10). Onglets : les pages 33 (fabricants), 34 (importateurs et distributeurs), 35 (marketplaces) ; libellés
+     courts repris de l'ancienne version de l'accueil et du h1 de 33, textes de l'encart = chapeaux de ces pages, mot pour
+     mot. Citation sur l'onglet Fabricants seulement : extrait VERBATIM de Philippine Tamic (DecathlonQuote.tsx) ; Decathlon
+     conçoit ses propres produits et porte la responsabilité du fabricant (page 06). Photos : celles des pages 33
+     (masse-vernis), 34 (masse-poele), 35 (masse-telephone). Mécanique : boutons radio, sans script. -->
+<section class="section sy-sombre ac-qui" id="pour-qui">
+  <div class="conteneur">
+    <h2>Pour les marques qui lancent un produit de consommation</h2>
+    <div class="tk-onglets sy-onglets" role="group" aria-label="Pour qui">
+      <input type="radio" name="ac-pq" id="ac-pq-1" checked>
+      <input type="radio" name="ac-pq" id="ac-pq-2">
+      <input type="radio" name="ac-pq" id="ac-pq-3">
+      <div class="tk-onglets-tetes">
+        <label for="ac-pq-1"><b>Fabricants</b><span>Chaque règle qui change, rattachée à vos produits.</span><i class="tk-onglets-barre" aria-hidden="true"></i></label>
+        <label for="ac-pq-2"><b>Importateurs et distributeurs</b><span>Un produit fabriqué ailleurs.</span><i class="tk-onglets-barre" aria-hidden="true"></i></label>
+        <label for="ac-pq-3"><b>Marketplaces</b><span>Une fiche produit à publier.</span><i class="tk-onglets-barre" aria-hidden="true"></i></label>
+      </div>
+      <div class="tk-onglets-scene">
+        <figure class="tk-onglets-vue"><img src="img:masse-vernis" alt=""><div class="sy-verre"><p>« Piloter nos mises en conformité mondiales tout en accompagnant nos ingénieurs dans le développement des produits. »</p><b>Philippine Tamic</b><span>Product Compliance Operations Manager, Decathlon</span><a class="ac-lien" href="33-fabricants.html">Voir la page fabricants <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></figure>
+        <figure class="tk-onglets-vue"><img src="img:masse-poele" alt=""><div class="sy-verre"><p>Code SH, droits, certifications et double usage : une réponse sourcée pour chaque produit, avant l'expédition.</p><a class="ac-lien" href="34-importateurs.html">Voir la page importateurs <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></figure>
+        <figure class="tk-onglets-vue"><img src="img:masse-telephone" alt=""><div class="sy-verre"><p>Ce qui est vendable, et sur quel marché : Cleo rapproche chaque catégorie d'annonces des règles qui s'y appliquent, et signale ce qui change avant son entrée en application.</p><a class="ac-lien" href="35-marketplaces.html">Voir la page marketplaces <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></figure>
+      </div>
     </div>
     <div class="ac-pied-chapitre"><p>27 catégories de produits de consommation, des jouets à l'automobile.</p><a class="ac-lien" href="04-secteur.html#perimetre">Voir le périmètre <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
   </div>
@@ -234,28 +240,36 @@
   </div>
 </section>
 
-<!-- ═══ SÉCURITÉ ═══ les trois garanties de l'accueil ; « Union européenne » selon la page 30. -->
-<section class="section ac-chapitre ac-securite" id="securite">
+<!-- ═══ ACTUALITÉS ═══ rangée de cartes photo (IDENTITE.md 2.5). Titres : h1 réels des articles 12, 27, 28 et 29 ;
+     étiquettes et photos reprises de ces pages. Titre du chapitre : h1 du blog (24), « actualités et analyses ». -->
+<section class="section ac-chapitre ac-articles" id="actualites">
   <div class="ac-conteneur">
-    <div class="ac-entete" data-apparait>
-      <h2 class="ac-h2">Vos données, hébergées dans l'Union européenne</h2>
+    <div class="ac-entete ac-entete-ligne" data-apparait>
+      <h2 class="ac-h2">Actualités et analyses</h2>
+      <a class="ac-lien" href="24-blog.html">Voir le blog <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
-    <ul class="ac-garanties" data-apparait>
-      <li><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6z"/><path d="m9 12 2 2 4-4"/></svg><b>Conforme au RGPD, article 28</b></li>
-      <li><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="6" rx="1.5"/><rect x="4" y="14" width="16" height="6" rx="1.5"/><path d="M8 7h.01M8 17h.01"/></svg><b>Infrastructure hébergée dans l'Union européenne</b></li>
-      <li><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><b>Aucun entraînement de modèle sur vos données</b></li>
-    </ul>
-    <div class="ac-pied-chapitre"><a class="ac-lien" href="30-securite.html">Voir la sécurité <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    <div class="sy-carrousel" data-apparait>
+      <a class="sy-carte-photo" href="12-article.html"><img src="img:masse-capsule" alt=""><span class="sy-etiquette">Emballage</span><b>PPWR : ce que le 12 août 2026 change pour vos emballages</b></a>
+      <a class="sy-carte-photo" href="27-article-levee.html"><img src="img:equipe" alt=""><span class="sy-etiquette">Entreprise</span><b>Cleo lève 1,5 M€ pour automatiser la conformité réglementaire produit à l'échelle mondiale</b></a>
+      <a class="sy-carte-photo" href="28-article-vivatech.html"><img src="img:paris" alt=""><span class="sy-etiquette">Entreprise</span><b>Cleo remporte le Scaleway Startup Challenge et sera présente à VivaTech 2026</b></a>
+      <a class="sy-carte-photo" href="29-article-deel.html"><img src="img:station-f" alt=""><span class="sy-etiquette">Entreprise</span><b>Conformité produit mondiale en 2026 : pourquoi nous avons gagné The Pitch by Deel</b></a>
+    </div>
   </div>
 </section>
 
-<!-- ═══ BANDEAU FINAL ═══ ligne de manifeste du dossier de marque (planche 7), sur l'accueil seulement avec Service
-     (lexique §2). La signature n'est plus répétée ici. Composant unique du site (.sy-bandeau), mis en forme par la feuille système. -->
-<section class="section sy-bandeau ac-final" id="contact">
-  <div class="conteneur ac-conteneur">
-    <h2 class="ac-h2">Un nouveau pays n'est plus un projet. <span class="ac-suite">C'est une décision.</span></h2>
-    <div class="ac-actions"><a class="sy-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Décrire mon produit <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo</a></div>
-  </div>
+<!-- ═══ APPEL FINAL ═══ sur photo (IDENTITE.md 2.4), à la place du bandeau crème. Titre : ligne de manifeste (planche 7),
+     sur l'accueil et Service seulement (lexique §2). La phrase reprend deux garanties de l'ancien chapitre Sécurité,
+     retiré pour tenir en 8 chapitres (page 30 : hébergement dans l'Union européenne, aucun entraînement de modèle sur
+     les données). Photo : échangeur. -->
+<section class="section sy-final-photo ac-final" id="contact">
+  <figure>
+    <img src="img:chaines" alt="">
+    <div class="sy-final-texte">
+      <h2>Un nouveau pays n'est plus un projet. C'est une décision.</h2>
+      <p>Vos données restent hébergées dans l'Union européenne et ne servent à entraîner aucun modèle.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Décrire mon produit</a></div>
+    </div>
+  </figure>
 </section>
 
 <!--PIED-->

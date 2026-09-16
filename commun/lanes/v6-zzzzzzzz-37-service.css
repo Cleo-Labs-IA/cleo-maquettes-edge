@@ -2,4 +2,3 @@
    « à la Moritz » (classes sv-*) et des surcharges de barre propres à la page 37 (bouton avec « » », conteneur de
    1440 px) qui contredisaient la barre unique. La page actuelle est stylée par v6-zzzzzzzzzz-service-cas.css et la
    feuille système ; les règles d'avant sont gardées dans scratchpad/agents/refonte/service/sauvegarde-css/. */
-body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sv-final-titre{margin:0 auto}

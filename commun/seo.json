@@ -991,20 +991,20 @@
    "_mesure": "titre 37 caractères, description 94 caractères"
   },
   "39-data.html": {
-   "titre": "Data : la donnée réglementaire produit | Cleo Labs",
-   "description": "Les règles produit de 106 pays, rattachées à leur article et à leur date d'entrée en vigueur, par API ou par serveur MCP.",
+   "titre": "Data : donnée réglementaire produit, API et MCP | Cleo Labs",
+   "description": "Une API l'intègre à votre produit, un serveur MCP l'apporte dans Claude, Cursor et tout client compatible MCP. Chaque règle avec son article.",
    "source": "redige",
    "url_source": null,
-   "appui_contenu": "15/09/2026 : description = phrase sous le titre de la page, reprise telle quelle (titre de la page : « Data. La donnée réglementaire produit, dans l'IA que vous utilisez déjà. »).",
-   "_mesure": "titre 50 caractères, description 121 caractères"
+   "appui_contenu": "16/09/2026, agent D : structure de moonlit.ai (connect, mcp, platform) ; faits dans scratchpad/agents/refonte/identite-data/faits.md.",
+   "_mesure": "titre 59 caractères, description 141 caractères"
   },
   "39-data-en.html": {
-   "titre": "Data: product regulatory data | Cleo Labs",
-   "description": "Product rules from 106 countries, linked to their article and their entry-into-force date, via API or MCP server.",
+   "titre": "Data: product regulatory data, API and MCP | Cleo Labs",
+   "description": "An API brings it into your product, an MCP server brings it into Claude, Cursor and any MCP-compatible client. Every rule with its article.",
    "source": "redige",
    "url_source": null,
-   "appui_contenu": "15/09/2026 : description = phrase sous le titre de la page, reprise telle quelle (titre de la page : « Data. Product regulatory data, inside the AI you already use. »).",
-   "_mesure": "titre 41 caractères, description 113 caractères"
+   "appui_contenu": "16/09/2026, agent D : structure de moonlit.ai (connect, mcp, platform) ; faits dans scratchpad/agents/refonte/identite-data/faits.md.",
+   "_mesure": "titre 54 caractères, description 139 caractères"
   },
   "40-enterprise.html": {
    "titre": "Enterprise | Cleo Labs",
@@ -1035,6 +1035,38 @@
    "source": "redige",
    "url_source": null,
    "appui_contenu": "Fiche du 15/09/2026 sur la structure de ecocomply.ai/eu-authorised-representative (demande de Naomie) ; besoin cité en réunion le 14/09 (représentant UE, prix non arrêté) et au RDV ministère du 15/09."
+  },
+  "52-data-mcp.html": {
+   "titre": "Serveur MCP : la donnée réglementaire dans votre IA | Cleo Labs",
+   "description": "Les règles produit de 106 pays dans Claude, Cursor, Cline, Continue et tout client compatible MCP. La réponse cite l'article qui fonde la règle.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "16/09/2026, agent D : structure de moonlit.ai (connect, mcp, platform) ; faits dans scratchpad/agents/refonte/identite-data/faits.md.",
+   "_mesure": "titre 63 caractères, description 144 caractères"
+  },
+  "52-data-mcp-en.html": {
+   "titre": "MCP server: regulatory data inside your AI | Cleo Labs",
+   "description": "The product rules of 106 countries in Claude, Cursor, Cline, Continue and any MCP-compatible client. The answer cites the article behind the rule.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "16/09/2026, agent D : structure de moonlit.ai (connect, mcp, platform) ; faits dans scratchpad/agents/refonte/identite-data/faits.md.",
+   "_mesure": "titre 54 caractères, description 146 caractères"
+  },
+  "53-data-plateforme.html": {
+   "titre": "Plateforme de recherche réglementaire produit | Cleo Labs",
+   "description": "Cherchez dans les textes qui visent vos produits et suivez ceux qui changent, dans 106 pays.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "16/09/2026, agent D : structure de moonlit.ai (connect, mcp, platform) ; faits dans scratchpad/agents/refonte/identite-data/faits.md.",
+   "_mesure": "titre 57 caractères, description 92 caractères"
+  },
+  "53-data-plateforme-en.html": {
+   "titre": "Product regulatory research platform | Cleo Labs",
+   "description": "Search the texts that apply to your products and follow the ones that change, across 106 countries.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "16/09/2026, agent D : structure de moonlit.ai (connect, mcp, platform) ; faits dans scratchpad/agents/refonte/identite-data/faits.md.",
+   "_mesure": "titre 48 caractères, description 99 caractères"
   }
  },
  "structure": {

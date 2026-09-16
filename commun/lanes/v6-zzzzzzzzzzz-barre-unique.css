@@ -8,7 +8,8 @@ body[data-cleo-ds="v6"] .nav:not(#_){background:#FFFFFF !important;border-bottom
 body[data-cleo-ds="v6"] .nav > .conteneur:not(#_){box-sizing:border-box;width:var(--l-conteneur) !important;max-width:none !important;height:64px !important;margin-left:auto !important;margin-right:auto !important;padding-left:0 !important;padding-right:0 !important}
 body[data-cleo-ds="v6"] .nav :is(.nav-declencheur,.lien-secondaire):not(#_){font-size:.8125rem !important;font-weight:500 !important;letter-spacing:.04em !important;text-transform:uppercase !important;color:var(--c-texte)}
 body[data-cleo-ds="v6"] .nav :is(.nav-declencheur,.lien-secondaire):not(#_):hover{color:var(--c-accent)}
-body[data-cleo-ds="v6"] .nav .btn-marque::after{content:none !important}
+/* 16/09/2026, identité Tenkara : le « » » du bouton « Voir une démo » revient (dessiné dans v6-zzzzzzzzzzzzz-systeme.css §10,
+   même glyphe que .sy-bouton-chevrons). */
 
 /* Les méga-menus pleine largeur alignent leur contenu sur le conteneur. */
 body[data-cleo-ds="v6"] .nav .mega-plein-grille:not(#_){padding-left:max(var(--l-marge), (100vw - 1200px) / 2) !important;padding-right:max(var(--l-marge), (100vw - 1200px) / 2) !important}
@@ -23,4 +24,19 @@ body[data-cleo-ds="v6"] .nav .mega-deux .mega-plein-liste{max-width:none}
 body[data-cleo-ds="v6"] .nav .mega-famille{margin:0 0 6px 0;font-size:.75rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--c-texte-2)}
 @media (max-width:1180px){
   body[data-cleo-ds="v6"] .nav .mega-plein-grille.mega-deux:not(#_){grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 32px}
+}
+
+/* Menu téléphone ouvert (16/09/2026, retour de l'agent Data, mesuré au clic à 390 px sur 43, 39 et 24).
+   Deux défauts : (1) le panneau était à 98,5 % d'opacité, la page se lisait au travers ; (2) après défilement, la barre
+   disparaissait : html.menu-ouvert{overflow:hidden} (composants.css) fait du body un conteneur de défilement, et la barre
+   « sticky » se recale sur lui (mesuré : top = -1200 px à scrollY 1200). La barre passe en fixed tant que le menu est
+   ouvert ; aucun backdrop-filter ni transform sur la barre (piège mémorisé : un fixed se cale sur un parent filtré). */
+/* Blocage du défilement par le body, pas par html : html{overflow:hidden} faisait du body un conteneur de défilement, et
+   WebKit laissait la barre décrochée (top = -2000 px) même après la fermeture (mesuré à 390 px). Le body porte déjà
+   overflow-x:hidden et le transmet à la fenêtre ; overflow:hidden y bloque aussi le vertical sans rien décrocher. */
+html.menu-ouvert:not(#_){overflow:visible !important}
+html.menu-ouvert body[data-cleo-ds="v6"]:not(#_){overflow:hidden !important}
+@media (max-width:1024px){
+  html.menu-ouvert body[data-cleo-ds="v6"] .nav:not(#_){position:fixed !important;top:0;left:0;right:0;z-index:90 !important;-webkit-backdrop-filter:none !important;backdrop-filter:none !important;transform:none !important}
+  body[data-cleo-ds="v6"] .menu-mobile:not(#_){top:64px !important;bottom:0 !important;background:var(--c-fond) !important;z-index:90 !important}
 }

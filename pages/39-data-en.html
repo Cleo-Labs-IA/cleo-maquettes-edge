@@ -1,208 +1,168 @@
 <!--NAV-->
-<!-- ═══ DATA ═══ Refonte du 15/09/2026 (scratchpad/agents/refonte/SYSTEME.md, agent F3). Structure de la page Service 37
-     gardée : haut de page et chiffres, usages en liste et détail, trois étapes collantes (la seule scène liée au
-     défilement), l'offre, les questions, le bandeau final. Texte repris selon refonte/wording (lexique, principes, relevé).
-     Générateur scratchpad/agents/data-simple/generer.mjs PÉRIMÉ depuis la refonte du 15/09 : ne pas le relancer.
-     ⚠️ LE GÉNÉRATEUR DE LA PAGE 43 LIT CETTE PAGE : garder les 6 « pl-n » (question « D'où vient la règle ? »), le
-     « pl-regle » suivi de son « t-h3 » et les 5 « pl-champ » (carte de l'étape 3).
-     h1 : variante 1 de refonte/wording/heros.md (SITE 39 EN). Chiffres canon dans la formule de DM-p10 et DM-p14. -->
-<section class="dd-s dd-hero">
-  <div class="dd-conteneur">
-    <p class="dd-surtitre">Data</p>
-    <h1 class="dd-h1">Product regulatory data, <span class="dd-gris">inside the AI you already use.</span></h1>
-    <p class="dd-hero-lead">Product rules from 106 countries, each linked to its article and its entry-into-force date, via API or MCP server.</p>
-    <div class="dd-actions"><a class="dd-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="dd-bouton dd-bouton-clair" href="#usages">See the use cases</a></div>
-    <ul class="dd-chiffres sy-chiffres">
-      <li><b>106</b><span>countries</span></li>
-      <li><b>25,000</b><span>regulations mapped</span></li>
-      <li><b>19,000</b><span>regulatory authorities tracked</span></li>
-      <li><b>3,700</b><span>official sources</span></li>
-    </ul>
-  </div>
-</section>
+<!-- ═══ DATA · API ET SERVEUR MCP ═══ 16/09/2026, agent D (scratchpad/agents/refonte/IDENTITE.md §4). Structure de
+     moonlit.ai/connect, relevée le 16/09 (scratchpad/moonlit2/connect-*) : haut de page, champ « dites-nous ce que vous
+     voulez faire », couverture en chiffres, une clé et deux accès, la traçabilité, trois piliers, l'offre, l'appel final.
+     Composition et matière d'identité Tenkara (bento, appel final sur photo), Satoshi seule.
+     Faits : scratchpad/agents/refonte/identite-data/faits.md (README de ~/legal-mcp, routes de ~/cleo-legal-api).
+     Absents faute de source : prix, quotas, nombre d'outils, badges « Live », logos de clients, hébergement de l'API.
+     Skills : retirés de Data (Naomie, 16/09 : « skills que dans ressources, pas dans data »).
+     Générée par scratchpad/agents/refonte/identite-data/generer.mjs. L'ancien générateur data-simple est périmé. -->
 
-<!-- ═══ LES USAGES ═══ la liste à gauche, le détail de l'usage choisi à droite (au survol ou au clic ; au téléphone, en
-     accordéon). Chaque usage : une photo et un exemple de demande, la phrase de l'usage, ses repères en lignes, un lien. -->
-<section class="dd-s dd-usages" id="usages">
-  <div class="dd-conteneur">
-    <h2 class="dd-titre">Five ways to use the rule base</h2>
-    <div class="dd-cas" data-apparait id="developpeurs" role="radiogroup" aria-label="Use cases">
-      <input type="radio" name="dd-usage" id="dd-usage-1" checked>
-      <label class="sc-cas-label dd-cas-label" for="dd-usage-1" style="--r:1"><span>01</span>In your AI assistant</label>
-      <div class="dd-panneau">
-        <div class="dd-panneau-image"><img src="img:masse-shampooing" alt=""><p class="dd-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> List the mandatory mentions on my shampoo label for France, Germany and Italy.</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
-        <div class="dd-panneau-corps">
-          <p class="dd-panneau-famille">MCP server</p>
-          <h3>In your AI assistant</h3>
-          <p class="dd-lead">One MCP server, the same data in every assistant.</p>
-          <ul class="dd-recevez">
-            <li>Claude.ai and Claude Desktop</li>
-            <li>Cursor, Cline and Continue</li>
-            <li>Claude Code, in the terminal</li>
-            <li>Any MCP-compatible client</li>
-          </ul>
-          <div class="dd-panneau-pied"><a class="dd-lien sy-lien" href="#brancher">Connect Cleo <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-        </div>
-      </div>
-      <input type="radio" name="dd-usage" id="dd-usage-2">
-      <label class="sc-cas-label dd-cas-label" for="dd-usage-2" style="--r:2"><span>02</span>Build AI products</label>
-      <div class="dd-panneau">
-        <div class="dd-panneau-image"><img src="img:masse-biberon" alt=""><p class="dd-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> List the legislation that applies to a plastic baby bottle in the European Union, with the article behind each obligation.</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
-        <div class="dd-panneau-corps">
-          <p class="dd-panneau-famille">For legaltechs and software vendors</p>
-          <h3>Build AI products</h3>
-          <p class="dd-lead">Cleo's rule base inside your own product, every rule with its article and its entry-into-force date.</p>
-          <ul class="dd-recevez">
-            <li>Via API or MCP server</li>
-            <li>Each rule linked to its article</li>
-            <li>Its entry-into-force date</li>
-            <li>106 countries</li>
-          </ul>
-          <div class="dd-panneau-pied"><a class="dd-lien sy-lien" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-        </div>
-      </div>
-      <input type="radio" name="dd-usage" id="dd-usage-3">
-      <label class="sc-cas-label dd-cas-label" for="dd-usage-3" style="--r:3"><span>03</span>Plug into your systems</label>
-      <div class="dd-panneau">
-        <div class="dd-panneau-image"><img src="img:masse-velo" alt=""><p class="dd-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> Is this harmonised standard still the version in force?</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
-        <div class="dd-panneau-corps">
-          <p class="dd-panneau-famille">Proof of concept with Decathlon</p>
-          <h3>Plug into your systems</h3>
-          <p class="dd-lead">Structured data, usable right inside your PLM.</p>
-          <ul class="dd-recevez">
-            <li>Structured data, field by field</li>
-            <li>Via API</li>
-          </ul>
-          <div class="dd-panneau-pied"><a class="dd-lien sy-lien" href="06-cas-client.html">Read the case study <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-        </div>
-      </div>
-      <input type="radio" name="dd-usage" id="dd-usage-4">
-      <label class="sc-cas-label dd-cas-label" for="dd-usage-4" style="--r:4"><span>04</span>Follow legislation as it changes</label>
-      <div class="dd-panneau">
-        <div class="dd-panneau-image"><img src="img:masse-telephone" alt=""><p class="dd-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> Which legislation published this week affects my phones sold in France and Germany?</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
-        <div class="dd-panneau-corps">
-          <p class="dd-panneau-famille">For compliance teams</p>
-          <h3>Follow legislation as it changes</h3>
-          <p class="dd-lead">Every act linked to the acts it amends, transposes or supersedes.</p>
-          <ul class="dd-recevez">
-            <li>The version in force of every act</li>
-            <li>The acts amended or superseded</li>
-          </ul>
-          <div class="dd-panneau-pied"><a class="dd-lien sy-lien" href="26-legal-data-en.html">See coverage <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-        </div>
-      </div>
-      <input type="radio" name="dd-usage" id="dd-usage-5">
-      <label class="sc-cas-label dd-cas-label" for="dd-usage-5" style="--r:5"><span>05</span>Cite and verify</label>
-      <div class="dd-panneau">
-        <div class="dd-panneau-image"><img src="img:masse-peluche" alt=""><p class="dd-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> What lead content is allowed in a children's product sold in the United States?</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
-        <div class="dd-panneau-corps">
-          <!-- La preuve de la page : MARIA reste nommée ici seulement (SYSTEME.md §4). Chiffres de l'article de recherche. -->
-          <p class="dd-panneau-famille">Published architecture: MARIA</p>
-          <h3>Cite and verify</h3>
-          <p class="dd-lead">The source before the summary: every answer cites the article.</p>
-          <ul class="dd-recevez">
-            <li>The legislation in force</li>
-            <li>The article cited</li>
-            <li>93 to 97% precision on binding texts, evaluated on 7,676 regulations</li>
-          </ul>
-          <div class="dd-panneau-pied"><a class="dd-lien sy-lien" href="23-research-en.html">Read the research paper <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-        </div>
-      </div>
+<!-- ═══ HAUT DE PAGE ═══ h1 : variante 2 de refonte/wording/heros.md (SITE 39). La variante 1 porte la page MCP (52),
+     comme chez Moonlit où « inside the AI you already use » est le titre de /mcp. -->
+<section class="section dt-hero" id="haut">
+  <div class="conteneur dt-duo">
+    <div class="dt-hero-texte">
+      <p class="sy-surtitre">Data</p>
+      <h1>Product regulatory data, via API and MCP server.</h1>
+      <p class="sy-lead">An API brings it into your product. An MCP server brings it into Claude, Cursor and any MCP-compatible client.</p>
+      <div class="sy-actions dt-actions"><a class="sy-bouton sy-bouton-chevrons" href="21-inscription.html">Request access</a><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team</a></div>
     </div>
-  </div>
-</section>
-
-<!-- ═══ TROIS ÉTAPES ═══ la seule scène liée au défilement de la page : les étapes collent à côté d'une grande photo, la
-     carte posée dessus change avec l'étape (la clé, le serveur ajouté au client, la règle encodée qui répond). -->
-<section class="dd-s dd-comment-section" id="brancher">
-  <div class="dd-conteneur">
-    <h2 class="dd-titre">From the access key to the first answer</h2>
-    <div class="dd-comment-scene" data-scene>
-      <div class="dd-comment-collant">
-        <figure class="dd-comment-image">
-          <img src="img:humain-detendu" alt="">
-          <div class="dd-calque dd-calque-1" aria-hidden="true">
-            <div class="dd-cle"><p class="dd-cle-label">Access key</p><div class="dd-cle-champ">••••••••••••••••••••</div><p class="dd-ou">or</p><div class="dd-cle-bouton">Browser sign-in</div></div>
-          </div>
-          <div class="dd-calque dd-calque-2" aria-hidden="true">
-            <div class="dd-clients"><div class="dd-clients-tete"><b>Cleo</b><em>MCP</em></div><ul><li>Claude</li><li>Cursor</li><li>Cline</li><li>Continue</li><li>Claude Code</li></ul></div>
-          </div>
-          <div class="dd-calque dd-calque-3" aria-hidden="true">
-            <span class="dd-flottant dd-f1"><em>question</em>Lead content, children's product, United States</span>
-            <div class="pl-regle dd-regle">
-              <div class="t-h3">Lead content of accessible parts</div>
-              <div class="pl-champ"><span>field</span><b>accessible material</b></div>
-              <div class="pl-champ"><span>operator</span><b>does not exceed</b></div>
-              <div class="pl-champ"><span>threshold</span><b>100 ppm by weight</b></div>
-              <div class="pl-champ"><span>article</span><b>CPSIA, section 101 (a)</b></div>
-              <div class="pl-champ"><span>in force</span><b>14 August 2011</b></div>
-            </div>
-            <span class="dd-flottant dd-f2">Every field points to its article.</span>
-          </div>
-        </figure>
-        <ol class="dd-etapes">
-          <li class="dd-etape"><b><span>01</span>Get a key</b><p>An access key, or a browser sign-in.</p></li>
-          <li class="dd-etape"><b><span>02</span>Connect your assistant</b><p>Add the Cleo server to your MCP client.</p></li>
-          <li class="dd-etape"><b><span>03</span>Ask the question</b><p>The answer cites the article behind the rule.</p></li>
-        </ol>
+    <!-- Le champ de Moonlit Connect, en vrai formulaire GET vers le rendez-vous HubSpot (modèle du formulaire de la page 40). -->
+    <form class="dt-besoin sy-carte-blanche" id="besoin" method="get" action="https://meetings.hubspot.com/anaelle-guez/rendez-vous" data-apparait>
+      <h2 class="dt-besoin-titre">Or tell us what you want to do with regulatory data</h2>
+      <p class="dt-besoin-texte">Describe your use case. An expert from the team replies with the most direct path: the API or the MCP server.</p>
+      <label class="dt-cache" for="f-data-besoin-en">Your use case</label>
+      <textarea id="f-data-besoin-en" name="besoin" rows="4" placeholder="I am building a tool for our quality teams: I need the toy labelling rules for France, Germany and Italy, with the article behind each obligation."></textarea>
+      <div class="dt-besoin-ligne">
+        <label class="dt-cache" for="f-data-email-en">Work email</label>
+        <input id="f-data-email-en" name="email" type="email" autocomplete="email" placeholder="camille@brand.com" required>
+        <button class="sy-bouton" type="submit">Send</button>
       </div>
-    </div>
+      <p class="dt-besoin-note">Your data is only used to reply to you.</p>
+    </form>
   </div>
 </section>
 
-<!-- ═══ L'OFFRE ═══ la table de ce que comprend l'offre (API, serveur MCP, couverture, skills) et la carte profonde, seule
-     zone #08093B de la page. Aucun prix.
-     À TRANCHER : le périmètre de l'offre Data (pays, familles de produits) et son modèle de prix ne sont pas arrêtés. Les
-     mentions « to be defined » et « to be set » sont retirées de l'écran le 15/09/2026. -->
-<section class="dd-s dd-offre-section" id="offre">
-  <div class="dd-conteneur">
-    <h2 class="dd-titre">What the Data offer includes</h2>
-    <div class="dd-offre" data-apparait>
-      <div class="dd-offre-table">
-        <ul>
-          <li><div><b>API</b><span>Via API, via MCP server, or both.</span></div></li>
-          <li><div><b>MCP server</b><span>Claude, Cursor, Cline, Continue, Claude Code, and any MCP-compatible client.</span></div><a class="dd-lien sy-lien" href="#brancher">Connect Cleo</a></li>
-          <li id="couverture"><div><b>Coverage</b><span>The authorities tracked for each product, and the version in force of each act.</span></div><a class="dd-lien sy-lien" href="26-legal-data-en.html">See coverage</a></li>
-          <li><div><b>Skills</b><span>toy-compliance · cosmetics-compliance · electronics-compliance</span></div><a class="dd-lien sy-lien" href="25-skills-en.html">See skills</a></li>
-        </ul>
-      </div>
-      <div class="dd-offre-carte sy-sur-profond">
-        <p class="dd-etiquette">The Data offer</p>
-        <p class="dd-grand">The countries and product families your software needs, via API and MCP server.</p>
-        <a class="dd-bouton dd-bouton-blanc" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ QUESTIONS ═══ la méthode et ce qui est publié, les clients MCP, l'accès.
-     À TRANCHER : la question « How much does the Data offer cost? » est retirée de l'écran le 15/09/2026 ; sa réponse
-     (« the pricing model is to be set ») était une note de chantier. -->
-<section class="dd-s dd-questions" id="questions">
-  <div class="dd-conteneur">
-    <h2 class="dd-titre">Frequently asked questions</h2>
-    <div class="dd-faq" data-apparait>
-      <details id="methode" open><summary>Where does the rule come from?</summary><div class="dd-reponse"><p>Every rule is drawn from its official legislation and kept in one place.</p><p class="dd-publie">What gets published</p><div class="dd-sources">
-        <div class="pl-n">Official Journal of the European Union</div>
-        <div class="pl-n">Market surveillance authority</div>
-        <div class="pl-n">Draft act under consultation</div>
-        <div class="pl-n">Amended annex</div>
-        <div class="pl-n">Notified body opinion</div>
-        <div class="pl-n">Harmonised standard</div>
-      </div><p>Every field points to its article.</p></div></details>
-      <details><summary>Which assistants are compatible?</summary><div class="dd-reponse"><p>Claude, Cursor, Cline, Continue, Claude Code, and any MCP-compatible client.</p></div></details>
-      <details><summary>How do I get access?</summary><div class="dd-reponse"><p>With an access key, or a browser sign-in. Then add the Cleo server to your MCP client.</p></div></details>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ BANDEAU FINAL ═══ modèle unique du site (SYSTEME.md §3). Signature dictée par Naomie le 15/09, une fois sur la page. -->
-<section class="dd-s dd-bandeau tk-bandeau" id="contact">
+<!-- ═══ COUVERTURE ═══ Moonlit « The deepest global legal data layer for AI » : les chiffres, puis « View coverage ».
+     Ici le bento d'identité 2.1, variante sans citation. Chiffres canon (CANONICAL-FACTS, lexique §7). Fiches de la
+     carte bleue : références déjà citées sur le site (directive 2009/48/CE, CPSIA section 101, règlement (UE) 2023/988). -->
+<section class="section dt-couverture" id="couverture">
   <div class="conteneur">
-    <p class="tk-etiquette">Sell anywhere, comply everywhere.</p>
-    <h2 class="av-final-titre">Connect Cleo to your assistants and software</h2>
-    <p class="dd-bandeau-lead">Tell us which countries and product families your software needs to cover.</p>
-    <div class="sy-actions dd-bandeau-actions"><a class="tk-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="dd-bouton dd-bouton-clair" href="26-legal-data-en.html">See coverage</a></div>
+    <div class="sy-entete"><p class="sy-surtitre">Coverage</p><h2>106 countries, one rule base</h2><p class="sy-lead">Every rule linked to its article and its entry-into-force date.</p></div>
+    <div class="sy-bento" data-apparait-groupe>
+      <figure class="sy-bento-photo"><img src="img:classeurs" alt=""><p class="sy-etiquette">Product, HS code, regulation, authority</p><p>The chain Cleo tracks continuously, link by link.</p></figure>
+      <div class="sy-bento-creme"><b class="sy-chiffre-raye">106</b><span>countries tracked</span></div>
+      <div class="sy-bento-bleu"><b class="sy-chiffre-raye">25,000</b><span>regulations mapped</span>
+        <div class="sy-fiches" aria-hidden="true"><dl class="sy-fiche"><dt>Directive 2009/48/EC</dt><dd><span>Scope</span><span>Toys</span></dd><dd><span>Area</span><span>EU</span></dd></dl><dl class="sy-fiche"><dt>CPSIA, section 101</dt><dd><span>Scope</span><span>Lead</span></dd><dd><span>Area</span><span>United States</span></dd></dl><dl class="sy-fiche"><dt>Regulation (EU) 2023/988</dt><dd><span>Scope</span><span>GPSR</span></dd><dd><span>Area</span><span>EU</span></dd></dl></div>
+      </div>
+    </div>
+    <div class="dt-couverture-pied">
+      <ul class="sy-chiffres dt-chiffres"><li><b>19,000</b><span>regulatory authorities tracked</span></li><li><b>3,700</b><span>official sources</span></li></ul>
+      <a class="sy-lien dt-lien" href="26-legal-data-en.html">See the coverage <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
   </div>
+</section>
+
+<!-- ═══ UNE CLÉ, DEUX ACCÈS ═══ Moonlit « One key, one data layer, two access modes » : la carte Data API avec son bloc
+     de code, la carte serveur MCP avec la liste des clients. Bloc de code : route réelle GET /v2/search de cleo-legal-api
+     (src/routes/v2/search.ts l. 19-30, champs de src/internal/types.ts l. 57-80), clé « Bearer ld_live_ » (auth.ts l. 52).
+     Les valeurs du résultat sont une illustration (le décret n° 2010-166 du 22 février 2010 relatif à la sécurité des
+     jouets existe) : ce n'est pas une sortie réelle. Clients : README de ~/legal-mcp l. 3 et 97. -->
+<section class="section dt-acces-section" id="acces">
+  <div class="conteneur">
+    <div class="sy-entete"><h2>One key, two ways in</h2><p class="sy-lead">The API for teams building a product. The MCP server for compliance teams, inside their assistant.</p></div>
+    <div class="dt-acces" data-apparait>
+      <article class="sy-carte dt-acces-carte" id="developpeurs">
+        <p class="sy-surtitre">For teams that build</p>
+        <h3>Data API</h3>
+        <p class="dt-acces-texte">Search regulatory data in one call, with the source of every result.</p>
+        <div class="dt-code" aria-label="Example request"><p class="dt-code-tete"><span>GET /v2/search</span></p><pre><code>GET /v2/search?q=toy safety&amp;country=FR&amp;type=legislation&amp;limit=5
+Authorization: Bearer ld_live_…
+
+{
+  "data": [
+    {
+      "title": "Décret n° 2010-166 du 22 février 2010 relatif à la sécurité des jouets",
+      "country": "FR",
+      "type": "legislation",
+      "date": "2010-02-22",
+      "url": "https://www.legifrance.gouv.fr/…",
+      "excerpt": "…",
+      "section_title": "…"
+    }
+  ],
+  "has_more": false
+}</code></pre></div>
+        <ul class="dt-liste"><li>Hybrid search, semantic and lexical</li><li>Filters by country, type of text, language and dates</li><li>The article of a document, the version in force on a date</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton" href="21-inscription.html">Request access</a><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team</a></div>
+      </article>
+      <article class="sy-carte dt-acces-carte">
+        <p class="sy-surtitre">For compliance teams</p>
+        <h3>MCP server</h3>
+        <p class="dt-acces-texte">The same data, inside the assistant you already use.</p>
+        <div class="dt-clients" aria-label="Server address">
+          <p class="dt-clients-tete"><span>Server address</span><code>https://api.legaldata.cleolabs.co/mcp</code></p>
+          <ul><li><b>Claude.ai and Claude Desktop</b><span>MCP</span></li><li><b>Cursor</b><span>MCP</span></li><li><b>Cline</b><span>MCP</span></li><li><b>Continue</b><span>MCP</span></li><li><b>Claude Code</b><span>MCP</span></li><li class="dt-clients-tous"><b>Any MCP-compatible client</b><span>MCP</span></li></ul>
+        </div>
+        <ul class="dt-liste"><li>Browser sign-in or access key</li><li>Read-only tools</li><li>The same key as the API</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton" href="52-data-mcp-en.html">Connect Cleo</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LA TRAÇABILITÉ ═══ Moonlit « Trace citations at the article level », ici en bloc sombre, seule zone #08093B de
+     la page. Faits : outils traverse_amendment_graph, get_law_as_of et get_changes (90 jours au plus), README de
+     ~/legal-mcp l. 36, 74, 76. Règle affichée : la teneur en plomb du CPSIA, section 101 (a), 100 ppm depuis le
+     14 août 2011, déjà sur la page (usages et étapes, 15/09/2026). -->
+<section class="section sy-sombre dt-trace-section" id="methode">
+  <div class="conteneur dt-duo dt-trace sy-sur-profond">
+    <div class="dt-trace-texte">
+      <h2>Every rule traces back to its article</h2>
+      <p class="sy-lead">Every text is linked to the texts it amends, transposes or replaces, and every result points to its official source.</p>
+      <ul class="dt-liste"><li>The version in force on a date</li><li>Texts amended, transposed or replaced</li><li>Changes from the last 90 days</li></ul>
+    </div>
+    <div class="dt-panneau" aria-hidden="true" data-apparait>
+      <p class="dt-panneau-note">one question, the rule and its source</p>
+      <p class="dt-panneau-ligne dt-panneau-question"><i></i>Lead content, children's product, United States</p>
+      <p class="dt-panneau-fleche">rule</p>
+      <p class="dt-panneau-ligne">Lead content of accessible parts</p>
+      <p class="dt-panneau-fleche">article</p>
+      <p class="dt-panneau-ligne">CPSIA, section 101 (a)</p>
+      <p class="dt-panneau-fleche">limit</p>
+      <p class="dt-panneau-ligne">100 ppm by weight, in force on 14 August 2011</p>
+      <p class="dt-panneau-note">every result points to its source</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TROIS PILIERS ═══ Moonlit « Builders and legal professionals choose us » : trois cartes numérotées. Faits :
+     champ url de chaque résultat (types.ts l. 65), search_legal_bulk 1 à 25 requêtes (README l. 19), même clé ld_live_
+     pour /v2 et /mcp (auth.ts l. 52, auth-mcp.ts l. 4), outils en lecture seule et clé jamais journalisée, révocable
+     (README l. 196 à 199). Pas d'ISO 27001 « certifié », pas d'hébergement affirmé pour l'API. -->
+<section class="section dt-piliers-section" id="piliers">
+  <div class="conteneur">
+    <div class="sy-entete"><h2>Data you can verify, built for AI</h2></div>
+    <div class="dt-piliers" data-apparait>
+      <article class="sy-carte-blanche dt-pilier"><span class="dt-numero">1</span><h3>Verifiable at the source</h3><p>Every result points to the text's official address.</p><ul class="dt-liste"><li>Every rule linked to its article</li><li>Its entry-into-force date</li><li>Changes from the last 90 days</li></ul></article>
+      <article class="sy-carte-blanche dt-pilier"><span class="dt-numero">2</span><h3>Built for AI</h3><p>The same key for the API and the MCP server.</p><ul class="dt-liste"><li>Hybrid search, semantic and lexical</li><li>The article extracted from the document</li><li>Up to 25 searches in one call</li></ul></article>
+      <article class="sy-carte-blanche dt-pilier"><span class="dt-numero">3</span><h3>A key under your control</h3><p>Browser sign-in, or a key you can revoke at any time.</p><ul class="dt-liste"><li>Read-only tools</li><li>Key sent encrypted, never logged</li></ul><a class="sy-lien dt-lien" href="30-securite.html">See security <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ L'OFFRE ═══ Moonlit « Simple where it should be, bespoke where it has to be », SANS PRIX.
+     À TRANCHER : le modèle de prix et le périmètre de l'offre Data (pays, familles de produits) ne sont pas arrêtés. -->
+<section class="section dt-offre-section" id="offre">
+  <div class="conteneur">
+    <div class="sy-entete"><h2>Access sized to your use</h2><p class="sy-lead">The countries and product families your software needs.</p></div>
+    <div class="dt-offre" data-apparait>
+      <article class="sy-carte dt-offre-carte"><p class="sy-surtitre">Data · MCP server</p><p class="dt-offre-grand">On request</p><p class="dt-offre-texte">In Claude, Cursor, Cline, Continue, Claude Code and any MCP-compatible client.</p><ul class="dt-liste"><li>The same rule base</li><li>Every result points to its source</li></ul><div class="sy-actions dt-actions"><a class="sy-bouton" href="21-inscription.html">Request access</a></div></article>
+      <article class="sy-carte dt-offre-carte"><p class="sy-surtitre">Data · API</p><p class="dt-offre-grand">Tailored</p><p class="dt-offre-texte">To build regulatory data into your product.</p><ul class="dt-liste"><li>Search, articles, versions in force, changes</li><li>Filters by country, type of text, language and dates</li></ul><div class="sy-actions dt-actions"><a class="sy-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team</a></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ APPEL FINAL SUR PHOTO ═══ composant d'identité 2.4 (IDENTITE.md), stylé par la feuille système. -->
+<section class="section sy-final-photo" id="contact">
+  <figure>
+    <img src="img:masse-chargeur" alt="">
+    <div class="sy-final-texte">
+      <h2>Connect Cleo to your assistants and your software</h2>
+      <p>Tell us which countries and product families your software needs to cover.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team</a><a class="sy-bouton-secondaire" href="26-legal-data-en.html">See the coverage</a></div>
+    </div>
+  </figure>
 </section>
 <!--PIED-->

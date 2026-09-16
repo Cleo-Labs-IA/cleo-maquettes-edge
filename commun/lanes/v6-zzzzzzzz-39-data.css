@@ -1,164 +1,120 @@
-/* ═══ PAGE DATA (39, FR et EN) ═══ Refonte du 15/09/2026, agent F3 (scratchpad/agents/refonte/SYSTEME.md).
-   Cette feuille ne pose plus ni taille de titre, ni bouton, ni rayon de carte, ni couleur hors palette : la feuille
-   système (v6-zzzzzzzzzzzzz-systeme.css) les impose. Ici, seulement la mise en place des blocs, avec les jetons de
-   v6-00-jetons.css.
-   Structure : haut de page crème et chiffres ; usages en liste et détail ; trois étapes collantes (la SEULE scène liée
-   au défilement de la page, data-scene) ; l'offre et sa carte profonde (seule zone #08093B) ; questions ; bandeau final
-   unique (rendu par la feuille système). Les libellés des usages portent aussi sc-cas-label pour le choix au survol de
-   commun/mouvement.js. Les calques posés sur la photo des étapes s'appellent dd-calque (dd-carte est une carte pour la
-   feuille système). overflow:clip, jamais hidden, autour de ce qui s'anime. Sans support ou en « réduire les
-   animations », tout est posé. */
+/* ═══ DATA : LES COMPOSANTS COMMUNS AUX TROIS PAGES (39, 52, 53, FR et EN) ═══ 16/09/2026, agent D.
+   Naomie : « data reprend exactement comme moonlit.ai/mcp, /connect et /platform, en mode data ».
+   Règles : scratchpad/agents/refonte/SYSTEME.md (jetons, API sy-*) et IDENTITE.md §4. Préfixe dt-. Les composants
+   d'identité (sy-bento, sy-sombre, sy-final-photo, sy-etiquette, sy-bouton-chevrons) sont stylés par la feuille
+   système, jamais ici. Tout est posé avec les jetons de v6-00-jetons.css ; aucune animation liée au défilement.
+   Les apparitions passent par data-apparait (commun/mouvement.js). Styles propres à 52 et 53 : v6-zzzzzzzz-52-53-data.css.
+   Remplace la feuille dd- du 15/09 (sauvegarde : scratchpad/agents/refonte/identite-data/). */
 
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dd-s{margin:0 !important;padding:var(--e-section) 0 !important;border:0 !important;background:var(--c-fond) !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dd-hero{padding:var(--e-hero-haut) 0 var(--e-section) !important;background:var(--c-fond-2) !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) main > section.dd-comment-section{background:var(--c-fond-2) !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-conteneur{box-sizing:border-box;margin:0 auto}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(#usages, #developpeurs, #brancher, #offre, #couverture, #methode){scroll-margin-top:96px}
+body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"],[data-v6-page="52-data-mcp"],[data-v6-page="52-data-mcp-en"],[data-v6-page="53-data-plateforme"],[data-v6-page="53-data-plateforme-en"]){
 
-/* ─── Haut de page ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-h1{margin:0;max-width:min(100%, 900px);color:var(--c-texte)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-hero-lead{margin:var(--e-titre-lead) 0 0}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-chiffres{margin:var(--e-titre-contenu) 0 0 !important;padding:32px 0 0 !important;border-top:1px solid var(--c-filet)}
+  /* ── Rythme des chapitres : crème en haut, blanc, crème pour les cartes blanches ── */
+  & main > section.dt-hero:not(#_):not(#_){padding-top:var(--e-hero-haut) !important;padding-bottom:var(--e-section) !important;background:var(--c-fond-2) !important}
+  & main > section:is(.dt-couverture, .dt-acces-section, .dt-offre-section, .dt-clients-section, .dt-etapes-section, .dt-citation-section, .dt-vue-section, .dt-capacites-section):not(#_):not(#_){padding-top:var(--e-section) !important;padding-bottom:var(--e-section) !important;background:var(--c-fond) !important}
+  & main > section.dt-piliers-section:not(#_):not(#_){padding-top:var(--e-section) !important;padding-bottom:var(--e-section) !important;background:var(--c-fond-2) !important}
+  & main > section.dt-trace-section:not(#_):not(#_){padding-top:var(--e-section) !important;padding-bottom:var(--e-section) !important}
 
-/* ─── En-têtes de chapitre ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-titre{margin:0 0 var(--e-titre-contenu);max-width:min(100%, 800px);color:var(--c-texte)}
+  /* ── Deux colonnes ── */
+  & main .dt-duo:not(#_):not(#_){display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:64px;align-items:center}
+  & main .dt-duo-egal:not(#_):not(#_){grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  & main .dt-hero-texte h1:not(#_):not(#_){margin:16px 0 0 !important;max-width:18ch}
+  & main .dt-hero-texte .sy-lead:not(#_):not(#_){margin:var(--e-titre-lead) 0 0 !important}
+  & main .dt-actions:not(#_):not(#_){display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 
-/* ─── Les usages : liste à gauche, détail à droite ───
-   La dernière rangée en 1fr prend la hauteur du panneau collant, les libellés gardent la leur. */
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas{position:relative;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-rows:repeat(5,auto) minmax(0,1fr);column-gap:var(--e-titre-contenu);align-items:start;border-top:1px solid var(--c-filet)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas > input{position:absolute;width:1px;height:1px;margin:0;clip-path:inset(50%);overflow:clip;white-space:nowrap}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas-label{grid-column:1;grid-row:var(--r);display:flex;align-items:baseline;gap:16px;padding:20px 0;border-bottom:1px solid var(--c-filet);cursor:pointer;font-size:var(--t-h3);font-weight:500;line-height:var(--t-h3-lh);letter-spacing:var(--t-h3-ls);color:var(--c-texte-3);transition:color .2s ease}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas-label span{flex:none;min-width:2ch;font-size:var(--t-legende);font-weight:500;letter-spacing:0;font-variant-numeric:tabular-nums;color:var(--c-texte-3)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas-label:hover{color:var(--c-texte)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas > input:checked + .dd-cas-label{color:var(--c-texte)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas > input:checked + .dd-cas-label span{color:var(--c-accent)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas > input:focus-visible + .dd-cas-label{outline:2px solid var(--c-accent);outline-offset:2px}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau{grid-column:2;grid-row:1 / 7;align-self:start;display:none;position:sticky;top:96px;padding-top:24px}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas > input:checked + .dd-cas-label + .dd-panneau{display:block}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau-image{position:relative;aspect-ratio:16 / 10;border-radius:var(--r-media);overflow:clip;background:var(--c-fond-2)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau-image > img{display:block;width:100%;height:100%;object-fit:cover}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau-demande{position:absolute;left:20px;right:20px;bottom:20px;display:flex;align-items:center;gap:12px;margin:0;padding:12px 14px 12px 16px;border-radius:var(--r-carte);background:var(--c-carte);box-shadow:var(--o-flottante);font-size:.9375rem;line-height:1.4;color:var(--c-texte)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau-demande b{font-weight:500}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau-demande i{flex:none;display:grid;place-items:center;margin-left:auto;font-style:normal;color:var(--c-accent)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau-demande i svg{width:16px;height:16px}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau-corps{padding:32px 0 0}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau-famille{margin:0 0 12px;font-size:var(--t-surtitre);font-weight:500;line-height:1.4;letter-spacing:.06em;text-transform:uppercase;color:var(--c-texte-2)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau h3{margin:0;color:var(--c-texte)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau .dd-lead{margin:12px 0 0}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-recevez{margin:24px 0 0;padding:0;list-style:none;border-top:1px solid var(--c-filet)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-recevez li{padding:12px 0;border-bottom:1px solid var(--c-filet);font-size:var(--t-corps);line-height:1.45;color:var(--c-texte)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau-pied{margin-top:24px}
+  /* ── Le champ « dites-nous ce que vous voulez faire » (Moonlit Connect) ── */
+  & main .dt-besoin:not(#_):not(#_){display:flex;flex-direction:column;gap:0;margin:0;padding:var(--p-carte) !important}
+  & main h2.dt-besoin-titre:not(#_):not(#_):not(#_){margin:0 !important;font-size:var(--t-h3) !important;line-height:var(--t-h3-lh) !important;letter-spacing:var(--t-h3-ls) !important;font-weight:500 !important;color:var(--c-texte) !important}
+  & main .dt-besoin-texte:not(#_):not(#_){margin:10px 0 20px;font-size:.9375rem;line-height:1.5;color:var(--c-texte-2)}
+  & main .dt-besoin :is(textarea, input):not(#_):not(#_){box-sizing:border-box;width:100%;margin:0;padding:12px 14px;border:1px solid var(--c-filet);border-radius:var(--r-petit);background:var(--c-fond);font:inherit;font-size:.9375rem;line-height:1.5;color:var(--c-texte);resize:vertical}
+  & main .dt-besoin :is(textarea, input):focus-visible:not(#_):not(#_){outline:2px solid var(--c-accent);outline-offset:1px;border-color:transparent}
+  & main .dt-besoin :is(textarea, input)::placeholder{color:var(--c-texte-3)}
+  & main .dt-besoin-ligne:not(#_):not(#_){display:flex;gap:8px;margin-top:8px}
+  & main .dt-besoin-ligne input:not(#_):not(#_){flex:1;min-width:0}
+  /* 16/09/2026, intégration : le bouton s'étirait à la hauteur du champ (49 px) ; il garde le gabarit de 44 px, centré sur la ligne. */
+  & main .dt-besoin-ligne .sy-bouton:not(#_):not(#_){flex:none;align-self:center}
+  & main .dt-besoin-note:not(#_):not(#_){margin:12px 0 0;font-size:var(--t-legende);line-height:1.4;color:var(--c-texte-3);text-align:right}
+  & main .dt-cache:not(#_):not(#_){position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
 
-/* ─── Trois étapes : la carte posée sur la photo ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-comment-collant{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:var(--e-titre-contenu);align-items:center}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-comment-image{position:relative;margin:0;aspect-ratio:16 / 10.5;border-radius:var(--r-media);overflow:clip;background:var(--c-fond)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-comment-image > img{display:block;width:100%;height:100%;object-fit:cover}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-calque{position:absolute;inset:0;z-index:1;opacity:0;pointer-events:none;font-size:.8125rem;color:var(--c-texte)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-calque-3{opacity:1}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cle{position:absolute;left:50%;top:50%;translate:-50% -50%;width:min(340px, 76%);box-sizing:border-box;padding:20px 22px 22px;border-radius:var(--r-carte);background:var(--c-carte);box-shadow:var(--o-flottante)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cle-label{margin:0 0 8px;font-size:var(--t-legende);font-weight:500;color:var(--c-texte)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cle-champ{padding:11px 12px;border-radius:var(--r-petit);background:var(--c-carte);box-shadow:inset 0 0 0 1px var(--c-filet);font-size:.875rem;letter-spacing:.14em;color:var(--c-texte-2);white-space:nowrap;overflow:clip}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-ou{display:flex;align-items:center;gap:10px;margin:14px 0;font-size:.75rem;color:var(--c-texte-3)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-ou::before, body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-ou::after{content:"";flex:1;height:1px;background:var(--c-filet)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cle-bouton{width:100% !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-clients{position:absolute;left:50%;top:50%;translate:-50% -50%;width:min(300px, 70%);box-sizing:border-box;padding:18px 20px 20px;border-radius:var(--r-carte);background:var(--c-carte);box-shadow:var(--o-flottante)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-clients-tete{display:flex;align-items:baseline;justify-content:space-between;gap:10px;padding-bottom:12px;border-bottom:1px solid var(--c-filet)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-clients-tete b{font-size:.9375rem;font-weight:500}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-clients-tete em{font-size:var(--t-surtitre);font-style:normal;font-weight:500;letter-spacing:.06em;color:var(--c-texte-2)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-clients ul{margin:0;padding:0;list-style:none}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-clients li{padding:9px 0;border-bottom:1px solid var(--c-filet);font-size:.875rem}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-clients li:last-child{padding-bottom:0;border-bottom:0}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-regle:not(#_){position:absolute;left:50%;top:50%;translate:-50% -46%;width:min(340px, 62%);box-sizing:border-box;margin:0;padding:16px 18px 8px;border:0;border-radius:var(--r-carte);background:var(--c-carte);box-shadow:var(--o-flottante)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-regle .t-h3:not(#_){margin:0 0 8px;font-size:.875rem !important;font-weight:500 !important;line-height:1.3 !important;letter-spacing:0 !important;color:var(--c-texte) !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-regle .pl-champ:not(#_){display:grid;grid-template-columns:84px minmax(0,1fr);gap:10px;align-items:baseline;margin:0;padding:8px 0;border-top:1px solid var(--c-filet);font-size:.8125rem}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-regle .pl-champ span{font-size:.6875rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--c-texte-3)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-regle .pl-champ b{font-weight:500;color:var(--c-texte)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-regle .pl-champ:nth-child(5) b{color:var(--c-accent)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-flottant{position:absolute;display:flex;align-items:baseline;gap:8px;padding:8px 12px;border-radius:var(--r-petit);background:var(--c-carte);box-shadow:var(--o-flottante);font-size:.75rem;font-weight:500;white-space:nowrap}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-flottant em{font-size:.625rem;font-style:normal;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--c-texte-3)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-f1{left:5%;top:6%}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-f2{right:5%;bottom:6%}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etapes{margin:0;padding:0;list-style:none;border-top:1px solid var(--c-filet)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etape{padding:20px 0;border-bottom:1px solid var(--c-filet);color:var(--c-texte)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etape b{display:flex;align-items:baseline;gap:12px;font-size:var(--t-h3);font-weight:500;line-height:var(--t-h3-lh);letter-spacing:var(--t-h3-ls);color:inherit}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etape b span{font-size:var(--t-legende);font-variant-numeric:tabular-nums;color:var(--c-texte-3)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etape p{margin:8px 0 0;font-size:var(--t-corps);line-height:1.5;color:var(--c-texte-2)}
+  /* ── Couverture : sous le bento, les deux autres chiffres canon et le lien ── */
+  & main .dt-couverture-pied:not(#_):not(#_){display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-top:48px}
+  & main .dt-chiffres:not(#_):not(#_){flex:1;grid-template-columns:repeat(2, minmax(0, 260px))}
+  & main .dt-lien:not(#_):not(#_){display:inline-flex;align-items:center;gap:8px;flex:none}
 
-/* ─── L'offre : la table en lignes et la carte profonde ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--e-titre-contenu);align-items:start}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-table ul{margin:0;padding:0;list-style:none;border-top:1px solid var(--c-filet)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-table li{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:24px 0;border-bottom:1px solid var(--c-filet)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-table li > div{display:grid;gap:6px;min-width:0}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-table li b{font-size:1.125rem;font-weight:500;color:var(--c-texte)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-table li > div > span{font-size:var(--t-corps);line-height:1.5;color:var(--c-texte-2)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-table li > .dd-lien{flex:none}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-carte{display:flex;flex-direction:column;align-items:flex-start;padding:40px;background:var(--c-profond);color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-carte .dd-grand{margin:0 0 32px;font-size:var(--t-h3);font-weight:500;line-height:var(--t-h3-lh);letter-spacing:var(--t-h3-ls);color:#FFFFFF}
+  /* ── Une clé, deux accès ── */
+  & main .dt-acces:not(#_):not(#_){display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:var(--e-bento)}
+  & main .dt-acces-carte:not(#_):not(#_){display:flex;flex-direction:column;align-items:flex-start;margin:0}
+  & main .dt-acces-carte h3:not(#_):not(#_){margin:12px 0 0}
+  & main .dt-acces-texte:not(#_):not(#_){margin:10px 0 24px;color:var(--c-texte-2)}
+  & main .dt-acces-carte .dt-actions:not(#_):not(#_){margin-top:auto;padding-top:28px}
+  /* Le bloc de code : Satoshi seule (pas de monospace, DS), chiffres tabulaires, fond texte. */
+  & main .dt-code:not(#_):not(#_){box-sizing:border-box;width:100%;border-radius:var(--r-petit);background:var(--c-texte);color:#FFFFFF;overflow:clip}
+  & main .dt-code-tete:not(#_):not(#_){display:flex;align-items:center;gap:6px;margin:0;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.12);font-size:var(--t-legende);color:rgba(255,255,255,.6)}
+  & main .dt-code-tete::before{content:"";width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.28);box-shadow:14px 0 0 rgba(255,255,255,.2), 28px 0 0 rgba(255,255,255,.12);margin-right:36px}
+  & main .dt-code pre:not(#_):not(#_){margin:0;padding:14px 16px 16px;overflow-x:auto;font:inherit;font-size:.8125rem;line-height:1.6;font-variant-numeric:tabular-nums;white-space:pre;color:rgba(255,255,255,.88)}
+  & main .dt-code code:not(#_):not(#_){font:inherit;background:none;padding:0;color:inherit}
+  /* La liste des clients (Moonlit : les connecteurs) */
+  & main .dt-clients:not(#_):not(#_){box-sizing:border-box;width:100%;border-radius:var(--r-petit);background:var(--c-carte);box-shadow:0 0 0 1px var(--c-filet)}
+  & main .dt-clients-tete:not(#_):not(#_){display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 12px;margin:0;padding:12px 16px;border-bottom:1px solid var(--c-filet);font-size:var(--t-legende);color:var(--c-texte-3)}
+  & main .dt-clients-tete code:not(#_):not(#_){font:inherit;font-size:var(--t-legende);color:var(--c-texte);background:none;padding:0;word-break:break-all}
+  & main .dt-clients ul:not(#_):not(#_){margin:0;padding:0;list-style:none}
+  & main .dt-clients li:not(#_):not(#_){display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 16px;border-bottom:1px solid var(--c-filet);font-size:.9375rem}
+  & main .dt-clients li:last-child:not(#_):not(#_){border-bottom:0}
+  & main .dt-clients li b:not(#_):not(#_){font-weight:500;color:var(--c-texte)}
+  & main .dt-clients li span:not(#_):not(#_){padding:2px 8px;border-radius:var(--r-petit);background:var(--c-fond-2);font-size:11px;font-weight:500;letter-spacing:.06em;color:var(--c-texte-2)}
+  & main .dt-clients-tous b:not(#_):not(#_){color:var(--c-texte-2) !important}
 
-/* ─── Questions ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-faq{max-width:880px;border-top:1px solid var(--c-filet)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-faq details{border-bottom:1px solid var(--c-filet)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-faq summary{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;cursor:pointer;list-style:none;font-size:1.125rem;font-weight:500;line-height:1.35;color:var(--c-texte)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-faq summary::-webkit-details-marker{display:none}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-faq summary::after{content:"+";flex:none;font-size:1.25rem;font-weight:400;line-height:1;color:var(--c-texte-3);transition:rotate .2s ease}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-faq details[open] summary::after{rotate:45deg}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-reponse{max-width:64ch;padding:0 0 24px}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-reponse p{margin:0;font-size:var(--t-corps);line-height:1.55;color:var(--c-texte-2)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-reponse > p + p, body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-sources + p{margin-top:16px}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-reponse > p.dd-publie:not(#_){margin:20px 0 12px;font-size:var(--t-surtitre);font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--c-texte-3)}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-sources{display:flex;flex-wrap:wrap;gap:8px}
-body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-sources .pl-n:not(#_){margin:0;padding:6px 10px;border:0;border-radius:var(--r-petit);background:var(--c-fond-2);font-size:.875rem;line-height:1.3;color:var(--c-texte)}
+  /* ── Listes courtes (Moonlit : le tiret long ; ici un filet de 10 px, jamais de tiret cadratin dans le texte) ── */
+  & main .dt-liste:not(#_):not(#_){margin:20px 0 0;padding:0;list-style:none}
+  & main .dt-liste li:not(#_):not(#_){position:relative;margin:0;padding:6px 0 6px 22px;font-size:.9375rem;line-height:1.45;color:var(--c-texte-2)}
+  & main .dt-liste li::before{content:"";position:absolute;left:0;top:1.02em;width:10px;height:1px;background:currentColor;opacity:.6}
 
-/* ─── Tablette et téléphone ─── */
-@media (max-width:980px){
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-chiffres{grid-template-columns:repeat(2,minmax(0,1fr)) !important;row-gap:32px !important}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas{grid-template-columns:minmax(0,1fr);grid-template-rows:none}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas > :is(.dd-cas-label, .dd-panneau){grid-column:1;grid-row:auto}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau{position:static;padding:8px 0 32px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-panneau-demande{left:12px;right:12px;bottom:12px;padding:10px 12px;font-size:.8125rem}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-comment-collant{grid-template-columns:minmax(0,1fr);gap:32px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-comment-image{aspect-ratio:4 / 4.4}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-regle:not(#_){top:56%;width:84%}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-f1{left:4%;right:4%;top:4%;white-space:normal}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-f2{display:none}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre{grid-template-columns:minmax(0,1fr);gap:32px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-carte{padding:28px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-offre-table li{flex-direction:column;align-items:flex-start;gap:10px}
-}
+  /* ── La traçabilité, bloc sombre (seule zone #08093B de la page ; fond posé par sy-sombre) ── */
+  & main .dt-trace:not(#_):not(#_){align-items:center}
+  & main .dt-trace h2:not(#_):not(#_):not(#_){max-width:18ch;margin:0 !important;color:#FFFFFF !important;text-align:left !important}
+  & main .dt-trace .sy-lead:not(#_):not(#_):not(#_){margin:var(--e-titre-lead) 0 0 !important;text-align:left !important;color:var(--c-sur-profond-2) !important}
+  & main .dt-trace .dt-liste li:not(#_):not(#_):not(#_){color:rgba(255,255,255,.78)}
+  & main .dt-panneau:not(#_):not(#_){box-sizing:border-box;padding:24px;border-radius:var(--r-carte);background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16)}
+  & main .dt-panneau p:not(#_):not(#_){margin:0}
+  & main .dt-panneau-note:not(#_):not(#_){font-size:var(--t-legende);letter-spacing:.02em;color:rgba(255,255,255,.52)}
+  & main .dt-panneau-note:first-child:not(#_):not(#_){margin-bottom:14px !important}
+  & main .dt-panneau-note:last-child:not(#_):not(#_){margin-top:14px !important}
+  & main .dt-panneau-ligne:not(#_):not(#_){display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--r-petit);background:rgba(255,255,255,.08);font-size:.9375rem;line-height:1.4;color:#FFFFFF;font-variant-numeric:tabular-nums}
+  & main .dt-panneau-question i:not(#_):not(#_){flex:none;width:7px;height:7px;border-radius:50%;background:#FFFFFF}
+  & main .dt-panneau-fleche:not(#_):not(#_){padding:8px 0 8px 2px;font-size:var(--t-legende);letter-spacing:.02em;color:rgba(255,255,255,.62)}
+  & main .dt-panneau-fleche::before{content:"↓";margin-right:8px}
 
-/* ═══ LE MOUVEMENT ═══ Les apparitions à l'entrée dans l'écran viennent de data-apparait (commun/mouvement.js et la
-   feuille de mouvement du système). Ici : le détail d'un usage quand on le choisit (au clic ou au survol, pas au
-   défilement), et LA scène liée au défilement de la page, les trois étapes. */
-@media (prefers-reduced-motion: no-preference){
-  body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-cas > input:checked + .dd-cas-label + .dd-panneau{animation:ddPanneau var(--m-duree) var(--m-courbe) both}
-  @keyframes ddPanneau{from{opacity:0;filter:blur(4px)}}
-}
-@media (prefers-reduced-motion: no-preference) and (min-width:981px){
-  @supports (animation-timeline: view()){
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-comment-scene{height:240vh;view-timeline-name:--dd-comment}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-comment-collant{position:sticky;top:max(96px, calc(50vh - 250px))}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-calque{opacity:1;animation:ddCalque linear both;animation-timeline:--dd-comment}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-calque-1{animation-name:ddCalqueDebut;animation-range:contain 0% contain 33.3%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-calque-2{animation-range:contain 33.3% contain 66.6%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-calque-3{animation-name:ddCalqueFin;animation-range:contain 66.6% contain 100%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etape{animation:ddEtape linear both;animation-timeline:--dd-comment}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etape p{max-height:0;margin-top:0;overflow:clip;animation:ddOuvre linear both;animation-timeline:--dd-comment}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etape:nth-child(1){animation-name:ddEtapeDebut}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etape:nth-child(1) p{animation-name:ddOuvreDebut}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etape:nth-child(3){animation-name:ddEtapeFin}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) .dd-etape:nth-child(3) p{animation-name:ddOuvreFin}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dd-etape:nth-child(1), .dd-etape:nth-child(1) p){animation-range:contain 0% contain 33.3%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dd-etape:nth-child(2), .dd-etape:nth-child(2) p){animation-range:contain 33.3% contain 66.6%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"]) :is(.dd-etape:nth-child(3), .dd-etape:nth-child(3) p){animation-range:contain 66.6% contain 100%}
-    @keyframes ddCalque{0%{opacity:0;translate:0 6px}12%,88%{opacity:1;translate:0 0}100%{opacity:0;translate:0 -6px}}
-    @keyframes ddCalqueDebut{0%,88%{opacity:1;translate:0 0}100%{opacity:0;translate:0 -6px}}
-    @keyframes ddCalqueFin{0%{opacity:0;translate:0 6px}12%,100%{opacity:1;translate:0 0}}
-    @keyframes ddEtape{0%,100%{color:var(--c-texte-3)}12%,88%{color:var(--c-texte)}}
-    @keyframes ddEtapeDebut{0%,88%{color:var(--c-texte)}100%{color:var(--c-texte-3)}}
-    @keyframes ddEtapeFin{0%{color:var(--c-texte-3)}12%,100%{color:var(--c-texte)}}
-    @keyframes ddOuvre{0%,100%{max-height:0;margin-top:0}12%,88%{max-height:9em;margin-top:8px}}
-    @keyframes ddOuvreDebut{0%,88%{max-height:9em;margin-top:8px}100%{max-height:0;margin-top:0}}
-    @keyframes ddOuvreFin{0%{max-height:0;margin-top:0}12%,100%{max-height:9em;margin-top:8px}}
+  /* ── Trois piliers (cartes blanches sur crème) ── */
+  & main .dt-piliers:not(#_):not(#_){display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:var(--e-bento)}
+  & main .dt-pilier:not(#_):not(#_){display:flex;flex-direction:column;align-items:flex-start;margin:0}
+  & main .dt-pilier h3:not(#_):not(#_){margin:20px 0 0}
+  & main .dt-pilier > p:not(#_):not(#_){margin:10px 0 0;color:var(--c-texte-2)}
+  & main .dt-pilier .dt-liste:not(#_):not(#_){width:100%;margin-top:20px;padding-top:12px;border-top:1px solid var(--c-filet)}
+  & main .dt-pilier .dt-lien:not(#_):not(#_){margin-top:16px}
+  & main .dt-numero:not(#_):not(#_){display:inline-grid;place-items:center;flex:none;width:28px;height:28px;border-radius:var(--r-petit);background:var(--c-creme);font-size:.875rem;font-weight:500;color:var(--c-accent);font-variant-numeric:tabular-nums}
+
+  /* ── L'offre ou l'accès, sans prix ── */
+  & main .dt-offre:not(#_):not(#_){display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:var(--e-bento)}
+  & main .dt-offre-carte:not(#_):not(#_){display:flex;flex-direction:column;align-items:flex-start;margin:0}
+  & main .dt-offre-grand:not(#_):not(#_){margin:20px 0 0;font-size:var(--t-h2);line-height:var(--t-h2-lh);letter-spacing:var(--t-h2-ls);font-weight:500;color:var(--c-texte)}
+  & main .dt-offre-texte:not(#_):not(#_){margin:12px 0 0;padding-bottom:20px;border-bottom:1px solid var(--c-filet);width:100%;color:var(--c-texte-2)}
+  & main .dt-offre-carte .dt-liste:not(#_):not(#_){margin-top:12px}
+  & main .dt-offre-carte .dt-actions:not(#_):not(#_){margin-top:auto;padding-top:28px}
+  & main .dt-renvoi:not(#_):not(#_){display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin:40px 0 0;color:var(--c-texte-2)}
+
+  /* ── Tablette et téléphone ── */
+  @media (max-width:1023px){
+    & main :is(.dt-duo, .dt-duo-egal):not(#_):not(#_){grid-template-columns:minmax(0,1fr);gap:48px}
+    & main .dt-acces:not(#_):not(#_){grid-template-columns:minmax(0,1fr)}
+    & main .dt-piliers:not(#_):not(#_){grid-template-columns:minmax(0,1fr)}
+  }
+  @media (max-width:600px){
+    & main .dt-besoin-ligne:not(#_):not(#_){flex-direction:column}
+    & main .dt-besoin-ligne .sy-bouton:not(#_):not(#_){width:100%}
+    & main .dt-besoin-note:not(#_):not(#_){text-align:left}
+    & main .dt-couverture-pied:not(#_):not(#_){flex-direction:column;align-items:flex-start}
+    & main .dt-chiffres:not(#_):not(#_){grid-template-columns:minmax(0,1fr);width:100%}
+    & main .dt-offre:not(#_):not(#_){grid-template-columns:minmax(0,1fr)}
+    & main .dt-panneau:not(#_):not(#_){padding:18px}
+    & main .dt-code pre:not(#_):not(#_){font-size:.75rem}
   }
 }

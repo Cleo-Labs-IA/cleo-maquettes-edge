@@ -2,6 +2,8 @@
    Règle : scratchpad/agents/refonte/SYSTEME.md (jetons de v6-00-jetons.css, API de v6-zzzzzzzzzzzzz-systeme.css).
    Générée par scratchpad/agents/refonte/ressources-articles/feuille.mjs. Remplace la feuille du 15/09 au matin (cadres à
    filets, vignettes en trame, cartes en cascade et fil de lecture liés au défilement), sauvegardée à côté du script.
+   16/09/2026, passe identité (IDENTITE.md, agent R) : carrousels, bande photo en tête d'article et appel final sur photo sont
+   des composants sy-* stylés par le système ; ici seulement leur place dans ces gabarits.
    Ce qui reste ici : la mise en page propre à ces gabarits (premier écran, barre latérale, lecture, blog, atlas), posée
    avec les jetons. Aucune animation : les apparitions passent par data-apparait (commun/mouvement.js). */
 
@@ -21,7 +23,13 @@ body[data-cleo-ds="v6"]:is([data-v6-page="10-ressources"],[data-v6-page="13-glos
   & main > section.ra-campagne-logos:not(#_):not(#_){padding-top:var(--e-titre-contenu) !important;padding-bottom:var(--e-titre-contenu) !important}
   & main > section.ra-campagne-mesures:not(#_):not(#_){padding-top:0 !important;padding-bottom:var(--e-section) !important}
   & main > section.ra-corps-section:not(#_):not(#_){padding-top:var(--e-titre-contenu) !important;padding-bottom:var(--e-section) !important}
-  & main .section-serree + .section:not(#_):not(#_){padding-top:var(--e-titre-contenu) !important}
+  & main .section-serree + .section:not([class*="sy-"]):not(#_):not(#_){padding-top:var(--e-titre-contenu) !important}
+  /* 16/09/2026, passe identité : rangée de cartes photo après le corps (23) ; la rangée elle-même est stylée par le système (sy-carrousel). */
+  & main > section.ra-carrousel-section:not(#_):not(#_){padding-top:0 !important;padding-bottom:var(--e-section) !important}
+  /* L'appel final sur photo porte son propre --e-section : la section d'avant ne double pas l'espace (mesuré sur 23 : 224 px de blanc). */
+  & main > section:not([class*="sy-"]):has(+ section.sy-final-photo):not(#_):not(#_){padding-bottom:0 !important}
+  & main .ra-carrousel-titre:not(#_):not(#_){margin:0 0 var(--e-titre-contenu)}
+  & main .ra-rangee:not(#_):not(#_){margin:0 0 56px}
   & main > section:first-of-type :is(.duo, .ra-tete):not(#_):not(#_){align-items:start !important}
   & main > section:first-of-type > .conteneur > :first-child:not(#_):not(#_),
   & main > section:first-of-type > .conteneur > :first-child > :first-child:not(#_):not(#_),
@@ -197,10 +205,9 @@ body[data-cleo-ds="v6"]:is([data-v6-page="12-article"],[data-v6-page="14-terme"]
   & .article-tete:not(#_):not(#_){max-width:880px}
   & .article-tete h1:not(#_):not(#_){margin:16px 0 20px !important}
   & .article-tete .t-body:not(#_):not(#_){max-width:60ch;margin:0 0 28px !important;font-size:var(--t-lead);line-height:1.45}
-  & main > section:has(> .conteneur > .scene):not(#_):not(#_){padding:0 0 var(--e-titre-contenu) !important;background:var(--c-fond) !important}
-  & main > section > .conteneur > .scene:not(#_):not(#_){width:min(1360px, 100vw - (2 * var(--l-marge)));margin-left:calc((100% - min(1360px, 100vw - (2 * var(--l-marge)))) / 2);aspect-ratio:16/7 !important}
   & main > section:has(.article):not(#_):not(#_){padding-top:0 !important}
-  & main > section:first-of-type + section:has(.article):not(#_):not(#_){padding-top:var(--e-titre-contenu) !important}
+  & main > section:first-of-type + section:has(.article):not(#_):not(#_),
+  & main > section.sy-bande-photo + section:has(.article):not(#_):not(#_){padding-top:var(--e-titre-contenu) !important}
   @media (max-width:600px){
     & .article-tete > div:not(#_):not(#_){flex-wrap:wrap;row-gap:10px}
     & .article-tete > div > .t-caption:not(#_):not(#_){flex-basis:100%;padding-left:0 !important;border-left:0 !important}
@@ -209,13 +216,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="12-article"],[data-v6-page="14-terme"]
 
 body[data-cleo-ds="v6"]:is([data-v6-page="24-blog"],[data-v6-page="24-blog-en"]){
   & main > section.ra-une-section:not(#_):not(#_){padding:var(--e-titre-contenu) 0 0 !important}
-  & .ra-une-grille:not(#_):not(#_){display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:var(--e-grille) 48px;align-items:start}
-  & :is(.ra-une-carte, .ra-une-ligne):not(#_):not(#_){display:block;color:var(--c-texte);text-decoration:none}
-  & .ra-une-media:not(#_):not(#_){aspect-ratio:16/10;margin:0 0 20px;border-radius:var(--r-media);overflow:clip;background:var(--c-fond-2)}
-  & .ra-une-media img:not(#_):not(#_){display:block;width:100%;height:100%;object-fit:cover}
-  & .ra-une-liste:not(#_):not(#_){border-top:1px solid var(--c-filet)}
-  & .ra-une-ligne:not(#_):not(#_){padding:24px 0;border-bottom:1px solid var(--c-filet)}
-  & :is(.ra-une-carte, .ra-une-ligne):hover h3:not(#_):not(#_){text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
+  & main > section.ra-une-section > .conteneur > .sy-surtitre:not(#_):not(#_){margin:0 0 var(--e-titre-contenu)}
   & .blog-grille:not(#_):not(#_){display:grid !important;grid-template-columns:repeat(3, minmax(0,1fr));gap:40px var(--e-grille) !important;margin-top:24px}
   & .blog-mois:not(#_):not(#_){grid-column:1 / -1;display:flex;align-items:baseline;justify-content:space-between;margin:0;padding:32px 0 12px;border:0;border-bottom:1px solid var(--c-filet);background:none}
   & .blog-mois:first-child:not(#_):not(#_){padding-top:0}
@@ -228,7 +229,6 @@ body[data-cleo-ds="v6"]:is([data-v6-page="24-blog"],[data-v6-page="24-blog-en"])
   & .blog-art:hover .titre-carte:not(#_):not(#_){text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
   @media (max-width:900px){
     & .blog-grille:not(#_):not(#_){grid-template-columns:repeat(2, minmax(0,1fr))}
-    & .ra-une-grille:not(#_):not(#_){grid-template-columns:minmax(0,1fr)}
   }
   @media (max-width:600px){
     & .blog-grille:not(#_):not(#_){grid-template-columns:minmax(0,1fr)}

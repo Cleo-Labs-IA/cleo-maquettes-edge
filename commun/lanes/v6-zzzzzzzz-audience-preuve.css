@@ -177,3 +177,9 @@ body[data-cleo-ds="v6"]:is([data-v6-page="02-entreprise"],[data-v6-page="04-sect
   body[data-cleo-ds="v6"]:is([data-v6-page="02-entreprise"],[data-v6-page="04-secteur"],[data-v6-page="05-marche"],[data-v6-page="06-cas-client"],[data-v6-page="09-texte"],[data-v6-page="30-securite"],[data-v6-page="33-fabricants"],[data-v6-page="34-importateurs"],[data-v6-page="35-marketplaces"],[data-v6-page="36-solutions"]) .ap-paire{grid-template-columns:minmax(0,1fr)}
   body[data-cleo-ds="v6"]:is([data-v6-page="02-entreprise"],[data-v6-page="04-secteur"],[data-v6-page="05-marche"],[data-v6-page="06-cas-client"],[data-v6-page="09-texte"],[data-v6-page="30-securite"],[data-v6-page="33-fabricants"],[data-v6-page="34-importateurs"],[data-v6-page="35-marketplaces"],[data-v6-page="36-solutions"]) :is(.ap-categories, .ap-perimetre){grid-template-columns:minmax(0,1fr)}
 }
+
+/* ═══ PASSE IDENTITÉ ═══ 16/09/2026 (scratchpad/agents/refonte/IDENTITE.md, agent E). Bento, bande photo, onglets sombres
+   (36) et appel final sur photo sont des composants sy-* stylés par le système. Ici seulement leur place : la note et les
+   liens sous le bento, la liste des faits sous le bento du cas client. */
+body[data-cleo-ds="v6"]:is([data-v6-page="02-entreprise"],[data-v6-page="04-secteur"],[data-v6-page="05-marche"],[data-v6-page="06-cas-client"],[data-v6-page="36-solutions"]) .ap-bento .ap-note{margin-top:24px}
+body[data-cleo-ds="v6"][data-v6-page="06-cas-client"] .ap-bento .ap-bento-faits:not(#_):not(#_){margin-top:32px !important}
