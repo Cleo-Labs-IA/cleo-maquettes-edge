@@ -32,53 +32,11 @@
     "37-compliance-service-en.html": {
       "chemin": "/en/platform/compliance-service"
     },
-    "38-service.html": {
-      "chemin": "/fr/compliance-as-a-service/declaration-de-conformite"
-    },
-    "38-service-en.html": {
-      "chemin": "/en/compliance-as-a-service/declaration-of-conformity"
-    },
-    "44-service-veille.html": {
-      "chemin": "/fr/compliance-as-a-service/veille-reglementaire"
-    },
-    "44-service-veille-en.html": {
-      "chemin": "/en/compliance-as-a-service/regulatory-monitoring"
-    },
     "45-service-etiquetage.html": {
       "chemin": "/fr/compliance-as-a-service/etiquetage-et-publicite"
     },
     "45-service-etiquetage-en.html": {
       "chemin": "/en/compliance-as-a-service/labelling-and-advertising"
-    },
-    "46-service-emballage.html": {
-      "chemin": "/fr/compliance-as-a-service/emballage"
-    },
-    "46-service-emballage-en.html": {
-      "chemin": "/en/compliance-as-a-service/packaging"
-    },
-    "47-service-specifications.html": {
-      "chemin": "/fr/compliance-as-a-service/specifications"
-    },
-    "47-service-specifications-en.html": {
-      "chemin": "/en/compliance-as-a-service/specifications"
-    },
-    "48-service-contrats.html": {
-      "chemin": "/fr/compliance-as-a-service/contrats"
-    },
-    "48-service-contrats-en.html": {
-      "chemin": "/en/compliance-as-a-service/contracts"
-    },
-    "49-service-formalites.html": {
-      "chemin": "/fr/compliance-as-a-service/formalites-administratives"
-    },
-    "49-service-formalites-en.html": {
-      "chemin": "/en/compliance-as-a-service/administrative-formalities"
-    },
-    "50-service-recyclage.html": {
-      "chemin": "/fr/compliance-as-a-service/recyclage-des-dechets"
-    },
-    "50-service-recyclage-en.html": {
-      "chemin": "/en/compliance-as-a-service/waste-recycling"
     },
     "51-service-mandataire.html": {
       "chemin": "/fr/compliance-as-a-service/mandataire-ue"

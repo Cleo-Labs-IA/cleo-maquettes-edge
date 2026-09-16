@@ -168,6 +168,19 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-familles{grid-template-columns:minmax(0,1fr)}
 }
 
+/* ── Trois façons de travailler avec Cleo (16/09/2026, textes validés par Naomie) : trois cartes .sy-carte de la feuille
+   système, chacune un lien. Ici seulement la grille et l'ordre interne de la carte, sur des classes de la page. ── */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-facons-grille{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--e-grille)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main a.ac-facon{display:flex;flex-direction:column;align-items:flex-start;gap:12px;min-height:220px;color:var(--c-texte);text-decoration:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-facon h3{margin:0;text-wrap:balance}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-facon p{flex:1;margin:0;color:var(--c-texte-2)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-facon:hover h3{color:var(--c-accent)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-facon:hover .sy-lien{text-decoration:underline;text-underline-offset:4px}
+@media (max-width:900px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-facons-grille{grid-template-columns:minmax(0,1fr)}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main a.ac-facon{min-height:0}
+}
+
 /* ── Pour qui : section sombre à onglets (composant .sy-sombre / .sy-onglets de la feuille système, 16/09/2026) ──
    Ici seulement les liens et la ligne du périmètre, qui sont des classes de la page. */
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-qui .ac-lien{margin-top:16px;color:#FFFFFF}

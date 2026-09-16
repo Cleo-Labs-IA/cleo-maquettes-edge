@@ -91,7 +91,9 @@ body[data-cleo-ds="v6"] main .sy-chapitre .sy-actions:not(#_):not(#_):not(#_){di
 
 /* La suite d'un titre en deux temps (span gris sur fond clair) passait sombre sur la photo : relevée sur la 33 par l'agent
    enterprise-audience. Sur une ouverture photo, toute suite de titre est blanche à 72 %. */
-body[data-cleo-ds="v6"] main .sy-chapitre-texte :is(h1, h2) :is(span, em, i, .attenue, [class*="suite"], [class*="gris"]):not(#_):not(#_):not(#_){color:rgba(255,255,255,.72) !important}
+body[data-cleo-ds="v6"] main .sy-chapitre-texte :is(h1, h2) :is(span, em, i, .attenue, [class*="suite"], [class*="gris"]):not(.mm-mot):not(#_):not(#_):not(#_){color:rgba(255,255,255,.72) !important}
+/* 16/09/2026 : sans :not(.mm-mot), la règle grisait TOUT le h1 des hauts de page sur photo (mouvement.js enveloppe chaque mot dans
+   span.mm-mot). Relevé par l'agent à propos sur 02, 04, 39. La suite grise garde sa couleur, les mots en héritent. */
 
 /* Une seule largeur de photo par page : les ouvertures de chapitre suivent le conteneur (1 200 px) ; la bande photo et
    l'appel final étaient à 1 360 px, soit deux largeurs d'image sur la même page (relevé par l'agent photo accueil-data). */

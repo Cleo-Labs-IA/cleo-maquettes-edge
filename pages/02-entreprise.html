@@ -1,111 +1,156 @@
 <!--NAV-->
 
-<!-- ═══ HAUT DE PAGE ═══ Refonte du 15/09/2026 (scratchpad/agents/refonte/SYSTEME.md) : surtitre, h1, chapeau, un
-     bouton, puis UN grand média. Générateur agents/audience-preuve/gen-audience.mjs périmé depuis cette refonte.
-     h1 : dossier de marque, planche 6 (« A team that puts a lawyer and an engineer on the same problem »).
-     Chapeau : planche 7 (la tension) et planche 4 (l'espace de travail IA des personnes qui appliquent la réglementation). -->
-<!-- PHOTO PARTOUT 16/09/2026 (refonte/PHOTO.md) : haut de page sur photo (chaines), surtitre, h1, chapeau et bouton repris tels quels. -->
+<!-- ═══ À PROPOS, L'HISTOIRE DE CLEO ═══ 16/09/2026. Naomie : « À propos : raconte une histoire, https://www.daptic.com/company/,
+     exactement comme eux ». Structure de daptic.com/company, dans l'ordre : titre, bandeau de logos, « Our story » (étiquette
+     à gauche, récit à droite), grande photo avec la carte du siège, « Mission », « Our values » (titre à gauche, valeurs à
+     droite), « Our commitment to our customers » (4 cartes), « Join our team » (lignes), appel final. On reprend la
+     composition et la façon de raconter, jamais les mots ni les chiffres de Daptic (concurrent). Chaque fait est tracé dans
+     scratchpad/agents/refonte/a-propos/faits.md. Générée par a-propos/generer.mjs.
+     À TRANCHER : le passé d'Anaëlle Guez chez Havas (le dossier de marque dit « running transformation at Havas Group », la
+     mémoire dit « Legal Manager », une ancienne version de l'article 27 disait « CTO ») n'est pas écrit.
+     À TRANCHER : le dossier de marque date le constat de « fin 2025 » (planche 6) alors que les faits canoniques disent
+     « fondée en 2023 » ; le récit ne porte aucune date de constat. -->
+
+<!-- ═══ TITRE ═══ Daptic : « Company » seul. Ici sur photo (refonte/PHOTO.md). Chapeau : dossier de marque planche 4, faits canoniques (fondation), page 02 d'avant (siège). -->
 <section class="section sy-hero-photo ap-hero-photo">
   <div class="conteneur">
     <figure class="sy-chapitre sy-chapitre-hero">
-      <img src="img:chaines" alt="">
+      <img src="img:classeurs" alt="">
       <figcaption class="sy-chapitre-texte">
         <p class="sy-etiquette">À propos de Cleo</p>
-        <h1>Un juriste et un ingénieur sur le même problème.</h1>
-        <p class="sy-chapitre-lead">Chaque fonction de l'entreprise a été automatisée, l'une après l'autre. La conformité produit se fait encore à la main, marché par marché : Cleo construit l'espace de travail IA des équipes qui l'appliquent aux produits.</p>
-        <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo</a></div>
+        <h1>L'histoire de Cleo.</h1>
+        <p class="sy-chapitre-lead">Cleo est l'espace de travail IA des personnes qui appliquent la réglementation aux produits. Fondée en 2023, société constituée en 2024, basée à Neuilly-sur-Seine.</p>
       </figcaption>
     </figure>
   </div>
 </section>
 
-<!-- ═══ D'OÙ VIENT CLEO ═══ dossier de marque, planche 6 (« What we tried first », « What we built »). -->
-<section class="section ap-bloc">
+<!-- ═══ LOGOS ═══ Daptic : bandeau de logos sous le titre. Ici la bande de l'accueil et de la page 04 (clients en production). -->
+<section class="section ap-logos ap-histoire-logos">
   <div class="conteneur" data-apparait>
-    <figure class="sy-chapitre">
-      <img src="img:masse-brique-jouet" alt="">
-      <figcaption class="sy-chapitre-texte">
-        <p class="sy-etiquette">À propos de Cleo</p>
-        <h2>D'où vient Cleo</h2>
-      </figcaption>
+    <p>Aux côtés de marques et de fabricants internationaux</p>
+    <div class="ap-logos-imgs"><img src="img:logo-decathlon" alt="Decathlon"><img src="img:logo-electrolux" alt="Electrolux Professional"><img src="img:logo-balzac" alt="Balzac Paris"><img src="img:logo-mercedes" alt="Mercedes-Benz"><img src="img:logo-loccitane" alt="L'Occitane"></div>
+  </div>
+</section>
+
+<!-- ═══ NOTRE HISTOIRE ═══ Daptic « Our story » : étiquette à gauche, trois paragraphes à la première personne à droite
+     (la rencontre, l'obstacle, la fondation). Ici : les fondatrices (canon, article 27), le constat (dossier de marque
+     planches 2, 3, 6, 7), le premier essai et la méthode (planche 6), ce qui est construit (planche 6) et la preuve de
+     concept Decathlon (DecathlonQuote.tsx). Colonne de gauche : les trois portraits (Daptic la laisse vide). -->
+<section class="section ap-histoire-recit" id="histoire">
+  <div class="conteneur" data-apparait>
+    <div class="ap-histoire-deux">
+      <div class="ap-histoire-gauche">
+        <p class="sy-surtitre">Notre histoire</p>
+        <ul class="ap-histoire-equipe">
+          <li><img src="img:anaelle" alt="Portrait d'Anaëlle Guez"><b>Anaëlle Guez</b><span>CEO et cofondatrice</span></li>
+          <li><img src="img:naomie" alt="Portrait de Naomie Halioua"><b>Naomie Halioua</b><span>CDO et cofondatrice</span></li>
+          <li><img src="img:alex" alt="Portrait d'Alexandre Bloch"><b>Alexandre Bloch</b><span>CTO</span></li>
+        </ul>
+      </div>
+      <div class="ap-histoire-texte">
+        <p>Cleo est née d'une idée simple : mettre un juriste et un ingénieur sur le même problème. Anaëlle Guez, diplômée de la Sorbonne et de Panthéon-Assas, et Naomie Halioua, diplômée d'un MSc&amp;T de l'École polytechnique, fondent Cleo en 2023.</p>
+        <p>Nous avons vu chaque fonction de l'entreprise s'automatiser, l'une après l'autre. La conformité produit, non. Elle se faisait encore à la main, confiée question par question à des conseils extérieurs, marché par marché. Les règles sont trop nombreuses, elles changent sans cesse et diffèrent d'une région à l'autre : savoir concrètement quoi faire sur un produit devenait presque impossible.</p>
+        <p>Nous avons d'abord essayé une IA généraliste, faite pour répondre à tout le monde. Elle répondait un peu à chacun, et bien à personne. Nous avons donc inversé la méthode : des cas réels dans de vrais secteurs, le textile d'abord, puis la cosmétique et le transport. C'est plus lent que de prétendre tout couvrir, et c'est la seule façon d'avoir raison.</p>
+        <p>Aujourd'hui, Cleo encode ce qui compte le plus et suit tout ce qui l'entoure : les sources, les autorités, les projets de textes et les consultations, vérifiés par notre équipe. Nous avons mené une preuve de concept avec Decathlon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LE LIEU ═══ Daptic : grande photo de la ville avec une carte « Headquartered in / Working in ». Ici la photo de
+     The Pitch by Deel à Station F (article 29), la carte du siège (page 02 d'avant : « Basées à Neuilly-sur-Seine, au
+     travail sur 106 pays ») et les 25 000 réglementations (canon). -->
+<section class="section ap-histoire-lieu">
+  <div class="conteneur" data-apparait>
+    <figure class="ap-histoire-photo">
+      <img src="img:station-f" alt="Sur la scène de The Pitch by Deel, à Station F">
+      <div class="ap-histoire-carte">
+        <dl><dt>Siège</dt><dd>Neuilly-sur-Seine</dd></dl>
+        <dl><dt>Au travail sur</dt><dd>106 pays</dd></dl>
+        <dl><dt>Cartographiées</dt><dd>25 000 réglementations</dd></dl>
+      </div>
+      <figcaption>The Pitch by Deel, Station F, avril 2026</figcaption>
     </figure>
-    <ul class="sy-lignes">
-      <li><b>Ce que nous avons essayé d'abord</b><span>Une IA généraliste, faite pour répondre à tout le monde. Nous avons inversé la méthode : des cas réels dans de vrais secteurs, le textile d'abord, puis la cosmétique et le transport.</span></li>
-      <li><b>Ce que nous avons construit</b><span>Ce qui compte le plus, nous l'encodons. Tout ce qui l'entoure, nous le suivons : sources, autorités, projets de textes et consultations, vérifiés par notre équipe.</span></li>
+  </div>
+</section>
+
+<!-- ═══ MISSION ═══ Daptic « Mission » : étiquette à gauche, grande phrase à droite. Ici la mission et la vision du dossier de marque, planche 8. -->
+<section class="section ap-histoire-mission">
+  <div class="conteneur" data-apparait>
+    <div class="ap-histoire-mission-grille">
+      <p class="sy-surtitre">Mission</p>
+      <div>
+        <p class="ap-histoire-mission-texte">Rendre chaque règle accessible en quelques secondes, et la traduire en action sur le produit.</p>
+        <p class="ap-histoire-vision">Notre vision : un monde plus sûr, où chacun accède aux règles écrites pour protéger les personnes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NOS VALEURS ═══ Daptic « Our values » : grand titre à gauche, quatre valeurs à droite. Ici le manifeste et la personnalité du dossier de marque (planches 7 et 9). -->
+<section class="section ap-histoire-valeurs">
+  <div class="conteneur" data-apparait>
+    <div class="ap-histoire-deux">
+      <h2>Nos valeurs</h2>
+      <ul class="ap-histoire-valeurs-liste">
+        <li><h3>La source avant le résumé</h3><p>Chaque réponse porte le texte qui la fonde. Elle se vérifie en quelques secondes et se défend devant n'importe qui.</p></li>
+        <li><h3>Seulement ce qui se vérifie</h3><p>Nous refusons les réponses qui sonnent juste mais ne se vérifient pas. Dans ce métier, presque juste, c'est faux.</p></li>
+        <li><h3>La couverture que nous avons construite</h3><p>Nous n'annonçons que ce que nous avons construit. Chaque marché et chaque secteur que nous ouvrons se construit avec les personnes qui y travaillent.</p></li>
+        <li><h3>Pour celles et ceux qui répondent du produit</h3><p>Les équipes conformité, qualité et RSE. Pas toutes juristes, toutes responsables de ce qui est mis sur le marché.</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ NOS ENGAGEMENTS ═══ Daptic « Trusted partnership / Our commitment to our customers » : quatre cartes. Ici les trois
+     engagements du dossier de marque (planche 5) et l'expert conformité (planche 9, article 27). -->
+<section class="section ap-histoire-engagements">
+  <div class="conteneur" data-apparait>
+    <p class="sy-surtitre">Nos engagements</p>
+    <h2>Ce que nous garantissons à nos clients</h2>
+    <ul class="ap-histoire-cartes">
+      <li class="sy-carte-blanche"><span>01</span><h3>Exhaustifs</h3><p>Chaque règle qui s'applique à vos produits est établie, marché par marché, famille réglementaire par famille réglementaire.</p></li>
+      <li class="sy-carte-blanche"><span>02</span><h3>Tout est traçable</h3><p>Le texte officiel qui impose la règle, l'autorité qui l'a publié, le lien vers la source. De quoi répondre à un acheteur, à un auditeur, à la douane.</p></li>
+      <li class="sy-carte-blanche"><span>03</span><h3>Tout est à jour</h3><p>Cleo suit les sources en continu et vous signale ce qui va changer avant son entrée en application.</p></li>
+      <li class="sy-carte-blanche"><span>04</span><h3>Un expert conformité relit</h3><p>L'IA est le moteur de Cleo, nommée et expliquée. Un expert conformité relit et valide chaque analyse.</p></li>
     </ul>
   </div>
 </section>
 
-<!-- ═══ L'ÉQUIPE ═══ titres selon wording/lexique.md §11.
-     À TRANCHER : les intitulés français de Darcial Mondjo (« Global Head of Product & Sanitary Compliance ») et de
-     Thezi Mabuza (« Stalwart in Consumer Protection & Product Safety ») sont traduits ici ; chaque personne les valide. -->
-<section class="section ap-bloc">
+<!-- ═══ LES ÉTAPES ═══ Daptic n'a pas de chronologie ; ses lignes « Join our team » (intitulé, lieu, flèche) donnent la forme.
+     Faits : canon (fondation, levée), pages 23, 27, 28 et 29. -->
+<section class="section ap-histoire-jalons">
   <div class="conteneur" data-apparait>
-    <figure class="sy-chapitre">
-      <img src="img:masse-tasse" alt="">
-      <figcaption class="sy-chapitre-texte">
-        <p class="sy-etiquette">À propos de Cleo</p>
-        <h2>Les personnes derrière Cleo</h2>
-      </figcaption>
-    </figure>
-    <div class="ap-equipe">
-      <figure class="ap-portrait"><div class="ap-portrait-img"><img src="img:anaelle" alt="Portrait d'Anaëlle Guez"></div><figcaption><b>Anaëlle Guez</b><span>CEO et cofondatrice</span><a href="https://www.linkedin.com/in/anaelle-guez-ab341746/" target="_blank" rel="noopener">LinkedIn <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></figcaption></figure>
-      <figure class="ap-portrait"><div class="ap-portrait-img"><img src="img:naomie" alt="Portrait de Naomie Halioua"></div><figcaption><b>Naomie Halioua</b><span>CDO et cofondatrice</span><a href="https://www.linkedin.com/in/naomiehalioua/" target="_blank" rel="noopener">LinkedIn <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></figcaption></figure>
-      <figure class="ap-portrait"><div class="ap-portrait-img"><img src="img:alex" alt="Portrait d'Alexandre Bloch"></div><figcaption><b>Alexandre Bloch</b><span>CTO</span></figcaption></figure>
-      <figure class="ap-portrait"><div class="ap-portrait-img"><img src="img:darcial-grand" alt="Portrait de Darcial Mondjo"></div><figcaption><b>Darcial Mondjo</b><span>Responsable monde, conformité produit et sanitaire</span></figcaption></figure>
-      <figure class="ap-portrait"><div class="ap-portrait-img"><img src="img:thezi-grand" alt="Portrait de Thezi Mabuza"></div><figcaption><b>Thezi Mabuza</b><span>Protection des consommateurs et sécurité des produits</span></figcaption></figure>
-    </div>
-    <p class="ap-note">Et l'équipe qui encode les règles, les relit et les met à jour chaque semaine.</p>
+    <p class="sy-surtitre">Jalons</p>
+    <h2>Les étapes de Cleo</h2>
+    <ol class="ap-histoire-lignes">
+      <li><div><span class="ap-histoire-date">2023</span><span class="ap-histoire-ligne-texte"><b>Fondation de Cleo</b><span>Anaëlle Guez et Naomie Halioua fondent Cleo.</span></span><span class="ap-histoire-fleche"></span></div></li>
+      <li><div><span class="ap-histoire-date">2024</span><span class="ap-histoire-ligne-texte"><b>Création de la société</b><span>Cleo devient une société, avec son siège à Neuilly-sur-Seine.</span></span><span class="ap-histoire-fleche"></span></div></li>
+      <li><a href="23-research.html"><span class="ap-histoire-date">Février 2026</span><span class="ap-histoire-ligne-texte"><b>Article de recherche</b><span>Naomie Halioua, Alexandre Bloch et Anaëlle Guez décrivent l'architecture multi-agents de Cleo.</span></span><span class="ap-histoire-fleche"><svg viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+      <li><a href="29-article-deel.html"><span class="ap-histoire-date">Avril 2026</span><span class="ap-histoire-ligne-texte"><b>The Pitch by Deel</b><span>Cleo remporte le trophée régional, sur scène à Station F.</span></span><span class="ap-histoire-fleche"><svg viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+      <li><a href="27-article-levee.html"><span class="ap-histoire-date">29 avril 2026</span><span class="ap-histoire-ligne-texte"><b>1,5 M€ levés en pre-seed</b><span>Un tour mené par Larry Berger, avec Kima Ventures et La Financière Saint-James.</span></span><span class="ap-histoire-fleche"><svg viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+      <li><a href="28-article-vivatech.html"><span class="ap-histoire-date">Juin 2026</span><span class="ap-histoire-ligne-texte"><b>Scaleway Startup Challenge</b><span>Cleo est lauréate et présente à VivaTech 2026.</span></span><span class="ap-histoire-fleche"><svg viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+    </ol>
   </div>
 </section>
 
-<!-- IDENTITE-E 16/09/2026 -->
-<!-- ═══ BENTO ═══ chiffres canon (CANONICAL-FACTS, dossier de marque planches 10 et 14) ; fiches : faits de la page (Cleo Corp SAS, fondée en 2023, constituée en 2024, Neuilly-sur-Seine ; 2 812 règles encodées au 26 août 2026). -->
-<section class="section ap-bloc ap-bento">
+<!-- ═══ REJOINDRE L'ÉQUIPE ═══ Daptic « Careers / Join our team » : lignes de postes. Les intitulés de la page 18 sont des
+     exemples à remplacer (À TRANCHER sur la 18) : seule la candidature spontanée est listée. -->
+<section class="section ap-histoire-recrutement">
   <div class="conteneur" data-apparait>
-    <div class="sy-entete"><h2 class="ap-titre">Ce que Cleo couvre</h2></div>
-    <div class="sy-bento">
-      <figure class="sy-bento-photo"><img src="img:equipe" alt=""><p class="sy-etiquette">Cleo Corp SAS</p><p class="sy-bento-phrase">Fondée en 2023, société constituée en 2024, basée à Neuilly-sur-Seine.</p></figure>
-      <div class="sy-bento-creme"><b class="sy-chiffre-raye">106</b><span>pays suivis</span></div>
-      <div class="sy-bento-bleu"><b class="sy-chiffre-raye">25 000</b><span>réglementations cartographiées</span><div class="sy-fiches" aria-hidden="true"><dl class="sy-fiche"><dt>Autorités</dt><dd><span>Suivies</span><span>19 000</span></dd></dl><dl class="sy-fiche"><dt>Règles</dt><dd><span>Encodées</span><span>2 812</span></dd></dl></div></div>
-    </div>
-    <p class="ap-note">19 000 autorités réglementaires suivies. 2 812 règles encodées, condition et preuve comprises : comptage du 26 août 2026.</p>
+    <p class="sy-surtitre">Recrutement</p>
+    <h2>Rejoindre l'équipe</h2>
+    <ol class="ap-histoire-lignes">
+      <li><a href="18-recrutement.html"><span class="ap-histoire-date">Neuilly-sur-Seine</span><span class="ap-histoire-ligne-texte"><b>Candidature spontanée</b><span>Voir la page recrutement</span></span><span class="ap-histoire-fleche"><svg viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a></li>
+    </ol>
   </div>
 </section>
 
-<!-- ═══ FINANCEMENT ET PRESSE ═══ canon : 1,5 M€ en pre-seed, Kima Ventures, La Financière Saint-James, Larry Berger (Amplify). -->
-<section class="section ap-bloc">
-  <div class="conteneur" data-apparait>
-    <figure class="sy-chapitre">
-      <img src="img:classeurs" alt="">
-      <figcaption class="sy-chapitre-texte">
-        <p class="sy-etiquette">À propos de Cleo</p>
-        <h2>1,5 M€ levés en pre-seed, annoncés le 29 avril 2026</h2>
-      </figcaption>
-    </figure>
-    <div class="ap-financement">
-      <ul class="ap-financeurs"><li>Kima Ventures</li><li>La Financière Saint-James</li><li>Larry Berger, fondateur d'Amplify</li></ul>
-      <div class="ap-financement-liens"><p class="ap-note">Lauréate de The Pitch by Deel, à Station F, en 2026.</p><a class="sy-lien" href="https://www.cleolabs.co/fr/blog/cleo-labs-raises-1-5m-preseed" target="_blank" rel="noopener">Lire l'annonce <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-    </div>
-    <h3 class="ap-sous-titre">Cleo dans la presse</h3>
-    <div class="ap-presse">
-      <a class="ap-presse-ligne" href="https://tech.eu/2026/04/29/cleo-labs-secures-eur15m-to-scale-ai-driven-product-compliance-globally/" target="_blank" rel="noopener"><b>Tech.eu</b><span>29 avril 2026</span><svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a class="ap-presse-ligne" href="https://www.eu-startups.com/2026/04/female-founded-french-startup-cleo-labs-raises-e1-5-million-to-automate-international-product-compliance/" target="_blank" rel="noopener"><b>EU-Startups</b><span>avril 2026</span><svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a class="ap-presse-ligne" href="https://www.vestbee.com/insights/articles/cleo-labs-raises-1-5-m" target="_blank" rel="noopener"><b>Vestbee</b><span></span><svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a class="ap-presse-ligne" href="https://fintech.global/2026/04/29/cleo-labs-secures-e1-5m-for-global-product-compliance/" target="_blank" rel="noopener"><b>FinTech Global</b><span>29 avril 2026</span><svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a class="ap-presse-ligne" href="https://regtechanalyst.com/cleo-labs-raises-e1-5m-to-scale-ai-compliance-platform/" target="_blank" rel="noopener"><b>RegTech Analyst</b><span></span><svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a class="ap-presse-ligne" href="https://thelegalwire.ai/cleo-labs-raises-e1-5m-to-automate-product-regulatory-compliance-at-a-global-scale/" target="_blank" rel="noopener"><b>The Legal Wire</b><span></span><svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    </div>
-    <div class="ap-liens"><a class="sy-lien" href="https://www.cleolabs.co/fr/research" target="_blank" rel="noopener">Lire l'article de recherche <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-  </div>
-</section>
-
-<!-- IDENTITE-E 16/09/2026 -->
-<!-- ═══ APPEL FINAL ═══ passe identité du 16/09/2026 (IDENTITE.md 2.4) : photo sombre, titre blanc centré, bouton bleu à
-     chevrons. Titre et phrase repris du bandeau d'avant. Photo « station-f » (grain cuit au build). -->
+<!-- ═══ APPEL FINAL ═══ Daptic « Schedule a demo today ». Titre et phrase repris de l'appel final d'avant (IDENTITE.md 2.4). -->
 <section class="section sy-final-photo" id="contact">
   <figure data-apparait>
-    <img src="img:station-f" alt="">
+    <img src="img:fenetres" alt="">
     <div class="sy-final-texte">
       <h2>Rencontrez l'équipe qui encode les règles de vos produits</h2>
       <p>30 minutes avec l'équipe, sur vos produits</p>

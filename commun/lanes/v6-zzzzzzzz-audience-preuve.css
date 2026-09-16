@@ -180,3 +180,70 @@ body[data-cleo-ds="v6"]:is([data-v6-page="02-entreprise"],[data-v6-page="04-sect
    liens sous le bento, la liste des faits sous le bento du cas client. */
 body[data-cleo-ds="v6"]:is([data-v6-page="02-entreprise"],[data-v6-page="04-secteur"],[data-v6-page="05-marche"],[data-v6-page="06-cas-client"],[data-v6-page="36-solutions"]) .ap-bento .ap-note{margin-top:24px}
 body[data-cleo-ds="v6"][data-v6-page="06-cas-client"] .ap-bento .ap-bento-faits:not(#_):not(#_){margin-top:32px !important}
+
+/* ═══ À PROPOS, HISTOIRE (02) ═══ 16/09/2026, structure de daptic.com/company (scratchpad/agents/refonte/a-propos/). Généré
+   par a-propos/generer.mjs, limité à la page 02. Jetons du système, aucune règle sur .sy-*. */
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] main > section:is(.ap-histoire-recit, .ap-histoire-lieu, .ap-histoire-mission, .ap-histoire-valeurs, .ap-histoire-engagements, .ap-histoire-jalons, .ap-histoire-recrutement):not(#_):not(#_){margin:0 !important;padding:var(--e-section) 0 0 !important}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] main > section.ap-histoire-recrutement:not(#_):not(#_){padding-bottom:var(--e-section) !important}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] main > section.ap-histoire-logos:not(#_):not(#_){padding-top:calc(var(--e-section) / 2) !important}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-deux{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px 64px;align-items:start;padding-top:24px;border-top:1px solid var(--c-filet)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-gauche .sy-surtitre, body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-mission-grille .sy-surtitre{margin:0}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-equipe{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;max-width:420px;margin:40px 0 0;padding:0;list-style:none}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-equipe li{display:grid;gap:4px;align-content:start}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-equipe img{width:100%;aspect-ratio:4 / 5;object-fit:cover;border-radius:var(--r-media);margin-bottom:8px;background:var(--c-fond-2)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-equipe b{font-size:.9375rem;font-weight:500;line-height:1.3;color:var(--c-texte)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-equipe span{font-size:var(--t-legende);line-height:1.35;color:var(--c-texte-2)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-texte p{margin:0 0 24px;max-width:58ch;font-size:var(--t-lead);line-height:1.5;color:var(--c-texte)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-texte p:last-child{margin-bottom:0}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-photo{position:relative;margin:0;border-radius:var(--r-media);overflow:clip;background:var(--c-profond)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-photo > img{display:block;width:100%;height:clamp(22rem, 12rem + 26vw, 36rem);object-fit:cover}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-carte{position:absolute;right:24px;bottom:24px;display:grid;gap:0;min-width:260px;padding:8px 24px;border-radius:var(--r-carte);background:var(--c-carte)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-carte dl{margin:0;padding:14px 0;border-bottom:1px solid var(--c-filet)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-carte dl:last-child{border-bottom:0}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-carte dt{margin:0 0 4px;font-size:var(--t-surtitre);font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--c-texte-2)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-carte dd{margin:0;font-size:1.125rem;font-weight:500;color:var(--c-texte)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-photo figcaption{position:absolute;left:24px;bottom:24px;padding:6px 10px;background:var(--c-carte);font-size:var(--t-legende);color:var(--c-texte)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-mission-grille{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,3fr);gap:24px 64px;padding-top:24px;border-top:1px solid var(--c-filet)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-mission-texte{margin:0;max-width:30ch;font-size:clamp(1.75rem, 1rem + 2vw, 2.75rem);font-weight:500;line-height:1.15;letter-spacing:-.025em;color:var(--c-texte)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-vision{margin:24px 0 0;max-width:52ch;font-size:var(--t-lead);line-height:1.45;color:var(--c-texte-2)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-valeurs h2{margin:0 !important;position:sticky;top:112px}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-valeurs-liste{margin:0;padding:0;list-style:none}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-valeurs-liste li{padding:0 0 40px}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-valeurs-liste li + li{padding-top:40px;border-top:1px solid var(--c-filet)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-valeurs-liste h3{margin:0 0 12px}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-valeurs-liste p{margin:0;max-width:52ch;font-size:var(--t-corps);line-height:1.6;color:var(--c-texte-2)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] main > section.ap-histoire-engagements:not(#_):not(#_){margin-top:var(--e-section) !important;padding-bottom:var(--e-section) !important;background:var(--c-fond-2) !important}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] main > section.ap-histoire-engagements + section:not(#_):not(#_){padding-top:var(--e-section) !important}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-engagements h2, body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-jalons h2, body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-recrutement h2{margin:16px 0 var(--e-titre-contenu) !important}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-cartes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--e-grille);margin:0;padding:0;list-style:none}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-cartes li{display:flex;flex-direction:column;gap:12px;min-height:220px}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-cartes span{font-size:var(--t-legende);font-weight:500;font-variant-numeric:tabular-nums;color:var(--c-accent)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-cartes h3{margin:auto 0 0}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-cartes p{margin:0;max-width:48ch;color:var(--c-texte-2)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-lignes{margin:0;padding:0;list-style:none;border-top:1px solid var(--c-filet)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-lignes li > :is(a, div){display:grid;grid-template-columns:minmax(0,3fr) minmax(0,8fr) 24px;gap:24px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--c-filet);color:inherit;text-decoration:none}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-date{font-size:var(--t-corps);font-weight:500;font-variant-numeric:tabular-nums;color:var(--c-texte-2)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-ligne-texte{display:grid;gap:4px}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-ligne-texte b{font-size:1.1875rem;font-weight:500;line-height:1.3;color:var(--c-texte)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-ligne-texte span{color:var(--c-texte-2)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-fleche{align-self:center;justify-self:end;color:var(--c-texte);transition:translate 200ms var(--m-courbe)}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-lignes a:hover b{text-decoration:underline;text-underline-offset:4px}
+body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-lignes a:hover .ap-histoire-fleche{translate:4px 0}
+@media (max-width:900px){
+  body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-deux, body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-mission-grille{grid-template-columns:minmax(0,1fr);gap:24px}
+  body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-valeurs h2{position:static}
+  body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-cartes{grid-template-columns:minmax(0,1fr)}
+  body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-cartes li{min-height:0}
+  body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-cartes h3{margin-top:8px}
+}
+@media (max-width:600px){
+  body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-equipe{max-width:none}
+  body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-photo > img{height:22rem}
+  body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-carte{position:static;min-width:0;margin:0;border-radius:0}
+  body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-photo figcaption{top:16px;bottom:auto;left:16px}
+  body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-lignes li > :is(a, div){grid-template-columns:minmax(0,1fr) 24px;gap:6px 16px}
+  body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-date{grid-column:1;font-size:var(--t-legende)}
+  body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-ligne-texte{grid-column:1}
+  body[data-cleo-ds="v6"][data-v6-page="02-entreprise"] .ap-histoire-fleche{grid-column:2;grid-row:1 / span 2}
+}
+/* ═══ FIN À PROPOS, HISTOIRE (02) ═══ */

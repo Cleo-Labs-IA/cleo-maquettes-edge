@@ -862,22 +862,6 @@
    "appariement": "English home since 15/09/2026 (replaces 01-accueil-en).",
    "_mesure": "titre 44 caractères, description 70 caractères (hero sentence, verbatim)"
   },
-  "44-service-veille.html": {
-   "titre": "Veille réglementaire et jurisprudentielle | Cleo Labs",
-   "description": "Chaque semaine, les nouvelles règles qui touchent vos produits.",
-   "source": "redige",
-   "url_source": null,
-   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
-   "_mesure": "titre 53 caractères, description 63 caractères"
-  },
-  "44-service-veille-en.html": {
-   "titre": "Regulatory and case law monitoring | Cleo Labs",
-   "description": "Every week, the new rules that affect your products.",
-   "source": "redige",
-   "url_source": null,
-   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
-   "_mesure": "titre 46 caractères, description 52 caractères"
-  },
   "45-service-etiquetage.html": {
    "titre": "Étiquetage et documentation produit | Cleo Labs",
    "description": "Notices, étiquettes, textes d'emballage et allégations pour chaque marché, à partir de 1 200 € par produit.",
@@ -893,102 +877,6 @@
    "url_source": null,
    "appui_contenu": "Fiche du 16/09/2026 sur la structure et le prix de ecocomply.ai/product-documentation-labelling (décision de Naomie, relevé le 16/09/2026).",
    "_mesure": "titre 47 caractères, description 85 caractères"
-  },
-  "46-service-emballage.html": {
-   "titre": "Emballage | Cleo Labs",
-   "description": "Votre emballage vérifié : matériaux, logos de tri, mentions.",
-   "source": "redige",
-   "url_source": null,
-   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
-   "_mesure": "titre 21 caractères, description 60 caractères"
-  },
-  "46-service-emballage-en.html": {
-   "titre": "Packaging | Cleo Labs",
-   "description": "Your packaging checked: materials, sorting logos, mentions.",
-   "source": "redige",
-   "url_source": null,
-   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
-   "_mesure": "titre 21 caractères, description 59 caractères"
-  },
-  "47-service-specifications.html": {
-   "titre": "Spécifications | Cleo Labs",
-   "description": "Les exigences réglementaires traduites en cahier des charges pour votre bureau d'études.",
-   "source": "redige",
-   "url_source": null,
-   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
-   "_mesure": "titre 26 caractères, description 88 caractères"
-  },
-  "47-service-specifications-en.html": {
-   "titre": "Specifications | Cleo Labs",
-   "description": "Regulatory requirements translated into specifications for your design office.",
-   "source": "redige",
-   "url_source": null,
-   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
-   "_mesure": "titre 26 caractères, description 78 caractères"
-  },
-  "48-service-contrats.html": {
-   "titre": "Contrats | Cleo Labs",
-   "description": "Les clauses de conformité de vos contrats fournisseurs et de distribution.",
-   "source": "redige",
-   "url_source": null,
-   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
-   "_mesure": "titre 20 caractères, description 74 caractères"
-  },
-  "48-service-contrats-en.html": {
-   "titre": "Contracts | Cleo Labs",
-   "description": "The compliance clauses of your supplier and distribution contracts.",
-   "source": "redige",
-   "url_source": null,
-   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
-   "_mesure": "titre 21 caractères, description 67 caractères"
-  },
-  "49-service-formalites.html": {
-   "titre": "Formalités administratives | Cleo Labs",
-   "description": "Vos enregistrements et autorisations de mise sur le marché, préparés pour les autorités.",
-   "source": "redige",
-   "url_source": null,
-   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
-   "_mesure": "titre 38 caractères, description 88 caractères"
-  },
-  "49-service-formalites-en.html": {
-   "titre": "Administrative formalities | Cleo Labs",
-   "description": "Your registrations and market authorisations, prepared for the authorities.",
-   "source": "redige",
-   "url_source": null,
-   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
-   "_mesure": "titre 38 caractères, description 75 caractères"
-  },
-  "50-service-recyclage.html": {
-   "titre": "Recyclage des déchets | Cleo Labs",
-   "description": "Votre inscription aux filières de recyclage et vos déclarations.",
-   "source": "redige",
-   "url_source": null,
-   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
-   "_mesure": "titre 33 caractères, description 64 caractères"
-  },
-  "50-service-recyclage-en.html": {
-   "titre": "Waste recycling | Cleo Labs",
-   "description": "Your registration with recycling schemes and your declarations.",
-   "source": "redige",
-   "url_source": null,
-   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
-   "_mesure": "titre 27 caractères, description 63 caractères"
-  },
-  "38-service.html": {
-   "titre": "Déclaration de conformité | Cleo Labs",
-   "description": "L'agent la reprend sur les textes en vigueur, un expert conformité la relit et la valide.",
-   "source": "redige",
-   "url_source": null,
-   "appui_contenu": "15/09/2026 : description = phrase sous le titre de la page, reprise telle quelle (titre de la page : « Mettre à jour une déclaration de conformité. Un prix, un délai, un expert. »).",
-   "_mesure": "titre 37 caractères, description 89 caractères"
-  },
-  "38-service-en.html": {
-   "titre": "Declaration of conformity | Cleo Labs",
-   "description": "The agent rebuilds it on the texts in force, and a compliance expert reviews and validates it.",
-   "source": "redige",
-   "url_source": null,
-   "appui_contenu": "15/09/2026 : description = phrase sous le titre de la page, reprise telle quelle (titre de la page : « Update a declaration of conformity. One price, one lead time, one expert. »).",
-   "_mesure": "titre 37 caractères, description 94 caractères"
   },
   "39-data.html": {
    "titre": "Data : donnée réglementaire produit, API et MCP | Cleo Labs",
