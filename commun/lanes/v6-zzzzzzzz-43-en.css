@@ -58,7 +58,11 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-flottante{position:absolute;z-index:1;display:grid;gap:4px;padding:14px 16px;border-radius:var(--r-carte);background:var(--c-carte);box-shadow:var(--o-flottante)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-flottante b{font-size:15px;font-weight:500;line-height:1.3;color:var(--c-texte)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-flottante span{font-size:var(--t-legende);line-height:1.4;color:var(--c-texte-2)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-rejet{top:24px;left:24px}
+/* 16/09/2026 : la carte « Directive basse tension, ne s'applique pas » est remplacée par une carte par étape, au positif
+   (Naomie). Sans animation liée au défilement (téléphone, réduire les animations, navigateur sans support), seule la
+   première reste : les quatre cartes occupent la même place. */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-fait{top:24px;left:24px}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-fait:not([data-etape="1"]){display:none}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-pret{right:24px;bottom:24px;grid-template-columns:auto auto;align-items:center;gap:16px}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-points{display:flex;gap:6px}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-points i{display:block;width:8px;height:8px;border-radius:50%;background:var(--c-accent)}
@@ -71,7 +75,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-image{height:auto;min-height:0;aspect-ratio:4/5}
 }
 @media (max-width:600px){
-  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-rejet{top:16px;left:16px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-fait{top:16px;left:16px}
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-pret{right:16px;bottom:16px}
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-flottante{padding:12px 14px}
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-etapes li{padding:16px 0}
@@ -87,11 +91,15 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-etapes li:nth-child(3){animation-range:contain 36% contain 48%}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-etapes li:nth-child(4){animation-range:contain 54% contain 66%}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-etapes li:nth-child(5){animation-range:contain 72% contain 84%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-rejet{animation:acRejet linear both;animation-timeline:--ac-recit;animation-range:contain 4% contain 52%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-pret{animation:acPret linear both;animation-timeline:--ac-recit;animation-range:contain 84% contain 96%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-fait[data-etape]{display:grid;animation:acFait linear both;animation-timeline:--ac-recit}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-fait[data-etape="1"]{animation-range:contain 0% contain 22%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-fait[data-etape="2"]{animation-range:contain 18% contain 40%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-fait[data-etape="3"]{animation-range:contain 36% contain 58%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-fait[data-etape="4"]{animation-range:contain 54% contain 76%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-pret{animation:acPret linear both;animation-timeline:--ac-recit;animation-range:contain 64% contain 74%}
     @keyframes acZoom{from{scale:1.08}to{scale:1}}
     @keyframes acEtape{from{color:var(--c-texte-3)}to{color:var(--c-texte)}}
-    @keyframes acRejet{0%{opacity:0;translate:0 6px}20%{opacity:1;translate:0 0}75%{opacity:1;translate:0 0}100%{opacity:0;translate:0 0}}
+    @keyframes acFait{0%{opacity:0;translate:0 6px}18%{opacity:1;translate:0 0}82%{opacity:1;translate:0 0}100%{opacity:0;translate:0 0}}
     @keyframes acPret{from{opacity:0;translate:0 6px}to{opacity:1;translate:0 0}}
   }
 }
