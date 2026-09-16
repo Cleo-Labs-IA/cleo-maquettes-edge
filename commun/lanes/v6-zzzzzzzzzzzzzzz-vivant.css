@@ -102,3 +102,16 @@ body[data-cleo-ds="v6"] main :is(.sy-final-photo, .sy-bande-photo) > figure:not(
 /* Noms de villes du globe de l'accueil : blancs, illisibles quand l'étiquette déborde du globe sur le fond chaud (contrôle
    de contraste du 16/09/2026 : 1,08). Un halo bleu nuit les garde lisibles sur le globe comme à côté. */
 body[data-cleo-ds="v6"] main .gp-nom:not(#_):not(#_):not(#_){text-shadow:0 0 2px rgba(8,9,59,.9), 0 0 8px rgba(8,9,59,.75)}
+
+/* ═══ LOGOS CLIENTS PLUS GRANDS ═══ 16/09/2026, Naomie : « mets les logos client un peu plus gros quand même ».
+   Mesuré avant : 22 px de haut sur l'accueil, 24 px sur les pages audience et preuve, et les emblèmes carrés (Mercedes,
+   Electrolux) à 30 px de large seulement. Hauteur 38 px au bureau, 28 px au téléphone ; les logos en longueur sont plafonnés
+   en largeur pour garder un poids égal ; les emblèmes carrés montent à 56 px (40 au téléphone) pour peser autant qu'un mot. */
+body[data-cleo-ds="v6"] main :is(.ac-logos-imgs, .ap-logos-imgs) img[data-img^="logo-"]:not(#_):not(#_):not(#_){height:38px !important;width:auto !important;max-width:200px !important;object-fit:contain}
+body[data-cleo-ds="v6"] main :is(.ac-logos-imgs, .ap-logos-imgs) img:is([data-img="logo-mercedes"], [data-img="logo-electrolux"]):not(#_):not(#_):not(#_){height:56px !important;max-width:none !important}
+body[data-cleo-ds="v6"] main :is(.ac-logos-imgs, .ap-logos-imgs):not(#_):not(#_):not(#_){gap:28px 56px !important;align-items:center}
+@media (max-width:600px){
+  body[data-cleo-ds="v6"] main :is(.ac-logos-imgs, .ap-logos-imgs) img[data-img^="logo-"]:not(#_):not(#_):not(#_){height:28px !important;max-width:140px !important}
+  body[data-cleo-ds="v6"] main :is(.ac-logos-imgs, .ap-logos-imgs) img:is([data-img="logo-mercedes"], [data-img="logo-electrolux"]):not(#_):not(#_):not(#_){height:40px !important}
+  body[data-cleo-ds="v6"] main :is(.ac-logos-imgs, .ap-logos-imgs):not(#_):not(#_):not(#_){gap:20px 32px !important}
+}

@@ -18,7 +18,7 @@ body[data-cleo-ds="v6"] .nav .mega-plein .mega-item:not(#_):hover .mega-icone{ba
 
 /* Menu « Service » (15/09/2026, une page par prestation) : deux colonnes par famille, sur le modèle du menu Data.
    Vu au rendu : sans cette règle, la grille du menu Data (liste | carte de 400 px) écartait la seconde colonne. */
-body[data-cleo-ds="v6"] .nav .nav-item-service{position:static}
+body[data-cleo-ds="v6"] .nav :is(.nav-item-service, .nav-item-ressources){position:static}
 body[data-cleo-ds="v6"] .nav .mega-plein-grille.mega-deux:not(#_){grid-template-columns:repeat(2,minmax(0,560px));justify-content:start;gap:24px 72px}
 body[data-cleo-ds="v6"] .nav .mega-deux .mega-plein-liste{max-width:none}
 body[data-cleo-ds="v6"] .nav .mega-famille{margin:0 0 6px 0;font-size:.75rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--c-texte-2)}
