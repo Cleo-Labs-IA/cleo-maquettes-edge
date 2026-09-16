@@ -36,7 +36,7 @@ const PAGES = [
   { fichier: '39-data.html',        titre: 'Data',        source: 'maquette trois entrées, 14/09/2026' },
   { fichier: '40-enterprise.html',  titre: 'Enterprise',  source: 'maquette trois entrées, 14/09/2026' },
   { fichier: '41-accueil-resultat.html', titre: 'Accueil, angle résultat', source: 'maquette angle résultat, 14/09/2026' },
-  { fichier: '43-accueil-avant-vendre.html', titre: 'Accueil, avant de vendre', source: 'maquette avant de vendre, 14/09/2026', pied: 'commun/pied-avant-vendre.html' },
+  { fichier: '43-accueil-avant-vendre.html', titre: 'Accueil, avant de vendre', source: 'maquette avant de vendre, 14/09/2026' },
   { fichier: '38-service-en.html', titre: 'Service page EN', source: 'pages/38-service.html', en: true },
   { fichier: '44-service-veille.html', titre: 'Fiche Veille réglementaire et jurisprudentielle', source: 'pages/38-service.html (gabarit), 15/09/2026' },
   { fichier: '44-service-veille-en.html', titre: 'Service page Regulatory and case law monitoring EN', source: 'pages/38-service-en.html (template)', en: true },
@@ -56,7 +56,7 @@ const PAGES = [
   { fichier: '51-service-mandataire-en.html', titre: 'Service page EU authorised representative EN', source: 'ecocomply.ai/eu-authorised-representative (structure)', en: true },
   { fichier: '39-data-en.html', titre: 'Data EN', source: 'pages/39-data.html', en: true },
   { fichier: '40-enterprise-en.html', titre: 'Enterprise EN', source: 'pages/40-enterprise.html', en: true },
-  { fichier: '43-accueil-avant-vendre-en.html', titre: 'Home, before you sell EN', source: 'pages/43-accueil-avant-vendre.html', en: true, pied: 'commun/pied-avant-vendre-en.html' },
+  { fichier: '43-accueil-avant-vendre-en.html', titre: 'Home, before you sell EN', source: 'pages/43-accueil-avant-vendre.html', en: true },
   { fichier: '09-texte.html',       titre: 'Un texte',    source: 'edgecomply.com/topics/reach-regulation-compliance' },
   { fichier: '10-ressources.html',  titre: 'Ressources',  source: 'edgecomply.com/library' },
   { fichier: '11-blog.html',        titre: 'Publications',source: 'edgecomply.com/library/blog' },
@@ -273,7 +273,10 @@ fs.mkdirSync(DOSSIER_IMAGES, { recursive: true })
    Un filtre SVG posé en CSS faisait planter WebKit (Safari) sur la page Service ; la trame est donc appliquée ici, une
    fois : point blanc de 1,55 px sur bleu nuit #15162E, tuile de 4 px, multipliée sur la photo éclaircie. Restent nets
    les logos, le logo Cleo, les objets détourés du globe, les captures d'interface, les avatars et les petits ronds. */
-const GRAIN_EXCLUS = /^(logo-|cleo-logo$|globe-|produit-|veille-produit$|rond-|anaelle$|naomie$|alex$|darcial$|thezi$)/
+/* 16/09/2026, refonte (agent F1) : le portrait de la citation Decathlon (36 à 64 px affichés) recevait la trame et devenait
+   illisible. Mesuré sur toutes les pages (scratchpad/agents/refonte/systeme/tailles-images.mjs) : seuls les logos, le logo
+   Cleo et philippine s'affichent sous 120 px ; les portraits anaelle, naomie et alex étaient déjà exclus. */
+const GRAIN_EXCLUS = /^(logo-|cleo-logo$|globe-|produit-|veille-produit$|rond-|anaelle$|naomie$|alex$|darcial$|thezi$|philippine$)/
 let tuileGrainCache = null
 async function tuileGrain() {
   if (!tuileGrainCache) tuileGrainCache = await sharp(Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="4" height="4" fill="#15162E"/><circle cx="2" cy="2" r="1.55" fill="#FFFFFF"/></svg>')).png().toBuffer()

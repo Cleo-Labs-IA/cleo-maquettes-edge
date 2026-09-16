@@ -284,8 +284,11 @@ body[data-cleo-ds="v6"] .comparatif td,
 body[data-cleo-ds="v6"] .matrice td,
 body[data-cleo-ds="v6"] .tab-donnees td{color:var(--cleo-v6-ink-2); border-color:var(--cleo-v6-border)}
 
-/* Un seul grand champ profond : la premiere section directe de main. */
-body[data-cleo-ds="v6"] main > section:first-child{
+/* Un seul grand champ profond : la premiere section directe de main.
+   16/09/2026 : le grand champ profond du gabarit V6 est limité aux pages d'archive (ancien accueil, composants). Sur les
+   pages en ligne, il rendait blancs le h1 et les surtitres du premier chapitre (vu sur 37, les fiches Service et 04 au
+   téléphone) alors que le système Cleo pose ce chapitre sur fond clair. */
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child{
   position:relative;
   isolation:isolate;
   width:min(var(--cleo-v6-page), calc(100% - (var(--cleo-v6-gutter) * 2)));
@@ -300,7 +303,7 @@ body[data-cleo-ds="v6"] main > section:first-child{
   box-shadow:var(--cleo-v6-shadow-hero);
 }
 
-body[data-cleo-ds="v6"] main > section:first-child::after{
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child::after{
   content:"";
   position:absolute;
   z-index:-1;
@@ -314,60 +317,60 @@ body[data-cleo-ds="v6"] main > section:first-child::after{
   box-shadow:0 0 0 96px rgba(255,255,255,.016), 0 0 0 192px rgba(255,255,255,.010);
 }
 
-body[data-cleo-ds="v6"] main > section:first-child .t-hero,
-body[data-cleo-ds="v6"] main > section:first-child .t-titre-page,
-body[data-cleo-ds="v6"] main > section:first-child .t-display,
-body[data-cleo-ds="v6"] main > section:first-child .t-h1,
-body[data-cleo-ds="v6"] main > section:first-child .t-h2,
-body[data-cleo-ds="v6"] main > section:first-child .t-h3,
-body[data-cleo-ds="v6"] main > section:first-child .t-h4{color:var(--cleo-v6-white)}
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .t-hero,
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .t-titre-page,
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .t-display,
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .t-h1,
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .t-h2,
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .t-h3,
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .t-h4{color:var(--cleo-v6-white)}
 
-body[data-cleo-ds="v6"] main > section:first-child .t-body,
-body[data-cleo-ds="v6"] main > section:first-child .t-body-lg,
-body[data-cleo-ds="v6"] main > section:first-child .t-lead,
-body[data-cleo-ds="v6"] main > section:first-child .t-sm{color:var(--cleo-v6-on-dark-2)}
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .t-body,
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .t-body-lg,
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .t-lead,
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .t-sm{color:var(--cleo-v6-on-dark-2)}
 
-body[data-cleo-ds="v6"] main > section:first-child .t-caption,
-body[data-cleo-ds="v6"] main > section:first-child .t-micro,
-body[data-cleo-ds="v6"] main > section:first-child .t-label,
-body[data-cleo-ds="v6"] main > section:first-child .surtitre,
-body[data-cleo-ds="v6"] main > section:first-child .attenue{color:var(--cleo-v6-on-dark-3)}
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .t-caption,
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .t-micro,
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .t-label,
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .surtitre,
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .attenue{color:var(--cleo-v6-on-dark-3)}
 
-body[data-cleo-ds="v6"] main > section:first-child .btn-primaire,
-body[data-cleo-ds="v6"] main > section:first-child .btn-marque,
-body[data-cleo-ds="v6"] main > section:first-child .btn-bleu{
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .btn-primaire,
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .btn-marque,
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .btn-bleu{
   color:var(--cleo-v6-white);
   background:var(--cleo-v6-signal);
   box-shadow:0 12px 28px rgba(77,87,255,.28);
 }
 
-body[data-cleo-ds="v6"] main > section:first-child .btn-contour,
-body[data-cleo-ds="v6"] main > section:first-child .btn-clair{color:var(--cleo-v6-white); background:rgba(255,255,255,.075); border-color:var(--cleo-v6-border-dark)}
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .btn-contour,
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .btn-clair{color:var(--cleo-v6-white); background:rgba(255,255,255,.075); border-color:var(--cleo-v6-border-dark)}
 
-body[data-cleo-ds="v6"] main > section:first-child .carte,
-body[data-cleo-ds="v6"] main > section:first-child .carte-claire,
-body[data-cleo-ds="v6"] main > section:first-child .carte-encre,
-body[data-cleo-ds="v6"] main > section:first-child .form-carte,
-body[data-cleo-ds="v6"] main > section:first-child .ecran-app,
-body[data-cleo-ds="v6"] main > section:first-child .fiche{color:var(--cleo-v6-ink); background:var(--cleo-v6-surface-raised); border-color:var(--cleo-v6-border)}
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .carte,
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .carte-claire,
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .carte-encre,
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .form-carte,
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .ecran-app,
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .fiche{color:var(--cleo-v6-ink); background:var(--cleo-v6-surface-raised); border-color:var(--cleo-v6-border)}
 
-body[data-cleo-ds="v6"] main > section:first-child .carte :is(.t-hero,.t-titre-page,.t-display,.t-h1,.t-h2,.t-h3,.t-h4),
-body[data-cleo-ds="v6"] main > section:first-child .carte-claire :is(.t-hero,.t-titre-page,.t-display,.t-h1,.t-h2,.t-h3,.t-h4),
-body[data-cleo-ds="v6"] main > section:first-child .carte-encre :is(.t-hero,.t-titre-page,.t-display,.t-h1,.t-h2,.t-h3,.t-h4),
-body[data-cleo-ds="v6"] main > section:first-child .form-carte :is(.t-hero,.t-titre-page,.t-display,.t-h1,.t-h2,.t-h3,.t-h4),
-body[data-cleo-ds="v6"] main > section:first-child .ecran-app :is(.t-hero,.t-titre-page,.t-display,.t-h1,.t-h2,.t-h3,.t-h4){color:var(--cleo-v6-ink)}
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .carte :is(.t-hero,.t-titre-page,.t-display,.t-h1,.t-h2,.t-h3,.t-h4),
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .carte-claire :is(.t-hero,.t-titre-page,.t-display,.t-h1,.t-h2,.t-h3,.t-h4),
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .carte-encre :is(.t-hero,.t-titre-page,.t-display,.t-h1,.t-h2,.t-h3,.t-h4),
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .form-carte :is(.t-hero,.t-titre-page,.t-display,.t-h1,.t-h2,.t-h3,.t-h4),
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .ecran-app :is(.t-hero,.t-titre-page,.t-display,.t-h1,.t-h2,.t-h3,.t-h4){color:var(--cleo-v6-ink)}
 
-body[data-cleo-ds="v6"] main > section:first-child .carte :is(.t-body,.t-body-lg,.t-lead,.t-sm),
-body[data-cleo-ds="v6"] main > section:first-child .carte-claire :is(.t-body,.t-body-lg,.t-lead,.t-sm),
-body[data-cleo-ds="v6"] main > section:first-child .carte-encre :is(.t-body,.t-body-lg,.t-lead,.t-sm),
-body[data-cleo-ds="v6"] main > section:first-child .form-carte :is(.t-body,.t-body-lg,.t-lead,.t-sm),
-body[data-cleo-ds="v6"] main > section:first-child .ecran-app :is(.t-body,.t-body-lg,.t-lead,.t-sm){color:var(--cleo-v6-ink-2)}
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .carte :is(.t-body,.t-body-lg,.t-lead,.t-sm),
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .carte-claire :is(.t-body,.t-body-lg,.t-lead,.t-sm),
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .carte-encre :is(.t-body,.t-body-lg,.t-lead,.t-sm),
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .form-carte :is(.t-body,.t-body-lg,.t-lead,.t-sm),
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .ecran-app :is(.t-body,.t-body-lg,.t-lead,.t-sm){color:var(--cleo-v6-ink-2)}
 
-body[data-cleo-ds="v6"] main > section:first-child .carte :is(.t-caption,.t-micro,.t-label,.surtitre,.attenue),
-body[data-cleo-ds="v6"] main > section:first-child .carte-claire :is(.t-caption,.t-micro,.t-label,.surtitre,.attenue),
-body[data-cleo-ds="v6"] main > section:first-child .carte-encre :is(.t-caption,.t-micro,.t-label,.surtitre,.attenue),
-body[data-cleo-ds="v6"] main > section:first-child .form-carte :is(.t-caption,.t-micro,.t-label,.surtitre,.attenue),
-body[data-cleo-ds="v6"] main > section:first-child .ecran-app :is(.t-caption,.t-micro,.t-label,.surtitre,.attenue){color:var(--cleo-v6-ink-3)}
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .carte :is(.t-caption,.t-micro,.t-label,.surtitre,.attenue),
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .carte-claire :is(.t-caption,.t-micro,.t-label,.surtitre,.attenue),
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .carte-encre :is(.t-caption,.t-micro,.t-label,.surtitre,.attenue),
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .form-carte :is(.t-caption,.t-micro,.t-label,.surtitre,.attenue),
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .ecran-app :is(.t-caption,.t-micro,.t-label,.surtitre,.attenue){color:var(--cleo-v6-ink-3)}
 
 /* Une surface explicitement sombre conserve toujours son encre claire, meme
    lorsqu'elle vit dans un chapitre clair remappe par V6. */
@@ -376,8 +379,8 @@ body[data-cleo-ds="v6"] .surface-sombre :is(.t-hero,.t-titre-page,.t-display,.t-
 body[data-cleo-ds="v6"] .surface-sombre :is(.t-body,.t-body-lg,.t-lead,.t-sm,li){color:var(--cleo-v6-on-dark-2)}
 body[data-cleo-ds="v6"] .surface-sombre :is(.t-caption,.t-micro,.t-label,.surtitre,.attenue){color:var(--cleo-v6-on-dark-3)}
 
-body[data-cleo-ds="v6"] main > section:first-child .champ-demo input{color:var(--cleo-v6-white); background:transparent; border-color:transparent}
-body[data-cleo-ds="v6"] main > section:first-child .champ-demo input::placeholder{color:rgba(255,255,255,.56)}
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .champ-demo input{color:var(--cleo-v6-white); background:transparent; border-color:transparent}
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child .champ-demo input::placeholder{color:rgba(255,255,255,.56)}
 
 /* Toute ancienne bande sombre ulterieure redevient un chapitre pale. */
 body[data-cleo-ds="v6"] main > section:not(:first-child).sur-sombre{
@@ -479,8 +482,8 @@ body[data-cleo-ds="v6"] .lien-evitement:focus,
 body[data-cleo-ds="v6"] .skip-link:focus{top:12px; left:16px}
 
 body[data-cleo-ds="v6"] :focus-visible{outline:2px solid var(--cleo-v6-blue); outline-offset:3px}
-body[data-cleo-ds="v6"] main > section:first-child :focus-visible{outline-color:var(--cleo-v6-white)}
-body[data-cleo-ds="v6"] main > section:first-child :is(.carte,.carte-claire,.form-carte,.ecran-app) :focus-visible{outline-color:var(--cleo-v6-blue)}
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child :focus-visible{outline-color:var(--cleo-v6-white)}
+body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child :is(.carte,.carte-claire,.form-carte,.ecran-app) :focus-visible{outline-color:var(--cleo-v6-blue)}
 
 @media (max-width:1024px){
   body[data-cleo-ds="v6"] .section{padding:84px 0}
@@ -513,7 +516,7 @@ body[data-cleo-ds="v6"] main > section:first-child :is(.carte,.carte-claire,.for
   body[data-cleo-ds="v6"]{--cleo-v6-gutter: 14px}
   body[data-cleo-ds="v6"] .section{padding:68px 0}
   body[data-cleo-ds="v6"] .section-serree{padding:54px 0}
-  body[data-cleo-ds="v6"] main > section:first-child{width:calc(100% - 24px); margin-top:12px; border-radius:20px}
+  body[data-cleo-ds="v6"]:is([data-v6-page^="01-accueil"],[data-v6-page="41-accueil-resultat"],[data-v6-page="00-composants"]) main > section:first-child{width:calc(100% - 24px); margin-top:12px; border-radius:20px}
   body[data-cleo-ds="v6"] .t-hero,
   body[data-cleo-ds="v6"] .t-hero.t-hero-gras{font-size:clamp(2.5rem,11vw,3rem)}
   body[data-cleo-ds="v6"] .t-titre-page{font-size:2.375rem}

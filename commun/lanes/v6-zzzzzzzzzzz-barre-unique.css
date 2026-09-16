@@ -1,18 +1,26 @@
 /* ═══ UNE SEULE BARRE, PARTOUT ═══ 15/09/2026. Naomie : « la nav bar n'est pas pareille partout ».
-   Audit des 56 pages au navigateur (1440 et 390 px) le même jour : deux largeurs de barre (1404 px à 18 px du bord sur
-   les pages restées au gabarit V6, 1440 px sur les pages reprises, où chaque feuille de page posait sa propre règle),
-   donc un logo et des liens décalés de 18 px d'une page à l'autre ; le filet bas absent sur la page 41 ; le sélecteur
-   de langue présent sur 26 pages seulement (réglé dans construire.mjs). Cette feuille, chargée en dernier, pose la
-   barre une fois pour toutes ; :not(#_) passe devant les règles de page. */
-body[data-cleo-ds="v6"] .nav:not(#_){background:#FFFFFF !important;border-bottom:1px solid rgba(26,26,26,.08) !important}
-body[data-cleo-ds="v6"] .nav .conteneur:not(#_){width:auto !important;max-width:none !important;margin-left:0 !important;margin-right:0 !important}
+   Refonte du même jour (SYSTEME.md §3, « Barre ») : 64 px, fond blanc, sans filet bas (un filet apparaît une fois la
+   page défilée, v6-zzzzzzzzzz-mouvement-moderne.css), liens en 13 px / 500 / capitales / +0,04 em, et la barre suit
+   --l-conteneur : le bord gauche du logo est le bord gauche du contenu sur toutes les pages (mesuré avant : logo à
+   x = 42, contenus à x = 18, 20, 40, 60 ou 80). Le bouton « Voir une démo » prend le gabarit du bouton principal
+   (v6-zzzzzzzzzzzzz-systeme.css). :not(#_) passe devant les règles de page. */
+body[data-cleo-ds="v6"] .nav:not(#_){background:#FFFFFF !important;border-bottom:0 !important;box-shadow:none;-webkit-backdrop-filter:none !important;backdrop-filter:none !important}
+body[data-cleo-ds="v6"] .nav > .conteneur:not(#_){box-sizing:border-box;width:var(--l-conteneur) !important;max-width:none !important;height:64px !important;margin-left:auto !important;margin-right:auto !important;padding-left:0 !important;padding-right:0 !important}
+body[data-cleo-ds="v6"] .nav :is(.nav-declencheur,.lien-secondaire):not(#_){font-size:.8125rem !important;font-weight:500 !important;letter-spacing:.04em !important;text-transform:uppercase !important;color:var(--c-texte)}
+body[data-cleo-ds="v6"] .nav :is(.nav-declencheur,.lien-secondaire):not(#_):hover{color:var(--c-accent)}
+body[data-cleo-ds="v6"] .nav .btn-marque::after{content:none !important}
+
+/* Les méga-menus pleine largeur alignent leur contenu sur le conteneur. */
+body[data-cleo-ds="v6"] .nav .mega-plein-grille:not(#_){padding-left:max(var(--l-marge), (100vw - 1200px) / 2) !important;padding-right:max(var(--l-marge), (100vw - 1200px) / 2) !important}
+body[data-cleo-ds="v6"] .nav .mega-plein .mega-item:not(#_){margin-left:-12px;border-radius:var(--r-petit)}
+body[data-cleo-ds="v6"] .nav .mega-plein .mega-item:not(#_):hover .mega-icone{background:var(--c-fond-2);color:var(--c-accent)}
 
 /* Menu « Service » (15/09/2026, une page par prestation) : deux colonnes par famille, sur le modèle du menu Data.
    Vu au rendu : sans cette règle, la grille du menu Data (liste | carte de 400 px) écartait la seconde colonne. */
 body[data-cleo-ds="v6"] .nav .nav-item-service{position:static}
 body[data-cleo-ds="v6"] .nav .mega-plein-grille.mega-deux:not(#_){grid-template-columns:repeat(2,minmax(0,560px));justify-content:start;gap:24px 72px}
 body[data-cleo-ds="v6"] .nav .mega-deux .mega-plein-liste{max-width:none}
-body[data-cleo-ds="v6"] .nav .mega-famille{margin:0 0 6px 14px;font-size:.75rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:#757575}
+body[data-cleo-ds="v6"] .nav .mega-famille{margin:0 0 6px 0;font-size:.75rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--c-texte-2)}
 @media (max-width:1180px){
   body[data-cleo-ds="v6"] .nav .mega-plein-grille.mega-deux:not(#_){grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 32px}
 }

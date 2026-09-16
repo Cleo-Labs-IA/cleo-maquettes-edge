@@ -5,30 +5,29 @@
    interlettrage : elle apporte la crème, les photos en trame d'impression, les catégories en grands mots bleus et le
    bloc sombre à onglets. Chargée en dernier ; la supprimer rend l'état précédent. */
 
-body[data-cleo-ds="v6"]{--b-bleu:#0008CF;--b-creme:#FDF6CF;--b-noir:#121212}
+body[data-cleo-ds="v6"]{--b-bleu:var(--c-accent, #0008CF);--b-creme:var(--c-fond-2, #F9F8F6);--b-noir:var(--c-profond, #08093B)}
 
 /* ─── Crème Tenkara ─── */
 body[data-cleo-ds="v6"] .tk-creme{background:var(--b-creme)}
 
 /* ─── Photos en trame d'impression (portraits, logos et témoignages exclus) ─── */
-body[data-cleo-ds="v6"] main :is(.av-carte-image, .av-profil-image, .av-recit-image, .fx-produit, .tk-onglets-vue){background:#15162E}
-body[data-cleo-ds="v6"] main :is(.av-carte-image, .av-profil-image, .av-recit-image, .fx-produit, .tk-onglets-vue) > img,
-body[data-cleo-ds="v6"] main .av-livrable-photo{-webkit-mask-image:radial-gradient(circle closest-side, #000 74%, transparent 100%);mask-image:radial-gradient(circle closest-side, #000 74%, transparent 100%);-webkit-mask-size:4px 4px;mask-size:4px 4px;filter:contrast(1.12) brightness(1.1)}
+body[data-cleo-ds="v6"] main :is(.av-carte-image, .av-profil-image, .av-recit-image, .fx-produit, .tk-onglets-vue){background:var(--c-fond-2, #F9F8F6)}
+/* Trame en masque retirée à la refonte du 15/09 : le grain est cuit dans les photos au build. */
 
-/* ─── Les catégories : grands mots bleus qui défilent ─── */
-body[data-cleo-ds="v6"] main .av-defile li{padding:0 20px;border:0 !important;background:transparent !important;font-size:clamp(1.5rem, .9rem + 1.8vw, 2.5rem) !important;font-weight:500;line-height:1.15;letter-spacing:-.025em;text-transform:none;color:var(--b-bleu) !important}
+/* ─── Les catégories : grands mots qui défilent (en encre depuis la refonte du 15/09 : le bleu est réservé à l'action) ─── */
+body[data-cleo-ds="v6"] main .av-defile li{padding:0 20px;border:0 !important;background:transparent !important;font-size:clamp(1.5rem, .9rem + 1.8vw, 2.5rem) !important;font-weight:500;line-height:1.15;letter-spacing:-.025em;text-transform:none;color:var(--c-texte, #1A1A1A) !important}
 body[data-cleo-ds="v6"] main .av-defile-rangs{gap:6px}
 
 /* ═══ ONGLETS « POUR QUI » ═══ second exemple Tenkara : bloc sombre, trois onglets, la photo tramée et son encart.
    Sans script : trois boutons radio, le premier coché ; clavier et lecteurs d'écran s'en servent comme d'un groupe. */
-body[data-cleo-ds="v6"] .tk-onglets{position:relative;padding:38px;border-radius:4px;background:var(--b-noir);color:#FFFFFF}
+body[data-cleo-ds="v6"] .tk-onglets{position:relative;padding:38px;border-radius:var(--r-carte, 12px);background:var(--b-noir);color:#FFFFFF}
 body[data-cleo-ds="v6"] .tk-onglets > input{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap;pointer-events:none}
 body[data-cleo-ds="v6"] .tk-onglets-tetes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;margin-bottom:30px}
 body[data-cleo-ds="v6"] .tk-onglets-tetes label{display:block;cursor:pointer;color:rgba(255,255,255,.36);transition:color .35s ease}
 body[data-cleo-ds="v6"] .tk-onglets-tetes label:hover{color:rgba(255,255,255,.7)}
 body[data-cleo-ds="v6"] .tk-onglets-tetes b{display:block;font-size:clamp(1.375rem, 1rem + 1vw, 1.875rem);font-weight:500;letter-spacing:-.02em;line-height:1.15}
 body[data-cleo-ds="v6"] .tk-onglets-tetes span{display:block;margin-top:10px;font-size:1rem;line-height:1.45}
-body[data-cleo-ds="v6"] .tk-onglets-scene{position:relative;height:clamp(380px, 38vw, 540px);border-radius:2px;overflow:clip;background:#15162E}
+body[data-cleo-ds="v6"] .tk-onglets-scene{position:relative;height:clamp(380px, 38vw, 540px);border-radius:2px;overflow:clip;background:var(--c-profond, #08093B)}
 body[data-cleo-ds="v6"] .tk-onglets-vue{position:absolute;inset:0;margin:0;opacity:0;visibility:hidden;transition:opacity .6s ease, visibility .6s}
 body[data-cleo-ds="v6"] .tk-onglets-vue > img{display:block;width:100%;height:100%;object-fit:cover;scale:1.06;transition:scale 1.4s cubic-bezier(.22,1,.36,1)}
 body[data-cleo-ds="v6"] .tk-onglets-boite{position:absolute;left:14%;top:50%;translate:0 -50%;max-width:min(640px, 72%);padding:28px 32px;background:rgba(18,18,18,.66);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}

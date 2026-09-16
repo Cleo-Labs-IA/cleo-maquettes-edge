@@ -1,12 +1,12 @@
 <!--NAV-->
 
-<!-- ═══ FICHE « MANDATAIRE DANS L'UE » ═══ 15/09/2026, Naomie : « pour le service reprends exactement leur use case,
-     pareil » (ecocomply.ai/eu-authorised-representative). Sections dans l'ordre de leur page : haut avec la carte « ce qui
-     est inclus », en bref, base légale, tableau des rôles, pourquoi, comment, tout ce qui est compris, textes couverts,
-     comparatif, questions, pour aller plus loin, appel final. Leur témoignage est omis : aucun témoignage sourcé pour ce
-     service. Aucun prix : « Tarif à arrêter » (en réunion le 14/09, un prix a été proposé, rien n'est arrêté).
-     Rappel : la déclaration UE de conformité est signée par le fabricant ou son mandataire ; l'expert Cleo la relit et la
-     valide. Générée par scratchpad/agents/mandataire-ue/generer.mjs. -->
+<!-- ═══ FICHE « MANDATAIRE DANS L'UE » ═══ 15/09/2026, Naomie : « pour le service reprends exactement leur use case, pareil »
+     (ecocomply.ai/eu-authorised-representative). Ordre de leur page gardé : haut avec « ce qui est inclus », en bref, base
+     légale, rôles, pourquoi, comment, ce que comprend la prestation, textes, ce que Cleo ajoute, questions, pour aller plus
+     loin, appel final. Refonte du 15/09/2026 (SYSTEME.md) : un objet par chapitre, listes à filets au lieu de cartes et de
+     coches, plus de comparaison « une adresse seule », moins de 800 mots. Générateur agents/mandataire-ue/generer.mjs
+     périmé depuis la refonte : la page s'édite ici. Rappel : la déclaration UE de conformité est signée par le fabricant
+     ou son mandataire ; l'expert Cleo la relit et la valide. -->
 <!-- faits, vérifiés le 15/09/2026 sur les textes publiés (EUR-Lex), copies dans scratchpad/agents/mandataire-ue/textes :
      Règlement (UE) 2023/988 : art. 3, point 9 (définition du mandataire ; attention, la page 14-terme l'attribue au point 12,
      qui est la définition du règlement (UE) 2019/1020) ; art. 16, § 1 (opérateur économique établi dans l'Union responsable
@@ -32,216 +32,201 @@
      « enregistrement officiel » (aucun registre des mandataires dans ces textes), bandeau de saisies et d'interdictions,
      « responsabilité du fait des produits : non » pour le mandataire (faux pour la directive 2024/2853), témoignage (aucun
      témoignage sourcé pour ce service), guides UK. -->
+<!-- À TRANCHER : does Cleo act as authorised representative itself, or through a partner? The representative is named on the product (Regulation (EU) 2019/1020, Art. 4(4)). Price and turnaround not set (meeting of 14/09/2026). -->
 <section class="section mu-hero" id="haut">
   <div class="conteneur">
     <div class="mu-hero-grille">
       <div class="mu-hero-texte">
-        <h1 class="t-hero">EU authorised representative. <span class="mu-bleu">Your operator established in the Union.</span></h1>
-        <p class="mu-lead">Cleo acts as your authorised representative: the written mandate, the contact details on the label, the file kept for authorities and the answers to their requests.</p>
-        <p class="mu-prix"><b>Price to be set</b><span>announced before you order</span></p>
+        <h1 class="t-hero">EU authorised representative for selling in Europe from abroad.</h1>
+        <p class="mu-lead">Every product placed on the EU market has an operator established in the Union that answers for it. Cleo takes that role, from the written mandate to the answers to authorities.</p>
+        <p class="mu-prix"><b>Price stated before you order</b></p>
         <div class="mu-actions">
-          <a class="mu-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Request this service <svg viewBox="0 0 26 14" width="26" height="14" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="mu-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Request this service <svg viewBox="0 0 26 14" width="22" height="12" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <a class="mu-bouton mu-bouton-contour" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Talk to an expert</a>
         </div>
       </div>
-      <div class="mu-inclus-carte">
-        <h2 class="mu-inclus-titre">What's included</h2>
+      <div class="mu-inclus mu-inclus-carte">
+        <p class="mu-surtitre">What's included</p>
         <ul class="mu-inclus-liste">
-          <li style="--i:0"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Written mandate</span></li>
-          <li style="--i:1"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Contact details on the label</span></li>
-          <li style="--i:2"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Declaration and documentation kept</span></li>
-          <li style="--i:3"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Answers to authorities</span></li>
-          <li style="--i:4"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Regular product checks</span></li>
-          <li style="--i:5"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Cooperation on corrective action</span></li>
-          <li style="--i:6"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Expert review</span></li>
-          <li style="--i:7"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Monitoring <em>included</em></span></li>
+          <li>Written mandate</li>
+          <li>Contact details on the label</li>
+          <li>Declaration and documentation kept</li>
+          <li>Answers to authorities</li>
+          <li>Regular product checks</li>
+          <li>Cooperation on corrective action</li>
+          <li>Expert review</li>
+          <li>Monitoring included</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ EN BREF ═══ le paragraphe de définition de leur page, réécrit sur les textes : définition du mandataire (2023/988,
-     art. 3, point 9), exigence de l'art. 16 applicable au 13/12/2024, opérateurs de l'art. 4, § 2, du règlement 2019/1020,
-     tâches de son § 3 et coordonnées de son § 4. -->
-<section class="section mu-cadre" id="en-bref">
+<section class="section" id="en-bref">
   <div class="conteneur">
-    <div class="mu-bref mu-apparait">
+    <div class="mu-bref" data-apparait>
       <p class="mu-surtitre">In short</p>
-      <p class="mu-bref-texte">An authorised representative is a person established in the Union whom a manufacturer appoints by written mandate to act on its behalf for specified tasks. Since 13 December 2024, a product covered by Regulation (EU) 2023/988 is placed on the market with an economic operator established in the Union that is responsible for it. For a manufacturer established outside the Union, that role goes to the importer, the authorised representative or, failing both, the fulfilment service provider. This operator keeps the declaration of conformity available to authorities, makes sure the technical documentation can be provided on request, answers reasoned requests, and its contact details appear on the product, its packaging, the parcel or an accompanying document.</p>
-      <p class="mu-bref-note">References checked on 15 September 2026 on EUR-Lex, the official website of EU law.</p>
+      <p class="mu-bref-texte">An authorised representative is a person established in the Union whom a manufacturer appoints by written mandate to act on its behalf. Since 13 December 2024, every product covered by Regulation (EU) 2023/988 has an operator established in the Union that answers for it.</p>
+      <p class="mu-bref-note">References checked on 15 September 2026 on EUR-Lex.</p>
     </div>
   </div>
 </section>
 
-<section class="section mu-cadre" id="base-legale">
+<section class="section" id="base-legale">
   <div class="conteneur">
-    <h2 class="t-display mu-titre2">The legal basis. <span class="attenue">The authorised representative role is written into EU law.</span></h2>
-    <ul class="mu-loi">
-      <li><div><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0988">Regulation (EU) 2023/988</a><span class="mu-loi-art">General product safety, Article 16</span></div><p>A product is placed on the market with an economic operator established in the Union, responsible for the tasks of Article 4(3) of Regulation (EU) 2019/1020. Applies since 13 December 2024.</p></li>
-      <li><div><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R1020">Regulation (EU) 2019/1020</a><span class="mu-loi-art">Market surveillance, Article 4</span></div><p>Who that operator can be, its four tasks, and its contact details on the product.</p></li>
-      <li><div><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008D0768">Decision No 768/2008/EC</a><span class="mu-loi-art">Annex I, Article R3</span></div><p>The written mandate under CE marking legislation, and what stays with the manufacturer.</p></li>
+    <h2 class="t-display mu-titre2">What EU law requires</h2>
+    <ul class="mu-loi" data-apparait>
+      <li><div><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R0988">Regulation (EU) 2023/988</a><span class="mu-loi-art">General product safety, Article 16</span></div><p>An operator established in the Union answers for the product, since 13 December 2024.</p></li>
+      <li><div><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32019R1020">Regulation (EU) 2019/1020</a><span class="mu-loi-art">Market surveillance, Article 4</span></div><p>Who holds that role, its tasks and its contact details.</p></li>
+      <li><div><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32008D0768">Decision No 768/2008/EC</a><span class="mu-loi-art">Annex I, Article R3</span></div><p>The written mandate in CE marking legislation.</p></li>
       <li><div><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0053">Directive 2014/53/EU</a> and <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32023R1230">Regulation (EU) 2023/1230</a><span class="mu-loi-art">Radio equipment, Article 11; machinery, Article 12</span></div><p>The mandate in these two sectors.</p></li>
     </ul>
   </div>
 </section>
 
-<!-- ═══ LES RÔLES ═══ colonnes vérifiables dans les textes seulement. La colonne « responsable d'un produit défectueux »
-     suit la directive (UE) 2024/2853, art. 8 (et non « non » pour le mandataire, comme sur la page EcoComply). -->
-<section class="section mu-cadre" id="roles">
+<section class="section" id="roles">
   <div class="conteneur">
-    <h2 class="t-display mu-titre2">Authorised representative, importer, distributor: <span class="attenue">what changes.</span></h2>
+    <h2 class="t-display mu-titre2">What sets the authorised representative, the importer and the distributor apart</h2>
     <div class="mu-tableau-zone">
       <table class="mu-tableau">
         <thead><tr><th scope="col">Role</th><th scope="col">Established in the Union</th><th scope="col">Name and contact details on the product</th><th scope="col">Documents for authorities</th><th scope="col">Liable for a defective product*</th></tr></thead>
         <tbody>
-          <tr class="mu-nous"><th scope="row">Authorised representative</th><td data-libelle="Established in the Union">Yes</td><td data-libelle="Name and contact details on the product">Yes, when it is the responsible operator</td><td data-libelle="Documents for authorities">Keeps the declaration, provides the documentation on request</td><td data-libelle="Liable for a defective product*">Yes, when the manufacturer is established outside the Union</td></tr>
-          <tr><th scope="row">Importer</th><td data-libelle="Established in the Union">Yes</td><td data-libelle="Name and contact details on the product">Yes</td><td data-libelle="Documents for authorities">Keeps a copy of the declaration, provides the documentation on request</td><td data-libelle="Liable for a defective product*">Yes, when the manufacturer is established outside the Union</td></tr>
-          <tr><th scope="row">Distributor</th><td data-libelle="Established in the Union">Not required</td><td data-libelle="Name and contact details on the product">Checks those of the manufacturer and importer</td><td data-libelle="Documents for authorities">Provides information on request</td><td data-libelle="Liable for a defective product*">Under conditions, when no operator established in the Union is identified</td></tr>
-          <tr><th scope="row">Manufacturer (you)</th><td data-libelle="Established in the Union">Not required</td><td data-libelle="Name and contact details on the product">Yes</td><td data-libelle="Documents for authorities">Draws up the technical documentation and the declaration</td><td data-libelle="Liable for a defective product*">Yes</td></tr>
+          <tr class="mu-nous"><th scope="row">Authorised representative</th><td data-libelle="Established in the Union">Yes</td><td data-libelle="Name and contact details on the product">Yes, when it is the responsible operator</td><td data-libelle="Documents for authorities">Keeps the declaration</td><td data-libelle="Liable for a defective product*">Yes, if the manufacturer is outside the Union</td></tr>
+          <tr><th scope="row">Importer</th><td data-libelle="Established in the Union">Yes</td><td data-libelle="Name and contact details on the product">Yes</td><td data-libelle="Documents for authorities">Keeps a copy of the declaration</td><td data-libelle="Liable for a defective product*">Yes, if the manufacturer is outside the Union</td></tr>
+          <tr><th scope="row">Distributor</th><td data-libelle="Established in the Union">Not required</td><td data-libelle="Name and contact details on the product">Checks them</td><td data-libelle="Documents for authorities">Informs on request</td><td data-libelle="Liable for a defective product*">Under conditions</td></tr>
+          <tr><th scope="row">Manufacturer (you)</th><td data-libelle="Established in the Union">Not required</td><td data-libelle="Name and contact details on the product">Yes</td><td data-libelle="Documents for authorities">Draws up the documentation and the declaration</td><td data-libelle="Liable for a defective product*">Yes</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="mu-note mu-apparait">The authorised representative takes on neither the design of the product nor the drawing up of the technical documentation: these obligations stay with the manufacturer (Decision No 768/2008/EC, Annex I, Article R3).<small>* For products placed on the market after 9 December 2026, Directive (EU) 2024/2853, Article 8.</small></p>
+    <p class="mu-note">Design and technical documentation stay with the manufacturer (Decision No 768/2008/EC, Annex I, Article R3).<small>* Products placed on the market after 9 December 2026, Directive (EU) 2024/2853, Article 8.</small></p>
   </div>
 </section>
 
-<section class="section mu-cadre" id="pourquoi">
+<section class="section" id="pourquoi">
   <div class="conteneur">
-    <p class="mu-date mu-apparait"><i aria-hidden="true"></i>Regulation (EU) 2023/988, applicable since 13 December 2024</p>
-    <h2 class="t-display mu-titre2">Selling in Europe from abroad. <span class="attenue">Three requirements, one point of contact.</span></h2>
-    <ul class="mu-raisons">
-      <li class="mu-raison"><figure><img src="img:masse-savon-carre" alt=""></figure><h3>An operator established in the Union</h3><p>Every product covered by Regulation (EU) 2023/988 has an operator established in the Union that answers for it.</p></li>
-      <li class="mu-raison"><figure><img src="img:masse-detergent-carre" alt=""></figure><h3>Documents ready for authorities</h3><p>Declaration of conformity, technical documentation: someone in the Union provides them on a reasoned request from an authority.</p></li>
-      <li class="mu-raison"><figure><img src="img:masse-vernis-carre" alt=""></figure><h3>Contact details on every product</h3><p>Name, postal and email address of the operator, on the product, its packaging, the parcel or an accompanying document.</p></li>
+    <p class="mu-surtitre">GPSR, since 13 December 2024</p>
+    <h2 class="t-display mu-titre2">Selling in Europe from abroad takes an operator established in the Union</h2>
+    <ul class="sy-lignes" data-apparait>
+      <li><h3>An operator established in the Union</h3><p>It answers for every product sold in the Union.</p></li>
+      <li><h3>Documents ready for authorities</h3><p>Declaration and technical documentation, on a reasoned request.</p></li>
+      <li><h3>Contact details on every product</h3><p>Name, postal and email address, on the product or its packaging.</p></li>
     </ul>
   </div>
 </section>
 
-<section class="section mu-cadre" id="comment">
+<section class="section" id="comment">
   <div class="conteneur">
-    <h2 class="t-display mu-titre2">How it works. <span class="attenue">Three steps: the agent prepares, an expert reviews.</span></h2>
-    <ol class="mu-etapes">
-      <li class="mu-etape"><span class="mu-num">01</span><h3>You send your documents</h3><p>Product sheet, declaration of conformity, technical documentation: the agent identifies the texts that apply and checks that each document has been drawn up.</p></li>
-      <li class="mu-etape"><span class="mu-num">02</span><h3>An expert reviews, the mandate sets the tasks</h3><p>A compliance expert reviews and validates the file, then the written mandate lists the tasks entrusted to the representative.</p></li>
-      <li class="mu-etape"><span class="mu-num">03</span><h3>The file is kept, authorities get their answers</h3><p>The representative's contact details go on the label. The file stays available to authorities, and monitoring follows your texts every week.</p></li>
+    <h2 class="t-display mu-titre2">How it works</h2>
+    <ol class="mu-etapes" data-apparait>
+      <li class="mu-etape"><span class="mu-num">01</span><h3>You send your documents</h3><p>The agent identifies the legislation that applies and checks each document.</p></li>
+      <li class="mu-etape"><span class="mu-num">02</span><h3>An expert reviews the file</h3><p>A compliance expert validates it, then the written mandate lists the tasks entrusted.</p></li>
+      <li class="mu-etape"><span class="mu-num">03</span><h3>The mandate starts</h3><p>The representative's contact details go on the label.</p></li>
     </ol>
   </div>
 </section>
 
-<!-- ═══ TOUT CE QUI EST COMPRIS ═══ les tâches de l'art. 4, § 3, du règlement 2019/1020 et les coordonnées de son § 4
-     (adresse électronique : 2023/988, art. 16, § 3), le mandat écrit (décision 768/2008/CE, R3), les vérifications de
-     l'art. 16, § 2, du règlement 2023/988, et la veille offerte du catalogue. -->
-<section class="section mu-cadre" id="compris">
+<section class="section" id="compris">
   <div class="conteneur">
     <div class="mu-compris">
       <figure class="mu-compris-photo"><img src="img:masse-skate" alt=""></figure>
       <div>
-        <h2 class="t-display mu-titre2">Everything included. <span class="attenue">One price for the whole service, shown before you order.</span></h2>
-        <ul class="mu-cartes">
-          <li class="mu-carte"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><b>Written mandate</b><span>The tasks entrusted to the representative, listed one by one.</span></li>
-          <li class="mu-carte"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><b>Contact details on the label</b><span>The representative's name, postal and email address, ready for the product or its packaging.</span></li>
-          <li class="mu-carte"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><b>Declaration and documentation available</b><span>The declaration of conformity kept for authorities, the technical documentation provided when they ask.</span></li>
-          <li class="mu-carte"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><b>Answers to reasoned requests</b><span>Information and documents sent in a language the authority easily understands.</span></li>
-          <li class="mu-carte"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><b>Informing authorities</b><span>Market surveillance authorities informed whenever a product calls for it.</span></li>
-          <li class="mu-carte"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><b>Cooperation on corrective action</b><span>Cooperation with authorities on each corrective action.</span></li>
-          <li class="mu-carte"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><b>Regular checks</b><span>The product checked against its technical documentation, with documented evidence for authorities.</span></li>
-          <li class="mu-carte"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><b>Monitoring <em>included</em></b><span>Every week, the new rules that affect your products.</span></li>
+        <h2 class="t-display mu-titre2">What the service includes</h2>
+        <ul class="sy-lignes mu-lignes-serre" data-apparait>
+      <li><b>Written mandate</b><span>The tasks entrusted, one by one.</span></li>
+      <li><b>Contact details on the label</b><span>Name, postal and email address.</span></li>
+      <li><b>Declaration and documentation</b><span>Kept available to authorities.</span></li>
+      <li><b>Answers to reasoned requests</b><span>In a language the authority understands.</span></li>
+      <li><b>Informing authorities</b><span>Whenever a product calls for it.</span></li>
+      <li><b>Corrective action</b><span>Cooperation on each measure.</span></li>
+      <li><b>Regular checks</b><span>With written evidence.</span></li>
+      <li><b>Monitoring included</b><span>Every week.</span></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section mu-cadre" id="textes">
+<section class="section" id="textes">
   <div class="conteneur">
-    <h2 class="t-display mu-titre2">The texts we cover. <span class="attenue">The main product safety and compliance frameworks the agent follows.</span></h2>
-    <ul class="mu-tuiles">
+    <h2 class="t-display mu-titre2">The legislation the agent follows</h2>
+    <ul class="mu-tuiles" data-apparait>
       <li class="mu-tuile"><b>GPSR</b><span>General product safety</span><small>(EU) 2023/988</small></li>
-      <li class="mu-tuile"><b>CE</b><span>CE marking: electromagnetic compatibility, low voltage, radio</span><small>2014/30/EU · 2014/35/EU · 2014/53/EU</small></li>
-      <li class="mu-tuile"><b>RoHS</b><span>Hazardous substances in electrical and electronic equipment</span><small>2011/65/EU</small></li>
-      <li class="mu-tuile"><b>REACH</b><span>Registration, evaluation and authorisation of chemicals</span><small>(EC) No 1907/2006</small></li>
+      <li class="mu-tuile"><b>CE</b><span>Electromagnetic compatibility, low voltage, radio</span><small>2014/30/EU · 2014/35/EU · 2014/53/EU</small></li>
+      <li class="mu-tuile"><b>RoHS</b><span>Hazardous substances</span><small>2011/65/EU</small></li>
+      <li class="mu-tuile"><b>REACH</b><span>Chemicals</span><small>(EC) No 1907/2006</small></li>
       <li class="mu-tuile"><b>WEEE</b><span>Waste electrical and electronic equipment</span><small>2012/19/EU</small></li>
       <li class="mu-tuile"><b>Batteries</b><span>Batteries and waste batteries</span><small>(EU) 2023/1542</small></li>
     </ul>
   </div>
 </section>
 
-<!-- ═══ COMPARATIF ═══ aucune affirmation sur des prestataires nommés ni aucun chiffre sur eux ; la colonne Cleo ne
-     reprend que ce que le site dit déjà : veille offerte (catalogue), 25 000 réglementations et 106 pays (chiffres canon),
-     relecture d'un expert conformité (fiches). -->
-<section class="section mu-cadre" id="comparatif">
+<!-- ═══ CE QUE CLEO AJOUTE ═══ ce que le site dit déjà : veille offerte (catalogue), 25 000 réglementations cartographiées et
+     106 pays (chiffres canon), relecture d'un expert conformité (fiches). Plus de colonne « une adresse seule ». -->
+<section class="section" id="ajoute">
   <div class="conteneur">
-    <h2 class="t-display mu-titre2">Cleo or an address alone. <span class="attenue">What changes for you.</span></h2>
-    <div class="mu-tableau-zone">
-      <table class="mu-comparatif">
-        <thead><tr><td></td><th scope="col">An address alone</th><th scope="col" class="mu-avec">With Cleo</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Regulatory monitoring</th><td>Not included</td><td class="mu-avec">Included, every week</td></tr>
-          <tr><th scope="row">Texts followed</th><td>Not included</td><td class="mu-avec">25,000 regulations, 106 countries</td></tr>
-          <tr><th scope="row">File review</th><td>Not included</td><td class="mu-avec">A compliance expert reviews and validates</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<section class="section mu-cadre" id="questions">
-  <div class="conteneur">
-    <h2 class="t-display mu-titre2">Frequently asked questions.</h2>
-    <div class="faq mu-faq">
-      <details open class="mu-apparait">
-        <summary>Do I need an EU authorised representative?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">You need an operator established in the Union. For a manufacturer established outside the Union, that role goes to the importer, the authorised representative or, failing both, the fulfilment service provider (Regulation (EU) 2023/988, Article 16, and Regulation (EU) 2019/1020, Article 4).</div>
-      </details>
-      <details open class="mu-apparait">
-        <summary>Authorised representative or responsible person: what's the difference?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">Regulation (EU) 2023/988 speaks of the responsible person: the economic operator established in the Union that answers for the product. The authorised representative is one of the persons who can hold that role, alongside a manufacturer established in the Union, the importer and the fulfilment service provider.</div>
-      </details>
-      <details open class="mu-apparait">
-        <summary>What does the representative do, and what stays with the manufacturer?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">The representative performs the tasks listed in the written mandate: documents available, answers to authorities, cooperation. The design of the product and the drawing up of the technical documentation stay with the manufacturer (Decision No 768/2008/EC, Annex I, Article R3).</div>
-      </details>
-      <details open class="mu-apparait">
-        <summary>How long are the documents kept?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">For the period set by each text. For radio equipment, 10 years after it is placed on the market (Directive 2014/53/EU, Article 11).</div>
-      </details>
-      <details open class="mu-apparait">
-        <summary>Who signs the declaration?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">The manufacturer, or its authorised representative. The Cleo expert reviews and validates the declaration, which is handed over to you ready to sign.</div>
-      </details>
-      <details open class="mu-apparait">
-        <summary>Is the representative liable for a defective product?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">For products placed on the market after 9 December 2026, yes, when the manufacturer is established outside the Union: Directive (EU) 2024/2853, Article 8, makes the importer and the manufacturer's authorised representative liable, without prejudice to the manufacturer's own liability.</div>
-      </details>
-      <details open class="mu-apparait">
-        <summary>What price and lead time?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">Price and lead time to be set. The price of the whole service is shown before you order.</div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<section class="section mu-cadre" id="plus-loin">
-  <div class="conteneur">
-    <h2 class="t-display mu-titre2">Learn more.</h2>
-    <ul class="mu-liens">
-      <li><a class="mu-carte-lien" href="38-service-en.html"><span class="mu-pastille">Service</span><b>Update a declaration of conformity</b><svg viewBox="0 0 26 14" width="26" height="14" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-      <li><a class="mu-carte-lien" href="44-service-veille-en.html"><span class="mu-pastille">Included</span><b>Regulatory and case law monitoring</b><svg viewBox="0 0 26 14" width="26" height="14" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-      <li><a class="mu-carte-lien" href="37-compliance-service-en.html"><span class="mu-pastille">Catalogue</span><b>See the full catalogue</b><svg viewBox="0 0 26 14" width="26" height="14" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+    <h2 class="t-display mu-titre2">What Cleo adds to the mandate</h2>
+    <ul class="sy-lignes" data-apparait>
+      <li><b>Regulatory monitoring</b><span>Included, every week.</span></li>
+      <li><b>Legislation tracked</b><span>25,000 regulations mapped across 106 countries.</span></li>
+      <li><b>File review</b><span>A compliance expert reviews and validates.</span></li>
     </ul>
   </div>
 </section>
 
-<!-- ═══ APPEL FINAL ═══ bandeau tramé à la Tenkara, comme les autres fiches ; titre et boutons repris de la fiche 38. -->
-<section class="section mu-cadre av-final tk-bandeau" id="contact">
+<section class="section" id="questions">
   <div class="conteneur">
-    <div class="tk-trame" aria-hidden="true"><img src="img:semelles" alt=""></div>
+    <h2 class="t-display mu-titre2">Frequently asked questions</h2>
+    <div class="faq mu-faq">
+      <details open>
+        <summary>Do I need an EU authorised representative?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">You need an operator established in the Union: the importer, the authorised representative or, failing both, the fulfilment service provider (Regulation (EU) 2023/988, Article 16).</div>
+      </details>
+      <details>
+        <summary>Authorised representative or responsible person: what is the difference?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">The responsible person is the operator established in the Union that answers for the product. The authorised representative is one of the persons who can hold that role.</div>
+      </details>
+      <details>
+        <summary>What stays with the manufacturer?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">The design of the product and the technical documentation (Decision No 768/2008/EC, Annex I, Article R3).</div>
+      </details>
+      <details>
+        <summary>How long are the documents kept?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">10 years after placing on the market for radio equipment (Directive 2014/53/EU, Article 11). The period depends on the text.</div>
+      </details>
+      <details>
+        <summary>Who signs the declaration?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">The manufacturer, or its authorised representative. The Cleo expert reviews and validates the declaration.</div>
+      </details>
+      <details>
+        <summary>Is the representative liable for a defective product?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Yes for products placed on the market after 9 December 2026, when the manufacturer is established outside the Union (Directive (EU) 2024/2853, Article 8).</div>
+      </details>
+      <details>
+        <summary>What price and turnaround?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Both are stated before you order.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="plus-loin">
+  <div class="conteneur">
+    <h2 class="t-display mu-titre2">Learn more</h2>
+    <ul class="mu-liens">
+      <li><a class="mu-carte-lien" href="38-service-en.html"><span class="mu-lien-type">Service</span><b>Update an EU declaration of conformity</b><svg viewBox="0 0 26 14" width="22" height="12" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+      <li><a class="mu-carte-lien" href="44-service-veille-en.html"><span class="mu-lien-type">Included service</span><b>Regulatory and case law monitoring</b><svg viewBox="0 0 26 14" width="22" height="12" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+      <li><a class="mu-carte-lien" href="37-compliance-service-en.html"><span class="mu-lien-type">Catalogue</span><b>See the catalogue</b><svg viewBox="0 0 26 14" width="22" height="12" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section av-final tk-bandeau" id="contact">
+  <div class="conteneur">
     <p class="tk-etiquette">EU authorised representative</p>
-    <h2 class="t-display av-final-titre mu-apparait">A new country is no longer a project. <span class="attenue">It's a decision.</span></h2>
-    <div class="mu-bandeau-actions mu-apparait">
-      <a class="tk-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Request this service <svg viewBox="0 0 26 14" width="26" height="14" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a class="mu-lien mu-lien-blanc" href="37-compliance-service-en.html">See the full catalogue <svg viewBox="0 0 26 14" width="26" height="14" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <h2 class="t-display av-final-titre">An operator established in the Union for every product you sell in Europe</h2>
+    <div class="mu-bandeau-actions">
+      <a class="tk-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Request this service <svg viewBox="0 0 26 14" width="22" height="12" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="sy-lien" href="37-compliance-service-en.html">See the catalogue <svg viewBox="0 0 26 14" width="22" height="12" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
 </section>

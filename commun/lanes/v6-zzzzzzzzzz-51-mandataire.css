@@ -1,218 +1,113 @@
-/* ═══ FICHE « MANDATAIRE DANS L'UE » ═══ 15/09/2026, pages 51 FR et EN, générée par
-   scratchpad/agents/mandataire-ue/generer.mjs. Composition de ecocomply.ai/eu-authorised-representative, dans la DA Cleo :
-   haut crème et carte « ce qui est inclus » comme les fiches « straight to the point », sections en cadre à filet et coins
-   marqués, Satoshi, bleu #0008CF pour l'action et l'état, photos au grain cuit. Aucun champ profond #08093B.
-   Mouvement : arrivée du haut au chargement, puis apparitions liées au défilement (sous prefers-reduced-motion et
-   @supports) ; overflow:clip, jamais hidden ; aucun !important sur une propriété animée. */
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-hero{position:relative;width:auto !important;max-width:none !important;margin:0 0 120px !important;padding:clamp(64px, 7vw, 112px) 0 !important;overflow:clip !important;border-bottom:1px solid rgba(26,26,26,.08);background:#F9F8F6 !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section:is(.mu-hero, .mu-cadre) > .conteneur{position:relative;box-sizing:border-box;width:min(1360px, calc(100% - 80px));max-width:none;margin:0 auto}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-hero > .conteneur{padding:0 32px}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-hero-grille{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(40px, 5vw, 80px);align-items:center}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-hero .t-hero{margin:0 !important;max-width:none !important;font-size:clamp(2.375rem, 1rem + 2.7vw, 3.75rem) !important;font-weight:500 !important;line-height:1.05 !important;letter-spacing:-.04em !important;color:#1A1A1A !important;text-wrap:balance}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-bleu{color:#0008CF}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-lead{margin:24px 0 0;max-width:600px;font-size:1.1875rem;line-height:1.5;color:#525252}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-prix{box-sizing:border-box;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;width:fit-content;max-width:100%;margin:32px 0 0;padding:18px 22px;border:1px solid rgba(26,26,26,.12);border-radius:12px;background:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-prix b{font-size:1.75rem;font-weight:500;line-height:1.1;letter-spacing:-.025em;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-prix span{font-size:.9375rem;color:#6B6B6B}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 14px;margin-top:28px}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-bouton{display:inline-flex;align-items:center;gap:12px;padding:15px 20px 15px 22px;border-radius:4px;background:#0008CF;color:#FFFFFF;font-size:.875rem;font-weight:500;letter-spacing:.07em;line-height:1.2;text-transform:uppercase;text-decoration:none;transition:background .15s ease-out}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-bouton:hover{background:#0006A8;color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-bouton.mu-bouton-contour{padding:14px 21px;border:1px solid rgba(26,26,26,.32);background:transparent;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-bouton.mu-bouton-contour:hover{border-color:#0008CF;background:transparent;color:#0008CF}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) :is(.mu-bouton, .mu-lien, .mu-carte-lien) svg{flex:none;transition:transform .2s cubic-bezier(.22,1,.36,1)}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) :is(.mu-bouton, .mu-lien, .mu-carte-lien):hover svg{transform:translateX(4px)}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-inclus-carte{box-sizing:border-box;padding:34px 34px 26px;border:1px solid rgba(26,26,26,.09);border-radius:18px;background:#FFFFFF;box-shadow:0 1px 3px rgba(26,26,26,.05), 0 28px 60px -32px rgba(8,9,59,.24)}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-inclus-titre{margin:0 0 12px !important;max-width:none !important;font-size:.875rem !important;font-weight:500 !important;line-height:1.3 !important;letter-spacing:.08em !important;text-transform:uppercase;color:#1A1A1A !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-inclus-liste{margin:0;padding:0;list-style:none}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-inclus-liste li{display:flex;align-items:flex-start;gap:12px;padding:11px 0;border-top:1px solid rgba(26,26,26,.07);font-size:1rem;line-height:1.4;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) :is(.mu-inclus-liste, .mu-cartes) i{display:grid;place-items:center;flex:none;width:22px;height:22px;border-radius:50%;background:#0008CF;color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) :is(.mu-inclus-liste, .mu-cartes) i svg{width:11px;height:11px}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) :is(.mu-inclus-liste, .mu-cartes) em{margin-left:8px;padding:2px 9px;border-radius:9999px;background:#EFF0FF;color:#0008CF;font-size:.75rem;font-style:normal;font-weight:500;letter-spacing:0;vertical-align:.1em}
+/* ═══ FICHE « MANDATAIRE DANS L'UE », 51 FR ET EN ═══ refonte du 15/09/2026 (scratchpad/agents/refonte/SYSTEME.md).
+   Ordre des chapitres d'ecocomply.ai/eu-authorised-representative gardé, un objet par chapitre. Même haut de page que les
+   fiches 38 à 50. Listes en lignes (.sy-lignes du système) au lieu de cartes cochées ; tableau à filets ; tuiles et liens
+   en cartes crème r12 sans bord ni ombre ; un seul grand média (la photo de « ce que comprend la prestation »). Aucune
+   animation liée au défilement : apparitions data-apparait (mouvement.js). Feuille d'avant : sauvegarde-css/. */
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-hero{position:relative;color:var(--c-texte) !important;margin:0 !important;padding:var(--e-hero-haut) 0 var(--e-section) !important;border:0 !important;background:var(--c-fond-2) !important;overflow:clip !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-hero-grille{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(40px, 6vw, 96px);align-items:start}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-hero h1{margin:0;max-width:17ch}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-lead{margin:20px 0 0 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-prix{margin:28px 0 0;padding:0;border:0;background:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-prix b{font-size:var(--t-corps);font-weight:500;line-height:1.4;color:var(--c-texte)}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:32px}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-inclus :is(.fx-inclus-titre, .mu-surtitre){margin:0 0 8px !important}
+@media (max-width:980px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-hero-grille{grid-template-columns:minmax(0,1fr);gap:48px}
+}
+@media (max-width:560px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-actions > a{flex:1 1 auto}
+}
+@media (prefers-reduced-motion: no-preference){
+  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-hero :is(.mu-lead, .mu-prix, .mu-actions, .mu-inclus){animation:srvArrive var(--m-duree) var(--m-courbe) both}
+  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-hero .mu-prix{animation-delay:.08s}
+  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-hero .mu-actions{animation-delay:.14s}
+  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-hero .mu-inclus{animation-delay:.2s}
+  @keyframes srvArrive{from{opacity:0;translate:0 6px;filter:blur(4px)}to{opacity:1;translate:0 0;filter:blur(0)}}
+}
 
-/* Cadres des sections : filet 1 px, bandeau à cellules en haut, coins marqués. */
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-cadre{padding:0 !important;margin:0 0 120px !important;background:transparent}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-cadre > .conteneur{padding:112px 56px 72px;border:1px solid rgba(26,26,26,.1);background-image:repeating-linear-gradient(90deg, rgba(26,26,26,.1) 0 1px, transparent 1px 32px), linear-gradient(rgba(26,26,26,.1), rgba(26,26,26,.1));background-size:257px 32px, 100% 1px;background-position:-1px 0, 0 32px;background-repeat:no-repeat}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-cadre > .conteneur::before, body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-cadre > .conteneur::after{content:"";position:absolute;width:9px;height:9px;pointer-events:none}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-cadre > .conteneur::before{top:-2px;left:-2px;border-top:1.5px solid #1A1A1A;border-left:1.5px solid #1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-cadre > .conteneur::after{right:-2px;bottom:-2px;border-right:1.5px solid #1A1A1A;border-bottom:1.5px solid #1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-titre2{margin:0 0 56px !important;max-width:1040px !important;font-size:clamp(1.75rem, 1rem + 1.5vw, 2.375rem) !important;font-weight:500 !important;line-height:1.14 !important;letter-spacing:-.025em !important;color:#1A1A1A !important;text-wrap:balance}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-titre2 .attenue{display:inline !important;color:#8F8F8F !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main h3{font-family:inherit}
+/* ─── Chapitres ─── */
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.section:not(.mu-hero):not(.tk-bandeau){padding:var(--e-section) 0 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section#en-bref{padding-bottom:0 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-titre2{margin:0 0 var(--e-titre-contenu) !important;max-width:24ch}
 
 /* En bref. */
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-bref{position:relative;max-width:1040px;padding:40px 48px 36px 52px;border-radius:14px;background:#F9F8F6}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-bref::before{content:"";position:absolute;left:0;top:28px;bottom:28px;width:3px;border-radius:3px;background:#1A1A1A;transform-origin:50% 0}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-surtitre{margin:0 0 16px;font-size:.8125rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-bref-texte{margin:0;font-size:clamp(1.0625rem, .95rem + .35vw, 1.25rem);line-height:1.6;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-bref-note{margin:20px 0 0;font-size:.875rem;color:#6B6B6B}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-bref{max-width:760px}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-bref-texte{margin:0;font-size:var(--t-lead);line-height:1.5;color:var(--c-texte)}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-bref-note{margin:16px 0 0;font-size:var(--t-legende);color:var(--c-texte-3)}
 
 /* Base légale. */
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-loi{margin:0;padding:0;list-style:none;border-top:1px solid rgba(26,26,26,.12)}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-loi li{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:10px 56px;padding:26px 0;border-bottom:1px solid rgba(26,26,26,.1)}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-loi a{font-size:1.125rem;font-weight:500;line-height:1.35;color:#1A1A1A;text-decoration:underline;text-decoration-color:rgba(26,26,26,.25);text-underline-offset:5px}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-loi a:hover{color:#0008CF;text-decoration-color:currentColor}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-loi-art{display:block;margin-top:6px;font-size:.9375rem;color:#6B6B6B}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-loi p{margin:0;max-width:640px;font-size:1.0625rem;line-height:1.55;color:#525252}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-loi{margin:0;padding:0;list-style:none;border-top:1px solid var(--c-filet)}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-loi li{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:8px 24px;padding:20px 0;border-bottom:1px solid var(--c-filet)}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-loi a{font-weight:500;color:var(--c-texte);text-decoration:underline;text-decoration-color:rgba(26,26,26,.24);text-underline-offset:4px}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-loi a:hover{text-decoration-color:currentColor}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-loi-art{display:block;margin-top:4px;font-size:.875rem;color:var(--c-texte-2)}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-loi p{margin:0;color:var(--c-texte-2)}
 
-/* Tableaux. */
-/* Pas de overflow-x:auto ici : il ferait du conteneur la source des animations view() des lignes, qui resteraient figées
-   (mesuré le 15/09/2026 par fige-generique.mjs sur la colonne Cleo). Les deux tableaux tiennent dans leur cadre. */
+/* Tableau des rôles. */
 body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau-zone{overflow:visible}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) :is(.mu-tableau, .mu-comparatif){width:100%;border-collapse:collapse;font-size:1rem;line-height:1.45}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau thead th{padding:0 20px 16px 0;text-align:left;vertical-align:bottom;font-size:.8125rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#6B6B6B;border-bottom:1px solid rgba(26,26,26,.2)}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau tbody :is(th, td){padding:22px 20px 22px 0;text-align:left;vertical-align:top;font-weight:400;color:#525252;border-bottom:1px solid rgba(26,26,26,.09)}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau tbody th{font-weight:500;color:#1A1A1A;white-space:nowrap}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau tr.mu-nous :is(th, td){color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau tr.mu-nous th::before{content:"";display:inline-block;width:8px;height:8px;margin-right:10px;border-radius:50%;background:#0008CF;vertical-align:.1em}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-note{margin:24px 0 0;max-width:860px;font-size:.9375rem;line-height:1.55;color:#525252}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-note small{display:block;margin-top:8px;font-size:.8125rem;color:#8F8F8F}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-comparatif{max-width:1040px;font-size:1.0625rem}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-comparatif :is(th, td){padding:20px 24px;text-align:left;vertical-align:top;font-weight:400;color:#525252;border-bottom:1px solid rgba(26,26,26,.09)}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-comparatif thead :is(th, td){padding-top:18px;padding-bottom:18px;font-size:.8125rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#6B6B6B;border-bottom-color:rgba(26,26,26,.2)}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-comparatif tbody th{padding-left:0;font-weight:500;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-comparatif .mu-avec{background-color:#EFF0FF;color:#0008CF;font-weight:500}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-comparatif thead .mu-avec{border-radius:12px 12px 0 0;color:#0008CF}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-comparatif tbody tr:last-child .mu-avec{border-radius:0 0 12px 12px;border-bottom-color:transparent}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau{width:100%;border-collapse:collapse;font-size:.9375rem;line-height:1.45}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau thead th{padding:0 16px 14px 0;text-align:left;vertical-align:bottom;font-size:var(--t-surtitre);font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--c-texte-2);border-bottom:1px solid var(--c-filet)}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau tbody :is(th, td){padding:18px 16px 18px 0;text-align:left;vertical-align:top;font-weight:400;color:var(--c-texte-2);border-bottom:1px solid var(--c-filet)}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau tbody th{font-weight:500;color:var(--c-texte);white-space:nowrap}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau tr.mu-nous :is(th, td){color:var(--c-texte)}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-note{margin:20px 0 0;max-width:760px;font-size:var(--t-legende);line-height:1.5;color:var(--c-texte-2)}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-note small{display:block;margin-top:6px;font-size:var(--t-legende);color:var(--c-texte-3)}
 
-/* Pourquoi. */
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-date{display:inline-flex;align-items:center;gap:10px;margin:0 0 28px;padding:8px 14px;border:1px solid rgba(26,26,26,.12);border-radius:9999px;font-size:.875rem;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-date i{width:8px;height:8px;border-radius:50%;background:#0008CF}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-raisons{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin:0;padding:0;list-style:none}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-raison figure{margin:0 0 22px;aspect-ratio:4/3;border-radius:14px;overflow:clip;background:#E9E7E2}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-raison img{display:block;width:100%;height:100%;object-fit:cover}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) :is(.mu-raison, .mu-etape) h3{margin:0 0 10px;font-size:1.3125rem;font-weight:500;line-height:1.25;letter-spacing:-.015em;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) :is(.mu-raison, .mu-etape) p{margin:0;font-size:1rem;line-height:1.55;color:#525252}
+/* Lignes (système) et étapes. */
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .sy-lignes > li > :is(h3, p, b, span){margin:0}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .sy-lignes > li > b{font-size:var(--t-corps)}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-lignes-serre > li{padding:14px 0}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-etapes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--e-grille);margin:0;padding:0;list-style:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-etape{padding-top:20px;border-top:1px solid var(--c-filet)}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-num{display:block;margin:0 0 12px;font-size:var(--t-legende);color:var(--c-texte-3);font-variant-numeric:tabular-nums}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-etape h3{margin:0 0 8px}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-etape p{margin:0;color:var(--c-texte-2)}
 
-/* Comment ça marche. */
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-etapes{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin:0;padding:0;list-style:none}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-etapes::before{content:"";position:absolute;left:28px;right:28px;top:28px;height:1px;background:#0008CF;transform-origin:0 50%}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-etape{position:relative;padding:0 12px 0 0}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-num{position:relative;z-index:1;display:grid;place-items:center;width:56px;height:56px;margin:0 0 26px;border:1px solid #0008CF;border-radius:50%;background-color:#FFFFFF;font-size:.9375rem;font-weight:500;color:#0008CF}
+/* Ce que comprend la prestation : le grand média de la page. */
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-compris{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px, 5vw, 80px);align-items:start}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-compris-photo{margin:0;aspect-ratio:4/5;border-radius:var(--r-media);overflow:clip;background:var(--c-fond-2)}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-compris-photo img{display:block;width:100%;height:100%;object-fit:cover}
 
-/* Tout ce qui est compris. */
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-compris{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px, 4vw, 64px);align-items:start}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-compris-photo{position:sticky;top:104px;margin:0;aspect-ratio:3/4;border-radius:18px;overflow:clip;background:#E9E7E2}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-compris-photo img{position:absolute;left:0;top:0;display:block;width:100%;height:112%;object-fit:cover}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-cartes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:0;padding:0;list-style:none}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-carte{display:grid;grid-template-columns:22px minmax(0,1fr);align-content:start;gap:6px 14px;padding:20px 20px 22px;border:1px solid rgba(26,26,26,.1);border-radius:12px;background:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-carte i{grid-row:span 2;margin-top:1px}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-carte b{font-size:1.0625rem;font-weight:500;line-height:1.3;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-carte span{font-size:.9375rem;line-height:1.5;color:#525252}
-
-/* Textes couverts. */
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tuiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0;padding:0;list-style:none}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tuile{display:flex;flex-direction:column;gap:8px;min-height:190px;box-sizing:border-box;padding:26px 26px 24px;border:1px solid rgba(26,26,26,.08);border-radius:14px;background:#F9F8F6;transition:border-color .2s ease-out}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tuile:hover{border-color:rgba(26,26,26,.3)}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tuile b{font-size:2rem;font-weight:500;line-height:1;letter-spacing:-.03em;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tuile span{margin-top:auto;font-size:1rem;line-height:1.4;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tuile small{font-size:.875rem;color:#6B6B6B}
+/* Textes suivis. */
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tuiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--e-grille);margin:0;padding:0;list-style:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tuile{display:flex;flex-direction:column;gap:6px;min-height:160px;box-sizing:border-box;padding:var(--p-carte)}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tuile b{font-size:var(--t-h3);font-weight:500;line-height:1.25;letter-spacing:-.01em;color:var(--c-texte)}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tuile span{margin-top:auto;color:var(--c-texte)}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tuile small{font-size:var(--t-legende);color:var(--c-texte-3)}
 
 /* Questions. */
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-faq{max-width:900px}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-faq summary{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 0;cursor:pointer;list-style:none;font-size:1.1875rem;font-weight:500;line-height:1.35;color:#1A1A1A}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-faq .reponse{max-width:760px;padding:0 0 26px;font-size:1.0625rem;line-height:1.6;color:#525252}
+
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-faq{max-width:840px;border-top:1px solid var(--c-filet)}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-faq details{margin:0;padding:0;border:0;border-bottom:1px solid var(--c-filet);border-radius:0;background:transparent !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-faq summary{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 0;cursor:pointer;list-style:none;font-size:1.125rem;font-weight:500;line-height:1.35;color:var(--c-texte)}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-faq summary::-webkit-details-marker{display:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-faq summary .chev{flex:none;color:var(--c-texte-3);transition:rotate .2s var(--m-courbe)}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-faq details[open] summary .chev{rotate:180deg}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-faq .reponse{max-width:68ch;margin:0;padding:0 0 22px;font-size:var(--t-corps);line-height:1.55;color:var(--c-texte-2)}
 
 /* Pour aller plus loin. */
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-liens{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0;padding:0;list-style:none}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-carte-lien{display:flex;flex-direction:column;align-items:flex-start;gap:18px;box-sizing:border-box;height:100%;min-height:200px;padding:26px;border:1px solid rgba(26,26,26,.12);border-radius:14px;background:#FFFFFF;color:#1A1A1A;text-decoration:none;transition:border-color .2s ease-out}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-carte-lien:hover{border-color:#0008CF}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-pastille{padding:5px 11px;border-radius:9999px;background:#F2F1EE;font-size:.8125rem;font-weight:500;color:#525252}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-carte-lien b{font-size:1.25rem;font-weight:500;line-height:1.3;letter-spacing:-.015em}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-carte-lien svg{margin-top:auto;color:#0008CF}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-liens{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--e-grille);margin:0;padding:0;list-style:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-carte-lien{display:flex;flex-direction:column;align-items:flex-start;gap:12px;box-sizing:border-box;height:100%;min-height:168px;padding:var(--p-carte);border-radius:var(--r-carte);background:var(--c-fond-2);color:var(--c-texte);text-decoration:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-lien-type{font-size:var(--t-surtitre);font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--c-texte-2)}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-carte-lien b{font-size:var(--t-h3);font-weight:500;line-height:1.25;letter-spacing:-.01em}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-carte-lien svg{margin-top:auto;color:var(--c-texte)}
+body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-carte-lien:hover b{text-decoration:underline;text-underline-offset:4px}
 
-/* Appel final (le bandeau tramé vient de la couche Tenkara). */
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-bandeau-actions{position:relative;z-index:2;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 26px}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-lien{display:inline-flex;align-items:center;gap:10px;font-size:.9375rem;color:#1A1A1A;text-decoration:none}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-lien:hover{text-decoration:underline;text-underline-offset:4px}
-body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-lien.mu-lien-blanc{color:#FFFFFF}
-
-@media (max-width:1080px){
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) :is(.mu-raisons, .mu-liens, .mu-tuiles){grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:980px){
   body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-compris{grid-template-columns:minmax(0,1fr)}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-compris-photo{position:relative;top:auto;aspect-ratio:16/9}
+  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-compris-photo{aspect-ratio:16/10}
+  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) :is(.mu-tuiles, .mu-liens){grid-template-columns:repeat(2,minmax(0,1fr))}
+  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-etapes{grid-template-columns:minmax(0,1fr);gap:24px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-loi li{grid-template-columns:minmax(0,1fr)}
 }
-@media (max-width:960px){
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-hero-grille{grid-template-columns:minmax(0,1fr);gap:40px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-loi li{grid-template-columns:minmax(0,1fr);gap:8px}
-}
-@media (max-width:760px){
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-hero{margin-bottom:72px !important;padding:48px 0 56px !important}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-hero > .conteneur{width:calc(100% - 32px);padding:0 4px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-cadre{margin-bottom:72px !important}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-cadre > .conteneur{width:calc(100% - 32px);padding:78px 20px 44px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-titre2{margin-bottom:36px !important}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-actions .mu-bouton{flex:1 1 auto;justify-content:center}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-prix{padding:14px 16px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-prix b{font-size:1.5rem}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-inclus-carte{padding:24px 20px 16px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-bref{padding:28px 20px 26px 26px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) :is(.mu-raisons, .mu-liens, .mu-cartes, .mu-etapes, .mu-tuiles){grid-template-columns:minmax(0,1fr)}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-etapes{gap:30px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-etapes::before{left:28px;right:auto;top:28px;bottom:28px;width:1px;height:auto;transform-origin:50% 0}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-etape{display:grid;grid-template-columns:56px minmax(0,1fr);gap:0 18px;padding:0}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-num{grid-row:span 2;margin:0}
+@media (max-width:600px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) :is(.mu-tuiles, .mu-liens){grid-template-columns:minmax(0,1fr)}
   body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tuile{min-height:0}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau-zone{overflow-x:visible}
   body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau thead{display:none}
   body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau :is(tbody, tr){display:block}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau tr{padding:18px 0 12px;border-bottom:1px solid rgba(26,26,26,.12)}
+  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau tr{padding:16px 0 10px;border-bottom:1px solid var(--c-filet)}
   body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau tbody :is(th, td){display:block;padding:0;border:0;white-space:normal}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau tbody th{margin:0 0 10px;font-size:1.0625rem}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau tbody td{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:12px;padding:6px 0;font-size:.9375rem}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau tbody td::before{content:attr(data-libelle);font-size:.8125rem;line-height:1.45;color:#8F8F8F}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-comparatif{font-size:.9375rem}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-comparatif :is(th, td){padding:14px 10px}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-comparatif thead :is(th, td){font-size:.6875rem;letter-spacing:.04em}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-faq summary{font-size:1.0625rem;padding:20px 0}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-faq .reponse{font-size:1rem}
-}
-
-@media (prefers-reduced-motion: no-preference){
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-hero :is(.t-hero, .mu-lead, .mu-prix, .mu-actions){animation:muArrive .7s cubic-bezier(.625,.05,0,1) both}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-hero .t-hero{animation-duration:.8s}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-hero .mu-lead{animation-delay:.16s}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-hero .mu-prix{animation-delay:.22s}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) main > section.mu-hero .mu-actions{animation-delay:.28s}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-inclus-carte{animation:muCarte .8s cubic-bezier(.625,.05,0,1) .24s both}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-inclus-liste li{animation:muLigne .5s cubic-bezier(.22,1,.36,1) both;animation-delay:calc(.42s + var(--i) * 50ms)}
-  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-inclus-liste i{animation:muCoche .45s cubic-bezier(.22,1,.36,1) both;animation-delay:calc(.52s + var(--i) * 50ms)}
-  @keyframes muArrive{from{opacity:0;translate:0 26px}to{opacity:1;translate:0 0}}
-  @keyframes muCarte{from{opacity:0;translate:0 40px;scale:.97}to{opacity:1;translate:0 0;scale:1}}
-  @keyframes muLigne{from{opacity:0;translate:-14px 0}to{opacity:1;translate:0 0}}
-  @keyframes muCoche{from{scale:0;rotate:-90deg}to{scale:1;rotate:0deg}}
-  @supports (animation-timeline: view()){
-    body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) :is(.mu-titre2, .mu-apparait){animation:muVoir cubic-bezier(.25,.8,.3,1) both;animation-timeline:view();animation-range:entry 5% entry 70%}
-    @keyframes muVoir{from{opacity:0;translate:0 28px}to{opacity:1;translate:0 0}}
-    body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-bref::before{animation:muBarre linear both;animation-timeline:view();animation-range:entry 10% cover 30%}
-    @keyframes muBarre{from{scale:1 0}to{scale:1 1}}
-    body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-loi li{animation:muGlisse cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% entry 90%}
-    @keyframes muGlisse{from{opacity:0;translate:-32px 0}to{opacity:1;translate:0 0}}
-    body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau tbody tr{animation:muVoir linear both;animation-timeline:view();animation-range:entry 0% entry 100%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-raison{animation:muVoir cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% entry 60%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-raison:nth-child(2){animation-range:entry 0% entry 78%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-raison:nth-child(3){animation-range:entry 0% entry 96%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-raison img{animation:muZoom linear both;animation-timeline:view();animation-range:entry 0% cover 50%}
-    @keyframes muZoom{from{scale:1.22}to{scale:1}}
-    body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-etapes::before{animation:muTrait linear both;animation-timeline:view();animation-range:entry 60% cover 30%}
-    @keyframes muTrait{from{scale:0 1}to{scale:1 1}}
-    body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-num{animation:muPastille linear both;animation-timeline:view();animation-range:entry 60% cover 20%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-etape:nth-child(2) .mu-num{animation-range:entry 80% cover 25%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-etape:nth-child(3) .mu-num{animation-range:entry 100% cover 30%}
-    @keyframes muPastille{0%,55%{background-color:#FFFFFF;color:#0008CF}100%{background-color:#0008CF;color:#FFFFFF}}
-    body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-compris-photo img{animation:muParallaxe linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
-    @keyframes muParallaxe{from{translate:0 0}to{translate:0 -9%}}
-    body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-carte{animation:muVoir cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% entry 80%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-carte i{animation:muCoche linear both;animation-timeline:view();animation-range:entry 50% entry 100%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tuile{animation:muVoir cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% entry 60%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tuile:nth-child(3n+2){animation-range:entry 0% entry 78%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tuile:nth-child(3n){animation-range:entry 0% entry 96%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-liens li{animation:muVoir cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% entry 60%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-liens li:nth-child(2){animation-range:entry 0% entry 78%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-liens li:nth-child(3){animation-range:entry 0% entry 96%}
-    @media (max-width:760px){
-      body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-etapes::before{animation-name:muTraitV}
-      @keyframes muTraitV{from{scale:1 0}to{scale:1 1}}
-      body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) :is(.mu-raison, .mu-tuile, .mu-liens li):nth-child(n){animation-range:entry 0% entry 60%}
-    }
-  }
+  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau tbody th{margin:0 0 8px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau tbody td{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:12px;padding:5px 0;font-size:.9375rem}
+  body[data-cleo-ds="v6"]:is([data-v6-page="51-service-mandataire"],[data-v6-page="51-service-mandataire-en"]) .mu-tableau tbody td::before{content:attr(data-libelle);font-size:var(--t-legende);line-height:1.45;color:var(--c-texte-3)}
 }

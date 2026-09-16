@@ -1,50 +1,28 @@
 /* ═══ BLOC « DEMANDES » ═══ 15/09/2026. Naomie montre la fiche d'une app dans un assistant (Gmail) : « mets carrément
-   des trucs comme ça aussi ». Composition relevée sur la capture : icône carrée sombre, nom en grand, sous-titre gris,
-   bouton pilule à droite ; dessous, une grande carte arrondie en dégradé doux et trois pastilles blanches translucides,
-   « @Nom » en gras puis la demande, un rond blanc fléché à droite. Chez Cleo : Satoshi, dégradé dans les bleus clairs de
-   la marque, flèche qui passe au bleu #0008CF au survol. Au défilement les pastilles montent une à une, le dégradé dérive
-   lentement ; rien ne bouge en « réduire les animations ». Fiches prestation (38, 44 à 50) et page Data. */
+   des trucs comme ça aussi ». Refonte du même jour (SYSTEME.md) : le dégradé bleu, le flou, les ombres et les pastilles
+   en pilule faisaient partie des signes « IA » relevés sur les références écartées. La carte devient un aplat crème,
+   les demandes des lignes blanches r12 sans ombre, le bouton un bouton secondaire du système. Aucune animation liée
+   au défilement : l'apparition passe par data-apparait (commun/mouvement.js). */
 
-body[data-cleo-ds="v6"] .cl-app{max-width:940px;margin:0 auto}
-body[data-cleo-ds="v6"] .cl-app-tete{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:18px;align-items:center;margin-bottom:26px}
-body[data-cleo-ds="v6"] .cl-app-icone{display:grid;place-items:center;width:64px;height:64px;border-radius:16px;background:#121212;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08), 0 6px 16px rgba(8,9,59,.18)}
-body[data-cleo-ds="v6"] .cl-app-icone img{width:42px;height:auto;filter:brightness(0) invert(1)}
-body[data-cleo-ds="v6"] .cl-app-nom b{display:block;font-size:1.75rem;font-weight:500;line-height:1.1;letter-spacing:-.02em;color:#1A1A1A}
-body[data-cleo-ds="v6"] .cl-app-nom span{display:block;margin-top:5px;font-size:.9375rem;line-height:1.4;color:#6B6B6B}
-body[data-cleo-ds="v6"] .cl-app-bouton:not(#_){display:inline-flex;align-items:center;padding:11px 20px;border-radius:9999px !important;background:#1A1A1A;color:#FFFFFF;font-size:.9375rem;font-weight:500;letter-spacing:0;text-transform:none;white-space:nowrap;transition:background .15s ease}
-body[data-cleo-ds="v6"] .cl-app-bouton:not(#_):hover{background:#0008CF;color:#FFFFFF}
+body[data-cleo-ds="v6"] .cl-app{max-width:880px;margin:0}
+body[data-cleo-ds="v6"] .cl-app-tete{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:16px;align-items:center;margin-bottom:24px}
+body[data-cleo-ds="v6"] .cl-app-icone{display:grid;place-items:center;width:52px;height:52px;border-radius:var(--r-carte);background:var(--c-texte)}
+body[data-cleo-ds="v6"] .cl-app-icone img{width:34px;height:auto;filter:brightness(0) invert(1)}
+body[data-cleo-ds="v6"] .cl-app-nom b{display:block;font-size:var(--t-h3);font-weight:500;line-height:1.2;letter-spacing:-.01em;color:var(--c-texte)}
+body[data-cleo-ds="v6"] .cl-app-nom span{display:block;margin-top:4px;font-size:.9375rem;line-height:1.4;color:var(--c-texte-2)}
 
-body[data-cleo-ds="v6"] .cl-demandes{position:relative;display:grid;gap:18px;justify-items:center;padding:clamp(56px, 8vw, 112px) clamp(16px, 6vw, 96px);border-radius:22px;overflow:clip;
-  background:
-    radial-gradient(55% 65% at 88% 18%, rgba(77,87,255,.55) 0%, rgba(77,87,255,0) 70%),
-    radial-gradient(45% 55% at 92% 96%, rgba(120,190,255,.7) 0%, rgba(120,190,255,0) 70%),
-    radial-gradient(60% 70% at 12% 28%, rgba(255,255,255,.85) 0%, rgba(255,255,255,0) 70%),
-    linear-gradient(135deg, #D6E6FF 0%, #B7D3FF 45%, #8EA8FF 100%);
-  background-size:160% 160%, 160% 160%, 160% 160%, 100% 100%;background-position:0% 0%, 0% 0%, 0% 0%, 0 0}
-body[data-cleo-ds="v6"] .cl-demande:not(#_){display:flex;align-items:center;gap:16px;width:min(100%, 700px);padding:14px 12px 14px 22px;border-radius:32px;background:rgba(255,255,255,.8);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 10px 28px rgba(8,9,59,.10), inset 0 0 0 1px rgba(255,255,255,.7);color:#1A1A1A;font-size:1rem;line-height:1.45;letter-spacing:0;text-transform:none;text-align:left;text-decoration:none;transition:background .2s ease, box-shadow .2s ease}
+body[data-cleo-ds="v6"] .cl-demandes{display:grid;gap:8px;padding:var(--p-carte);border-radius:var(--r-carte);background:var(--c-fond-2)}
+body[data-cleo-ds="v6"] .cl-demande:not(#_){display:flex;align-items:center;gap:16px;width:100%;padding:16px 16px 16px 20px;border-radius:var(--r-petit);background:var(--c-carte);box-shadow:none;color:var(--c-texte);font-size:var(--t-corps);line-height:1.45;letter-spacing:0;text-transform:none;text-align:left;text-decoration:none;transition:background-color .2s ease, color .2s ease}
 body[data-cleo-ds="v6"] .cl-demande > span{min-width:0}
-body[data-cleo-ds="v6"] .cl-demande b{font-weight:600}
-body[data-cleo-ds="v6"] .cl-demande i{flex:none;display:grid;place-items:center;width:36px;height:36px;margin-left:auto;border-radius:50%;background:#FFFFFF;box-shadow:0 1px 3px rgba(8,9,59,.14);color:#1A1A1A;font-style:normal;transition:background .2s ease, color .2s ease, transform .25s cubic-bezier(.22,1,.36,1)}
-body[data-cleo-ds="v6"] .cl-demande:not(#_):hover{background:rgba(255,255,255,.96);box-shadow:0 14px 34px rgba(8,9,59,.16), inset 0 0 0 1px #FFFFFF}
-body[data-cleo-ds="v6"] .cl-demande:hover i{background:#0008CF;color:#FFFFFF;transform:translateX(3px)}
-body[data-cleo-ds="v6"] .cl-demande:focus-visible{outline:2px solid #0008CF;outline-offset:3px}
-body[data-cleo-ds="v6"] .cl-app-note{margin:18px 0 0;text-align:center;font-size:.9375rem;color:#6B6B6B}
+body[data-cleo-ds="v6"] .cl-demande b{font-weight:500;color:var(--c-accent)}
+body[data-cleo-ds="v6"] .cl-demande i{flex:none;display:grid;place-items:center;width:28px;height:28px;margin-left:auto;border-radius:var(--r-petit);background:transparent;color:var(--c-texte-2);font-style:normal;transition:color .2s ease}
+body[data-cleo-ds="v6"] .cl-demande:not(#_):hover{background:#FFFFFF;color:var(--c-texte)}
+body[data-cleo-ds="v6"] .cl-demande:hover i{color:var(--c-accent)}
+body[data-cleo-ds="v6"] .cl-demande:focus-visible{outline:2px solid var(--c-accent);outline-offset:2px}
+body[data-cleo-ds="v6"] .cl-app-note{margin:16px 0 0;font-size:var(--t-legende);color:var(--c-texte-3)}
 
 @media (max-width:640px){
   body[data-cleo-ds="v6"] .cl-app-tete{grid-template-columns:auto minmax(0,1fr)}
   body[data-cleo-ds="v6"] .cl-app-bouton:not(#_){grid-column:1 / -1;justify-self:start}
-  body[data-cleo-ds="v6"] .cl-app-icone{width:52px;height:52px;border-radius:13px}
-  body[data-cleo-ds="v6"] .cl-app-nom b{font-size:1.375rem}
-  body[data-cleo-ds="v6"] .cl-demande:not(#_){padding:12px 10px 12px 16px;font-size:.9375rem;border-radius:24px}
-}
-
-@media (prefers-reduced-motion: no-preference){
-  body[data-cleo-ds="v6"] .cl-demandes{animation:clDerive 14s ease-in-out infinite alternate}
-  @keyframes clDerive{to{background-position:100% 60%, 40% 100%, 60% 30%, 0 0}}
-  @supports (animation-timeline: view()){
-    body[data-cleo-ds="v6"] .cl-demande:not(#_){animation:clPastille cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry calc(8% + var(--i) * 9%) cover calc(20% + var(--i) * 4%)}
-    body[data-cleo-ds="v6"] .cl-app-icone{animation:clIcone cubic-bezier(.22,1,.36,1) both;animation-timeline:view();animation-range:entry 0% cover 25%}
-    @keyframes clPastille{from{opacity:0;filter:blur(6px);translate:0 26px;scale:.97}}
-    @keyframes clIcone{from{opacity:0;scale:.6;rotate:-12deg}}
-  }
+  body[data-cleo-ds="v6"] .cl-demande:not(#_){padding:14px 12px 14px 16px;font-size:.9375rem}
 }

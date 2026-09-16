@@ -1,57 +1,48 @@
-/* ═══ MOUVEMENT « DERNIÈRE GÉNÉRATION » ═══ 15/09/2026. Naomie : « on y est presque, rends plus animé, encore plus
-   moderne, selon les derniers blogs Framer de ce qui marche bien ».
-   Lu sur framer.com le 15/09/2026 :
-   - « 12 of our favorite tech and SaaS websites in 2026 » (8/09/2026) : « Use proof, detail, and motion to build
-     confidence without adding noise », « Give visitors one clear next step at every stage » ;
-   - « 11 strategic animation techniques » : page transitions, text animations, mouse-triggered animations,
-     microinteractions, 3D effects ; « Give each animation a purpose », « Ensure accessibility » ;
-   - « 10 parallax scrolling examples » : « Respect the reduced-motion setting with a static fallback », « Test scroll
-     performance on a mid-range phone ».
-   Six gestes, pas plus (leçon du 14/09 : « trop le bordel ») : transitions entre pages, titres révélés mot à mot, lueur
-   et légère inclinaison des cartes sous la souris, boutons aimantés, fil de lecture sous la barre, soulignés qui se
-   tracent. Tout sous prefers-reduced-motion: no-preference ; les effets de curseur, à la souris seulement.
-   Le script (découpe des titres, curseur, fil) vit dans commun/mouvement.js. Satoshi partout. */
+/* ═══ MOUVEMENT DU SYSTÈME CLEO ═══ refonte du 15/09/2026 (SYSTEME.md §2, « Mouvement »).
+   Mesuré sur 10 références Framer : apparitions en fondu avec un léger flou, 400 à 700 ms, décalées de 50 à 75 ms,
+   presque rien de lié au défilement (0 à 19 éléments, contre 58 à 186 animations liées au défilement sur Cleo).
+   Retirés le même jour : l'inclinaison des cartes et le halo sous le curseur, les boutons aimantés, le fil de lecture,
+   la révélation mot à mot des h2. Restent : transitions entre pages, entrée mot à mot du SEUL h1, soulignés au survol,
+   ombre de la barre une fois la page défilée, et l'apparition data-apparait (script : commun/mouvement.js).
 
-/* Le fil de lecture existe toujours, invisible tant que rien ne l'anime. */
-body[data-cleo-ds="v6"] .mm-progres{position:absolute;left:0;right:0;bottom:-1px;height:2px;background:#0008CF;transform-origin:0 50%;scale:0 1;pointer-events:none;z-index:2}
+   API pour les pages
+   - data-apparait sur un bloc : il apparaît une fois, à l'entrée dans l'écran (opacité, flou 4 px, 6 px de montée).
+   - data-apparait-groupe sur un parent : ses 4 premiers enfants directs apparaissent décalés de 60 ms.
+   - Rien n'est caché sans script, ni en « réduire les animations », ni pour ce qui est déjà à l'écran au chargement :
+     le script ne pose la classe .mm-attend que sur les blocs sous le pli. */
 
 @media (prefers-reduced-motion: no-preference){
 
-  /* 1. Transitions entre pages, sans script (View Transitions entre documents). La barre ne bouge pas. */
+  /* Transitions entre pages, sans script. La barre ne bouge pas. */
   @view-transition{navigation:auto}
   body[data-cleo-ds="v6"] .nav{view-transition-name:cleo-nav}
   ::view-transition-group(cleo-nav){animation:none}
-  ::view-transition-old(root){animation:mmPageSort .26s cubic-bezier(.4,0,1,1) both}
-  ::view-transition-new(root){animation:mmPageEntre .5s cubic-bezier(.22,1,.36,1) both}
-  @keyframes mmPageSort{to{opacity:0;transform:translateY(-10px)}}
-  @keyframes mmPageEntre{from{opacity:0;transform:translateY(18px)}}
+  ::view-transition-old(root){animation:mmPageSort .2s cubic-bezier(.44,0,.56,1) both}
+  ::view-transition-new(root){animation:mmPageEntre .4s cubic-bezier(.44,0,.56,1) both}
+  @keyframes mmPageSort{to{opacity:0}}
+  @keyframes mmPageEntre{from{opacity:0}}
 
-  /* 2. Titres révélés mot à mot : du flou au net. Le titre du haut au chargement, les autres au défilement. */
+  /* Le h1 : mot à mot, du flou au net, au chargement. */
   body[data-cleo-ds="v6"] .mm-mot{display:inline-block}
-  body[data-cleo-ds="v6"] main h1 .mm-mot{animation:mmMot .8s cubic-bezier(.22,1,.36,1) both;animation-delay:calc(.08s + min(var(--i), 14) * 45ms)}
-  @keyframes mmMot{from{opacity:0;filter:blur(10px);transform:translateY(.32em)}}
-  @supports (animation-timeline: view()){
-    body[data-cleo-ds="v6"] main h2 .mm-mot{animation:mmMot linear both;animation-timeline:view();animation-range:entry calc(min(var(--i), 14) * 3%) cover calc(18% + min(var(--i), 14) * 1%)}
-  }
+  body[data-cleo-ds="v6"] main h1 .mm-mot{animation:mmMot var(--m-duree, 500ms) var(--m-courbe, cubic-bezier(.44,0,.56,1)) both;animation-delay:calc(60ms + min(var(--i), 12) * 30ms)}
+  @keyframes mmMot{from{opacity:0;filter:blur(4px);transform:translateY(6px)}}
 
-  /* 3 et 4. Sous la souris : les cartes s'inclinent à peine et une lueur bleue suit le curseur ; les boutons se laissent
-     attirer de quelques pixels. :not(#_) passe devant les survols déjà écrits page par page. */
-  @media (hover: hover) and (pointer: fine){
-    body[data-cleo-ds="v6"] main :is(.av-carte, .dt-usage, .av-garantie, .dt-client-carte, .dt-skill, .dt-offre-carte, .tk-case):not(#_){transform:perspective(900px) rotateX(var(--mm-rx, 0deg)) rotateY(var(--mm-ry, 0deg)) translateY(var(--mm-ty, 0px));transition:transform .55s cubic-bezier(.22,1,.36,1)}
-    body[data-cleo-ds="v6"] main .mm-survol:not(#_){--mm-ty:-3px;transition:transform .18s ease-out}
-    body[data-cleo-ds="v6"] main :is(.av-carte, .dt-usage, .av-garantie, .dt-client-carte, .dt-skill, .dt-offre-carte).mm-survol:not(#_){background-image:radial-gradient(380px circle at var(--mm-x, 50%) var(--mm-y, 50%), rgba(0,8,207,.075), transparent 65%)}
-    body[data-cleo-ds="v6"] :is(.hq-bouton, .tk-bouton, .btn-marque, [class*="-bouton"]):not(#_){transform:translate3d(var(--mm-bx, 0px), var(--mm-by, 0px), 0);transition:transform .35s cubic-bezier(.22,1,.36,1), background-color .15s ease, color .15s ease, border-color .15s ease}
-  }
+  /* L'apparition des blocs sous le pli. */
+  html.mm-js [data-apparait].mm-attend,
+  html.mm-js [data-apparait-groupe].mm-attend > *{opacity:0;filter:blur(4px);translate:0 6px}
+  html.mm-js [data-apparait],
+  html.mm-js [data-apparait-groupe] > *{transition:opacity var(--m-duree, 500ms) var(--m-courbe), filter var(--m-duree, 500ms) var(--m-courbe), translate var(--m-duree, 500ms) var(--m-courbe)}
+  html.mm-js [data-apparait-groupe] > :nth-child(2){transition-delay:60ms}
+  html.mm-js [data-apparait-groupe] > :nth-child(3){transition-delay:120ms}
+  html.mm-js [data-apparait-groupe] > :nth-child(n+4){transition-delay:180ms}
 
-  /* 5. Le fil de lecture sous la barre, et la barre qui prend une ombre dès qu'on quitte le haut de page. */
+  /* La barre prend un filet dès qu'on quitte le haut de page. */
   @supports (animation-timeline: scroll()){
-    body[data-cleo-ds="v6"] .mm-progres{animation:mmProgres linear both;animation-timeline:scroll(root)}
-    body[data-cleo-ds="v6"] .nav{animation:mmNav linear both;animation-timeline:scroll(root);animation-range:0 160px}
-    @keyframes mmProgres{to{scale:1 1}}
-    @keyframes mmNav{to{box-shadow:0 12px 32px -20px rgba(8,9,59,.3)}}
+    body[data-cleo-ds="v6"] .nav{animation:mmNav linear both;animation-timeline:scroll(root);animation-range:0 64px}
+    @keyframes mmNav{to{box-shadow:0 1px 0 rgba(26,26,26,.10)}}
   }
 
-  /* 6. Les liens « voir… » se soulignent de gauche à droite au survol. */
-  body[data-cleo-ds="v6"] main :is(.av-lien, .dt-lien):not(#_){text-decoration:none;background:linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;transition:background-size .35s cubic-bezier(.22,1,.36,1)}
-  body[data-cleo-ds="v6"] main :is(.av-lien, .dt-lien):not(#_):hover{background-size:100% 1px}
+  /* Les liens « voir… » se soulignent au survol. */
+  body[data-cleo-ds="v6"] main :is(.av-lien, .dt-lien, .sy-lien):not(#_){text-decoration:none;background:linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;transition:background-size .3s var(--m-courbe, ease)}
+  body[data-cleo-ds="v6"] main :is(.av-lien, .dt-lien, .sy-lien):not(#_):hover{background-size:100% 1px}
 }

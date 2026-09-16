@@ -4,26 +4,23 @@
      profond en section-serree, puis le corps en res-corps avec sa nav latérale.
      Matière relevée sur https://www.cleolabs.co/fr/legal-data (zone
      proxifiée, servie par le composant CoverageAtlas de cleo-landing). ═══ -->
-<section class="sur-sombre section-serree" style="padding-bottom:var(--s-64)">
+<section class="sur-sombre section-serree ra-tete-section">
   <div class="conteneur">
     <!-- Le bandeau ne passe PAS par .res-tete : mesuré à 390 px, cette grille
          reste sur deux colonnes de 157 px (elle n'est pas dans la media query
          de 640), et un titre de dix mots y tombait à deux mots par ligne. En
          flux de bloc il se replie tout seul, sans grille posée en inline. -->
     <div class="t-label" style="margin-bottom:16px">Coverage atlas</div>
-    <h1 class="t-hero" style="margin:0;max-width:760px">Every product, every authority,
-      <span class="attenue">and what we track live.</span></h1>
-    <p class="t-body chapo" style="margin:20px 0 0">A living map of the chain
-      product → HS code → regulation → authority, and of the share Cleo captures through a
-      live monitoring feed. Green is covered. Grey is a blind spot.</p>
+    <h1 class="t-hero" style="margin:0;max-width:760px">Cleo's regulatory coverage, <span class="attenue">product by product, authority by authority.</span></h1>
+    <p class="t-body chapo" style="margin:20px 0 0">The chain product → HS code → regulation → authority, and the share of each link that Cleo tracks continuously. The stronger the blue, the larger that share.</p>
     <div class="rang-boutons">
-      <a class="btn btn-marque" href="21-inscription.html">Get API access</a>
+      <a class="btn btn-marque" href="21-inscription.html">Request access</a>
       <a class="btn btn-contour" href="#explorateur">Explore the coverage</a>
     </div>
   </div>
 </section>
 
-<section class="section" style="padding-top:88px">
+<section class="section ra-corps-section">
   <div class="conteneur">
     <div class="res-corps atlas">
       <nav class="res-nav">
@@ -39,41 +36,40 @@
         <!-- ── Le périmètre : les cinq compteurs de la page servie ── -->
         <h2 class="t-h1" id="perimetre" style="margin-bottom:24px">The scope, down to the number</h2>
         <div class="g4" style="margin-bottom:24px">
-          <div class="carte" style="padding:26px;box-shadow:var(--shadow-sm)">
+          <div class="carte" style="padding:26px">
             <div class="t-display" style="margin-bottom:8px">106</div>
             <div class="t-caption">countries covered</div>
           </div>
-          <div class="carte" style="padding:26px;box-shadow:var(--shadow-sm)">
+          <div class="carte" style="padding:26px">
             <div class="t-display" style="margin-bottom:8px">25,000</div>
-            <div class="t-caption">regulations indexed</div>
+            <div class="t-caption">regulations mapped</div>
           </div>
-          <div class="carte" style="padding:26px;box-shadow:var(--shadow-sm)">
+          <div class="carte" style="padding:26px">
             <div class="t-display" style="margin-bottom:8px">19,000</div>
-            <div class="t-caption">regulatory authorities</div>
+            <div class="t-caption">regulatory authorities tracked</div>
           </div>
-          <div class="carte" style="padding:26px;box-shadow:var(--shadow-sm)">
+          <div class="carte" style="padding:26px">
             <div class="t-display" style="margin-bottom:8px">3,700</div>
             <div class="t-caption">official sources</div>
           </div>
         </div>
-        <div class="carte" style="padding:26px;box-shadow:var(--shadow-sm);margin-bottom:18px">
+        <div class="carte" style="padding:26px;margin-bottom:18px">
           <div class="t-display" style="margin-bottom:8px">68%</div>
-          <div class="t-caption" style="margin-bottom:14px">regs under live monitoring</div>
-          <div class="t-body" style="margin:0">Share of consumer product regulations tied to a live monitoring feed.</div>
+          <div class="t-caption" style="margin-bottom:14px">of regulations tracked continuously</div>
+          <div class="t-body" style="margin:0">Share of consumer product regulations tied to a monitoring feed.</div>
         </div>
         <p class="t-caption atlas-note" style="margin:0 0 56px">Scope: the Cleo product
-          monitoring graph, indexed by HS code. The live capture % is computed on consumer
-          product regulations (retail): mappings for industrial regimes (customs, export
+          monitoring graph, indexed by HS code. The continuously tracked share is computed on consumer
+          product regulations (retail): links for industrial regimes (customs, export
           control, REACH…) are inventoried but not yet followed by a feed.</p>
         <!-- ── Veille live par marché ── -->
-        <h2 class="t-h1" id="marches" style="margin-bottom:8px">Live monitoring by market</h2>
-        <p class="t-body" style="margin:0 0 28px">Size = regulations tracked · colour = share
-          with a live feed.</p>
+        <h2 class="t-h1" id="marches" style="margin-bottom:8px">Continuous monitoring by market</h2>
+        <p class="t-body" style="margin:0 0 28px">Size = regulations tracked · blue intensity = share tracked by a monitoring feed.</p>
         <div class="g2" style="margin-bottom:28px">
-          <div class="carte" style="padding:26px;box-shadow:var(--shadow-sm)">
+          <div class="carte" style="padding:26px">
             <div class="t-label" style="margin-bottom:14px">Global coverage</div>
             <div class="t-display" style="margin-bottom:6px">64.3%</div>
-            <div class="t-caption" style="margin-bottom:6px">of mappings under live monitoring</div>
+            <div class="t-caption" style="margin-bottom:6px">of links tracked continuously</div>
             <div class="t-body" style="margin:0 0 20px">93 markets are monitored at 30% and above.</div>
             <div style="display:flex;align-items:center;gap:12px;padding:7px 0">
               <span class="marqueur m-couvert" style="min-width:46px;justify-content:center">93</span>
@@ -89,37 +85,37 @@
             </div>
             <div style="display:flex;align-items:center;gap:12px;padding:7px 0">
               <span class="marqueur m-manquant" style="min-width:46px;justify-content:center">37</span>
-              <span class="t-body">markets with no live feed</span>
+              <span class="t-body">markets with no monitoring feed</span>
             </div>
           </div>
-          <div class="carte" style="padding:26px;box-shadow:var(--shadow-sm)">
-            <div class="t-label" style="margin-bottom:16px">Most regulated types</div>
+          <div class="carte" style="padding:26px">
+            <div class="t-label" style="margin-bottom:16px">Most regulated product types</div>
             <div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:9px 0;border-top:1px solid var(--c-border)">
-              <span class="t-body">Food Core</span>
+              <span class="t-body">Food core</span>
               <span class="marqueur m-couvert">76%</span>
             </div>
             <div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:9px 0;border-top:1px solid var(--c-border)">
-              <span class="t-body">Industrial Chemicals</span>
+              <span class="t-body">Industrial chemicals</span>
               <span class="marqueur m-couvert">57%</span>
             </div>
             <div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:9px 0;border-top:1px solid var(--c-border)">
-              <span class="t-body">Consumer Electronics</span>
+              <span class="t-body">Consumer electronics</span>
               <span class="marqueur m-couvert">64%</span>
             </div>
             <div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:9px 0;border-top:1px solid var(--c-border)">
-              <span class="t-body">Chemicals Intermediates</span>
+              <span class="t-body">Chemical intermediates</span>
               <span class="marqueur m-manquant">0%</span>
             </div>
             <div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:9px 0;border-top:1px solid var(--c-border)">
-              <span class="t-body">Live Animals Raw</span>
+              <span class="t-body">Live animals</span>
               <span class="marqueur m-manquant">0%</span>
             </div>
             <div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:9px 0;border-top:1px solid var(--c-border)">
-              <span class="t-body">Jewelry Watches Eyewear</span>
+              <span class="t-body">Jewellery, watches and eyewear</span>
               <span class="marqueur m-couvert">61%</span>
             </div>
             <div style="display:flex;align-items:baseline;justify-content:space-between;gap:14px;padding:9px 0;border-top:1px solid var(--c-border)">
-              <span class="t-body">Agri Commodities Raw</span>
+              <span class="t-body">Agricultural raw commodities</span>
               <span class="marqueur m-manquant">0%</span>
             </div>
           </div>
@@ -241,11 +237,11 @@
               carte.setMinZoom(carte.getZoom())
               var racine = getComputedStyle(document.documentElement)
               MARCHES.forEach(function(m){
-                var couleur = racine.getPropertyValue('--c-' + bande(m.pct)).trim()
+                var couleur = '#0008CF'
                 L.circleMarker([m.lat, m.lng], {
                   radius: rayon(m.pct), color: '#FFFFFF', weight: 1.5,
-                  fillColor: couleur, fillOpacity: 0.85
-                }).addTo(carte).bindTooltip(m.code + ' — ' + texte(m.pct), { direction: 'top', offset: [0, -4] })
+                  fillColor: couleur, fillOpacity: ({ pass: 0.85, risk: 0.45, block: 0.2 })[bande(m.pct)]
+                }).addTo(carte).bindTooltip(m.code + ' · ' + texte(m.pct), { direction: 'top', offset: [0, -4] })
               })
               if (tactile) {
                 var bouton = document.querySelector('.atlas-carte-activer')
@@ -264,7 +260,7 @@
              propre conteneur : la page, elle, ne défile jamais en largeur. ── -->
         <h2 class="t-h1" id="matrice" style="margin-bottom:8px">Matrix: product type × market</h2>
         <p class="t-body" style="margin:0 0 28px">Each cell = share of the regulations for that
-          product type, in that market, monitored live.</p>
+          product type, in that market, tracked continuously.</p>
         <p class="t-caption atlas-defile" style="margin:0 0 10px">The table scrolls horizontally.</p>
         <div class="table-defilante atlas-matrice" style="margin-bottom:14px">
           <table style="width:100%;min-width:900px;border-collapse:separate;border-spacing:0">
@@ -291,7 +287,7 @@
             </thead>
             <tbody>
               <tr>
-                <td class="t-body" style="padding:9px 12px 9px 0;border-top:1px solid var(--c-border);white-space:nowrap">Industrial Chemicals</td>
+                <td class="t-body" style="padding:9px 12px 9px 0;border-top:1px solid var(--c-border);white-space:nowrap">Industrial chemicals</td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">100</span></td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">88</span></td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">100</span></td>
@@ -329,7 +325,7 @@
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-attente">5</span></td>
               </tr>
               <tr>
-                <td class="t-body" style="padding:9px 12px 9px 0;border-top:1px solid var(--c-border);white-space:nowrap">Food Core</td>
+                <td class="t-body" style="padding:9px 12px 9px 0;border-top:1px solid var(--c-border);white-space:nowrap">Food core</td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">90</span></td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">84</span></td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">91</span></td>
@@ -348,7 +344,7 @@
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-bloque">3</span></td>
               </tr>
               <tr>
-                <td class="t-body" style="padding:9px 12px 9px 0;border-top:1px solid var(--c-border);white-space:nowrap">Consumer Electronics</td>
+                <td class="t-body" style="padding:9px 12px 9px 0;border-top:1px solid var(--c-border);white-space:nowrap">Consumer electronics</td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">91</span></td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">84</span></td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">96</span></td>
@@ -367,7 +363,7 @@
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-attente">28</span></td>
               </tr>
               <tr>
-                <td class="t-body" style="padding:9px 12px 9px 0;border-top:1px solid var(--c-border);white-space:nowrap">Medical Devices</td>
+                <td class="t-body" style="padding:9px 12px 9px 0;border-top:1px solid var(--c-border);white-space:nowrap">Medical devices</td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">89</span></td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">91</span></td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">46</span></td>
@@ -386,7 +382,7 @@
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">80</span></td>
               </tr>
               <tr>
-                <td class="t-body" style="padding:9px 12px 9px 0;border-top:1px solid var(--c-border);white-space:nowrap">Footwear Leather</td>
+                <td class="t-body" style="padding:9px 12px 9px 0;border-top:1px solid var(--c-border);white-space:nowrap">Footwear and leather</td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">85</span></td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">91</span></td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">80</span></td>
@@ -405,7 +401,7 @@
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-attente">6</span></td>
               </tr>
               <tr>
-                <td class="t-body" style="padding:9px 12px 9px 0;border-top:1px solid var(--c-border);white-space:nowrap">Home Furniture</td>
+                <td class="t-body" style="padding:9px 12px 9px 0;border-top:1px solid var(--c-border);white-space:nowrap">Home furniture</td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">75</span></td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">89</span></td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">91</span></td>
@@ -424,7 +420,7 @@
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">100</span></td>
               </tr>
               <tr>
-                <td class="t-body" style="padding:9px 12px 9px 0;border-top:1px solid var(--c-border);white-space:nowrap">Diy Tools Hardware</td>
+                <td class="t-body" style="padding:9px 12px 9px 0;border-top:1px solid var(--c-border);white-space:nowrap">DIY tools and hardware</td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">100</span></td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">64</span></td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">100</span></td>
@@ -443,7 +439,7 @@
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="attenue">·</span></td>
               </tr>
               <tr>
-                <td class="t-body" style="padding:9px 12px 9px 0;border-top:1px solid var(--c-border);white-space:nowrap">Textiles Home</td>
+                <td class="t-body" style="padding:9px 12px 9px 0;border-top:1px solid var(--c-border);white-space:nowrap">Home textiles</td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">100</span></td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">100</span></td>
                 <td style="padding:9px 6px;border-top:1px solid var(--c-border);text-align:center"><span class="marqueur m-couvert">100</span></td>
@@ -465,9 +461,7 @@
           </table>
         </div>
         <p class="t-caption atlas-note" style="margin:0 0 56px">The nine types above are the ones
-          that carry a value. The eight other types in the served matrix (Machinery
-          Industrial Components, Base Metals Raw, Textile Raw Materials, Agri Commodities Raw,
-          Plastics Rubber Raw, Instruments Industrial, Transport Industrial, Wood Raw, and the
+          that carry a value. The eight other types in the served matrix (industrial machinery components, raw base metals, textile raw materials, agricultural raw commodities, raw plastics and rubber, industrial instruments, industrial transport, raw wood, and the
           raw materials that follow) are at 0 across the sixteen markets.</p>
         <!-- ── Produit → autorités : les familles et leur volume de règles ── -->
         <h2 class="t-h1" id="autorites" style="margin-bottom:8px">Product → authorities</h2>
@@ -478,29 +472,29 @@
           <span class="t-caption">Rules attached</span>
         </div>
         <div class="mesures" style="margin-bottom:56px">
-          <div class="ligne"><div class="libelle">Home &amp; Diy</div><div class="valeur">9,613</div></div>
-          <div class="ligne"><div class="libelle">Chemicals &amp; Industrial</div><div class="valeur">8,115</div></div>
-          <div class="ligne"><div class="libelle">Apparel &amp; Textile</div><div class="valeur">5,634</div></div>
-          <div class="ligne"><div class="libelle">Automotive &amp; Mobility</div><div class="valeur">5,018</div></div>
-          <div class="ligne"><div class="libelle">Food &amp; Beverage</div><div class="valeur">4,448</div></div>
-          <div class="ligne"><div class="libelle">Packaging &amp; Environment</div><div class="valeur">4,226</div></div>
-          <div class="ligne"><div class="libelle">Electronics &amp; Connected</div><div class="valeur">3,529</div></div>
-          <div class="ligne"><div class="libelle">Cosmetics &amp; Personal Care</div><div class="valeur">3,309</div></div>
-          <div class="ligne"><div class="libelle">Medical &amp; Health</div><div class="valeur">3,032</div></div>
-          <div class="ligne"><div class="libelle">Jewelry &amp; Accessories</div><div class="valeur">2,982</div></div>
-          <div class="ligne"><div class="libelle">Sports &amp; Outdoor</div><div class="valeur">2,834</div></div>
-          <div class="ligne"><div class="libelle">Pet &amp; Animal</div><div class="valeur">1,854</div></div>
-          <div class="ligne"><div class="libelle">(Non Retail)</div><div class="valeur">1,580</div></div>
-          <div class="ligne"><div class="libelle">Kitchen &amp; Food Contact</div><div class="valeur">1,482</div></div>
-          <div class="ligne"><div class="libelle">Ppe &amp; Safety</div><div class="valeur">905</div></div>
-          <div class="ligne"><div class="libelle">Tobacco &amp; Adult</div><div class="valeur">442</div></div>
-          <div class="ligne"><div class="libelle">Toys &amp; Childcare</div><div class="valeur">388</div></div>
+          <div class="ligne"><div class="libelle">Home and DIY</div><div class="valeur">9,613</div></div>
+          <div class="ligne"><div class="libelle">Chemicals and industrial</div><div class="valeur">8,115</div></div>
+          <div class="ligne"><div class="libelle">Apparel and textile</div><div class="valeur">5,634</div></div>
+          <div class="ligne"><div class="libelle">Automotive and mobility</div><div class="valeur">5,018</div></div>
+          <div class="ligne"><div class="libelle">Food and beverage</div><div class="valeur">4,448</div></div>
+          <div class="ligne"><div class="libelle">Packaging and environment</div><div class="valeur">4,226</div></div>
+          <div class="ligne"><div class="libelle">Electronics and connected devices</div><div class="valeur">3,529</div></div>
+          <div class="ligne"><div class="libelle">Cosmetics and personal care</div><div class="valeur">3,309</div></div>
+          <div class="ligne"><div class="libelle">Medical and health</div><div class="valeur">3,032</div></div>
+          <div class="ligne"><div class="libelle">Jewellery and accessories</div><div class="valeur">2,982</div></div>
+          <div class="ligne"><div class="libelle">Sports and outdoor</div><div class="valeur">2,834</div></div>
+          <div class="ligne"><div class="libelle">Pets and animals</div><div class="valeur">1,854</div></div>
+          <div class="ligne"><div class="libelle">(Non-retail)</div><div class="valeur">1,580</div></div>
+          <div class="ligne"><div class="libelle">Kitchen and food contact</div><div class="valeur">1,482</div></div>
+          <div class="ligne"><div class="libelle">PPE and safety</div><div class="valeur">905</div></div>
+          <div class="ligne"><div class="libelle">Tobacco and adult products</div><div class="valeur">442</div></div>
+          <div class="ligne"><div class="libelle">Toys and childcare</div><div class="valeur">388</div></div>
         </div>
         <!-- ── Explorateur produit SH6 ── -->
         <h2 class="t-h1" id="explorateur" style="margin-bottom:8px">HS6 product explorer</h2>
         <p class="t-body" style="margin:0 0 24px">One code, what it triggers: the number of
-          regulations, markets and authorities that follow it, and whether a feed captures it.</p>
-        <p class="t-caption atlas-note" style="margin:0 0 24px">Six codes, as examples. The “Monitoring” column says whether a feed captures the code live.</p>
+          regulations, markets and authorities that follow it, and whether a monitoring feed tracks it.</p>
+        <p class="t-caption atlas-note" style="margin:0 0 24px">Six codes, as examples. The “Monitoring” column says whether a feed tracks the code.</p>
         <p class="t-caption atlas-defile" style="margin:0 0 10px">The table scrolls horizontally.</p>
         <div class="table-defilante atlas-sh6" style="margin-bottom:16px">
           <table style="width:100%;min-width:860px;border-collapse:separate;border-spacing:0">
@@ -509,7 +503,7 @@
                 <th class="t-caption" style="text-align:left;padding:0 12px 14px;font-weight:400">HS6</th>
                 <th class="t-caption" style="text-align:left;padding:0 12px 14px;font-weight:400">Product</th>
                 <th class="t-caption" style="text-align:left;padding:0 12px 14px;font-weight:400">Type</th>
-                <th class="t-caption" style="text-align:right;padding:0 12px 14px;font-weight:400">regs</th>
+                <th class="t-caption" style="text-align:right;padding:0 12px 14px;font-weight:400">Regulations</th>
                 <th class="t-caption" style="text-align:right;padding:0 12px 14px;font-weight:400">Markets</th>
                 <th class="t-caption" style="text-align:right;padding:0 12px 14px;font-weight:400">Authorities</th>
                 <th class="t-caption" style="text-align:center;padding:0 12px 14px;font-weight:400">Monitoring</th>
@@ -518,8 +512,8 @@
             <tbody>
               <tr>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);white-space:nowrap">010121</td>
-                <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);max-width:320px">Horses; live, pure-bred breeding animals</td>
-                <td class="t-caption" style="padding:11px 12px;border-top:1px solid var(--c-border);white-space:nowrap">Live Animals Raw</td>
+                <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);max-width:320px">Horses, live: pure-bred breeding animals</td>
+                <td class="t-caption" style="padding:11px 12px;border-top:1px solid var(--c-border);white-space:nowrap">Live animals</td>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);text-align:right">811</td>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);text-align:right">55</td>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);text-align:right">485</td>
@@ -527,8 +521,8 @@
               </tr>
               <tr>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);white-space:nowrap">010129</td>
-                <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);max-width:320px">Horses; live, other than pure-bred breeding animals</td>
-                <td class="t-caption" style="padding:11px 12px;border-top:1px solid var(--c-border);white-space:nowrap">Live Animals Raw</td>
+                <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);max-width:320px">Horses, live: other than pure-bred breeding animals</td>
+                <td class="t-caption" style="padding:11px 12px;border-top:1px solid var(--c-border);white-space:nowrap">Live animals</td>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);text-align:right">833</td>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);text-align:right">57</td>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);text-align:right">498</td>
@@ -536,8 +530,8 @@
               </tr>
               <tr>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);white-space:nowrap">010130</td>
-                <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);max-width:320px">Asses; live</td>
-                <td class="t-caption" style="padding:11px 12px;border-top:1px solid var(--c-border);white-space:nowrap">Live Animals Raw</td>
+                <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);max-width:320px">Asses, live</td>
+                <td class="t-caption" style="padding:11px 12px;border-top:1px solid var(--c-border);white-space:nowrap">Live animals</td>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);text-align:right">832</td>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);text-align:right">57</td>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);text-align:right">498</td>
@@ -545,8 +539,8 @@
               </tr>
               <tr>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);white-space:nowrap">020110</td>
-                <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);max-width:320px">Meat; of bovine animals, carcasses and half-carcasses, fresh or chilled</td>
-                <td class="t-caption" style="padding:11px 12px;border-top:1px solid var(--c-border);white-space:nowrap">Food Core</td>
+                <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);max-width:320px">Meat of bovine animals, fresh or chilled: carcasses and half-carcasses</td>
+                <td class="t-caption" style="padding:11px 12px;border-top:1px solid var(--c-border);white-space:nowrap">Food core</td>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);text-align:right">28</td>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);text-align:right">11</td>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);text-align:right">13</td>
@@ -554,8 +548,8 @@
               </tr>
               <tr>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);white-space:nowrap">020120</td>
-                <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);max-width:320px">Meat; of bovine animals, cuts with bone in (excluding carcasses and half-carcasses), fresh or chilled</td>
-                <td class="t-caption" style="padding:11px 12px;border-top:1px solid var(--c-border);white-space:nowrap">Food Core</td>
+                <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);max-width:320px">Meat of bovine animals, fresh or chilled: other cuts with bone in</td>
+                <td class="t-caption" style="padding:11px 12px;border-top:1px solid var(--c-border);white-space:nowrap">Food core</td>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);text-align:right">28</td>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);text-align:right">11</td>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);text-align:right">13</td>
@@ -563,8 +557,8 @@
               </tr>
               <tr>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);white-space:nowrap">020311</td>
-                <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);max-width:320px">Meat; of swine, carcasses and half-carcasses, fresh or chilled</td>
-                <td class="t-caption" style="padding:11px 12px;border-top:1px solid var(--c-border);white-space:nowrap">Food Core</td>
+                <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);max-width:320px">Meat of swine, fresh or chilled: carcasses and half-carcasses</td>
+                <td class="t-caption" style="padding:11px 12px;border-top:1px solid var(--c-border);white-space:nowrap">Food core</td>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);text-align:right">28</td>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);text-align:right">11</td>
                 <td class="t-body" style="padding:11px 12px;border-top:1px solid var(--c-border);text-align:right">13</td>
@@ -575,20 +569,23 @@
         </div>
         <p class="t-caption" style="margin:0">Six HS6 codes shown.</p>
         <p class="t-caption atlas-note" style="margin:56px 0 0;padding-top:26px;border-top:1px solid var(--c-border)">
-          Snapshot as of 2026-07-06 · Source: Cleo's product × authority reference base.
+          Snapshot as of 6 July 2026 · Source: Cleo's product × authority reference base.
           All figures computed directly from the view.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ FIN DE PAGE ═══ bandeau tramé à la Tenkara (15/09/2026) ; textes repris du bloc de fin de page commun. -->
+<!-- ═══ FIN DE PAGE ═══ bandeau final commun (SYSTEME.md §3, refonte du 15/09/2026). -->
 <section class="section ra-bandeau">
   <div class="conteneur">
-    <div class="tk-trame" aria-hidden="true"><img src="img:chaines" alt=""></div>
-    <p class="tk-etiquette">30 minutes with the team</p>
-    <h2 class="ra-bandeau-titre">Make compliance your competitive advantage.</h2>
-    <a class="tk-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Request a demo <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <p class="sy-surtitre">30 minutes with the team</p>
+    <h2 class="ra-bandeau-titre">See what Cleo finds on your own products</h2>
+    <p class="ra-bandeau-texte">One product range and two markets are enough.</p>
+    <div class="sy-actions">
+      <a class="sy-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Book a demo</a>
+      <a class="sy-bouton-secondaire" href="37-compliance-service-en.html">See the catalogue</a>
+    </div>
   </div>
 </section>
 <!--PIED-->

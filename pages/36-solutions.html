@@ -1,132 +1,94 @@
 <!--NAV-->
 
-<!-- ═══ HERO ═══ 15/09/2026, design de la page 43 : titre à gauche, média tramé en grande carte. -->
+<!-- ═══ HAUT DE PAGE ═══ Refonte du 15/09/2026 (SYSTEME.md). Générateur agents/audience-preuve/gen-audience.mjs périmé.
+     h1 : mot-clé de l'étude SEO (solutions/product-compliance : « multi-market regulatory mapping ») et chiffre canon.
+     « Donnez votre nom de domaine. » retiré : aucun autre écran ne décrit ce parcours (relevé wording). -->
 <section class="section ap-hero">
   <div class="conteneur">
     <div class="ap-hero-grille">
       <div class="ap-hero-texte">
-        <p class="ap-surtitre">Conformité produit</p>
-        <h1 class="ap-h1">La conformité produit sur 106 pays, <span class="attenue">au même endroit.</span></h1>
-        <p class="ap-lead">Donnez votre nom de domaine. Chaque produit est rapproché de chaque réglementation qui le touche : par marché, par référence, par échéance.</p>
-        <a class="ap-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <span aria-hidden="true">»</span></a>
+        <p class="sy-surtitre">Conformité produit</p>
+        <h1 class="ap-h1">La conformité produit de 106 pays, au même endroit.</h1>
+        <p class="sy-lead">Cleo rapproche chaque produit de chaque réglementation qui le concerne, marché par marché, avec son échéance.</p>
+        <div class="ap-actions"><a class="sy-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <svg class="ap-fleche" viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
       </div>
-      
     </div>
-    <figure class="ap-hero-media tk-case" aria-hidden="true"><div class="tk-trame"><img src="img:parc-voitures" alt=""></div><p class="tk-etiquette">Conformité produit</p></figure>
   </div>
+  <figure class="ap-hero-media sy-media" aria-hidden="true"><img src="img:parc-voitures" alt=""></figure>
 </section>
 
-<!-- ═══ LA MATRICE ═══ -->
+<!-- ═══ LE TABLEAU ═══ exemple illustratif, rendu cohérent le 15/09/2026 : chaque texte vise un produit qu'il peut toucher
+     (l'ancien tableau rangeait un concentrateur connecté en cosmétique et un appareil de santé sous la CPSIA).
+     Faits : RSGP (UE) 2023/988, applicable depuis le 13 décembre 2024 ; REACH annexe XVII ; directive 2014/53/UE (RED) ;
+     ESPR (UE) 2024/1781, exigences fixées produit par produit par actes délégués ; FCC, 47 CFR partie 15 ; MoCRA (cosmétiques,
+     États-Unis) ; marque PSE (Japon, adaptateurs secteur) ; CPSIA (produits pour enfants, États-Unis).
+     Couleurs de statut (vert, ocre, rouge) retirées : le statut se lit en texte. -->
 <section class="section ap-bloc">
-  <div class="conteneur">
-    <h2 class="ap-titre">Votre paysage réglementaire, dans un tableau</h2>
+  <div class="conteneur" data-apparait>
+    <div class="sy-entete"><h2 class="ap-titre">Chaque produit face à ses réglementations, dans un tableau</h2></div>
     <div class="ap-table-cadre">
       <table class="matrice ap-matrice">
         <thead><tr><th>Réglementation</th><th>Juridiction</th><th>Produit</th><th>Catégorie</th><th>État</th><th>Échéance</th></tr></thead>
         <tbody>
-          <tr><td>GPSR</td><td>Union européenne</td><td>Smart Sensor v3</td><td>Sécurité générale</td><td><span class="m-attente">À vérifier</span></td><td>12.11.2026</td></tr>
-          <tr><td>REACH annexe XVII</td><td>Union européenne</td><td>Module Analytics</td><td>Substances</td><td><span class="m-couvert">Couvert</span></td><td>en vigueur</td></tr>
-          <tr><td>Marquage CE</td><td>Union européenne</td><td>IoT Gateway Pro</td><td>Conformité</td><td><span class="m-couvert">Couvert</span></td><td>en vigueur</td></tr>
-          <tr><td>ESPR, passeport produit</td><td>Union européenne</td><td>Wearable v2</td><td>Écoconception</td><td><span class="m-attente">À vérifier</span></td><td>2030</td></tr>
-          <tr><td>CPSIA</td><td>États-Unis</td><td>Health Monitor</td><td>Sécurité enfants</td><td><span class="m-manquant">Donnée manquante</span></td><td>en vigueur</td></tr>
-          <tr><td>MoCRA</td><td>États-Unis</td><td>Smart Hub</td><td>Cosmétique</td><td><span class="m-attente">À vérifier</span></td><td>en vigueur</td></tr>
-          <tr><td>FCC partie 15</td><td>États-Unis</td><td>IoT Gateway Pro</td><td>Radiofréquence</td><td><span class="m-couvert">Couvert</span></td><td>en vigueur</td></tr>
-          <tr><td>Marque PSE</td><td>Japon</td><td>Smart Sensor v3</td><td>Électrique</td><td><span class="m-manquant">Donnée manquante</span></td><td>en vigueur</td></tr>
+          <tr><td>RSGP (UE) 2023/988</td><td>Union européenne</td><td>Capteur connecté v3</td><td>Sécurité générale</td><td><span class="ap-etat ap-etat-attente">À vérifier</span></td><td>en application</td></tr>
+          <tr><td>REACH, annexe XVII</td><td>Union européenne</td><td>Passerelle IoT Pro</td><td>Substances</td><td><span class="ap-etat ap-etat-ok">Couvert</span></td><td>en application</td></tr>
+          <tr><td>Directive 2014/53/UE</td><td>Union européenne</td><td>Passerelle IoT Pro</td><td>Équipements radio</td><td><span class="ap-etat ap-etat-ok">Couvert</span></td><td>en application</td></tr>
+          <tr><td>ESPR, passeport numérique</td><td>Union européenne</td><td>Montre connectée v2</td><td>Écoconception</td><td><span class="ap-etat ap-etat-attente">À vérifier</span></td><td>selon l'acte délégué</td></tr>
+          <tr><td>FCC, partie 15</td><td>États-Unis</td><td>Passerelle IoT Pro</td><td>Radiofréquence</td><td><span class="ap-etat ap-etat-ok">Couvert</span></td><td>en application</td></tr>
+          <tr><td>MoCRA</td><td>États-Unis</td><td>Lotion pour le corps</td><td>Cosmétique</td><td><span class="ap-etat ap-etat-attente">À vérifier</span></td><td>en application</td></tr>
+          <tr><td>CPSIA</td><td>États-Unis</td><td>Veilleuse pour enfant</td><td>Produits pour enfants</td><td><span class="ap-etat ap-etat-manque">Donnée manquante</span></td><td>en application</td></tr>
+          <tr><td>Marque PSE</td><td>Japon</td><td>Chargeur USB-C</td><td>Électrique</td><td><span class="ap-etat ap-etat-manque">Donnée manquante</span></td><td>en application</td></tr>
         </tbody>
       </table>
     </div>
   </div>
 </section>
 
-<!-- ═══ OUVRIR UN MARCHÉ ═══ -->
+<!-- ═══ MARCHÉ PAR MARCHÉ ═══ les jauges reprennent exactement le tableau ci-dessus (Union européenne 2 sur 4, États-Unis
+     1 sur 3, Japon 0 sur 1). « en quelques minutes » retiré : délai non sourcé (dossier de marque, planche 10). -->
 <section class="section ap-bloc">
-  <div class="conteneur">
-    <h2 class="ap-titre">Un pays de plus se relève en quelques minutes</h2>
+  <div class="conteneur" data-apparait>
+    <div class="sy-entete"><h2 class="ap-titre">Un pays de plus, rapproché de chaque produit</h2><p class="sy-lead">Les exemples du tableau, marché par marché.</p></div>
     <div class="ap-marches">
-      <div class="ap-marche"><b>Union européenne</b><span>4 réglementations</span><i class="ap-jauge" style="--p:0.50" aria-hidden="true"><i></i></i><em>2 sur 4 couvertes</em></div>
-      <div class="ap-marche"><b>Japon</b><span>4 réglementations</span><i class="ap-jauge" style="--p:0.25" aria-hidden="true"><i></i></i><em>1 sur 4 couverte</em></div>
-      <div class="ap-marche"><b>Brésil</b><span>3 réglementations</span><i class="ap-jauge" style="--p:0.33" aria-hidden="true"><i></i></i><em>1 sur 3 couverte</em></div>
-      <div class="ap-marche"><b>Corée du Sud</b><span>3 réglementations</span><i class="ap-jauge" style="--p:0.67" aria-hidden="true"><i></i></i><em>2 sur 3 couvertes</em></div>
-    </div>
-    <div class="tk-bento">
-      <figure class="tk-case tk-photo">
-        <div class="tk-trame" aria-hidden="true"><img src="img:masse-telephone" alt=""></div>
-        <p class="tk-citation">Chaque produit est rapproché de chaque réglementation qui le touche : par marché, par référence, par échéance.</p>
-        
-        
-      </figure>
-      <div class="tk-case tk-creme">
-        <svg class="tk-fleche" viewBox="0 0 160 70" aria-hidden="true"><path d="M10 60C52 62 104 50 138 16" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="1 6" stroke-linecap="round"/><path d="M124 13h16l-5 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <b class="tk-chiffre ap-compte ap-c-106"><span class="ap-compte-texte">106</span></b>
-        <span class="tk-legende">pays suivis</span>
-      </div>
-      <div class="tk-case tk-bleu">
-        <div class="tk-tableaux" aria-hidden="true">
-          <div class="tk-tableau"><b>Autorités</b><span><i>réglementaires</i><i>19 000</i></span></div>
-          <div class="tk-tableau"><b>Marchés</b><span><i>UE · Japon</i><i>Brésil · Corée</i></span></div>
-        </div>
-        <b class="tk-chiffre ap-compte ap-c-25000"><span class="ap-compte-texte">25 000</span></b>
-        <span class="tk-legende">réglementations indexées</span>
-      </div>
+      <div class="ap-marche sy-carte"><b>Union européenne</b><span>4 réglementations</span><i class="ap-jauge" style="--p:0.50" aria-hidden="true"><i></i></i><em>2 sur 4 couvertes</em></div>
+      <div class="ap-marche sy-carte"><b>États-Unis</b><span>3 réglementations</span><i class="ap-jauge" style="--p:0.33" aria-hidden="true"><i></i></i><em>1 sur 3 couverte</em></div>
+      <div class="ap-marche sy-carte"><b>Japon</b><span>1 réglementation</span><i class="ap-jauge" style="--p:0" aria-hidden="true"><i></i></i><em>0 sur 1 couverte</em></div>
     </div>
   </div>
 </section>
 
-<!-- ═══ PÉRIMÈTRE ═══ -->
-<section class="section ap-bloc" id="perimetre-produit">
-  <div class="conteneur">
-    <h2 class="ap-titre">Les produits grand public, du jouet à l'équipement de la maison.</h2>
-    <ul class="ap-perimetre">
-      <li>Jouets</li>
-      <li>Produits pour enfants</li>
-      <li>Articles de sport</li>
-      <li>Bijoux fantaisie et joaillerie, lunettes de soleil, montres, sacs et autres accessoires</li>
-      <li>Produits vus à la télévision, présentoirs et achats d'impulsion</li>
-      <li>Saisonnier et fêtes</li>
-      <li>Loisirs créatifs, tissus et couture</li>
-      <li>Mobilier d'intérieur</li>
-      <li>Extérieur (mobilier, barbecues…)</li>
-      <li>Puériculture : équipements et consommables</li>
-      <li>Papeterie</li>
-      <li>Cuisine et arts de la table</li>
-      <li>Petit électroménager</li>
-      <li>Linge de lit et de bain</li>
-      <li>Décoration intérieure</li>
-      <li>Rangement et organisation</li>
-      <li>Électronique</li>
-      <li>Matériel électrique</li>
-      <li>Éclairage</li>
-      <li>Quincaillerie et peinture</li>
-      <li>Automobile</li>
-      <li>Animaux de compagnie</li>
-      <li>Hygiène, beauté, cosmétiques et soins personnels</li>
-      <li>Produits chimiques ménagers et consommables</li>
-      <li>Hardlines (produits durs)</li>
-      <li>Softlines (textile et habillement)</li>
-      <li>Autres produits de consommation et d'équipement de la maison</li>
+<!-- ═══ CE QUE CLEO COUVRE ═══ chiffres canon (CANONICAL-FACTS, dossier de marque planches 10 et 14). -->
+<section class="section ap-bloc">
+  <div class="conteneur" data-apparait>
+    <div class="sy-entete"><h2 class="ap-titre">Ce que Cleo couvre</h2></div>
+    <ul class="sy-chiffres">
+      <li><b>106</b><span>pays</span></li>
+      <li><b>25 000</b><span>réglementations cartographiées</span></li>
+      <li><b>19 000</b><span>autorités réglementaires suivies</span></li>
+    </ul>
+    <div class="ap-liens"><a class="sy-lien" href="04-secteur.html#perimetre">Voir tout le périmètre produit <svg class="ap-fleche" viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+  </div>
+</section>
+
+<!-- ═══ PAR PROFIL ═══ les trois pages persona ; phrases de leurs hauts de page. La liste du périmètre (déjà sur 04) est
+     remplacée par le lien ci-dessus. -->
+<section class="section ap-bloc">
+  <div class="conteneur" data-apparait>
+    <div class="sy-entete"><h2 class="ap-titre">La conformité produit, par profil</h2></div>
+    <ul class="sy-lignes ap-lignes-liens">
+      <li><a href="33-fabricants.html"><b class="ap-lien-titre">Fabricants</b><span class="ap-lien-texte">Du marquage CE aux seuils REACH</span><svg class="ap-fleche" viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+      <li><a href="34-importateurs.html"><b class="ap-lien-titre">Importateurs et distributeurs</b><span class="ap-lien-texte">Code SH, droits et certifications avant l'expédition</span><svg class="ap-fleche" viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+      <li><a href="35-marketplaces.html"><b class="ap-lien-titre">Marketplaces</b><span class="ap-lien-texte">Ce qui est vendable, et sur quel marché</span><svg class="ap-fleche" viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
     </ul>
   </div>
 </section>
 
-<!-- ═══ TROIS MANIÈRES ═══ -->
-<section class="section ap-bloc">
-  <div class="conteneur">
-    <h2 class="ap-titre">Trois manières d'entrer</h2>
-    <div class="ap-entrees">
-      <a class="ap-entree" href="33-fabricants.html"><div class="ap-image"><img src="img:flacons" alt=""></div><h3>Fabricants</h3><span class="ap-lien-carre">Voir <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-      <a class="ap-entree" href="34-importateurs.html"><div class="ap-image"><img src="img:parc-voitures" alt=""></div><h3>Importateurs et distributeurs</h3><span class="ap-lien-carre">Voir <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-      <a class="ap-entree" href="35-marketplaces.html"><div class="ap-image"><img src="img:pneus" alt=""></div><h3>Marketplaces</h3><span class="ap-lien-carre">Voir <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ APPEL FINAL ═══ bandeau tramé à la Tenkara : étiquette blanche, phrase, petit bouton carré. -->
+<!-- ═══ BANDEAU FINAL ═══ composant commun du site (tk-bandeau). -->
 <section class="section ap-bloc ap-final tk-bandeau" id="contact">
-  <div class="conteneur">
-    <div class="tk-trame" aria-hidden="true"><img src="img:fenetres" alt=""></div>
-    <p class="tk-etiquette">30 minutes avec l'équipe, pour regarder votre catalogue</p>
-    <h2 class="ap-final-titre">Faites de la conformité votre avantage concurrentiel.</h2>
-    <a class="tk-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <div class="conteneur" data-apparait>
+    <p class="tk-etiquette">30 minutes avec l'équipe, sur vos produits</p>
+    <h2 class="ap-final-titre">Voyez vos produits rapprochés des réglementations de chaque marché</h2>
+    <a class="tk-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <svg class="ap-fleche" viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </section>
 

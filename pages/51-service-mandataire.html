@@ -1,12 +1,12 @@
 <!--NAV-->
 
-<!-- ═══ FICHE « MANDATAIRE DANS L'UE » ═══ 15/09/2026, Naomie : « pour le service reprends exactement leur use case,
-     pareil » (ecocomply.ai/eu-authorised-representative). Sections dans l'ordre de leur page : haut avec la carte « ce qui
-     est inclus », en bref, base légale, tableau des rôles, pourquoi, comment, tout ce qui est compris, textes couverts,
-     comparatif, questions, pour aller plus loin, appel final. Leur témoignage est omis : aucun témoignage sourcé pour ce
-     service. Aucun prix : « Tarif à arrêter » (en réunion le 14/09, un prix a été proposé, rien n'est arrêté).
-     Rappel : la déclaration UE de conformité est signée par le fabricant ou son mandataire ; l'expert Cleo la relit et la
-     valide. Générée par scratchpad/agents/mandataire-ue/generer.mjs. -->
+<!-- ═══ FICHE « MANDATAIRE DANS L'UE » ═══ 15/09/2026, Naomie : « pour le service reprends exactement leur use case, pareil »
+     (ecocomply.ai/eu-authorised-representative). Ordre de leur page gardé : haut avec « ce qui est inclus », en bref, base
+     légale, rôles, pourquoi, comment, ce que comprend la prestation, textes, ce que Cleo ajoute, questions, pour aller plus
+     loin, appel final. Refonte du 15/09/2026 (SYSTEME.md) : un objet par chapitre, listes à filets au lieu de cartes et de
+     coches, plus de comparaison « une adresse seule », moins de 800 mots. Générateur agents/mandataire-ue/generer.mjs
+     périmé depuis la refonte : la page s'édite ici. Rappel : la déclaration UE de conformité est signée par le fabricant
+     ou son mandataire ; l'expert Cleo la relit et la valide. -->
 <!-- faits, vérifiés le 15/09/2026 sur les textes publiés (EUR-Lex), copies dans scratchpad/agents/mandataire-ue/textes :
      Règlement (UE) 2023/988 : art. 3, point 9 (définition du mandataire ; attention, la page 14-terme l'attribue au point 12,
      qui est la définition du règlement (UE) 2019/1020) ; art. 16, § 1 (opérateur économique établi dans l'Union responsable
@@ -32,216 +32,201 @@
      « enregistrement officiel » (aucun registre des mandataires dans ces textes), bandeau de saisies et d'interdictions,
      « responsabilité du fait des produits : non » pour le mandataire (faux pour la directive 2024/2853), témoignage (aucun
      témoignage sourcé pour ce service), guides UK. -->
+<!-- À TRANCHER : Cleo tient-elle le rôle de mandataire elle-même, ou via un partenaire ? Le mandataire est nommé sur le produit (règlement (UE) 2019/1020, art. 4, § 4). Prix et délai non arrêtés (réunion du 14/09/2026 : un prix évoqué, rien d'arrêté). -->
 <section class="section mu-hero" id="haut">
   <div class="conteneur">
     <div class="mu-hero-grille">
       <div class="mu-hero-texte">
-        <h1 class="t-hero">Mandataire dans l'UE. <span class="mu-bleu">Votre opérateur établi dans l'Union.</span></h1>
-        <p class="mu-lead">Cleo tient le rôle de mandataire : le mandat écrit, les coordonnées sur l'étiquette, le dossier tenu pour les autorités et les réponses à leurs demandes.</p>
-        <p class="mu-prix"><b>Tarif à arrêter</b><span>annoncé avant la commande</span></p>
+        <h1 class="t-hero">Mandataire dans l'UE pour vendre en Europe depuis l'étranger.</h1>
+        <p class="mu-lead">Tout produit mis sur le marché de l'Union a un opérateur établi dans l'Union qui en répond. Cleo tient ce rôle, du mandat écrit aux réponses aux autorités.</p>
+        <p class="mu-prix"><b>Prix annoncé avant la commande</b></p>
         <div class="mu-actions">
-          <a class="mu-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Demander cette prestation <svg viewBox="0 0 26 14" width="26" height="14" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <a class="mu-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Demander cette prestation <svg viewBox="0 0 26 14" width="22" height="12" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
           <a class="mu-bouton mu-bouton-contour" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Parler à un expert</a>
         </div>
       </div>
-      <div class="mu-inclus-carte">
-        <h2 class="mu-inclus-titre">Ce qui est inclus</h2>
+      <div class="mu-inclus mu-inclus-carte">
+        <p class="mu-surtitre">Ce qui est inclus</p>
         <ul class="mu-inclus-liste">
-          <li style="--i:0"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Mandat écrit</span></li>
-          <li style="--i:1"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Coordonnées sur l'étiquette</span></li>
-          <li style="--i:2"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Déclaration et documentation tenues</span></li>
-          <li style="--i:3"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Réponses aux autorités</span></li>
-          <li style="--i:4"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Vérifications régulières</span></li>
-          <li style="--i:5"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Coopération sur les mesures correctives</span></li>
-          <li style="--i:6"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Relecture d'un expert</span></li>
-          <li style="--i:7"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><span>Veille <em>offerte</em></span></li>
+          <li>Mandat écrit</li>
+          <li>Coordonnées sur l'étiquette</li>
+          <li>Déclaration et documentation tenues</li>
+          <li>Réponses aux autorités</li>
+          <li>Vérifications régulières</li>
+          <li>Coopération sur les mesures correctives</li>
+          <li>Relecture d'expert</li>
+          <li>Veille offerte</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ EN BREF ═══ le paragraphe de définition de leur page, réécrit sur les textes : définition du mandataire (2023/988,
-     art. 3, point 9), exigence de l'art. 16 applicable au 13/12/2024, opérateurs de l'art. 4, § 2, du règlement 2019/1020,
-     tâches de son § 3 et coordonnées de son § 4. -->
-<section class="section mu-cadre" id="en-bref">
+<section class="section" id="en-bref">
   <div class="conteneur">
-    <div class="mu-bref mu-apparait">
+    <div class="mu-bref" data-apparait>
       <p class="mu-surtitre">En bref</p>
-      <p class="mu-bref-texte">Le mandataire est une personne établie dans l'Union qu'un fabricant désigne par un mandat écrit pour agir pour son compte sur des tâches déterminées. Depuis le 13 décembre 2024, un produit couvert par le règlement (UE) 2023/988 est mis sur le marché avec un opérateur économique établi dans l'Union qui en est responsable. Pour un fabricant établi hors de l'Union, ce rôle revient à l'importateur, au mandataire ou, à défaut, au prestataire de services d'exécution des commandes. Cet opérateur tient la déclaration de conformité à la disposition des autorités, veille à ce que la documentation technique leur soit fournie sur demande, répond à leurs demandes motivées, et ses coordonnées figurent sur le produit, son emballage, le colis ou un document d'accompagnement.</p>
-      <p class="mu-bref-note">Références vérifiées le 15 septembre 2026 sur EUR-Lex, le site officiel du droit de l'Union.</p>
+      <p class="mu-bref-texte">Le mandataire est une personne établie dans l'Union qu'un fabricant désigne par mandat écrit pour agir pour son compte. Depuis le 13 décembre 2024, tout produit couvert par le règlement (UE) 2023/988 a un opérateur établi dans l'Union qui en répond.</p>
+      <p class="mu-bref-note">Références vérifiées le 15 septembre 2026 sur EUR-Lex.</p>
     </div>
   </div>
 </section>
 
-<section class="section mu-cadre" id="base-legale">
+<section class="section" id="base-legale">
   <div class="conteneur">
-    <h2 class="t-display mu-titre2">La base légale. <span class="attenue">Le rôle de mandataire est écrit dans le droit de l'Union.</span></h2>
-    <ul class="mu-loi">
-      <li><div><a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32023R0988">Règlement (UE) 2023/988</a><span class="mu-loi-art">Sécurité générale des produits, article 16</span></div><p>Un produit est mis sur le marché avec un opérateur économique établi dans l'Union, responsable des tâches de l'article 4, paragraphe 3, du règlement (UE) 2019/1020. Applicable depuis le 13 décembre 2024.</p></li>
-      <li><div><a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32019R1020">Règlement (UE) 2019/1020</a><span class="mu-loi-art">Surveillance du marché, article 4</span></div><p>Qui peut être cet opérateur, ses quatre tâches, et ses coordonnées sur le produit.</p></li>
-      <li><div><a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32008D0768">Décision n° 768/2008/CE</a><span class="mu-loi-art">Annexe I, article R3</span></div><p>Le mandat écrit dans les textes du marquage CE, et ce qui reste au fabricant.</p></li>
+    <h2 class="t-display mu-titre2">Ce que le droit de l'Union demande</h2>
+    <ul class="mu-loi" data-apparait>
+      <li><div><a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32023R0988">Règlement (UE) 2023/988</a><span class="mu-loi-art">Sécurité générale des produits, article 16</span></div><p>Un opérateur établi dans l'Union répond du produit, depuis le 13 décembre 2024.</p></li>
+      <li><div><a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32019R1020">Règlement (UE) 2019/1020</a><span class="mu-loi-art">Surveillance du marché, article 4</span></div><p>Qui tient ce rôle, ses tâches et ses coordonnées.</p></li>
+      <li><div><a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32008D0768">Décision n° 768/2008/CE</a><span class="mu-loi-art">Annexe I, article R3</span></div><p>Le mandat écrit du marquage CE.</p></li>
       <li><div><a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32014L0053">Directive 2014/53/UE</a> et <a href="https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX:32023R1230">règlement (UE) 2023/1230</a><span class="mu-loi-art">Équipements radioélectriques, article 11 ; machines, article 12</span></div><p>Le mandat dans ces deux secteurs.</p></li>
     </ul>
   </div>
 </section>
 
-<!-- ═══ LES RÔLES ═══ colonnes vérifiables dans les textes seulement. La colonne « responsable d'un produit défectueux »
-     suit la directive (UE) 2024/2853, art. 8 (et non « non » pour le mandataire, comme sur la page EcoComply). -->
-<section class="section mu-cadre" id="roles">
+<section class="section" id="roles">
   <div class="conteneur">
-    <h2 class="t-display mu-titre2">Mandataire, importateur, distributeur : <span class="attenue">ce qui change.</span></h2>
+    <h2 class="t-display mu-titre2">Ce qui distingue le mandataire, l'importateur et le distributeur</h2>
     <div class="mu-tableau-zone">
       <table class="mu-tableau">
         <thead><tr><th scope="col">Rôle</th><th scope="col">Établi dans l'Union</th><th scope="col">Nom et coordonnées sur le produit</th><th scope="col">Documents pour les autorités</th><th scope="col">Responsable d'un produit défectueux*</th></tr></thead>
         <tbody>
-          <tr class="mu-nous"><th scope="row">Mandataire</th><td data-libelle="Établi dans l'Union">Oui</td><td data-libelle="Nom et coordonnées sur le produit">Oui, quand il est l'opérateur responsable</td><td data-libelle="Documents pour les autorités">Tient la déclaration, fournit la documentation sur demande</td><td data-libelle="Responsable d'un produit défectueux*">Oui, si le fabricant est établi hors de l'Union</td></tr>
-          <tr><th scope="row">Importateur</th><td data-libelle="Établi dans l'Union">Oui</td><td data-libelle="Nom et coordonnées sur le produit">Oui</td><td data-libelle="Documents pour les autorités">Garde une copie de la déclaration, fournit la documentation sur demande</td><td data-libelle="Responsable d'un produit défectueux*">Oui, si le fabricant est établi hors de l'Union</td></tr>
-          <tr><th scope="row">Distributeur</th><td data-libelle="Établi dans l'Union">Non exigé</td><td data-libelle="Nom et coordonnées sur le produit">Vérifie ceux du fabricant et de l'importateur</td><td data-libelle="Documents pour les autorités">Communique les informations sur demande</td><td data-libelle="Responsable d'un produit défectueux*">Sous conditions, si aucun opérateur établi dans l'Union n'est identifié</td></tr>
-          <tr><th scope="row">Fabricant (vous)</th><td data-libelle="Établi dans l'Union">Non exigé</td><td data-libelle="Nom et coordonnées sur le produit">Oui</td><td data-libelle="Documents pour les autorités">Établit la documentation technique et la déclaration</td><td data-libelle="Responsable d'un produit défectueux*">Oui</td></tr>
+          <tr class="mu-nous"><th scope="row">Mandataire</th><td data-libelle="Établi dans l'Union">Oui</td><td data-libelle="Nom et coordonnées sur le produit">Oui, quand il est l'opérateur responsable</td><td data-libelle="Documents pour les autorités">Tient la déclaration</td><td data-libelle="Responsable d'un produit défectueux*">Oui, si le fabricant est hors de l'Union</td></tr>
+          <tr><th scope="row">Importateur</th><td data-libelle="Établi dans l'Union">Oui</td><td data-libelle="Nom et coordonnées sur le produit">Oui</td><td data-libelle="Documents pour les autorités">Garde une copie de la déclaration</td><td data-libelle="Responsable d'un produit défectueux*">Oui, si le fabricant est hors de l'Union</td></tr>
+          <tr><th scope="row">Distributeur</th><td data-libelle="Établi dans l'Union">Non exigé</td><td data-libelle="Nom et coordonnées sur le produit">Les vérifie</td><td data-libelle="Documents pour les autorités">Informe sur demande</td><td data-libelle="Responsable d'un produit défectueux*">Sous conditions</td></tr>
+          <tr><th scope="row">Fabricant (vous)</th><td data-libelle="Établi dans l'Union">Non exigé</td><td data-libelle="Nom et coordonnées sur le produit">Oui</td><td data-libelle="Documents pour les autorités">Établit la documentation et la déclaration</td><td data-libelle="Responsable d'un produit défectueux*">Oui</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="mu-note mu-apparait">Le mandataire ne reprend ni la conception du produit ni l'établissement de la documentation technique : ces obligations restent au fabricant (décision n° 768/2008/CE, annexe I, article R3).<small>* Pour les produits mis sur le marché après le 9 décembre 2026, directive (UE) 2024/2853, article 8.</small></p>
+    <p class="mu-note">La conception et la documentation technique restent au fabricant (décision n° 768/2008/CE, annexe I, article R3).<small>* Produits mis sur le marché après le 9 décembre 2026, directive (UE) 2024/2853, article 8.</small></p>
   </div>
 </section>
 
-<section class="section mu-cadre" id="pourquoi">
+<section class="section" id="pourquoi">
   <div class="conteneur">
-    <p class="mu-date mu-apparait"><i aria-hidden="true"></i>Règlement (UE) 2023/988, applicable depuis le 13 décembre 2024</p>
-    <h2 class="t-display mu-titre2">Vendre en Europe depuis l'étranger. <span class="attenue">Trois exigences, un seul interlocuteur.</span></h2>
-    <ul class="mu-raisons">
-      <li class="mu-raison"><figure><img src="img:masse-savon-carre" alt=""></figure><h3>Un opérateur établi dans l'Union</h3><p>Chaque produit couvert par le règlement (UE) 2023/988 a un opérateur établi dans l'Union qui en répond.</p></li>
-      <li class="mu-raison"><figure><img src="img:masse-detergent-carre" alt=""></figure><h3>Des documents prêts pour les autorités</h3><p>Déclaration de conformité, documentation technique : quelqu'un dans l'Union les fournit sur demande motivée d'une autorité.</p></li>
-      <li class="mu-raison"><figure><img src="img:masse-vernis-carre" alt=""></figure><h3>Des coordonnées sur chaque produit</h3><p>Nom, adresse postale et adresse électronique de l'opérateur, sur le produit, son emballage, le colis ou un document d'accompagnement.</p></li>
+    <p class="mu-surtitre">RSGP, depuis le 13 décembre 2024</p>
+    <h2 class="t-display mu-titre2">Vendre en Europe depuis l'étranger demande un opérateur établi dans l'Union</h2>
+    <ul class="sy-lignes" data-apparait>
+      <li><h3>Un opérateur établi dans l'Union</h3><p>Il répond de chaque produit vendu dans l'Union.</p></li>
+      <li><h3>Des documents prêts pour les autorités</h3><p>Déclaration et documentation technique, sur demande motivée.</p></li>
+      <li><h3>Des coordonnées sur chaque produit</h3><p>Nom, adresse postale et électronique, sur le produit ou son emballage.</p></li>
     </ul>
   </div>
 </section>
 
-<section class="section mu-cadre" id="comment">
+<section class="section" id="comment">
   <div class="conteneur">
-    <h2 class="t-display mu-titre2">Comment ça marche. <span class="attenue">Trois étapes : l'agent prépare, un expert relit.</span></h2>
-    <ol class="mu-etapes">
-      <li class="mu-etape"><span class="mu-num">01</span><h3>Vous envoyez vos documents</h3><p>Fiche produit, déclaration de conformité, documentation technique : l'agent relève les textes qui s'appliquent et vérifie que chaque pièce est établie.</p></li>
-      <li class="mu-etape"><span class="mu-num">02</span><h3>Un expert relit, le mandat fixe les tâches</h3><p>Un expert conformité relit et valide le dossier, puis le mandat écrit liste les tâches confiées au mandataire.</p></li>
-      <li class="mu-etape"><span class="mu-num">03</span><h3>Le dossier est tenu, les autorités ont leurs réponses</h3><p>Les coordonnées du mandataire vont sur l'étiquette. Le dossier reste à la disposition des autorités, et la veille suit vos textes chaque semaine.</p></li>
+    <h2 class="t-display mu-titre2">Comment ça se passe</h2>
+    <ol class="mu-etapes" data-apparait>
+      <li class="mu-etape"><span class="mu-num">01</span><h3>Vous envoyez vos documents</h3><p>L'agent relève les textes qui s'appliquent et vérifie chaque pièce.</p></li>
+      <li class="mu-etape"><span class="mu-num">02</span><h3>Un expert relit le dossier</h3><p>Un expert conformité le valide, puis le mandat écrit liste les tâches confiées.</p></li>
+      <li class="mu-etape"><span class="mu-num">03</span><h3>Le mandat démarre</h3><p>Les coordonnées du mandataire vont sur l'étiquette.</p></li>
     </ol>
   </div>
 </section>
 
-<!-- ═══ TOUT CE QUI EST COMPRIS ═══ les tâches de l'art. 4, § 3, du règlement 2019/1020 et les coordonnées de son § 4
-     (adresse électronique : 2023/988, art. 16, § 3), le mandat écrit (décision 768/2008/CE, R3), les vérifications de
-     l'art. 16, § 2, du règlement 2023/988, et la veille offerte du catalogue. -->
-<section class="section mu-cadre" id="compris">
+<section class="section" id="compris">
   <div class="conteneur">
     <div class="mu-compris">
       <figure class="mu-compris-photo"><img src="img:masse-skate" alt=""></figure>
       <div>
-        <h2 class="t-display mu-titre2">Tout ce qui est compris. <span class="attenue">Un prix pour la prestation entière, affiché avant la commande.</span></h2>
-        <ul class="mu-cartes">
-          <li class="mu-carte"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><b>Mandat écrit</b><span>Les tâches confiées au mandataire, listées une à une.</span></li>
-          <li class="mu-carte"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><b>Coordonnées sur l'étiquette</b><span>Nom, adresse postale et électronique du mandataire, prêts pour le produit ou l'emballage.</span></li>
-          <li class="mu-carte"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><b>Déclaration et documentation à disposition</b><span>La déclaration de conformité tenue pour les autorités, la documentation technique fournie à leur demande.</span></li>
-          <li class="mu-carte"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><b>Réponses aux demandes motivées</b><span>Informations et documents transmis dans une langue que l'autorité comprend facilement.</span></li>
-          <li class="mu-carte"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><b>Information des autorités</b><span>Les autorités de surveillance du marché informées dès qu'un produit le justifie.</span></li>
-          <li class="mu-carte"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><b>Coopération sur les mesures correctives</b><span>La coopération avec les autorités sur chaque mesure corrective.</span></li>
-          <li class="mu-carte"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><b>Vérifications régulières</b><span>Le produit contrôlé face à sa documentation technique, avec des preuves écrites pour les autorités.</span></li>
-          <li class="mu-carte"><i aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2.5 6.2 4.8 8.5 9.5 3.8" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></i><b>Veille <em>offerte</em></b><span>Chaque semaine, les nouvelles règles qui touchent vos produits.</span></li>
+        <h2 class="t-display mu-titre2">Ce que comprend la prestation</h2>
+        <ul class="sy-lignes mu-lignes-serre" data-apparait>
+      <li><b>Mandat écrit</b><span>Les tâches confiées, une à une.</span></li>
+      <li><b>Coordonnées sur l'étiquette</b><span>Nom, adresse postale et électronique.</span></li>
+      <li><b>Déclaration et documentation</b><span>Tenues à la disposition des autorités.</span></li>
+      <li><b>Réponses aux demandes motivées</b><span>Dans une langue que l'autorité comprend.</span></li>
+      <li><b>Information des autorités</b><span>Dès qu'un produit le justifie.</span></li>
+      <li><b>Mesures correctives</b><span>La coopération, à chaque mesure.</span></li>
+      <li><b>Vérifications régulières</b><span>Avec des preuves écrites.</span></li>
+      <li><b>Veille offerte</b><span>Chaque semaine.</span></li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section mu-cadre" id="textes">
+<section class="section" id="textes">
   <div class="conteneur">
-    <h2 class="t-display mu-titre2">Les textes couverts. <span class="attenue">Les principaux textes de sécurité et de conformité que suit l'agent.</span></h2>
-    <ul class="mu-tuiles">
+    <h2 class="t-display mu-titre2">Les textes que suit l'agent</h2>
+    <ul class="mu-tuiles" data-apparait>
       <li class="mu-tuile"><b>RSGP</b><span>Sécurité générale des produits</span><small>(UE) 2023/988</small></li>
-      <li class="mu-tuile"><b>CE</b><span>Marquage CE : compatibilité électromagnétique, basse tension, radio</span><small>2014/30/UE · 2014/35/UE · 2014/53/UE</small></li>
-      <li class="mu-tuile"><b>RoHS</b><span>Substances dangereuses dans les équipements électriques et électroniques</span><small>2011/65/UE</small></li>
-      <li class="mu-tuile"><b>REACH</b><span>Enregistrement, évaluation et autorisation des substances chimiques</span><small>(CE) n° 1907/2006</small></li>
-      <li class="mu-tuile"><b>DEEE</b><span>Déchets d'équipements électriques et électroniques</span><small>2012/19/UE</small></li>
+      <li class="mu-tuile"><b>CE</b><span>Compatibilité électromagnétique, basse tension, radio</span><small>2014/30/UE · 2014/35/UE · 2014/53/UE</small></li>
+      <li class="mu-tuile"><b>RoHS</b><span>Substances dangereuses</span><small>2011/65/UE</small></li>
+      <li class="mu-tuile"><b>REACH</b><span>Substances chimiques</span><small>(CE) n° 1907/2006</small></li>
+      <li class="mu-tuile"><b>DEEE</b><span>Déchets électriques et électroniques</span><small>2012/19/UE</small></li>
       <li class="mu-tuile"><b>Batteries</b><span>Batteries et déchets de batteries</span><small>(UE) 2023/1542</small></li>
     </ul>
   </div>
 </section>
 
-<!-- ═══ COMPARATIF ═══ aucune affirmation sur des prestataires nommés ni aucun chiffre sur eux ; la colonne Cleo ne
-     reprend que ce que le site dit déjà : veille offerte (catalogue), 25 000 réglementations et 106 pays (chiffres canon),
-     relecture d'un expert conformité (fiches). -->
-<section class="section mu-cadre" id="comparatif">
+<!-- ═══ CE QUE CLEO AJOUTE ═══ ce que le site dit déjà : veille offerte (catalogue), 25 000 réglementations cartographiées et
+     106 pays (chiffres canon), relecture d'un expert conformité (fiches). Plus de colonne « une adresse seule ». -->
+<section class="section" id="ajoute">
   <div class="conteneur">
-    <h2 class="t-display mu-titre2">Cleo ou une adresse seule. <span class="attenue">Ce qui change pour vous.</span></h2>
-    <div class="mu-tableau-zone">
-      <table class="mu-comparatif">
-        <thead><tr><td></td><th scope="col">Une adresse seule</th><th scope="col" class="mu-avec">Avec Cleo</th></tr></thead>
-        <tbody>
-          <tr><th scope="row">Veille réglementaire</th><td>Non comprise</td><td class="mu-avec">Offerte, chaque semaine</td></tr>
-          <tr><th scope="row">Textes suivis</th><td>Non compris</td><td class="mu-avec">25 000 réglementations, 106 pays</td></tr>
-          <tr><th scope="row">Relecture du dossier</th><td>Non comprise</td><td class="mu-avec">Un expert conformité relit et valide</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
-
-<section class="section mu-cadre" id="questions">
-  <div class="conteneur">
-    <h2 class="t-display mu-titre2">Questions fréquentes.</h2>
-    <div class="faq mu-faq">
-      <details open class="mu-apparait">
-        <summary>Ai-je besoin d'un mandataire dans l'UE ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">D'un opérateur établi dans l'Union, oui. Pour un fabricant établi hors de l'Union, ce rôle revient à l'importateur, au mandataire ou, à défaut, au prestataire de services d'exécution des commandes (règlement (UE) 2023/988, article 16, et règlement (UE) 2019/1020, article 4).</div>
-      </details>
-      <details open class="mu-apparait">
-        <summary>Mandataire ou personne responsable : quelle différence ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">Le règlement (UE) 2023/988 parle de personne responsable : l'opérateur économique établi dans l'Union qui répond du produit. Le mandataire est l'une des personnes qui peuvent tenir ce rôle, avec le fabricant établi dans l'Union, l'importateur et le prestataire de services d'exécution des commandes.</div>
-      </details>
-      <details open class="mu-apparait">
-        <summary>Que fait le mandataire, et que garde le fabricant ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">Le mandataire exécute les tâches listées dans le mandat écrit : documents à disposition, réponses aux autorités, coopération. La conception du produit et l'établissement de la documentation technique restent au fabricant (décision n° 768/2008/CE, annexe I, article R3).</div>
-      </details>
-      <details open class="mu-apparait">
-        <summary>Combien de temps les documents sont-ils tenus ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">La durée fixée par chaque texte. Pour un équipement radioélectrique, dix ans à partir de la mise sur le marché (directive 2014/53/UE, article 11).</div>
-      </details>
-      <details open class="mu-apparait">
-        <summary>Qui signe la déclaration ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">Le fabricant, ou son mandataire. L'expert Cleo relit et valide la déclaration, qui vous est remise prête à signer.</div>
-      </details>
-      <details open class="mu-apparait">
-        <summary>Le mandataire répond-il d'un produit défectueux ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">Pour les produits mis sur le marché après le 9 décembre 2026, oui, quand le fabricant est établi hors de l'Union : la directive (UE) 2024/2853, article 8, rend responsables l'importateur et le mandataire du fabricant, sans préjudice de la responsabilité du fabricant.</div>
-      </details>
-      <details open class="mu-apparait">
-        <summary>Quel tarif et quel délai ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">Tarif et délai à arrêter. Le prix de la prestation entière est affiché avant la commande.</div>
-      </details>
-    </div>
-  </div>
-</section>
-
-<section class="section mu-cadre" id="plus-loin">
-  <div class="conteneur">
-    <h2 class="t-display mu-titre2">Pour aller plus loin.</h2>
-    <ul class="mu-liens">
-      <li><a class="mu-carte-lien" href="14-terme.html"><span class="mu-pastille">Glossaire</span><b>Mandataire : la définition, et ce qu'il faut vérifier</b><svg viewBox="0 0 26 14" width="26" height="14" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-      <li><a class="mu-carte-lien" href="38-service.html"><span class="mu-pastille">Prestation</span><b>Mettre à jour une déclaration de conformité</b><svg viewBox="0 0 26 14" width="26" height="14" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
-      <li><a class="mu-carte-lien" href="44-service-veille.html"><span class="mu-pastille">Offerte</span><b>Veille réglementaire et jurisprudentielle</b><svg viewBox="0 0 26 14" width="26" height="14" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+    <h2 class="t-display mu-titre2">Ce que Cleo ajoute au mandat</h2>
+    <ul class="sy-lignes" data-apparait>
+      <li><b>Veille réglementaire</b><span>Offerte, chaque semaine.</span></li>
+      <li><b>Textes suivis</b><span>25 000 réglementations cartographiées dans 106 pays.</span></li>
+      <li><b>Relecture du dossier</b><span>Un expert conformité relit et valide.</span></li>
     </ul>
   </div>
 </section>
 
-<!-- ═══ APPEL FINAL ═══ bandeau tramé à la Tenkara, comme les autres fiches ; titre et boutons repris de la fiche 38. -->
-<section class="section mu-cadre av-final tk-bandeau" id="contact">
+<section class="section" id="questions">
   <div class="conteneur">
-    <div class="tk-trame" aria-hidden="true"><img src="img:semelles" alt=""></div>
+    <h2 class="t-display mu-titre2">Questions fréquentes</h2>
+    <div class="faq mu-faq">
+      <details open>
+        <summary>Ai-je besoin d'un mandataire dans l'UE ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">D'un opérateur établi dans l'Union, oui : l'importateur, le mandataire ou, à défaut, le prestataire de services d'exécution des commandes (règlement (UE) 2023/988, article 16).</div>
+      </details>
+      <details>
+        <summary>Mandataire ou personne responsable : quelle différence ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">La personne responsable est l'opérateur établi dans l'Union qui répond du produit. Le mandataire est l'une des personnes qui peuvent tenir ce rôle.</div>
+      </details>
+      <details>
+        <summary>Que garde le fabricant ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">La conception du produit et la documentation technique (décision n° 768/2008/CE, annexe I, article R3).</div>
+      </details>
+      <details>
+        <summary>Combien de temps les documents sont-ils tenus ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Dix ans après la mise sur le marché pour un équipement radioélectrique (directive 2014/53/UE, article 11). La durée dépend du texte.</div>
+      </details>
+      <details>
+        <summary>Qui signe la déclaration ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Le fabricant, ou son mandataire. L'expert Cleo relit et valide la déclaration.</div>
+      </details>
+      <details>
+        <summary>Le mandataire répond-il d'un produit défectueux ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Oui pour les produits mis sur le marché après le 9 décembre 2026, quand le fabricant est établi hors de l'Union (directive (UE) 2024/2853, article 8).</div>
+      </details>
+      <details>
+        <summary>Quel prix et quel délai ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Le prix et le délai sont annoncés avant la commande.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="plus-loin">
+  <div class="conteneur">
+    <h2 class="t-display mu-titre2">Pour aller plus loin</h2>
+    <ul class="mu-liens">
+      <li><a class="mu-carte-lien" href="14-terme.html"><span class="mu-lien-type">Glossaire</span><b>Mandataire, la définition</b><svg viewBox="0 0 26 14" width="22" height="12" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+      <li><a class="mu-carte-lien" href="38-service.html"><span class="mu-lien-type">Prestation</span><b>Mettre à jour une déclaration UE de conformité</b><svg viewBox="0 0 26 14" width="22" height="12" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+      <li><a class="mu-carte-lien" href="44-service-veille.html"><span class="mu-lien-type">Prestation offerte</span><b>Veille réglementaire et jurisprudentielle</b><svg viewBox="0 0 26 14" width="22" height="12" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section av-final tk-bandeau" id="contact">
+  <div class="conteneur">
     <p class="tk-etiquette">Mandataire dans l'UE</p>
-    <h2 class="t-display av-final-titre mu-apparait">Un nouveau pays n'est plus un projet. <span class="attenue">C'est une décision.</span></h2>
-    <div class="mu-bandeau-actions mu-apparait">
-      <a class="tk-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Demander cette prestation <svg viewBox="0 0 26 14" width="26" height="14" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-      <a class="mu-lien mu-lien-blanc" href="37-compliance-service.html">Voir tout le catalogue <svg viewBox="0 0 26 14" width="26" height="14" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <h2 class="t-display av-final-titre">Un opérateur établi dans l'Union pour chaque produit que vous vendez en Europe</h2>
+    <div class="mu-bandeau-actions">
+      <a class="tk-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Demander cette prestation <svg viewBox="0 0 26 14" width="22" height="12" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a class="sy-lien" href="37-compliance-service.html">Voir le catalogue <svg viewBox="0 0 26 14" width="22" height="12" fill="none" aria-hidden="true"><path d="M1 7h23M18 1.5 24 7l-6 5.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
   </div>
 </section>

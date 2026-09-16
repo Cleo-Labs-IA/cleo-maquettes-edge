@@ -38,7 +38,7 @@ body[data-cleo-ds="v6"] :is(.surtitre,.t-label){font-weight:500}
 
 /* ── Le premier écran passe au blanc : plus de grand champ profond. ── */
 body[data-cleo-ds="v6"] main > section:first-child{
-  background:#FFFFFF !important;
+  background:var(--sy-fond-haut, #FFFFFF);
   border-radius:0 !important;
   box-shadow:none !important;
 }

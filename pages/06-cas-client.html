@@ -1,125 +1,112 @@
 <!--NAV-->
 
-<!-- ═══ HERO ═══ 15/09/2026, design de la page 43 : titre à gauche, média tramé en grande carte. -->
+<!-- ═══ HAUT DE PAGE ═══ Refonte du 15/09/2026 (SYSTEME.md). Générateur agents/audience-preuve/gen-audience.mjs périmé.
+     h1 : dossier de marque, planche 10, client Decathlon (« Their regulatory monitoring runs on its own »). L'ancien h1
+     « Decathlon tient sa conformité sur des dizaines de marchés » n'avait pas de source.
+     Chapeau : phrase du récit ci-dessous (« Les équipes produit et qualité travaillent alors sur la même base, tenue à jour »). -->
 <section class="section ap-hero">
   <div class="conteneur">
     <div class="ap-hero-grille">
       <div class="ap-hero-texte">
-        <p class="ap-surtitre">Cas client</p>
-        <h1 class="ap-h1">Decathlon tient sa conformité <span class="attenue">sur des dizaines de marchés</span></h1>
-        <p class="ap-lead">Un portefeuille large, des marchés qui s'ouvrent, des textes qui bougent : ce que change une base d'obligations tenue à jour.</p>
-        <a class="ap-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <span aria-hidden="true">»</span></a>
+        <p class="sy-surtitre">Cas client · Decathlon</p>
+<!-- 16/09/2026 : « la veille réglementaire tourne seule » retiré (aucune source ; Decathlon parle d'un PoC). Titre tiré du témoignage verbatim de Philippine Tamic : « extraire une donnée structurée, aujourd'hui indispensable pour guider la conception au sein de notre PLM ». -->
+        <h1 class="ap-h1">Chez Decathlon, une donnée réglementaire structurée jusque dans le PLM.</h1>
+        <p class="sy-lead">Les équipes produit et qualité travaillent sur la même base, tenue à jour, et gardent leur temps pour les arbitrages qui le demandent.</p>
+        <div class="ap-actions"><a class="sy-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <svg class="ap-fleche" viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
       </div>
-      
     </div>
-    <figure class="ap-hero-media tk-case" aria-hidden="true"><div class="tk-trame"><img src="img:masse-velo" alt=""></div><p class="tk-etiquette">Cas client</p></figure>
   </div>
+  <figure class="ap-hero-media sy-media" aria-hidden="true"><img src="img:masse-velo" alt=""></figure>
 </section>
 
-<!-- ═══ LA FICHE ═══ -->
+<!-- ═══ DECATHLON EN BREF ═══ valeurs de la fiche d'avant. La citation courte en double (déjà dans le témoignage complet) est retirée. -->
 <section class="section ap-bloc">
-  <div class="conteneur">
-    <div class="tk-bento">
-      <figure class="tk-case tk-photo">
-        <div class="tk-trame" aria-hidden="true"><img src="img:masse-lunettes" alt=""></div>
-        <blockquote class="tk-citation">« L'équipe de Cleo est au top : très professionnelle, réactive et agile. »</blockquote>
-        <figcaption class="tk-signature"><img src="img:philippine" alt=""><span>Philippine Tamic<br>Decathlon</span></figcaption>
-        
-      </figure>
-      <div class="tk-case tk-creme">
-        <img class="ap-logo-carte" src="img:logo-decathlon" alt="Decathlon">
-        
-        <span class="tk-legende">Sport et loisirs<br>Textile technique<br>Équipement</span>
-      </div>
-      <div class="tk-case tk-bleu">
-        <div class="tk-tableaux" aria-hidden="true">
-          <div class="tk-tableau"><b>Taille</b><span><i>grand compte</i><i></i></span></div>
-          <div class="tk-tableau"><b>Familles de produits</b><span><i>sport et loisirs</i><i>équipement</i></span></div>
-        </div>
-        <b class="tk-chiffre ap-chiffre-long">UE UK<br>US CA</b>
-        <span class="tk-legende">Marchés couverts</span>
-      </div>
-    </div>
+  <div class="conteneur" data-apparait>
+    <div class="sy-entete"><img class="ap-logo-client" src="img:logo-decathlon" alt="Decathlon"><h2 class="ap-titre">Decathlon en bref</h2></div>
+    <ul class="sy-lignes">
+      <li><b>Familles de produits</b><span>Sport et loisirs, textile technique, équipement</span></li>
+      <li><b>Marchés couverts</b><span>Union européenne, Royaume-Uni, États-Unis, Canada</span></li>
+      <li><b>Taille</b><span>Grand compte</span></li>
+    </ul>
   </div>
 </section>
 
-<!-- ═══ LA CITATION ═══ VERBATIM, extraite de l'original par le générateur. -->
+<!-- ═══ LE TÉMOIGNAGE ═══ VERBATIM, texte intégral de Philippine Tamic, sans aucune retouche. -->
 <section class="section ap-bloc ap-citation-bloc" id="citation">
-  <div class="conteneur">
-    <div class="ap-citation-longue">
-      <figure class="ap-citation-portrait"><img src="img:philippine" alt="Philippine Tamic"><figcaption>Philippine Tamic, Product Compliance Operations Manager, Decathlon</figcaption></figure>
+  <div class="conteneur" data-apparait>
+    <p class="sy-surtitre">Le témoignage</p>
+    <figure class="ap-citation-longue">
       <blockquote class="ap-citation-texte">
         <p>Aujourd'hui, notre principal défi chez Decathlon, c'est de réussir à capter des informations très précises au milieu d'un volume massif de réglementations produits à l'international. Notre enjeu est double : nous avons besoin d'analyses qui soient à la fois juridiques, pour piloter nos mises en conformité mondiales, et techniques, pour accompagner concrètement nos ingénieurs dans le développement des produits. Le tout, en anticipation des évolutions réglementaires et de leur mise en œuvre de manière à sécuriser notre accès au marché.</p>
         <p>C'est exactement le pont que nous essayons de construire avec le PoC mené avec Cleo, dont la solution technologique vise justement à filtrer ce bruit pour nous apporter une information qualifiée, ciblée et directement actionnable par nos équipes. En effet, grâce à leur moteur d'IA, ils ne se contentent pas de faire de la veille ; ils agissent comme un traducteur intelligent capable de filtrer le « bruit » pour extraire une donnée structurée, aujourd'hui indispensable pour guider la conception au sein de notre PLM.</p>
         <p>Au-delà de l'outil, cette collaboration est une vraie réussite humaine. L'équipe de Cleo est au top : très professionnelle, réactive et agile. Ils ont fait preuve d'une écoute remarquable et d'une fine compréhension de nos enjeux industriels et organisationnels complexes, le tout mené d'une main de maître avec une excellente gestion de projet. Ils ont su prendre en compte nos besoins et font preuve d'un accompagnement avec une pédagogie essentielle pour une conduite du changement réussie.</p>
       </blockquote>
-    </div>
+      <figcaption class="ap-citation-portrait"><img src="img:philippine" alt="Philippine Tamic"><span><b>Philippine Tamic</b>Product Compliance Operations Manager, Decathlon</span></figcaption>
+    </figure>
   </div>
 </section>
 
-<!-- ═══ LE RÉCIT ═══ VERBATIM, trois chapitres extraits de l'original par le générateur. -->
+<!-- ═══ LE RÉCIT ═══ trois chapitres. Retouches du 15/09/2026 (relevé wording) : « corpus » devient « réglementations » ;
+     le cabinet local n'est plus décrit comme lent ; « sans relecture manuelle » retiré (un expert conformité relit) ;
+     la ligne « de plusieurs semaines à quelques heures » est retirée : métrique « à collecter » (dossier de marque, planche 10). -->
 <section class="section ap-bloc ap-recit-bloc" id="recit">
-  <div class="conteneur">
+  <div class="conteneur" data-apparait>
     <div class="ap-chapitres">
       <article class="ap-chapitre">
-        <div class="ap-chapitre-tete"><b class="tk-chiffre ap-chapitre-num">01</b><p class="ap-surtitre">Le contexte</p><h2 class="ap-chapitre-titre">Un catalogue large, des marchés qui s'ouvrent</h2></div>
+        <div class="ap-chapitre-tete"><span class="ap-num">01</span><p class="sy-surtitre">Le contexte</p><h2 class="ap-chapitre-titre">Un catalogue large, des marchés qui s'ouvrent</h2></div>
         <div class="ap-chapitre-corps">
         <p>Une enseigne qui conçoit ses propres produits porte la responsabilité du fabricant. Chaque référence
-        mise sur un marché doit répondre au corpus de ce marché : substances, sécurité, étiquetage, emballage,
+        mise sur un marché doit répondre aux réglementations de ce marché : substances, sécurité, étiquetage, emballage,
         allégations. Multipliez par le nombre de familles de produits, puis par le nombre de pays, et le travail
         de lecture devient le facteur limitant.</p>
-        <p>L'approche classique consiste à interroger un cabinet local par marché. Elle donne des réponses justes,
-        mais elle prend des semaines et elle recommence à chaque nouvelle référence. Entre deux consultations,
-        les textes évoluent et rien ne le signale.</p>
+        <p>Chaque cabinet local répond pour son marché, et la question se repose à chaque nouvelle référence.
+        Entre deux consultations, les textes continuent d'évoluer.</p>
         </div>
       </article>
       <article class="ap-chapitre">
-        <div class="ap-chapitre-tete"><b class="tk-chiffre ap-chapitre-num">02</b><p class="ap-surtitre">La démarche</p><h2 class="ap-chapitre-titre">Encoder une fois, appliquer à chaque référence</h2></div>
+        <div class="ap-chapitre-tete"><span class="ap-num">02</span><p class="sy-surtitre">La démarche</p><h2 class="ap-chapitre-titre">Encoder une fois, appliquer à chaque référence</h2></div>
         <div class="ap-chapitre-corps">
-        <p>Cleo part du texte. Chaque obligation est écrite sous forme testable : un opérateur, un seuil,
+        <p>Cleo part du texte. Chaque obligation est écrite sous forme testable : un opérateur, un seuil,
         le champ produit sur lequel elle porte, l'article qui la fonde et sa date d'application. Une fois encodée,
-        elle s'applique à toutes les références qui entrent dans son champ, sans relecture manuelle.</p>
-        <p>Le catalogue est ensuite rapproché de cette base. Pour chaque référence et chaque marché visé,
-        l'écran rend trois états seulement : l'obligation est couverte, elle reste à vérifier, ou la donnée produit
+        elle s'applique à toutes les références qui entrent dans son champ, et l'équipe la relit et la met à jour chaque semaine.</p>
+        <p>Cleo rapproche ensuite le catalogue de cette base. Pour chaque référence et chaque marché visé,
+        l'écran rend trois états seulement : l'obligation est couverte, elle reste à vérifier, ou la donnée produit
         manque pour trancher. Ce troisième état compte autant que les deux autres, parce qu'il désigne
         exactement ce qu'il faut aller chercher.</p>
-        <p>Les questions que ce travail fait remonter sont du même ordre que celles-ci :</p>
+        <p>Les questions que ce travail fait remonter sont du même ordre que celles-ci :</p>
         <ul>
-          <li>Cette matière entre-t-elle dans le champ d'une restriction de l'annexe XVII ?</li>
-          <li>La mention de tri attendue est-elle la même dans les vingt-sept États membres ?</li>
-          <li>Quelle date d'application s'applique à ce produit, et combien de jours restent devant nous ?</li>
+          <li>Cette matière entre-t-elle dans le champ d'une restriction de l'annexe XVII ?</li>
+          <li>La mention de tri attendue est-elle la même dans les vingt-sept États membres ?</li>
+          <li>Quelle date d'application vaut pour ce produit, et combien de jours restent devant nous ?</li>
         </ul>
-        <p>Sur chacune, la réponse rendue cite le texte à l'article, pour que l'équipe conformité puisse
+        <p>Sur chacune, la réponse cite le texte à l'article, pour que l'équipe conformité puisse
         la reprendre et la porter elle-même.</p>
         </div>
       </article>
       <article class="ap-chapitre">
-        <div class="ap-chapitre-tete"><b class="tk-chiffre ap-chapitre-num">03</b><p class="ap-surtitre">Le résultat</p><h2 class="ap-chapitre-titre">Le temps rendu aux équipes produit</h2></div>
+        <div class="ap-chapitre-tete"><span class="ap-num">03</span><p class="sy-surtitre">Le résultat</p><h2 class="ap-chapitre-titre">Le temps rendu aux équipes produit</h2></div>
         <div class="ap-chapitre-corps">
-        <p>Ce que la mise en place change, dans l'ordre :</p>
+        <p>Ce que la mise en place change :</p>
         <ul>
-          <li><b>Le délai.</b> Le relevé des obligations d'une gamme sur plusieurs marchés passe de plusieurs
-          semaines à quelques heures.</li>
           <li><b>La traçabilité.</b> Chaque obligation retenue porte son article et sa date, ce qui rend le dossier
           présentable tel quel lors d'un contrôle.</li>
           <li><b>La veille.</b> Une parution au Journal officiel arrive rattachée aux références qu'elle concerne,
           avec le temps restant avant application.</li>
         </ul>
         <p>Les équipes produit et qualité travaillent alors sur la même base, tenue à jour, et gardent leur temps
-        pour les arbitrages qui le demandent vraiment.</p>
+        pour les arbitrages qui le demandent.</p>
         </div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ═══ APPEL FINAL ═══ bandeau tramé à la Tenkara : étiquette blanche, phrase, petit bouton carré. -->
+<!-- ═══ BANDEAU FINAL ═══ composant commun du site (tk-bandeau). Titre : wording/principes.md, règle 10. -->
 <section class="section ap-bloc ap-final tk-bandeau" id="contact">
-  <div class="conteneur">
-    <div class="tk-trame" aria-hidden="true"><img src="img:vis" alt=""></div>
-    <p class="tk-etiquette">30 minutes pour voir ce qui bloque aujourd'hui</p>
-    <h2 class="ap-final-titre">Un nouveau pays n'est plus un projet. <span class="attenue">C'est une décision.</span></h2>
-    <a class="tk-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <div class="conteneur" data-apparait>
+    <p class="tk-etiquette">30 minutes avec l'équipe, sur vos produits</p>
+    <h2 class="ap-final-titre">Voyez ce que Cleo relève sur vos propres produits</h2>
+    <a class="tk-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <svg class="ap-fleche" viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </section>
 

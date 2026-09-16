@@ -1,31 +1,32 @@
 <!--NAV-->
-<!-- ═══ DATA, COMME LA PAGE SERVICE ═══ 15/09/2026, Naomie : « data trop compliqué, tu as fait une landing en fait, mais
-     pas ça, comme l'autre ». Modèle : la page Service 37 (à la Moritz). Généré par scratchpad/agents/data-simple/generer.mjs,
-     feuille commun/lanes/v6-zzzzzzzz-39-data.css. Textes lus dans la page Data d'avant ; exemples de demandes de cette
-     page et des fiches 44 et 45 ; aucun chiffre, prix ni client nouveau.
+<!-- ═══ DATA ═══ Refonte du 15/09/2026 (scratchpad/agents/refonte/SYSTEME.md, agent F3). Structure de la page Service 37
+     gardée : haut de page et chiffres, usages en liste et détail, trois étapes collantes (la seule scène liée au
+     défilement), l'offre, les questions, le bandeau final. Texte repris selon refonte/wording (lexique, principes, relevé).
+     Générateur scratchpad/agents/data-simple/generer.mjs PÉRIMÉ depuis la refonte du 15/09 : ne pas le relancer.
      ⚠️ LE GÉNÉRATEUR DE LA PAGE 43 LIT CETTE PAGE : garder les 6 « pl-n » (question « D'où vient la règle ? »), le
-     « pl-regle » suivi de son « t-h3 » et les 5 « pl-champ » (carte de l'étape 3). -->
+     « pl-regle » suivi de son « t-h3 » et les 5 « pl-champ » (carte de l'étape 3).
+     h1 : variante 1 de refonte/wording/heros.md (SITE 39 EN). Chiffres canon dans la formule de DM-p10 et DM-p14. -->
 <section class="dd-s dd-hero">
   <div class="dd-conteneur">
-    <span class="dd-surtitre">Data</span>
+    <p class="dd-surtitre">Data</p>
     <h1 class="dd-h1">Product regulatory data, <span class="dd-gris">inside the AI you already use.</span></h1>
-    <p class="dd-hero-lead">Product rules from 106 countries, linked to their article and their entry-into-force date, via API or MCP server.</p>
-    <div class="dd-actions"><a class="dd-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Talk to the Data team <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="dd-bouton dd-bouton-clair" href="#usages">See the use cases</a></div>
-    <ul class="dd-chiffres">
-      <li><b class="dd-compte dd-c-106"><span class="dd-compte-texte">106</span></b><span>countries covered</span></li>
-      <li><b class="dd-compte dd-c-25000"><span class="dd-compte-texte">25,000</span></b><span>regulations indexed</span></li>
-      <li><b class="dd-compte dd-c-19000"><span class="dd-compte-texte">19,000</span></b><span>authorities tracked</span></li>
-      <li><b class="dd-compte dd-c-3700"><span class="dd-compte-texte">3,700</span></b><span>official sources</span></li>
+    <p class="dd-hero-lead">Product rules from 106 countries, each linked to its article and its entry-into-force date, via API or MCP server.</p>
+    <div class="dd-actions"><a class="dd-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="dd-bouton dd-bouton-clair" href="#usages">See the use cases</a></div>
+    <ul class="dd-chiffres sy-chiffres">
+      <li><b>106</b><span>countries</span></li>
+      <li><b>25,000</b><span>regulations mapped</span></li>
+      <li><b>19,000</b><span>regulatory authorities tracked</span></li>
+      <li><b>3,700</b><span>official sources</span></li>
     </ul>
   </div>
 </section>
 
 <!-- ═══ LES USAGES ═══ la liste à gauche, le détail de l'usage choisi à droite (au survol ou au clic ; au téléphone, en
-     accordéon). Chaque usage : une photo et un exemple de demande, la phrase de l'usage, quatre repères, un bouton. -->
-<section class="dd-s" id="usages">
+     accordéon). Chaque usage : une photo et un exemple de demande, la phrase de l'usage, ses repères en lignes, un lien. -->
+<section class="dd-s dd-usages" id="usages">
   <div class="dd-conteneur">
-    <h2 class="dd-titre">One rule base. <span class="dd-gris">Many ways to build.</span></h2>
-    <div class="dd-cas" id="developpeurs" role="radiogroup" aria-label="Use cases">
+    <h2 class="dd-titre">Five ways to use the rule base</h2>
+    <div class="dd-cas" data-apparait id="developpeurs" role="radiogroup" aria-label="Use cases">
       <input type="radio" name="dd-usage" id="dd-usage-1" checked>
       <label class="sc-cas-label dd-cas-label" for="dd-usage-1" style="--r:1"><span>01</span>In your AI assistant</label>
       <div class="dd-panneau">
@@ -33,31 +34,31 @@
         <div class="dd-panneau-corps">
           <p class="dd-panneau-famille">MCP server</p>
           <h3>In your AI assistant</h3>
-          <p class="dd-lead">One MCP server, the same data everywhere.</p>
+          <p class="dd-lead">One MCP server, the same data in every assistant.</p>
           <ul class="dd-recevez">
             <li>Claude.ai and Claude Desktop</li>
             <li>Cursor, Cline and Continue</li>
             <li>Claude Code, in the terminal</li>
             <li>Any MCP-compatible client</li>
           </ul>
-          <div class="dd-panneau-pied"><a class="dd-bouton" href="#brancher">Connect Cleo <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+          <div class="dd-panneau-pied"><a class="dd-lien sy-lien" href="#brancher">Connect Cleo <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
         </div>
       </div>
       <input type="radio" name="dd-usage" id="dd-usage-2">
       <label class="sc-cas-label dd-cas-label" for="dd-usage-2" style="--r:2"><span>02</span>Build AI products</label>
       <div class="dd-panneau">
-        <div class="dd-panneau-image"><img src="img:masse-biberon" alt=""><p class="dd-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> List the texts that target a plastic baby bottle in the European Union, with the article behind each obligation.</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
+        <div class="dd-panneau-image"><img src="img:masse-biberon" alt=""><p class="dd-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> List the legislation that applies to a plastic baby bottle in the European Union, with the article behind each obligation.</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
         <div class="dd-panneau-corps">
           <p class="dd-panneau-famille">For legaltechs and software vendors</p>
           <h3>Build AI products</h3>
-          <p class="dd-lead">Product rules from 106 countries, linked to their article and their entry-into-force date, via API or MCP server.</p>
+          <p class="dd-lead">Cleo's rule base inside your own product, every rule with its article and its entry-into-force date.</p>
           <ul class="dd-recevez">
             <li>Via API or MCP server</li>
             <li>Each rule linked to its article</li>
             <li>Its entry-into-force date</li>
             <li>106 countries</li>
           </ul>
-          <div class="dd-panneau-pied"><a class="dd-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Talk to the Data team <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+          <div class="dd-panneau-pied"><a class="dd-lien sy-lien" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
         </div>
       </div>
       <input type="radio" name="dd-usage" id="dd-usage-3">
@@ -69,29 +70,25 @@
           <h3>Plug into your systems</h3>
           <p class="dd-lead">Structured data, usable right inside your PLM.</p>
           <ul class="dd-recevez">
-            <li>Structured data</li>
-            <li>Usable right inside your PLM</li>
-            <li>Every field points to its article</li>
+            <li>Structured data, field by field</li>
             <li>Via API</li>
           </ul>
-          <div class="dd-panneau-pied"><a class="dd-bouton" href="06-cas-client.html">See the case study <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+          <div class="dd-panneau-pied"><a class="dd-lien sy-lien" href="06-cas-client.html">Read the case study <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
         </div>
       </div>
       <input type="radio" name="dd-usage" id="dd-usage-4">
-      <label class="sc-cas-label dd-cas-label" for="dd-usage-4" style="--r:4"><span>04</span>Follow texts as they change</label>
+      <label class="sc-cas-label dd-cas-label" for="dd-usage-4" style="--r:4"><span>04</span>Follow legislation as it changes</label>
       <div class="dd-panneau">
-        <div class="dd-panneau-image"><img src="img:masse-telephone" alt=""><p class="dd-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> Which texts published this week affect my phones sold in France and Germany?</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
+        <div class="dd-panneau-image"><img src="img:masse-telephone" alt=""><p class="dd-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> Which legislation published this week affects my phones sold in France and Germany?</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
         <div class="dd-panneau-corps">
           <p class="dd-panneau-famille">For compliance teams</p>
-          <h3>Follow texts as they change</h3>
-          <p class="dd-lead">Every text linked to the texts it amends, transposes or supersedes.</p>
+          <h3>Follow legislation as it changes</h3>
+          <p class="dd-lead">Every act linked to the acts it amends, transposes or supersedes.</p>
           <ul class="dd-recevez">
-            <li>The texts it amends</li>
-            <li>The texts it transposes</li>
-            <li>The texts it supersedes</li>
-            <li>The version in force</li>
+            <li>The version in force of every act</li>
+            <li>The acts amended or superseded</li>
           </ul>
-          <div class="dd-panneau-pied"><a class="dd-bouton" href="26-legal-data-en.html">See coverage <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+          <div class="dd-panneau-pied"><a class="dd-lien sy-lien" href="26-legal-data-en.html">See coverage <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
         </div>
       </div>
       <input type="radio" name="dd-usage" id="dd-usage-5">
@@ -99,38 +96,38 @@
       <div class="dd-panneau">
         <div class="dd-panneau-image"><img src="img:masse-peluche" alt=""><p class="dd-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> What lead content is allowed in a children's product sold in the United States?</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
         <div class="dd-panneau-corps">
-          <p class="dd-panneau-famille">Published architecture: MARIA, 93 to 97% precision</p>
+          <!-- La preuve de la page : MARIA reste nommée ici seulement (SYSTEME.md §4). Chiffres de l'article de recherche. -->
+          <p class="dd-panneau-famille">Published architecture: MARIA</p>
           <h3>Cite and verify</h3>
-          <p class="dd-lead">Every answer cites the article, never a summary.</p>
+          <p class="dd-lead">The source before the summary: every answer cites the article.</p>
           <ul class="dd-recevez">
-            <li>The text in force</li>
+            <li>The legislation in force</li>
             <li>The article cited</li>
-            <li>Never a summary</li>
-            <li>93 to 97% precision</li>
+            <li>93 to 97% precision on binding texts, evaluated on 7,676 regulations</li>
           </ul>
-          <div class="dd-panneau-pied"><a class="dd-bouton" href="23-research-en.html">Read our research paper <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+          <div class="dd-panneau-pied"><a class="dd-lien sy-lien" href="23-research-en.html">Read the research paper <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ TROIS ÉTAPES ═══ collantes à côté d'une grande photo ; la carte posée dessus change avec l'étape : la clé, le
-     serveur ajouté au client, la règle encodée qui répond à la question. -->
+<!-- ═══ TROIS ÉTAPES ═══ la seule scène liée au défilement de la page : les étapes collent à côté d'une grande photo, la
+     carte posée dessus change avec l'étape (la clé, le serveur ajouté au client, la règle encodée qui répond). -->
 <section class="dd-s dd-comment-section" id="brancher">
   <div class="dd-conteneur">
-    <h2 class="dd-titre dd-centre">Three steps. <span class="dd-gris">From the key to the first answer.</span></h2>
-    <div class="dd-comment-scene">
+    <h2 class="dd-titre">From the access key to the first answer</h2>
+    <div class="dd-comment-scene" data-scene>
       <div class="dd-comment-collant">
         <figure class="dd-comment-image">
           <img src="img:humain-detendu" alt="">
-          <div class="dd-carte dd-carte-1" aria-hidden="true">
+          <div class="dd-calque dd-calque-1" aria-hidden="true">
             <div class="dd-cle"><p class="dd-cle-label">Access key</p><div class="dd-cle-champ">••••••••••••••••••••</div><p class="dd-ou">or</p><div class="dd-cle-bouton">Browser sign-in</div></div>
           </div>
-          <div class="dd-carte dd-carte-2" aria-hidden="true">
+          <div class="dd-calque dd-calque-2" aria-hidden="true">
             <div class="dd-clients"><div class="dd-clients-tete"><b>Cleo</b><em>MCP</em></div><ul><li>Claude</li><li>Cursor</li><li>Cline</li><li>Continue</li><li>Claude Code</li></ul></div>
           </div>
-          <div class="dd-carte dd-carte-3" aria-hidden="true">
+          <div class="dd-calque dd-calque-3" aria-hidden="true">
             <span class="dd-flottant dd-f1"><em>question</em>Lead content, children's product, United States</span>
             <div class="pl-regle dd-regle">
               <div class="t-h3">Lead content of accessible parts</div>
@@ -146,68 +143,66 @@
         <ol class="dd-etapes">
           <li class="dd-etape"><b><span>01</span>Get a key</b><p>An access key, or a browser sign-in.</p></li>
           <li class="dd-etape"><b><span>02</span>Connect your assistant</b><p>Add the Cleo server to your MCP client.</p></li>
-          <li class="dd-etape"><b><span>03</span>Ask the question</b><p>Every answer cites the article, never a summary.</p></li>
+          <li class="dd-etape"><b><span>03</span>Ask the question</b><p>The answer cites the article behind the rule.</p></li>
         </ol>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ L'OFFRE ═══ la table de ce que comprend l'offre (API, serveur MCP, couverture, skills) et la carte sombre, seul
-     champ #08093B de la page, avec les trois repères de l'offre telle qu'elle était écrite. Aucun prix. -->
-<section class="dd-s" id="offre">
+<!-- ═══ L'OFFRE ═══ la table de ce que comprend l'offre (API, serveur MCP, couverture, skills) et la carte profonde, seule
+     zone #08093B de la page. Aucun prix.
+     À TRANCHER : le périmètre de l'offre Data (pays, familles de produits) et son modèle de prix ne sont pas arrêtés. Les
+     mentions « to be defined » et « to be set » sont retirées de l'écran le 15/09/2026. -->
+<section class="dd-s dd-offre-section" id="offre">
   <div class="dd-conteneur">
-    <h2 class="dd-titre dd-centre">What the Data offer includes.</h2>
-    <div class="dd-offre">
+    <h2 class="dd-titre">What the Data offer includes</h2>
+    <div class="dd-offre" data-apparait>
       <div class="dd-offre-table">
         <ul>
           <li><div><b>API</b><span>Via API, via MCP server, or both.</span></div></li>
-          <li><div><b>MCP server</b><span>One MCP server, the same data everywhere.</span></div><a class="dd-lien" href="#brancher">Connect Cleo</a></li>
-          <li id="couverture"><div><b>Coverage</b><span>The authorities tracked for each product, and the version in force of each text.</span></div><a class="dd-lien" href="26-legal-data-en.html">See coverage</a></li>
-          <li><div><b>Skills</b><span>toy-compliance · cosmetics-compliance · electronics-compliance</span></div><a class="dd-lien" href="25-skills-en.html">See skills</a></li>
+          <li><div><b>MCP server</b><span>Claude, Cursor, Cline, Continue, Claude Code, and any MCP-compatible client.</span></div><a class="dd-lien sy-lien" href="#brancher">Connect Cleo</a></li>
+          <li id="couverture"><div><b>Coverage</b><span>The authorities tracked for each product, and the version in force of each act.</span></div><a class="dd-lien sy-lien" href="26-legal-data-en.html">See coverage</a></li>
+          <li><div><b>Skills</b><span>toy-compliance · cosmetics-compliance · electronics-compliance</span></div><a class="dd-lien sy-lien" href="25-skills-en.html">See skills</a></li>
         </ul>
       </div>
-      <div class="dd-offre-carte">
+      <div class="dd-offre-carte sy-sur-profond">
         <p class="dd-etiquette">The Data offer</p>
-        <p class="dd-grand">The countries and product families your software needs.</p>
-        <ul>
-          <li><b>Scope</b><em class="dd-etat">to be defined</em></li>
-          <li><b>Access</b><em class="dd-etat dd-etat-plein">API and MCP</em></li>
-          <li><b>Pricing</b><em class="dd-etat">to be set</em></li>
-        </ul>
-        <a class="dd-bouton dd-bouton-blanc" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Talk to the Data team <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <p class="dd-grand">The countries and product families your software needs, via API and MCP server.</p>
+        <a class="dd-bouton dd-bouton-blanc" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ QUESTIONS ═══ réponses reprises de la page d'avant : la méthode et ce qui est publié, les clients MCP, les deux
-     premières étapes, le tarif à fixer. -->
-<section class="dd-s" id="questions">
+<!-- ═══ QUESTIONS ═══ la méthode et ce qui est publié, les clients MCP, l'accès.
+     À TRANCHER : la question « How much does the Data offer cost? » est retirée de l'écran le 15/09/2026 ; sa réponse
+     (« the pricing model is to be set ») était une note de chantier. -->
+<section class="dd-s dd-questions" id="questions">
   <div class="dd-conteneur">
-    <h2 class="dd-titre dd-centre">Frequently asked questions.</h2>
-    <div class="dd-faq">
-      <details id="methode" open><summary>Where does the rule come from?</summary><div class="dd-reponse"><p>The text is scattered. The rule is in one place.</p><p class="dd-publie">What gets published</p><div class="dd-sources">
+    <h2 class="dd-titre">Frequently asked questions</h2>
+    <div class="dd-faq" data-apparait>
+      <details id="methode" open><summary>Where does the rule come from?</summary><div class="dd-reponse"><p>Every rule is drawn from its official legislation and kept in one place.</p><p class="dd-publie">What gets published</p><div class="dd-sources">
         <div class="pl-n">Official Journal of the European Union</div>
         <div class="pl-n">Market surveillance authority</div>
-        <div class="pl-n">Draft text under consultation</div>
+        <div class="pl-n">Draft act under consultation</div>
         <div class="pl-n">Amended annex</div>
         <div class="pl-n">Notified body opinion</div>
         <div class="pl-n">Harmonised standard</div>
       </div><p>Every field points to its article.</p></div></details>
       <details><summary>Which assistants are compatible?</summary><div class="dd-reponse"><p>Claude, Cursor, Cline, Continue, Claude Code, and any MCP-compatible client.</p></div></details>
-      <details><summary>How do I get access?</summary><div class="dd-reponse"><p>An access key, or a browser sign-in. Add the Cleo server to your MCP client.</p></div></details>
-      <details><summary>How much does the Data offer cost?</summary><div class="dd-reponse"><p>The pricing model of the Data offer is to be set.</p></div></details>
+      <details><summary>How do I get access?</summary><div class="dd-reponse"><p>With an access key, or a browser sign-in. Then add the Cleo server to your MCP client.</p></div></details>
     </div>
   </div>
 </section>
 
+<!-- ═══ BANDEAU FINAL ═══ modèle unique du site (SYSTEME.md §3). Signature dictée par Naomie le 15/09, une fois sur la page. -->
 <section class="dd-s dd-bandeau tk-bandeau" id="contact">
   <div class="conteneur">
-    <div class="tk-trame" aria-hidden="true"><img src="img:chaines" alt=""></div>
     <p class="tk-etiquette">Sell anywhere, comply everywhere.</p>
-    <h2 class="av-final-titre">The rule, its source and its date, in one place.</h2>
-    <a class="tk-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Talk to the Data team <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <h2 class="av-final-titre">Connect Cleo to your assistants and software</h2>
+    <p class="dd-bandeau-lead">Tell us which countries and product families your software needs to cover.</p>
+    <div class="sy-actions dd-bandeau-actions"><a class="tk-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="dd-bouton dd-bouton-clair" href="26-legal-data-en.html">See coverage</a></div>
   </div>
 </section>
 <!--PIED-->

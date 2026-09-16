@@ -1,0 +1,199 @@
+/* SYSTEME-V1-PRET */
+/* ═══ LE SYSTÈME CLEO, IMPOSÉ SUR TOUT LE SITE ═══ 15/09/2026.
+   Naomie : « fais encore un effort sur le design pour toutes les pages […] je veux qu'on respire, qu'on sente le
+   moderne, aucune incohérence, que ça ne fasse pas trop IA ». Règle : scratchpad/agents/refonte/SYSTEME.md.
+   Mesuré avant (audit du 15/09, 65 pages) : 9 tailles de h1, 13 de h2, 12 de h3 ; 17 variantes de boutons, 5 rayons ;
+   31 variantes de cartes, 17 rayons, 33 ombres ; 3 bleus nuit ; 36 fonds clairs ; 8 largeurs de conteneur et 9 bords
+   gauches ; 9 bandeaux finaux ; 3 pieds.
+   Chargée en dernière (ordre alphabétique des lanes). :not(#_):not(#_) passe devant les feuilles de page ; !important seulement
+   sur des propriétés qu'aucune animation ne touche (taille, interligne, rayon, bord, ombre, fond, largeur).
+
+   ── API POUR LES PAGES (agents F) ────────────────────────────────────────────────────────────────────────────────
+   Variables : jetons de v6-00-jetons.css (--c-*, --t-*, --l-*, --e-*, --r-*, --o-flottante, --m-*). Une page peut
+     redéfinir LOCALEMENT --t-h1 (vers --t-h1-article seulement) et --sy-fond-haut (fond du premier chapitre : blanc par
+     défaut, var(--c-fond-2) pour un haut de page crème) ; un fond posé par la page sur son premier chapitre passe aussi.
+   Classes utilitaires, à poser dans le HTML plutôt que de réécrire un composant :
+     .sy-surtitre           surtitre (12 px, capitales, texte à 62 %)
+     .sy-entete             en-tête de chapitre : surtitre optionnel, h2, chapeau optionnel, puis --e-titre-contenu
+     .sy-lead               chapeau (20 px, 60 ch)
+     .sy-bouton             bouton principal · .sy-bouton-secondaire · .sy-lien (lien d'action fléché). À PRÉFÉRER dans le HTML.
+                            Sinon, tout xx-bouton est principal ; xx-bouton-contour / -secondaire / -clair / -ligne / -fantome / -texte
+                            est secondaire ; xx-bouton-blanc est le principal sur profond ou sur photo.
+     .sy-sur-profond        à poser sur une zone #08093B ou sur une photo : boutons et suites de titres passent en clair
+     .sy-carte              carte (r12, sans bord ni ombre, --c-fond-2 ; .sy-carte-blanche sur crème)
+     .sy-lignes             liste en lignes à filets (li > :first-child titre, :last-child description)
+     .sy-chiffres           rangée de chiffres (li > b chiffre, li > span légende)
+     .sy-citation           citation (28 px) + figcaption en légende
+     .sy-media              grand média de la page (--l-conteneur-large, r12)
+     .sy-bandeau            bandeau final unique (section crème centrée : surtitre, h2, phrase, boutons)
+     .sy-section            chapitre (padding --e-section haut et bas)
+   Mouvement : data-apparait (un bloc) et data-apparait-groupe (4 premiers enfants décalés de 60 ms), gérés par
+     commun/mouvement.js ; data-scene sur la SEULE scène liée au défilement de la page (repère, rien d'automatique).
+   ─────────────────────────────────────────────────────────────────────────────────────────────────────────────── */
+
+/* ═══ 0. La page ═══ */
+body[data-cleo-ds="v6"]:not(#_):not(#_){background:var(--c-fond);color:var(--c-texte)}
+
+/* ═══ 1. Largeur et bord gauche ═══
+   Les conteneurs de premier niveau des sections prennent --l-conteneur : 1200 px au plus, 40 px de marge (20 au
+   téléphone). La barre et le pied suivent le même conteneur, le logo s'aligne sur le contenu. */
+body[data-cleo-ds="v6"] main > :is(section, div, article, header) > :is(.conteneur, [class*="-conteneur"]):not(#_):not(#_),
+body[data-cleo-ds="v6"] :is(.pied, .signature-cleo) > .conteneur:not(#_):not(#_){box-sizing:border-box;width:var(--l-conteneur) !important;max-width:none !important;margin-left:auto !important;margin-right:auto !important;padding-left:0 !important;padding-right:0 !important}
+
+/* Les sections vont d'un bord à l'autre (mesuré avant : sections de 1320 px calées à x = 0 ou 60, donc des contenus à x = 60) ;
+   leur conteneur porte la largeur et le bord gauche. */
+body[data-cleo-ds="v6"] main > section:not(#_):not(#_){box-sizing:border-box;width:auto !important;max-width:none !important;margin-left:0 !important;margin-right:0 !important}
+
+/* Le premier chapitre : plus de tache de dégradé bleu (v6-foundation.css, radial-gradient rgba(77,87,255,.18), relevé parmi les
+   signes « IA ») ; la COULEUR reste libre, une page pose la crème par son propre fond ou par --sy-fond-haut. */
+body[data-cleo-ds="v6"] main > section:first-child:not(#_):not(#_){background-image:none !important}
+
+/* Les cadres décoratifs (filets de grille, petits carrés, coins marqués) disparaissent ; le chapitre garde son air. */
+body[data-cleo-ds="v6"] main > section:is(.fx-cadre, .mu-cadre):not(#_):not(#_){margin:0 !important;padding:0 !important;background-color:transparent !important;background-image:none !important;border:0 !important}
+body[data-cleo-ds="v6"] main > section:is(.fx-cadre, .mu-cadre) > .conteneur:not(#_):not(#_){padding-top:var(--e-section) !important;padding-bottom:var(--e-section) !important;border:0 !important;background-image:none !important;background-color:transparent !important}
+body[data-cleo-ds="v6"] main > section:is(.fx-cadre, .mu-cadre) > .conteneur:not(#_):not(#_)::before,
+body[data-cleo-ds="v6"] main > section:is(.fx-cadre, .mu-cadre) > .conteneur:not(#_):not(#_)::after,
+body[data-cleo-ds="v6"] main > section:is(.fx-cadre, .mu-cadre):not(#_):not(#_)::before,
+body[data-cleo-ds="v6"] main > section:is(.fx-cadre, .mu-cadre):not(#_):not(#_)::after{content:none !important;display:none !important}
+body[data-cleo-ds="v6"] main .ap-table-cadre:not(#_):not(#_){border:0 !important;background-image:none !important}
+/* Même décor posé sur les conteneurs de premier niveau (Ressources et articles : section:not(:first-child) > .conteneur ;
+   page 37 : section.sv-bloc > .conteneur) : filets, quadrillage en dégradé, carré noir et coins marqués en pseudo-éléments. */
+body[data-cleo-ds="v6"] main > section > .conteneur:not(#_):not(#_){border:0 !important;background-image:none !important}
+body[data-cleo-ds="v6"] main > section:not(.tk-bandeau) > .conteneur:not(#_):not(#_)::before,
+body[data-cleo-ds="v6"] main > section:not(.tk-bandeau) > .conteneur:not(#_):not(#_)::after{border:0 !important;background:none !important;box-shadow:none !important}
+
+/* ═══ 2. Les titres : trois tailles ═══ */
+body[data-cleo-ds="v6"] main h1:not(#_):not(#_){font-size:var(--t-h1) !important;line-height:var(--t-h1-lh) !important;letter-spacing:var(--t-h1-ls) !important;font-weight:500 !important;text-transform:none !important;text-wrap:balance}
+body[data-cleo-ds="v6"] main h2:not(.fx-inclus-titre, .mu-inclus-titre, .ent-form-titre, .ap-form-titre):not(#_):not(#_){font-size:var(--t-h2) !important;line-height:var(--t-h2-lh) !important;letter-spacing:var(--t-h2-ls) !important;font-weight:500 !important;text-transform:none !important;text-wrap:balance}
+body[data-cleo-ds="v6"] main h3:not(#_):not(#_){font-size:var(--t-h3) !important;line-height:var(--t-h3-lh) !important;letter-spacing:var(--t-h3-ls) !important;font-weight:500 !important;text-transform:none !important}
+body[data-cleo-ds="v6"] main :is(h2.ent-form-titre, h2.ap-form-titre):not(#_):not(#_){font-size:var(--t-h3) !important;line-height:var(--t-h3-lh) !important;letter-spacing:var(--t-h3-ls) !important;font-weight:500 !important}
+
+/* Pages articles, poste, terme et événement : le h1 de lecture. */
+body[data-cleo-ds="v6"]:is([data-v6-page="12-article"], [data-v6-page="14-terme"], [data-v6-page="16-evenement"], [data-v6-page="19-poste"], [data-v6-page="27-article-levee"], [data-v6-page="27-article-levee-en"], [data-v6-page="28-article-vivatech"], [data-v6-page="28-article-vivatech-en"], [data-v6-page="29-article-deel"], [data-v6-page="29-article-deel-en"]){--t-h1:var(--t-h1-article);--t-h1-lh:var(--t-h1-article-lh)}
+
+/* Ferrés à gauche : les classes « centrées » des familles ne centrent plus les titres (le bandeau final et la 404 le
+   restent, plus bas). */
+body[data-cleo-ds="v6"] main :is(h1, h2):is(.ap-centre, .sc-centre, .dd-centre, .en-centre, .centre, .mesure-centree):not(#_):not(#_){text-align:left !important;margin-left:0 !important;margin-right:auto !important}
+
+/* La suite d'un titre : la couleur du titre à 42 % (66 % sur profond ou sur photo), jamais bleue, jamais une autre teinte.
+   Mesuré au rendu le 15/09 : color-mix(currentColor) dans la propriété color rend du BLANC dans Chromium ; couleurs explicites. */
+body[data-cleo-ds="v6"] main :is(h1, h2) :is(.attenue, .sc-gris, .dd-gris, .en-gris-clair, .fx-bleu, .mu-bleu):not(#_):not(#_){color:var(--c-texte-3) !important;-webkit-text-fill-color:currentColor}
+body[data-cleo-ds="v6"] main :is(.sy-sur-profond, .tk-photo, .en-hero, .en-clair, .tk-onglets, .sc-tarifs-volume) :is(h1, h2) :is(.attenue, .sc-gris, .dd-gris, .en-gris-clair, .fx-bleu, .mu-bleu):not(#_):not(#_),
+body[data-cleo-ds="v6"] main :is(h1, h2).en-clair :is(.attenue, .en-gris-clair):not(#_):not(#_){color:var(--c-sur-profond-2) !important}
+
+/* ═══ 3. Chapeaux et surtitres ═══ */
+body[data-cleo-ds="v6"] main :is(.sy-lead, .fx-lead, .ap-lead, .t-lead, .bf-intro, .sc-hero-lead, .sc-lead, .dd-hero-lead, .dd-lead, .en-hero-lead, .hq-lead, .mu-lead, [class$="-lead"], [class*="-lead "], .chapo):not(#_):not(#_){font-size:var(--t-lead) !important;line-height:1.45 !important;letter-spacing:0 !important;font-weight:400 !important;max-width:60ch;color:var(--c-texte-2) !important}
+
+body[data-cleo-ds="v6"] main :is(.sy-surtitre, .tk-etiquette, .etiquette, .ap-surtitre, .surtitre, .ap-etiquette, .sc-surtitre, .sc-etiquette, .dd-surtitre, .dd-etiquette, .av-livrable-surtitre, .mu-surtitre, h2.fx-inclus-titre, h2.mu-inclus-titre, [class$="-surtitre"], [class*="-surtitre "], [class$="-etiquette"], [class*="-etiquette "], .t-label):not(#_):not(#_){display:inline-block;width:auto;margin-top:0;margin-bottom:16px;padding:0 !important;border:0 !important;border-radius:0 !important;background:transparent !important;box-shadow:none !important;font-size:var(--t-surtitre) !important;line-height:1.4 !important;font-weight:500 !important;letter-spacing:.06em !important;text-transform:uppercase !important;color:var(--c-texte-2) !important;clip-path:none !important}
+/* Sur profond ou sur photo : chapeau et surtitre en clair. */
+body[data-cleo-ds="v6"] main :is(.sy-sur-profond, .tk-photo, .en-hero, .en-clair, .tk-onglets, .sc-tarifs-volume) :is(.sy-lead, .fx-lead, .ap-lead, .t-lead, .sc-hero-lead, .sc-lead, .dd-hero-lead, .dd-lead, .en-hero-lead, .hq-lead, .mu-lead, .sy-surtitre, .tk-etiquette, .etiquette, .ap-surtitre, .surtitre, .sc-surtitre, .sc-etiquette, .dd-surtitre, .dd-etiquette, .mu-surtitre):not(#_):not(#_){color:var(--c-sur-profond-2) !important}
+/* Une étiquette posée SUR une image garde une pastille lisible (blanche, r6). */
+body[data-cleo-ds="v6"] main :is(.blog-art-img, .vignette, .scene, .tk-photo, [class*="-image"], [class*="-photo"], [class*="-media"]) :is(.etiquette, .tk-etiquette):not(#_):not(#_){padding:6px 8px !important;border-radius:var(--r-petit) !important;background:#FFFFFF !important;color:var(--c-texte) !important}
+
+/* ═══ 4. Les boutons : un principal, un secondaire, un lien ═══ */
+body[data-cleo-ds="v6"] :is(main, .pied) :is(.sy-bouton, .sy-bouton-secondaire, .btn, .tk-bouton, .fx-bouton, .ap-bouton, .sc-bouton, .dd-bouton, .dd-cle-bouton, .en-bouton, .ent-bouton, .hq-bouton, .mu-bouton, .av-prix-bouton, .cl-app-bouton, [class$="-bouton"], [class*="-bouton "], [class*="-bouton-plein"], [class*="-bouton-contour"], [class*="-bouton-secondaire"]):not(#_):not(#_){display:inline-flex}
+body[data-cleo-ds="v6"] :is(main, .nav, .pied) :is(.sy-bouton, .sy-bouton-secondaire, .btn, .tk-bouton, .fx-bouton, .ap-bouton, .sc-bouton, .dd-bouton, .dd-cle-bouton, .en-bouton, .ent-bouton, .hq-bouton, .mu-bouton, .av-prix-bouton, .cl-app-bouton, [class$="-bouton"], [class*="-bouton "], [class*="-bouton-plein"], [class*="-bouton-contour"], [class*="-bouton-secondaire"]):not(#_):not(#_){align-items:center;justify-content:center;gap:8px;box-sizing:border-box;min-height:var(--b-hauteur) !important;height:auto !important;padding:0 20px !important;border:0 !important;border-radius:var(--r-bouton) !important;box-shadow:none !important;background:var(--c-accent) !important;color:#FFFFFF !important;font-family:inherit;font-size:var(--b-taille) !important;line-height:1.2 !important;font-weight:500 !important;letter-spacing:.04em !important;text-transform:uppercase !important;text-decoration:none !important;white-space:nowrap;cursor:pointer;transition:background-color .2s ease, color .2s ease, box-shadow .2s ease}
+body[data-cleo-ds="v6"] :is(main, .nav, .pied) :is(.sy-bouton, .btn, .tk-bouton, .fx-bouton, .ap-bouton, .sc-bouton, .dd-bouton, .dd-cle-bouton, .en-bouton, .ent-bouton, .hq-bouton, .mu-bouton, .av-prix-bouton, [class$="-bouton"], [class*="-bouton "]):not(.sy-bouton-secondaire, .btn-contour, .btn-clair, .cl-app-bouton, [class*="-bouton-contour"], [class*="-bouton-secondaire"], [class*="-bouton-clair"], [class*="-bouton-ligne"], [class*="-bouton-fantome"], [class*="-bouton-texte"]):not(#_):not(#_):hover{background:var(--c-accent-survol) !important;color:#FFFFFF !important}
+body[data-cleo-ds="v6"] :is(main, .nav, .pied) :is(.sy-bouton, .sy-bouton-secondaire, .btn, .tk-bouton, .fx-bouton, .ap-bouton, .sc-bouton, .dd-bouton, .dd-cle-bouton, .en-bouton, .ent-bouton, .hq-bouton, .mu-bouton, .av-prix-bouton, .cl-app-bouton, [class$="-bouton"], [class*="-bouton "], [class*="-bouton-plein"], [class*="-bouton-contour"], [class*="-bouton-secondaire"]) svg:not(#_):not(#_){width:14px;height:14px;flex:none}
+body[data-cleo-ds="v6"] :is(main, .nav, .pied) :is(.btn, .sy-bouton) .rond:not(#_):not(#_){display:inline-flex;width:auto;height:auto;padding:0;border-radius:0;background:transparent !important}
+body[data-cleo-ds="v6"] :is(main, .nav, .pied) :is(.btn, .sy-bouton) .rond svg path:not(#_):not(#_){stroke:currentColor}
+
+/* Secondaire : même gabarit, contour fin. */
+body[data-cleo-ds="v6"] :is(main, .nav, .pied) :is(.sy-bouton-secondaire, .btn-contour, .btn-clair, .cl-app-bouton, [class*="-bouton-contour"], [class*="-bouton-secondaire"], [class*="-bouton-clair"], [class*="-bouton-ligne"], [class*="-bouton-fantome"], [class*="-bouton-texte"]):not(#_):not(#_){background:transparent !important;color:var(--c-texte) !important;box-shadow:inset 0 0 0 1px rgba(26,26,26,.18) !important}
+body[data-cleo-ds="v6"] :is(main, .nav, .pied) :is(.sy-bouton-secondaire, .btn-contour, .btn-clair, .cl-app-bouton, [class*="-bouton-contour"], [class*="-bouton-secondaire"], [class*="-bouton-clair"], [class*="-bouton-ligne"], [class*="-bouton-fantome"], [class*="-bouton-texte"]):not(#_):not(#_):hover{background:transparent !important;color:var(--c-texte) !important;box-shadow:inset 0 0 0 1px rgba(26,26,26,.55) !important}
+
+/* Sur profond ou sur photo : le principal passe en blanc, le secondaire en contour clair. */
+body[data-cleo-ds="v6"] main :is(.sc-bouton-blanc, .dd-bouton-blanc, .tk-bouton-coin, [class*="-bouton-blanc"]):not(#_):not(#_),
+body[data-cleo-ds="v6"] main :is(.sy-sur-profond, .tk-photo, .en-hero, .tk-onglets, .sc-tarifs-volume) :is(.sy-bouton, .btn-marque, .tk-bouton, .en-bouton, .sc-bouton:not(.sc-bouton-clair), .dd-bouton:not(.dd-bouton-clair)):not(#_):not(#_){background:#FFFFFF !important;color:var(--c-profond) !important}
+body[data-cleo-ds="v6"] main :is(.sc-bouton-blanc, .dd-bouton-blanc, .tk-bouton-coin, [class*="-bouton-blanc"]):not(#_):not(#_):hover,
+body[data-cleo-ds="v6"] main :is(.sy-sur-profond, .tk-photo, .en-hero, .tk-onglets, .sc-tarifs-volume) :is(.sy-bouton, .btn-marque, .tk-bouton, .en-bouton, .sc-bouton:not(.sc-bouton-clair), .dd-bouton:not(.dd-bouton-clair)):not(#_):not(#_):hover{background:var(--c-fond-2) !important;color:var(--c-profond) !important}
+body[data-cleo-ds="v6"] main :is(.sy-sur-profond, .tk-photo, .en-hero, .tk-onglets, .sc-tarifs-volume) :is(.sy-bouton-secondaire, .btn-contour, .sc-bouton-clair, .dd-bouton-clair):not(#_):not(#_){color:#FFFFFF !important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.3) !important}
+
+/* Lien d'action. */
+body[data-cleo-ds="v6"] main :is(.sy-lien, .cta-texte):not(#_):not(#_){display:inline-flex;align-items:center;gap:8px;padding:0;border:0;background:none;font-size:.9375rem !important;font-weight:500 !important;letter-spacing:0 !important;text-transform:none !important;color:var(--c-texte) !important;text-decoration:none}
+body[data-cleo-ds="v6"] main :is(.sy-lien, .cta-texte):not(#_):not(#_):hover{text-decoration:underline;text-underline-offset:4px}
+
+/* ═══ 5. Les cartes : r12, ni bord ni ombre ═══ */
+body[data-cleo-ds="v6"] main :is(.sy-carte, .sy-carte-blanche, .tk-case, .carte, .carte-encre, .res-carte, .terme-carte, .atlas-carte, .av-carte, .corps-carte, .dd-carte, .dd-offre-carte, .en-carte, .gp-carte, .mu-carte, .mu-tuile, .sc-carte, .sc-temoin-carte, .titre-carte, .fx-inclus-carte, .mu-inclus-carte, .form-carte, .en-final-carte, .ap-logo-carte, .ligne-liste, .blog-art, .flux-etape, .flottant, .mu-carte-lien, .sc-comment-image, .dd-comment-image, .sc-expert, .sc-tarifs-volume):not(#_):not(#_){border:0 !important;box-shadow:none !important;border-radius:var(--r-carte) !important}
+/* Cartes posées sur blanc : la crème. Cartes posées sur crème : le blanc. Les cartes photo et sombres gardent leur fond. */
+body[data-cleo-ds="v6"] main :is(.sy-carte, .tk-creme, .tk-bleu, .carte, .res-carte, .terme-carte, .dd-carte, .mu-carte, .mu-tuile, .titre-carte, .corps-carte, .gp-carte, .mu-carte-lien, .flux-etape, .sc-comment-image, .dd-comment-image):not(#_):not(#_){background-color:var(--c-fond-2) !important;color:var(--c-texte)}
+body[data-cleo-ds="v6"] main :is(.sy-carte-blanche, .fx-inclus-carte, .mu-inclus-carte, .form-carte):not(#_):not(#_){background-color:var(--c-carte) !important}
+body[data-cleo-ds="v6"] main :is(.tk-creme, .tk-bleu) :is(.tk-chiffre, .tk-legende):not(#_):not(#_){color:inherit !important;-webkit-text-stroke:0 !important;background:none !important}
+body[data-cleo-ds="v6"] main :is(.tk-creme, .tk-bleu) .tk-legende:not(#_):not(#_){color:var(--c-texte-2) !important}
+
+/* La carte « ce qui est inclus » : une liste en lignes, sans coches ni pastilles. */
+body[data-cleo-ds="v6"] main :is(.fx-inclus-carte, .mu-inclus-carte):not(#_):not(#_){padding:var(--p-carte) !important}
+body[data-cleo-ds="v6"] main :is(.fx-inclus-liste, .mu-inclus-liste):not(#_):not(#_){display:grid !important;gap:0 !important;margin:0 !important;padding:0 !important;list-style:none}
+body[data-cleo-ds="v6"] main :is(.fx-inclus-liste, .mu-inclus-liste) > li:not(#_):not(#_){display:flex !important;align-items:baseline;gap:8px;margin:0 !important;padding:12px 0 !important;border:0 !important;border-top:1px solid var(--c-filet) !important;background:none !important;font-size:var(--t-corps) !important;line-height:1.45 !important;color:var(--c-texte)}
+body[data-cleo-ds="v6"] main :is(.fx-inclus-liste, .mu-inclus-liste) > li > i:not(#_):not(#_){display:none !important}
+body[data-cleo-ds="v6"] main :is(.fx-inclus-liste, .mu-inclus-liste) em:not(#_):not(#_),
+body[data-cleo-ds="v6"] main :is(.fx-tampon, .mu-pastille, .en-pastille):not(#_):not(#_){padding:0 !important;border:0 !important;border-radius:0 !important;background:none !important;box-shadow:none !important;font-style:normal;font-weight:400 !important;color:var(--c-texte-2) !important}
+
+/* ═══ 6. Couleurs hors palette ═══ */
+/* Jetons des feuilles V6 historiques (v6-foundation.css) : ombres de carte et grands rayons ramenés au système. */
+body[data-cleo-ds="v6"]:not(#_):not(#_){--cleo-v6-shadow-card:none;--cleo-v6-shadow-hero:var(--o-flottante);--cleo-v6-radius-sm:6px;--cleo-v6-radius-md:12px;--cleo-v6-radius-lg:12px}
+/* Pastilles bleu pâle sur les mots (em, remesuré après la v1 sur 20 pages : 37, 38, 44 à 51) : le mot reste, la pastille part. */
+body[data-cleo-ds="v6"] main em:not(#_):not(#_){background:none !important;padding:0 !important;border-radius:0 !important;box-shadow:none !important}
+/* Les derniers bleus nuit (#0B0C2C, #15162E, remesurés après la v1) : fond des vignettes et images de ressources en crème ; zones sombres de 17 et 40 au seul #08093B. */
+body[data-cleo-ds="v6"] main :is(.vignette:not(.vignette-ico), .blog-art-img):not(#_):not(#_){background-color:var(--c-fond-2) !important}
+body[data-cleo-ds="v6"] main :is(.vignette-ico, .surface-sombre, .en-hero, .en-hero [class*="trame"], .en-hero-scene):not(#_):not(#_){background-color:var(--c-profond) !important}
+/* Interface posée dans une scène (la déclaration de la fiche) : la seule ombre permise, r12. */
+body[data-cleo-ds="v6"] main :is(.fx-doc, .mu-doc, .sy-interface, .sc-doc, .sc-invite, .sc-devis, .sc-relecteur, .sc-panneau-demande, .couverture):not(#_):not(#_){border-radius:var(--r-carte) !important;box-shadow:0 0 0 1px var(--c-filet), var(--o-flottante) !important}
+body[data-cleo-ds="v6"] main .scene:not(#_):not(#_){background-color:var(--c-fond-2) !important}
+body[data-cleo-ds="v6"] main .scene img.fond:not(#_):not(#_){animation:none !important}
+
+body[data-cleo-ds="v6"] main :is([class*="-flottant"], .fx-in, .sc-ok):not(#_):not(#_){box-shadow:var(--o-flottante) !important}
+
+/* ═══ 7. Le bandeau final unique : crème, centré ═══
+   Les 6 familles qui partagent la même structure (photo, étiquette, titre, bouton) rendent le même bandeau ; la photo de
+   fond et son voile disparaissent. La page Enterprise (en-final, formulaire) garde sa structure : voir le rapport. */
+body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final):not(#_):not(#_){position:relative;margin:0 !important;padding:var(--e-section) 0 !important;border:0 !important;background:var(--c-fond-2) !important;color:var(--c-texte);overflow:clip}
+body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final) > .conteneur:not(#_):not(#_){display:flex !important;flex-direction:column !important;align-items:center !important;justify-content:center !important;gap:0 !important;min-height:0 !important;padding-top:0 !important;padding-bottom:0 !important;border:0 !important;background:transparent !important;text-align:center !important}
+body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final) > .conteneur:not(#_):not(#_)::before,
+body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final) > .conteneur:not(#_):not(#_)::after{content:none !important;display:none !important}
+body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final) .tk-trame:not(#_):not(#_){display:none !important}
+body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final) h2:not(#_):not(#_){max-width:22ch !important;margin:0 auto !important;color:var(--c-texte) !important;text-align:center !important;text-shadow:none !important}
+body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final) :is(.tk-etiquette, .sy-surtitre):not(#_):not(#_){margin-bottom:16px;color:var(--c-texte-2) !important}
+body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final) > .conteneur > :is(p:not(.tk-etiquette):not(.sy-surtitre), .sy-lead):not(#_):not(#_){max-width:52ch;margin:16px auto 0;font-size:var(--t-lead);line-height:1.45;color:var(--c-texte-2)}
+body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final) :is(.fx-bandeau-actions, .mu-bandeau-actions, .sy-actions):not(#_):not(#_){display:flex !important;flex-wrap:wrap;justify-content:center !important;gap:12px !important;margin-top:32px !important}
+body[data-cleo-ds="v6"] main > section:is(.sy-bandeau, .tk-bandeau, .ra-bandeau, .av-final, .ap-final, .dd-bandeau, .sv-final, [class$="-bandeau"], [class*="-bandeau "]):not(.en-final) > .conteneur > :is(.tk-bouton, .sy-bouton, .btn):not(#_):not(#_){margin-top:32px !important;position:static !important}
+
+/* La 404 : titre centré. */
+body[data-cleo-ds="v6"][data-v6-page="404"] main :is(h1, p):not(#_):not(#_){text-align:center !important;margin-left:auto !important;margin-right:auto !important}
+
+/* ═══ 8. Le pied unique ═══ */
+/* Vu au rendu : sous le bandeau final crème, 128 px + 96 px de crème sans séparation faisaient un trou. Un filet, et 72 px. */
+body[data-cleo-ds="v6"] .pied:not(#_):not(#_){background:var(--c-fond-2) !important;color:var(--c-texte) !important;padding-top:72px !important;padding-bottom:32px !important;border:0 !important;border-top:1px solid var(--c-filet) !important}
+body[data-cleo-ds="v6"] .pied h4:not(#_):not(#_){margin:0 0 16px;font-size:var(--t-surtitre) !important;font-weight:500 !important;letter-spacing:.06em !important;text-transform:uppercase !important;color:var(--c-texte-2) !important}
+body[data-cleo-ds="v6"] .pied :is(ul a, .pied-coordonnees a, .t-sm, .t-micro, .t-caption):not(#_):not(#_){font-size:.875rem;color:var(--c-texte-2) !important}
+body[data-cleo-ds="v6"] .pied :is(ul a, .pied-coordonnees a):not(#_):not(#_):hover{color:var(--c-texte) !important}
+body[data-cleo-ds="v6"] .pied .pied-identite:not(#_):not(#_){border-top:1px solid var(--c-filet) !important}
+body[data-cleo-ds="v6"] .pied .pied-identite img:not(#_):not(#_){filter:none !important}
+body[data-cleo-ds="v6"] .pied .pied-coordonnees .t-sm:not(#_):not(#_){color:var(--c-texte) !important}
+body[data-cleo-ds="v6"] .pied .pied-bas:not(#_):not(#_){border-top:1px solid var(--c-filet) !important;color:var(--c-texte-3) !important}
+body[data-cleo-ds="v6"] .pied .pied-bas a:not(#_):not(#_){color:var(--c-texte-2) !important}
+/* Le mot-symbole géant sous le bandeau crème faisait un vide de 300 px sans rien dire : retiré. */
+body[data-cleo-ds="v6"] .signature-cleo:not(#_):not(#_){display:none !important}
+body[data-cleo-ds="v6"] .signature-cleo .wordmark:not(#_):not(#_){filter:none !important;opacity:.05 !important}
+
+/* ═══ 9. Utilitaires pour les pages ═══ */
+body[data-cleo-ds="v6"] main .sy-section:not(#_):not(#_){padding-top:var(--e-section);padding-bottom:var(--e-section)}
+body[data-cleo-ds="v6"] main .sy-entete:not(#_):not(#_){max-width:min(100%, 8 * (var(--l-conteneur) / 12));margin-bottom:var(--e-titre-contenu)}
+body[data-cleo-ds="v6"] main .sy-entete > h2 + :is(p, .sy-lead):not(#_):not(#_){margin-top:var(--e-titre-lead)}
+body[data-cleo-ds="v6"] main .sy-carte:not(#_):not(#_), body[data-cleo-ds="v6"] main .sy-carte-blanche:not(#_):not(#_){padding:var(--p-carte)}
+body[data-cleo-ds="v6"] main .sy-lignes:not(#_):not(#_){margin:0;padding:0;list-style:none;border-top:1px solid var(--c-filet)}
+body[data-cleo-ds="v6"] main .sy-lignes > li:not(#_):not(#_){display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:24px;padding:20px 0;border-bottom:1px solid var(--c-filet)}
+body[data-cleo-ds="v6"] main .sy-lignes > li > :first-child:not(#_):not(#_){font-weight:500;color:var(--c-texte)}
+body[data-cleo-ds="v6"] main .sy-lignes > li > :last-child:not(:first-child):not(#_):not(#_){color:var(--c-texte-2)}
+body[data-cleo-ds="v6"] main .sy-chiffres:not(#_):not(#_){display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:var(--e-grille);margin:0;padding:0;list-style:none}
+body[data-cleo-ds="v6"] main .sy-chiffres > li > b:not(#_):not(#_){display:block;font-size:var(--t-chiffre);font-weight:400;line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums;color:var(--c-texte)}
+body[data-cleo-ds="v6"] main .sy-chiffres > li > span:not(#_):not(#_){display:block;margin-top:8px;font-size:var(--t-legende);color:var(--c-texte-3)}
+body[data-cleo-ds="v6"] main .sy-citation:not(#_):not(#_){margin:0}
+body[data-cleo-ds="v6"] main .sy-citation blockquote:not(#_):not(#_),
+body[data-cleo-ds="v6"] main .sy-citation > p:not(#_):not(#_){margin:0;max-width:34ch;font-size:var(--t-citation);font-weight:400;line-height:1.3;letter-spacing:-.01em}
+body[data-cleo-ds="v6"] main .sy-citation figcaption:not(#_):not(#_){margin-top:16px;font-size:var(--t-legende);color:var(--c-texte-3)}
+body[data-cleo-ds="v6"] main .sy-media:not(#_):not(#_){width:var(--l-conteneur-large);margin-left:auto;margin-right:auto;border-radius:var(--r-media);overflow:clip}
+body[data-cleo-ds="v6"] main .sy-media img:not(#_):not(#_){display:block;width:100%;height:auto}
+@media (max-width:600px){
+  body[data-cleo-ds="v6"] main .sy-lignes > li:not(#_):not(#_){grid-template-columns:minmax(0,1fr);gap:6px;padding:16px 0}
+}

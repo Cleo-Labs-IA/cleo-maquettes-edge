@@ -2,106 +2,66 @@
      Composition relevée sur edgecomply.com/landing/ce-certification-guide.
      Le logo est un lien : sans barre de navigation, c'est le seul retour
      vers le site (mesuré le 03/09/2026 : aucun lien interne vers l'accueil). -->
-<div class="seg campagne-tete seg-p20-tete">
-  <div class="conteneur">
-    <a class="marque" href="01-accueil.html" aria-label="Cleo, retour à l'accueil">
-      <img src="img:cleo-logo" alt="Cleo" style="height:24px;width:auto;filter:brightness(0)">
-    </a>
-  </div>
-</div>
+<!-- 15/09/2026, refonte : la page de campagne reçoit la barre et le pied communs (SYSTEME.md §3). -->
+<!--NAV-->
 
-<section class="seg sur-sombre" style="padding:88px 0 128px">
+<section class="seg sur-sombre ra-campagne-tete">
   <div class="conteneur">
-    <div class="duo" style="gap:72px;align-items:center">
+    <div class="duo ra-campagne-duo">
       <div>
-        <div class="pilule-dispo" style="margin-bottom:26px">
-          <span class="point"></span> Guide gratuit
-          <span class="sep"></span> Emballage · Union européenne
-        </div>
-        <h1 class="t-hero">
-          Le PPWR en clair, <span class="attenue">article par article.</span>
-        </h1>
-        <p class="t-body" style="margin:24px 0 32px;max-width:460px">
-          Ce qui s'applique le 12 août 2026, ce qui suit par étapes, et les quatre familles d'obligations
-          qui touchent un emballage. Avec les articles cités, pour que vous puissiez vérifier.
-        </p>
-        <a class="btn btn-marque" href="12-article.html">Recevoir le guide
-          <span class="rond"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 2v8M3.5 7 7 10.5 10.5 7M2.5 12h9" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        </a>
-        <div class="t-caption" style="margin-top:16px">Format PDF · 18 pages · Aucune inscription à une liste</div>
+        <p class="sy-surtitre">Guide gratuit · Emballage · Union européenne</p>
+        <h1 class="t-hero">Le PPWR en clair, <span class="attenue">article par article.</span></h1>
+        <p class="sy-lead ra-campagne-lead">Ce qui s'applique le 12 août 2026, ce qui suit par étapes, et les quatre familles d'obligations qui touchent un emballage. Avec les articles cités, pour que vous puissiez vérifier.</p>
+        <div class="ra-actions"><a class="sy-bouton" href="12-article.html">Recevoir le guide</a></div>
+        <p class="t-caption ra-campagne-note">Format PDF · 18 pages · Aucune inscription à une liste</p>
       </div>
 
-      <!-- La couverture porte sa propre encre : elle était sombre sur champ
-           profond, donc invisible. La carte citée descend sous le livre :
-           elle en couvrait la dernière ligne et sortait du conteneur. -->
+      <!-- La couverture porte sa propre encre ; la carte citée descend sous le livre. -->
       <div class="seg-couverture">
         <div class="couverture">
           <div class="livre">
             <div>
-              <div class="t-label" style="margin-bottom:14px">Cleo · Guide</div>
-              <div class="t-h1" style="font-weight:700;letter-spacing:-0.03em;line-height:1.12;">
-                Le PPWR<br>en clair
-              </div>
-              <div class="t-caption" style="margin-top:12px">Règlement (UE) 2025/40</div>
+              <p class="sy-surtitre">Cleo · Guide</p>
+              <p class="ra-livre-titre">Le PPWR<br>en clair</p>
+              <p class="t-caption">Règlement (UE) 2025/40</p>
             </div>
-            <div>
-              <div style="height:1px;background:var(--c-border);margin-bottom:14px"></div>
-              <div class="t-caption">Applicable au 12 août 2026</div>
+            <div class="ra-livre-pied">
+              <p class="t-caption">Applicable au 12 août 2026</p>
             </div>
           </div>
         </div>
         <div class="flottant">
-          <div class="t-micro" style="margin-bottom:6px">Chaque obligation citée</div>
-          <div class="t-caption" style="line-height:1.5;color:var(--c-ink)">
-            « Tous les emballages sont conçus de manière à… »
-          </div>
-          <div class="t-caption" style="margin-top:7px;color:var(--c-blue);font-weight:600">Art. 6, §1</div>
+          <p class="t-caption ra-flottant-titre">Chaque obligation citée</p>
+          <p class="ra-flottant-texte">« Tous les emballages sont conçus de manière à… »</p>
+          <p class="t-caption ra-flottant-ref">Art. 6, § 1</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="seg section" style="padding:0 0 88px">
+<section class="seg section ra-campagne-logos">
   <div class="conteneur">
-    <div class="centre t-label" style="margin-bottom:24px">Aux côtés de marques et de fabricants internationaux</div>
+    
+    <p class="sy-surtitre ra-centre">Aux côtés de marques et de fabricants internationaux</p>
     <div class="bande-logos">
-      <div class="cellule"><img src="img:logo-decathlon" alt="Decathlon"></div>
+
+      <!-- 16/09/2026 : NVIDIA retiré de la bande de logos. Aucun fichier de cleo-landing ne le trace comme client, et reference_cleo_print_client_clearance le classe hors autorisation. À remettre seulement si Naomie confirme la source. -->      <div class="cellule"><img src="img:logo-decathlon" alt="Decathlon"></div>
       <div class="cellule"><img src="img:logo-balzac" alt="Balzac Paris"></div>
       <div class="cellule"><img src="img:logo-mercedes" alt="Mercedes-Benz"></div>
       <div class="cellule"><img src="img:logo-loccitane" alt="L'Occitane"></div>
-      <div class="cellule"><img src="img:logo-nvidia" alt="NVIDIA"></div>
     </div>
   </div>
 </section>
 
-<section class="seg section" style="padding:0 0 88px">
+<section class="seg section ra-campagne-mesures">
   <div class="conteneur">
     <div class="mesures">
-      <div class="ligne"><div class="libelle">Familles d'obligations : substances, signalétique, recyclabilité, contenu recyclé</div><div class="valeur">4</div></div>
-      <div class="ligne"><div class="libelle">États membres, sans transposition : un règlement s'applique tel quel</div><div class="valeur">27</div></div>
-      <div class="ligne"><div class="libelle">La date à partir de laquelle les obligations générales s'appliquent</div><div class="valeur">12.08.26</div></div>
+      <div class="ligne"><div class="libelle">Familles d'obligations : substances, signalétique, recyclabilité, contenu recyclé</div><div class="valeur">4</div></div>
+      <div class="ligne"><div class="libelle">États membres, sans transposition : un règlement s'applique tel quel</div><div class="valeur">27</div></div>
+      <div class="ligne"><div class="libelle">La date à partir de laquelle les obligations générales s'appliquent</div><div class="valeur">12 août 2026</div></div>
     </div>
   </div>
 </section>
 
-<footer class="seg pied seg-p20-pied">
-  <div class="conteneur">
-    <div class="identite">
-      <div>
-        <a class="marque" href="01-accueil.html" aria-label="Cleo, retour à l'accueil">
-          <img src="img:cleo-logo" alt="Cleo" style="height:24px;width:auto;filter:brightness(0) invert(1);margin-bottom:14px">
-        </a>
-        <div class="t-caption">Vendez partout. Conformez-vous partout.</div>
-      </div>
-      <div class="t-caption" style="line-height:1.8">
-        Cleo Corp SAS<br>Neuilly-sur-Seine, France<br><a href="mailto:contact@cleolabs.co">contact@cleolabs.co</a>
-      </div>
-    </div>
-    <div class="pied-bas" style="margin-top:40px">
-      <a href="22-legal.html">Conditions générales</a>
-      <a href="22-legal.html">Politique de confidentialité</a>
-      <span style="margin-left:auto">Cleo Corp SAS, SIREN 984567883</span>
-    </div>
-  </div>
-</footer>
+<!--PIED-->

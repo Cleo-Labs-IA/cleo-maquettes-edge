@@ -1,34 +1,33 @@
 <!--NAV-->
-<!-- ═══ HERO ═══ 15/09/2026, Naomie : « pour Enterprise, reprends cette structure : tenkara.ai/about ». Généré par
-     scratchpad/agents/enterprise-about/generer.mjs (structure relevée dans structure.md). Photo plein cadre tramée, titre
-     centré, pastille vers le formulaire ; bande bleue et mot « Enterprise » rayé qui glisse au défilement (décor).
-     Textes repris de la page Enterprise d'avant, de la page À propos et de la page 43, vérifiés à la source. La
-     déclaration UE de conformité est signée par le fabricant ou son mandataire ; l'expert Cleo relit. -->
+<!-- ═══ HERO ═══ Refonte du 15/09/2026 (scratchpad/agents/refonte/SYSTEME.md, agent F3). Structure de tenkara.ai/about
+     gardée (Naomie : « pour Enterprise, reprends cette structure ») : photo en haut de page, lettre, section profonde en
+     éventail, appel final avec le formulaire. Titre ferré à gauche ; la bande bleue au mot géant rayé est retirée (bleu
+     décoratif). Générateur scratchpad/agents/enterprise-about/generer.mjs PÉRIMÉ depuis la refonte du 15/09 : ne pas le
+     relancer.
+     h1 et chapeau : variante 1 de refonte/wording/heros.md (SITE 40 EN ; SEO ; DM-p6 « a lawyer and an engineer on the
+     same problem »). La déclaration UE de conformité est signée par le fabricant ou son mandataire ; l'expert Cleo relit
+     et valide. -->
 <section class="en-s en-hero" id="haut">
   <div class="en-hero-scene">
     <div class="tk-trame en-hero-trame" aria-hidden="true"><img src="img:cables" alt=""></div>
-    <div class="en-hero-contenu">
-      <h1 class="en-h1">Enterprise. <span class="en-gris-clair">At the scale of your company.</span></h1>
-      <p class="en-hero-lead">Our tech expertise and our experts.</p>
-      <a class="en-pastille" href="#contact-equipe"><i aria-hidden="true"></i>Contact the team</a>
+    <div class="en-conteneur en-hero-contenu">
+      <h1 class="en-h1">Enterprise: product compliance for your whole catalogue.</h1>
+      <p class="en-hero-lead">A lawyer and an engineer on the same problem. Our engineers connect Cleo's rule base to your systems, and your templates stay in your format.</p>
+      <div class="en-actions"><a class="en-bouton" href="#contact-equipe">Contact the team <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
     </div>
   </div>
-  <div class="en-bande" aria-hidden="true"><span class="en-fleches"><svg viewBox="0 0 84 16" width="84" height="16" fill="none" aria-hidden="true"><path d="M2 2l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 2l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 2l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M35 2l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M46 2l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M57 2l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M68 2l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="en-bande-mot">Enterprise</span></div>
 </section>
 
-<!-- ═══ LA LETTRE ═══ titre de la page À propos ; paragraphes repris des pages Enterprise et À propos ; extrait verbatim de
-     la citation Decathlon ; signature d'équipe (aucune phrase n'est attribuée à une personne). -->
+<!-- ═══ LA LETTRE ═══ titre : DM-p7 (« Every function in a company has been automated. Compliance was left behind »),
+     variante 3 de heros.md ; paragraphe repris de la page Enterprise d'avant ; extrait verbatim de la citation Decathlon ;
+     signature d'équipe reprise telle quelle (aucune phrase n'est attribuée à une personne). -->
 <section class="en-s en-lettre" id="equipe">
   <div class="en-conteneur">
-    <h2 class="en-titre en-centre">A lawyer and an engineer on the same problem.</h2>
-    <div class="en-lettre-grille">
+    <div class="en-lettre-grille" data-apparait>
       <figure class="en-illustration"><div class="tk-trame" aria-hidden="true"><img src="img:vis" alt=""></div></figure>
       <div class="en-lettre-texte">
-        <p>Every function in a company has been automated, one after another. Compliance has not.</p>
-        <p>Our engineers connect Cleo's rules base to your systems. A verdict for every product reference, callable from your systems. Structured data, usable right inside your PLM.</p>
-        <p><b>And the team</b> that encodes, reviews and updates the rules every week.</p>
-        <p class="en-fort">Our tech expertise and our experts.</p>
-        <p class="en-fort">At the scale of your company.</p>
+        <h2 class="en-titre">Every function in a company has been automated. <span class="attenue">Product compliance has not.</span></h2>
+        <p>A compliance team reviews and updates the rules every week.</p>
         <blockquote class="en-citation"><p>“Their AI engine acts as an intelligent translator that filters noise to extract structured data.”</p><cite>Philippine Tamic, Decathlon</cite></blockquote>
         <div class="en-signature">
           <span class="en-avatars"><img src="img:anaelle" alt="Anaëlle Guez"><img src="img:naomie" alt="Naomie Halioua"><img src="img:alex" alt="Alexandre Bloch"></span>
@@ -39,21 +38,21 @@
   </div>
 </section>
 
-<!-- ═══ CE QUE NOUS METTONS EN PLACE ═══ le seul champ profond de la page. Quatre cartes photo tramées qui s'ouvrent en
-     éventail au défilement (titres et lignes de la page d'avant) ; « Installation sur site » reste à trancher. Sous
-     l'éventail, la preuve MARIA (page 43) et le lien vers la recherche, à la place du « Join Us » de Tenkara. -->
-<section class="en-s en-valeurs" id="mise-en-place">
+<!-- ═══ CE QUE NOUS METTONS EN PLACE ═══ la seule zone profonde (#08093B) de la page et sa seule scène liée au
+     défilement : quatre cartes photo qui s'ouvrent en éventail. Sous l'éventail, la preuve (chiffres de l'article de
+     recherche) et le lien vers la recherche.
+     À TRANCHER : l'installation sur site (mention « On-site installation to be decided » retirée de l'écran le 15/09/2026). -->
+<section class="en-s en-valeurs sy-sur-profond" id="mise-en-place">
   <div class="en-conteneur">
-    <h2 class="en-titre en-centre en-clair">What we put in place.</h2>
-    <div class="en-chevrons" aria-hidden="true"><svg viewBox="0 0 16 66" width="16" height="66" fill="none" aria-hidden="true"><path d="M2 2l6 5 6-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 10l6 5 6-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 18l6 5 6-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 26l6 5 6-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 34l6 5 6-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 42l6 5 6-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 50l6 5 6-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 58l6 5 6-5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-    <div class="en-cartes">
+    <h2 class="en-titre en-clair">What we put in place</h2>
+    <div class="en-cartes" data-apparait-groupe>
       <article class="en-carte" style="--i:0">
         <div class="tk-trame en-carte-fond" aria-hidden="true"><img src="img:masse-casque" alt=""></div>
-        <div class="en-carte-corps"><h3>Our expert team</h3><p>A dedicated legal team. Your templates, in your format.</p></div>
+        <div class="en-carte-corps"><h3>The compliance team</h3><p>A dedicated compliance team, and your templates in your format.</p></div>
       </article>
       <article class="en-carte" style="--i:1">
         <div class="tk-trame en-carte-fond" aria-hidden="true"><img src="img:masse-lunettes" alt=""></div>
-        <div class="en-carte-corps"><h3>Our tech expertise</h3><p>A verdict per reference, callable from your systems.</p></div>
+        <div class="en-carte-corps"><h3>Technical expertise</h3><p>A verdict for every product, queried directly by your systems.</p></div>
       </article>
       <article class="en-carte" style="--i:2">
         <div class="tk-trame en-carte-fond" aria-hidden="true"><img src="img:masse-velo" alt=""></div>
@@ -61,27 +60,29 @@
       </article>
       <article class="en-carte" style="--i:3">
         <div class="tk-trame en-carte-fond" aria-hidden="true"><img src="img:masse-flacon" alt=""></div>
-        <div class="en-carte-corps"><h3>Your environment</h3><p>Data hosted in the EU. Never used to train our models.</p><span class="en-a-trancher">On-site installation <b>to be decided</b></span></div>
+        <div class="en-carte-corps"><h3>Your environment</h3><p>Data hosted in the European Union, never used to train our models.</p></div>
       </article>
     </div>
-    <p class="en-preuve">Published architecture: <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6343638">MARIA</a>, evaluated on 7,676 regulations. 93 to 97% precision on binding texts, no invented entries.</p>
-    <a class="en-bouton" href="23-research-en.html">Read our research paper <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="en-preuve-ligne" data-apparait>
+      <p class="en-preuve"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6343638">Published architecture</a>: 93 to 97% precision on binding texts, evaluated on 7,676 regulations.</p>
+      <a class="en-bouton" href="23-research-en.html">Read the research paper <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
   </div>
 </section>
 
-<!-- ═══ APPEL FINAL ═══ grande carte photo tramée (les fenêtres, une seule allumée en bleu) ; titre à gauche, formulaire
-     de contact à droite : champs, noms, attributs et cible HubSpot repris balise pour balise de la page d'avant. -->
+<!-- ═══ APPEL FINAL ═══ une section claire : le titre à gauche, le formulaire de contact à droite dans une carte blanche.
+     Champs, noms, attributs et cible HubSpot repris balise pour balise de la page d'avant. -->
 <section class="en-s en-final" id="contact">
   <div class="en-conteneur">
-    <div class="en-final-carte">
-      <div class="tk-trame en-final-fond" aria-hidden="true"><img src="img:fenetres" alt=""></div>
+    <div class="en-final-grille" data-apparait>
       <div class="en-final-texte">
-        <p class="tk-etiquette">Enterprise</p>
-        <h2 class="en-final-titre">Our tech expertise and our experts. <span class="en-gris-clair">At the scale of your company.</span></h2>
+        <p class="sy-surtitre">Enterprise</p>
+        <h2 class="en-titre">Let's talk about your systems</h2>
+        <p class="en-final-lead">Describe your markets and the systems to connect.</p>
       </div>
       <form id="f-enterprise" method="get" action="https://meetings.hubspot.com/anaelle-guez/rendez-vous" hidden></form>
       <div class="form-carte ent-form" id="contact-equipe">
-        <h2 class="ent-form-titre">Contact the team</h2>
+        <p class="ent-form-titre">Contact the team</p>
         <div class="paire">
           <div><label for="f-ent-prenom">First name</label><input id="f-ent-prenom" form="f-enterprise" name="firstname" autocomplete="given-name" type="text" placeholder="Alex"></div>
           <div><label for="f-ent-nom">Last name</label><input id="f-ent-nom" form="f-enterprise" name="lastname" autocomplete="family-name" type="text" placeholder="Morgan"></div>
@@ -89,7 +90,7 @@
         <label for="f-ent-email">Work email</label><input id="f-ent-email" form="f-enterprise" name="email" autocomplete="email" type="email" placeholder="alex@company.com" required>
         <label for="f-ent-societe">Company</label><input id="f-ent-societe" form="f-enterprise" name="company" autocomplete="organization" type="text" placeholder="Company">
         <label for="f-ent-besoin">What you need</label><input id="f-ent-besoin" form="f-enterprise" name="besoin" type="text" placeholder="Brands, markets, systems to connect…">
-        <button class="ent-bouton ent-bouton-plein" type="submit" form="f-enterprise">Send</button>
+        <button class="sy-bouton ent-bouton ent-bouton-plein" type="submit" form="f-enterprise">Send</button>
         <p class="ent-form-note">We only use your data to reply to you.</p>
       </div>
     </div>

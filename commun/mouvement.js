@@ -132,26 +132,19 @@
 })();
 
 /* ────────────────────────────────────────────────────────────────
-   MOUVEMENT « DERNIÈRE GÉNÉRATION », posé le 15/09/2026 (Naomie : « plus
-   animé, plus moderne, selon les blogs Framer »). Titres découpés mot à
-   mot, cartes et boutons sous la souris, fil de lecture sous la barre.
-   Rien si l'utilisateur demande de réduire les animations. Le rendu vit
-   dans commun/lanes/v6-zzzzzzzzzz-mouvement-moderne.css.
+   MOUVEMENT DU SYSTÈME CLEO, refonte du 15/09/2026 (SYSTEME.md). Les
+   références Framer mesurées ne bougent presque pas au défilement : on
+   garde l'entrée mot à mot du SEUL h1 et une apparition simple, une fois,
+   à l'entrée dans l'écran. Retirés : inclinaison des cartes, halo, boutons
+   aimantés, fil de lecture, h2 mot à mot. Rendu : v6-zzzzzzzzzz-mouvement-moderne.css.
    ──────────────────────────────────────────────────────────────── */
 (function () {
   var corps = document.body;
   if (!corps || corps.getAttribute('data-cleo-ds') !== 'v6') return;
-  var nav = document.querySelector('.nav');
-  if (nav && !nav.querySelector('.mm-progres')) {
-    var fil = document.createElement('span');
-    fil.className = 'mm-progres';
-    fil.setAttribute('aria-hidden', 'true');
-    nav.appendChild(fil);
-  }
   if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  // Les titres : chaque mot dans un span, les espaces gardées entre eux pour que le texte se coupe comme avant.
-  var titres = document.querySelectorAll('main h1, main h2');
+  // Le h1 : chaque mot dans un span, les espaces gardées pour que le texte se coupe comme avant.
+  var titres = document.querySelectorAll('main h1');
   for (var t = 0; t < titres.length; t++) {
     var h = titres[t];
     if (h.querySelector('.mm-mot, .av-mot, .fx-mot, .av-compte') || h.closest('[aria-hidden="true"]')) continue;
@@ -181,47 +174,22 @@
     })(h);
   }
 
-  // Sous la souris seulement.
-  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
-  var CARTES = '.av-carte, .dt-usage, .av-garantie, .dt-client-carte, .dt-skill, .dt-offre-carte, .tk-case';
-  var BOUTONS = '.hq-bouton, .tk-bouton, .btn-marque, [class*="-bouton"]';
-  var carte = null, bouton = null;
-  function lacheCarte() {
-    if (!carte) return;
-    carte.classList.remove('mm-survol');
-    ['--mm-x', '--mm-y', '--mm-rx', '--mm-ry'].forEach(function (p) { carte.style.removeProperty(p); });
-    carte = null;
-  }
-  function lacheBouton() {
-    if (!bouton) return;
-    bouton.style.removeProperty('--mm-bx');
-    bouton.style.removeProperty('--mm-by');
-    bouton = null;
-  }
-  document.addEventListener('pointermove', function (e) {
-    var cible = e.target && e.target.closest ? e.target : null;
-    var c = cible && cible.closest(CARTES);
-    if (c && !c.closest('main')) c = null;
-    if (carte && carte !== c) lacheCarte();
-    if (c) {
-      carte = c;
-      c.classList.add('mm-survol');
-      var r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
-      c.style.setProperty('--mm-x', (x * 100).toFixed(1) + '%');
-      c.style.setProperty('--mm-y', (y * 100).toFixed(1) + '%');
-      c.style.setProperty('--mm-rx', ((0.5 - y) * 4).toFixed(2) + 'deg');
-      c.style.setProperty('--mm-ry', ((x - 0.5) * 5).toFixed(2) + 'deg');
+  // L'apparition : seuls les blocs SOUS le pli attendent, rien ne clignote au chargement.
+  var blocs = document.querySelectorAll('[data-apparait], [data-apparait-groupe]');
+  if (!blocs.length || !('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('mm-js');
+  var obs = new IntersectionObserver(function (entrees) {
+    for (var j = 0; j < entrees.length; j++) {
+      if (!entrees[j].isIntersecting) continue;
+      entrees[j].target.classList.remove('mm-attend');
+      obs.unobserve(entrees[j].target);
     }
-    var b = cible && cible.closest(BOUTONS);
-    if (bouton && bouton !== b) lacheBouton();
-    if (b) {
-      bouton = b;
-      var rb = b.getBoundingClientRect();
-      b.style.setProperty('--mm-bx', (((e.clientX - rb.left) / rb.width - 0.5) * 8).toFixed(1) + 'px');
-      b.style.setProperty('--mm-by', (((e.clientY - rb.top) / rb.height - 0.5) * 6).toFixed(1) + 'px');
-    }
-  }, { passive: true });
-  document.addEventListener('pointerout', function (e) { if (!e.relatedTarget) { lacheCarte(); lacheBouton(); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+  for (var b = 0; b < blocs.length; b++) {
+    if (blocs[b].getBoundingClientRect().top < window.innerHeight * 0.94) continue;
+    blocs[b].classList.add('mm-attend');
+    obs.observe(blocs[b]);
+  }
 })();
 
 /* ────────────────────────────────────────────────────────────────

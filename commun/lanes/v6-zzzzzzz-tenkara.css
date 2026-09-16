@@ -1,163 +1,50 @@
 /* ═══ COMPOSANTS « À LA TENKARA » ═══ 15/09/2026. Naomie montre tenkara.ai : « ça j'aime bien par exemple cette DA ».
-   (feedback_da_tenkara_reference). Composants communs, réutilisables sur toutes les pages (classes .tk-*) :
-   - .tk-bento : grille de cartes à rayons presque droits (12 colonnes ; .tk-photo 6, .tk-creme et .tk-bleu 3, .tk-large 12)
-   - .tk-trame : photo en trame de points façon impression ; au défilement la trame se resserre et l'image se précise
-   - .tk-chiffre : chiffre énorme en contour à rayures (bleu sur crème, blanc sur bleu)
-   - .tk-tableaux : petits tableaux de données au filet blanc qui glissent derrière le chiffre (décoratifs, aria-hidden)
-   - .tk-etiquette : étiquette blanche en capitales ; .tk-bouton : petit bouton blanc carré ; .tk-bandeau : bandeau tramé
-   Ce qui reste Cleo : Satoshi en capitales espacées à la place du monospace et du serif de Tenkara (DS V5, à faire
-   valider) ; le bleu électrique est #0008CF ; une seule carte bleue par page. */
+   Classes .tk-* réutilisées sur toutes les pages : bento (photo + cartes chiffre), trame (photo au grain cuit), chiffre,
+   étiquette, bouton, bandeau final.
+   REFONTE DU MÊME JOUR (SYSTEME.md, « on respire, moderne, pas IA ») :
+   - retirées : les animations liées au défilement (zoom des trames, cartes qui montent, tableaux qui glissent, rayures
+     du chiffre qui défilent, étiquette et flèche qui se tracent), le chiffre en contour à rayures, le jaune #F7F1DC et
+     le fond bleu plein des cartes, le bleu nuit #0B0C2C, le bandeau final sombre voilé, le glyphe « » » de la barre ;
+   - le rendu des boutons, étiquettes, cartes et du bandeau final est posé par v6-zzzzzzzzzzzzz-systeme.css.
+   Ce qui reste ici : la géométrie des composants. */
 
-body[data-cleo-ds="v6"] .tk-bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
-body[data-cleo-ds="v6"] .tk-case{position:relative;min-height:340px;margin:0;border-radius:4px;overflow:clip}
+body[data-cleo-ds="v6"] .tk-bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--e-grille, 16px)}
+body[data-cleo-ds="v6"] .tk-case{position:relative;min-height:340px;margin:0;border-radius:var(--r-carte, 12px);overflow:clip}
 body[data-cleo-ds="v6"] .tk-bento > .tk-photo{grid-column:span 6}
 body[data-cleo-ds="v6"] .tk-bento > :is(.tk-creme,.tk-bleu){grid-column:span 3}
 body[data-cleo-ds="v6"] .tk-bento > .tk-large{grid-column:1 / -1}
 
-/* La trame */
-body[data-cleo-ds="v6"] .tk-trame{position:absolute;inset:0;z-index:0;background:#0B0C2C;overflow:clip}
-body[data-cleo-ds="v6"] .tk-trame img{display:block;width:100%;height:100%;object-fit:cover;filter:contrast(1.12) brightness(1.08);-webkit-mask-image:radial-gradient(circle closest-side, #000 72%, transparent 100%);mask-image:radial-gradient(circle closest-side, #000 72%, transparent 100%);-webkit-mask-size:4px 4px;mask-size:4px 4px}
+/* La photo au grain (le grain est cuit au build, aucune trame en CSS) */
+body[data-cleo-ds="v6"] .tk-trame{position:absolute;inset:0;z-index:0;background:var(--c-fond-2, #F9F8F6);overflow:clip}
+body[data-cleo-ds="v6"] .tk-trame img{display:block;width:100%;height:100%;object-fit:cover}
 
 /* La carte photo : citation, signature, bouton */
-body[data-cleo-ds="v6"] .tk-photo{display:flex;flex-direction:column;justify-content:space-between;padding:28px 30px;color:#FFFFFF}
-body[data-cleo-ds="v6"] .tk-photo::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg, rgba(8,9,40,.62) 0%, rgba(8,9,40,.18) 48%, rgba(8,9,40,.66) 100%)}
-body[data-cleo-ds="v6"] .tk-citation{position:relative;z-index:2;margin:0;max-width:30ch;font-size:clamp(1.375rem, .9rem + 1.3vw, 2.125rem);font-weight:500;line-height:1.15;letter-spacing:-.02em;color:#FFFFFF;text-wrap:balance}
-body[data-cleo-ds="v6"] .tk-signature{position:relative;z-index:2;display:flex;align-items:flex-end;gap:14px;margin-top:28px;font-size:.75rem;font-weight:500;line-height:1.5;letter-spacing:.1em;text-transform:uppercase;color:#FFFFFF}
-body[data-cleo-ds="v6"] .tk-signature img{width:60px;height:60px;border-radius:2px;object-fit:cover;object-position:50% 25%;filter:grayscale(1) contrast(1.05)}
-body[data-cleo-ds="v6"] .tk-bouton{display:inline-flex;align-items:center;gap:10px;padding:9px 12px;border-radius:2px;background:#FFFFFF;color:#1A1A1A;font-size:.8125rem;font-weight:500;letter-spacing:.07em;text-transform:uppercase;white-space:nowrap;transition:background .15s ease}
-body[data-cleo-ds="v6"] .tk-bouton:hover{background:#EFEEFB;color:#1A1A1A}
-body[data-cleo-ds="v6"] .tk-bouton svg{transition:transform .2s cubic-bezier(.22,1,.36,1)}
-body[data-cleo-ds="v6"] .tk-bouton:hover svg{transform:translate(2px,-2px)}
+body[data-cleo-ds="v6"] .tk-photo{display:flex;flex-direction:column;justify-content:space-between;padding:var(--p-carte, 32px);color:#FFFFFF}
+body[data-cleo-ds="v6"] .tk-photo::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg, rgba(8,9,59,.55) 0%, rgba(8,9,59,.12) 50%, rgba(8,9,59,.6) 100%)}
+body[data-cleo-ds="v6"] .tk-citation{position:relative;z-index:2;margin:0;max-width:30ch;font-size:var(--t-citation, 1.75rem);font-weight:400;line-height:1.3;letter-spacing:-.01em;color:#FFFFFF;text-wrap:pretty}
+body[data-cleo-ds="v6"] .tk-signature{position:relative;z-index:2;display:flex;align-items:flex-end;gap:12px;margin-top:24px;font-size:var(--t-legende, .8125rem);font-weight:500;line-height:1.4;color:rgba(255,255,255,.8)}
+body[data-cleo-ds="v6"] .tk-signature img{width:48px;height:48px;border-radius:9999px;object-fit:cover;object-position:50% 25%}
+body[data-cleo-ds="v6"] .tk-bouton{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
 body[data-cleo-ds="v6"] .tk-bouton-coin{position:absolute;right:24px;bottom:24px;z-index:2}
 
-/* Les cartes à chiffre */
-body[data-cleo-ds="v6"] :is(.tk-creme,.tk-bleu){display:flex;flex-direction:column;justify-content:flex-end;padding:26px 26px 28px}
-body[data-cleo-ds="v6"] .tk-creme{--tk-encre:#0008CF;background:#F7F1DC;color:#0008CF}
-body[data-cleo-ds="v6"] .tk-bleu{--tk-encre:#FFFFFF;background:#0008CF;color:#FFFFFF}
-body[data-cleo-ds="v6"] .tk-chiffre{position:relative;z-index:1;display:block;font-size:clamp(3.5rem, 1.5rem + 4vw, 6rem);font-weight:500;line-height:.9;letter-spacing:-.04em;font-variant-numeric:tabular-nums;white-space:nowrap;color:transparent;-webkit-text-stroke:1.5px var(--tk-encre);background:repeating-linear-gradient(180deg, var(--tk-encre) 0 2px, transparent 2px 6px);-webkit-background-clip:text;background-clip:text}
-body[data-cleo-ds="v6"] .tk-legende{position:relative;z-index:1;margin-top:14px;font-size:1.375rem;font-weight:500;letter-spacing:-.02em;line-height:1.2}
-body[data-cleo-ds="v6"] .tk-fleche{position:absolute;right:18px;bottom:22px;width:132px;height:58px;color:#0008CF}
-body[data-cleo-ds="v6"] .tk-tableaux{position:absolute;inset:0;z-index:0}
-body[data-cleo-ds="v6"] .tk-tableau{position:absolute;display:grid;width:52%;border:1px solid rgba(255,255,255,.55);font-size:.625rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.82)}
-body[data-cleo-ds="v6"] .tk-tableau b{padding:7px 9px;font-weight:500;color:#FFFFFF;border-bottom:1px solid rgba(255,255,255,.55)}
-body[data-cleo-ds="v6"] .tk-tableau span{display:flex;justify-content:space-between;gap:8px;padding:6px 9px}
-body[data-cleo-ds="v6"] .tk-tableau span + span{border-top:1px dotted rgba(255,255,255,.35)}
-body[data-cleo-ds="v6"] .tk-tableau i{font-style:normal}
-body[data-cleo-ds="v6"] .tk-tableau:nth-child(1){top:-10px;left:14px}
-body[data-cleo-ds="v6"] .tk-tableau:nth-child(2){top:40px;right:-22px}
-body[data-cleo-ds="v6"] .tk-tableau:nth-child(3){top:128px;left:-14px}
-
-/* L'étiquette et le bandeau */
-body[data-cleo-ds="v6"] .tk-etiquette{position:relative;z-index:2;display:inline-block;margin:0 0 30px;padding:10px 12px;background:#FFFFFF;color:#1A1A1A;font-size:clamp(.875rem, .7rem + .5vw, 1.125rem);font-weight:500;letter-spacing:.07em;text-transform:uppercase}
-body[data-cleo-ds="v6"] main > section.tk-bandeau > .conteneur{display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;align-content:center;min-height:clamp(440px, 40vw, 580px);padding:64px 32px;overflow:clip;text-align:center;border-color:#0B0C2C;background:#0B0C2C}
-body[data-cleo-ds="v6"] main > section.tk-bandeau > .conteneur::after{content:"";position:absolute;inset:0;z-index:1;width:auto;height:auto;border:0;background:radial-gradient(ellipse at center, rgba(8,9,40,.62) 0%, rgba(8,9,40,.34) 70%)}
-body[data-cleo-ds="v6"] .tk-bandeau .av-final-titre{position:relative;z-index:2;margin:0 auto 34px !important;max-width:900px !important;text-align:center !important;color:#FFFFFF !important}
-body[data-cleo-ds="v6"] .tk-bandeau .av-final-titre .attenue{color:rgba(255,255,255,.62) !important}
-body[data-cleo-ds="v6"] .tk-bandeau .tk-bouton{position:relative;z-index:2}
+/* Les cartes à chiffre : un aplat crème, le chiffre et sa légende */
+body[data-cleo-ds="v6"] :is(.tk-creme,.tk-bleu){display:flex;flex-direction:column;justify-content:flex-end;padding:var(--p-carte, 32px);background:var(--c-fond-2, #F9F8F6);color:var(--c-texte, #1A1A1A)}
+body[data-cleo-ds="v6"] .tk-chiffre{position:relative;z-index:1;display:block;font-size:var(--t-chiffre, 3.5rem);font-weight:400;line-height:1;letter-spacing:-.03em;font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--c-texte, #1A1A1A)}
+body[data-cleo-ds="v6"] .tk-legende{position:relative;z-index:1;margin-top:12px;font-size:var(--t-corps, 1rem);font-weight:400;line-height:1.4;color:var(--c-texte-2, rgba(26,26,26,.62))}
+body[data-cleo-ds="v6"] :is(.tk-fleche, .tk-tableaux){display:none}
 
 @media (max-width:980px){
   body[data-cleo-ds="v6"] .tk-bento{grid-template-columns:repeat(2,minmax(0,1fr))}
   body[data-cleo-ds="v6"] .tk-bento > .tk-photo, body[data-cleo-ds="v6"] .tk-bento > .tk-large{grid-column:1 / -1}
   body[data-cleo-ds="v6"] .tk-bento > :is(.tk-creme,.tk-bleu){grid-column:span 1}
   body[data-cleo-ds="v6"] .tk-photo{min-height:420px}
-  body[data-cleo-ds="v6"] main > section.tk-bandeau > .conteneur{padding:56px 20px}
 }
 @media (max-width:560px){
   body[data-cleo-ds="v6"] .tk-bento{grid-template-columns:minmax(0,1fr)}
-  body[data-cleo-ds="v6"] .tk-bento > :is(.tk-creme,.tk-bleu){grid-column:1 / -1}
+  body[data-cleo-ds="v6"] .tk-bento > :is(.tk-creme,.tk-bleu){grid-column:1 / -1;min-height:200px}
   body[data-cleo-ds="v6"] .tk-bouton-coin{position:relative;right:auto;bottom:auto;align-self:flex-start;margin-top:18px}
 }
 
-/* ─── Barre en capitales et bouton carré « » », sur TOUTES les pages (15/09/2026, Tenkara) ; les boutons .hq-bouton de la page 43 aussi ─── */
-body[data-cleo-ds="v6"][data-v6-page] .nav .btn-marque{border-radius:4px !important;font-size:.8125rem !important;letter-spacing:.07em;text-transform:uppercase}
-body[data-cleo-ds="v6"][data-v6-page] .nav .btn-marque::after{content:"»";margin-left:8px;font-size:1rem;line-height:1}
-body[data-cleo-ds="v6"][data-v6-page] .nav :is(.nav-declencheur,.lien-secondaire){font-size:.8125rem;letter-spacing:.07em;text-transform:uppercase}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .hq-bouton{border-radius:4px;font-size:.875rem;letter-spacing:.07em;text-transform:uppercase}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) #temoignage > .conteneur{padding-bottom:32px}
-
-/* ═══ LE MOUVEMENT TENKARA ═══ */
-@media (prefers-reduced-motion: no-preference){
-  @supports (animation-timeline: view()){
-    /* La trame se resserre : l'image passe de gros points à l'image nette. */
-    body[data-cleo-ds="v6"] .tk-trame img{animation:tkTrame linear both;animation-timeline:view();animation-range:entry 0% cover 45%}
-    @keyframes tkTrame{from{-webkit-mask-size:16px 16px;mask-size:16px 16px;scale:1.14}to{-webkit-mask-size:4px 4px;mask-size:4px 4px;scale:1}}
-    /* Les cartes arrivent l'une après l'autre. */
-    body[data-cleo-ds="v6"] .tk-bento > .tk-case{animation:tkCase cubic-bezier(.25,.8,.3,1) both;animation-timeline:view();animation-range:entry 0% entry 55%}
-    body[data-cleo-ds="v6"] .tk-bento > .tk-case:nth-child(2){animation-range:entry 10% entry 65%}
-    body[data-cleo-ds="v6"] .tk-bento > .tk-case:nth-child(3){animation-range:entry 20% entry 75%}
-    @keyframes tkCase{from{opacity:0;translate:0 44px}to{opacity:1;translate:0 0}}
-    /* Les tableaux glissent derrière le chiffre, chacun à sa vitesse. */
-    body[data-cleo-ds="v6"] .tk-tableau{animation:tkGlisse linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
-    body[data-cleo-ds="v6"] .tk-tableau:nth-child(2){animation-name:tkGlisseLent}
-    body[data-cleo-ds="v6"] .tk-tableau:nth-child(3){animation-name:tkGlisseInverse}
-    @keyframes tkGlisse{from{translate:0 46px}to{translate:0 -46px}}
-    @keyframes tkGlisseLent{from{translate:0 22px}to{translate:0 -22px}}
-    @keyframes tkGlisseInverse{from{translate:-18px -20px}to{translate:18px 26px}}
-    /* Les rayures du chiffre défilent. */
-    body[data-cleo-ds="v6"] .tk-chiffre{animation:tkRayures linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
-    @keyframes tkRayures{from{background-position:0 0}to{background-position:0 36px}}
-    /* La flèche en pointillé se trace, l'étiquette s'écrit. */
-    body[data-cleo-ds="v6"] .tk-fleche{animation:tkTrace cubic-bezier(.25,.8,.3,1) both;animation-timeline:view();animation-range:cover 10% cover 28%}
-    body[data-cleo-ds="v6"] .tk-etiquette{animation:tkTrace linear both;animation-timeline:view();animation-range:cover 8% cover 24%}
-    @keyframes tkTrace{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
-  }
-}
-
-/* Vu au rendu le 15/09 : le bouton du bandeau partait dans une seconde colonne (la grille titre | bouton de l'ancien
-   appel final pesait plus lourd) ; et sur téléphone le compteur « 106 » affichait encore « 105 » alors que la carte
-   était à l'écran. Le bandeau reprend une colonne ; les compteurs finissent dès qu'ils sont entrés. */
-body[data-cleo-ds="v6"] main > section.tk-bandeau.av-final > .conteneur{grid-template-columns:minmax(0,1fr);justify-items:center;align-content:center;gap:0}
-body[data-cleo-ds="v6"] main > section.tk-bandeau.av-final .tk-bouton{grid-column:1;grid-row:auto;justify-self:center}
-@media (prefers-reduced-motion: no-preference){
-  @supports (animation-timeline: view()){
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .av-compte{animation-range:entry 0% entry 100%}
-  }
-}
-
-/* Bouton de la barre en bleu électrique sur toutes les pages (15/09/2026) : chez Tenkara, l'action est bleue ; chez Cleo,
-   le bleu est le signal de l'action (DS V5). Le régime épuré l'avait passé à l'encre. */
-body[data-cleo-ds="v6"][data-v6-page] .nav .btn-marque{background:#0008CF !important;border-color:#0008CF !important;color:#FFFFFF !important}
-body[data-cleo-ds="v6"][data-v6-page] .nav .btn-marque:hover{background:#0007B5 !important;border-color:#0007B5 !important}
-
-/* Deux défauts vus au rendu le 15/09 (relevés par la page 43 EN) : la suite grise du titre du bandeau se lisait mal sur
-   la trame claire des classeurs, surtout au téléphone ; et les tableaux de la carte bleue sortaient du bord, valeurs
-   coupées (« 100 PP… »). Voile plus dense au centre, suite du titre plus claire ; tableaux gardés dans la carte. */
-body[data-cleo-ds="v6"] main > section.tk-bandeau > .conteneur::after{background:radial-gradient(ellipse 70% 60% at center, rgba(8,9,40,.8) 0%, rgba(8,9,40,.55) 60%, rgba(8,9,40,.4) 100%)}
-body[data-cleo-ds="v6"] .tk-bandeau .av-final-titre{text-shadow:0 2px 18px rgba(8,9,40,.55)}
-body[data-cleo-ds="v6"] .tk-bandeau .av-final-titre .attenue{color:rgba(255,255,255,.8) !important}
-body[data-cleo-ds="v6"] .tk-tableau{width:min(52%, 220px)}
-body[data-cleo-ds="v6"] .tk-tableau:nth-child(1){top:14px;left:14px}
-body[data-cleo-ds="v6"] .tk-tableau:nth-child(2){top:64px;right:14px}
-body[data-cleo-ds="v6"] .tk-tableau:nth-child(3){top:150px;left:14px}
-@media (max-width:980px){
-  body[data-cleo-ds="v6"] main > section.tk-bandeau > .conteneur::after{background:rgba(8,9,40,.66)}
-}
-
-/* Le voile du bandeau ne s'appliquait pas (mesuré le 15/09) : la règle du coin marqué du cadre
-   (v6-zzz-vivant.css, spécificité 0,4,3) imposait width:9px et height:9px au ::after. La classe doublée passe devant,
-   sur toutes les pages qui portent un bandeau. */
-body[data-cleo-ds="v6"][data-v6-page] main > section.tk-bandeau.tk-bandeau > .conteneur{display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;align-content:center;min-height:clamp(440px, 40vw, 580px);padding:64px 32px;overflow:clip;text-align:center;border-color:#0B0C2C;background:#0B0C2C}
-body[data-cleo-ds="v6"][data-v6-page] main > section.tk-bandeau.tk-bandeau > .conteneur::after{content:"";position:absolute;inset:0;right:0;bottom:0;z-index:1;width:auto;height:auto;border:0;background:radial-gradient(ellipse 70% 62% at center, rgba(8,9,40,.84) 0%, rgba(8,9,40,.6) 60%, rgba(8,9,40,.45) 100%)}
-@media (max-width:980px){
-  body[data-cleo-ds="v6"][data-v6-page] main > section.tk-bandeau.tk-bandeau > .conteneur{padding:56px 20px}
-  body[data-cleo-ds="v6"][data-v6-page] main > section.tk-bandeau.tk-bandeau > .conteneur::after{background:rgba(8,9,40,.7)}
-}
-/* Carte bleue : deux tableaux côte à côte, un troisième dessous, compacts, au-dessus du chiffre ; amplitude réduite. */
-body[data-cleo-ds="v6"] .tk-tableau{width:46%;font-size:.5625rem;letter-spacing:.05em}
-body[data-cleo-ds="v6"] .tk-tableau b{padding:5px 8px}
-body[data-cleo-ds="v6"] .tk-tableau span{padding:4px 8px}
-body[data-cleo-ds="v6"] .tk-tableau:nth-child(1){top:14px;left:14px}
-body[data-cleo-ds="v6"] .tk-tableau:nth-child(2){top:14px;right:14px;left:auto}
-body[data-cleo-ds="v6"] .tk-tableau:nth-child(3){top:96px;left:14px}
-@media (prefers-reduced-motion: no-preference){
-  @supports (animation-timeline: view()){
-    @keyframes tkGlisse{from{translate:0 12px}to{translate:0 -12px}}
-    @keyframes tkGlisseLent{from{translate:0 6px}to{translate:0 -6px}}
-    @keyframes tkGlisseInverse{from{translate:-8px 8px}to{translate:8px -8px}}
-  }
-}
-
-/* 15/09/2026 : une section parente en overflow:hidden (règles de hero héritées) figeait encore la trame qu'elle contient
-   (mesuré sur la page Service : progression identique à deux positions). Toute section qui porte une trame ou une
-   image animée coupe en clip, qui ne crée pas de conteneur de défilement (le collant continue de marcher). */
+/* Une section parente en overflow:hidden figeait les animations liées au défilement qu'elle contient (mesuré le 15/09) :
+   clip ne crée pas de conteneur de défilement. */
 body[data-cleo-ds="v6"] main section:has(.tk-trame, .tk-bento){overflow:clip !important}

@@ -1,73 +1,64 @@
 <!--NAV-->
 
-<!-- ═══ HERO ═══ 15/09/2026, design de la page 43 : titre à gauche, média tramé en grande carte. -->
+<!-- ═══ HAUT DE PAGE ═══ Refonte du 15/09/2026 (SYSTEME.md). Générateur agents/audience-preuve/gen-audience.mjs périmé.
+     h1 : mot-clé de l'étude SEO (for/[slug] : « product compliance for importers »). L'ancien titre « sans mauvaise
+     surprise » était négatif. « Code HS » devient « code SH » sur la page française (lexique §6). -->
 <section class="section ap-hero">
   <div class="conteneur">
     <div class="ap-hero-grille">
       <div class="ap-hero-texte">
-        <p class="ap-surtitre">Importateurs et distributeurs</p>
-        <h1 class="ap-h1">Passer la douane <span class="attenue">sans mauvaise surprise.</span></h1>
-        <p class="ap-lead">Code HS, droits, certifications, double usage : une réponse vérifiée par produit, avant l'expédition.</p>
-        <a class="ap-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <span aria-hidden="true">»</span></a>
+        <p class="sy-surtitre">Importateurs et distributeurs</p>
+        <h1 class="ap-h1">Conformité produit pour les importateurs et distributeurs.</h1>
+        <p class="sy-lead">Code SH, droits, certifications et double usage : une réponse sourcée pour chaque produit, avant l'expédition.</p>
+        <div class="ap-actions"><a class="sy-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <svg class="ap-fleche" viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
       </div>
-      
     </div>
-    <figure class="ap-hero-media tk-case" aria-hidden="true"><div class="tk-trame"><img src="img:parc-voitures" alt=""></div><p class="tk-etiquette">Importateurs et distributeurs</p></figure>
   </div>
+  <figure class="ap-hero-media sy-media" aria-hidden="true"><img src="img:parc-voitures" alt=""></figure>
 </section>
 
-<!-- ═══ LE CAS ═══ -->
+<!-- ═══ LE PÉRIMÈTRE ET UN EXEMPLE ═══ l'exemple est illustratif : 8413.70 est la sous-position des autres pompes
+     centrifuges ; le Kazakhstan, membre de l'Union économique eurasiatique, exige le marquage EAC. La ligne « Droits 5 % »
+     est retirée : aucun taux sourcé. -->
 <section class="section ap-bloc">
-  <div class="conteneur">
-    <h2 class="ap-titre">Du classement HS au dédouanement</h2>
+  <div class="conteneur" data-apparait>
+    <div class="sy-entete"><h2 class="ap-titre">Du classement SH au dédouanement</h2></div>
     <div class="ap-cas-grille">
-      <ul class="ap-rangs">
-        <li><span class="ap-rang-num">01</span><span>Classement par code HS, avec la correspondance des codes locaux</span></li>
-        <li><span class="ap-rang-num">02</span><span>Droits et taxes de douane, selon le code HS et le pays de destination</span></li>
-        <li><span class="ap-rang-num">03</span><span>Certifications d'import exigées, par produit et par marché</span></li>
-        <li><span class="ap-rang-num">04</span><span>Criblage double usage et marchandises restreintes</span></li>
-      </ul>
+      <ol class="sy-lignes ap-lignes-num">
+        <li><span class="ap-num">01</span><span>Classement par code SH, avec la correspondance des codes locaux</span></li>
+        <li><span class="ap-num">02</span><span>Droits et taxes de douane, selon le code SH et le pays de destination</span></li>
+        <li><span class="ap-num">03</span><span>Certifications d'import exigées, par produit et par marché</span></li>
+        <li><span class="ap-num">04</span><span>Criblage double usage et marchandises soumises à restriction</span></li>
+      </ol>
       <div class="ap-cas-scene">
-        <div class="tk-trame" aria-hidden="true"><img src="img:masse-poele" alt=""></div>
-      <div class="ap-cas" role="group" aria-label="Un cas, tel qu'il remonte">
-        <p class="ap-cas-titre">Un cas, tel qu'il remonte</p>
-        <div class="ap-cas-ligne"><span>Produit</span><b>Pompe centrifuge</b></div>
-        <div class="ap-cas-ligne"><span>Trajet</span><b>France vers Kazakhstan</b></div>
-        <div class="ap-cas-ligne"><span>Code HS</span><b>8413.70</b></div>
-        <div class="ap-cas-ligne"><span>Droits</span><b>5 %</b></div>
-        <div class="ap-cas-ligne ap-cas-fin"><span>Certification exigée</span><b>EAC</b></div>
-        <div class="ap-cas-scan" aria-hidden="true"></div>
-      </div>
+        <img class="ap-cas-photo" src="img:masse-poele" alt="" aria-hidden="true">
+        <div class="ap-cas sy-carte-blanche" role="group" aria-label="Un exemple, tel qu'il remonte">
+          <p class="ap-cas-titre sy-surtitre">Un exemple, tel qu'il remonte</p>
+          <div class="ap-cas-ligne"><span>Produit</span><b>Pompe centrifuge</b></div>
+          <div class="ap-cas-ligne"><span>Trajet</span><b>France vers Kazakhstan</b></div>
+          <div class="ap-cas-ligne"><span>Code SH</span><b>8413.70</b></div>
+          <div class="ap-cas-ligne"><span>Certification exigée</span><b>EAC, Union économique eurasiatique</b></div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ PAR SECTEUR ═══ -->
+<!-- ═══ PAR CATÉGORIE ═══ liste en texte, deux liens exacts (voir 33-fabricants). -->
 <section class="section ap-bloc">
-  <div class="conteneur">
-    <h2 class="ap-titre">Les obligations changent selon la catégorie</h2>
-    <div class="ap-secteurs">
-      <a class="ap-secteur" href="04-secteur.html"><span>01</span><b>Cosmétique</b></a>
-      <a class="ap-secteur" href="04-secteur.html"><span>02</span><b>Électronique</b></a>
-      <a class="ap-secteur" href="04-secteur.html"><span>03</span><b>Maison, cuisine et décoration</b></a>
-      <a class="ap-secteur" href="04-secteur.html"><span>04</span><b>Textile et habillement</b></a>
-      <a class="ap-secteur" href="04-secteur.html"><span>05</span><b>Jouets et puériculture</b></a>
-      <a class="ap-secteur" href="04-secteur.html"><span>06</span><b>Quincaillerie et peinture</b></a>
-      <a class="ap-secteur" href="04-secteur.html"><span>07</span><b>Articles de sport</b></a>
-      <a class="ap-secteur" href="04-secteur.html"><span>08</span><b>Animalerie</b></a>
-    </div>
-    <a class="ap-lien-carre ap-lien-perimetre" href="04-secteur.html#perimetre">Voir tout le périmètre produit <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <div class="conteneur" data-apparait>
+    <div class="sy-entete"><h2 class="ap-titre">Les obligations changent selon la catégorie</h2></div>
+    <ul class="ap-categories"><li>Cosmétique</li><li>Électronique</li><li>Maison, cuisine et décoration</li><li>Textile et habillement</li><li>Jouets et puériculture</li><li>Quincaillerie et peinture</li><li>Articles de sport</li><li>Animalerie</li></ul>
+    <div class="ap-liens"><a class="sy-lien" href="04-secteur.html">Voir la page Textile et habillement <svg class="ap-fleche" viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sy-lien" href="04-secteur.html#perimetre">Voir tout le périmètre produit <svg class="ap-fleche" viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
   </div>
 </section>
 
-<!-- ═══ APPEL FINAL ═══ bandeau tramé à la Tenkara : étiquette blanche, phrase, petit bouton carré. -->
+<!-- ═══ BANDEAU FINAL ═══ composant commun du site (tk-bandeau). -->
 <section class="section ap-bloc ap-final tk-bandeau" id="contact">
-  <div class="conteneur">
-    <div class="tk-trame" aria-hidden="true"><img src="img:pneus" alt=""></div>
-    <p class="tk-etiquette">30 minutes avec l'équipe, pour regarder votre catalogue</p>
-    <h2 class="ap-final-titre">Faites de la conformité votre avantage concurrentiel.</h2>
-    <a class="tk-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <svg viewBox="0 0 12 12" width="12" height="12" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  <div class="conteneur" data-apparait>
+    <p class="tk-etiquette">30 minutes avec l'équipe, sur vos produits</p>
+    <h2 class="ap-final-titre">Préparez l'expédition de vos produits avec leur code SH et leurs certifications</h2>
+    <a class="tk-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <svg class="ap-fleche" viewBox="0 0 14 14" width="14" height="14" fill="none" aria-hidden="true"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </div>
 </section>
 

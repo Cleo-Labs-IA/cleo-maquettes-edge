@@ -1,0 +1,84 @@
+/* ═══ JETONS DU SYSTÈME CLEO ═══ 15/09/2026, refonte « on respire, moderne, aucune incohérence, pas IA ».
+   Source : scratchpad/agents/refonte/SYSTEME.md §2 (jetons tirés de 10 références Framer mesurées, audit de 65 pages).
+   Chargée tôt (ordre alphabétique des lanes) : les variables sur :root valent partout, la feuille
+   v6-zzzzzzzzzzzzz-systeme.css (chargée en dernier) les applique. Les clamp() vont de 600 px (téléphone) à 1024 px
+   (bureau), espaces autour des opérateurs (sinon la déclaration tombe en silence). */
+:root{
+  /* Couleurs : les seules du site */
+  --c-fond: #FFFFFF;
+  --c-fond-2: #F9F8F6;
+  --c-carte: #FFFFFF;
+  --c-texte: #1A1A1A;
+  --c-texte-2: rgba(26,26,26,.62);
+  --c-texte-3: rgba(26,26,26,.42);
+  --c-filet: rgba(26,26,26,.10);
+  --c-accent: #0008CF;
+  --c-accent-survol: #0006A8;
+  --c-profond: #08093B;
+  --c-sur-profond-2: rgba(255,255,255,.66);
+
+  /* Typographie */
+  --t-h1: clamp(2.5rem, 0.3775rem + 5.66vw, 4rem);
+  --t-h1-lh: 1.06;
+  --t-h1-ls: -0.035em;
+  --t-h1-article: clamp(2rem, 0.585rem + 3.774vw, 3rem);
+  --t-h1-article-lh: 1.12;
+  --t-h2: clamp(1.875rem, 0.637rem + 3.302vw, 2.75rem);
+  --t-h2-lh: 1.12;
+  --t-h2-ls: -0.028em;
+  --t-h3: clamp(1.25rem, 1.073rem + 0.4717vw, 1.375rem);
+  /* 16/09/2026 : sous-titre dans une colonne de lecture de 680 px (articles, légal). Le h2 de chapitre à 44 px y écrase le texte. */
+  --t-h2-article: clamp(1.5rem, 1.1rem + 1.1vw, 1.75rem);
+  --t-h3-lh: 1.25;
+  --t-h3-ls: -0.01em;
+  --t-lead: clamp(1.0625rem, 0.797rem + 0.7075vw, 1.25rem);
+  --t-corps: 1rem;
+  --t-surtitre: 0.75rem;
+  --t-legende: 0.8125rem;
+  --t-chiffre: clamp(2.5rem, 1.085rem + 3.774vw, 3.5rem);
+  --t-citation: clamp(1.375rem, 0.8rem + 1.53vw, 1.75rem);
+
+  /* Boutons */
+  --b-hauteur: 44px;
+  --b-taille: 0.8125rem;
+
+  /* Espacements et grille */
+  --l-marge: clamp(1.25rem, -0.519rem + 4.717vw, 2.5rem);
+  --l-conteneur: min(1200px, 100% - (2 * var(--l-marge)));
+  --l-conteneur-large: min(1360px, 100% - (2 * var(--l-marge)));
+  --e-section: clamp(4.5rem, -0.453rem + 13.21vw, 8rem);
+  --e-hero-haut: clamp(3.5rem, -1.453rem + 13.21vw, 7rem);
+  --e-titre-contenu: clamp(2.5rem, 1.085rem + 3.774vw, 3.5rem);
+  --e-titre-lead: clamp(0.75rem, 0.396rem + 0.943vw, 1rem);
+  --e-grille: clamp(0.75rem, -0.311rem + 2.83vw, 1.5rem);
+  --p-carte: clamp(1.5rem, 0.7925rem + 1.887vw, 2rem);
+
+  /* Matière */
+  --r-bouton: 4px;
+  --r-petit: 6px;
+  --r-carte: 12px;
+  --r-media: 12px;
+  --o-flottante: 0 2px 6px rgba(26,26,26,.06);
+
+  /* Mouvement */
+  --m-duree: 500ms;
+  --m-courbe: cubic-bezier(.44, 0, .56, 1);
+  --m-decalage: 60ms;
+
+  /* Les anciens jetons des feuilles historiques pointent sur le système */
+  --conteneur: 1200px;
+  --gouttiere: var(--l-marge);
+  --pad-section: var(--e-section);
+  --pad-section-courte: calc(var(--e-section) * 0.75);
+  --pad-hero-haut: var(--e-hero-haut);
+  --pad-hero-bas: var(--e-section);
+  --c-surface: var(--c-fond-2);
+  --c-blue: var(--c-accent);
+  --c-blue-hover: var(--c-accent-survol);
+  /* Statuts : plus de vert, d'ocre ni de rouge (SYSTEME.md §2). Le statut se dit en mots. */
+  --c-pass: var(--c-texte);      --c-pass-bg: var(--c-fond-2);
+  --c-risk: var(--c-texte-2);    --c-risk-bg: var(--c-fond-2);
+  --c-block: var(--c-texte);     --c-block-bg: var(--c-fond-2);
+  --c-pass-d: #FFFFFF;           --c-risk-d: var(--c-sur-profond-2);   --c-block-d: #FFFFFF;
+  --c-field-deep: var(--c-profond);
+}

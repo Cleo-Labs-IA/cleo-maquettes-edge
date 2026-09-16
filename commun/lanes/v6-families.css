@@ -278,9 +278,9 @@ body[data-cleo-ds="v6"][data-v6-family="product"] .experts-portraits{background:
 body[data-cleo-ds="v6"][data-v6-family="product"] .experts-portraits img{border-radius:var(--cleo-v6-radius-md)}
 
 body[data-cleo-ds="v6"][data-v6-family="product"] .faq details{
-  background:rgba(255,255,255,.78);
+  background:transparent;
   border-color:var(--cleo-v6-border);
-  border-radius:var(--cleo-v6-radius-md);
+  border-radius:0;
 }
 
 /* Audiences : grandes scenes, mosaiques nettes et fiches lisibles. */
