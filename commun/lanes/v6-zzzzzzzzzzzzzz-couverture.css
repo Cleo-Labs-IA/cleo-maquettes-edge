@@ -23,3 +23,13 @@ body[data-cleo-ds="v6"]:is([data-v6-page="26-legal-data"],[data-v6-page="26-lega
   body[data-cleo-ds="v6"]:is([data-v6-page="26-legal-data"],[data-v6-page="26-legal-data-en"]) main .mesures .ligne:not(#_):not(#_):not(#_){grid-template-columns:minmax(0,1fr) auto;gap:16px}
   body[data-cleo-ds="v6"]:is([data-v6-page="26-legal-data"],[data-v6-page="26-legal-data-en"]) main .mesures .valeur:not(#_):not(#_):not(#_){text-align:right}
 }
+
+/* 16/09/2026, photo partout (refonte/PHOTO.md) : « Le périmètre » et « Veille par marché » s'ouvrent sur une photo dont le titre
+   (qui garde l'id de l'ancre) est posé en bas. Au clic sur le menu latéral, la marge d'ancrage remonte la photo dans
+   l'écran ; plafonnée à 34 % de la hauteur pour que le titre passe la ligne de lecture du menu (40 %, mouvement.js). */
+body[data-cleo-ds="v6"]:is([data-v6-page="26-legal-data"],[data-v6-page="26-legal-data-en"]) main :is(#perimetre, #marches):not(#_):not(#_):not(#_){scroll-margin-top:min(calc(clamp(18rem, 12rem + 16vw, 26rem) - 1.5rem), 34vh)}
+/* 16/09/2026, vu à la capture 390 px : dans la grille de deux cartes, « 25 000 » et « 19 000 » en --t-chiffre (40 px)
+   touchaient le bord droit de leur carte. Taille bornée par la largeur d'écran au téléphone. */
+@media (max-width:600px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="26-legal-data"],[data-v6-page="26-legal-data-en"]) main .atlas .g4 .t-display:not(#_):not(#_):not(#_){font-size:clamp(1.75rem, 8.5vw, 2.25rem) !important}
+}

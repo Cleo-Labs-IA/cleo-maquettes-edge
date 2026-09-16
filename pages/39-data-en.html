@@ -10,14 +10,23 @@
 
 <!-- ═══ HAUT DE PAGE ═══ h1 : variante 2 de refonte/wording/heros.md (SITE 39). La variante 1 porte la page MCP (52),
      comme chez Moonlit où « inside the AI you already use » est le titre de /mcp. -->
-<section class="section dt-hero" id="haut">
-  <div class="conteneur dt-duo">
-    <div class="dt-hero-texte">
-      <p class="sy-surtitre">Data</p>
-      <h1>Product regulatory data, via API and MCP server.</h1>
-      <p class="sy-lead">An API brings it into your product. An MCP server brings it into Claude, Cursor and any MCP-compatible client.</p>
-      <div class="sy-actions dt-actions"><a class="sy-bouton sy-bouton-chevrons" href="21-inscription.html">Request access</a><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team</a></div>
-    </div>
+<section class="section sy-hero-photo" id="haut">
+  <div class="conteneur">
+    <figure class="sy-chapitre sy-chapitre-hero">
+      <img src="img:cables" alt="">
+      <figcaption class="sy-chapitre-texte">
+        <p class="sy-etiquette">Data</p>
+        <h1>Product regulatory data, via API and MCP server.</h1>
+        <p class="sy-chapitre-lead">An API brings it into your product. An MCP server brings it into Claude, Cursor and any MCP-compatible client.</p>
+        <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="21-inscription.html">Request access</a><a class="sy-bouton-blanc" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team</a></div>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- PHOTO PARTOUT (16/09/2026, refonte/PHOTO.md) : le formulaire « dites-nous » passe juste sous le haut de page sur photo. -->
+<section class="section dt-besoin-section" id="dites-nous">
+  <div class="conteneur">
     <!-- Le champ de Moonlit Connect, en vrai formulaire GET vers le rendez-vous HubSpot (modèle du formulaire de la page 40). -->
     <form class="dt-besoin sy-carte-blanche" id="besoin" method="get" action="https://meetings.hubspot.com/anaelle-guez/rendez-vous" data-apparait>
       <h2 class="dt-besoin-titre">Or tell us what you want to do with regulatory data</h2>
@@ -39,7 +48,14 @@
      carte bleue : références déjà citées sur le site (directive 2009/48/CE, CPSIA section 101, règlement (UE) 2023/988). -->
 <section class="section dt-couverture" id="couverture">
   <div class="conteneur">
-    <div class="sy-entete"><p class="sy-surtitre">Coverage</p><h2>106 countries, one rule base</h2><p class="sy-lead">Every rule linked to its article and its entry-into-force date.</p></div>
+    <figure class="sy-chapitre">
+      <img src="img:briques" alt="">
+      <figcaption class="sy-chapitre-texte">
+        <p class="sy-etiquette">Coverage</p>
+        <h2>106 countries, one rule base</h2>
+        <p class="sy-chapitre-lead">Every rule linked to its article and its entry-into-force date.</p>
+      </figcaption>
+    </figure>
     <div class="sy-bento" data-apparait-groupe>
       <figure class="sy-bento-photo"><img src="img:classeurs" alt=""><p class="sy-etiquette">Product, HS code, regulation, authority</p><p>The chain Cleo tracks continuously, link by link.</p></figure>
       <div class="sy-bento-creme"><b class="sy-chiffre-raye">106</b><span>countries tracked</span></div>
@@ -61,7 +77,14 @@
      jouets existe) : ce n'est pas une sortie réelle. Clients : README de ~/legal-mcp l. 3 et 97. -->
 <section class="section dt-acces-section" id="acces">
   <div class="conteneur">
-    <div class="sy-entete"><h2>One key, two ways in</h2><p class="sy-lead">The API for teams building a product. The MCP server for compliance teams, inside their assistant.</p></div>
+    <figure class="sy-chapitre">
+      <img src="img:chaines" alt="">
+      <figcaption class="sy-chapitre-texte">
+        <p class="sy-etiquette">API and MCP server</p>
+        <h2>One key, two ways in</h2>
+        <p class="sy-chapitre-lead">The API for teams building a product. The MCP server for compliance teams, inside their assistant.</p>
+      </figcaption>
+    </figure>
     <div class="dt-acces" data-apparait>
       <article class="sy-carte dt-acces-carte" id="developpeurs">
         <p class="sy-surtitre">For teams that build</p>
@@ -133,7 +156,13 @@ Authorization: Bearer ld_live_…
      (README l. 196 à 199). Pas d'ISO 27001 « certifié », pas d'hébergement affirmé pour l'API. -->
 <section class="section dt-piliers-section" id="piliers">
   <div class="conteneur">
-    <div class="sy-entete"><h2>Data you can verify, built for AI</h2></div>
+    <figure class="sy-chapitre">
+      <img src="img:masse-lunettes" alt="">
+      <figcaption class="sy-chapitre-texte">
+        <p class="sy-etiquette">Data</p>
+        <h2>Data you can verify, built for AI</h2>
+      </figcaption>
+    </figure>
     <div class="dt-piliers" data-apparait>
       <article class="sy-carte-blanche dt-pilier"><span class="dt-numero">1</span><h3>Verifiable at the source</h3><p>Every result points to the text's official address.</p><ul class="dt-liste"><li>Every rule linked to its article</li><li>Its entry-into-force date</li><li>Changes from the last 90 days</li></ul></article>
       <article class="sy-carte-blanche dt-pilier"><span class="dt-numero">2</span><h3>Built for AI</h3><p>The same key for the API and the MCP server.</p><ul class="dt-liste"><li>Hybrid search, semantic and lexical</li><li>The article extracted from the document</li><li>Up to 25 searches in one call</li></ul></article>
@@ -146,7 +175,14 @@ Authorization: Bearer ld_live_…
      À TRANCHER : le modèle de prix et le périmètre de l'offre Data (pays, familles de produits) ne sont pas arrêtés. -->
 <section class="section dt-offre-section" id="offre">
   <div class="conteneur">
-    <div class="sy-entete"><h2>Access sized to your use</h2><p class="sy-lead">The countries and product families your software needs.</p></div>
+    <figure class="sy-chapitre">
+      <img src="img:fenetres" alt="">
+      <figcaption class="sy-chapitre-texte">
+        <p class="sy-etiquette">Access</p>
+        <h2>Access sized to your use</h2>
+        <p class="sy-chapitre-lead">The countries and product families your software needs.</p>
+      </figcaption>
+    </figure>
     <div class="dt-offre" data-apparait>
       <article class="sy-carte dt-offre-carte"><p class="sy-surtitre">Data · MCP server</p><p class="dt-offre-grand">On request</p><p class="dt-offre-texte">In Claude, Cursor, Cline, Continue, Claude Code and any MCP-compatible client.</p><ul class="dt-liste"><li>The same rule base</li><li>Every result points to its source</li></ul><div class="sy-actions dt-actions"><a class="sy-bouton" href="21-inscription.html">Request access</a></div></article>
       <article class="sy-carte dt-offre-carte"><p class="sy-surtitre">Data · API</p><p class="dt-offre-grand">Tailored</p><p class="dt-offre-texte">To build regulatory data into your product.</p><ul class="dt-liste"><li>Search, articles, versions in force, changes</li><li>Filters by country, type of text, language and dates</li></ul><div class="sy-actions dt-actions"><a class="sy-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team</a></div></article>

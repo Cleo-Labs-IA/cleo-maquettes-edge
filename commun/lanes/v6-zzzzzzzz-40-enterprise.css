@@ -12,18 +12,9 @@ body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-ente
 body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-conteneur{box-sizing:border-box;margin:0 auto}
 body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) :is(#equipe, #mise-en-place, #contact, #contact-equipe){scroll-margin-top:96px}
 
-/* ─── 1. Haut de page sur photo ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.en-hero{padding:0 !important;background:var(--c-profond) !important;color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-hero-scene{position:relative;display:flex;align-items:center;min-height:max(560px, calc(88svh - 64px));padding:var(--e-hero-haut) 0;box-sizing:border-box;overflow:clip}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-hero-scene > .tk-trame{position:absolute;inset:0;z-index:0}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-hero-scene > .tk-trame img{display:block;width:100%;height:100%;object-fit:cover}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-hero-scene::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg, rgba(8,9,59,.84) 0%, rgba(8,9,59,.6) 55%, rgba(8,9,59,.34) 100%);pointer-events:none}
-/* Le conteneur du haut de page n'est pas enfant direct de la section (il est dans la scène photo) : il prend lui-même la
-   largeur et le bord gauche du système, sinon le titre part du bord de l'écran (mesuré à x = 0 le 15/09). */
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-hero-contenu{position:relative;z-index:2;box-sizing:border-box;width:var(--l-conteneur);margin-left:auto;margin-right:auto;color:#FFFFFF}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-h1:not(#_){margin:0;max-width:min(100%, 900px);color:#FFFFFF !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-hero-lead{margin:var(--e-titre-lead) 0 0}
-body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+/* ─── 1. Haut de page sur photo ─── 16/09/2026, « photo partout » (refonte/PHOTO.md) : le haut de page est le composant
+   sy-hero-photo de la feuille système ; ses anciennes règles (.en-hero, .en-hero-scene, .en-hero-contenu, .en-h1,
+   .en-hero-lead, .en-actions) sont retirées. */
 
 /* ─── 2. La lettre ─── */
 body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) main > section.en-lettre{background:var(--c-fond-2) !important}
@@ -86,8 +77,6 @@ body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-ente
 
 /* ─── Tablette et téléphone ─── */
 @media (max-width:980px){
-  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-hero-scene{min-height:520px;padding:72px 0}
-  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-hero-scene::after{background:linear-gradient(180deg, rgba(8,9,59,.62) 0%, rgba(8,9,59,.84) 100%)}
   body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-lettre-grille{grid-template-columns:minmax(0,1fr);gap:32px}
   body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-illustration{aspect-ratio:4 / 3}
   body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-lettre-texte{max-width:none}
@@ -98,15 +87,6 @@ body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-ente
 @media (max-width:560px){
   body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-cartes{grid-template-columns:minmax(0,1fr)}
   body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .ent-form .paire:not(#_){grid-template-columns:minmax(0,1fr);gap:0}
-}
-
-/* ═══ LE MOUVEMENT ═══ Les apparitions à l'entrée dans l'écran viennent de data-apparait (commun/mouvement.js et la
-   feuille de mouvement du système). Ici : l'arrivée du haut de page au chargement (le h1 arrive mot à mot par
-   commun/mouvement.js, puis le chapeau et le bouton). Aucune scène liée au défilement sur cette page. */
-@media (prefers-reduced-motion: no-preference){
-  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-hero-lead{animation:enArrive var(--m-duree) var(--m-courbe) .25s both}
-  body[data-cleo-ds="v6"]:is([data-v6-page="40-enterprise"],[data-v6-page="40-enterprise-en"]) .en-actions{animation:enArrive var(--m-duree) var(--m-courbe) .4s both}
-  @keyframes enArrive{from{opacity:0;filter:blur(4px);translate:0 6px}}
 }
 
 /* ═══ PASSE IDENTITÉ ═══ 16/09/2026 (scratchpad/agents/refonte/IDENTITE.md, agent E). Le bento (citation, 106, 25 000) et

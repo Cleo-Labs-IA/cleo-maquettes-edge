@@ -4,19 +4,18 @@
      profond en section-serree, puis le corps en res-corps avec sa nav latérale.
      Matière relevée sur https://www.cleolabs.co/fr/legal-data (zone
      proxifiée, servie par le composant CoverageAtlas de cleo-landing). ═══ -->
-<section class="sur-sombre section-serree ra-tete-section">
+<!-- PHOTO PARTOUT (16/09/2026, refonte/PHOTO.md) : le bandeau passe sur photo ; titre, chapeau et boutons repris mot pour mot. -->
+<section class="section sy-hero-photo">
   <div class="conteneur">
-    <!-- Le bandeau ne passe PAS par .res-tete : mesuré à 390 px, cette grille
-         reste sur deux colonnes de 157 px (elle n'est pas dans la media query
-         de 640), et un titre de dix mots y tombait à deux mots par ligne. En
-         flux de bloc il se replie tout seul, sans grille posée en inline. -->
-    <div class="t-label" style="margin-bottom:16px">Atlas de couverture</div>
-    <h1 class="t-hero" style="margin:0;max-width:760px">La couverture réglementaire de Cleo, <span class="attenue">produit par produit, autorité par autorité.</span></h1>
-    <p class="t-body chapo" style="margin:20px 0 0">La chaîne produit → code SH → réglementation → autorité, et la part de chaque maillon que Cleo suit en continu. Plus le bleu est franc, plus cette part est grande.</p>
-    <div class="rang-boutons">
-      <a class="btn btn-marque" href="21-inscription.html">Demander un accès</a>
-      <a class="btn btn-contour" href="#explorateur">Explorer la couverture</a>
-    </div>
+    <figure class="sy-chapitre sy-chapitre-hero">
+      <img src="img:fenetres" alt="">
+      <figcaption class="sy-chapitre-texte">
+        <p class="sy-etiquette">Atlas de couverture</p>
+        <h1>La couverture réglementaire de Cleo, produit par produit, autorité par autorité.</h1>
+        <p class="sy-chapitre-lead">La chaîne produit → code SH → réglementation → autorité, et la part de chaque maillon que Cleo suit en continu. Plus le bleu est franc, plus cette part est grande.</p>
+        <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="21-inscription.html">Demander un accès</a><a class="sy-bouton-blanc" href="#explorateur">Explorer la couverture</a></div>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
@@ -34,7 +33,13 @@
 
       <div style="min-width:0">
         <!-- ── Le périmètre : les cinq compteurs de la page servie ── -->
-        <h2 class="t-h1" id="perimetre" style="margin-bottom:24px">Le périmètre, au chiffre près</h2>
+        <figure class="sy-chapitre">
+          <img src="img:briques" alt="">
+          <figcaption class="sy-chapitre-texte">
+            <p class="sy-etiquette">Atlas de couverture</p>
+            <h2 id="perimetre">Le périmètre, au chiffre près</h2>
+          </figcaption>
+        </figure>
         <div class="g4" style="margin-bottom:24px">
           <div class="carte" style="padding:26px">
             <div class="t-display" style="margin-bottom:8px">106</div>
@@ -64,7 +69,13 @@
           réglementations produits de consommation (retail) : les rattachements des régimes industriels
           (douane, contrôle des exportations, REACH…) sont inventoriés mais pas encore suivis par flux.</p>
         <!-- ── Veille live par marché ── -->
-        <h2 class="t-h1" id="marches" style="margin-bottom:8px">Veille en continu, par marché</h2>
+        <figure class="sy-chapitre">
+          <img src="img:masse-montre" alt="">
+          <figcaption class="sy-chapitre-texte">
+            <p class="sy-etiquette">Veille</p>
+            <h2 id="marches">Veille en continu, par marché</h2>
+          </figcaption>
+        </figure>
         <p class="t-body" style="margin:0 0 28px">Taille = réglementations suivies · intensité du bleu = part suivie par un flux de veille.</p>
         <div class="g2" style="margin-bottom:28px">
           <div class="carte" style="padding:26px">

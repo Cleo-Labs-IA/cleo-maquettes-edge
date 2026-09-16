@@ -9,16 +9,16 @@
 body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"],[data-v6-page="52-data-mcp"],[data-v6-page="52-data-mcp-en"],[data-v6-page="53-data-plateforme"],[data-v6-page="53-data-plateforme-en"]){
 
   /* ── Rythme des chapitres : crème en haut, blanc, crème pour les cartes blanches ── */
-  & main > section.dt-hero:not(#_):not(#_){padding-top:var(--e-hero-haut) !important;padding-bottom:var(--e-section) !important;background:var(--c-fond-2) !important}
+  /* 16/09/2026, photo partout (refonte/PHOTO.md) : les hauts de page des trois pages passent sur photo (sy-hero-photo, feuille commune) ;
+     les règles dt-hero et dt-hero-texte sont retirées. Le formulaire « dites-nous » de 39 suit le haut de page. */
+  & main > section.dt-besoin-section:not(#_):not(#_){padding-top:var(--e-titre-contenu) !important;padding-bottom:0 !important;background:transparent !important}
+  & main .dt-besoin-section .dt-besoin:not(#_):not(#_){max-width:880px}
   & main > section:is(.dt-couverture, .dt-acces-section, .dt-offre-section, .dt-clients-section, .dt-etapes-section, .dt-citation-section, .dt-vue-section, .dt-capacites-section):not(#_):not(#_){padding-top:var(--e-section) !important;padding-bottom:var(--e-section) !important;background:var(--c-fond) !important}
   & main > section.dt-piliers-section:not(#_):not(#_){padding-top:var(--e-section) !important;padding-bottom:var(--e-section) !important;background:var(--c-fond-2) !important}
   & main > section.dt-trace-section:not(#_):not(#_){padding-top:var(--e-section) !important;padding-bottom:var(--e-section) !important}
 
   /* ── Deux colonnes ── */
   & main .dt-duo:not(#_):not(#_){display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:64px;align-items:center}
-  & main .dt-duo-egal:not(#_):not(#_){grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
-  & main .dt-hero-texte h1:not(#_):not(#_){margin:16px 0 0 !important;max-width:18ch}
-  & main .dt-hero-texte .sy-lead:not(#_):not(#_){margin:var(--e-titre-lead) 0 0 !important}
   & main .dt-actions:not(#_):not(#_){display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 
   /* ── Le champ « dites-nous ce que vous voulez faire » (Moonlit Connect) ── */
@@ -103,7 +103,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"],
 
   /* ── Tablette et téléphone ── */
   @media (max-width:1023px){
-    & main :is(.dt-duo, .dt-duo-egal):not(#_):not(#_){grid-template-columns:minmax(0,1fr);gap:48px}
+    & main .dt-duo:not(#_):not(#_){grid-template-columns:minmax(0,1fr);gap:48px}
     & main .dt-acces:not(#_):not(#_){grid-template-columns:minmax(0,1fr)}
     & main .dt-piliers:not(#_):not(#_){grid-template-columns:minmax(0,1fr)}
   }

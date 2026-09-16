@@ -7,7 +7,9 @@
 body[data-cleo-ds="v6"]:is([data-v6-page="52-data-mcp"],[data-v6-page="52-data-mcp-en"]){
 
   /* Le schéma Cleo → MCP → clients (viewBox 520 × 320 ; les étiquettes sont placées en % de la même boîte) */
-  & main .dt-schema:not(#_):not(#_){position:relative;box-sizing:border-box;width:100%;max-width:520px;height:320px;margin:0 0 0 auto}
+  /* 16/09/2026, photo partout : le haut de page passe sur photo, le schéma descend en tête du chapitre « Branchez Cleo », centré. */
+  & main .dt-schema-ligne:not(#_):not(#_){display:flex;justify-content:center;margin:0 0 var(--e-titre-contenu)}
+  & main .dt-schema:not(#_):not(#_){position:relative;box-sizing:border-box;width:100%;max-width:520px;height:320px;margin:0 auto}
   & main .dt-schema-traits:not(#_):not(#_){position:absolute;inset:0;width:100%;height:100%;overflow:visible}
   & main .dt-schema-traits path{fill:none;stroke:var(--c-texte);stroke-opacity:.18;stroke-width:1.2;vector-effect:non-scaling-stroke}
   & main .dt-schema-traits .dt-trait-mcp{stroke:var(--c-accent);stroke-opacity:.5}
@@ -54,7 +56,6 @@ body[data-cleo-ds="v6"]:is([data-v6-page="52-data-mcp"],[data-v6-page="52-data-m
   & main .dt-chiffres-sombre > li > span:not(#_):not(#_):not(#_){color:var(--c-sur-profond-2)}
 
   @media (max-width:1023px){
-    & main .dt-schema:not(#_):not(#_){margin:0 auto}
     & main .dt-clients-grille:not(#_):not(#_){grid-template-columns:repeat(2, minmax(0, 1fr))}
     & main .dt-chiffres-sombre:not(#_):not(#_){grid-template-columns:repeat(2, minmax(0, 1fr))}
   }
@@ -70,11 +71,12 @@ body[data-cleo-ds="v6"]:is([data-v6-page="52-data-mcp"],[data-v6-page="52-data-m
 
 /* ─────────────────────────────────────── 53 · PLATEFORME ─────────────────────────────────────── */
 body[data-cleo-ds="v6"]:is([data-v6-page="53-data-plateforme"],[data-v6-page="53-data-plateforme-en"]){
-  & main .dt-hero-plateforme .dt-hero-texte:not(#_):not(#_){max-width:760px}
-  & main > section.dt-interface-section:not(#_):not(#_){padding-top:0 !important;padding-bottom:var(--e-section) !important;background:linear-gradient(var(--c-fond-2) 0 50%, var(--c-fond) 50%) !important}
+  /* 16/09/2026, photo partout : haut de page sur photo ; l'interface suit, sans le dégradé crème qui prolongeait l'ancien haut de page. */
+  & main > section.dt-interface-section:not(#_):not(#_){padding-top:var(--e-titre-contenu) !important;padding-bottom:var(--e-section) !important;background:transparent !important}
 
   /* La grande photo et l'interface posée dessus (composition Legora, matière Tenkara) */
-  & main .dt-interface:not(#_):not(#_){position:relative;box-sizing:border-box;width:min(1360px, calc(100vw - 2 * var(--l-marge)));height:600px;margin:0 0 0 calc(50% - min(680px, 50vw - var(--l-marge)));border-radius:var(--r-media);overflow:clip;background:var(--c-profond)}
+  /* 16/09/2026, photo partout : même largeur que le haut de page sur photo juste au-dessus (1 200 px, x = 120), au lieu de 1 360. */
+  & main .dt-interface:not(#_):not(#_){position:relative;box-sizing:border-box;width:100%;height:600px;margin:0;border-radius:var(--r-media);overflow:clip;background:var(--c-profond)}
   & main .dt-interface > img:first-child:not(#_):not(#_){position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:0}
   & main .dt-interface::after{content:"";position:absolute;inset:0;z-index:1;background:rgba(8,9,59,.3);pointer-events:none}
   & main .dt-app:not(#_):not(#_){position:absolute;left:50%;top:50%;z-index:2;translate:-50% -50%;box-sizing:border-box;width:min(760px, 88%);padding:20px;background:var(--c-carte);color:var(--c-texte)}
@@ -96,10 +98,9 @@ body[data-cleo-ds="v6"]:is([data-v6-page="53-data-plateforme"],[data-v6-page="53
   & main .dt-app-actif .dt-app-actions span:first-child:not(#_):not(#_){color:var(--c-accent)}
 
   /* Vue d'ensemble : titre à gauche, phrase à droite */
-  & main .dt-vue:not(#_):not(#_){display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:end}
-  & main .dt-vue h2:not(#_):not(#_){margin:16px 0 0 !important;max-width:16ch}
-  & main .dt-vue .sy-lead:not(#_):not(#_){margin:0 !important}
+  /* Vue d'ensemble : ouverte sur photo (titre et chapeau dans la photo), les capacités suivent de près. */
   & main > section.dt-vue-section:not(#_):not(#_){padding-bottom:0 !important}
+  & main > section.dt-capacites-section:not(#_):not(#_){padding-top:0 !important}
 
   /* Les quatre capacités */
   & main .dt-capacites:not(#_):not(#_){display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:40px 64px;margin:0;padding:0;list-style:none}
@@ -108,9 +109,6 @@ body[data-cleo-ds="v6"]:is([data-v6-page="53-data-plateforme"],[data-v6-page="53
   & main .dt-capacites b:not(#_):not(#_){font-size:var(--t-h3);line-height:var(--t-h3-lh);letter-spacing:var(--t-h3-ls);font-weight:500;color:var(--c-texte)}
   & main .dt-capacites p:not(#_):not(#_){grid-column:1 / -1;margin:0;color:var(--c-texte-2)}
 
-  @media (max-width:1023px){
-    & main .dt-vue:not(#_):not(#_){grid-template-columns:minmax(0,1fr);gap:20px}
-  }
   @media (max-width:600px){
     & main .dt-interface:not(#_):not(#_){height:540px}
     & main .dt-app:not(#_):not(#_){width:calc(100% - 24px);padding:14px}

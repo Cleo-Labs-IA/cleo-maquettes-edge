@@ -8,14 +8,10 @@
    Feuille d'avant : scratchpad/agents/refonte/service/sauvegarde-css/. */
 body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) main > section.sc-s{margin:0 !important;padding:var(--e-section) 0 !important;border:0 !important;background:transparent !important}
 /* Une règle en ligne du gabarit V6 (main > section:first-child) rend le premier chapitre blanc : couleur posée. */
-body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) main > section.sc-hero{padding:var(--e-hero-haut) 0 var(--e-section) !important;color:var(--c-texte) !important}
 body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) main > section:is(#comment, #experts){background:var(--c-fond-2) !important}
 
 /* ─── Titres et liens ─── */
-body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-h1{margin:0;max-width:22ch}
-body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-hero-lead{margin:20px 0 0 !important}
 body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-titre{margin:0 0 var(--e-titre-contenu) !important;max-width:24ch}
-body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
 body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-lien{display:inline-flex;align-items:center;gap:8px;padding:0;border:0;border-radius:0;background:none;font-size:.9375rem;font-weight:500;color:var(--c-texte);text-decoration:none;white-space:nowrap}
 body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-lien:hover{text-decoration:underline;text-underline-offset:4px}
 body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-etat{font-size:.875rem;font-style:normal;color:var(--c-texte-2);white-space:nowrap}
@@ -154,7 +150,6 @@ body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page=
 @media (max-width:560px){
   body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-experts{grid-template-columns:minmax(0,1fr)}
   body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-invite{left:5%;right:5%;top:22%}
-  body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-actions > a{flex:1 1 auto}
 }
 
 /* ═══ MOUVEMENT ═══ */
@@ -188,3 +183,8 @@ body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page=
     @keyframes scEtapeFin{0%{color:rgba(26,26,26,.42);background-color:rgba(255,255,255,0)}12%,100%{color:#1A1A1A;background-color:#FFFFFF}}
   }
 }
+
+/* 16/09/2026, « Photo partout » : la couche commune v6-zzzzzzzzzzzzzzz-vivant.css passe les étiquettes en bleu ; sur la
+   carte sombre « Enterprise · volume », le bleu sur bleu nuit ne se lisait plus (capture photo-service). Étiquette en
+   blanc atténué sur ce seul fond sombre. */
+body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) main .sc-tarifs-volume .sc-etiquette:not(#_):not(#_):not(#_):not(#_){color:var(--c-sur-profond-2) !important}

@@ -1,0 +1,102 @@
+/* ═══ PLUS VIVANT ═══ 16/09/2026, Naomie : « je trouve tout fade ».
+   Mesuré le même jour (scratchpad/agents/refonte/fade/avant.mjs) : 58 à 84 % de la surface des pages en blanc ou crème
+   pâle, titres à 64 px en graisse 500 (cleolabs.co : 92 px), texte secondaire à 62 % de noir, photos toutes grises, une
+   seule touche de couleur forte par page. Couche chargée en dernier, sur tout le site : elle ne change que des jetons et
+   la matière des composants communs. Satoshi seule, bleu #0008CF, grain cuit inchangé. La retirer rend l'état d'avant. */
+:root{
+  /* Fond chaud mesuré sur tenkara.ai (#F7F6F5) au lieu du blanc pur : les cartes blanches ressortent dessus. */
+  --c-fond: #F7F6F5;
+  --c-fond-2: #EFEDE8;
+  --c-texte: #111111;
+  --c-texte-2: rgba(17,17,17,.74);
+  --c-texte-3: rgba(17,17,17,.54);
+  --c-filet: rgba(17,17,17,.14);
+  /* Titres : présence de cleolabs.co (92 px mesurés) sans la dépasser. */
+  --t-h1: clamp(2.75rem, 0.05rem + 7.2vw, 5.5rem);
+  --t-h1-lh: 1.02;
+  --t-h1-ls: -0.045em;
+  --t-h2: clamp(2.125rem, 0.71rem + 3.77vw, 3.5rem);
+  --t-h2-lh: 1.06;
+  --t-h2-ls: -0.035em;
+  --t-lead: clamp(1.125rem, 0.86rem + 0.71vw, 1.375rem);
+}
+
+/* Le fond de page suit le jeton (la barre reste blanche, elle se détache). */
+body[data-cleo-ds="v6"]:not(#_):not(#_):not(#_){background:var(--c-fond)}
+body[data-cleo-ds="v6"] main > section:not([class*="sy-final"]):not([class*="sombre"]):not(#_):not(#_):not(#_){background-color:transparent}
+
+/* Repères bleus : surtitres et numéros d'étapes ou de listes, la couleur de la marque dans chaque écran. */
+body[data-cleo-ds="v6"] main :is([class*="surtitre"], [class*="etiquette"], [class*="famille"], .ra-meta):not(.sy-etiquette):not(.sy-sombre *):not(.sy-final-photo *):not(.sy-bande-photo *):not(.sy-bento *):not(#_):not(#_):not(#_){color:var(--c-accent) !important}
+body[data-cleo-ds="v6"] main :is(.ac-recit-etapes span, .fx-etapes span, .sc-etape > span:first-child, .dd-etape > span:first-child, .mu-etape > span:first-child):not(#_):not(#_):not(#_){color:var(--c-accent) !important}
+body[data-cleo-ds="v6"] main :is(.sy-lignes, .ac-prestations, .sc-cas) a:hover:not(#_):not(#_):not(#_){color:var(--c-accent)}
+
+/* Les cartes existent par leur blanc sur le fond chaud. */
+body[data-cleo-ds="v6"] main :is(.sy-carte, .carte, .res-carte, .terme-carte):not(.sy-bento-bleu):not(.sy-bento-creme):not(#_):not(#_):not(#_){background:#FFFFFF}
+
+/* Bandes photo en bichromie bleue, comme le bandeau de tenkara.ai : la photo passe en niveaux de gris contrastés et le
+   bleu Cleo la teinte par multiplication. Filtre CSS simple (pas de filtre SVG, qui faisait planter WebKit le 15/09). */
+body[data-cleo-ds="v6"] main .sy-bande-photo > figure > img:first-child:not(#_):not(#_):not(#_){filter:grayscale(1) contrast(1.18) brightness(1.08)}
+body[data-cleo-ds="v6"] main .sy-bande-photo > figure:not(#_):not(#_):not(#_)::after{background:#0008CF !important;mix-blend-mode:multiply;opacity:.78}
+
+/* Appel final : plus de profondeur, le bleu remonte du bas. */
+body[data-cleo-ds="v6"] main .sy-final-photo > figure:not(#_):not(#_):not(#_)::after{background:linear-gradient(180deg, rgba(8,9,59,.45) 0%, rgba(8,9,59,.62) 55%, rgba(0,8,207,.55) 100%) !important}
+
+/* Listes de prestations et de cas : titre plus présent, flèche bleue. */
+body[data-cleo-ds="v6"] main :is(.sy-lignes, [class*="prestations"], .sc-cas) :is(b, strong, h3):not(#_):not(#_):not(#_){font-size:clamp(1.125rem, 0.95rem + .45vw, 1.3125rem);color:var(--c-texte)}
+body[data-cleo-ds="v6"] main :is(.sy-lignes, [class*="prestations"]) svg:not(#_):not(#_):not(#_){color:var(--c-accent)}
+
+/* ═══ PHOTO PARTOUT ═══ 16/09/2026. Naomie a choisi « Photo partout » (sur « Blocs de couleur », « Clair et sombre »,
+   « Affiner l'actuel ») : chaque chapitre s'ouvre sur une grande photo en bichromie bleue, étiquette blanche, titre blanc.
+   Contrat HTML (les pages l'écrivent ; seule cette feuille le style) :
+     <figure class="sy-chapitre">
+       <img src="img:clé" alt="">
+       <figcaption class="sy-chapitre-texte"><p class="sy-etiquette">Libellé</p><h2>Titre du chapitre</h2>
+         <p class="sy-chapitre-lead">Chapeau optionnel</p></figcaption>
+     </figure>
+   Premier enfant du conteneur du chapitre, À LA PLACE de son en-tête texte (surtitre, h2, chapeau) : le titre n'existe
+   qu'une fois. Haut de page sur photo : <section class="section sy-hero-photo"> avec le même contrat en <figure
+   class="sy-chapitre sy-chapitre-hero"> et un h1. Photos : grain cuit, source de 1 600 px ou plus, jamais deux fois la
+   même sur une page. */
+body[data-cleo-ds="v6"] main .sy-chapitre:not(#_):not(#_):not(#_){position:relative;box-sizing:border-box;width:100%;height:clamp(18rem, 12rem + 16vw, 26rem);margin:0 0 var(--e-titre-contenu);border-radius:var(--r-media);overflow:clip;background:var(--c-accent)}
+body[data-cleo-ds="v6"] main .sy-chapitre > img:first-child:not(#_):not(#_):not(#_){position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:0;filter:grayscale(1) contrast(1.2) brightness(1.1)}
+body[data-cleo-ds="v6"] main .sy-chapitre:not(#_):not(#_):not(#_)::after{content:"";position:absolute;inset:0;z-index:1;background:#0008CF;mix-blend-mode:multiply;opacity:.8;pointer-events:none}
+body[data-cleo-ds="v6"] main .sy-chapitre:not(#_):not(#_):not(#_)::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg, rgba(8,9,59,.55) 0%, rgba(8,9,59,0) 60%);pointer-events:none}
+body[data-cleo-ds="v6"] main .sy-chapitre-texte:not(#_):not(#_):not(#_){position:relative;z-index:2;box-sizing:border-box;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;gap:16px;padding:clamp(1.5rem, 0.5rem + 3vw, 3rem)}
+body[data-cleo-ds="v6"] main .sy-chapitre-texte :is(h1, h2):not(#_):not(#_):not(#_){max-width:22ch;margin:0 !important;color:#FFFFFF !important;text-align:left !important;text-shadow:0 1px 24px rgba(8,9,59,.3)}
+body[data-cleo-ds="v6"] main .sy-chapitre-lead:not(#_):not(#_):not(#_){max-width:56ch;margin:0 !important;font-size:var(--t-lead);line-height:1.45;color:rgba(255,255,255,.9) !important}
+body[data-cleo-ds="v6"] main .sy-chapitre .sy-etiquette:not(#_):not(#_):not(#_){color:var(--c-texte) !important}
+/* Une section qui s'ouvre sur une photo n'a pas besoin de son padding haut plein : la photo fait l'air. */
+body[data-cleo-ds="v6"] main > section:has(> .conteneur > .sy-chapitre:first-child, > div > .sy-chapitre:first-child):not(#_):not(#_):not(#_){padding-top:calc(var(--e-section) * .5) !important}
+/* Haut de page sur photo : plus haut, titre h1, boutons blancs sur la photo. */
+body[data-cleo-ds="v6"] main section.sy-hero-photo:not(#_):not(#_):not(#_){padding:24px 0 0 !important;background:transparent !important}
+body[data-cleo-ds="v6"] main .sy-chapitre-hero:not(#_):not(#_):not(#_){width:100%;height:clamp(30rem, 18rem + 30vw, 44rem);margin:0}
+/* Mesuré sur la page témoin : en --l-conteneur-large dans un .conteneur, le haut de page tombait plus étroit que les chapitres (x = 160 contre 120). Même largeur que les chapitres. */
+body[data-cleo-ds="v6"] main .sy-chapitre-hero .sy-chapitre-texte:not(#_):not(#_):not(#_){padding:clamp(1.5rem, -1rem + 6vw, 5rem)}
+body[data-cleo-ds="v6"] main .sy-chapitre-hero .sy-chapitre-texte h1:not(#_):not(#_):not(#_){max-width:16ch}
+body[data-cleo-ds="v6"] main .sy-chapitre .sy-actions:not(#_):not(#_):not(#_){display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+@media (max-width:600px){
+  /* Au téléphone la photo grandit avec son texte ; la légende remplit la hauteur et se cale en bas (sinon le titre restait
+     en haut sur un grand vide bleu, vu sur la 31 sans chapeau). */
+  body[data-cleo-ds="v6"] main .sy-chapitre:not(#_):not(#_):not(#_){display:flex;flex-direction:column;height:auto;min-height:18rem}
+  body[data-cleo-ds="v6"] main .sy-chapitre-texte:not(#_):not(#_):not(#_){flex:1 1 auto;height:auto}
+  body[data-cleo-ds="v6"] main .sy-chapitre-hero:not(#_):not(#_):not(#_){min-height:32rem}
+}
+@media (prefers-reduced-motion:no-preference){
+  @supports (animation-timeline:view()){
+    /* La photo s'ouvre en entrant : léger zoom arrière, fini au tiers de l'écran. Sans lien au défilement ailleurs. */
+    body[data-cleo-ds="v6"] main .sy-chapitre:not(.sy-chapitre-hero) > img:first-child:not(#_):not(#_):not(#_){animation:syChapitre linear both;animation-timeline:view();animation-range:entry 0% cover 30%}
+    @keyframes syChapitre{from{scale:1.08}to{scale:1}}
+  }
+}
+
+/* La suite d'un titre en deux temps (span gris sur fond clair) passait sombre sur la photo : relevée sur la 33 par l'agent
+   enterprise-audience. Sur une ouverture photo, toute suite de titre est blanche à 72 %. */
+body[data-cleo-ds="v6"] main .sy-chapitre-texte :is(h1, h2) :is(span, em, i, .attenue, [class*="suite"], [class*="gris"]):not(#_):not(#_):not(#_){color:rgba(255,255,255,.72) !important}
+
+/* Une seule largeur de photo par page : les ouvertures de chapitre suivent le conteneur (1 200 px) ; la bande photo et
+   l'appel final étaient à 1 360 px, soit deux largeurs d'image sur la même page (relevé par l'agent photo accueil-data). */
+body[data-cleo-ds="v6"] main :is(.sy-final-photo, .sy-bande-photo) > figure:not(#_):not(#_):not(#_){width:var(--l-conteneur)}
+
+/* Noms de villes du globe de l'accueil : blancs, illisibles quand l'étiquette déborde du globe sur le fond chaud (contrôle
+   de contraste du 16/09/2026 : 1,08). Un halo bleu nuit les garde lisibles sur le globe comme à côté. */
+body[data-cleo-ds="v6"] main .gp-nom:not(#_):not(#_):not(#_){text-shadow:0 0 2px rgba(8,9,59,.9), 0 0 8px rgba(8,9,59,.75)}

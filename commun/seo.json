@@ -879,20 +879,20 @@
    "_mesure": "titre 46 caractères, description 52 caractères"
   },
   "45-service-etiquetage.html": {
-   "titre": "Étiquetage et publicité | Cleo Labs",
-   "description": "Votre étiquette et vos allégations relues, avec les corrections à faire.",
+   "titre": "Étiquetage et documentation produit | Cleo Labs",
+   "description": "Notices, étiquettes, textes d'emballage et allégations pour chaque marché, à partir de 1 200 € par produit.",
    "source": "redige",
    "url_source": null,
-   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
-   "_mesure": "titre 35 caractères, description 72 caractères"
+   "appui_contenu": "Fiche du 16/09/2026 sur la structure et le prix de ecocomply.ai/product-documentation-labelling (décision de Naomie, relevé le 16/09/2026).",
+   "_mesure": "titre 47 caractères, description 107 caractères"
   },
   "45-service-etiquetage-en.html": {
-   "titre": "Labelling and advertising | Cleo Labs",
-   "description": "Your label and your claims reviewed, with the corrections to make.",
+   "titre": "Labelling and product documentation | Cleo Labs",
+   "description": "Manuals, labels, packaging copy and claims for every market, from €1,200 per product.",
    "source": "redige",
    "url_source": null,
-   "appui_contenu": "Fiche générée le 15/09/2026 sur le gabarit de la fiche 38 ; description = phrase du haut de page, reprise du catalogue.",
-   "_mesure": "titre 37 caractères, description 66 caractères"
+   "appui_contenu": "Fiche du 16/09/2026 sur la structure et le prix de ecocomply.ai/product-documentation-labelling (décision de Naomie, relevé le 16/09/2026).",
+   "_mesure": "titre 47 caractères, description 85 caractères"
   },
   "46-service-emballage.html": {
    "titre": "Emballage | Cleo Labs",
@@ -1027,14 +1027,14 @@
    "description": "Un opérateur établi dans l'Union pour vendre vos produits en Europe : mandat écrit, adresse, dossier, autorités.",
    "source": "redige",
    "url_source": null,
-   "appui_contenu": "Fiche du 15/09/2026 sur la structure de ecocomply.ai/eu-authorised-representative (demande de Naomie) ; besoin cité en réunion le 14/09 (représentant UE, prix non arrêté) et au RDV ministère du 15/09."
+   "appui_contenu": "Fiche du 15/09/2026 sur la structure de ecocomply.ai/eu-authorised-representative (demande de Naomie) ; prix repris d'EcoComply le 16/09/2026 (décision de Naomie) : 1 500 € par an par catégorie de produit."
   },
   "51-service-mandataire-en.html": {
    "titre": "EU authorised representative | Cleo Labs",
    "description": "An operator established in the Union to sell your products in Europe: written mandate, address, file, authorities.",
    "source": "redige",
    "url_source": null,
-   "appui_contenu": "Fiche du 15/09/2026 sur la structure de ecocomply.ai/eu-authorised-representative (demande de Naomie) ; besoin cité en réunion le 14/09 (représentant UE, prix non arrêté) et au RDV ministère du 15/09."
+   "appui_contenu": "Service page of 15/09/2026 on the structure of ecocomply.ai/eu-authorised-representative ; price taken from EcoComply on 16/09/2026 (Naomie's decision): €1,500 per year per product category."
   },
   "52-data-mcp.html": {
    "titre": "Serveur MCP : la donnée réglementaire dans votre IA | Cleo Labs",
@@ -1067,6 +1067,38 @@
    "url_source": null,
    "appui_contenu": "16/09/2026, agent D : structure de moonlit.ai (connect, mcp, platform) ; faits dans scratchpad/agents/refonte/identite-data/faits.md.",
    "_mesure": "titre 48 caractères, description 99 caractères"
+  },
+  "54-service-evaluation.html": {
+   "titre": "Évaluation de conformité produit | Cleo Labs",
+   "description": "Les textes qui s'appliquent à votre produit, les écarts et le plan d'action, sur 9 domaines d'obligations, 399 € par produit.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "Fiche du 16/09/2026 sur la structure et le prix de ecocomply.ai/product-compliance-assessment (décision de Naomie, relevé le 16/09/2026).",
+   "_mesure": "titre 44 caractères, description 125 caractères"
+  },
+  "54-service-evaluation-en.html": {
+   "titre": "Product compliance assessment | Cleo Labs",
+   "description": "The legislation that applies to your product, the gaps and the action plan, across 9 obligation areas, €399 per product.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "Fiche du 16/09/2026 sur la structure et le prix de ecocomply.ai/product-compliance-assessment (décision de Naomie, relevé le 16/09/2026).",
+   "_mesure": "titre 41 caractères, description 120 caractères"
+  },
+  "55-service-marquage-ce.html": {
+   "titre": "Marquage CE | Cleo Labs",
+   "description": "Documentation technique et projet de déclaration UE de conformité pour le marquage CE, 3 800 € par produit, essais non compris.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "Fiche du 16/09/2026 sur la structure et le prix de ecocomply.ai/ce-marking (décision de Naomie, relevé le 16/09/2026).",
+   "_mesure": "titre 23 caractères, description 127 caractères"
+  },
+  "55-service-marquage-ce-en.html": {
+   "titre": "CE marking | Cleo Labs",
+   "description": "Technical documentation and draft EU declaration of conformity for CE marking, €3,800 per product, testing excluded.",
+   "source": "redige",
+   "url_source": null,
+   "appui_contenu": "Fiche du 16/09/2026 sur la structure et le prix de ecocomply.ai/ce-marking (décision de Naomie, relevé le 16/09/2026).",
+   "_mesure": "titre 22 caractères, description 116 caractères"
   }
  },
  "structure": {

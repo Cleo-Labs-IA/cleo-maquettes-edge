@@ -1,0 +1,13 @@
+/* ═══ FICHES SUR LE MODÈLE ECOCOMPLY, 16/09/2026 ═══ Naomie : « mets product assessment comme ça, avec ce prix », « mets CE
+   marking comme ça », « mets labelling comme ça avec ce pricing », « Service, mets tout ça ».
+   Les fiches 45, 54 et 55 reprennent le gabarit mu- de la fiche 51 : leur mise en page vit dans v6-zzzzzzzzzz-51-mandataire.css,
+   dont les sélecteurs couvrent maintenant ces pages. Cette feuille ne porte que ce qui touche le catalogue 37.
+   Catalogue 37 : onze prestations et deux familles font 13 rangs de grille (--rangs:13). Le panneau collant couvrait les
+   rangs 1 à 11 (v6-zzzzzzzzzz-service-cas.css) : il couvre maintenant toute la liste, au bureau seulement. */
+@media (min-width:981px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-cas > .sc-panneau:not(#_){grid-row:1 / 14}
+}
+
+/* Carte sombre « Enterprise · volume » du tableau des tarifs : l'étiquette bleue ne se lisait pas sur #08093B (vu à la capture
+   du 16/09/2026). Elle passe en blanc atténué, comme le texte secondaire sur profond. */
+body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-tarifs-volume .sc-etiquette:not(#_){color:var(--c-sur-profond-2, rgba(255,255,255,.66))}

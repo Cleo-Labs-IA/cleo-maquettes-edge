@@ -8,7 +8,8 @@
    avec les jetons. Aucune animation : les apparitions passent par data-apparait (commun/mouvement.js). */
 
 body[data-cleo-ds="v6"]:is([data-v6-page="10-ressources"],[data-v6-page="13-glossaire"],[data-v6-page="15-evenements"],[data-v6-page="17-modeles"],[data-v6-page="23-research"],[data-v6-page="23-research-en"],[data-v6-page="25-skills"],[data-v6-page="25-skills-en"],[data-v6-page="26-legal-data"],[data-v6-page="26-legal-data-en"],[data-v6-page="12-article"],[data-v6-page="14-terme"],[data-v6-page="16-evenement"],[data-v6-page="19-poste"],[data-v6-page="27-article-levee"],[data-v6-page="27-article-levee-en"],[data-v6-page="28-article-vivatech"],[data-v6-page="28-article-vivatech-en"],[data-v6-page="29-article-deel"],[data-v6-page="29-article-deel-en"],[data-v6-page="24-blog"],[data-v6-page="24-blog-en"],[data-v6-page="18-recrutement"],[data-v6-page="20-campagne"],[data-v6-page="21-inscription"],[data-v6-page="22-legal"],[data-v6-page="31-journal"],[data-v6-page="32-plan-action"],[data-v6-page="404"]){
-  & main > section:first-of-type:not(#_):not(#_){padding-top:var(--e-hero-haut) !important;padding-bottom:var(--e-titre-contenu) !important;background:var(--c-fond-2) !important}
+  /* 16/09/2026, photo partout (PHOTO.md) : le haut de page sur photo (sy-hero-photo) n'a ni la crème ni le padding du haut de page texte. */
+  & main > section:first-of-type:not(.sy-hero-photo):not(#_):not(#_){padding-top:var(--e-hero-haut) !important;padding-bottom:var(--e-titre-contenu) !important;background:var(--c-fond-2) !important}
   & main > section.ra-campagne-tete:not(#_):not(#_){padding-bottom:var(--e-section) !important}
   & main .ra-campagne-duo:not(#_):not(#_){display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px}
   & main .ra-campagne-lead:not(#_):not(#_){margin:24px 0 0 !important;max-width:460px}
@@ -158,7 +159,6 @@ body[data-cleo-ds="v6"]:is([data-v6-page="10-ressources"],[data-v6-page="13-glos
   & main .ra-ligne-evenement:not(#_):not(#_){margin:0 0 64px}
   & main .ra-date:not(#_):not(#_){flex:none;text-align:right}
   & main .vignette .jouer span:not(#_):not(#_){background:rgba(26,26,26,.55)}
-  & main .ra-tete-media:not(#_):not(#_){aspect-ratio:4/3}
   & main .flux-etape:not(#_):not(#_){padding:var(--p-carte);border:0;border-radius:var(--r-carte);background:var(--c-fond-2);box-shadow:none}
   & main .flux-rang:not(#_):not(#_){margin:0 0 16px;font-size:var(--t-legende);font-weight:500;color:var(--c-texte-3)}
   & main .couverture .flottant:not(#_):not(#_){box-shadow:var(--o-flottante) !important;border:0 !important;border-radius:var(--r-carte) !important}
