@@ -29,7 +29,7 @@
         <a href="#marches">Veille par marché</a>
         <a href="#matrice">Matrice</a>
         <a href="#autorites">Produit → autorités</a>
-        <a href="#explorateur">Explorateur SH6</a>
+        <a href="#explorateur">Codes SH6</a>
       </nav>
 
       <div style="min-width:0">
@@ -167,7 +167,7 @@
             {code:'DE',pct:61.5,lat:51.0,lng:9.0}
           ]
           function bande(pct){ return pct >= 30 ? 'pass' : (pct >= 5 ? 'risk' : 'block') }
-          function rayon(pct){ return Math.max(8, Math.min(26, 8 + (pct / 100) * 18)) }
+          function rayon(pct){ return Math.max(5, Math.min(15, 5 + (pct / 100) * 10)) }
           function texte(pct){ return String(pct).replace('.', ',') + ' %' }
           // La topologie Natural Earth ne découpe pas les anneaux qui traversent
           // l'antiméridien (Russie, Fidji dans countries-110m.json) : Leaflet
@@ -225,7 +225,7 @@
               var pays = corrigeAntimeridien(topojson.feature(topo, topo.objects.countries))
               hote.textContent = ''
               var carte = L.map(hote, {
-                center: [20, 10], zoom: 1.6, minZoom: 1, maxZoom: 6,
+                center: [20, 10], zoom: 1.6, minZoom: 0, maxZoom: 6, zoomSnap: 0.1,
                 worldCopyJump: false, maxBounds: [[-90, -180], [90, 180]],
                 scrollWheelZoom: false, doubleClickZoom: false, boxZoom: false, keyboard: false,
                 dragging: !tactile, tap: !tactile, touchZoom: !tactile,
@@ -485,17 +485,17 @@
           <div class="ligne"><div class="libelle">Bijouterie et accessoires</div><div class="valeur">2 982</div></div>
           <div class="ligne"><div class="libelle">Sport et plein air</div><div class="valeur">2 834</div></div>
           <div class="ligne"><div class="libelle">Animaux de compagnie</div><div class="valeur">1 854</div></div>
-          <div class="ligne"><div class="libelle">(Hors grande consommation)</div><div class="valeur">1 580</div></div>
+          <div class="ligne"><div class="libelle">Hors grande consommation</div><div class="valeur">1 580</div></div>
           <div class="ligne"><div class="libelle">Cuisine et contact alimentaire</div><div class="valeur">1 482</div></div>
           <div class="ligne"><div class="libelle">EPI et sécurité</div><div class="valeur">905</div></div>
           <div class="ligne"><div class="libelle">Tabac et produits pour adultes</div><div class="valeur">442</div></div>
           <div class="ligne"><div class="libelle">Jouets et puériculture</div><div class="valeur">388</div></div>
         </div>
         <!-- ── Explorateur produit SH6 ── -->
-        <h2 class="t-h1" id="explorateur" style="margin-bottom:8px">Explorateur produit SH6</h2>
+        <h2 class="t-h1" id="explorateur" style="margin-bottom:8px">Six codes SH6, en exemple</h2>
         <p class="t-body" style="margin:0 0 24px">Un code, ce qu'il déclenche : le nombre de
           réglementations, de marchés et d'autorités qui le suivent, et si un flux de veille le suit.</p>
-        <p class="t-caption atlas-note" style="margin:0 0 24px">Six codes, en exemple. La colonne « Veille » dit si un flux de veille suit le code.</p>
+        <p class="t-caption atlas-note" style="margin:0 0 24px">La colonne « Veille » dit si un flux de veille suit le code. Les autres codes s'interrogent par <a class="ra-lien" href="39-data.html">l'API Data</a>.</p>
         <p class="t-caption atlas-defile" style="margin:0 0 10px">Le tableau défile horizontalement.</p>
         <div class="table-defilante atlas-sh6" style="margin-bottom:16px">
           <table style="width:100%;min-width:860px;border-collapse:separate;border-spacing:0">

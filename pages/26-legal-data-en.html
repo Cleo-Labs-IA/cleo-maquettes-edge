@@ -29,7 +29,7 @@
         <a href="#marches">Monitoring by market</a>
         <a href="#matrice">Matrix</a>
         <a href="#autorites">Product → authorities</a>
-        <a href="#explorateur">HS6 explorer</a>
+        <a href="#explorateur">HS6 codes</a>
       </nav>
 
       <div style="min-width:0">
@@ -166,7 +166,7 @@
             {code:'DE',pct:61.5,lat:51.0,lng:9.0}
           ]
           function bande(pct){ return pct >= 30 ? 'pass' : (pct >= 5 ? 'risk' : 'block') }
-          function rayon(pct){ return Math.max(8, Math.min(26, 8 + (pct / 100) * 18)) }
+          function rayon(pct){ return Math.max(5, Math.min(15, 5 + (pct / 100) * 10)) }
           function texte(pct){ return String(pct) + '%' }
           // The Natural Earth topology does not split rings that cross the
           // antimeridian (Russia, Fiji in countries-110m.json): Leaflet then
@@ -224,7 +224,7 @@
               var pays = corrigeAntimeridien(topojson.feature(topo, topo.objects.countries))
               hote.textContent = ''
               var carte = L.map(hote, {
-                center: [20, 10], zoom: 1.6, minZoom: 1, maxZoom: 6,
+                center: [20, 10], zoom: 1.6, minZoom: 0, maxZoom: 6, zoomSnap: 0.1,
                 worldCopyJump: false, maxBounds: [[-90, -180], [90, 180]],
                 scrollWheelZoom: false, doubleClickZoom: false, boxZoom: false, keyboard: false,
                 dragging: !tactile, tap: !tactile, touchZoom: !tactile,
@@ -484,17 +484,17 @@
           <div class="ligne"><div class="libelle">Jewellery and accessories</div><div class="valeur">2,982</div></div>
           <div class="ligne"><div class="libelle">Sports and outdoor</div><div class="valeur">2,834</div></div>
           <div class="ligne"><div class="libelle">Pets and animals</div><div class="valeur">1,854</div></div>
-          <div class="ligne"><div class="libelle">(Non-retail)</div><div class="valeur">1,580</div></div>
+          <div class="ligne"><div class="libelle">Non-retail</div><div class="valeur">1,580</div></div>
           <div class="ligne"><div class="libelle">Kitchen and food contact</div><div class="valeur">1,482</div></div>
           <div class="ligne"><div class="libelle">PPE and safety</div><div class="valeur">905</div></div>
           <div class="ligne"><div class="libelle">Tobacco and adult products</div><div class="valeur">442</div></div>
           <div class="ligne"><div class="libelle">Toys and childcare</div><div class="valeur">388</div></div>
         </div>
         <!-- ── Explorateur produit SH6 ── -->
-        <h2 class="t-h1" id="explorateur" style="margin-bottom:8px">HS6 product explorer</h2>
+        <h2 class="t-h1" id="explorateur" style="margin-bottom:8px">Six HS6 codes, as examples</h2>
         <p class="t-body" style="margin:0 0 24px">One code, what it triggers: the number of
           regulations, markets and authorities that follow it, and whether a monitoring feed tracks it.</p>
-        <p class="t-caption atlas-note" style="margin:0 0 24px">Six codes, as examples. The “Monitoring” column says whether a feed tracks the code.</p>
+        <p class="t-caption atlas-note" style="margin:0 0 24px">The “Monitoring” column says whether a feed tracks the code. Other codes can be queried through <a class="ra-lien" href="39-data-en.html">the Data API</a>.</p>
         <p class="t-caption atlas-defile" style="margin:0 0 10px">The table scrolls horizontally.</p>
         <div class="table-defilante atlas-sh6" style="margin-bottom:16px">
           <table style="width:100%;min-width:860px;border-collapse:separate;border-spacing:0">

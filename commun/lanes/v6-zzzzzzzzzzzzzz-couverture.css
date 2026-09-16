@@ -1,0 +1,25 @@
+/* ═══ PAGE COUVERTURE (26) : CE QUI « MARCHE PAS BIEN » ═══ 16/09/2026, Naomie : « couverture la page marche pas bien ».
+   Mesuré au clic et aux captures, bureau et téléphone (scratchpad/agents/refonte/integration/couverture/) :
+   - « Activer la carte » s'affichait au bureau alors qu'il n'est branché qu'au téléphone (le script ne l'écoute que sous
+     640 px) : un bouton qui ne fait rien ;
+   - « Le tableau défile horizontalement » s'affichait au bureau, où la matrice et les codes tiennent en largeur ;
+   - les 17 volumes de « Produit → autorités » en 44 px écrasaient la page ; libellé et chiffre mal alignés ;
+   - au téléphone, la colonne « Type de produit » de la matrice sortait de l'écran au défilement.
+   Le menu latéral qui ne suivait pas la lecture et les titres cachés sous la barre au clic sont réglés dans
+   commun/mouvement.js et dans la feuille système (scroll-margin). Chargée après la feuille système. */
+body[data-cleo-ds="v6"]:is([data-v6-page="26-legal-data"],[data-v6-page="26-legal-data-en"]) main .atlas-carte-activer:not(#_):not(#_):not(#_){display:none !important}
+@media (max-width:640px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="26-legal-data"],[data-v6-page="26-legal-data-en"]) main .atlas-carte-activer:not(#_):not(#_):not(#_){display:inline-flex !important}
+}
+body[data-cleo-ds="v6"]:is([data-v6-page="26-legal-data"],[data-v6-page="26-legal-data-en"]) main .atlas-defile:not(#_):not(#_):not(#_){display:none}
+@media (max-width:1023px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="26-legal-data"],[data-v6-page="26-legal-data-en"]) main .atlas-defile:not(#_):not(#_):not(#_){display:block}
+}
+body[data-cleo-ds="v6"]:is([data-v6-page="26-legal-data"],[data-v6-page="26-legal-data-en"]) main .mesures .ligne:not(#_):not(#_):not(#_){align-items:center;padding:14px 0}
+body[data-cleo-ds="v6"]:is([data-v6-page="26-legal-data"],[data-v6-page="26-legal-data-en"]) main .mesures .valeur:not(#_):not(#_):not(#_){font-size:var(--t-h3) !important;letter-spacing:-.01em !important;font-variant-numeric:tabular-nums}
+@media (max-width:600px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="26-legal-data"],[data-v6-page="26-legal-data-en"]) main .atlas-matrice :is(th, td):first-child:not(#_):not(#_):not(#_){position:sticky;left:0;z-index:1;min-width:132px;max-width:150px;white-space:normal;background:var(--c-fond);box-shadow:-48px 0 0 0 var(--c-fond), 1px 0 0 0 var(--c-filet)}
+  /* La colonne collée laissait voir les chiffres défiler dans la marge intérieure du conteneur, à sa gauche : l'ombre pleine la masque. */
+  body[data-cleo-ds="v6"]:is([data-v6-page="26-legal-data"],[data-v6-page="26-legal-data-en"]) main .mesures .ligne:not(#_):not(#_):not(#_){grid-template-columns:minmax(0,1fr) auto;gap:16px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="26-legal-data"],[data-v6-page="26-legal-data-en"]) main .mesures .valeur:not(#_):not(#_):not(#_){text-align:right}
+}

@@ -365,3 +365,7 @@ body[data-cleo-ds="v6"] main .sy-carte-photo:focus-visible:not(#_):not(#_):not(#
 @media (prefers-reduced-motion:reduce){
   body[data-cleo-ds="v6"] main .sy-carte-photo > img:first-child:not(#_):not(#_):not(#_){transition:none}
 }
+
+/* 16/09/2026, intégration : un titre atteint par une ancre (menu latéral, « Explorer la couverture ») s'arrêtait sous la
+   barre fixe de 64 px (mesuré au clic sur la page 26 : haut du titre à 0 px). Marge d'ancrage de 96 px partout. */
+body[data-cleo-ds="v6"] main [id]:not(#_){scroll-margin-top:96px}

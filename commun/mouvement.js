@@ -206,3 +206,43 @@
     if (r && !r.checked) r.checked = true;
   }, { passive: true });
 })();
+
+/* ────────────────────────────────────────────────────────────────
+   MENU LATÉRAL DES RESSOURCES (.res-nav, .sommaire), 16/09/2026.
+   Naomie : « couverture la page marche pas bien ». Mesuré au clic sur la
+   page 26 : le lien actif restait « Le périmètre » quel que soit le
+   chapitre lu. Ici le lien actif suit le chapitre dont le titre a passé la
+   barre ; au clic, il bascule tout de suite. IntersectionObserver
+   seulement, comme le reste du fichier : aucune écoute du défilement.
+   ──────────────────────────────────────────────────────────────── */
+(function () {
+  var liens = [].slice.call(document.querySelectorAll('.res-nav a[href^="#"], .sommaire a[href^="#"]'));
+  if (!liens.length) return;
+  var paires = liens.map(function (a) { return { a: a, cible: document.getElementById(a.getAttribute('href').slice(1)) }; })
+    .filter(function (p) { return p.cible; });
+  if (!paires.length) return;
+  function activer(p) {
+    paires.forEach(function (q) {
+      var on = q === p;
+      q.a.classList.toggle('actif', on);
+      if (on) q.a.setAttribute('aria-current', 'true'); else q.a.removeAttribute('aria-current');
+    });
+  }
+  // Après un clic, le lien choisi reste actif le temps du défilement vers son titre : sur un article aux chapitres
+  // courts, le titre suivant entre aussi dans le haut de l'écran et aurait pris la main (mesuré sur 12-article).
+  var verrou = 0;
+  function calculer() {
+    if (Date.now() < verrou) return;
+    // Un chapitre devient actif quand son titre entre dans les 40 % hauts de l'écran (lu, pas seulement atteint).
+    var ligne = Math.round(window.innerHeight * 0.4), courant = paires[0];
+    paires.forEach(function (p) { if (p.cible.getBoundingClientRect().top - ligne <= 0) courant = p; });
+    activer(courant);
+  }
+  paires.forEach(function (p) { p.a.addEventListener('click', function () { verrou = Date.now() + 1200; activer(p); }); });
+  if (!('IntersectionObserver' in window)) return;
+  var seuils = []; for (var i = 0; i <= 20; i++) seuils.push(i / 20);
+  var obs = new IntersectionObserver(calculer, { rootMargin: '0px 0px -60% 0px', threshold: seuils });
+  // Les titres, et leur bloc parent : un bloc haut change de ratio tous les 5 %, ce qui recalcule entre deux titres.
+  paires.forEach(function (p) { obs.observe(p.cible); if (p.cible.parentElement) obs.observe(p.cible.parentElement); });
+  calculer();
+})();
