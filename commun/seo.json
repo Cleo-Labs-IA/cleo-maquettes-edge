@@ -485,7 +485,7 @@
   },
   "02-entreprise.html": {
    "titre": "À Propos de Cleo Labs : Soutenue par Kima Ventures | Cleo Labs",
-   "description": "Découvrez l'équipe derrière MARIA, la première infrastructure IA de conformité pour les retailers en Europe. Fondée par Anaëlle Guez et Naomie Halioua. Soutenue par Kima Ventures, La Financière Saint-James et Larry Berger (Amplify). 1,5M€ levés.",
+   "description": "L'histoire de Cleo, l'espace de travail IA des personnes qui appliquent la réglementation aux produits. Fondée en 2023 par Anaëlle Guez et Naomie Halioua.",
    "source": "site",
    "url_source": "https://www.cleolabs.co/fr/company",
    "appariement": "https://www.cleolabs.co/fr/company, la page entreprise.",
@@ -503,7 +503,7 @@
   },
   "04-secteur.html": {
    "titre": "Conformité produit textile et habillement | Cleo Labs",
-   "description": "Fibres, substances, étiquetage, allégations : les règles du textile changent vite et diffèrent dans chaque région. Suivez-les marché par marché.",
+   "description": "Fibres, substances, étiquette, allégations : ce qui s'applique à chaque référence textile, marché par marché, et ce qui manque encore.",
    "source": "redige",
    "url_source": null,
    "appariement": "pas d'equivalent : les 10 slugs de /industries ne comportent pas le textile (retail, cosmetics, electronics, food-beverage, pet-care, sporting-goods, medical-devices, drugs, insurance, energy).",
@@ -520,7 +520,7 @@
   },
   "06-cas-client.html": {
    "titre": "Cas client Decathlon, conformité multi-marchés | Cleo Labs",
-   "description": "Un portefeuille large, des marchés qui s'ouvrent, des textes qui bougent : ce que change chez Decathlon une base d'obligations tenue à jour.",
+   "description": "Un catalogue large, des marchés qui s'ouvrent, des textes qui vivent : chez Decathlon, une donnée réglementaire structurée jusque dans le PLM.",
    "source": "redige",
    "url_source": null,
    "appariement": "pas d'equivalent : les trois cas publies sur /fr/customers sont anonymises (« Un grand retailer mode européen »), aucun ne porte le nom Decathlon.",
@@ -550,29 +550,29 @@
   },
   "37-compliance-service.html": {
    "titre": "Service, du jet à la signature | Cleo Labs",
-   "description": "Une déclaration de conformité, une question sur une entrée REACH, un marché à ouvrir. Cleo rédige le premier jet, un expert le relit avant la remise.",
+   "description": "Évaluation, étiquetage, marquage CE et mandataire dans l'UE : Cleo prépare le dossier, un expert conformité le relit, avec un prix affiché avant la commande.",
    "source": "redige",
    "url_source": null,
    "appariement": "aucune route reelle : cette page n'existait nulle part sur cleolabs.co, le contenu ne vivait qu'en ancre (id=compliance-service) sur /fr. Creee le 03/09/2026 pour remplacer cette ancre par une vraie page.",
    "appui_contenu": "pages/01-accueil.html, section id=compliance-service : surtitre « Compliance service », h2 « Du premier jet à la signature. », les trois etapes du .flux et la carte experts-duo (Darcial Mondjo, Thezi Mabuza), reprises mot pour mot. Le h1 et le chapeau adaptent ce meme contenu, pas de fait nouveau.",
-   "_mesure": "description 149 caracteres",
+   "_mesure": "description 157 caracteres (passe wording W1, 16/09/2026 : les quatre prestations)",
    "_gabarit_le": "2026-09-03",
    "_signature": "15/09/2026 : « un expert relit et signe » retiré. La déclaration UE de conformité est signée par le fabricant ou son mandataire ; l expert Cleo relit."
   },
   "37-compliance-service-en.html": {
    "titre": "Service, draft to sign-off | Cleo Labs",
-   "description": "A declaration of conformity, a question on a REACH entry, a market to open. Cleo drafts the first version, an expert reviews it before delivery.",
+   "description": "Assessment, labelling, CE marking and EU authorised representative: Cleo prepares the file, a compliance expert reviews it, with a price shown before you order.",
    "source": "redige",
    "url_source": null,
    "appariement": "no real route : this page existed nowhere on cleolabs.co, the content only lived as an anchor (id=compliance-service) on /en. Created 2026-09-03 to replace that anchor with a real page.",
    "appui_contenu": "pages/01-accueil-en.html, section id=compliance-service : surtitre « Compliance service », h2 « From draft to signature. », the three .flux steps and the experts-duo card (Darcial Mondjo, Thezi Mabuza), carried over word for word. The h1 and chapeau adapt this same content, no new claim.",
-   "_mesure": "description 144 caracteres",
+   "_mesure": "description 160 caracteres (passe wording W1, 16/09/2026 : les quatre prestations)",
    "_gabarit_le": "2026-09-03",
    "_signature": "15/09/2026 : « un expert relit et signe » retiré. La déclaration UE de conformité est signée par le fabricant ou son mandataire ; l expert Cleo relit."
   },
   "09-texte.html": {
    "titre": "PPWR, conformité des emballages article par article | Cleo Labs",
-   "description": "Le règlement sur les emballages s'applique le 12 août 2026. Cleo en a encodé les obligations testables et les confronte à vos emballages, un par un.",
+   "description": "Le règlement sur les emballages s'applique à partir du 12 août 2026 : ce qu'il demande à chacun de vos emballages, article par article, et ce qui manque.",
    "source": "redige",
    "url_source": null,
    "appariement": "pas d'equivalent : /fr/resources ne porte que quatre guides de texte (ai-act, csrd, dora, product-compliance-retail), aucun sur le PPWR.",
@@ -643,7 +643,7 @@
   },
   "17-modeles.html": {
    "titre": "Modèles de documents de conformité produit | Cleo Labs",
-   "description": "Des documents prêts à remplir, dérivés des textes eux-mêmes. Chacun porte l'article dont il vient, de la déclaration UE à l'étiquette textile.",
+   "description": "Quelles pièces faut-il, et sont-elles complètes ? Des modèles de documents de conformité, chacun avec son texte, de la déclaration UE à l'étiquette textile.",
    "source": "redige",
    "url_source": null,
    "appariement": "pas d'equivalent : /fr/resources/data publie des statistiques, pas des modeles a remplir.",
@@ -696,47 +696,47 @@
   },
   "23-research.html": {
    "titre": "Recherche : MARIA et l'intelligence réglementaire | Cleo Labs",
-   "description": "Les travaux de recherche de Cleo Labs : architecture multi-agents, chaîne en cinq étapes, livre blanc. La science derrière l'intelligence réglementaire.",
+   "description": "Quelle est la fiabilité de la donnée ? L'architecture multi-agents de Cleo, sa chaîne en cinq étapes et l'article de recherche publié en février 2026.",
    "source": "redige"
   },
   "24-blog.html": {
    "titre": "Actualités et analyses de conformité produit | Cleo Labs",
-   "description": "Mises à jour réglementaires, analyses et nouveautés produit de Cleo Labs. Une publication par jour sur la conformité produit à l'international.",
+   "description": "Les textes vivent et se superposent : l'actualité réglementaire des produits, et ce qu'elle change pour les équipes qui les vendent.",
    "source": "redige"
   },
   "25-skills.html": {
    "titre": "Skills : les compétences de conformité produit | Cleo Labs",
-   "description": "Les skills de Cleo Labs : des compétences de conformité produit prêtes à l'emploi, encodées et testables sur vos références.",
+   "description": "45 skills de conformité produit en open source, pour que votre agent IA cite la bonne réglementation. Compatibles avec Claude Code, Cursor et tout client MCP.",
    "source": "redige"
   },
   "26-legal-data.html": {
    "titre": "Legal Data : le corpus réglementaire produit | Cleo Labs",
-   "description": "Le corpus de Cleo Labs : réglementations indexées, autorités suivies, codes douaniers et marchés couverts, rattachés à leur source officielle.",
+   "description": "Cleo couvre-t-elle votre produit ? Réglementations cartographiées, autorités suivies, codes SH et marchés couverts, chacun rattaché à sa source officielle.",
    "source": "redige"
   },
   "23-research-en.html": {
    "titre": "Research: MARIA and regulatory intelligence | Cleo Labs",
-   "description": "Cleo Labs research: multi-agent architecture, a five-step chain, the white paper. The science behind regulatory intelligence.",
+   "description": "How reliable is the data? Cleo's multi-agent architecture, its five-stage chain and the research paper published in February 2026.",
    "source": "redige"
   },
   "24-blog-en.html": {
    "titre": "Product compliance news and analysis | Cleo Labs",
-   "description": "Regulatory updates, analysis and product news from Cleo Labs. One publication a day on international product compliance.",
+   "description": "Regulations keep moving and overlapping: product regulatory news, and what it changes for the teams that sell those products.",
    "source": "redige"
   },
   "25-skills-en.html": {
    "titre": "Skills: ready-made product compliance capabilities | Cleo Labs",
-   "description": "Cleo Labs skills: product compliance capabilities that are encoded, testable against your references and ready to use.",
+   "description": "45 open-source product compliance skills, so your AI agent cites the right regulation. Works with Claude Code, Cursor and any MCP client.",
    "source": "redige"
   },
   "26-legal-data-en.html": {
    "titre": "Legal Data: the product regulatory corpus | Cleo Labs",
-   "description": "The Cleo Labs corpus: indexed regulations, tracked authorities, customs codes and covered markets, each tied to its official source.",
+   "description": "Does Cleo cover your product? Mapped regulations, tracked authorities, HS codes and covered markets, each tied to its official source.",
    "source": "redige"
   },
   "30-securite.html": {
    "titre": "Sécurité des données | Cleo Labs",
-   "description": "Six garanties écrites et vérifiables, les pratiques de sécurité et le socle technique de Cleo Labs, posés dès la conception.",
+   "description": "Où sont vos données : chez Scaleway, en région Paris, sans entraîner aucun modèle. Et si l'IA se trompe : chaque réponse cite son texte officiel.",
    "source": "redige",
    "url_source": null,
    "_appui": "pages/30-securite.html, h1 et h2",
@@ -753,7 +753,7 @@
   },
   "32-plan-action.html": {
    "titre": "Plan d'action MARIA par marché | Cleo Labs",
-   "description": "La méthode qui rapproche vos produits des textes qui les touchent, note le risque avec sa source et rend un plan d'action daté.",
+   "description": "Savoir ce qui s'applique à vos produits, marché par marché, voir ce qui manque et recevoir un plan d'action daté, chaque obligation avec sa source.",
    "source": "redige",
    "url_source": null,
    "_appui": "pages/32-plan-action.html, h1 et chapeau",
@@ -762,7 +762,7 @@
   },
   "33-fabricants.html": {
    "titre": "Conformité produit pour les fabricants | Cleo Labs",
-   "description": "Chaque obligation produit, du marquage CE aux seuils REACH. L'écart est signalé avant le lancement, et dès qu'un texte bouge.",
+   "description": "Avant les essais, savoir quoi tester. À partir de vos fiches techniques, Cleo relève chaque obligation et vous signale chaque semaine ce qui change.",
    "source": "redige",
    "url_source": null,
    "_appui": "pages/33-fabricants.html, chapeau",
@@ -771,7 +771,7 @@
   },
   "34-importateurs.html": {
    "titre": "Conformité produit pour les importateurs | Cleo Labs",
-   "description": "Code HS, droits, certifications, double usage : une réponse vérifiée par produit, avant l'expédition, du classement au dédouanement.",
+   "description": "Un produit fabriqué ailleurs : pour chaque pays de destination, les règles, le code SH, les droits, les certifications et le double usage, avec leur source.",
    "source": "redige",
    "url_source": null,
    "_appui": "pages/34-importateurs.html, chapeau",
@@ -780,7 +780,7 @@
   },
   "35-marketplaces.html": {
    "titre": "Conformité produit pour les marketplaces | Cleo Labs",
-   "description": "Ce qui est vendable et où, les tendances avant la loi, les sanctions tombées chez les concurrents. Sur des milliers d'annonces, marché par marché.",
+   "description": "Le catalogue est celui de vos marques : ce que chaque annonce doit afficher, produit par produit, et ce qui manque, référence par référence.",
    "source": "redige",
    "url_source": null,
    "_appui": "pages/35-marketplaces.html, chapeau",
@@ -789,7 +789,7 @@
   },
   "36-solutions.html": {
    "titre": "Conformité produit sur 106 pays | Cleo Labs",
-   "description": "Donnez votre nom de domaine. Chaque produit est rapproché de chaque réglementation qui le touche : par marché, par référence, par échéance.",
+   "description": "Chaque produit rapproché de chaque réglementation qui le concerne, marché par marché, avec son état et son échéance. 106 pays suivis.",
    "source": "redige",
    "url_source": null,
    "_appui": "pages/36-solutions.html, chapeau",
@@ -896,7 +896,7 @@
   },
   "40-enterprise.html": {
    "titre": "Enterprise | Cleo Labs",
-   "description": "Notre expertise tech et nos experts. Nos ingénieurs branchent la base de règles de Cleo à vos systèmes.",
+   "description": "Des milliers de références, une même méthode : d'abord ce qui s'applique, ensuite les preuves. Nos ingénieurs branchent la base de règles de Cleo à vos systèmes.",
    "source": "redige",
    "url_source": null,
    "appui_contenu": "15/09/2026 : description = phrase sous le titre de la page, reprise telle quelle (titre de la page : « Enterprise. À l'échelle de votre entreprise. »).",
@@ -904,7 +904,7 @@
   },
   "40-enterprise-en.html": {
    "titre": "Enterprise | Cleo Labs",
-   "description": "Our tech expertise and our experts. Our engineers connect Cleo's rules base to your systems.",
+   "description": "Thousands of SKUs, one method: first what applies, then the proof. Our engineers connect Cleo's rule base to your systems.",
    "source": "redige",
    "url_source": null,
    "appui_contenu": "15/09/2026 : description = phrase sous le titre de la page, reprise telle quelle (titre de la page : « Enterprise. At the scale of your company. »).",
@@ -958,19 +958,19 @@
   },
   "54-service-evaluation.html": {
    "titre": "Évaluation de conformité produit | Cleo Labs",
-   "description": "Les textes qui s'appliquent à votre produit, les écarts et le plan d'action, sur 9 domaines d'obligations, 399 € par produit.",
+   "description": "Les textes qui s'appliquent à votre produit, ce qui manque encore et quoi faire, sur 9 domaines d'obligations, 399 € par produit.",
    "source": "redige",
    "url_source": null,
    "appui_contenu": "Fiche du 16/09/2026 sur la structure et le prix de ecocomply.ai/product-compliance-assessment (décision de Naomie, relevé le 16/09/2026).",
-   "_mesure": "titre 44 caractères, description 125 caractères"
+   "_mesure": "titre 44 caractères, description 129 caractères"
   },
   "54-service-evaluation-en.html": {
    "titre": "Product compliance assessment | Cleo Labs",
-   "description": "The legislation that applies to your product, the gaps and the action plan, across 9 obligation areas, €399 per product.",
+   "description": "The legislation that applies to your product, what is still missing and what to do, across 9 obligation areas, €399 per product.",
    "source": "redige",
    "url_source": null,
    "appui_contenu": "Fiche du 16/09/2026 sur la structure et le prix de ecocomply.ai/product-compliance-assessment (décision de Naomie, relevé le 16/09/2026).",
-   "_mesure": "titre 41 caractères, description 120 caractères"
+   "_mesure": "titre 41 caractères, description 128 caractères"
   },
   "55-service-marquage-ce.html": {
    "titre": "Marquage CE | Cleo Labs",
