@@ -17,7 +17,7 @@
       <figcaption class="sy-chapitre-texte">
         <p class="sy-etiquette">Data</p>
         <h1>Product regulatory data, via API and MCP server.</h1>
-        <p class="sy-chapitre-lead">An API brings it into your product. An MCP server brings it into Claude, Cursor and any MCP-compatible client.</p>
+        <p class="sy-chapitre-lead">An API brings it into your product. An MCP server brings it into Claude, Cursor and any MCP-compatible client. Every result shows where the rule comes from and which article it points to.</p>
         <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="21-inscription.html">Request access</a><a class="sy-bouton-blanc" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team</a></div>
       </figcaption>
     </figure>
@@ -32,7 +32,7 @@
       <h2 class="dt-besoin-titre">Or tell us what you want to do with regulatory data</h2>
       <p class="dt-besoin-texte">Describe your use case. An expert from the team replies with the most direct path: the API or the MCP server.</p>
       <label class="dt-cache" for="f-data-besoin-en">Your use case</label>
-      <textarea id="f-data-besoin-en" name="besoin" rows="4" placeholder="I am building a tool for our quality teams: I need the toy labelling rules for France, Germany and Italy, with the article behind each obligation."></textarea>
+      <textarea id="f-data-besoin-en" name="besoin" rows="4" placeholder="I am building a tool for our quality teams: I need the information to display on our toys in France, Germany and Italy, with the article behind each item."></textarea>
       <div class="dt-besoin-ligne">
         <label class="dt-cache" for="f-data-email-en">Work email</label>
         <input id="f-data-email-en" name="email" type="email" autocomplete="email" placeholder="camille@brand.com" required>
@@ -133,7 +133,7 @@ Authorization: Bearer ld_live_…
   <div class="conteneur dt-duo dt-trace sy-sur-profond">
     <div class="dt-trace-texte">
       <h2>Every rule traces back to its article</h2>
-      <p class="sy-lead">Every text is linked to the texts it amends, transposes or replaces, and every result points to its official source.</p>
+      <p class="sy-lead">Texts keep changing. Every text is linked to the texts it amends, transposes or replaces, and every result points to its official source.</p>
       <ul class="dt-liste"><li>The version in force on a date</li><li>Texts amended, transposed or replaced</li><li>Changes from the last 90 days</li></ul>
     </div>
     <div class="dt-panneau" aria-hidden="true" data-apparait>
@@ -190,6 +190,35 @@ Authorization: Bearer ld_live_…
   </div>
 </section>
 
+<!-- ═══ QUESTIONS FRÉQUENTES ═══ 16/09/2026, wording tiré des calls des deux derniers mois (refonte/wording/sources/calls/).
+     Même source que la page FR : fiabilité #76 #78, sources #77 #78, textes #15 #16 #74 #82, prix #72, IA qui se trompe #27 #54. À TRANCHER : version consolidée, fréquence de mise à jour, accès d'essai, hébergement de la Data API. -->
+<section class="section dt-questions-section" id="questions">
+  <div class="conteneur">
+    <div class="sy-entete"><p class="sy-surtitre">Data</p><h2>Frequently asked questions</h2></div>
+    <div class="faq dt-faq">
+      <details open>
+        <summary>How reliable is the data?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Cleo's architecture is described in a <a href="23-research-en.html">research paper</a> published in February 2026: 93 to 97% precision on binding texts, evaluated on 7,676 regulations.</div>
+      </details>
+      <details>
+        <summary>What if the AI gets it wrong?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Every result cites the official text and the article behind the rule, so your team can check the answer at the source.</div>
+      </details>
+      <details>
+        <summary>Where does the data come from?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">From official sources: 3,700 sources and 19,000 regulatory authorities tracked, across 106 countries. Every result points to the official address of the text.</div>
+      </details>
+      <details>
+        <summary>Texts keep changing: how do I keep track?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Every text is linked to the texts it amends, transposes or replaces. You read the version in force on a given date, and the changes of the last 90 days.</div>
+      </details>
+      <details>
+        <summary>How much does access cost?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">The price depends on the countries and product families your software needs. <a href="#dites-nous">Describe your use case</a> and the team will reply.</div>
+      </details>
+    </div>
+  </div>
+</section>
 <!-- ═══ APPEL FINAL SUR PHOTO ═══ composant d'identité 2.4 (IDENTITE.md), stylé par la feuille système. -->
 <section class="section sy-final-photo" id="contact">
   <figure>

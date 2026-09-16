@@ -17,7 +17,7 @@
       <figcaption class="sy-chapitre-texte">
         <p class="sy-etiquette">Data</p>
         <h1>La donnée réglementaire produit, par API et serveur MCP.</h1>
-        <p class="sy-chapitre-lead">Une API l'intègre à votre produit. Un serveur MCP l'apporte dans Claude, Cursor et tout client compatible MCP.</p>
+        <p class="sy-chapitre-lead">Une API l'intègre à votre produit. Un serveur MCP l'apporte dans Claude, Cursor et tout client compatible MCP. Chaque résultat dit d'où vient la règle et à quel article elle renvoie.</p>
         <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="21-inscription.html">Demander un accès</a><a class="sy-bouton-blanc" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contacter l'équipe</a></div>
       </figcaption>
     </figure>
@@ -32,7 +32,7 @@
       <h2 class="dt-besoin-titre">Ou dites-nous ce que vous voulez faire de la donnée réglementaire</h2>
       <p class="dt-besoin-texte">Décrivez votre usage. Un expert de l'équipe vous répond avec le chemin le plus direct : l'API ou le serveur MCP.</p>
       <label class="dt-cache" for="f-data-besoin">Votre usage</label>
-      <textarea id="f-data-besoin" name="besoin" rows="4" placeholder="Je construis un outil pour nos équipes qualité : il me faut les règles d'étiquetage des jouets en France, en Allemagne et en Italie, avec l'article de chaque obligation."></textarea>
+      <textarea id="f-data-besoin" name="besoin" rows="4" placeholder="Je construis un outil pour nos équipes qualité : il me faut les mentions à afficher sur nos jouets en France, en Allemagne et en Italie, avec l'article qui impose chacune."></textarea>
       <div class="dt-besoin-ligne">
         <label class="dt-cache" for="f-data-email">Email professionnel</label>
         <input id="f-data-email" name="email" type="email" autocomplete="email" placeholder="camille@marque.com" required>
@@ -133,7 +133,7 @@ Authorization: Bearer ld_live_…
   <div class="conteneur dt-duo dt-trace sy-sur-profond">
     <div class="dt-trace-texte">
       <h2>Chaque règle remonte à son article</h2>
-      <p class="sy-lead">Chaque texte est relié à ceux qu'il modifie, transpose ou remplace, et chaque résultat renvoie à sa source officielle.</p>
+      <p class="sy-lead">Les textes vivent. Chaque texte est relié à ceux qu'il modifie, transpose ou remplace, et chaque résultat renvoie à sa source officielle.</p>
       <ul class="dt-liste"><li>La version en vigueur à une date</li><li>Les textes modifiés, transposés ou remplacés</li><li>Les changements des 90 derniers jours</li></ul>
     </div>
     <div class="dt-panneau" aria-hidden="true" data-apparait>
@@ -190,6 +190,35 @@ Authorization: Bearer ld_live_…
   </div>
 </section>
 
+<!-- ═══ QUESTIONS FRÉQUENTES ═══ 16/09/2026, wording tiré des calls des deux derniers mois (refonte/wording/sources/calls/).
+     Fiabilité #76 #78 (seul chiffre publié : article de recherche, déjà sur 40 et 43) ; sources #77 #78 ; textes qui changent #15 #16 #74 #82 ; prix #72 (aucun tarif) ; « Et si l'IA se trompe ? » #27 #54, réponse = le hero de la page (chaque résultat renvoie à sa source et à son article). À TRANCHER : « version consolidée » (#16) et fréquence de mise à jour (#74) non affirmées, aucune page ne le dit ; accès d'essai (#73 #75) non promis ; « Où sont stockées nos données ? » (#36) sans réponse ici, l'hébergement de la Data API n'est pas affirmé (identite-data/faits.md), la page 30 ne parle que des données clientes de la plateforme. -->
+<section class="section dt-questions-section" id="questions">
+  <div class="conteneur">
+    <div class="sy-entete"><p class="sy-surtitre">Data</p><h2>Questions fréquentes</h2></div>
+    <div class="faq dt-faq">
+      <details open>
+        <summary>Quelle est la fiabilité de la donnée ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">L'architecture de Cleo est décrite dans un <a href="23-research.html">article de recherche</a> publié en février 2026 : 93 à 97 % de précision sur les textes contraignants, évaluée sur 7 676 réglementations.</div>
+      </details>
+      <details>
+        <summary>Et si l'IA se trompe ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Chaque résultat cite le texte officiel et l'article qui fonde la règle : votre équipe vérifie la réponse à la source.</div>
+      </details>
+      <details>
+        <summary>D'où vient la donnée ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Des sources officielles : 3 700 sources et 19 000 autorités réglementaires suivies, dans 106 pays. Chaque résultat renvoie à l'adresse officielle du texte.</div>
+      </details>
+      <details>
+        <summary>Les textes changent : comment le suivre ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Chaque texte est relié à ceux qu'il modifie, transpose ou remplace. Vous lisez la version en vigueur à une date, et les changements des 90 derniers jours.</div>
+      </details>
+      <details>
+        <summary>Combien coûte l'accès ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Le prix dépend des pays et des familles de produits dont votre logiciel a besoin. <a href="#dites-nous">Décrivez votre usage</a>, l'équipe vous répond.</div>
+      </details>
+    </div>
+  </div>
+</section>
 <!-- ═══ APPEL FINAL SUR PHOTO ═══ composant d'identité 2.4 (IDENTITE.md), stylé par la feuille système. -->
 <section class="section sy-final-photo" id="contact">
   <figure>
