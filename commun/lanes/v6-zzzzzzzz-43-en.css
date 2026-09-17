@@ -85,7 +85,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 }
 @media (prefers-reduced-motion:no-preference) and (min-width:1024px){
   @supports (animation-timeline:view()){
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-scene{height:260vh;view-timeline-name:--ac-recit}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-scene{height:190vh;view-timeline-name:--ac-recit}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-collant{position:sticky;top:calc((100vh - min(640px, calc(100vh - 200px))) / 2 + 32px)}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-image img{animation:acZoom linear both;animation-timeline:--ac-recit;animation-range:contain 0% contain 100%}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-etapes li{animation:acEtape linear both;animation-timeline:--ac-recit}
@@ -155,18 +155,29 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-grille > div:last-child{border-bottom:0}
 }
 
-/* ── Prestations, en lignes ── */
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-familles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px clamp(40px, 6vw, 96px);align-items:start}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-lignes{list-style:none;margin:0;padding:0;border-top:1px solid var(--c-filet)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-lignes a{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:16px;row-gap:4px;align-items:center;padding:18px 0;border-bottom:1px solid var(--c-filet);color:var(--c-texte);text-decoration:none}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-lignes b{grid-column:1;font-size:18px;line-height:1.3;font-weight:500;transition:color 200ms var(--m-courbe)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-lignes span{grid-column:1;font-size:var(--t-corps);line-height:1.5;color:var(--c-texte-2)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-lignes svg{grid-column:2;grid-row:1 / span 2;color:var(--c-texte-3);transition:color 200ms var(--m-courbe)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-lignes a:hover b,
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-lignes a:hover svg{color:var(--c-accent)}
-@media (max-width:800px){
-  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-familles{grid-template-columns:minmax(0,1fr)}
+/* ── Prestations en cartes (17/09/2026, « le message a du mal à passer ») ── quatre cartes .sy-carte, chacune un lien :
+   la question du client, le nom, le prix en grand. Remplace les deux listes .ac-familles / .ac-lignes, retirées de la page. */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-offres{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:40px}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-offre{display:flex;flex-direction:column;min-height:100%;color:var(--c-texte);text-decoration:none;transition:box-shadow 200ms var(--m-courbe),transform 200ms var(--m-courbe)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-offre:hover{transform:translateY(-2px);box-shadow:0 1px 1.5px rgba(26,26,26,.10)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-offre-famille{font-size:var(--t-surtitre);font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--c-texte-3)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-offre-nom{margin-top:12px;font-size:20px;line-height:1.25;font-weight:500;transition:color 200ms var(--m-courbe)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-offre:hover .ac-offre-nom{color:var(--c-accent)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-offre-question{flex:1;margin-top:10px;font-size:15px;line-height:1.5;color:var(--c-texte-2)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-offre-prix{margin-top:28px;font-size:clamp(28px, 2.4vw, 36px);line-height:1.1;font-weight:500;letter-spacing:-.02em}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-offre-prix small{display:block;margin-bottom:4px;font-size:14px;font-weight:400;letter-spacing:0;color:var(--c-texte-2)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-offre-unite{margin-top:6px;font-size:14px;line-height:1.4;color:var(--c-texte-2)}
+@media (max-width:1023px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-offres{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+@media (max-width:640px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-offres{grid-template-columns:minmax(0,1fr)}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-offre-prix{margin-top:20px}
+}
+
+/* ── Haut de page, clarté (17/09/2026) : surtitre qui dit ce qu'est Cleo, ligne de prix sous les boutons. */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-hero-surtitre{margin-bottom:20px}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-hero-prix{margin:20px 0 0;font-size:15px;line-height:1.5;color:var(--c-texte-2)}
 
 /* ── Trois façons de travailler avec Cleo (16/09/2026, textes validés par Naomie) : trois cartes .sy-carte de la feuille
    système, chacune un lien. Ici seulement la grille et l'ordre interne de la carte, sur des classes de la page. ── */
