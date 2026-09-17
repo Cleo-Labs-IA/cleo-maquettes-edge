@@ -177,6 +177,37 @@
 })();
 
 /* ────────────────────────────────────────────────────────────────
+   ANIMATIONS PARTOUT, 17/09/2026 (Naomie : « mieux !!! fais un effort
+   encore avec les animations partout »). Avant l'apparition du système :
+   pose data-apparait ou data-apparait-groupe sur les blocs et les grilles
+   qui n'en ont pas, sur toutes les pages. Jamais dans une scène liée au
+   défilement, un haut de page, un carrousel ou un bloc déjà animé (un
+   enfant de groupe animé à part apparaissait en retard, vécu le 17/09).
+   ──────────────────────────────────────────────────────────────── */
+(function () {
+  var corps = document.body;
+  if (!corps || corps.getAttribute('data-cleo-ds') !== 'v6') return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var main = document.querySelector('main'); if (!main) return;
+  var HORS = '[data-scene], .sy-chapitre-hero, .ac-hero, .sy-hero-photo, .menu-mobile, .sy-carrousel, .tk-onglets, [aria-hidden="true"], form';
+  function libre(el) {
+    if (el.closest(HORS)) return false;
+    if (el.hasAttribute('data-apparait') || el.hasAttribute('data-apparait-groupe')) return false;
+    if (el.querySelector('[data-apparait], [data-apparait-groupe]')) return false;
+    for (var n = el.parentElement; n && n !== main; n = n.parentElement) {
+      if (n.hasAttribute('data-apparait') || n.hasAttribute('data-apparait-groupe')) return false;
+    }
+    return true;
+  }
+  var GROUPES = '.sy-lignes, .mu-inclus-liste, .sc-recevez, .sy-chiffres, .g2, .g3, .g4, .blog-grille, .sc-comment-image, .sc-etapes, .ap-cas, .ap-histoire-cartes, .ap-chapitres, .ap-marches, .flux, .hero-securite-grille, .dt-liste, .dt-es, .faq';
+  var BLOCS = 'section .sy-entete, section .ac-entete, section .ac-tete, .sy-chapitre:not(.sy-chapitre-hero), .sy-final-photo > figure, .sy-bande-photo > figure, .dt-code, .dt-panneau, .ac-roue-bloc';
+  var g = main.querySelectorAll(GROUPES);
+  for (var i = 0; i < g.length; i++) if (libre(g[i]) && g[i].children.length >= 2) g[i].setAttribute('data-apparait-groupe', '');
+  var b = main.querySelectorAll(BLOCS);
+  for (var k = 0; k < b.length; k++) if (libre(b[k])) b[k].setAttribute('data-apparait', '');
+})();
+
+/* ────────────────────────────────────────────────────────────────
    MOUVEMENT DU SYSTÈME CLEO, refonte du 15/09/2026 (SYSTEME.md). Les
    références Framer mesurées ne bougent presque pas au défilement : on
    garde l'entrée mot à mot du SEUL h1 et une apparition simple, une fois,
@@ -229,7 +260,8 @@
       entrees[j].target.classList.remove('mm-attend');
       obs.unobserve(entrees[j].target);
     }
-  }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+  // 17/09/2026 : l'apparition part dès l'entrée par le bas (plus de marge négative) ; un bloc n'est jamais pâle une fois à l'écran.
+  }, { threshold: 0.01, rootMargin: '0px 0px 0px 0px' });
   for (var b = 0; b < blocs.length; b++) {
     if (blocs[b].getBoundingClientRect().top < window.innerHeight * 0.94) continue;
     blocs[b].classList.add('mm-attend');
@@ -290,4 +322,72 @@
   // Les titres, et leur bloc parent : un bloc haut change de ratio tous les 5 %, ce qui recalcule entre deux titres.
   paires.forEach(function (p) { obs.observe(p.cible); if (p.cible.parentElement) obs.observe(p.cible.parentElement); });
   calculer();
+})();
+
+/* ────────────────────────────────────────────────────────────────
+   ANIMATIONS PARTOUT (suite), 17/09/2026 : les chiffres comptent jusqu'à
+   leur valeur à l'entrée dans l'écran (la valeur exacte est dans le HTML
+   et revient à la fin), la bande de logos défile en continu, et la barre
+   « Aller à » de l'accueil suit la section en cours de lecture.
+   ──────────────────────────────────────────────────────────────── */
+(function () {
+  var corps = document.body;
+  if (!corps || corps.getAttribute('data-cleo-ds') !== 'v6') return;
+  var calme = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // La barre « Aller à » : le lien de la section lue porte aria-current (pas une animation, valable pour tous).
+  var liens = document.querySelectorAll('.ac-aller-liens a[href^="#"]');
+  if (liens.length && 'IntersectionObserver' in window) {
+    var parId = {};
+    for (var l = 0; l < liens.length; l++) {
+      var cible = document.getElementById(liens[l].getAttribute('href').slice(1));
+      if (cible) parId[cible.id] = liens[l];
+    }
+    var suivi = new IntersectionObserver(function (entrees) {
+      for (var e = 0; e < entrees.length; e++) {
+        if (!entrees[e].isIntersecting) continue;
+        for (var m = 0; m < liens.length; m++) liens[m].removeAttribute('aria-current');
+        parId[entrees[e].target.id].setAttribute('aria-current', 'location');
+      }
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    for (var id in parId) suivi.observe(document.getElementById(id));
+  }
+  if (calme || !('IntersectionObserver' in window)) return;
+
+  // Les chiffres : entiers purs seulement (106, 25 000, 19,000), séparateur d'origine conservé.
+  var chiffres = document.querySelectorAll('main .sy-chiffre-raye, main .sy-chiffres > li > b, main .ac-chiffres b');
+  var compteur = new IntersectionObserver(function (entrees) {
+    for (var c = 0; c < entrees.length; c++) {
+      if (!entrees[c].isIntersecting) continue;
+      compteur.unobserve(entrees[c].target);
+      (function (el) {
+        var texte = el.getAttribute('data-valeur'), sep = (texte.match(/[\s\u00a0\u202f,.]/) || [''])[0];
+        var fin = parseInt(texte.replace(/\D/g, ''), 10), debut = null, duree = 1300;
+        el.style.minWidth = el.getBoundingClientRect().width + 'px';
+        function pas(t) {
+          if (debut === null) debut = t;
+          var x = Math.min(1, (t - debut) / duree), v = Math.round(fin * (1 - Math.pow(1 - x, 3)));
+          el.textContent = x < 1 ? String(v).replace(/\B(?=(\d{3})+(?!\d))/g, sep) : texte;
+          if (x < 1) requestAnimationFrame(pas); else el.style.minWidth = '';
+        }
+        requestAnimationFrame(pas);
+      })(entrees[c].target);
+    }
+  }, { threshold: 0.4 });
+  for (var n = 0; n < chiffres.length; n++) {
+    var t = chiffres[n].textContent.trim();
+    if (!/^\d{1,3}([\s\u00a0\u202f,.]\d{3})*$/.test(t) || chiffres[n].children.length) continue;
+    chiffres[n].setAttribute('data-valeur', t);
+    compteur.observe(chiffres[n]);
+  }
+
+  // La bande de logos de l'accueil : une piste et sa copie (masquée aux lecteurs d'écran) qui défilent.
+  var logos = document.querySelector('.ac-logos-imgs');
+  if (logos && logos.children.length && !logos.querySelector('.ac-logos-piste')) {
+    var piste = document.createElement('div'); piste.className = 'ac-logos-piste';
+    while (logos.firstChild) piste.appendChild(logos.firstChild);
+    var copie = piste.cloneNode(true); copie.setAttribute('aria-hidden', 'true');
+    var imgs = copie.querySelectorAll('img'); for (var q = 0; q < imgs.length; q++) imgs[q].setAttribute('alt', '');
+    logos.appendChild(piste); logos.appendChild(copie); logos.classList.add('ac-logos-defile');
+  }
 })();

@@ -1,0 +1,78 @@
+/* ═══ ANIMATIONS PARTOUT ═══ 17/09/2026, Naomie, après la scène de general.legal : « mieux !!! fais un effort encore avec
+   les animations partout ». Couche commune à toutes les pages, chargée après « vivant » :
+   1. apparitions plus nettes (18 px de montée, 600 ms, courbe douce), posées aussi par mouvement.js sur les blocs et grilles qui
+      n'en avaient pas ;
+   2. photos en parallaxe douce au défilement (bento, dossier, bande et appel final) ;
+   3. entrée orchestrée des hauts de page au chargement ;
+   4. cartes et flèches qui répondent au survol ;
+   5. logos en défilé, barre « Aller à » qui suit la lecture, chiffres qui comptent (mouvement.js) ;
+   6. cellules du dossier en cascade, légende du globe qui flotte, FAQ qui s'ouvre en douceur.
+   Tout est à plat avec « réduire les animations ». Les liaisons au défilement exigent overflow:clip (jamais hidden). */
+
+@media (prefers-reduced-motion:no-preference){
+
+  /* 1. Apparitions */
+  html.mm-js [data-apparait].mm-attend,
+  html.mm-js [data-apparait-groupe].mm-attend > *{opacity:0;filter:blur(6px);translate:0 18px}
+  html.mm-js [data-apparait],
+  html.mm-js [data-apparait-groupe] > *{transition:opacity .6s cubic-bezier(.22,1,.36,1), filter .6s cubic-bezier(.22,1,.36,1), translate .6s cubic-bezier(.22,1,.36,1), box-shadow .45s cubic-bezier(.22,1,.36,1)}
+  html.mm-js [data-apparait-groupe] > :nth-child(2){transition-delay:60ms}
+  html.mm-js [data-apparait-groupe] > :nth-child(3){transition-delay:120ms}
+  html.mm-js [data-apparait-groupe] > :nth-child(n+4){transition-delay:180ms}
+
+  /* 2. Photos en parallaxe */
+  @supports (animation-timeline:view()){
+    body[data-cleo-ds="v6"] main :is(.sy-bento-photo, .sy-final-photo > figure, .sy-bande-photo > figure, .ac-media) > img:first-child:not(#_):not(#_):not(#_){animation:anParallaxe linear both;animation-timeline:view();animation-range:cover 0% cover 100%}
+    @keyframes anParallaxe{from{translate:0 -4%;scale:1.1}to{translate:0 4%;scale:1.1}}
+  }
+
+  /* 3. Hauts de page : les éléments arrivent l'un après l'autre après le titre (qui entre déjà mot à mot) */
+  body[data-cleo-ds="v6"] main .ac-hero :is(.ac-surtitre, .ac-lead, .ac-choix, .ac-actions, .ac-livrables):not(#_){animation:anMonte .8s cubic-bezier(.22,1,.36,1) both}
+  body[data-cleo-ds="v6"] main .ac-hero .ac-surtitre:not(#_){animation-delay:.05s}
+  body[data-cleo-ds="v6"] main .ac-hero .ac-lead:not(#_){animation-delay:.4s}
+  body[data-cleo-ds="v6"] main .ac-hero :is(.ac-choix, .ac-actions):not(#_){animation-delay:.55s}
+  body[data-cleo-ds="v6"] main .ac-hero .ac-livrables:not(#_){animation-delay:.7s}
+  body[data-cleo-ds="v6"] main .ac-hero .ac-globe-scene:not(#_){animation:anApparait 1.2s .25s cubic-bezier(.22,1,.36,1) both}
+  body[data-cleo-ds="v6"] main .sy-chapitre-hero .sy-chapitre-texte > :not(h1):not(#_){animation:anMonte .8s cubic-bezier(.22,1,.36,1) both}
+  body[data-cleo-ds="v6"] main .sy-chapitre-hero .sy-chapitre-texte > :first-child:not(h1):not(#_){animation-delay:.05s}
+  body[data-cleo-ds="v6"] main .sy-chapitre-hero .sy-chapitre-texte > h1 + *:not(#_){animation-delay:.45s}
+  body[data-cleo-ds="v6"] main .sy-chapitre-hero .sy-chapitre-texte > :last-child:not(h1):not(#_){animation-delay:.6s}
+  @keyframes anMonte{from{opacity:0;translate:0 18px;filter:blur(6px)}}
+  @keyframes anApparait{from{opacity:0;scale:.94}}
+
+  /* 4. Survols */
+  body[data-cleo-ds="v6"] main :is(a.sy-carte, .ac-carte, a.ac-facon, .dt-acces-carte, .dt-tarif, .dt-pilier, .terme-carte, a.blog-art, .sc-carte, .ap-chapitre):not(#_):not(#_){transition:translate .45s cubic-bezier(.22,1,.36,1), box-shadow .45s cubic-bezier(.22,1,.36,1)}
+  body[data-cleo-ds="v6"] main :is(a.sy-carte, .ac-carte, a.ac-facon, .dt-acces-carte, .dt-tarif, .dt-pilier, .terme-carte, a.blog-art, .sc-carte, .ap-chapitre):not(#_):not(#_):hover{translate:0 -4px;box-shadow:0 0 0 1px var(--c-filet), 0 22px 44px -26px rgba(8,9,59,.32) !important}
+  body[data-cleo-ds="v6"] :is(main, .nav) :is(.sy-bouton, .sy-lien, .ac-lien, .sy-bouton-secondaire, .sy-bouton-blanc) svg:not(#_){transition:translate .35s cubic-bezier(.22,1,.36,1)}
+  body[data-cleo-ds="v6"] :is(main, .nav) :is(.sy-bouton, .sy-lien, .ac-lien, .sy-bouton-secondaire, .sy-bouton-blanc):hover svg:not(#_){translate:3px 0}
+  body[data-cleo-ds="v6"] main .ac-carte .ac-visuel:not(#_){transition:background-color .45s}
+  body[data-cleo-ds="v6"] main .ac-carte:hover .ac-point:not(#_){scale:1.15}
+  body[data-cleo-ds="v6"] main .ac-point:not(#_){transition:scale .45s cubic-bezier(.22,1,.36,1)}
+
+  /* 5. Logos en défilé (piste doublée par mouvement.js) */
+  body[data-cleo-ds="v6"] main .ac-logos-defile:not(#_):not(#_){flex:1 1 360px;flex-wrap:nowrap;justify-content:flex-start;gap:0;min-width:0;overflow:clip;-webkit-mask-image:linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);mask-image:linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent)}
+  body[data-cleo-ds="v6"] main .ac-logos-piste:not(#_){display:flex;flex:none;align-items:center;gap:56px;padding-right:56px;animation:anDefile 26s linear infinite}
+  body[data-cleo-ds="v6"] main .ac-logos-defile:hover .ac-logos-piste:not(#_){animation-play-state:paused}
+  @keyframes anDefile{to{translate:-100% 0}}
+
+  /* 6. Cellules du dossier en cascade, légende du globe, FAQ */
+  body[data-cleo-ds="v6"] main .ac-media:not(.mm-attend) .ac-exigence-grille > div:not(#_){animation:anMonte .6s cubic-bezier(.22,1,.36,1) both}
+  body[data-cleo-ds="v6"] main .ac-media:not(.mm-attend) .ac-exigence-grille > div:nth-child(2):not(#_){animation-delay:.08s}
+  body[data-cleo-ds="v6"] main .ac-media:not(.mm-attend) .ac-exigence-grille > div:nth-child(3):not(#_){animation-delay:.16s}
+  body[data-cleo-ds="v6"] main .ac-media:not(.mm-attend) .ac-exigence-grille > div:nth-child(4):not(#_){animation-delay:.24s}
+  body[data-cleo-ds="v6"] main .ac-media:not(.mm-attend) .ac-action:not(#_){animation:anMonte .6s .24s cubic-bezier(.22,1,.36,1) both, anSignal 2.4s 1s ease-in-out 2}
+  @keyframes anSignal{50%{box-shadow:inset 0 0 0 2px var(--c-accent)}}
+  body[data-cleo-ds="v6"] main .ac-globe-legende:not(#_){animation:anFlotte 6s ease-in-out infinite alternate}
+  @keyframes anFlotte{from{translate:0 0}to{translate:0 -8px}}
+  @supports selector(::details-content){
+    :root{interpolate-size:allow-keywords}
+    body[data-cleo-ds="v6"] main details::details-content{height:0;overflow:clip;transition:height .45s cubic-bezier(.22,1,.36,1), content-visibility .45s allow-discrete}
+    body[data-cleo-ds="v6"] main details[open]::details-content{height:auto}
+  }
+}
+
+/* Barre « Aller à » : le lien de la section lue est souligné (aria-current, posé par mouvement.js) */
+body[data-cleo-ds="v6"] main .ac-aller-liens a:not(#_):not(#_):not(#_){position:relative}
+body[data-cleo-ds="v6"] main .ac-aller-liens a:not(#_):not(#_):not(#_)::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:2px;border-radius:1px;background:var(--c-accent);scale:0 1;transform-origin:0 50%;transition:scale .45s cubic-bezier(.22,1,.36,1)}
+body[data-cleo-ds="v6"] main .ac-aller-liens a[aria-current]:not(#_):not(#_):not(#_){color:var(--c-texte)}
+body[data-cleo-ds="v6"] main .ac-aller-liens a[aria-current]:not(#_):not(#_):not(#_)::after{scale:1 1}
