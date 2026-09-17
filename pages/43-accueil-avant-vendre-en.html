@@ -1,31 +1,29 @@
 <!--NAV-->
-<!-- ═══ ACCUEIL, STRUCTURE « PROPOSITION A CLARIFIÉE » ═══ 17/09/2026, Naomie : « intègre ça aussi (homepage-a-clarified-full.html,
-     Codex) avec de l'humain », juste après « présente les features comme ça sur la landing (ecocomply.ai) ».
-     Ordre du prototype : haut de page (sur-titre, promesse, trois livrables), logos, barre « Aller à », 01 besoins, 02 le dossier
-     en trois questions (zone sombre unique), 03 la méthode et sa preuve, 04 l'offre (cartes à la EcoComply), 05 questions, appel final.
-     Composants, couleurs et typographie du site ; le prototype ne donne que la composition (feedback_toujours_notre_da).
-     Repris du prototype : titres, questions du dossier, étapes, libellés des boutons. NON repris : ses chapeaux de section qui
-     parlent de la page elle-même (« les trois offres ne se mélangent plus », « la FAQ remonte les objections »…), remplacés par
-     du texte pour le visiteur tiré des pages validées ; sa citation raccourcie, remplacée par l'extrait verbatim du site.
-     L'humain : les deux experts (portraits du site) dans l'étape de relecture, Philippine Tamic avec sa citation, l'équipe
-     (portraits de la page 02) dans l'appel final. Aucune photo de banque d'images.
-     SEO (tests/seo-accueil.mjs) : h1 inchangé, mot-clé du titre en tête du chapeau, FAQ visible de 10 questions (FAQPage),
-     étapes de la méthode (HowTo), liens internes du pied et de la barre inchangés.
-     Retirés de l'accueil : la scène de la peluche, le bento, la bande « chaque réponse cite le texte officiel » (fondue dans la
-     preuve), « Pour qui » (les pages 33 à 35 restent au pied), la section experts (fondue dans la méthode), les actualités. -->
+
+<!-- ═══ REFONTE DU 15/09/2026 (agent F1, scratchpad/agents/refonte/SYSTEME.md), PUIS IDENTITÉ DU 16/09/2026 (agent A,
+     scratchpad/agents/refonte/IDENTITE.md) ═══ Générateurs : accueil/generer.mjs (15/09) puis identite-accueil/identite.mjs
+     (16/09), qui remplace trois blocs par repères. Les générateurs antérieurs (avant-vendre.mjs et ses patchs) sont PÉRIMÉS.
+     Huit chapitres entre le haut de page et l'appel final : #comment (seule scène liée au défilement), #dossier (seul grand
+     média), #preuve (bento), #source (bande photo), #prestations, #pour-qui (seule zone #08093B, onglets), #experts,
+     #actualites (cartes photo). Retirés le 16/09 : #socle (chiffres, citation et panneau passent au bento et à la bande),
+     #securite (ses garanties passent dans la phrase de l'appel final). Ajouté le 16/09 : #facons (trois façons de travailler
+     avec Cleo), juste avant #prestations ; titres de #comment, #dossier et #source changés (textes validés par Naomie). -->
+
+<!-- ═══ HAUT DE PAGE ═══ Signature dictée par Naomie le 15/09/2026 (heros.md, variante 1). Chapeau : mot-clé SEO
+     « automated product compliance for global brands » (sources/04-content-keyword-ia.md) ; le rôle de l'agent et de
+     l'expert selon le lexique (§4). Globe aux produits gardé (« remets le globe », 14/09/2026), hors de sa boîte. -->
 <section class="section ac-hero">
   <div class="ac-conteneur ac-hero-grille">
     <div class="ac-hero-texte">
-      <p class="ac-surtitre">International product compliance</p>
       <h1 class="ac-h1">Sell anywhere, comply everywhere.</h1>
-      <p class="ac-lead">Automated product compliance for global brands. For each product and each market, Cleo prepares a clear file: <strong>the applicable rules, the missing evidence and the next action</strong>. A compliance expert reviews it before handing it over.</p>
-      <div class="ac-actions"><a class="sy-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Book a call <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sy-bouton-secondaire" href="#dossier">See an example file</a></div>
-      <ul class="ac-livrables"><li>Official rules</li><li>Expected evidence</li><li>Actions to take</li></ul>
+      <p class="ac-lead">Automated product compliance for global brands. For each product, in the EU and for export, Cleo tells you what applies, what is still missing and what to do, and a compliance expert reviews the file before handing it over.</p>
+      <div class="ac-actions"><a class="sy-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Describe my product <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sy-bouton-secondaire" href="37-compliance-service-en.html">See the services</a></div>
     </div>
-    <div class="ac-globe-scene"><!--GLOBE-PRODUITS--><p class="ac-globe-legende"><b>One product, several markets</b>The same clear reading, country by country.</p></div>
+    <!--GLOBE-PRODUITS-->
   </div>
 </section>
 
+<!-- ═══ LOGOS ═══ logos déjà sur le site (LogoWall), phrase de l'accueil FR ; l'anglais aligné sur le FR (releve.md). -->
 <section class="section ac-logos">
   <div class="ac-conteneur ac-logos-ligne">
     <p>Alongside international brands and manufacturers</p>
@@ -39,35 +37,56 @@
   </div>
 </section>
 
-<nav class="ac-aller" aria-label="Quick access to the page">
-  <div class="ac-conteneur ac-aller-liens"><span>Go to</span><a href="#besoins">Choose my need</a><a href="#dossier">See the file</a><a href="#methode">Understand the method</a><a href="#prestations">See the offer</a></div>
-</nav>
-
-<!-- ═══ 01 BESOINS ═══ trois entrées (Service, Data, Enterprise), phrases à la première personne du prototype. -->
-<section class="section ac-chapitre ac-besoins" id="besoins">
+<!-- ═══ LE PROBLÈME, PUIS LE DOSSIER ═══ SEULE scène liée au défilement de la page. 16/09/2026, titre et étapes validés par
+     Naomie (« Ce que Cleo prépare pour chaque produit », étapes à verbe) ; chapeau réécrit le même jour sur les questions du client (passe « le pain »,
+     wording/sources/pains-ministere-commission.md, sans attribution). Ancien titre : dossier de marque, planche 7
+     (« Every function in a company has been automated. Compliance was left behind »). Chapeau : planche 3 (« Too many
+     regulations, constantly moving, and different in every region »), puis la phrase de l'ancienne section #phrase.
+     Faits (16/09/2026) : une carte par étape, au positif, comme la page FR. Directive 2009/48/CE (sécurité des jouets), normes EN 71-1, EN 71-2, EN 71-3, marquage CE et coordonnées du fabricant (art. 16, 17 et 4, § 6). -->
+<section class="section ac-chapitre ac-recit" id="comment">
   <div class="ac-conteneur">
-    <div class="ac-tete" data-apparait><span class="ac-index">01</span><h2 class="ac-h2">Start with your need.</h2><p class="ac-lead">A fixed-price service, data via API, or the rule base connected to your systems.</p></div>
-    <div class="ac-besoins-grille" data-apparait>
-      <a class="ac-besoin" href="37-compliance-service-en.html"><span class="ac-besoin-sur">Service</span><h3>I have a product to make compliant.</h3><p>Cleo prepares the file and a compliance expert reviews it before handing it over.</p><span class="ac-besoin-lien">See the services <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-      <a class="ac-besoin" href="39-data-en.html"><span class="ac-besoin-sur">Data</span><h3>I build with regulatory data.</h3><p>Bring the rules into your product with Cleo's API or MCP server.</p><span class="ac-besoin-lien">Explore the Data API <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-      <a class="ac-besoin" href="40-enterprise-en.html"><span class="ac-besoin-sur">Enterprise</span><h3>I run a large catalogue.</h3><p>Connect the rule base to your systems and keep your own formats.</p><span class="ac-besoin-lien">Talk to the team <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+    <div class="ac-entete" data-apparait>
+      <h2 class="ac-h2">What Cleo prepares for each product</h2>
+      <p class="ac-lead">Which rules apply to my product, and what do I need to do before selling it? The longest part is not the lab test, it is everything that comes before it. For each market, Cleo brings rules, testing, labelling, supplier documents and evidence together in one file, which a compliance expert reviews.</p>
+    </div>
+    <div class="ac-recit-scene" data-scene>
+      <div class="ac-recit-collant">
+        <figure class="ac-recit-image">
+          <img src="img:masse-peluche" alt="A blue teddy bear among grey teddy bears">
+          <div class="ac-flottante ac-recit-fait" data-etape="1" aria-hidden="true"><b>Directive 2009/48/EC</b><span>Toy safety · applies</span></div>
+          <div class="ac-flottante ac-recit-fait" data-etape="2" aria-hidden="true"><b>EN 71-1, EN 71-2, EN 71-3</b><span>Mechanical, flammability, migration</span></div>
+          <div class="ac-flottante ac-recit-fait" data-etape="3" aria-hidden="true"><b>CE marking</b><span>Manufacturer name and address</span></div>
+          <div class="ac-flottante ac-recit-fait" data-etape="4" aria-hidden="true"><b>Factory test report</b><span>Requested from the supplier</span></div>
+          <div class="ac-flottante ac-recit-pret" aria-hidden="true"><b>File ready for review</b><span class="ac-points"><i></i><i></i><i></i><i></i><i></i></span></div>
+        </figure>
+        <ol class="ac-recit-etapes" data-schema="howto">
+          <li><span>01</span>Find the rules that apply</li>
+          <li><span>02</span>List the tests</li>
+          <li><span>03</span>Prepare the information to display</li>
+          <li><span>04</span>Gather supplier documents</li>
+          <li><span>05</span>Check nothing is missing</li>
+        </ol>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ 02 LE DOSSIER ═══ la seule zone sombre de la page. Questions du prototype ; interface du dossier reprise de la version
-     précédente (jeu de construction, directive 2009/48/CE) ; au téléphone, trois cartes (commit c2f5278). -->
-<section class="section sy-sombre ac-dossier" id="dossier">
+<!-- ═══ LE DOSSIER ═══ 16/09/2026, titre et chapeau validés par Naomie (« Exemple : un jeu de construction vendu en Europe »).
+     LE grand média de la page : la photo des briques (gardée à la demande de Naomie) et l'interface
+     posée dessus (composition Legora). Titre : principes.md règle 4, dossier de marque planche 5 (« Everything is
+     traceable »). Interface reprise telle quelle ; les étiquettes deviennent une ligne de texte. Fait : la directive
+     2009/48/CE est la directive européenne relative à la sécurité des jouets. -->
+<section class="section ac-chapitre ac-dossier" id="dossier">
   <div class="ac-conteneur">
-    <div class="ac-tete" data-apparait><span class="ac-index">02</span><h2 class="ac-h2">A file that answers three questions.</h2><p class="ac-lead">Example: a construction toy sold in Europe.</p></div>
-    <div class="ac-dossier-grille">
-      <ol class="ac-questions-dossier" data-apparait>
-        <li><span>01</span><div><b>What applies?</b><p>The official text and the requirement tied to the product.</p></div></li>
-        <li><span>02</span><div><b>What is missing?</b><p>The expected evidence and the current state of the file.</p></div></li>
-        <li><span>03</span><div><b>What comes next?</b><p>A concrete next action.</p></div></li>
-      </ol>
-      <div class="ac-media" data-apparait>
-<div class="ac-app" aria-label="Example launch file for a construction toy">
+    <div class="ac-entete" data-apparait>
+      <h2 class="ac-h2">Example: a construction toy sold in Europe</h2>
+      <p class="ac-lead">Knowing the rules is only the start. For each one, the official text, the evidence to provide and the next thing to do.</p>
+    </div>
+  </div>
+  <div class="ac-media" data-apparait>
+    <img class="ac-media-photo" src="img:masse-brique-jouet" alt="">
+    <div class="ac-flottante ac-source"><small>Official source</small><b>Directive 2009/48/EC</b><span>Safety of toys</span></div>
+    <div class="ac-app" aria-label="Example launch file for a construction toy">
       <aside class="ac-app-nav">
         <div class="ac-app-logo"><img src="img:cleo-logo" alt="Cleo"><span>Launch file</span></div>
         <ul>
@@ -94,40 +113,71 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ═══ LA PREUVE ═══ bento d'identité (16/09/2026, Naomie : fiches de la carte bleue compréhensibles sans connaître le sujet, reprises du
+     dossier plus bas : la sécurité des jouets et sa source officielle, le rapport d'essai de l'usine, à joindre) (IDENTITE.md 2.1, 16/09/2026). Citation : extrait VERBATIM de la version anglaise
+     de DecathlonQuote.tsx (cleo-landing). Chiffres canon (lexique §7). Fiches : mêmes références que la page FR. -->
+<section class="section ac-chapitre ac-preuve" id="preuve" aria-label="Proof">
+  <div class="ac-conteneur">
+    <div class="sy-bento" data-apparait>
+      <figure class="sy-bento-photo">
+        <img src="img:flacons" alt="">
+        <blockquote>“Their AI engine acts as an intelligent translator that filters noise to extract structured data.”</blockquote>
+        <figcaption><img class="sy-avatar" src="img:philippine" alt=""><b>Philippine Tamic</b><span>Decathlon</span></figcaption>
+      </figure>
+      <div class="sy-bento-creme"><b class="sy-chiffre-raye">106</b><span>countries tracked</span></div>
+      <div class="sy-bento-bleu">
+        <b class="sy-chiffre-raye">25,000</b><span>regulations mapped</span>
+        <div class="sy-fiches" aria-hidden="true">
+          <dl class="sy-fiche"><dt>Toy safety</dt><dd><span>Market</span><span>EU</span></dd><dd><span>Text</span><span>Official</span></dd></dl>
+          <dl class="sy-fiche"><dt>Test report</dt><dd><span>Source</span><span>Factory</span></dd><dd><span>Status</span><span>To attach</span></dd></dl>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ 03 LA MÉTHODE ═══ étapes du prototype (HowTo) ; l'expert a un visage : portraits et intitulés de la section experts
-     précédente (À TRANCHER, intitulés français à valider par chaque personne). Preuve : citation verbatim de Philippine Tamic
-     (DecathlonQuote.tsx), chiffres canon (106, 25 000, 19 000). -->
-<section class="section ac-chapitre ac-methode" id="methode">
-  <div class="ac-conteneur">
-    <div class="ac-tete" data-apparait><span class="ac-index">03</span><h2 class="ac-h2">Technology prepares. The expert checks.</h2><p class="ac-lead">Cleo's agent prepares the file, a compliance expert reviews it, and your organisation decides.</p></div>
-    <ol class="ac-etapes" data-schema="howto" data-apparait>
-      <li><small>01 · Scope</small><h3>Product and markets</h3><p>Cleo starts from the product, your role and the countries where you want to sell it.</p></li>
-      <li><small>02 · Prepare</small><h3>Rules, evidence, actions</h3><p>The file brings together what applies, what is missing and what to do.</p></li>
-      <li><small>03 · Review</small><h3>Expert validation</h3><p>A compliance expert checks the file before it reaches you.</p></li>
-    </ol>
-    <div class="ac-experts-ligne" data-apparait>
-      <p>The experts who review your files</p>
-      <figure class="ac-expert"><img src="img:darcial-grand" alt="Darcial Mondjo"><figcaption><b>Darcial Mondjo</b><span>Global Head of Product and Sanitary Compliance</span></figcaption></figure>
-      <figure class="ac-expert"><img src="img:thezi-grand" alt="Thezi Mabuza"><figcaption><b>Thezi Mabuza</b><span>Consumer protection and product safety</span></figcaption></figure>
+<!-- ═══ LA SOURCE ═══ 16/09/2026, titre validé par Naomie (« Chaque réponse cite le texte officiel »). Bande photo (IDENTITE.md 2.2), même source que la page FR. -->
+<section class="section sy-bande-photo ac-bande" id="source">
+  <figure>
+    <img src="img:classeurs" alt="">
+    <div class="sy-bande-texte">
+      <p class="sy-etiquette">Published multi-agent architecture</p>
+      <h2>Every answer cites the official text</h2>
+      <p>Evaluated on 7,676 regulations: 93 to 97% precision on binding texts.</p>
+      <a class="sy-bouton-blanc" href="23-research-en.html">Read the research paper <svg class="sy-fleche-haut" viewBox="0 0 12 12" width="11" height="11" fill="none" aria-hidden="true"><path d="M3 9 9 3M4 3h5v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
-    <div class="ac-preuve-bande" data-apparait>
-      <figure class="ac-citation"><blockquote>“Their AI engine acts as an intelligent translator that filters noise to extract structured data.”</blockquote><figcaption><img src="img:philippine" alt=""><b>Philippine Tamic</b><span>Decathlon</span></figcaption></figure>
-      <div class="ac-trace"><span class="ac-trace-tag">Traceability</span><div><h3>Every answer cites its official source.</h3><p>The regulatory text stays visible in the same place as the expected evidence and the action to take.</p></div>
-        <ul class="ac-chiffres"><li><b>106</b><span>countries tracked</span></li><li><b>25,000</b><span>regulations mapped</span></li><li><b>19,000</b><span>regulatory authorities tracked</span></li></ul>
-        <a class="ac-lien" href="26-legal-data-en.html">See coverage <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+  </figure>
+</section>
+
+<!-- ═══ TROIS FAÇONS ═══ 16/09/2026, validé par Naomie : « Trois façons de travailler avec Cleo », avant le détail des
+     prestations. Trois cartes .sy-carte, un lien chacune. Textes repris des pages : h1 du catalogue 37 et noms de ses 4
+     prestations ; chapeau du haut de page de 39 ; chapeau du haut de page de 40. Libellés des liens déjà en usage (37, 53, 37). -->
+<section class="section ac-chapitre ac-facons" id="facons">
+  <div class="ac-conteneur">
+    <div class="ac-entete" data-apparait>
+      <h2 class="ac-h2">Three ways to work with Cleo</h2>
+    </div>
+    <div class="ac-facons-grille" data-apparait>
+      <a class="sy-carte ac-facon" href="37-compliance-service-en.html"><h3>Fixed-price services</h3><p>Assessment, labelling, CE marking and EU authorised representative, with a price shown before you order.</p><span class="sy-lien">See the services <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="sy-carte ac-facon" href="39-data-en.html"><h3>Data via API and MCP, for teams that build</h3><p>An API brings it into your product. An MCP server brings it into Claude, Cursor and any MCP-compatible client.</p><span class="sy-lien">See the Data API <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+      <a class="sy-carte ac-facon" href="40-enterprise-en.html"><h3>Enterprise, for large catalogues</h3><p>Our engineers connect Cleo's rule base to your systems, and your templates stay in your format.</p><span class="sy-lien">See Enterprise <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
     </div>
   </div>
 </section>
 
+<!-- ═══ PRESTATIONS EN CARTES ═══ 17/09/2026, Naomie : « présente les features comme ça sur la landing, ecocomply.ai, un peu cette
+     structure, plus clair » (capture « How EcoComply gets your product compliant »). Composition reprise : un titre, deux grandes
+     cartes en largeur (texte à gauche, visuel à droite), puis deux cartes côte à côte (visuel en haut, texte en bas), chacune
+     avec ses points cochés et son bouton. Matière et couleurs du site, pas celles d'EcoComply (feedback_toujours_notre_da) ;
+     pas de seconde zone sombre (la seule reste « Pour qui »). Textes et prix repris des fiches 54, 51, 55 et 45 (h1, chapeau,
+     listes « tout ce qui est compris »), rien d'ajouté. Visuels dessinés en HTML, décoratifs (aria-hidden). -->
 <section class="section ac-chapitre ac-prestations" id="prestations">
   <div class="ac-conteneur">
     <div class="ac-entete" data-apparait>
-      <p class="ac-surtitre"><span class="ac-index">04</span>Service</p>
+      <p class="ac-surtitre">Service</p>
       <h2 class="ac-h2">How Cleo gets your product compliant</h2>
       <p class="ac-lead">One price per file, announced before you order. Cleo prepares the file, a compliance expert reviews and validates it.</p>
     </div>
@@ -153,13 +203,81 @@
   </div>
 </section>
 
-<!-- ═══ 05 QUESTIONS ═══ intro à gauche (prototype), les 10 questions validées pour le SEO à droite (FAQPage). -->
+<!-- ═══ POUR QUI ═══ section sombre à onglets (IDENTITE.md 2.3), seule zone #08093B. Les pages 33, 34 et 35 n'existent
+     qu'en français : textes des encarts TRADUITS de leurs chapeaux, et pas de lien vers elles depuis la page anglaise
+     (pas de page FR sur la page EN). Citation : extrait VERBATIM de la version anglaise de DecathlonQuote.tsx. -->
+<section class="section sy-sombre ac-qui" id="pour-qui">
+  <div class="conteneur">
+    <h2>For brands launching a consumer product, and for those already selling one</h2>
+    <div class="tk-onglets sy-onglets" role="group" aria-label="Who it is for">
+      <input type="radio" name="ac-pq" id="ac-pq-1" checked>
+      <input type="radio" name="ac-pq" id="ac-pq-2">
+      <input type="radio" name="ac-pq" id="ac-pq-3">
+      <div class="tk-onglets-tetes">
+        <label for="ac-pq-1"><b>Manufacturers</b><span>Every rule that changes, linked to your products.</span><i class="tk-onglets-barre" aria-hidden="true"></i></label>
+        <label for="ac-pq-2"><b>Importers and distributors</b><span>Information that comes from the supplier.</span><i class="tk-onglets-barre" aria-hidden="true"></i></label>
+        <label for="ac-pq-3"><b>Marketplaces</b><span>What every product page must display.</span><i class="tk-onglets-barre" aria-hidden="true"></i></label>
+      </div>
+      <div class="tk-onglets-scene">
+        <figure class="tk-onglets-vue"><img src="img:masse-vernis" alt=""><div class="sy-verre"><p>“Steering our global compliance while supporting our engineers in product development.”</p><b>Philippine Tamic</b><span>Product Compliance Operations Manager, Decathlon</span></div></figure>
+        <figure class="tk-onglets-vue"><img src="img:masse-poele" alt=""><div class="sy-verre"><p>HS code, duties, certifications and dual use: a sourced answer for every product, before it ships.</p></div></figure>
+        <figure class="tk-onglets-vue"><img src="img:masse-telephone" alt=""><div class="sy-verre"><p>The catalogue belongs to your brands, and you display what each brand sends you without always knowing whether you have everything. Cleo matches every listing category with the rules that apply to it, and flags what changes before it takes effect.</p></div></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO PARTOUT (16/09/2026, refonte/PHOTO.md) : le chapitre s'ouvre sur la photo masse-lunettes (la relecture), titre repris mot pour mot. -->
+<!-- ═══ EXPERTS ═══ titre : releve.md (43, ligne 15), voix active. Portraits et noms repris du site.
+     À TRANCHER : les intitulés français des deux experts sont traduits de leurs titres anglais (releve.md, 43, lignes
+     17 et 18) et doivent être validés par chaque personne ; en anglais, « & » devient « and ».
+     Qui fait quoi : repris de la page (la décision et la signature restent chez le client, l'expert Cleo relit). -->
+<section class="section ac-chapitre ac-experts" id="experts">
+  <div class="ac-conteneur">
+    <figure class="sy-chapitre">
+      <img src="img:masse-lunettes" alt="">
+      <figcaption class="sy-chapitre-texte">
+        <p class="sy-etiquette">Experts</p>
+        <h2>A compliance expert reviews every file before it reaches you</h2>
+      </figcaption>
+    </figure>
+    <div class="ac-experts-grille">
+      <figure class="ac-portrait" data-apparait><img src="img:darcial-grand" alt="Darcial Mondjo"><figcaption><b>Darcial Mondjo</b><span>Global Head of Product and Sanitary Compliance</span></figcaption></figure>
+      <figure class="ac-portrait" data-apparait><img src="img:thezi-grand" alt="Thezi Mabuza"><figcaption><b>Thezi Mabuza</b><span>Consumer protection and product safety</span></figcaption></figure>
+      <ol class="ac-roles" data-apparait>
+        <li><span>01</span>Cleo prepares the mission file</li>
+        <li><span>02</span>Laboratories run the tests</li>
+        <li><span>03</span>Your organisation decides</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ACTUALITÉS ═══ rangée de cartes photo (IDENTITE.md 2.5). Titres : h1 réels des articles 27, 28 et 29 en anglais ;
+     l'article 12 n'existe qu'en français, la quatrième carte mène au blog anglais (h1 de 24-blog-en). -->
+<section class="section ac-chapitre ac-articles" id="actualites">
+  <div class="ac-conteneur">
+    <div class="ac-entete ac-entete-ligne" data-apparait>
+      <h2 class="ac-h2">News and analysis</h2>
+      <a class="ac-lien" href="24-blog-en.html">See the blog <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div class="sy-carrousel" data-apparait>
+      <a class="sy-carte-photo" href="27-article-levee-en.html"><img src="img:equipe" alt=""><span class="sy-etiquette">Company</span><b>Cleo raises €1.5M to automate product regulatory compliance at a global scale</b></a>
+      <a class="sy-carte-photo" href="28-article-vivatech-en.html"><img src="img:paris" alt=""><span class="sy-etiquette">Company</span><b>Cleo wins the Scaleway Startup Challenge and joins VivaTech 2026</b></a>
+      <a class="sy-carte-photo" href="29-article-deel-en.html"><img src="img:station-f" alt=""><span class="sy-etiquette">Company</span><b>Global product compliance in 2026: why we won The Pitch by Deel</b></a>
+      <a class="sy-carte-photo" href="24-blog-en.html"><img src="img:masse-capsule" alt=""><span class="sy-etiquette">Blog</span><b>Product compliance blog: news and analysis</b></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ QUESTIONS ═══ 17/09/2026, jumeau anglais de la FAQ de la page FR (mêmes questions, mêmes faits, voir le commentaire
+     de 43-accueil-avant-vendre.html). www.cleolabs.co/en sert 17 questions visibles et leur FAQPage. Formulations anglaises
+     déjà sur le site : haut de page de cette page, FAQ de 37 EN (prix, signature), 23 EN (article de recherche), 27 EN
+     (tour de table), 25 EN (« 30 minutes with the team », « See what Cleo finds on your own products »). -->
 <section class="section ac-chapitre ac-questions" id="questions">
   <div class="ac-conteneur ac-questions-grille">
     <div class="ac-entete" data-apparait>
-      <p class="ac-surtitre"><span class="ac-index">05</span></p>
-      <h2 class="ac-h2">Answers before the meeting.</h2>
-      <p class="ac-lead">The questions we are asked most often before getting started.</p>
+      <h2 class="ac-h2">Frequently asked questions</h2>
     </div>
     <div class="faq ac-faq" data-schema="faq" data-apparait>
       <details open><summary>What is Cleo Labs?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Cleo Labs automates product compliance for global brands. For each product and each market, Cleo tells you what applies, what is still missing and what to do, and a compliance expert reviews the file before handing it over. The company, Cleo Corp SAS, is based in Neuilly-sur-Seine, France.</div></details>
@@ -176,16 +294,17 @@
   </div>
 </section>
 
-<!-- ═══ APPEL FINAL ═══ bande bleue du prototype ; l'équipe (portraits et noms de la page 02) ; « 30 minutes avec l'équipe » (page 25). -->
-<section class="section ac-final-bleu" id="contact">
-  <div class="ac-conteneur ac-final-grille">
-    <div>
-      <h2>Tell us about your product and your target market.</h2>
-      <p>We point you to the service or integration that fits your need.</p>
-      <div class="ac-equipe"><span class="ac-avatars"><img src="img:anaelle" alt="Anaëlle Guez"><img src="img:naomie" alt="Naomie Halioua"><img src="img:alex" alt="Alexandre Bloch"></span><span>30 minutes with the team</span></div>
+<!-- ═══ APPEL FINAL ═══ sur photo (IDENTITE.md 2.4). Ligne de manifeste (planche 7, « It is », sans contraction). Phrase :
+     garanties de l'ancien chapitre Sécurité (page 30). -->
+<section class="section sy-final-photo ac-final" id="contact">
+  <figure>
+    <img src="img:chaines" alt="">
+    <div class="sy-final-texte">
+      <h2>A new country is no longer a project. It is a decision.</h2>
+      <p>Cleo tracks 106 countries, inside and outside the EU. Your data stays hosted in the European Union and never trains a model.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Describe my product</a></div>
     </div>
-    <a class="sy-bouton-blanc" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Book a call <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-  </div>
+  </figure>
 </section>
 
 <!--PIED-->
