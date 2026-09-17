@@ -895,20 +895,20 @@
    "_mesure": "titre 47 caractères, description 85 caractères"
   },
   "39-data.html": {
-   "titre": "Data : donnée réglementaire produit, API et MCP | Cleo Labs",
-   "description": "Une API l'intègre à votre produit, un serveur MCP l'apporte dans Claude, Cursor et tout client compatible MCP. Chaque règle avec son article.",
+   "titre": "API Legal Data et classification douanière | Cleo Labs",
+   "description": "Deux API pour les équipes logicielles : les sources juridiques officielles de chaque pays, et des codes douaniers candidats à partir d'une description produit.",
    "source": "redige",
    "url_source": null,
-   "appui_contenu": "16/09/2026, agent D : structure de moonlit.ai (connect, mcp, platform) ; faits dans scratchpad/agents/refonte/identite-data/faits.md.",
-   "_mesure": "titre 59 caractères, description 141 caractères"
+   "appui_contenu": "17/09/2026 : titre du haut de page et chapeau de la page par cas d'usage (structure de l'offre API envoyée par Naomie).",
+   "_mesure": "titre 54 caractères, description 159 caractères"
   },
   "39-data-en.html": {
-   "titre": "Data: product regulatory data, API and MCP | Cleo Labs",
-   "description": "An API brings it into your product, an MCP server brings it into Claude, Cursor and any MCP-compatible client. Every rule with its article.",
+   "titre": "Legal Data API and Customs Classification API | Cleo Labs",
+   "description": "Two APIs for software teams: official legal sources from each country, and candidate customs codes from a product description.",
    "source": "redige",
    "url_source": null,
-   "appui_contenu": "16/09/2026, agent D : structure de moonlit.ai (connect, mcp, platform) ; faits dans scratchpad/agents/refonte/identite-data/faits.md.",
-   "_mesure": "titre 54 caractères, description 139 caractères"
+   "appui_contenu": "17/09/2026 : titre du haut de page et chapeau de la page par cas d'usage (structure de l'offre API envoyée par Naomie).",
+   "_mesure": "titre 57 caractères, description 126 caractères"
   },
   "40-enterprise.html": {
    "titre": "Enterprise | Cleo Labs",
