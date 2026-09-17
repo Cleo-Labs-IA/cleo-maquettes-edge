@@ -13,26 +13,24 @@
      #experts, #preuve, #source, #pour-qui, #facons, #actualites, #questions (FAQ lue par Google), #contact.
      17/09/2026 : même structure droit au but que la page FR (voir son commentaire). -->
 
-<!-- ═══ HAUT DE PAGE ═══ Signature dictée par Naomie le 15/09/2026 (heros.md, variante 1). Chapeau : mot-clé SEO
-     « automated product compliance for global brands » (sources/04-content-keyword-ia.md) ; le rôle de l'agent et de
-     l'expert selon le lexique (§4). Globe aux produits gardé (« remets le globe », 14/09/2026), hors de sa boîte. -->
-<section class="section ac-hero">
-  <div class="ac-conteneur ac-hero-grille">
-    <div class="ac-hero-texte">
-      <!-- 17/09/2026, Naomie, après le test de lecture (3/5 au premier écran) et la planche de variantes : « tagline en haut, et
-           peut-être les objets comme ça pour qu'on comprenne, et juste un sous-titre "la conformité produit automatisée des
-           marques internationales", clair, précis ». Sous-titre : mot-clé SEO mot pour mot (« pour les », comme le titre que
-           Google affiche). Familles : catégories de 04-secteur#perimetre. Bouton : « Parler à un expert », car il mène à un
-           rendez-vous. Prix et délai : fiches Service (« le délai est annoncé avant la commande »). Fourchette de 399 € à 3 800 € (évaluation et
-           marquage CE, catalogue 37) depuis le second test de lecture : « à partir de 399 € » était lu comme un appât. -->
+<!-- ═══ HAUT DE PAGE « L'OBJET UNIQUE » ═══ 17/09/2026 : jumeau anglais de la page FR (planche 10, sans le logo géant). -->
+<section class="section ac-hero ac-hero-objet">
+  <figure class="ac-objet">
+    <img class="ac-objet-photo" src="img:masse-peluche" alt="A blue teddy bear among grey teddy bears">
+    <div class="ac-objet-texte" data-apparait>
       <h1 class="ac-h1">Sell anywhere, comply everywhere.</h1>
       <p class="ac-lead ac-hero-sous-titre">Automated product compliance for global brands.</p>
       <ul class="ac-puces" aria-label="Products covered"><li>Toys</li><li>Cosmetics</li><li>Electronics</li><li>Textiles</li><li>Furniture</li><li>Automotive</li><li><a href="https://www.cleolabs.co/en/industries">And more</a></li></ul>
-      <div class="ac-actions"><a class="sy-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Talk to an expert <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sy-bouton-secondaire" href="#prestations">See prices</a></div>
+      <div class="ac-actions"><a class="ac-pilule" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Talk to an expert<i aria-hidden="true"></i></a><a class="ac-lien-clair" href="#prestations">See prices</a></div>
       <p class="ac-hero-prix">Fixed price and lead time stated before you order, from €399 to €3,800 per product.</p>
     </div>
-    <!--GLOBE-PRODUITS-->
-  </div>
+    <aside class="ac-objet-carte" data-apparait>
+      <p class="ac-objet-rubrique">Official source</p>
+      <b>Directive 2009/48/EC</b>
+      <span>Toy safety · applies</span>
+      <a href="https://www.cleolabs.co/en/customers">See the case study</a>
+    </aside>
+  </figure>
 </section>
 
 <!-- ═══ LOGOS ═══ logos déjà sur le site (LogoWall), phrase de l'accueil FR ; l'anglais aligné sur le FR (releve.md). -->
@@ -72,29 +70,57 @@
     <div class="ac-entete" data-apparait>
       <h2 class="ac-h2">How it works</h2>
     </div>
-    <div class="ac-marche-grille">
-      <ol class="ac-etapes" data-schema="howto" data-apparait>
-        <li><span>01</span><b>You describe your product</b><em>What it is, and the countries where you want to sell it.</em></li>
-        <li><span>02</span><b>Cleo prepares the file</b><em>The rules that apply, the tests to plan, the information on the label, the documents to gather.</em></li>
-        <li><span>03</span><b>A compliance expert reviews it and hands it over</b><em>Every requirement cites its official text.</em></li>
-      </ol>
-      <figure class="ac-marche-exemple" data-apparait>
-        <div class="ac-app ac-app-seule" aria-label="Example file for a construction toy">
-          <div class="ac-app-corps">
-            <p class="ac-app-surtitre">Example · Construction toy · European Union</p>
-            <h3>Requirements and evidence</h3>
-            <div class="ac-exigence">
-              <div class="ac-exigence-tete"><b>Mechanical safety of the toy</b><span>Applies</span></div>
-              <div class="ac-exigence-grille">
-                <div><small>Official text</small><p>Directive 2009/48/EC on the safety of toys</p></div>
-                <div><small>Evidence to provide</small><p>Test report for the product</p></div>
-                <div><small>File status</small><p>Report not yet received from the factory</p></div>
-                <div class="ac-action"><small>Next action</small><p>Ask the factory for the report</p></div>
+    <!-- 17/09/2026, « il n'y a plus d'animations » : la grille est une scène liée au défilement (feuille 43). Chaque étape
+         s'allume à son tour et la case correspondante de l'exemple se surligne ; sans prise en charge, tout reste visible. -->
+    <div class="ac-marche-scene">
+      <div class="ac-marche-grille">
+        <ol class="ac-etapes" data-schema="howto" data-apparait>
+          <li><span>01</span><b>You describe your product</b><em>What it is, and the countries where you want to sell it.</em></li>
+          <li><span>02</span><b>Cleo prepares the file</b><em>The rules that apply, the tests to plan, the information on the label, the documents to gather.</em></li>
+          <li><span>03</span><b>A compliance expert reviews it and hands it over</b><em>Every requirement cites its official text.</em></li>
+        </ol>
+        <figure class="ac-marche-exemple" data-apparait>
+          <div class="ac-app ac-app-seule" aria-label="Example file for a construction toy">
+            <div class="ac-app-corps">
+              <p class="ac-app-surtitre">Example · Construction toy · European Union</p>
+              <h3>Requirements and evidence</h3>
+              <div class="ac-exigence">
+                <div class="ac-exigence-tete"><b>Mechanical safety of the toy</b><span>Applies</span></div>
+                <div class="ac-exigence-grille">
+                  <div><small>Official text</small><p>Directive 2009/48/EC on the safety of toys</p></div>
+                  <div><small>Evidence to provide</small><p>Test report for the product</p></div>
+                  <div><small>File status</small><p>Report not yet received from the factory</p></div>
+                  <div class="ac-action"><small>Next action</small><p>Ask the factory for the report</p></div>
+                </div>
               </div>
+            <p class="ac-app-releve"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="M3 8.5l3 3 7-7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Reviewed and validated by a compliance expert</p>
             </div>
           </div>
-        </div>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LA PREUVE ═══ Remise le 17/09/2026 telle qu'au commit 5256e1a (Naomie : « il n'y a même plus le testimonial »). bento d'identité (16/09/2026, Naomie : fiches de la carte bleue compréhensibles sans connaître le sujet, reprises du
+     dossier plus bas : la sécurité des jouets et sa source officielle, le rapport d'essai de l'usine, à joindre) (IDENTITE.md 2.1, 16/09/2026). Citation : extrait VERBATIM de la version anglaise
+     de DecathlonQuote.tsx (cleo-landing). Chiffres canon (lexique §7). Fiches : mêmes références que la page FR. -->
+<section class="section ac-chapitre ac-preuve" id="preuve" aria-label="Proof">
+  <div class="ac-conteneur">
+    <div class="sy-bento" data-apparait>
+      <figure class="sy-bento-photo">
+        <img src="img:flacons" alt="">
+        <blockquote>“Their AI engine acts as an intelligent translator that filters noise to extract structured data.”</blockquote>
+        <figcaption><img class="sy-avatar" src="img:philippine" alt=""><b>Philippine Tamic</b><span>Decathlon</span></figcaption>
       </figure>
+      <div class="sy-bento-creme"><b class="sy-chiffre-raye">106</b><span>countries tracked</span></div>
+      <div class="sy-bento-bleu">
+        <b class="sy-chiffre-raye">25,000</b><span>regulations mapped</span>
+        <div class="sy-fiches" aria-hidden="true">
+          <dl class="sy-fiche"><dt>Toy safety</dt><dd><span>Market</span><span>EU</span></dd><dd><span>Text</span><span>Official</span></dd></dl>
+          <dl class="sy-fiche"><dt>Test report</dt><dd><span>Source</span><span>Factory</span></dd><dd><span>Status</span><span>To attach</span></dd></dl>
+        </div>
+      </div>
     </div>
   </div>
 </section>
