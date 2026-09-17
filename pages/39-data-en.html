@@ -1,235 +1,212 @@
 <!--NAV-->
-
-<!-- WORDING PASSE W2 16/09/2026 (refonte/wording/passe-w2/journal.json) : propositions SÛR seulement, sans attribution ni chiffre entendu. Verbatims : #70 P48 P49 C28 C29 m16 #82 C69 C70. -->
-<!-- ═══ DATA · API ET SERVEUR MCP ═══ 16/09/2026, agent D (scratchpad/agents/refonte/IDENTITE.md §4). Structure de
-     moonlit.ai/connect, relevée le 16/09 (scratchpad/moonlit2/connect-*) : haut de page, champ « dites-nous ce que vous
-     voulez faire », couverture en chiffres, une clé et deux accès, la traçabilité, trois piliers, l'offre, l'appel final.
-     Composition et matière d'identité Tenkara (bento, appel final sur photo), Satoshi seule.
-     Faits : scratchpad/agents/refonte/identite-data/faits.md (README de ~/legal-mcp, routes de ~/cleo-legal-api).
-     Absents faute de source : prix, quotas, nombre d'outils, badges « Live », logos de clients, hébergement de l'API.
-     Skills : retirés de Data (Naomie, 16/09 : « skills que dans ressources, pas dans data »).
-     Générée par scratchpad/agents/refonte/identite-data/generer.mjs. L'ancien générateur data-simple est périmé. -->
-
-<!-- ═══ HAUT DE PAGE ═══ h1 : variante 2 de refonte/wording/heros.md (SITE 39). La variante 1 porte la page MCP (52),
-     comme chez Moonlit où « inside the AI you already use » est le titre de /mcp. -->
+<!-- ═══ DATA · TWO APIS, USAGE, PRICING ═══ 17/09/2026, jumeau anglais de 39-data.html (même structure, mêmes faits et mêmes
+     réserves, voir le commentaire de la page FR). Titre du haut de page : « Traceable legal data and explainable customs
+     classification, ready for your product. », repris tel quel de outputs/cleo-api-offer-pricing.html (« Nouvelle landing »).
+     ⚠️ Sandbox 200 API units et poids de 100 API units par classification : recommandations du document, pas encore codées. -->
 <section class="section sy-hero-photo" id="haut">
   <div class="conteneur">
     <figure class="sy-chapitre sy-chapitre-hero">
       <img src="img:cables" alt="">
       <figcaption class="sy-chapitre-texte">
         <p class="sy-etiquette">Data</p>
-        <h1>Product regulatory data, via API and MCP server.</h1>
-        <p class="sy-chapitre-lead">An API brings it into your product. An MCP server brings it into Claude, Cursor and any MCP-compatible client. Every result shows where the rule comes from and which article it points to.</p>
-        <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="21-inscription.html">Request access</a><a class="sy-bouton-blanc" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team</a></div>
+        <h1>Traceable legal data, explainable customs classification.</h1>
+        <p class="sy-chapitre-lead">Two APIs ready for your product: search and retrieve legal documents with their source, and pre-classify your catalogue into customs codes.</p>
+        <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://legaldata-public.cleolabs.co/signup">Get API key</a><a class="sy-bouton-blanc" href="https://www.cleolabs.co/legal-data/docs">View docs</a></div>
       </figcaption>
     </figure>
   </div>
 </section>
 
-<!-- PHOTO PARTOUT (16/09/2026, refonte/PHOTO.md) : le formulaire « dites-nous » passe juste sous le haut de page sur photo. -->
-<section class="section dt-besoin-section" id="dites-nous">
-  <div class="conteneur">
-    <!-- Le champ de Moonlit Connect, en vrai formulaire GET vers le rendez-vous HubSpot (modèle du formulaire de la page 40). -->
-    <form class="dt-besoin sy-carte-blanche" id="besoin" method="get" action="https://meetings.hubspot.com/anaelle-guez/rendez-vous" data-apparait>
-      <h2 class="dt-besoin-titre">Or tell us what you want to do with regulatory data</h2>
-      <p class="dt-besoin-texte">Describe your use case. An expert from the team replies with the most direct path: the API or the MCP server.</p>
-      <label class="dt-cache" for="f-data-besoin-en">Your use case</label>
-      <textarea id="f-data-besoin-en" name="besoin" rows="4" placeholder="I am building a tool for our quality teams: I need the information to display on our toys in France, Germany and Italy, with the article behind each item."></textarea>
-      <div class="dt-besoin-ligne">
-        <label class="dt-cache" for="f-data-email-en">Work email</label>
-        <input id="f-data-email-en" name="email" type="email" autocomplete="email" placeholder="camille@brand.com" required>
-        <button class="sy-bouton" type="submit">Send</button>
-      </div>
-      <p class="dt-besoin-note">Your data is only used to reply to you.</p>
-    </form>
-  </div>
-</section>
-
-<!-- ═══ COUVERTURE ═══ Moonlit « The deepest global legal data layer for AI » : les chiffres, puis « View coverage ».
-     Ici le bento d'identité 2.1, variante sans citation. Chiffres canon (CANONICAL-FACTS, lexique §7). Fiches de la
-     carte bleue : références déjà citées sur le site (directive 2009/48/CE, CPSIA section 101, règlement (UE) 2023/988). -->
-<section class="section dt-couverture" id="couverture">
-  <div class="conteneur">
-    <figure class="sy-chapitre">
-      <img src="img:briques" alt="">
-      <figcaption class="sy-chapitre-texte">
-        <p class="sy-etiquette">Coverage</p>
-        <h2>106 countries, one rule base</h2>
-        <p class="sy-chapitre-lead">Every market has its own rules and its own way of applying them. Cleo links each one to its article and its entry-into-force date.</p>
-      </figcaption>
-    </figure>
-    <div class="sy-bento" data-apparait-groupe>
-      <figure class="sy-bento-photo"><img src="img:classeurs" alt=""><p class="sy-etiquette">Product, HS code, regulation, authority</p><p>The chain Cleo tracks continuously, link by link.</p></figure>
-      <div class="sy-bento-creme"><b class="sy-chiffre-raye">106</b><span>countries tracked</span></div>
-      <div class="sy-bento-bleu"><b class="sy-chiffre-raye">25,000</b><span>regulations mapped</span>
-        <div class="sy-fiches" aria-hidden="true"><dl class="sy-fiche"><dt>Directive 2009/48/EC</dt><dd><span>Scope</span><span>Toys</span></dd><dd><span>Area</span><span>EU</span></dd></dl><dl class="sy-fiche"><dt>CPSIA, section 101</dt><dd><span>Scope</span><span>Lead</span></dd><dd><span>Area</span><span>United States</span></dd></dl><dl class="sy-fiche"><dt>Regulation (EU) 2023/988</dt><dd><span>Scope</span><span>GPSR</span></dd><dd><span>Area</span><span>EU</span></dd></dl></div>
-      </div>
-    </div>
-    <div class="dt-couverture-pied">
-      <ul class="sy-chiffres dt-chiffres"><li><b>19,000</b><span>regulatory authorities tracked</span></li><li><b>3,700</b><span>official sources</span></li></ul>
-      <a class="sy-lien dt-lien" href="26-legal-data-en.html">See the coverage <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ UNE CLÉ, DEUX ACCÈS ═══ Moonlit « One key, one data layer, two access modes » : la carte Data API avec son bloc
-     de code, la carte serveur MCP avec la liste des clients. Bloc de code : route réelle GET /v2/search de cleo-legal-api
-     (src/routes/v2/search.ts l. 19-30, champs de src/internal/types.ts l. 57-80), clé « Bearer ld_live_ » (auth.ts l. 52).
-     Les valeurs du résultat sont une illustration (le décret n° 2010-166 du 22 février 2010 relatif à la sécurité des
-     jouets existe) : ce n'est pas une sortie réelle. Clients : README de ~/legal-mcp l. 3 et 97. -->
-<section class="section dt-acces-section" id="acces">
+<!-- ═══ AVAILABLE NOW ═══ -->
+<section class="section dt-acces-section" id="disponible">
   <div class="conteneur">
     <figure class="sy-chapitre">
       <img src="img:chaines" alt="">
       <figcaption class="sy-chapitre-texte">
-        <p class="sy-etiquette">API and MCP server</p>
-        <h2>One key, two ways in</h2>
-        <p class="sy-chapitre-lead">Aligned, interoperable data, the same across the whole chain: the API for teams building a product, the MCP server for compliance teams, inside their assistant.</p>
+        <p class="sy-etiquette">Available now</p>
+        <h2>Two APIs to integrate today</h2>
+        <p class="sy-chapitre-lead">Legal data and its provenance for legal and compliance software. Customs pre-classification for product catalogues.</p>
       </figcaption>
     </figure>
     <div class="dt-acces" data-apparait>
-      <article class="sy-carte dt-acces-carte" id="developpeurs">
-        <p class="sy-surtitre">For teams that build</p>
-        <h3>Data API</h3>
-        <p class="dt-acces-texte">Search regulatory data in one call, with the source of every result.</p>
-        <div class="dt-code" aria-label="Example request"><p class="dt-code-tete"><span>GET /v2/search</span></p><pre><code>GET /v2/search?q=toy safety&amp;country=FR&amp;type=legislation&amp;limit=5
-Authorization: Bearer ld_live_…
-
-{
-  "data": [
-    {
-      "title": "Décret n° 2010-166 du 22 février 2010 relatif à la sécurité des jouets",
-      "country": "FR",
-      "type": "legislation",
-      "date": "2010-02-22",
-      "url": "https://www.legifrance.gouv.fr/…",
-      "excerpt": "…",
-      "section_title": "…"
-    }
-  ],
-  "has_more": false
-}</code></pre></div>
-        <ul class="dt-liste"><li>Hybrid search, semantic and lexical</li><li>Filters by country, type of text, language and dates</li><li>The article of a document, the version in force on a date</li></ul>
-        <div class="sy-actions dt-actions"><a class="sy-bouton" href="21-inscription.html">Request access</a><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team</a></div>
+      <article class="sy-carte dt-acces-carte" id="legal-data">
+        <p class="sy-surtitre">In production</p>
+        <h3>Legal Data API</h3>
+        <p class="dt-acces-texte">Search, list, read, cite and monitor traceable legal documents from the sources included in your contract.</p>
+        <div class="dt-code" aria-label="Request example"><p class="dt-code-tete"><span>GET /v2/search</span></p><pre><code>GET /v2/search?q=product+safety&amp;country=AU&amp;type=legislation
+Host: api.legaldata.cleolabs.co
+Authorization: Bearer $CLEO_API_KEY</code></pre></div>
+        <dl class="dt-es">
+          <div><dt>You send</dt><dd>a query, then country, document type, language or dates</dd></div>
+          <div><dt>Cleo returns</dt><dd>title, country, type, source, date, source URL, excerpt; the full text when it has been captured</dd></div>
+          <div><dt>For</dt><dd>legaltechs, AI agents, regulatory monitoring, compliance tools</dd></div>
+        </dl>
+        <ul class="dt-liste"><li>Legislation, case law, guidelines, sanctions, recalls, treaties</li><li>History, amendments and change log</li><li>REST, OpenAPI and MCP server</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/signup">Get API key</a><a class="sy-bouton-secondaire" href="https://www.cleolabs.co/legal-data/docs">Docs</a></div>
       </article>
-      <article class="sy-carte dt-acces-carte">
-        <p class="sy-surtitre">For compliance teams</p>
-        <h3>MCP server</h3>
-        <p class="dt-acces-texte">The same data, inside the assistant you already use.</p>
-        <div class="dt-clients" aria-label="Server address">
-          <p class="dt-clients-tete"><span>Server address</span><code>https://api.legaldata.cleolabs.co/mcp</code></p>
-          <ul><li><b>Claude.ai and Claude Desktop</b><span>MCP</span></li><li><b>Cursor</b><span>MCP</span></li><li><b>Cline</b><span>MCP</span></li><li><b>Continue</b><span>MCP</span></li><li><b>Claude Code</b><span>MCP</span></li><li class="dt-clients-tous"><b>Any MCP-compatible client</b><span>MCP</span></li></ul>
-        </div>
-        <ul class="dt-liste"><li>Browser sign-in or access key</li><li>Read-only tools</li><li>The same key as the API</li></ul>
-        <div class="sy-actions dt-actions"><a class="sy-bouton" href="52-data-mcp-en.html">Connect Cleo</a></div>
+      <article class="sy-carte dt-acces-carte" id="classification">
+        <p class="sy-surtitre">Pilot</p>
+        <h3>Customs Classification API</h3>
+        <p class="dt-acces-texte">A product description becomes explained candidate customs codes, so you can pre-classify your catalogue and isolate the cases to validate.</p>
+        <div class="dt-code" aria-label="Request example"><p class="dt-code-tete"><span>GET /v2/customs/lookup</span></p><pre><code>GET /v2/customs/lookup?description=cotton+t-shirt&amp;system=cn8&amp;top=5
+Host: api.legaldata.cleolabs.co
+Authorization: Bearer $CLEO_API_KEY</code></pre></div>
+        <dl class="dt-es">
+          <div><dt>You send</dt><dd>a product description, then country, language and nomenclature</dd></div>
+          <div><dt>Cleo returns</dt><dd>candidates with code, nomenclature, chapter, confidence level, rationale and an ambiguity flag</dd></div>
+          <div><dt>For</dt><dd>e-commerce, marketplaces, PIM, PLM, ERP, import-export teams and customs brokers</dd></div>
+        </dl>
+        <ul class="dt-liste"><li>Nomenclatures served: HS6, EU CN8, Kazakhstan TN VED</li><li>Covered countries confirmed before the contract</li><li>Candidates to validate, never a binding ruling</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://www.cleolabs.co/legal-data/playground">Try classification</a><a class="sy-bouton-secondaire" href="https://www.cleolabs.co/legal-data/docs/customs">Docs</a></div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ═══ LA TRAÇABILITÉ ═══ Moonlit « Trace citations at the article level », ici en bloc sombre, seule zone #08093B de
-     la page. Faits : outils traverse_amendment_graph, get_law_as_of et get_changes (90 jours au plus), README de
-     ~/legal-mcp l. 36, 74, 76. Règle affichée : la teneur en plomb du CPSIA, section 101 (a), 100 ppm depuis le
-     14 août 2011, déjà sur la page (usages et étapes, 15/09/2026). -->
-<section class="section sy-sombre dt-trace-section" id="methode">
-  <div class="conteneur dt-duo dt-trace sy-sur-profond">
-    <div class="dt-trace-texte">
-      <h2>Every rule traces back to its article</h2>
-      <p class="sy-lead">Texts keep changing and overlapping. Every text is linked to the texts it amends, transposes or replaces, and every result points to its official source.</p>
-      <ul class="dt-liste"><li>The version in force on a date</li><li>Texts amended, transposed or replaced</li><li>Changes from the last 90 days</li></ul>
-    </div>
-    <div class="dt-panneau" aria-hidden="true" data-apparait>
-      <p class="dt-panneau-note">one question, the rule and its source</p>
-      <p class="dt-panneau-ligne dt-panneau-question"><i></i>Lead content, children's product, United States</p>
-      <p class="dt-panneau-fleche">rule</p>
-      <p class="dt-panneau-ligne">Lead content of accessible parts</p>
-      <p class="dt-panneau-fleche">article</p>
-      <p class="dt-panneau-ligne">CPSIA, section 101 (a)</p>
-      <p class="dt-panneau-fleche">limit</p>
-      <p class="dt-panneau-ligne">100 ppm by weight, in force on 14 August 2011</p>
-      <p class="dt-panneau-note">every result points to its source</p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ TROIS PILIERS ═══ Moonlit « Builders and legal professionals choose us » : trois cartes numérotées. Faits :
-     champ url de chaque résultat (types.ts l. 65), search_legal_bulk 1 à 25 requêtes (README l. 19), même clé ld_live_
-     pour /v2 et /mcp (auth.ts l. 52, auth-mcp.ts l. 4), outils en lecture seule et clé jamais journalisée, révocable
-     (README l. 196 à 199). Pas d'ISO 27001 « certifié », pas d'hébergement affirmé pour l'API. -->
-<section class="section dt-piliers-section" id="piliers">
+<!-- ═══ HOW USAGE WORKS ═══ -->
+<section class="section dt-usage-section" id="usage">
   <div class="conteneur">
-    <figure class="sy-chapitre">
-      <img src="img:masse-lunettes" alt="">
-      <figcaption class="sy-chapitre-texte">
-        <p class="sy-etiquette">Data</p>
-        <h2>Data you can verify, built for AI</h2>
-        <p class="sy-chapitre-lead">You cannot automate what you cannot read. Every rule is structured and linked to its official text.</p>
-      </figcaption>
-    </figure>
-    <div class="dt-piliers" data-apparait>
-      <article class="sy-carte-blanche dt-pilier"><span class="dt-numero">1</span><h3>Verifiable at the source</h3><p>Every result points to the text's official address.</p><ul class="dt-liste"><li>Every rule linked to its article</li><li>Its entry-into-force date</li><li>Changes from the last 90 days</li></ul></article>
-      <article class="sy-carte-blanche dt-pilier"><span class="dt-numero">2</span><h3>Built for AI</h3><p>The same key for the API and the MCP server.</p><ul class="dt-liste"><li>Hybrid search, semantic and lexical</li><li>The article extracted from the document</li><li>Up to 25 searches in one call</li></ul></article>
-      <article class="sy-carte-blanche dt-pilier"><span class="dt-numero">3</span><h3>A key under your control</h3><p>Browser sign-in, or a key you can revoke at any time.</p><ul class="dt-liste"><li>Read-only tools</li><li>Key sent encrypted, never logged</li></ul><a class="sy-lien dt-lien" href="30-securite.html">See security <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></article>
-    </div>
+    <div class="sy-entete" data-apparait><p class="sy-surtitre">Usage</p><h2>One key, a monthly volume, a public rate card</h2><p class="sy-lead">Every call uses API units. Here is what each operation costs.</p></div>
+    <ol class="dt-usage" data-apparait>
+      <li><b>1</b><span>API unit</span><p>A Legal Data search or document read</p></li>
+      <li><b>N</b><span>API units</span><p>A bulk operation: one unit per query or identifier processed</p></li>
+      <li><b>5</b><span>API units</span><p>A composite compliance check</p></li>
+      <li><b>100</b><span>API units</span><p>A customs classification</p></li>
+    </ol>
   </div>
 </section>
 
-<!-- ═══ L'OFFRE ═══ Moonlit « Simple where it should be, bespoke where it has to be », SANS PRIX.
-     À TRANCHER : le modèle de prix et le périmètre de l'offre Data (pays, familles de produits) ne sont pas arrêtés. -->
-<section class="section dt-offre-section" id="offre">
+<!-- ═══ PRICING ═══ -->
+<section class="section dt-offre-section" id="tarifs">
   <div class="conteneur">
     <figure class="sy-chapitre">
       <img src="img:fenetres" alt="">
       <figcaption class="sy-chapitre-texte">
-        <p class="sy-etiquette">Access</p>
-        <h2>Access sized to your use</h2>
-        <p class="sy-chapitre-lead">The countries and product families your software needs.</p>
+        <p class="sy-etiquette">Pricing</p>
+        <h2>Start for free, go to production when you are ready</h2>
+        <p class="sy-chapitre-lead">The same data and the same endpoints in every plan. Only the volume changes.</p>
       </figcaption>
     </figure>
-    <div class="dt-offre" data-apparait>
-      <article class="sy-carte dt-offre-carte"><p class="sy-surtitre">Data · MCP server</p><p class="dt-offre-grand">On request</p><p class="dt-offre-texte">In Claude, Cursor, Cline, Continue, Claude Code and any MCP-compatible client.</p><ul class="dt-liste"><li>The same rule base</li><li>Every result points to its source</li></ul><div class="sy-actions dt-actions"><a class="sy-bouton" href="21-inscription.html">Request access</a></div></article>
-      <article class="sy-carte dt-offre-carte"><p class="sy-surtitre">Data · API</p><p class="dt-offre-grand">Tailored</p><p class="dt-offre-texte">To build regulatory data into your product.</p><ul class="dt-liste"><li>Search, articles, versions in force, changes</li><li>Filters by country, type of text, language and dates</li></ul><div class="sy-actions dt-actions"><a class="sy-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team</a></div></article>
+    <div class="dt-tarifs" data-apparait>
+      <article class="sy-carte dt-offre-carte dt-tarif">
+        <p class="sy-surtitre">Sandbox</p>
+        <p class="dt-offre-grand">€0</p>
+        <p class="dt-offre-texte">Test your integration, no card required.</p>
+        <ul class="dt-liste"><li>200 API units, lifetime</li><li>Same endpoints, limited rate</li><li>Test use only</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="https://legaldata-public.cleolabs.co/signup">Get API key</a></div>
+      </article>
+      <article class="sy-carte dt-offre-carte dt-tarif">
+        <p class="sy-surtitre">Starter</p>
+        <p class="dt-offre-grand">€100<small>/month</small></p>
+        <p class="dt-offre-texte">Build a first product and go live. €80 per month billed yearly, €960 per year.</p>
+        <ul class="dt-liste"><li>100,000 API units per month</li><li>Same data and endpoints</li><li>That is 1,000 customs classifications per month</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/signup">Choose Starter</a></div>
+      </article>
+      <article class="sy-carte dt-offre-carte dt-tarif">
+        <p class="sy-surtitre">Pro</p>
+        <p class="dt-offre-grand">€349<small>/month</small></p>
+        <p class="dt-offre-texte">Run a customer-facing product at higher volume. €279 per month billed yearly, €3,348 per year.</p>
+        <ul class="dt-liste"><li>1,000,000 API units per month</li><li>Integration onboarding</li><li>20% off with yearly billing</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/signup">Choose Pro</a></div>
+      </article>
+      <article class="sy-carte dt-offre-carte dt-tarif">
+        <p class="sy-surtitre">Enterprise</p>
+        <p class="dt-offre-grand">Custom</p>
+        <p class="dt-offre-texte">Negotiated volume, rate and usage rights, on an annual contract.</p>
+        <ul class="dt-liste"><li>Custom quota and rate</li><li>Contractual service commitment</li><li>Redistribution rights written into the contract</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact sales</a></div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ═══ QUESTIONS FRÉQUENTES ═══ 16/09/2026, wording tiré des calls des deux derniers mois (refonte/wording/sources/calls/).
-     Même source que la page FR : fiabilité #76 #78, sources #77 #78, textes #15 #16 #74 #82, prix #72, IA qui se trompe #27 #54. À TRANCHER : version consolidée, fréquence de mise à jour, accès d'essai, hébergement de la Data API. -->
+<!-- ═══ PROOF AND COVERAGE ═══ -->
+<section class="section sy-sombre dt-trace-section" id="couverture">
+  <div class="conteneur dt-duo dt-trace sy-sur-profond">
+    <div class="dt-trace-texte">
+      <h2>Every document keeps its source</h2>
+      <p class="sy-lead">Every result returns its identifier, its source and the URL of the original portal. The sources included are the ones in your contract, and coverage can be checked country by country.</p>
+      <ul class="sy-chiffres dt-preuve-chiffres"><li><b>64</b><span>verified primary public portals</span></li><li><b>44</b><span>countries or scopes, audit of 16 September 2026</span></li></ul>
+      <div class="sy-actions dt-actions"><a class="sy-bouton-blanc" href="26-legal-data-en.html">Explore coverage</a></div>
+    </div>
+    <div class="dt-panneau" aria-hidden="true" data-apparait>
+      <p class="dt-panneau-note">a request, a document and its source</p>
+      <p class="dt-panneau-ligne dt-panneau-question"><i></i>GET /v2/documents?country=AU&amp;source=legislation_au</p>
+      <p class="dt-panneau-fleche">document</p>
+      <p class="dt-panneau-ligne">Therapeutic Goods Act 1989</p>
+      <p class="dt-panneau-fleche">source</p>
+      <p class="dt-panneau-ligne">legislation_au, legislation</p>
+      <p class="dt-panneau-fleche">official portal</p>
+      <p class="dt-panneau-ligne">www.legislation.gov.au</p>
+      <p class="dt-panneau-note">real response, recorded on 17 September 2026</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COMING SOON ═══ -->
+<section class="section dt-bientot-section" id="bientot">
+  <div class="conteneur">
+    <div class="sy-entete" data-apparait><p class="sy-surtitre">Coming soon</p><h2>Two APIs in preparation</h2><p class="sy-lead">To use them first and build them with the team, join the design partner program.</p></div>
+    <div class="dt-bientot" data-apparait>
+      <article class="sy-carte-blanche dt-pilier">
+        <p class="sy-surtitre">Coming soon</p>
+        <h3>Product Scope</h3>
+        <p>For a product, its use and its market: the texts, obligations, evidence and restrictions that apply, and why.</p>
+        <ul class="dt-liste"><li>For PLM, PIM, brands and manufacturers</li><li>Input: product, materials, use, market</li><li>Output: rules, obligations, evidence and sources</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Join the design partner program</a></div>
+      </article>
+      <article class="sy-carte-blanche dt-pilier">
+        <p class="sy-surtitre">Coming soon</p>
+        <h3>Marketplace Gate</h3>
+        <p>A product listing, its seller and their supporting documents, checked before going live.</p>
+        <ul class="dt-liste"><li>For marketplaces and seller onboarding</li><li>Input: product, seller, country, supporting documents</li><li>Output: publish, fix or review, with the reasons</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Join the design partner program</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FREQUENTLY ASKED QUESTIONS ═══ -->
 <section class="section dt-questions-section" id="questions">
   <div class="conteneur">
     <div class="sy-entete"><p class="sy-surtitre">Data</p><h2>Frequently asked questions</h2></div>
-    <div class="faq dt-faq">
+    <div class="faq dt-faq" data-schema="faq">
       <details open>
-        <summary>How reliable is the data?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">Cleo's architecture is described in a <a href="23-research-en.html">research paper</a> published in February 2026: 93 to 97% precision on binding texts, evaluated on 7,676 regulations.</div>
+        <summary>Which API should I choose?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Legal Data API if your software searches, reads or cites legal documents. Customs Classification API if your software needs to suggest a customs code from a product description.</div>
       </details>
       <details>
-        <summary>What if the AI gets it wrong?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">Every result cites the official text and the article behind the rule, so your team can check the answer at the source.</div>
+        <summary>Are the customs codes final?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">They are explained candidates, with their confidence level and an ambiguity flag. Your team or your customs broker validates the code before the declaration.</div>
       </details>
       <details>
-        <summary>Where does the data come from?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">From official sources: 3,700 sources and 19,000 regulatory authorities tracked, across 106 countries. Every result points to the official address of the text.</div>
-      </details>
-      <details>
-        <summary>Texts keep changing: how do I keep track?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">Every text is linked to the texts it amends, transposes or replaces. You read the version in force on a given date, and the changes of the last 90 days.</div>
+        <summary>Where do the Legal Data API documents come from?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Every document states its source and the URL of the original portal. The sources included in your access are named in your contract. <a href="26-legal-data-en.html">Explore coverage</a>.</div>
       </details>
       <details>
         <summary>How much does access cost?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">The price depends on the countries and product families your software needs. <a href="#dites-nous">Describe your use case</a> and the team will reply.</div>
+        <div class="reponse">A free Sandbox to test, Starter at €100 per month, Pro at €349 per month, Enterprise on quote. <a href="#tarifs">See pricing</a>.</div>
+      </details>
+      <details>
+        <summary>Can I use Legal Data in an AI assistant?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Yes, with <a href="52-data-mcp-en.html">the MCP server</a>, using the same key as the API.</div>
+      </details>
+      <details>
+        <summary>When are Product Scope and Marketplace Gate coming?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">To use them first, become a design partner: <a href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">write to the team</a> with your use case.</div>
       </details>
     </div>
   </div>
 </section>
-<!-- ═══ APPEL FINAL SUR PHOTO ═══ composant d'identité 2.4 (IDENTITE.md), stylé par la feuille système. -->
+
+<!-- ═══ FINAL CALL ON PHOTO ═══ -->
 <section class="section sy-final-photo" id="contact">
   <figure>
     <img src="img:masse-chargeur" alt="">
     <div class="sy-final-texte">
-      <h2>Connect Cleo to your assistants and your software</h2>
-      <p>Tell us which countries and product families your software needs to cover.</p>
-      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact the team</a><a class="sy-bouton-secondaire" href="26-legal-data-en.html">See the coverage</a></div>
+      <h2>Connect Cleo to your product</h2>
+      <p>A key, the documentation, and the team for the sources and countries you need.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://legaldata-public.cleolabs.co/signup">Get API key</a><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact sales</a></div>
     </div>
   </figure>
 </section>

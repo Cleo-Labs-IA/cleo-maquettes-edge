@@ -101,11 +101,36 @@ body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"],
   & main .dt-offre-carte .dt-actions:not(#_):not(#_){margin-top:auto;padding-top:28px}
   & main .dt-renvoi:not(#_):not(#_){display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;margin:40px 0 0;color:var(--c-texte-2)}
 
+  /* ── 17/09/2026, page 39 refaite sur outputs/cleo-api-offer-pricing.html (Naomie : « nourris-toi de ça pour refaire la
+     partie data ») : entrée et sortie des deux API, barème d'API units, quatre offres, preuve chiffrée, API à venir. ── */
+  & main > section:is(.dt-usage-section, .dt-bientot-section):not(#_):not(#_){padding-top:var(--e-section) !important;padding-bottom:var(--e-section) !important}
+  & main .dt-es:not(#_):not(#_){width:100%;margin:20px 0 0;padding:0}
+  & main .dt-es > div:not(#_):not(#_){display:grid;grid-template-columns:112px minmax(0,1fr);gap:12px;padding:10px 0;border-top:1px solid var(--c-filet)}
+  & main .dt-es dt:not(#_):not(#_){font-size:var(--t-legende);font-weight:500;line-height:1.45;color:var(--c-texte)}
+  & main .dt-es dd:not(#_):not(#_){margin:0;font-size:.9375rem;line-height:1.45;color:var(--c-texte-2)}
+  & main .dt-usage:not(#_):not(#_){display:grid;grid-template-columns:repeat(4, minmax(0, 1fr));gap:var(--e-bento);margin:0;padding:0;list-style:none}
+  & main .dt-usage > li:not(#_):not(#_){display:flex;flex-direction:column;align-items:flex-start;margin:0;padding:var(--p-carte);border-radius:var(--r-carte);background:var(--c-carte);box-shadow:0 0 0 1px var(--c-filet)}
+  & main .dt-usage > li > b:not(#_):not(#_){font-size:var(--t-h2);line-height:1;letter-spacing:var(--t-h2-ls);font-weight:500;font-variant-numeric:tabular-nums;color:var(--c-texte)}
+  & main .dt-usage > li > span:not(#_):not(#_){margin-top:8px;font-size:var(--t-legende);font-weight:500;letter-spacing:.04em;color:var(--c-accent)}
+  & main .dt-usage > li > p:not(#_):not(#_){margin:16px 0 0;font-size:.9375rem;line-height:1.45;color:var(--c-texte-2)}
+  & main .dt-tarifs:not(#_):not(#_){display:grid;grid-template-columns:repeat(4, minmax(0, 1fr));gap:var(--e-bento)}
+  & main .dt-tarif .dt-offre-grand:not(#_):not(#_){font-size:clamp(2rem, 1.3rem + 1.1vw, 2.625rem);white-space:nowrap}
+  & main .dt-tarif .dt-offre-grand small:not(#_):not(#_){margin-left:4px;font-size:.9375rem;font-weight:400;letter-spacing:0;color:var(--c-texte-3)}
+  & main .dt-tarif .dt-offre-texte:not(#_):not(#_){min-height:4.4em}
+  & main .dt-bientot:not(#_):not(#_){display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:var(--e-bento)}
+  & main .dt-bientot .dt-pilier h3:not(#_):not(#_){margin-top:12px}
+  & main .dt-bientot .dt-actions:not(#_):not(#_){margin-top:auto;padding-top:24px}
+  & main .dt-preuve-chiffres:not(#_):not(#_){margin-top:36px;grid-template-columns:repeat(2, minmax(0, 220px))}
+  & main .dt-trace .sy-chiffres > li > b:not(#_):not(#_):not(#_){color:#FFFFFF !important}
+  & main .dt-trace .sy-chiffres > li > span:not(#_):not(#_):not(#_){color:rgba(255,255,255,.74) !important}
+
   /* ── Tablette et téléphone ── */
   @media (max-width:1023px){
     & main .dt-duo:not(#_):not(#_){grid-template-columns:minmax(0,1fr);gap:48px}
     & main .dt-acces:not(#_):not(#_){grid-template-columns:minmax(0,1fr)}
     & main .dt-piliers:not(#_):not(#_){grid-template-columns:minmax(0,1fr)}
+    & main :is(.dt-usage, .dt-tarifs):not(#_):not(#_){grid-template-columns:repeat(2, minmax(0, 1fr))}
+    & main .dt-bientot:not(#_):not(#_){grid-template-columns:minmax(0,1fr)}
   }
   @media (max-width:600px){
     & main .dt-besoin-ligne:not(#_):not(#_){flex-direction:column}
@@ -116,5 +141,8 @@ body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"],
     & main .dt-offre:not(#_):not(#_){grid-template-columns:minmax(0,1fr)}
     & main .dt-panneau:not(#_):not(#_){padding:18px}
     & main .dt-code pre:not(#_):not(#_){font-size:.75rem}
+    & main :is(.dt-usage, .dt-tarifs):not(#_):not(#_){grid-template-columns:minmax(0,1fr)}
+    & main .dt-es > div:not(#_):not(#_){grid-template-columns:minmax(0,1fr);gap:2px}
+    & main .dt-tarif .dt-offre-texte:not(#_):not(#_){min-height:0}
   }
 }

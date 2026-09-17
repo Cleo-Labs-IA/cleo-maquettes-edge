@@ -1,235 +1,233 @@
 <!--NAV-->
-
-<!-- WORDING PASSE W2 16/09/2026 (refonte/wording/passe-w2/journal.json) : propositions SÛR seulement, sans attribution ni chiffre entendu. Verbatims : #70 P48 P49 C28 C29 m16 #82 C69 C70. -->
-<!-- ═══ DATA · API ET SERVEUR MCP ═══ 16/09/2026, agent D (scratchpad/agents/refonte/IDENTITE.md §4). Structure de
-     moonlit.ai/connect, relevée le 16/09 (scratchpad/moonlit2/connect-*) : haut de page, champ « dites-nous ce que vous
-     voulez faire », couverture en chiffres, une clé et deux accès, la traçabilité, trois piliers, l'offre, l'appel final.
-     Composition et matière d'identité Tenkara (bento, appel final sur photo), Satoshi seule.
-     Faits : scratchpad/agents/refonte/identite-data/faits.md (README de ~/legal-mcp, routes de ~/cleo-legal-api).
-     Absents faute de source : prix, quotas, nombre d'outils, badges « Live », logos de clients, hébergement de l'API.
-     Skills : retirés de Data (Naomie, 16/09 : « skills que dans ressources, pas dans data »).
-     Générée par scratchpad/agents/refonte/identite-data/generer.mjs. L'ancien générateur data-simple est périmé. -->
-
-<!-- ═══ HAUT DE PAGE ═══ h1 : variante 2 de refonte/wording/heros.md (SITE 39). La variante 1 porte la page MCP (52),
-     comme chez Moonlit où « inside the AI you already use » est le titre de /mcp. -->
+<!-- ═══ DATA · DEUX API, LEUR USAGE, LEURS TARIFS ═══ 17/09/2026, Naomie : « outputs/cleo-api-offer-pricing.html, nourris-toi
+     de ça pour refaire la partie data ». Ordre repris de la section « Nouvelle landing » de ce document : haut de page, les deux
+     API disponibles, comment l'usage fonctionne, tarifs, preuve et couverture, bientôt disponible. Puis questions et appel final.
+     Matière et composants du site tels quels (sy-hero-photo, sy-chapitre, dt-acces, dt-code, dt-offre, sy-sombre, dt-panneau) :
+     aucune couche commune modifiée, seulement la feuille dt- de Data.
+     Faits, tous tirés du document (snapshot du 17/09/2026, « 46/52 numeric claims checked against source ») :
+     - Legal Data API « API en production » ; promesse vendable reprise telle quelle : documents juridiques traçables provenant
+       des sources incluses dans le contrat. Jamais « tout le corpus est officiel » (corpus mixte, filtre official_only absent).
+     - Customs Classification API « pilote payant » ; promesse : pré-classer le catalogue et isoler les cas à faire valider.
+       Nomenclatures réellement servies par le classifieur : HS6 universel, CN8 (UE), TN VED (Kazakhstan) ; hs8 et hts acceptés
+       par la route mais sans ligne, donc non annoncés.
+     - Exemples curl : « Exemple développeur correct » du document, sans réponse inventée.
+     - Tarifs Starter et Pro, remise annuelle de 20 % : code de cleo-legal-public (PricingCards.tsx), en ligne sur
+       /legal-data/pricing le 17/09. ⚠️ RECOMMANDATIONS du document, PAS encore des conditions actives : Sandbox à 0 € avec
+       200 API units à vie (le site en ligne affiche Free, 3 appels), poids de 100 API units par classification douanière (à
+       coder). ⚠️ À faire avant publication (document, « Avant de publier le nouveau pricing ») : quota Starter réel dans le
+       middleware, Price IDs Stripe de production, droits d'usage.
+     - Preuve : 64 portails publics primaires vérifiés, 44 pays ou périmètres (audit official-only du 16/09). Le total de
+       documents n'est pas affiché : il compte aussi les sources secondaires. Réponse réelle AU : Therapeutic Goods Act 1989,
+       source legislation_au, portail officiel www.legislation.gov.au (ligne vérifiée de la matrice).
+     - Liens relevés le 17/09 : /legal-data/docs et /legal-data/docs/customs (200), /legal-data/playground (200, onglet Customs
+       lookup), legaldata-public.cleolabs.co/signup (200). ⚠️ Le bouton « Get API key » de www.cleolabs.co/legal-data/pricing
+       pointe vers /signup, qui répond 404 sur www.cleolabs.co. -->
 <section class="section sy-hero-photo" id="haut">
   <div class="conteneur">
     <figure class="sy-chapitre sy-chapitre-hero">
       <img src="img:cables" alt="">
       <figcaption class="sy-chapitre-texte">
         <p class="sy-etiquette">Data</p>
-        <h1>La donnée réglementaire produit, par API et serveur MCP.</h1>
-        <p class="sy-chapitre-lead">Une API l'intègre à votre produit. Un serveur MCP l'apporte dans Claude, Cursor et tout client compatible MCP. Chaque résultat dit d'où vient la règle et à quel article elle renvoie.</p>
-        <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="21-inscription.html">Demander un accès</a><a class="sy-bouton-blanc" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contacter l'équipe</a></div>
+        <h1>Donnée juridique traçable, classification douanière expliquée.</h1>
+        <p class="sy-chapitre-lead">Deux API prêtes pour votre produit : chercher et récupérer des documents juridiques avec leur source, et pré-classer votre catalogue en codes douaniers.</p>
+        <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://legaldata-public.cleolabs.co/signup">Obtenir une clé API</a><a class="sy-bouton-blanc" href="https://www.cleolabs.co/legal-data/docs">Voir la documentation</a></div>
       </figcaption>
     </figure>
   </div>
 </section>
 
-<!-- PHOTO PARTOUT (16/09/2026, refonte/PHOTO.md) : le formulaire « dites-nous » passe juste sous le haut de page sur photo. -->
-<section class="section dt-besoin-section" id="dites-nous">
-  <div class="conteneur">
-    <!-- Le champ de Moonlit Connect, en vrai formulaire GET vers le rendez-vous HubSpot (modèle du formulaire de la page 40). -->
-    <form class="dt-besoin sy-carte-blanche" id="besoin" method="get" action="https://meetings.hubspot.com/anaelle-guez/rendez-vous" data-apparait>
-      <h2 class="dt-besoin-titre">Ou dites-nous ce que vous voulez faire de la donnée réglementaire</h2>
-      <p class="dt-besoin-texte">Décrivez votre usage. Un expert de l'équipe vous répond avec le chemin le plus direct : l'API ou le serveur MCP.</p>
-      <label class="dt-cache" for="f-data-besoin">Votre usage</label>
-      <textarea id="f-data-besoin" name="besoin" rows="4" placeholder="Je construis un outil pour nos équipes qualité : il me faut les mentions à afficher sur nos jouets en France, en Allemagne et en Italie, avec l'article qui impose chacune."></textarea>
-      <div class="dt-besoin-ligne">
-        <label class="dt-cache" for="f-data-email">Email professionnel</label>
-        <input id="f-data-email" name="email" type="email" autocomplete="email" placeholder="camille@marque.com" required>
-        <button class="sy-bouton" type="submit">Envoyer</button>
-      </div>
-      <p class="dt-besoin-note">Vos données servent seulement à vous répondre.</p>
-    </form>
-  </div>
-</section>
-
-<!-- ═══ COUVERTURE ═══ Moonlit « The deepest global legal data layer for AI » : les chiffres, puis « View coverage ».
-     Ici le bento d'identité 2.1, variante sans citation. Chiffres canon (CANONICAL-FACTS, lexique §7). Fiches de la
-     carte bleue : références déjà citées sur le site (directive 2009/48/CE, CPSIA section 101, règlement (UE) 2023/988). -->
-<section class="section dt-couverture" id="couverture">
-  <div class="conteneur">
-    <figure class="sy-chapitre">
-      <img src="img:briques" alt="">
-      <figcaption class="sy-chapitre-texte">
-        <p class="sy-etiquette">Couverture</p>
-        <h2>106 pays, une seule base de règles</h2>
-        <p class="sy-chapitre-lead">Chaque marché a ses règles et sa façon de les appliquer. Cleo rattache chacune à son article et à sa date d'entrée en vigueur.</p>
-      </figcaption>
-    </figure>
-    <div class="sy-bento" data-apparait-groupe>
-      <figure class="sy-bento-photo"><img src="img:classeurs" alt=""><p class="sy-etiquette">Produit, code SH, réglementation, autorité</p><p>La chaîne que Cleo suit en continu, maillon par maillon.</p></figure>
-      <div class="sy-bento-creme"><b class="sy-chiffre-raye">106</b><span>pays suivis</span></div>
-      <div class="sy-bento-bleu"><b class="sy-chiffre-raye">25 000</b><span>réglementations cartographiées</span>
-        <div class="sy-fiches" aria-hidden="true"><dl class="sy-fiche"><dt>Directive 2009/48/CE</dt><dd><span>Objet</span><span>Jouets</span></dd><dd><span>Zone</span><span>UE</span></dd></dl><dl class="sy-fiche"><dt>CPSIA, section 101</dt><dd><span>Objet</span><span>Plomb</span></dd><dd><span>Zone</span><span>États-Unis</span></dd></dl><dl class="sy-fiche"><dt>Règlement (UE) 2023/988</dt><dd><span>Objet</span><span>RSGP</span></dd><dd><span>Zone</span><span>UE</span></dd></dl></div>
-      </div>
-    </div>
-    <div class="dt-couverture-pied">
-      <ul class="sy-chiffres dt-chiffres"><li><b>19 000</b><span>autorités réglementaires suivies</span></li><li><b>3 700</b><span>sources officielles</span></li></ul>
-      <a class="sy-lien dt-lien" href="26-legal-data.html">Voir la couverture <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ UNE CLÉ, DEUX ACCÈS ═══ Moonlit « One key, one data layer, two access modes » : la carte Data API avec son bloc
-     de code, la carte serveur MCP avec la liste des clients. Bloc de code : route réelle GET /v2/search de cleo-legal-api
-     (src/routes/v2/search.ts l. 19-30, champs de src/internal/types.ts l. 57-80), clé « Bearer ld_live_ » (auth.ts l. 52).
-     Les valeurs du résultat sont une illustration (le décret n° 2010-166 du 22 février 2010 relatif à la sécurité des
-     jouets existe) : ce n'est pas une sortie réelle. Clients : README de ~/legal-mcp l. 3 et 97. -->
-<section class="section dt-acces-section" id="acces">
+<!-- ═══ DISPONIBLE MAINTENANT ═══ Deux cartes : entrée, sortie, exemple (document, « Available now »). -->
+<section class="section dt-acces-section" id="disponible">
   <div class="conteneur">
     <figure class="sy-chapitre">
       <img src="img:chaines" alt="">
       <figcaption class="sy-chapitre-texte">
-        <p class="sy-etiquette">API et serveur MCP</p>
-        <h2>Une clé, deux accès</h2>
-        <p class="sy-chapitre-lead">Une donnée alignée et interopérable, la même pour toute la chaîne : l'API pour les équipes qui construisent un produit, le serveur MCP pour les équipes conformité, dans leur assistant.</p>
+        <p class="sy-etiquette">Disponible maintenant</p>
+        <h2>Deux API à intégrer aujourd'hui</h2>
+        <p class="sy-chapitre-lead">La donnée juridique et sa provenance pour les logiciels juridiques et de conformité. La pré-classification douanière pour les catalogues produits.</p>
       </figcaption>
     </figure>
     <div class="dt-acces" data-apparait>
-      <article class="sy-carte dt-acces-carte" id="developpeurs">
-        <p class="sy-surtitre">Pour les équipes qui construisent</p>
-        <h3>Data API</h3>
-        <p class="dt-acces-texte">La recherche dans la donnée réglementaire en un appel, avec la source de chaque résultat.</p>
-        <div class="dt-code" aria-label="Exemple de requête"><p class="dt-code-tete"><span>GET /v2/search</span></p><pre><code>GET /v2/search?q=sécurité des jouets&amp;country=FR&amp;type=legislation&amp;limit=5
-Authorization: Bearer ld_live_…
-
-{
-  "data": [
-    {
-      "title": "Décret n° 2010-166 du 22 février 2010 relatif à la sécurité des jouets",
-      "country": "FR",
-      "type": "legislation",
-      "date": "2010-02-22",
-      "url": "https://www.legifrance.gouv.fr/…",
-      "excerpt": "…",
-      "section_title": "…"
-    }
-  ],
-  "has_more": false
-}</code></pre></div>
-        <ul class="dt-liste"><li>Recherche hybride, sémantique et lexicale</li><li>Filtres par pays, type de texte, langue et dates</li><li>L'article d'un document, la version en vigueur à une date</li></ul>
-        <div class="sy-actions dt-actions"><a class="sy-bouton" href="21-inscription.html">Demander un accès</a><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contacter l'équipe</a></div>
+      <article class="sy-carte dt-acces-carte" id="legal-data">
+        <p class="sy-surtitre">En production</p>
+        <h3>Legal Data API</h3>
+        <p class="dt-acces-texte">Chercher, lister, lire, citer et suivre des documents juridiques traçables, provenant des sources incluses dans votre contrat.</p>
+        <div class="dt-code" aria-label="Exemple de requête"><p class="dt-code-tete"><span>GET /v2/search</span></p><pre><code>GET /v2/search?q=product+safety&amp;country=AU&amp;type=legislation
+Host: api.legaldata.cleolabs.co
+Authorization: Bearer $CLEO_API_KEY</code></pre></div>
+        <dl class="dt-es">
+          <div><dt>Vous envoyez</dt><dd>une recherche, puis le pays, le type de document, la langue ou les dates</dd></div>
+          <div><dt>Cleo renvoie</dt><dd>titre, pays, type, source, date, URL de la source, extrait ; le texte intégral lorsqu'il a été capturé</dd></div>
+          <div><dt>Pour</dt><dd>legaltechs, agents IA, veille réglementaire, outils de conformité</dd></div>
+        </dl>
+        <ul class="dt-liste"><li>Législation, jurisprudence, lignes directrices, sanctions, rappels, traités</li><li>Historique, amendements et journal des changements</li><li>REST, OpenAPI et serveur MCP</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/signup">Obtenir une clé API</a><a class="sy-bouton-secondaire" href="https://www.cleolabs.co/legal-data/docs">Documentation</a></div>
       </article>
-      <article class="sy-carte dt-acces-carte">
-        <p class="sy-surtitre">Pour les équipes conformité</p>
-        <h3>Serveur MCP</h3>
-        <p class="dt-acces-texte">La même donnée, dans l'assistant que vous utilisez déjà.</p>
-        <div class="dt-clients" aria-label="Adresse du serveur">
-          <p class="dt-clients-tete"><span>Adresse du serveur</span><code>https://api.legaldata.cleolabs.co/mcp</code></p>
-          <ul><li><b>Claude.ai et Claude Desktop</b><span>MCP</span></li><li><b>Cursor</b><span>MCP</span></li><li><b>Cline</b><span>MCP</span></li><li><b>Continue</b><span>MCP</span></li><li><b>Claude Code</b><span>MCP</span></li><li class="dt-clients-tous"><b>Tout client compatible MCP</b><span>MCP</span></li></ul>
-        </div>
-        <ul class="dt-liste"><li>Connexion par navigateur ou clé d'accès</li><li>Outils en lecture seule</li><li>La même clé que l'API</li></ul>
-        <div class="sy-actions dt-actions"><a class="sy-bouton" href="52-data-mcp.html">Brancher Cleo</a></div>
+      <article class="sy-carte dt-acces-carte" id="classification">
+        <p class="sy-surtitre">Pilote</p>
+        <h3>Customs Classification API</h3>
+        <p class="dt-acces-texte">Une description produit devient des codes douaniers candidats, expliqués, pour pré-classer votre catalogue et isoler les cas à faire valider.</p>
+        <div class="dt-code" aria-label="Exemple de requête"><p class="dt-code-tete"><span>GET /v2/customs/lookup</span></p><pre><code>GET /v2/customs/lookup?description=cotton+t-shirt&amp;system=cn8&amp;top=5
+Host: api.legaldata.cleolabs.co
+Authorization: Bearer $CLEO_API_KEY</code></pre></div>
+        <dl class="dt-es">
+          <div><dt>Vous envoyez</dt><dd>une description produit, puis le pays, la langue et la nomenclature</dd></div>
+          <div><dt>Cleo renvoie</dt><dd>des candidats avec code, nomenclature, chapitre, niveau de confiance, justification et indicateur d'ambiguïté</dd></div>
+          <div><dt>Pour</dt><dd>e-commerce, marketplaces, PIM, PLM, ERP, équipes import-export et commissionnaires</dd></div>
+        </dl>
+        <ul class="dt-liste"><li>Nomenclatures servies : HS6, NC8 de l'Union européenne, TN VED du Kazakhstan</li><li>Pays couverts annoncés avant le contrat</li><li>Des candidats à faire valider, jamais un classement opposable</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://www.cleolabs.co/legal-data/playground">Tester la classification</a><a class="sy-bouton-secondaire" href="https://www.cleolabs.co/legal-data/docs/customs">Documentation</a></div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ═══ LA TRAÇABILITÉ ═══ Moonlit « Trace citations at the article level », ici en bloc sombre, seule zone #08093B de
-     la page. Faits : outils traverse_amendment_graph, get_law_as_of et get_changes (90 jours au plus), README de
-     ~/legal-mcp l. 36, 74, 76. Règle affichée : la teneur en plomb du CPSIA, section 101 (a), 100 ppm depuis le
-     14 août 2011, déjà sur la page (usages et étapes, 15/09/2026). -->
-<section class="section sy-sombre dt-trace-section" id="methode">
-  <div class="conteneur dt-duo dt-trace sy-sur-profond">
-    <div class="dt-trace-texte">
-      <h2>Chaque règle remonte à son article</h2>
-      <p class="sy-lead">Les textes vivent et se superposent. Chaque texte est relié à ceux qu'il modifie, transpose ou remplace, et chaque résultat renvoie à sa source officielle.</p>
-      <ul class="dt-liste"><li>La version en vigueur à une date</li><li>Les textes modifiés, transposés ou remplacés</li><li>Les changements des 90 derniers jours</li></ul>
-    </div>
-    <div class="dt-panneau" aria-hidden="true" data-apparait>
-      <p class="dt-panneau-note">une question, la règle et sa source</p>
-      <p class="dt-panneau-ligne dt-panneau-question"><i></i>Teneur en plomb, article pour enfants, États-Unis</p>
-      <p class="dt-panneau-fleche">règle</p>
-      <p class="dt-panneau-ligne">Teneur en plomb des parties accessibles</p>
-      <p class="dt-panneau-fleche">article</p>
-      <p class="dt-panneau-ligne">CPSIA, section 101 (a)</p>
-      <p class="dt-panneau-fleche">seuil</p>
-      <p class="dt-panneau-ligne">100 ppm en poids, en vigueur le 14 août 2011</p>
-      <p class="dt-panneau-note">chaque résultat renvoie à sa source</p>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ TROIS PILIERS ═══ Moonlit « Builders and legal professionals choose us » : trois cartes numérotées. Faits :
-     champ url de chaque résultat (types.ts l. 65), search_legal_bulk 1 à 25 requêtes (README l. 19), même clé ld_live_
-     pour /v2 et /mcp (auth.ts l. 52, auth-mcp.ts l. 4), outils en lecture seule et clé jamais journalisée, révocable
-     (README l. 196 à 199). Pas d'ISO 27001 « certifié », pas d'hébergement affirmé pour l'API. -->
-<section class="section dt-piliers-section" id="piliers">
+<!-- ═══ COMMENT L'USAGE FONCTIONNE ═══ Document : « Une clé. Un wallet. Des unités pondérées. » Poids 1, N et 5 : codés
+     (enforce-quota.ts, compliance-check.ts). ⚠️ Poids 100 de la classification : recommandation, à coder avant publication. -->
+<section class="section dt-usage-section" id="usage">
   <div class="conteneur">
-    <figure class="sy-chapitre">
-      <img src="img:masse-lunettes" alt="">
-      <figcaption class="sy-chapitre-texte">
-        <p class="sy-etiquette">Data</p>
-        <h2>Une donnée vérifiable, faite pour l'IA</h2>
-        <p class="sy-chapitre-lead">On n'automatise pas ce qu'on ne peut pas lire. Chaque règle est structurée et reliée à son texte officiel.</p>
-      </figcaption>
-    </figure>
-    <div class="dt-piliers" data-apparait>
-      <article class="sy-carte-blanche dt-pilier"><span class="dt-numero">1</span><h3>Vérifiable à la source</h3><p>Chaque résultat renvoie à l'adresse officielle du texte.</p><ul class="dt-liste"><li>Chaque règle rattachée à son article</li><li>Sa date d'entrée en vigueur</li><li>Les changements des 90 derniers jours</li></ul></article>
-      <article class="sy-carte-blanche dt-pilier"><span class="dt-numero">2</span><h3>Faite pour l'IA</h3><p>La même clé pour l'API et pour le serveur MCP.</p><ul class="dt-liste"><li>Recherche hybride, sémantique et lexicale</li><li>L'article extrait du document</li><li>Jusqu'à 25 recherches en un appel</li></ul></article>
-      <article class="sy-carte-blanche dt-pilier"><span class="dt-numero">3</span><h3>Une clé sous votre contrôle</h3><p>Connexion par navigateur ou clé révocable à tout moment.</p><ul class="dt-liste"><li>Outils en lecture seule</li><li>Clé transmise chiffrée, jamais journalisée</li></ul><a class="sy-lien dt-lien" href="30-securite.html">Voir la sécurité <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></article>
-    </div>
+    <div class="sy-entete" data-apparait><p class="sy-surtitre">Usage</p><h2>Une clé, un volume mensuel, un barème public</h2><p class="sy-lead">Chaque appel consomme des API units. Voici ce que coûte chaque opération.</p></div>
+    <ol class="dt-usage" data-apparait>
+      <li><b>1</b><span>API unit</span><p>Une recherche ou une lecture de document Legal Data</p></li>
+      <li><b>N</b><span>API units</span><p>Une opération groupée : une unité par requête ou par identifiant traité</p></li>
+      <li><b>5</b><span>API units</span><p>Un contrôle composite de conformité</p></li>
+      <li><b>100</b><span>API units</span><p>Une classification douanière</p></li>
+    </ol>
   </div>
 </section>
 
-<!-- ═══ L'OFFRE ═══ Moonlit « Simple where it should be, bespoke where it has to be », SANS PRIX.
-     À TRANCHER : le modèle de prix et le périmètre de l'offre Data (pays, familles de produits) ne sont pas arrêtés. -->
-<section class="section dt-offre-section" id="offre">
+<!-- ═══ TARIFS ═══ Sandbox, Starter, Pro, Enterprise. Aucun produit futur dans ces cartes (document). -->
+<section class="section dt-offre-section" id="tarifs">
   <div class="conteneur">
     <figure class="sy-chapitre">
       <img src="img:fenetres" alt="">
       <figcaption class="sy-chapitre-texte">
-        <p class="sy-etiquette">Accès</p>
-        <h2>Un accès à la mesure de votre usage</h2>
-        <p class="sy-chapitre-lead">Les pays et les familles de produits dont votre logiciel a besoin.</p>
+        <p class="sy-etiquette">Tarifs</p>
+        <h2>Commencer gratuitement, passer en production quand vous êtes prêt</h2>
+        <p class="sy-chapitre-lead">Les mêmes données et les mêmes endpoints dans chaque offre. Seul le volume change.</p>
       </figcaption>
     </figure>
-    <div class="dt-offre" data-apparait>
-      <article class="sy-carte dt-offre-carte"><p class="sy-surtitre">Data · Serveur MCP</p><p class="dt-offre-grand">Sur demande</p><p class="dt-offre-texte">Dans Claude, Cursor, Cline, Continue, Claude Code et tout client compatible MCP.</p><ul class="dt-liste"><li>La même base de règles</li><li>Chaque résultat renvoie à sa source</li></ul><div class="sy-actions dt-actions"><a class="sy-bouton" href="21-inscription.html">Demander un accès</a></div></article>
-      <article class="sy-carte dt-offre-carte"><p class="sy-surtitre">Data · API</p><p class="dt-offre-grand">Sur mesure</p><p class="dt-offre-texte">Pour intégrer la donnée réglementaire à votre produit.</p><ul class="dt-liste"><li>Recherche, articles, versions en vigueur, changements</li><li>Filtres par pays, type de texte, langue et dates</li></ul><div class="sy-actions dt-actions"><a class="sy-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contacter l'équipe</a></div></article>
+    <div class="dt-tarifs" data-apparait>
+      <article class="sy-carte dt-offre-carte dt-tarif">
+        <p class="sy-surtitre">Sandbox</p>
+        <p class="dt-offre-grand">0 €</p>
+        <p class="dt-offre-texte">Tester l'intégration, sans carte bancaire.</p>
+        <ul class="dt-liste"><li>200 API units à vie</li><li>Mêmes endpoints, débit limité</li><li>Usage de test</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="https://legaldata-public.cleolabs.co/signup">Obtenir une clé API</a></div>
+      </article>
+      <article class="sy-carte dt-offre-carte dt-tarif">
+        <p class="sy-surtitre">Starter</p>
+        <p class="dt-offre-grand">100 €<small>/mois</small></p>
+        <p class="dt-offre-texte">Construire un premier produit et démarrer en production. 80 € par mois en annuel, soit 960 € par an.</p>
+        <ul class="dt-liste"><li>100 000 API units par mois</li><li>Mêmes données et mêmes endpoints</li><li>Soit 1 000 classifications douanières par mois</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/signup">Choisir Starter</a></div>
+      </article>
+      <article class="sy-carte dt-offre-carte dt-tarif">
+        <p class="sy-surtitre">Pro</p>
+        <p class="dt-offre-grand">349 €<small>/mois</small></p>
+        <p class="dt-offre-texte">Faire tourner un produit client à volume supérieur. 279 € par mois en annuel, soit 3 348 € par an.</p>
+        <ul class="dt-liste"><li>1 000 000 API units par mois</li><li>Accompagnement à l'intégration</li><li>20 % de remise en facturation annuelle</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/signup">Choisir Pro</a></div>
+      </article>
+      <article class="sy-carte dt-offre-carte dt-tarif">
+        <p class="sy-surtitre">Enterprise</p>
+        <p class="dt-offre-grand">Sur devis</p>
+        <p class="dt-offre-texte">Volume, débit et droits d'usage négociés, en contrat annuel.</p>
+        <ul class="dt-liste"><li>Quota et débit sur mesure</li><li>Engagement de service contractuel</li><li>Droits de redistribution écrits au contrat</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contacter l'équipe</a></div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ═══ QUESTIONS FRÉQUENTES ═══ 16/09/2026, wording tiré des calls des deux derniers mois (refonte/wording/sources/calls/).
-     Fiabilité #76 #78 (seul chiffre publié : article de recherche, déjà sur 40 et 43) ; sources #77 #78 ; textes qui changent #15 #16 #74 #82 ; prix #72 (aucun tarif) ; « Et si l'IA se trompe ? » #27 #54, réponse = le hero de la page (chaque résultat renvoie à sa source et à son article). À TRANCHER : « version consolidée » (#16) et fréquence de mise à jour (#74) non affirmées, aucune page ne le dit ; accès d'essai (#73 #75) non promis ; « Où sont stockées nos données ? » (#36) sans réponse ici, l'hébergement de la Data API n'est pas affirmé (identite-data/faits.md), la page 30 ne parle que des données clientes de la plateforme. -->
+<!-- ═══ PREUVE ET COUVERTURE ═══ Bloc sombre du site. Chiffres : audit official-only du 16/09/2026 (document, « Legal Data,
+     exactement ce qui est ingéré »). Panneau : réponse réelle du 17/09 (outputs/cleo-internal-api-strategy.html). -->
+<section class="section sy-sombre dt-trace-section" id="couverture">
+  <div class="conteneur dt-duo dt-trace sy-sur-profond">
+    <div class="dt-trace-texte">
+      <h2>Chaque document garde sa source</h2>
+      <p class="sy-lead">Chaque résultat renvoie son identifiant, sa source et l'URL du portail d'origine. Les sources incluses sont celles de votre contrat, et la couverture se consulte pays par pays.</p>
+      <ul class="sy-chiffres dt-preuve-chiffres"><li><b>64</b><span>portails publics primaires vérifiés</span></li><li><b>44</b><span>pays ou périmètres, audit du 16 septembre 2026</span></li></ul>
+      <div class="sy-actions dt-actions"><a class="sy-bouton-blanc" href="26-legal-data.html">Explorer la couverture</a></div>
+    </div>
+    <div class="dt-panneau" aria-hidden="true" data-apparait>
+      <p class="dt-panneau-note">une requête, un document et sa source</p>
+      <p class="dt-panneau-ligne dt-panneau-question"><i></i>GET /v2/documents?country=AU&amp;source=legislation_au</p>
+      <p class="dt-panneau-fleche">document</p>
+      <p class="dt-panneau-ligne">Therapeutic Goods Act 1989</p>
+      <p class="dt-panneau-fleche">source</p>
+      <p class="dt-panneau-ligne">legislation_au, législation</p>
+      <p class="dt-panneau-fleche">portail officiel</p>
+      <p class="dt-panneau-ligne">www.legislation.gov.au</p>
+      <p class="dt-panneau-note">réponse réelle, relevée le 17 septembre 2026</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BIENTÔT DISPONIBLE ═══ Uniquement avec CTA design partner. Pas de prix, pas d'endpoint (document). -->
+<section class="section dt-bientot-section" id="bientot">
+  <div class="conteneur">
+    <div class="sy-entete" data-apparait><p class="sy-surtitre">Bientôt disponible</p><h2>Deux API en préparation</h2><p class="sy-lead">Pour les utiliser en premier et les construire avec l'équipe, rejoignez le programme design partner.</p></div>
+    <div class="dt-bientot" data-apparait>
+      <article class="sy-carte-blanche dt-pilier">
+        <p class="sy-surtitre">Bientôt</p>
+        <h3>Product Scope</h3>
+        <p>Pour un produit, son usage et son marché : les textes, obligations, preuves et restrictions qui s'appliquent, et pourquoi.</p>
+        <ul class="dt-liste"><li>Pour les PLM, PIM, marques et fabricants</li><li>Entrée : produit, matériaux, usage, marché</li><li>Sortie : règles, obligations, preuves et sources</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Devenir design partner</a></div>
+      </article>
+      <article class="sy-carte-blanche dt-pilier">
+        <p class="sy-surtitre">Bientôt</p>
+        <h3>Marketplace Gate</h3>
+        <p>Une fiche produit, son vendeur et leurs justificatifs, vérifiés avant la mise en ligne.</p>
+        <ul class="dt-liste"><li>Pour les marketplaces et l'onboarding vendeur</li><li>Entrée : produit, vendeur, pays, pièces justificatives</li><li>Sortie : publier, corriger ou revoir, avec les motifs</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Devenir design partner</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ QUESTIONS FRÉQUENTES ═══ Réponses tirées du document (promesses, limites à annoncer, tarifs). -->
 <section class="section dt-questions-section" id="questions">
   <div class="conteneur">
     <div class="sy-entete"><p class="sy-surtitre">Data</p><h2>Questions fréquentes</h2></div>
-    <div class="faq dt-faq">
+    <div class="faq dt-faq" data-schema="faq">
       <details open>
-        <summary>Quelle est la fiabilité de la donnée ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">L'architecture de Cleo est décrite dans un <a href="23-research.html">article de recherche</a> publié en février 2026 : 93 à 97 % de précision sur les textes contraignants, évaluée sur 7 676 réglementations.</div>
+        <summary>Quelle API choisir ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Legal Data API si votre logiciel cherche, lit ou cite des documents juridiques. Customs Classification API si votre logiciel doit proposer un code douanier à partir d'une description produit.</div>
       </details>
       <details>
-        <summary>Et si l'IA se trompe ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">Chaque résultat cite le texte officiel et l'article qui fonde la règle : votre équipe vérifie la réponse à la source.</div>
+        <summary>Les codes douaniers renvoyés sont-ils définitifs ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Ce sont des candidats expliqués, avec leur niveau de confiance et un indicateur d'ambiguïté. Votre équipe ou votre commissionnaire valide le code avant la déclaration.</div>
       </details>
       <details>
-        <summary>D'où vient la donnée ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">Des sources officielles : 3 700 sources et 19 000 autorités réglementaires suivies, dans 106 pays. Chaque résultat renvoie à l'adresse officielle du texte.</div>
+        <summary>D'où viennent les documents de Legal Data API ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Chaque document indique sa source et l'URL du portail d'origine. Les sources incluses dans votre accès sont nommées dans votre contrat. <a href="26-legal-data.html">Explorez la couverture</a>.</div>
       </details>
       <details>
-        <summary>Les textes changent : comment le suivre ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">Chaque texte est relié à ceux qu'il modifie, transpose ou remplace. Vous lisez la version en vigueur à une date, et les changements des 90 derniers jours.</div>
+        <summary>Combien coûte l'accès ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Sandbox gratuit pour tester, Starter à 100 € par mois, Pro à 349 € par mois, Enterprise sur devis. <a href="#tarifs">Voir les tarifs</a>.</div>
       </details>
       <details>
-        <summary>Combien coûte l'accès ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">Le prix dépend des pays et des familles de produits dont votre logiciel a besoin. <a href="#dites-nous">Décrivez votre usage</a>, l'équipe vous répond.</div>
+        <summary>Peut-on utiliser Legal Data dans un assistant IA ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Oui, avec <a href="52-data-mcp.html">le serveur MCP</a>, la même clé que l'API.</div>
+      </details>
+      <details>
+        <summary>Quand arrivent Product Scope et Marketplace Gate ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Pour les utiliser en premier, devenez design partner : <a href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">écrivez à l'équipe</a> avec votre cas d'usage.</div>
       </details>
     </div>
   </div>
 </section>
+
 <!-- ═══ APPEL FINAL SUR PHOTO ═══ composant d'identité 2.4 (IDENTITE.md), stylé par la feuille système. -->
 <section class="section sy-final-photo" id="contact">
   <figure>
     <img src="img:masse-chargeur" alt="">
     <div class="sy-final-texte">
-      <h2>Branchez Cleo à vos assistants et à vos logiciels</h2>
-      <p>Dites-nous quels pays et quelles familles de produits votre logiciel doit couvrir.</p>
-      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contacter l'équipe</a><a class="sy-bouton-secondaire" href="26-legal-data.html">Voir la couverture</a></div>
+      <h2>Branchez Cleo à votre produit</h2>
+      <p>Une clé, la documentation, et l'équipe pour les sources et les pays dont vous avez besoin.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://legaldata-public.cleolabs.co/signup">Obtenir une clé API</a><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contacter l'équipe</a></div>
     </div>
   </figure>
 </section>
