@@ -111,11 +111,6 @@ const IMAGES = {
   'chercheuse-1':     ['researcher-1.webp', 560],
   'chercheuse-2':     ['researcher-2.webp', 560],
   'equipe':           ['team.webp', 900],
-  /* 17/09/2026, page Data par cas d'usage : ses photos de personnes restent en couleur et sans trame, SANS toucher aux
-     clés humain-* et personne-* du reste du site (la couche chaude sur tout le site a été refusée : « ça va pas du tout »). */
-  'data-equipe':      ['person-team.webp', 1024],
-  'data-bureau':      ['human-desk.webp', 760],
-  'data-dossier':     ['human-clipboard.webp', 760],
   'station-f':        ['apropos-station-f.jpg', 1100],
   'paris':            ['cleo-paris.webp', 1000],
   'philippine':       ['philippine-tamic.jpg', 900],
@@ -289,7 +284,7 @@ fs.mkdirSync(DOSSIER_IMAGES, { recursive: true })
 /* 16/09/2026, refonte (agent F1) : le portrait de la citation Decathlon (36 à 64 px affichés) recevait la trame et devenait
    illisible. Mesuré sur toutes les pages (scratchpad/agents/refonte/systeme/tailles-images.mjs) : seuls les logos, le logo
    Cleo et philippine s'affichent sous 120 px ; les portraits anaelle, naomie et alex étaient déjà exclus. */
-const GRAIN_EXCLUS = /^(logo-|cleo-logo$|globe-|produit-|veille-produit$|rond-|anaelle$|naomie$|alex$|darcial(-grand)?$|thezi(-grand)?$|philippine$|terrain-|data-(equipe|bureau|dossier)$)/
+const GRAIN_EXCLUS = /^(logo-|cleo-logo$|globe-|produit-|veille-produit$|rond-|anaelle$|naomie$|alex$|darcial(-grand)?$|thezi(-grand)?$|philippine$|terrain-)/
 let tuileGrainCache = null
 async function tuileGrain() {
   if (!tuileGrainCache) tuileGrainCache = await sharp(Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="4" height="4" fill="#15162E"/><circle cx="2" cy="2" r="1.55" fill="#FFFFFF"/></svg>')).png().toBuffer()
