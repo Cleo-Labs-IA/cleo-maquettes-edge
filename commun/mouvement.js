@@ -33,19 +33,64 @@
 })();
 
 /* Le menu sur téléphone, posé le 03/09/2026. Le panneau est dans la page,
-   généré par construire.mjs : ici on ne fait que l'ouvrir et le fermer. */
+   généré par construire.mjs : ici on l'ouvre et on le ferme.
+   17/09/2026, « rendre le menu réellement modal pour les lecteurs d'écran » :
+   - à l'ouverture, tout ce qui n'est ni le panneau ni le bouton devient inerte (attribut inert : ni lu, ni
+     focalisable, ni cliquable), le focus entre dans le panneau et Tab boucle à l'intérieur ;
+   - à la fermeture (bouton du panneau, bouton de la barre, Échap, lien suivi, passage en grand écran), l'inertie
+     est retirée et le focus revient au bouton de la barre ;
+   - le bouton de la barre annonce l'action (« Ouvrir le menu » / « Fermer le menu »). */
 (function(){
   var b = document.querySelector('.nav-burger'), m = document.getElementById('menu-mobile');
   if (!b || !m) return;
-  function fermer(){ m.hidden = true; b.setAttribute('aria-expanded', 'false'); document.documentElement.classList.remove('menu-ouvert'); }
-  b.addEventListener('click', function(){
-    var ouvrir = m.hidden;
-    m.hidden = !ouvrir; b.setAttribute('aria-expanded', ouvrir ? 'true' : 'false');
-    document.documentElement.classList.toggle('menu-ouvert', ouvrir);
+  var inertes = [];
+  var FOCUSABLES = 'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])';
+  function rendreInerte(){
+    // Remonte du panneau et du bouton jusqu'au body : chaque frère qui ne contient ni l'un ni l'autre devient inerte.
+    var garder = [m, b];
+    garder.forEach(function(el){
+      for (var n = el; n && n !== document.body; n = n.parentElement) {
+        var p = n.parentElement; if (!p) break;
+        for (var k = 0; k < p.children.length; k++) {
+          var f = p.children[k];
+          if (f === n || f.tagName === 'SCRIPT' || f.hasAttribute('inert')) continue;
+          if (garder.some(function(g){ return f.contains(g); })) continue;
+          f.setAttribute('inert', ''); inertes.push(f);
+        }
+      }
+    });
+  }
+  function leverInertie(){ inertes.forEach(function(f){ f.removeAttribute('inert'); }); inertes = []; }
+  function ouvrir(){
+    m.hidden = false; b.setAttribute('aria-expanded', 'true');
+    b.setAttribute('aria-label', b.getAttribute('data-libelle-fermer') || 'Fermer le menu');
+    document.documentElement.classList.add('menu-ouvert');
+    rendreInerte();
+    var premier = m.querySelector(FOCUSABLES); if (premier) premier.focus();
+  }
+  function fermer(rendreFocus){
+    if (m.hidden) return;
+    m.hidden = true; b.setAttribute('aria-expanded', 'false');
+    b.setAttribute('aria-label', b.getAttribute('data-libelle-ouvrir') || 'Ouvrir le menu');
+    document.documentElement.classList.remove('menu-ouvert');
+    leverInertie();
+    if (rendreFocus) b.focus();
+  }
+  b.addEventListener('click', function(){ if (m.hidden) ouvrir(); else fermer(true); });
+  var croix = m.querySelector('.mm-fermer'); if (croix) croix.addEventListener('click', function(){ fermer(true); });
+  m.addEventListener('click', function(e){ if (e.target.closest('a')) fermer(false); });
+  window.addEventListener('resize', function(){ if (window.innerWidth > 1024) fermer(false); });
+  document.addEventListener('keydown', function(e){
+    if (m.hidden) return;
+    if (e.key === 'Escape') { e.preventDefault(); fermer(true); return; }
+    if (e.key !== 'Tab') return;
+    var liste = Array.prototype.filter.call(m.querySelectorAll(FOCUSABLES), function(el){ return el.getClientRects().length; });
+    if (!liste.length) return;
+    var premier = liste[0], dernier = liste[liste.length - 1];
+    if (!m.contains(document.activeElement)) { e.preventDefault(); premier.focus(); return; }
+    if (e.shiftKey && document.activeElement === premier) { e.preventDefault(); dernier.focus(); }
+    else if (!e.shiftKey && document.activeElement === dernier) { e.preventDefault(); premier.focus(); }
   });
-  m.addEventListener('click', function(e){ if (e.target.closest('a')) fermer(); });
-  window.addEventListener('resize', function(){ if (window.innerWidth > 1024) fermer(); });
-  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') fermer(); });
 })();
 
 /* ────────────────────────────────────────────────────────────────

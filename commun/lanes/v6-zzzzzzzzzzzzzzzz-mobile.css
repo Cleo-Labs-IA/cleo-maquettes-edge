@@ -1,0 +1,22 @@
+/* ═══ TÉLÉPHONE ET TABLETTE : ZONES TACTILES, MENU MODAL ═══ 17/09/2026, demande : « agrandir les zones tactiles et rendre le
+   menu réellement modal pour les lecteurs d'écran ».
+   Mesuré avant (scratchpad/mobile/cibles.mjs, 58 pages à 390 px, témoin de 20 px détecté) : 143 cibles sous 44 px, hors liens
+   pris dans une phrase. Les familles : liens isolés « Voir… » (sy-lien, ac-lien, ra-lien), onglets et sommaires des ressources
+   (res-nav, sommaire, 40 px), liens de listes (tarifs du service, textes du mandataire), « Voir la page » dans le verre des
+   solutions (15 px), bouton de panneau du service (40 px). Les étiquettes de formulaire (20 px) ne comptent pas : la cible est
+   le champ, déjà à 44 px et plus. Règle : 44 × 44 px au moins, sans toucher à la taille du texte. */
+@media (max-width:1023px){
+  body[data-cleo-ds="v6"] main :is(.sy-lien, .ac-lien, .ra-lien, .sc-lien, .dt-lien):not(#_):not(#_):not(#_):not(#_):not(#_){display:inline-flex;align-items:center;min-height:44px;box-sizing:border-box}
+  body[data-cleo-ds="v6"] main :is(.res-nav, .sommaire) a:not(#_):not(#_):not(#_):not(#_):not(#_){display:flex;align-items:center;min-height:44px;box-sizing:border-box}
+  body[data-cleo-ds="v6"] main .sc-tarifs-table li > a:not(#_):not(#_):not(#_):not(#_):not(#_){display:inline-flex;align-items:center;min-height:44px;box-sizing:border-box}
+  /* Liens pris dans une ligne (deux textes liés par « et », lien après une phrase) : la zone tactile grandit par un débord
+     invisible (padding compensé par une marge négative), la ligne ne bouge pas. */
+  body[data-cleo-ds="v6"] main :is(.mu-loi li > div > a, .sy-verre span > a):not(#_):not(#_):not(#_):not(#_):not(#_){display:inline-block;padding-block:14px;margin-block:-14px}
+
+  /* Menu : le titre de la boîte de dialogue est lu, pas affiché ; le bouton « Fermer le menu » du panneau sert au lecteur
+     d'écran et au clavier, et ne se montre qu'au focus clavier (le bouton de la barre, en croix, reste le geste au doigt). */
+  body[data-cleo-ds="v6"] .menu-mobile .mm-tete:not(#_){position:relative;margin:0;padding:0}
+  body[data-cleo-ds="v6"] .menu-mobile :is(.mm-cache, .mm-fermer:not(:focus-visible)):not(#_){position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+  body[data-cleo-ds="v6"] .menu-mobile .mm-fermer:focus-visible:not(#_){display:inline-flex;align-items:center;min-height:44px;margin:0 0 12px;padding:0 16px;border:1px solid currentColor;border-radius:var(--r-petit, 4px);background:transparent;color:inherit;font:inherit;font-size:.9375rem}
+  body[data-cleo-ds="v6"] .menu-mobile a:not(#_):not(#_){min-height:48px}
+}

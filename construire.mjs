@@ -802,7 +802,7 @@ const ldjson = (o, langue) => JSON.stringify(sansNotes(o, langue)).replace(/<\/s
 /* LE MENU SUR TÉLÉPHONE est déduit des méga-menus : mêmes libellés, mêmes
    liens, jamais une seconde liste à tenir à jour. Le bouton entre dans
    .nav-fin, le panneau ferme le <nav>. */
-function avecMenuMobile(navHtml) {
+function avecMenuMobile(navHtml, langue = 'fr') {
   const groupes = []
   for (const bloc of navHtml.split(/<div class="nav-item(?:\s[^"]*)?">/).slice(1)) {
     const m = bloc.match(/<(button|a) class="nav-declencheur"(?: href="([^"]*)")?>([\s\S]*?)<\/\1>/)
@@ -823,7 +823,14 @@ function avecMenuMobile(navHtml) {
   if (!fin) throw new Error('nav : .nav-fin introuvable')
   const actions = [...fin[1].matchAll(/<a class="([^"]*)" href="([^"]+)">([\s\S]*?)<\/a>/g)]
     .map(a => ({ classe: a[1], href: a[2], texte: a[3].replace(/<[^>]+>/g, '').trim() }))
-  const panneau = `<div class="menu-mobile" id="menu-mobile" hidden>
+  /* 17/09/2026, « rendre le menu réellement modal pour les lecteurs d'écran » : le panneau est une boîte de dialogue modale
+     (role="dialog", aria-modal, titre lié), porte son propre bouton de fermeture, et mouvement.js rend le reste de la page
+     inerte (attribut inert), garde le focus dans le panneau et le rend au bouton à la fermeture. */
+  const L = langue === 'en'
+    ? { titre: 'Menu', ouvrir: 'Open menu', fermer: 'Close menu' }
+    : { titre: 'Menu', ouvrir: 'Ouvrir le menu', fermer: 'Fermer le menu' }
+  const panneau = `<div class="menu-mobile" id="menu-mobile" role="dialog" aria-modal="true" aria-labelledby="menu-mobile-titre" hidden>
+  <div class="mm-tete"><p class="mm-cache" id="menu-mobile-titre">${L.titre}</p><button class="mm-fermer" type="button">${L.fermer}</button></div>
 ${groupes.map(g => g.href
     ? `  <div class="mm-groupe"><a href="${g.href}">${g.titre}</a></div>`
     : `  <div class="mm-groupe"><div class="mm-titre">${g.titre}</div>
@@ -833,7 +840,7 @@ ${g.liens.map(l => `    <a href="${l.href}">${l.texte}</a>`).join('\n')}
 ${actions.map(a => `    <a class="${a.classe.includes('btn') ? 'btn btn-marque' : 'mm-lien'}" href="${a.href}">${a.texte}</a>`).join('\n')}
   </div>
 </div>`
-  const bouton = '<button class="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu-mobile"><span></span><span></span></button>'
+  const bouton = `<button class="nav-burger" type="button" aria-label="${L.ouvrir}" data-libelle-ouvrir="${L.ouvrir}" data-libelle-fermer="${L.fermer}" aria-expanded="false" aria-controls="menu-mobile"><span></span><span></span></button>`
   let out = navHtml.replace(/(<a class="btn btn-marque btn-sm" href="[^"]+">[^<]*<\/a>)(\s*<\/div>)/, `$1\n      ${bouton}$2`)
   if (out === navHtml) throw new Error('nav : bouton de menu non posé')
   const n = out.lastIndexOf('</nav>')
@@ -849,7 +856,7 @@ function litOuRepli(rel, repli) {
   return fs.existsSync(abs) ? fs.readFileSync(abs, 'utf8') : repli
 }
 const navEn = fs.existsSync(path.join(ICI, 'commun/bandeau-nav-en.html'))
-  ? avecMenuMobile(fs.readFileSync(path.join(ICI, 'commun/bandeau-nav-en.html'), 'utf8')) : nav
+  ? avecMenuMobile(fs.readFileSync(path.join(ICI, 'commun/bandeau-nav-en.html'), 'utf8'), 'en') : nav
 const piedEn = litOuRepli('commun/pied-en.html', pied)
 /* Une page peut porter sa propre barre (maquette « avant de vendre », 14/09/2026). */
 const navsPropres = {}
