@@ -249,10 +249,7 @@
    },
    "_image_note": "layout.tsx:57 declare /og-image.jpg pour l'accueil ; les layouts de section declarent /og-image.png. Les deux existent au depot."
   },
-  "twitter": {
-   "card": "summary_large_image",
-   "site": "@cleolabs"
-  },
+  "twitter": "@cleolabs",
   "llms": [
    {
     "rel": "alternate",
@@ -271,7 +268,8 @@
   ],
   "verification": {
    "google": "google57f0014b89d60d67"
-  }
+  },
+  "_twitter_source": "<meta name=\"twitter:site\" content=\"@cleolabs\"> servi par https://www.cleolabs.co/fr et /en, relevé le 17/09/2026"
  },
  "levee": {
   "_source": "deux blocs FundingEvent distincts : /Users/naomiehalioua/cleo-landing/src/app/[locale]/layout.tsx:134-148 (dans Organization) et /Users/naomiehalioua/cleo-landing/src/app/[locale]/company/layout.tsx:81-94 (bloc Organization autonome de /company). Les deux recoupes sur le HTML servi.",
@@ -847,20 +845,38 @@
    "_releve_le": "2026-09-03"
   },
   "43-accueil-avant-vendre.html": {
-   "titre": "Vendez partout. Conformez-vous partout. | Cleo Labs",
-   "description": "Cleo prépare le lancement de votre produit jusqu'au dossier prêt à revue.",
+   "titre": "Conformité Produit Automatisée pour les Marques Internationales | Cleo Labs",
+   "description": "Conformité produit automatisée pour les marques internationales : ce qui s'applique à chaque produit, ce qui manque et quoi faire, dans 106 pays.",
    "source": "site",
    "url_source": "https://www.cleolabs.co/fr",
    "appariement": "Accueil français depuis le 15/09/2026 (remplace 01-accueil).",
-   "_mesure": "titre 51 caractères, description 73 caractères (phrase du haut de page, reprise telle quelle)"
+   "_mesure": "titre 75 caractères, description 145 caractères (17/09/2026)",
+   "og_titre": "Cleo Labs : Conformité Produit Automatisée pour les Marques Internationales",
+   "image": {
+    "url": "https://www.cleolabs.co/og-image.jpg",
+    "largeur": 1200,
+    "hauteur": 630,
+    "alt": "Cleo Labs: AI regulatory compliance platform dashboard"
+   },
+   "_seo_accueil": "17/09/2026, Naomie : « prépare-moi la page pour que je reste bien référencée Google comme avant ». L'accueil fait 1 078 des 1 551 clics Search Console (27/04 au 26/07/2026). Titre, og:title et image de partage repris à l'identique de la page servie (tests/seo-accueil.mjs, instantané tests/instantanes/accueil-cleolabs-prod.json) ; le slogan reste le h1 visible. Description : le mot-clé du titre, puis la promesse du haut de page, et le chiffre canon.",
+   "_titre_avant": "Vendez partout. Conformez-vous partout. | Cleo Labs"
   },
   "43-accueil-avant-vendre-en.html": {
-   "titre": "Sell anywhere, comply everywhere | Cleo Labs",
-   "description": "Cleo prepares your product launch, all the way to a review-ready file.",
+   "titre": "Automated Product Compliance for Global Brands | Cleo Labs",
+   "description": "Automated product compliance for global brands: what applies to each product, what is missing and what to do, across 106 countries.",
    "source": "site",
    "url_source": "https://www.cleolabs.co/en",
    "appariement": "English home since 15/09/2026 (replaces 01-accueil-en).",
-   "_mesure": "titre 44 caractères, description 70 caractères (hero sentence, verbatim)"
+   "_mesure": "titre 58 caractères, description 131 caractères (17/09/2026)",
+   "og_titre": "Cleo Labs: Automated Product Compliance for Global Brands",
+   "image": {
+    "url": "https://www.cleolabs.co/og-image.jpg",
+    "largeur": 1200,
+    "hauteur": 630,
+    "alt": "Cleo Labs: AI regulatory compliance platform dashboard"
+   },
+   "_seo_accueil": "17/09/2026, Naomie : « prépare-moi la page pour que je reste bien référencée Google comme avant ». L'accueil fait 1 078 des 1 551 clics Search Console (27/04 au 26/07/2026). Titre, og:title et image de partage repris à l'identique de la page servie (tests/seo-accueil.mjs, instantané tests/instantanes/accueil-cleolabs-prod.json) ; le slogan reste le h1 visible. Description : le mot-clé du titre, puis la promesse du haut de page, et le chiffre canon.",
+   "_titre_avant": "Sell anywhere, comply everywhere | Cleo Labs"
   },
   "45-service-etiquetage.html": {
    "titre": "Étiquetage et documentation produit | Cleo Labs",

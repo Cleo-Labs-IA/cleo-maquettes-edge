@@ -211,3 +211,18 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 @media (max-width:480px){
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-experts-grille{column-gap:12px}
 }
+
+/* ── Questions ── 17/09/2026, référencement de l'accueil (tests/seo-accueil.mjs) : la FAQ visible que construire.mjs
+   décrit en FAQPage. Même dessin que les questions des fiches Service (.mu-faq, feuille 51), titre à gauche sur bureau. */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-questions-grille{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:48px;align-items:start}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-questions .ac-entete{margin-bottom:0}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-faq{margin:0;border-top:1px solid var(--c-filet)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-faq details{margin:0;padding:0;border:0;border-bottom:1px solid var(--c-filet);border-radius:0;background:transparent !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-faq summary{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 0;cursor:pointer;list-style:none;font-size:1.125rem;font-weight:500;line-height:1.35;color:var(--c-texte)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-faq summary::-webkit-details-marker{display:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-faq summary .chev{flex:none;color:var(--c-texte-3);transition:rotate .2s var(--m-courbe)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-faq details[open] summary .chev{rotate:180deg}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-faq .reponse{max-width:68ch;margin:0;padding:0 0 22px;font-size:var(--t-corps);line-height:1.55;color:var(--c-texte-2)}
+@media (max-width:1023px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-questions-grille{grid-template-columns:minmax(0,1fr);gap:32px}
+}

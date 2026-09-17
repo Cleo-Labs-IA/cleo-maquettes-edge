@@ -930,17 +930,27 @@ for (const p of PAGES) {
 
   const desc = seoP && seoP.description ? seoP.description : ''
   const metaDesc = desc ? `<meta name="description" content="${ech(desc)}">` : ''
+  /* 17/09/2026, accueil : le vrai site sert un og:title distinct du <title> et une image de partage
+     (tests/seo-accueil.mjs les compare à www.cleolabs.co). seo.json les porte sous « og_titre » et « image » ;
+     sans elles, on reste sur le titre et on n'invente aucune URL d'image. */
+  const ogTitre = seoP && seoP.og_titre ? seoP.og_titre : titre
+  const image = seoP && seoP.image ? seoP.image : null
   const og = [
     `<meta property="og:type" content="website">`,
     `<meta property="og:site_name" content="Cleo Labs">`,
     `<meta property="og:locale" content="${langue === 'en' ? 'en_US' : 'fr_FR'}">`,
-    `<meta property="og:title" content="${ech(titre)}">`,
+    `<meta property="og:title" content="${ech(ogTitre)}">`,
     desc ? `<meta property="og:description" content="${ech(desc)}">` : '',
     url ? `<meta property="og:url" content="${url}">` : '',
-    // og:image : aucune image sourçable pour la maquette, on n'invente pas d'URL.
+    image ? `<meta property="og:image" content="${ech(image.url)}">` : '',
+    image && image.largeur ? `<meta property="og:image:width" content="${image.largeur}">` : '',
+    image && image.hauteur ? `<meta property="og:image:height" content="${image.hauteur}">` : '',
+    image && image.alt ? `<meta property="og:image:alt" content="${ech(image.alt)}">` : '',
     `<meta name="twitter:card" content="summary_large_image">`,
-    `<meta name="twitter:title" content="${ech(titre)}">`,
+    SEO.site.twitter ? `<meta name="twitter:site" content="${ech(SEO.site.twitter)}">` : '',
+    `<meta name="twitter:title" content="${ech(ogTitre)}">`,
     desc ? `<meta name="twitter:description" content="${ech(desc)}">` : '',
+    image ? `<meta name="twitter:image" content="${ech(image.url)}">` : '',
   ].filter(Boolean).join('\n')
 
   /* Le structuré : l'entité et le site sur TOUTES les pages, puis ce que
@@ -988,6 +998,33 @@ for (const p of PAGES) {
       if (trous.length) { notesSeo.push(`  (${nomSortie} : ${type} non emis, il manque ${trous.join(', ')})`); continue }
       blocs.push(bloc)
     }
+  }
+  /* LA FAQ ET LES ÉTAPES DU STRUCTURÉ SONT CELLES QU'ON LIT (17/09/2026, accueil).
+     www.cleolabs.co sert FAQPage et HowTo sur /fr et /en, et une donnée structurée ne décrit que du contenu
+     visible (spec de migration V6, « Contrat SEO/GEO bloquant »). On les lit donc dans la page, là où elle
+     les marque (data-schema="faq" sur la liste des <details>, data-schema="howto" sur l'<ol> des étapes),
+     jamais dans une table qui s'écarterait du texte. */
+  const texteDe = (h) => h.replace(/<svg[\s\S]*?<\/svg>/g, '').replace(/<[^>]+>/g, ' ')
+    .replace(/&#x27;|&#39;/g, "'").replace(/&quot;/g, '"').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim()
+  const lu = { inLanguage: langue === 'en' ? 'en-US' : 'fr-FR', isPartOf: { '@id': SEO.site.webSite['@id'] } }
+  const iFaq = corps.indexOf('data-schema="faq"')
+  if (iFaq >= 0) {
+    const zone = corps.slice(iFaq, corps.indexOf('</section>', iFaq))
+    const questions = [...zone.matchAll(/<details\b[^>]*>\s*<summary>([\s\S]*?)<\/summary>([\s\S]*?)<\/details>/g)]
+      .map(m => ({ '@type': 'Question', name: texteDe(m[1]), acceptedAnswer: { '@type': 'Answer', text: texteDe(m[2]) } }))
+    if (questions.length) blocs.push({ '@context': 'https://schema.org', '@type': 'FAQPage', name: titre, ...(url ? { url } : {}), ...lu, mainEntity: questions })
+    else notesSeo.push(`  (${nomSortie} : data-schema="faq" sans aucune question lisible)`)
+  }
+  const iEtapes = corps.indexOf('data-schema="howto"')
+  if (iEtapes >= 0) {
+    const debut = corps.lastIndexOf('<ol', iEtapes)
+    const titreEtapes = [...corps.slice(0, debut).matchAll(/<h2\b[^>]*>([\s\S]*?)<\/h2>/g)].pop()
+    const etapes = [...corps.slice(debut, corps.indexOf('</ol>', iEtapes)).matchAll(/<li\b[^>]*>([\s\S]*?)<\/li>/g)]
+      .map(m => texteDe(m[1].replace(/<span>\d+<\/span>/, '')))
+    if (titreEtapes && etapes.length) {
+      blocs.push({ '@context': 'https://schema.org', '@type': 'HowTo', name: texteDe(titreEtapes[1]), ...(url ? { url } : {}), ...lu,
+        step: etapes.map((t, i) => ({ '@type': 'HowToStep', position: i + 1, name: t, text: t })) })
+    } else notesSeo.push(`  (${nomSortie} : data-schema="howto" sans titre ou sans étape lisible)`)
   }
   const structure = blocs.map(b =>
     `<script type="application/ld+json">${ldjson(b, langue)}</script>`).join('\n')

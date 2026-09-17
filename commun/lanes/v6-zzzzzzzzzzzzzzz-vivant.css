@@ -115,3 +115,8 @@ body[data-cleo-ds="v6"] main :is(.ac-logos-imgs, .ap-logos-imgs):not(#_):not(#_)
   body[data-cleo-ds="v6"] main :is(.ac-logos-imgs, .ap-logos-imgs) img:is([data-img="logo-mercedes"], [data-img="logo-electrolux"]):not(#_):not(#_):not(#_){height:40px !important}
   body[data-cleo-ds="v6"] main :is(.ac-logos-imgs, .ap-logos-imgs):not(#_):not(#_):not(#_){gap:20px 32px !important}
 }
+
+/* 17/09/2026, référencement de l'accueil (tests/seo-accueil.mjs) : le pied gagne une colonne « Marchés », six colonnes sur bureau. */
+@media (min-width:1025px){
+  body[data-cleo-ds="v6"] .pied-colonnes:not(#_){grid-template-columns:repeat(6,minmax(0,1fr))}
+}

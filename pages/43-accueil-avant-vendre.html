@@ -59,7 +59,7 @@
           <div class="ac-flottante ac-recit-fait" data-etape="4" aria-hidden="true"><b>Rapport d'essai de l'usine</b><span>Demandé au fournisseur</span></div>
           <div class="ac-flottante ac-recit-pret" aria-hidden="true"><b>Dossier prêt pour la relecture</b><span class="ac-points"><i></i><i></i><i></i><i></i><i></i></span></div>
         </figure>
-        <ol class="ac-recit-etapes">
+        <ol class="ac-recit-etapes" data-schema="howto">
           <li><span>01</span>Trouver les règles qui s'appliquent</li>
           <li><span>02</span>Lister les essais</li>
           <li><span>03</span>Préparer les mentions à afficher</li>
@@ -277,6 +277,38 @@
       <a class="sy-carte-photo" href="27-article-levee.html"><img src="img:equipe" alt=""><span class="sy-etiquette">Entreprise</span><b>Cleo lève 1,5 M€ pour automatiser la conformité réglementaire produit à l'échelle mondiale</b></a>
       <a class="sy-carte-photo" href="28-article-vivatech.html"><img src="img:paris" alt=""><span class="sy-etiquette">Entreprise</span><b>Cleo remporte le Scaleway Startup Challenge et sera présente à VivaTech 2026</b></a>
       <a class="sy-carte-photo" href="29-article-deel.html"><img src="img:station-f" alt=""><span class="sy-etiquette">Entreprise</span><b>Conformité produit mondiale en 2026 : pourquoi nous avons gagné The Pitch by Deel</b></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ QUESTIONS ═══ 17/09/2026, Naomie : « prépare-moi la page pour que je reste bien référencée Google comme avant ».
+     L'accueil en ligne (www.cleolabs.co/fr) sert 17 questions visibles et leur FAQPage ; sans FAQ visible, l'accueil V6 ne
+     peut pas garder ce bloc (une donnée structurée ne décrit que ce qu'on lit). construire.mjs tire le FAQPage de cette
+     liste (data-schema="faq") et le HowTo des étapes de #comment (data-schema="howto").
+     Questions : celles du site en ligne qui décrivent Cleo (qu'est-ce que Cleo, couverture, différence avec une veille,
+     MARIA, investisseurs, hébergement, commencer), plus celles des clients (réglementation applicable, prix, signature).
+     Les réponses en ligne sur le RGPD, DORA, l'AI Act, la due diligence ou la démo BIC ne sont pas reprises : hors de la
+     conformité produit, ou client non autorisé.
+     Faits, tous déjà sur le site : haut de page de cette page ; directive 2009/48/CE et normes EN 71 (#comment) ;
+     chiffres canon (lexique §7) ; « des jouets à l'automobile » (#pour-qui, FAQ de 37) ; prix et signature (FAQ de 37) ;
+     rôles (#experts) ; MARIA et article de recherche (23) ; tour de 1,5 M€ (27, Organization de seo.json pour Amplify) ;
+     Scaleway, région Paris, aucun entraînement (30) ; « 30 minutes avec l'équipe » (25) et « ce que Cleo relève » (meet). -->
+<section class="section ac-chapitre ac-questions" id="questions">
+  <div class="ac-conteneur ac-questions-grille">
+    <div class="ac-entete" data-apparait>
+      <h2 class="ac-h2">Questions fréquentes</h2>
+    </div>
+    <div class="faq ac-faq" data-schema="faq" data-apparait>
+      <details open><summary>Qu'est-ce que Cleo Labs ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Cleo Labs automatise la conformité produit pour les marques internationales. Pour chaque produit et chaque marché, Cleo vous dit ce qui s'applique, ce qui manque encore et quoi faire, et un expert conformité relit le dossier avant de vous le remettre. L'entreprise, Cleo Corp SAS, est basée à Neuilly-sur-Seine.</div></details>
+      <details><summary>Quelle réglementation s'applique à mon produit ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Cela dépend du produit et des marchés où vous le vendez. Un jouet vendu dans l'Union relève par exemple de la directive 2009/48/CE sur la sécurité des jouets et de ses normes d'essai EN 71. Décrivez votre produit : Cleo relève les textes qui s'appliquent, marché par marché, et cite chaque texte officiel.</div></details>
+      <details><summary>Quels produits et quels pays couvrez-vous ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Les produits de consommation, des jouets à l'automobile, dans 106 pays, dans l'Union et hors de l'Union. La base de Cleo compte 25 000 réglementations cartographiées, 19 000 autorités réglementaires suivies et 3 700 sources officielles.</div></details>
+      <details><summary>En quoi Cleo est-elle différente d'une veille réglementaire ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Une veille vous envoie des textes. Cleo part de votre produit : les règles qui s'appliquent, les essais, les mentions à afficher et les documents des fournisseurs, réunis dans un seul dossier qu'un expert conformité relit.</div></details>
+      <details><summary>Combien coûte une prestation ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Un prix annoncé avant la commande, jamais à l'heure : 399 € par produit pour l'évaluation, à partir de 1 200 € par produit pour l'étiquetage, 3 800 € par produit pour le marquage CE (essais non compris), 1 500 € par an et par catégorie pour le mandataire.</div></details>
+      <details><summary>Qui signe la déclaration de conformité ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Le fabricant, ou son mandataire. Cleo prépare la documentation technique et le projet de déclaration UE de conformité ; un expert conformité le relit et le valide, et votre organisation décide.</div></details>
+      <details><summary>Qu'est-ce que MARIA ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">MARIA (Multi-Agent Regulatory Intelligence Architecture) est l'architecture multi-agents de Cleo. Elle est décrite dans un article de recherche publié en février 2026 : 93 à 97 % de précision sur les textes contraignants, évaluée sur 7 676 réglementations.</div></details>
+      <details><summary>Qui sont les investisseurs de Cleo Labs ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Cleo a levé 1,5 M€. Le tour est mené par Larry Berger, fondateur d'Amplify, avec la participation de Kima Ventures et de La Financière Saint-James.</div></details>
+      <details><summary>Où sont hébergées nos données ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Chez Scaleway, en région Paris, dans l'Union européenne. Vos données n'entraînent aucun modèle.</div></details>
+      <details><summary>Comment commencer ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Réservez 30 minutes avec l'équipe et décrivez votre produit : vous voyez ce que Cleo relève sur votre propre catalogue.</div></details>
     </div>
   </div>
 </section>

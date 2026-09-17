@@ -1,0 +1,938 @@
+{
+ "_releve": "2026-09-17T08:23:57.008Z",
+ "_source": "https://www.cleolabs.co",
+ "_exceptions": {
+  "types": {
+   "VideoObject": "l'accueil V6 n'a pas de vidéo. Une donnée structurée ne décrit que du contenu visible (spec de migration V6, « Contrat SEO/GEO bloquant »)."
+  },
+  "organisation": {
+   "slogan": "retiré dans commun/seo.json (_retire) : il inscrit une marque tierce dans la définition de Cleo Labs.",
+   "contactPoint": "retiré dans commun/seo.json (_retire) : deux adresses concurrentes, aucune choisie."
+  },
+  "sameAs": {
+   "https://www.crunchbase.com/organization/celo-labs": "slug fautif (« celo ») : à corriger sur Crunchbase, pas à recopier."
+  },
+  "liens": {
+   "/fr/event": "page de l'événement de Bruxelles du 09/09/2026, passé. L'adresse reste servie ; elle quitte seulement l'accueil. À trancher par Naomie.",
+   "/en/event": "idem, en anglais."
+  }
+ },
+ "fr": {
+  "lang": "fr",
+  "titre": "Conformité Produit Automatisée pour les Marques Internationales | Cleo Labs",
+  "metas": {
+   "viewport": "width=device-width, initial-scale=1",
+   "description": "Plateforme IA de conformité produit pour les marques internationales. 106 pays, 25 000+ réglementations, 3 700+ sources. CSRD, AGEC, GPSR.",
+   "robots": "index, follow",
+   "google-site-verification": "google57f0014b89d60d67",
+   "og:title": "Cleo Labs : Conformité Produit Automatisée pour les Marques Internationales",
+   "og:description": "Plateforme IA de conformité produit couvrant 106 pays et 3 700+ sources réglementaires. Le Deel de la conformité produit.",
+   "og:url": "https://www.cleolabs.co/fr",
+   "og:site_name": "Cleo Labs",
+   "og:locale": "fr_FR",
+   "og:image": "https://www.cleolabs.co/og-image.jpg",
+   "og:image:width": "1200",
+   "og:image:height": "630",
+   "og:image:alt": "Cleo Labs: AI regulatory compliance platform dashboard",
+   "og:type": "website",
+   "twitter:card": "summary_large_image",
+   "twitter:site": "@cleolabs",
+   "twitter:title": "Cleo Labs : Conformité Produit Automatisée pour les Marques Internationales",
+   "twitter:description": "Plateforme IA de conformité produit couvrant 106 pays et 3 700+ sources réglementaires. Le Deel de la conformité produit.",
+   "twitter:image": "https://www.cleolabs.co/og-image.jpg"
+  },
+  "canonical": "https://www.cleolabs.co/fr",
+  "hreflang": {
+   "en": "https://www.cleolabs.co/en",
+   "fr": "https://www.cleolabs.co/fr",
+   "x-default": "https://www.cleolabs.co/en"
+  },
+  "blocs": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.cleolabs.co/#organization",
+    "name": "Cleo Labs",
+    "legalName": "Cleo Corp SAS",
+    "url": "https://www.cleolabs.co",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.cleolabs.co/apple-touch-icon.png",
+     "width": 180,
+     "height": 180
+    },
+    "image": "https://www.cleolabs.co/og-image.jpg",
+    "description": "Cleo Labs développe MARIA (Multi-Agent Regulatory Intelligence Architecture), la première infrastructure IA de conformité pour les retailers en Europe. MARIA transforme 3 700+ sources réglementaires dans 106 pays en analyses d'impact en temps réel, permettant aux équipes conformité retail de multiplier par 10 leur capacité de traitement.",
+    "slogan": "The Deel of product compliance",
+    "foundingDate": "2023",
+    "award": "Winner: The Pitch by Deel (Station F, 2026)",
+    "foundingLocation": {
+     "@type": "Place",
+     "name": "Neuilly-sur-Seine, France"
+    },
+    "numberOfEmployees": {
+     "@type": "QuantitativeValue",
+     "minValue": 2,
+     "maxValue": 10
+    },
+    "areaServed": [
+     {
+      "@type": "Continent",
+      "name": "Europe"
+     },
+     {
+      "@type": "Country",
+      "name": "United States"
+     }
+    ],
+    "founder": [
+     {
+      "@type": "Person",
+      "@id": "https://www.cleolabs.co/#anaelle-guez",
+      "name": "Anaëlle Guez",
+      "jobTitle": "CEO & Co-founder",
+      "description": "10+ ans à l'intersection du droit et de la transformation numérique. Ancienne Chief Transformation Officer chez Havas Group.",
+      "url": "https://www.linkedin.com/in/anaelle-guez-ab341746/",
+      "alumniOf": {
+       "@type": "Organization",
+       "name": "Havas Group"
+      },
+      "knowsAbout": [
+       "Regulatory compliance",
+       "Digital transformation",
+       "Corporate law"
+      ]
+     },
+     {
+      "@type": "Person",
+      "@id": "https://www.cleolabs.co/#naomie-halioua",
+      "name": "Naomie Halioua",
+      "jobTitle": "CRO & Co-founder",
+      "description": "Ingénieure diplômée de l'École Polytechnique. Architecte de la technologie IA multi-agents MARIA.",
+      "url": "https://www.linkedin.com/in/naomiehalioua/",
+      "alumniOf": {
+       "@type": "CollegeOrUniversity",
+       "name": "École Polytechnique"
+      },
+      "knowsAbout": [
+       "Multi-agent AI systems",
+       "Natural language processing",
+       "Regulatory technology"
+      ]
+     }
+    ],
+    "funding": {
+     "@type": "FundingEvent",
+     "name": "Tour de pré-amorçage",
+     "date": "2026",
+     "fundingTotal": {
+      "@type": "MonetaryAmount",
+      "value": 1500000,
+      "currency": "EUR"
+     },
+     "funder": [
+      {
+       "@type": "Person",
+       "name": "Larry Berger",
+       "description": "Founder of Amplify"
+      },
+      {
+       "@type": "Organization",
+       "name": "La Financière Saint-James"
+      },
+      {
+       "@type": "Organization",
+       "name": "Kima Ventures",
+       "url": "https://www.kimaventures.com"
+      }
+     ]
+    },
+    "knowsAbout": [
+     "MARIA (Multi-Agent Regulatory Intelligence Architecture)",
+     "Retail regulatory compliance",
+     "CSRD",
+     "AGEC",
+     "Digital Product Passport",
+     "GPSR",
+     "EU AI Act",
+     "DORA",
+     "NIS2",
+     "GDPR",
+     "Devoir de vigilance",
+     "AI compliance agents",
+     "Multi-agent AI systems",
+     "Regulatory technology"
+    ],
+    "hasOfferCatalog": {
+     "@type": "OfferCatalog",
+     "name": "Solutions de conformité Cleo Labs",
+     "itemListElement": [
+      {
+       "@type": "Offer",
+       "itemOffered": {
+        "@type": "SoftwareApplication",
+        "name": "Cleo Regulatory Scan",
+        "applicationCategory": "BusinessApplication"
+       }
+      },
+      {
+       "@type": "Offer",
+       "itemOffered": {
+        "@type": "Service",
+        "name": "Automatisation de la conformité produit"
+       }
+      },
+      {
+       "@type": "Offer",
+       "itemOffered": {
+        "@type": "Service",
+        "name": "Due Diligence tiers"
+       }
+      }
+     ]
+    },
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "17 rue Berteaux Dumas",
+     "addressLocality": "Neuilly-sur-Seine",
+     "postalCode": "92200",
+     "addressRegion": "Île-de-France",
+     "addressCountry": "FR"
+    },
+    "sameAs": [
+     "https://www.linkedin.com/company/cleolabs",
+     "https://x.com/cleolabs",
+     "https://www.youtube.com/@Cleo_labs",
+     "https://www.crunchbase.com/organization/celo-labs",
+     "https://www.producthunt.com/products/cleo-labs",
+     "https://www.wikidata.org/wiki/Q138466568"
+    ],
+    "contactPoint": [
+     {
+      "@type": "ContactPoint",
+      "email": "contact@cleolabs.co",
+      "contactType": "sales",
+      "availableLanguage": [
+       "English",
+       "French"
+      ]
+     },
+     {
+      "@type": "ContactPoint",
+      "email": "contact@cleolabs.co",
+      "contactType": "customer support",
+      "availableLanguage": [
+       "English",
+       "French"
+      ]
+     }
+    ],
+    "taxID": "FR20984567883",
+    "iso6523Code": "0009:FR20984567883"
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.cleolabs.co/#website",
+    "name": "Cleo Labs",
+    "url": "https://www.cleolabs.co",
+    "inLanguage": [
+     "fr-FR"
+    ],
+    "publisher": {
+     "@type": "Organization",
+     "@id": "https://www.cleolabs.co/#organization",
+     "name": "Cleo Labs",
+     "url": "https://www.cleolabs.co"
+    },
+    "potentialAction": {
+     "@type": "SearchAction",
+     "target": "https://www.cleolabs.co/fr/blog?q={search_term_string}",
+     "query-input": "required name=search_term_string"
+    }
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Cleo Labs : Infrastructure IA de Conformité pour le Retail",
+    "description": "Découvrez comment MARIA, l'architecture IA multi-agents de Cleo Labs, automatise la conformité réglementaire pour les retailers dans 106 pays.",
+    "thumbnailUrl": "https://www.cleolabs.co/cloud-bg.webp",
+    "contentUrl": "https://www.cleolabs.co/hero-video.mp4",
+    "uploadDate": "2024-09-01",
+    "duration": "PT30S",
+    "isFamilyFriendly": true,
+    "inLanguage": "fr-FR",
+    "publisher": {
+     "@type": "Organization",
+     "@id": "https://www.cleolabs.co/#organization",
+     "name": "Cleo Labs"
+    }
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "Quels types de réglementations Cleo couvre-t-elle ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Cleo suit plus de 25 000 réglementations dont le RGPD, l'AI Act, DORA, NIS2, CSRD/CS3D, LGPD, CCPA et bien d'autres. Nous surveillons des sources officielles dans 106 pays (institutions européennes, régulateurs nationaux, autorités de protection des données et superviseurs financiers) pour une vision véritablement globale."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "En quoi Cleo est-elle différente d'un service de veille réglementaire traditionnel ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Les services traditionnels reposent sur des analystes qui compilent à la main des newsletters. L’IA de Cleo analyse des milliers de sources en temps réel, ne retient que ce qui concerne votre activité, évalue le risque automatiquement et rédige les synthèses avec actions concrètes : en minutes, pas en jours."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Puis-je personnaliser la veille selon le périmètre réglementaire spécifique de mon entreprise ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Oui. Dès l'intégration, Cleo cartographie votre périmètre réglementaire à partir de votre secteur, vos juridictions, vos produits et vos activités de traitement de données. Vous pouvez l'affiner à tout moment. Chaque alerte, synthèse et score est personnalisé : pas de bruit, pas de signal hors-sujet."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Comment fonctionne l'évaluation de risque par IA ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "L'IA de Cleo analyse chaque signal réglementaire selon plusieurs dimensions : sévérité du changement, pertinence pour votre activité, proximité des échéances de conformité et impact financier potentiel. Chaque signal reçoit un score de risque de 0 à 100 avec un niveau de risque clair (Critique, Élevé, Moyen, Faible), pour que votre équipe puisse prioriser ce qui compte le plus."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Nos données sont-elles sécurisées ? Où sont-elles hébergées ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "La sécurité est au cœur de tout ce que nous construisons. Toutes les données sont hébergées sur des serveurs en UE (Scaleway, région Paris), sous juridiction RGPD. Vos données sont chiffrées au repos (AES-256) et en transit (TLS 1.3), et nous n'utilisons jamais les données clients pour entraîner nos modèles IA. DPA téléchargeable."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Combien de temps faut-il pour commencer ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Vous pouvez lancer votre premier scan réglementaire en moins de 5 minutes. Entrez simplement le domaine de votre entreprise et l'IA de Cleo cartographie automatiquement votre périmètre réglementaire. La mise en place complète (équipe, alertes, connexion à vos outils) prend moins d'une journée."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Toute mon équipe conformité peut-elle utiliser la plateforme ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Oui. Cleo est conçu pour le travail en équipe. Vous pouvez inviter autant de membres que nécessaire, attribuer des obligations réglementaires à des responsables spécifiques, partager l'intelligence entre services et suivre la conformité collectivement. L'accès par rôles garantit que chacun ne voit que ce qui le concerne."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Quels modèles d'IA Cleo utilise-t-elle ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Cleo s'appuie sur des modèles IA de pointe, dont Claude, pour l'analyse de sources, l'évaluation du risque, la synthèse et les questions-réponses. Notre adaptation réglementaire propriétaire garantit la précision et limite les hallucinations sur les sujets juridiques."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Proposez-vous un essai gratuit ou une démo ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Nous proposons une démo personnalisée gratuite où nous effectuons un scan réglementaire en direct sur votre entreprise et vous présentons la plateforme. Sans carte bancaire, sans engagement. Vous voyez de vrais résultats pour votre activité dès le premier rendez-vous."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Comment fonctionne la démo live ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Entrez votre email ou connectez-vous avec Google : on vous envoie un magic link. Cliquez dessus et vous êtes dans le dashboard. Pas de compte créé, pas d'appel commercial programmé. La démo montre un vrai catalogue de produits grand-public (BIC) avec 186 réglementations suivies sur 32 marchés. Vous pouvez explorer chaque vue : produits, signaux, pays, lois et autorités."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Comment Cleo se compare-t-elle aux autres outils de conformité ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Cleo Labs est une plateforme d'intelligence réglementaire par IA conçue pour les équipes conformité. Elle suit plus de 25 000 réglementations dans 106 pays, dont le RGPD, l'AI Act, DORA, NIS2 et la CSRD. Cleo utilise une chaîne IA multi-agents avec 30+ appels LLM spécialisés par scan pour fournir une intelligence de conformité exploitable, avec évaluation du risque et traçabilité complète des sources, le tout hébergé sur des serveurs en UE avec conformité RGPD documentée."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Comment fonctionne le criblage de due diligence ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Cleo automatise la Due Diligence des tiers en criblant les entités contre les listes de sanctions, bases PPE, médias défavorables et dossiers judiciaires sur plus de 3 700 sources. La plateforme réduit le temps de criblage de 5 jours à moins de 2 heures par entité en moyenne, générant des rapports prêts pour l'audit avec horodatages inviolables, scores de risque IA (0–100) et traçabilité complète des sources."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Comment Cleo aide-t-elle à se conformer à l'AI Act ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Cleo surveille l'AI Act européen et ses règlements d'application en temps réel, identifiant les obligations pertinentes pour vos systèmes d'IA selon leur classification de risque. La plateforme cartographie vos produits IA aux exigences spécifiques (transparence, contrôle humain, gouvernance des données, évaluation de conformité), suit les échéances d'application et alerte votre équipe lors de la publication de nouvelles orientations par les autorités européennes."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Quelles réglementations mon entreprise doit-elle respecter ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Cela dépend de votre secteur, de vos produits, de vos activités de traitement de données et des marchés où vous opérez. Cleo cartographie automatiquement votre périmètre réglementaire en analysant le domaine de votre entreprise : identifiant les cadres applicables en matière de protection des données (RGPD, CCPA, LGPD), régulation financière (DORA, MiCA, AML5), sécurité des produits (marquage CE, FCC, FDA), durabilité (CSRD, SFDR, Taxonomie) et gouvernance IA (AI Act, NIS2). Voyez le produit en action sur demo.cleolabs.co pour voir votre paysage réglementaire spécifique."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Qu'est-ce que MARIA ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "MARIA (Multi-Agent Regulatory Intelligence Architecture) est l'architecture IA agentique propriétaire de Cleo Labs. Elle modélise des raisonnements juridiques complexes grâce à des agents spécialisés, transformant des centaines de réglementations en analyses d'impact structurées et en plans de conformité exploitables en temps réel. MARIA couvre plus de 3 700 sources réglementaires officielles dans 106 pays et supporte toutes les langues et juridictions."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Qui sont les investisseurs de Cleo Labs ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Cleo Labs a levé 1,5 million d'euros en tour de pré-amorçage mené par Larry Berger, fondateur d'Amplify, avec la participation de La Financière Saint-James et Kima Ventures. Ce financement accélère le déploiement commercial en Europe, puis aux États-Unis où la fragmentation réglementaire entre 50 États crée une demande de même échelle."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Comment Cleo Labs aide-t-elle les retailers en matière de conformité ?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Cleo Labs fonctionne comme un cabinet de conformité entièrement automatisé pour les retailers. Propulsée par MARIA, elle consolide les données réglementaires produit à travers tous les marchés et automatise les flux de conformité clés : exigences d'étiquetage, évaluation du risque, documentation et veille réglementaire. Pour chaque lancement produit, MARIA identifie les exigences d'accès marché en quelques secondes, couvrant CSRD, AGEC, GPSR, Passeport Numérique Produit, Devoir de vigilance et bien plus. Les équipes conformité retail multiplient par 10 leur capacité de traitement."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Comment automatiser la conformité produit avec Cleo Labs",
+    "description": "Utilisez la plateforme IA de Cleo Labs pour cartographier vos obligations réglementaires produit dans 106 pays en quelques minutes.",
+    "totalTime": "PT5M",
+    "step": [
+     {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Renseignez le nom de domaine de votre entreprise",
+      "text": "Notre IA analyse votre activité, vos produits et vos marchés pour identifier automatiquement votre périmètre réglementaire."
+     },
+     {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "L'IA cartographie votre périmètre réglementaire",
+      "text": "Les cadres applicables sont identifiés, évalués en risque et rattachés à votre contexte métier."
+     },
+     {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Recevez un plan d'action priorisé par niveau de risque",
+      "text": "Fiches de synthèse, obligations attribuées et échéances d'application. Votre équipe peut agir immédiatement."
+     }
+    ],
+    "tool": {
+     "@type": "HowToTool",
+     "name": "Plateforme de conformité produit Cleo Labs"
+    }
+   }
+  ],
+  "illisibles": 0,
+  "h1": [
+   "Vendez partout, conformes partout."
+  ],
+  "mots": 1151,
+  "liens": [
+   "/fr",
+   "/fr/blog",
+   "/fr/careers",
+   "/fr/company",
+   "/fr/customers",
+   "/fr/event",
+   "/fr/for/importers-distributors",
+   "/fr/for/manufacturers",
+   "/fr/for/marketplaces",
+   "/fr/industries",
+   "/fr/jurisdictions/european-union",
+   "/fr/jurisdictions/france",
+   "/fr/jurisdictions/germany",
+   "/fr/jurisdictions/united-kingdom",
+   "/fr/jurisdictions/united-states",
+   "/fr/legal-data",
+   "/fr/meet",
+   "/fr/privacy",
+   "/fr/research",
+   "/fr/resources",
+   "/fr/security",
+   "/fr/skills",
+   "/fr/solutions/product-compliance",
+   "/fr/terms",
+   "/legal-data/docs",
+   "/legal-data/playground"
+  ]
+ },
+ "en": {
+  "lang": "en",
+  "titre": "Automated Product Compliance for Global Brands | Cleo Labs",
+  "metas": {
+   "viewport": "width=device-width, initial-scale=1",
+   "description": "AI-powered product compliance platform for global brands. 106 countries, 25,000+ regulations, 3,700+ sources. CSRD, AGEC, GPSR coverage.",
+   "robots": "index, follow",
+   "google-site-verification": "google57f0014b89d60d67",
+   "og:title": "Cleo Labs: Automated Product Compliance for Global Brands",
+   "og:description": "AI-powered product compliance platform covering 106 countries and 3,700+ regulatory sources. The Deel of product compliance.",
+   "og:url": "https://www.cleolabs.co/en",
+   "og:site_name": "Cleo Labs",
+   "og:locale": "en_US",
+   "og:image": "https://www.cleolabs.co/og-image.jpg",
+   "og:image:width": "1200",
+   "og:image:height": "630",
+   "og:image:alt": "Cleo Labs: AI regulatory compliance platform dashboard",
+   "og:type": "website",
+   "twitter:card": "summary_large_image",
+   "twitter:site": "@cleolabs",
+   "twitter:title": "Cleo Labs: Automated Product Compliance for Global Brands",
+   "twitter:description": "AI-powered product compliance platform covering 106 countries and 3,700+ regulatory sources. The Deel of product compliance.",
+   "twitter:image": "https://www.cleolabs.co/og-image.jpg"
+  },
+  "canonical": "https://www.cleolabs.co/en",
+  "hreflang": {
+   "en": "https://www.cleolabs.co/en",
+   "fr": "https://www.cleolabs.co/fr",
+   "x-default": "https://www.cleolabs.co/en"
+  },
+  "blocs": [
+   {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://www.cleolabs.co/#organization",
+    "name": "Cleo Labs",
+    "legalName": "Cleo Corp SAS",
+    "url": "https://www.cleolabs.co",
+    "logo": {
+     "@type": "ImageObject",
+     "url": "https://www.cleolabs.co/apple-touch-icon.png",
+     "width": 180,
+     "height": 180
+    },
+    "image": "https://www.cleolabs.co/og-image.jpg",
+    "description": "Cleo Labs builds MARIA (Multi-Agent Regulatory Intelligence Architecture), Europe's first AI compliance infrastructure for retailers. MARIA turns 3,700+ regulatory sources across 106 countries into real-time impact analyses, helping retail compliance teams multiply their processing capacity by 10x.",
+    "slogan": "The Deel of product compliance",
+    "foundingDate": "2023",
+    "award": "Winner: The Pitch by Deel (Station F, 2026)",
+    "foundingLocation": {
+     "@type": "Place",
+     "name": "Neuilly-sur-Seine, France"
+    },
+    "numberOfEmployees": {
+     "@type": "QuantitativeValue",
+     "minValue": 2,
+     "maxValue": 10
+    },
+    "areaServed": [
+     {
+      "@type": "Continent",
+      "name": "Europe"
+     },
+     {
+      "@type": "Country",
+      "name": "United States"
+     }
+    ],
+    "founder": [
+     {
+      "@type": "Person",
+      "@id": "https://www.cleolabs.co/#anaelle-guez",
+      "name": "Anaëlle Guez",
+      "jobTitle": "CEO & Co-founder",
+      "description": "10+ years at the intersection of law and digital transformation. Former Chief Transformation Officer at Havas Group.",
+      "url": "https://www.linkedin.com/in/anaelle-guez-ab341746/",
+      "alumniOf": {
+       "@type": "Organization",
+       "name": "Havas Group"
+      },
+      "knowsAbout": [
+       "Regulatory compliance",
+       "Digital transformation",
+       "Corporate law"
+      ]
+     },
+     {
+      "@type": "Person",
+      "@id": "https://www.cleolabs.co/#naomie-halioua",
+      "name": "Naomie Halioua",
+      "jobTitle": "CRO & Co-founder",
+      "description": "Engineer from École Polytechnique. Architect of the MARIA multi-agent AI technology.",
+      "url": "https://www.linkedin.com/in/naomiehalioua/",
+      "alumniOf": {
+       "@type": "CollegeOrUniversity",
+       "name": "École Polytechnique"
+      },
+      "knowsAbout": [
+       "Multi-agent AI systems",
+       "Natural language processing",
+       "Regulatory technology"
+      ]
+     }
+    ],
+    "funding": {
+     "@type": "FundingEvent",
+     "name": "Pre-Seed Round",
+     "date": "2026",
+     "fundingTotal": {
+      "@type": "MonetaryAmount",
+      "value": 1500000,
+      "currency": "EUR"
+     },
+     "funder": [
+      {
+       "@type": "Person",
+       "name": "Larry Berger",
+       "description": "Founder of Amplify"
+      },
+      {
+       "@type": "Organization",
+       "name": "La Financière Saint-James"
+      },
+      {
+       "@type": "Organization",
+       "name": "Kima Ventures",
+       "url": "https://www.kimaventures.com"
+      }
+     ]
+    },
+    "knowsAbout": [
+     "MARIA (Multi-Agent Regulatory Intelligence Architecture)",
+     "Retail regulatory compliance",
+     "CSRD",
+     "AGEC",
+     "Digital Product Passport",
+     "GPSR",
+     "EU AI Act",
+     "DORA",
+     "NIS2",
+     "GDPR",
+     "Devoir de vigilance",
+     "AI compliance agents",
+     "Multi-agent AI systems",
+     "Regulatory technology"
+    ],
+    "hasOfferCatalog": {
+     "@type": "OfferCatalog",
+     "name": "Cleo Labs Compliance Solutions",
+     "itemListElement": [
+      {
+       "@type": "Offer",
+       "itemOffered": {
+        "@type": "SoftwareApplication",
+        "name": "Cleo Regulatory Scan",
+        "applicationCategory": "BusinessApplication"
+       }
+      },
+      {
+       "@type": "Offer",
+       "itemOffered": {
+        "@type": "Service",
+        "name": "Product Compliance Automation"
+       }
+      },
+      {
+       "@type": "Offer",
+       "itemOffered": {
+        "@type": "Service",
+        "name": "Third-Party Due Diligence"
+       }
+      }
+     ]
+    },
+    "address": {
+     "@type": "PostalAddress",
+     "streetAddress": "17 rue Berteaux Dumas",
+     "addressLocality": "Neuilly-sur-Seine",
+     "postalCode": "92200",
+     "addressRegion": "Île-de-France",
+     "addressCountry": "FR"
+    },
+    "sameAs": [
+     "https://www.linkedin.com/company/cleolabs",
+     "https://x.com/cleolabs",
+     "https://www.youtube.com/@Cleo_labs",
+     "https://www.crunchbase.com/organization/celo-labs",
+     "https://www.producthunt.com/products/cleo-labs",
+     "https://www.wikidata.org/wiki/Q138466568"
+    ],
+    "contactPoint": [
+     {
+      "@type": "ContactPoint",
+      "email": "contact@cleolabs.co",
+      "contactType": "sales",
+      "availableLanguage": [
+       "English",
+       "French"
+      ]
+     },
+     {
+      "@type": "ContactPoint",
+      "email": "contact@cleolabs.co",
+      "contactType": "customer support",
+      "availableLanguage": [
+       "English",
+       "French"
+      ]
+     }
+    ],
+    "taxID": "FR20984567883",
+    "iso6523Code": "0009:FR20984567883"
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://www.cleolabs.co/#website",
+    "name": "Cleo Labs",
+    "url": "https://www.cleolabs.co",
+    "inLanguage": [
+     "en-US"
+    ],
+    "publisher": {
+     "@type": "Organization",
+     "@id": "https://www.cleolabs.co/#organization",
+     "name": "Cleo Labs",
+     "url": "https://www.cleolabs.co"
+    },
+    "potentialAction": {
+     "@type": "SearchAction",
+     "target": "https://www.cleolabs.co/en/blog?q={search_term_string}",
+     "query-input": "required name=search_term_string"
+    }
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Cleo Labs: AI Compliance Infrastructure for Retail",
+    "description": "Discover how MARIA, Cleo Labs' multi-agent AI architecture, automates regulatory compliance for retailers across 106 countries. Monitor 3,700+ regulatory sources in real time.",
+    "thumbnailUrl": "https://www.cleolabs.co/cloud-bg.webp",
+    "contentUrl": "https://www.cleolabs.co/hero-video.mp4",
+    "uploadDate": "2024-09-01",
+    "duration": "PT30S",
+    "isFamilyFriendly": true,
+    "inLanguage": "en-US",
+    "publisher": {
+     "@type": "Organization",
+     "@id": "https://www.cleolabs.co/#organization",
+     "name": "Cleo Labs"
+    }
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+     {
+      "@type": "Question",
+      "name": "What types of regulations does Cleo cover?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Cleo tracks 25,000+ regulations including GDPR, AI Act, DORA, NIS2, CSRD/CS3D, LGPD, CCPA, and more. We monitor official sources across 106 countries (EU institutions, national regulators, data protection authorities, and financial supervisors) so you get a truly global view."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "How is Cleo different from a traditional regulatory watch service?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Traditional services rely on analysts manually compiling newsletters. Cleo’s AI scans thousands of sources in real time, keeps only what’s relevant to your business, scores risk automatically, and writes executive briefings with clear action items: minutes, not days."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Can I customize monitoring to my company's specific regulatory perimeter?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. During onboarding, Cleo maps your regulatory perimeter based on your industry, jurisdictions, products, and data processing activities. You can refine this at any time. Every alert, briefing, and risk score is personalized to your context: no noise, no irrelevant signals."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "How does the AI risk scoring work?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Cleo's AI analyzes each regulatory signal across multiple dimensions: severity of the change, relevance to your business, compliance deadline proximity, and potential financial impact. Each signal receives a risk score from 0 to 100 with a clear risk level (Critical, High, Medium, Low), so your team can prioritize what matters most."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Is our data secure? Where is it hosted?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Security is at the core of everything we build. All data is hosted on EU-based servers (Scaleway, Paris region), under GDPR jurisdiction. Your data is encrypted at rest (AES-256) and in transit (TLS 1.3), and we never use customer data to train our AI models. DPA available for download."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "How long does it take to get started?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "You can run your first regulatory scan in under 5 minutes. Simply enter your company domain, and Cleo's AI maps your regulatory perimeter automatically. Full onboarding with team setup, custom alerts, and integration with your existing tools typically takes less than one day."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Can my entire compliance team use the platform?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Yes. Cleo is built for team collaboration. You can invite unlimited team members, assign regulatory obligations to specific stakeholders, share intelligence across departments, and track compliance progress together. Role-based access ensures each team member sees what is relevant to them."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "What AI models does Cleo use?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Cleo runs on frontier models, including Claude, across source analysis, risk assessment, summarisation, and conversational Q&A. Our proprietary regulatory fine-tuning ensures accuracy and reduces hallucinations on legal and compliance topics."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Do you offer a free trial or demo?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "We offer a free personalized demo where we run a live regulatory scan on your company and walk you through the platform. No credit card required, no commitment. You see real results for your business in the first meeting."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "How does the live demo work?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Enter your email or sign in with Google: we send you a magic link. Click it and you're in the dashboard. No account is created, no sales call scheduled. The demo shows a real consumer-goods catalog (BIC) with 186 regulations tracked across 32 markets. You can browse every view: products, signals, countries, laws, and authorities."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "How does Cleo compare to other compliance tools?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Cleo Labs is an AI-powered regulatory intelligence platform designed for compliance teams. It tracks 25,000+ regulations across 106 countries, including GDPR, AI Act, DORA, NIS2, and CSRD. Cleo uses a multi-agent AI pipeline with 30+ specialized LLM calls per scan to deliver risk-scored, actionable compliance intelligence with full source traceability, all hosted on EU servers with documented GDPR compliance."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "How does the due diligence screening work?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Cleo automates third-party due diligence by screening entities against sanctions lists, PEP databases, adverse media, and court records across thousands of sources. The platform reduces screening time from 5 days to under 2 hours per entity on average, generating audit-ready reports with tamper-proof timestamps, AI risk scores (0–100), and full source traceability. It covers OFAC, EU sanctions, Sapin II, UK Bribery Act, FCPA, and AML5 requirements."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "How does Cleo help with AI Act compliance?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Cleo monitors the EU AI Act and its implementing regulations in real time, identifying obligations relevant to your AI systems based on their risk classification. The platform maps your AI products to specific requirements (transparency, human oversight, data governance, conformity assessment), tracks enforcement deadlines, and alerts your team when new guidance is published by EU authorities or national supervisors."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "What regulations should my company comply with?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "It depends on your industry, products, data processing activities, and the markets you operate in. Cleo automatically maps your regulatory perimeter by analyzing your company’s domain, identifying applicable frameworks across data privacy (GDPR, CCPA, LGPD), financial regulation (DORA, MiCA, AML5), product safety (CE Marking, FCC, FDA), sustainability (CSRD, SFDR, Taxonomy), and AI governance (AI Act, NIS2). See the product in action at demo.cleolabs.co to see your specific regulatory landscape."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "What is MARIA?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "MARIA (Multi-Agent Regulatory Intelligence Architecture) is Cleo Labs' proprietary agentic AI architecture. It models complex legal reasoning through specialized agents, turning hundreds of regulations into structured impact analyses and actionable compliance plans in real time. MARIA covers 3,700+ official regulatory sources across 106 countries and supports any language and jurisdiction."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "Who are Cleo Labs' investors?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Cleo Labs raised EUR 1.5M in a pre-seed round led by Larry Berger, founder of Amplify, with participation from La Financière Saint-James and Kima Ventures. This funding accelerates commercial deployment in Europe, then in the United States where regulatory fragmentation across 50 states creates demand at the same scale."
+      }
+     },
+     {
+      "@type": "Question",
+      "name": "How does Cleo Labs help retailers with compliance?",
+      "acceptedAnswer": {
+       "@type": "Answer",
+       "text": "Cleo Labs operates as a fully automated compliance office for retailers. Powered by MARIA, it consolidates product regulatory data across all markets and automates key compliance workflows: labeling requirements, risk scoring, documentation, and regulatory monitoring. For every product launch, MARIA surfaces market access requirements in seconds, covering CSRD, AGEC, GPSR, Digital Product Passport, Devoir de vigilance, and more. Retail compliance teams multiply their processing capacity by 10x."
+      }
+     }
+    ]
+   },
+   {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to automate product compliance with Cleo Labs",
+    "description": "Use Cleo Labs's AI-powered platform to map your product regulatory obligations across 106 countries in minutes.",
+    "totalTime": "PT5M",
+    "step": [
+     {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Enter your company domain",
+      "text": "Our AI analyzes your business, products, and markets to automatically identify your regulatory perimeter."
+     },
+     {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "AI maps your regulatory perimeter",
+      "text": "Applicable frameworks are identified, risk-scored, and linked to your specific business context."
+     },
+     {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Receive a risk-prioritized action plan",
+      "text": "Clear briefs, assigned obligations, and enforcement deadlines, ready for your team to act on immediately."
+     }
+    ],
+    "tool": {
+     "@type": "HowToTool",
+     "name": "Cleo Labs product compliance platform"
+    }
+   }
+  ],
+  "illisibles": 0,
+  "h1": [
+   "Sell anywhere, comply everywhere."
+  ],
+  "mots": 1040,
+  "liens": [
+   "/en",
+   "/en/blog",
+   "/en/careers",
+   "/en/company",
+   "/en/customers",
+   "/en/event",
+   "/en/for/importers-distributors",
+   "/en/for/manufacturers",
+   "/en/for/marketplaces",
+   "/en/industries",
+   "/en/jurisdictions/european-union",
+   "/en/jurisdictions/france",
+   "/en/jurisdictions/germany",
+   "/en/jurisdictions/united-kingdom",
+   "/en/jurisdictions/united-states",
+   "/en/legal-data",
+   "/en/meet",
+   "/en/privacy",
+   "/en/research",
+   "/en/resources",
+   "/en/security",
+   "/en/skills",
+   "/en/solutions/product-compliance",
+   "/en/terms",
+   "/legal-data/docs",
+   "/legal-data/playground"
+  ]
+ }
+}
