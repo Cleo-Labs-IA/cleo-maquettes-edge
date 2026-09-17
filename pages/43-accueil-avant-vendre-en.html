@@ -1,4 +1,10 @@
 <!--NAV-->
+<!-- ═══ 17/09/2026, « https://general.legal, mix un peu avec ces animations, cette structure, tu vois comme c'est clair » ═══
+     Repris de general.legal (relevé au navigateur, scratchpad/general-legal) : la carte à deux choix du haut de page, la scène
+     signature (phrase géante qui se remplit mot à mot au défilement, photo collante au centre, cartes qui arrivent une à une :
+     le point de départ puis trois étapes numérotées, HowTo), la roue des domaines (ici les 27 catégories publiées sur la page
+     Secteur ; EN : liste anglaise « Consumer Product Scope » de Naomie, 14/09), la FAQ numérotée. Matière du site inchangée.
+     La phrase géante est le h2 de la méthode ; la scène de la peluche (cinq étapes) est remplacée par cette scène. -->
 <!-- ═══ ACCUEIL, MÉLANGE ═══ 17/09/2026, Naomie : « mix avec les améliorations précédentes et cette DA ».
      Améliorations reprises de la version Codex (commit d3e98f3) : haut de page clarifié (sur-titre, chapeau aux trois livrables en
      gras, « Réserver un échange » et « Voir un exemple de dossier », globe légendé), barre « Aller à », sections numérotées 01 à 05,
@@ -15,7 +21,7 @@
       <p class="ac-surtitre">International product compliance</p>
       <h1 class="ac-h1">Sell anywhere, comply everywhere.</h1>
       <p class="ac-lead">Automated product compliance for global brands. For each product and each market, Cleo prepares a clear file: <strong>the applicable rules, the missing evidence and the next action</strong>. A compliance expert reviews it before handing it over.</p>
-      <div class="ac-actions"><a class="sy-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Book a call <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sy-bouton-secondaire" href="#dossier">See an example file</a></div>
+      <div class="ac-choix"><div class="ac-choix-col"><p>Launching a product or entering a new market?</p><a class="sy-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Book a call <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div><div class="ac-choix-col"><p>Want to see what a file contains?</p><a class="sy-bouton-secondaire" href="#dossier">See an example <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div>
       <ul class="ac-livrables"><li>Official rules</li><li>Expected evidence</li><li>Actions to take</li></ul>
     </div>
     <div class="ac-globe-scene"><!--GLOBE-PRODUITS--><p class="ac-globe-legende"><b>One product, several markets</b>The same clear reading, country by country.</p></div>
@@ -97,25 +103,22 @@
 <!-- ═══ 03 LA MÉTHODE ═══ titre de la version Codex ; scène de la peluche (cinq étapes, HowTo), experts et bento de la DA. -->
 <section class="section ac-chapitre ac-recit ac-methode-mix" id="methode">
   <div class="ac-conteneur">
-    <div class="ac-tete" data-apparait><span class="ac-index">03</span><h2 class="ac-h2">Technology prepares. The expert checks.</h2><p class="ac-lead">Cleo's agent prepares the file, a compliance expert reviews it, and your organisation decides.</p></div>
-    <div class="ac-recit-scene" data-scene>
-      <div class="ac-recit-collant">
-        <figure class="ac-recit-image">
-          <img src="img:masse-peluche" alt="A blue teddy bear among grey teddy bears">
-          <div class="ac-flottante ac-recit-fait" data-etape="1" aria-hidden="true"><b>Directive 2009/48/EC</b><span>Toy safety · applies</span></div>
-          <div class="ac-flottante ac-recit-fait" data-etape="2" aria-hidden="true"><b>EN 71-1, EN 71-2, EN 71-3</b><span>Mechanical, flammability, migration</span></div>
-          <div class="ac-flottante ac-recit-fait" data-etape="3" aria-hidden="true"><b>CE marking</b><span>Manufacturer name and address</span></div>
-          <div class="ac-flottante ac-recit-fait" data-etape="4" aria-hidden="true"><b>Factory test report</b><span>Requested from the supplier</span></div>
-          <div class="ac-flottante ac-recit-pret" aria-hidden="true"><b>File ready for review</b><span class="ac-points"><i></i><i></i><i></i><i></i><i></i></span></div>
-        </figure>
-        <ol class="ac-recit-etapes" data-schema="howto">
-          <li><span>01</span>Find the rules that apply</li>
-          <li><span>02</span>List the tests</li>
-          <li><span>03</span>Prepare the information to display</li>
-          <li><span>04</span>Gather supplier documents</li>
-          <li><span>05</span>Check nothing is missing</li>
+    <div class="ac-tete ac-tete-seule" data-apparait><span class="ac-index">03</span></div>
+    <div class="ac-scene" data-scene>
+      <div class="ac-scene-collant">
+        <h2 class="ac-phrase" style="--n:8"><span style="--i:0">Technology</span> <span style="--i:1">prepares</span> <span style="--i:2">the</span> <span style="--i:3">file.</span> <span style="--i:4">The</span> <span style="--i:5">expert</span> <span style="--i:6">checks</span> <span style="--i:7">it.</span></h2>
+        <figure class="ac-scene-photo"><img src="img:masse-peluche" alt=""></figure>
+        <div class="ac-scene-carte ac-scene-depart"><b>The starting point</b><p>Which rules apply to my product, and what do I need to do before selling it? The longest part is not the lab test, it is everything that comes before it.</p></div>
+        <ol class="ac-scene-etapes" data-schema="howto">
+          <li class="ac-scene-carte ac-scene-etape-1"><span>1</span><b>Scope</b><p>Cleo starts from the product, your role and the countries where you want to sell it.</p></li>
+          <li class="ac-scene-carte ac-scene-etape-2"><span>2</span><b>Prepare</b><p>Cleo's agent brings together the rules, testing, labelling and supplier documents.</p></li>
+          <li class="ac-scene-carte ac-scene-etape-3"><span>3</span><b>Review</b><p>A compliance expert checks the file before it reaches you.</p></li>
         </ol>
       </div>
+    </div>
+    <div class="ac-roue-bloc" data-apparait>
+      <div class="ac-roue-texte"><h3>27 consumer product categories, from toys to automotive.</h3><p>For each one, the rules of your markets, tied to their official text.</p><a class="ac-lien" href="04-secteur.html#perimetre">See the scope <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      <div class="ac-roue" aria-hidden="true"><ul class="ac-roue-liste"><li>Toys</li><li>Children's products</li><li>Sporting goods</li><li>Jewelry, sunglasses, watches and bags</li><li>As seen on TV</li><li>Seasonal and celebrations</li><li>Crafts, fabrics and sewing</li><li>Indoor furniture</li><li>Outdoor living</li><li>Infant and juvenile</li><li>Stationery</li><li>Kitchen and dining</li><li>Small appliances</li><li>Bedding and bath</li><li>Home decor</li><li>Storage and organization</li><li>Electronics</li><li>Electrical</li><li>Lighting</li><li>Hardware and paint</li><li>Automotive</li><li>Pets</li><li>Health, beauty and cosmetics</li><li>Household chemicals</li><li>Hardlines</li><li>Softlines</li><li>Other household products</li><li>Toys</li><li>Children's products</li><li>Sporting goods</li><li>Jewelry, sunglasses, watches and bags</li><li>As seen on TV</li><li>Seasonal and celebrations</li><li>Crafts, fabrics and sewing</li><li>Indoor furniture</li><li>Outdoor living</li><li>Infant and juvenile</li><li>Stationery</li><li>Kitchen and dining</li><li>Small appliances</li><li>Bedding and bath</li><li>Home decor</li><li>Storage and organization</li><li>Electronics</li><li>Electrical</li><li>Lighting</li><li>Hardware and paint</li><li>Automotive</li><li>Pets</li><li>Health, beauty and cosmetics</li><li>Household chemicals</li><li>Hardlines</li><li>Softlines</li><li>Other household products</li></ul></div>
     </div>
     <div class="ac-mix-experts">
       <p class="ac-surtitre">The experts who review your files</p>

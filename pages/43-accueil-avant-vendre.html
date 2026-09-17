@@ -1,4 +1,10 @@
 <!--NAV-->
+<!-- ═══ 17/09/2026, « https://general.legal, mix un peu avec ces animations, cette structure, tu vois comme c'est clair » ═══
+     Repris de general.legal (relevé au navigateur, scratchpad/general-legal) : la carte à deux choix du haut de page, la scène
+     signature (phrase géante qui se remplit mot à mot au défilement, photo collante au centre, cartes qui arrivent une à une :
+     le point de départ puis trois étapes numérotées, HowTo), la roue des domaines (ici les 27 catégories publiées sur la page
+     Secteur ; EN : liste anglaise « Consumer Product Scope » de Naomie, 14/09), la FAQ numérotée. Matière du site inchangée.
+     La phrase géante est le h2 de la méthode ; la scène de la peluche (cinq étapes) est remplacée par cette scène. -->
 <!-- ═══ ACCUEIL, MÉLANGE ═══ 17/09/2026, Naomie : « mix avec les améliorations précédentes et cette DA ».
      Améliorations reprises de la version Codex (commit d3e98f3) : haut de page clarifié (sur-titre, chapeau aux trois livrables en
      gras, « Réserver un échange » et « Voir un exemple de dossier », globe légendé), barre « Aller à », sections numérotées 01 à 05,
@@ -15,7 +21,7 @@
       <p class="ac-surtitre">Conformité produit internationale</p>
       <h1 class="ac-h1">Vendez partout, conformez-vous partout.</h1>
       <p class="ac-lead">La conformité produit automatisée pour les marques internationales. Pour chaque produit et chaque marché, Cleo prépare un dossier clair : <strong>les règles applicables, les preuves manquantes et la prochaine action</strong>. Un expert conformité le relit avant de vous le remettre.</p>
-      <div class="ac-actions"><a class="sy-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Réserver un échange <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sy-bouton-secondaire" href="#dossier">Voir un exemple de dossier</a></div>
+      <div class="ac-choix"><div class="ac-choix-col"><p>Vous lancez un produit ou visez un nouveau marché ?</p><a class="sy-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Réserver un échange <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div><div class="ac-choix-col"><p>Vous voulez voir ce que contient un dossier ?</p><a class="sy-bouton-secondaire" href="#dossier">Voir un exemple <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div>
       <ul class="ac-livrables"><li>Règles officielles</li><li>Preuves attendues</li><li>Actions à mener</li></ul>
     </div>
     <div class="ac-globe-scene"><!--GLOBE-PRODUITS--><p class="ac-globe-legende"><b>Un produit, plusieurs marchés</b>La même lecture claire, pays par pays.</p></div>
@@ -97,25 +103,22 @@
 <!-- ═══ 03 LA MÉTHODE ═══ titre de la version Codex ; scène de la peluche (cinq étapes, HowTo), experts et bento de la DA. -->
 <section class="section ac-chapitre ac-recit ac-methode-mix" id="methode">
   <div class="ac-conteneur">
-    <div class="ac-tete" data-apparait><span class="ac-index">03</span><h2 class="ac-h2">La technologie prépare. L'expert vérifie.</h2><p class="ac-lead">L'agent de Cleo prépare le dossier, un expert conformité le relit, et votre organisation décide.</p></div>
-    <div class="ac-recit-scene" data-scene>
-      <div class="ac-recit-collant">
-        <figure class="ac-recit-image">
-          <img src="img:masse-peluche" alt="Une peluche bleue parmi des peluches grises">
-          <div class="ac-flottante ac-recit-fait" data-etape="1" aria-hidden="true"><b>Directive 2009/48/CE</b><span>Sécurité des jouets · s'applique</span></div>
-          <div class="ac-flottante ac-recit-fait" data-etape="2" aria-hidden="true"><b>EN 71-1, EN 71-2, EN 71-3</b><span>Mécanique, inflammabilité, migration</span></div>
-          <div class="ac-flottante ac-recit-fait" data-etape="3" aria-hidden="true"><b>Marquage CE</b><span>Nom et adresse du fabricant</span></div>
-          <div class="ac-flottante ac-recit-fait" data-etape="4" aria-hidden="true"><b>Rapport d'essai de l'usine</b><span>Demandé au fournisseur</span></div>
-          <div class="ac-flottante ac-recit-pret" aria-hidden="true"><b>Dossier prêt pour la relecture</b><span class="ac-points"><i></i><i></i><i></i><i></i><i></i></span></div>
-        </figure>
-        <ol class="ac-recit-etapes" data-schema="howto">
-          <li><span>01</span>Trouver les règles qui s'appliquent</li>
-          <li><span>02</span>Lister les essais</li>
-          <li><span>03</span>Préparer les mentions à afficher</li>
-          <li><span>04</span>Réunir les documents des fournisseurs</li>
-          <li><span>05</span>Vérifier que rien ne manque</li>
+    <div class="ac-tete ac-tete-seule" data-apparait><span class="ac-index">03</span></div>
+    <div class="ac-scene" data-scene>
+      <div class="ac-scene-collant">
+        <h2 class="ac-phrase" style="--n:8"><span style="--i:0">La</span> <span style="--i:1">technologie</span> <span style="--i:2">prépare</span> <span style="--i:3">le</span> <span style="--i:4">dossier.</span> <span style="--i:5">L'expert</span> <span style="--i:6">le</span> <span style="--i:7">vérifie.</span></h2>
+        <figure class="ac-scene-photo"><img src="img:masse-peluche" alt=""></figure>
+        <div class="ac-scene-carte ac-scene-depart"><b>Le point de départ</b><p>Quelle réglementation s'applique à mon produit, et que faire avant de le vendre ? Le plus long n'est pas l'essai en laboratoire, c'est tout ce qui le précède.</p></div>
+        <ol class="ac-scene-etapes" data-schema="howto">
+          <li class="ac-scene-carte ac-scene-etape-1"><span>1</span><b>Cadrer</b><p>Cleo part du produit, de votre rôle et des pays où vous souhaitez le vendre.</p></li>
+          <li class="ac-scene-carte ac-scene-etape-2"><span>2</span><b>Préparer</b><p>L'agent de Cleo réunit les règles, les essais, l'étiquetage et les documents des fournisseurs.</p></li>
+          <li class="ac-scene-carte ac-scene-etape-3"><span>3</span><b>Relire</b><p>Un expert conformité contrôle le dossier avant qu'il vous soit remis.</p></li>
         </ol>
       </div>
+    </div>
+    <div class="ac-roue-bloc" data-apparait>
+      <div class="ac-roue-texte"><h3>27 catégories de produits de consommation, des jouets à l'automobile.</h3><p>Pour chacune, les règles de vos marchés, rattachées à leur texte officiel.</p><a class="ac-lien" href="04-secteur.html#perimetre">Voir le périmètre <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      <div class="ac-roue" aria-hidden="true"><ul class="ac-roue-liste"><li>Jouets</li><li>Produits pour enfants</li><li>Articles de sport</li><li>Bijoux, lunettes de soleil, montres et sacs</li><li>Produits vus à la télévision</li><li>Saisonnier et fêtes</li><li>Loisirs créatifs, tissus et couture</li><li>Mobilier d'intérieur</li><li>Extérieur</li><li>Puériculture</li><li>Papeterie</li><li>Cuisine et arts de la table</li><li>Petit électroménager</li><li>Linge de lit et de bain</li><li>Décoration intérieure</li><li>Rangement et organisation</li><li>Électronique</li><li>Matériel électrique</li><li>Éclairage</li><li>Quincaillerie et peinture</li><li>Automobile</li><li>Animaux de compagnie</li><li>Hygiène, beauté et cosmétiques</li><li>Produits chimiques ménagers</li><li>Hardlines</li><li>Softlines</li><li>Autres produits de la maison</li><li>Jouets</li><li>Produits pour enfants</li><li>Articles de sport</li><li>Bijoux, lunettes de soleil, montres et sacs</li><li>Produits vus à la télévision</li><li>Saisonnier et fêtes</li><li>Loisirs créatifs, tissus et couture</li><li>Mobilier d'intérieur</li><li>Extérieur</li><li>Puériculture</li><li>Papeterie</li><li>Cuisine et arts de la table</li><li>Petit électroménager</li><li>Linge de lit et de bain</li><li>Décoration intérieure</li><li>Rangement et organisation</li><li>Électronique</li><li>Matériel électrique</li><li>Éclairage</li><li>Quincaillerie et peinture</li><li>Automobile</li><li>Animaux de compagnie</li><li>Hygiène, beauté et cosmétiques</li><li>Produits chimiques ménagers</li><li>Hardlines</li><li>Softlines</li><li>Autres produits de la maison</li></ul></div>
     </div>
     <div class="ac-mix-experts">
       <p class="ac-surtitre">Les experts qui relisent vos dossiers</p>
