@@ -277,3 +277,70 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 @media (max-width:1023px){
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-questions-grille{grid-template-columns:minmax(0,1fr);gap:32px}
 }
+
+/* ═══ MÉLANGE ═══ 17/09/2026, « mix avec les améliorations précédentes et cette DA » : les éléments de la version Codex
+   (haut de page aux trois livrables, globe légendé, barre « Aller à », en-têtes numérotés, kicker des trois entrées, trois
+   questions du dossier, équipe dans l'appel final) posés dans la matière du site. Une règle par sélecteur. */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-hero .ac-surtitre:not(#_):not(#_):not(#_){margin:0 0 18px}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-livrables:not(#_):not(#_):not(#_){display:flex;flex-wrap:wrap;gap:8px 22px;margin:28px 0 0;padding:0;list-style:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-livrables li:not(#_):not(#_):not(#_){display:flex;align-items:center;gap:8px;margin:0;font-size:.875rem;color:var(--c-texte-2)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-livrables li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--c-texte-2)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-globe-scene:not(#_):not(#_):not(#_){position:relative;min-width:0}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-globe-legende:not(#_):not(#_):not(#_){position:absolute;right:0;bottom:16px;z-index:3;max-width:210px;margin:0;padding:13px 15px;border-radius:var(--r-carte);background:rgba(255,255,255,.92);box-shadow:0 0 0 1px var(--c-filet), 0 16px 34px rgba(17,17,17,.08);font-size:.8125rem;line-height:1.42;color:var(--c-texte-2)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-globe-legende b:not(#_):not(#_):not(#_){display:block;margin-bottom:3px;font-size:.875rem;font-weight:500;color:var(--c-texte)}
+
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-aller:not(#_):not(#_):not(#_){position:sticky;top:64px;z-index:40;border-bottom:1px solid var(--c-filet);background:rgba(247,246,245,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-aller-liens:not(#_):not(#_):not(#_){display:flex;align-items:center;gap:32px;min-height:58px}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-aller-liens span:not(#_):not(#_):not(#_){font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--c-texte-3)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-aller-liens a:not(#_):not(#_):not(#_){display:inline-flex;align-items:center;min-height:44px;font-size:.875rem;font-weight:500;color:var(--c-texte-2);text-decoration:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-aller-liens a:hover:not(#_):not(#_):not(#_){color:var(--c-accent)}
+
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tete:not(#_):not(#_):not(#_){display:grid;grid-template-columns:72px minmax(0, 760px);column-gap:24px;row-gap:14px;margin-bottom:clamp(40px, 5vw, 64px)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tete .ac-index:not(#_):not(#_):not(#_){grid-row:1 / span 2;padding-top:12px}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tete .ac-h2:not(#_):not(#_):not(#_){margin:0 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tete .ac-lead:not(#_):not(#_):not(#_){grid-column:2;margin:0 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-index:not(#_):not(#_):not(#_){display:inline-block;font-size:12px;font-weight:500;letter-spacing:.12em;color:var(--c-accent)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-questions .ac-entete .ac-index:not(#_):not(#_):not(#_){margin-bottom:14px}
+
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-besoin-sur:not(#_):not(#_):not(#_){font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--c-accent)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main a.ac-besoin h3:not(#_):not(#_):not(#_){margin-top:18px !important}
+
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-dossier-mix .ac-tete .ac-h2:not(#_):not(#_):not(#_){color:#FFFFFF !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-dossier-mix .ac-tete .ac-lead:not(#_):not(#_):not(#_){color:rgba(255,255,255,.7) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-dossier-mix .ac-index:not(#_):not(#_):not(#_){color:#8C92FF}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-questions-dossier:not(#_):not(#_):not(#_){display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:0;margin:0 0 clamp(40px, 5vw, 64px);padding:0;list-style:none;border-top:1px solid rgba(255,255,255,.16)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-questions-dossier li:not(#_):not(#_):not(#_){display:grid;grid-template-columns:34px minmax(0, 1fr);gap:12px;margin:0;padding:24px 24px 24px 0;border-right:1px solid rgba(255,255,255,.16)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-questions-dossier li:not(:first-child):not(#_):not(#_):not(#_){padding-left:24px}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-questions-dossier li:last-child:not(#_):not(#_):not(#_){border-right:0}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-questions-dossier li > span:not(#_):not(#_):not(#_){padding-top:5px;font-size:11px;font-weight:500;color:#8C92FF}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-questions-dossier b:not(#_):not(#_):not(#_){display:block;margin-bottom:6px;font-size:1.25rem;font-weight:500;line-height:1.2;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-questions-dossier p:not(#_):not(#_):not(#_){margin:0;font-size:.9375rem;line-height:1.48;color:rgba(255,255,255,.7)}
+
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-mix-experts:not(#_):not(#_):not(#_){margin-top:clamp(56px, 7vw, 96px)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-mix-experts > .ac-surtitre:not(#_):not(#_):not(#_){margin:0 0 24px}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-methode-mix .sy-bento:not(#_):not(#_):not(#_){margin-top:clamp(56px, 7vw, 96px)}
+
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-final .ac-equipe:not(#_):not(#_):not(#_){display:flex;align-items:center;justify-content:center;gap:14px;margin-top:24px;font-size:.9375rem;color:rgba(255,255,255,.88)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-avatars:not(#_):not(#_):not(#_){display:flex}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-avatars img:not(#_):not(#_):not(#_){width:44px;height:44px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px rgba(255,255,255,.9)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-avatars img + img:not(#_):not(#_):not(#_){margin-left:-10px}
+
+@media (max-width:980px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-questions-dossier:not(#_):not(#_):not(#_){grid-template-columns:minmax(0, 1fr)}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-questions-dossier li:not(#_):not(#_):not(#_){padding:20px 0;border-right:0;border-bottom:1px solid rgba(255,255,255,.16)}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-questions-dossier li:not(:first-child):not(#_):not(#_):not(#_){padding-left:0}
+}
+@media (max-width:700px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-dossier-mix .ac-app-surtitre:not(#_):not(#_):not(#_){color:rgba(255,255,255,.72) !important}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-dossier-mix .ac-exigence-tete b:not(#_):not(#_):not(#_){color:#FFFFFF !important}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-dossier-mix .ac-exigence-tete span:not(#_):not(#_):not(#_){color:rgba(255,255,255,.72) !important}
+}
+@media (max-width:620px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-aller:not(#_):not(#_):not(#_){position:relative;top:auto}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-aller-liens:not(#_):not(#_):not(#_){gap:22px;overflow-x:auto;white-space:nowrap}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-aller-liens span:not(#_):not(#_):not(#_){display:none}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tete:not(#_):not(#_):not(#_){grid-template-columns:minmax(0, 1fr);row-gap:10px}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tete .ac-index:not(#_):not(#_):not(#_){grid-row:auto;padding-top:0}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tete .ac-lead:not(#_):not(#_):not(#_){grid-column:auto}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-globe-legende:not(#_):not(#_):not(#_){right:6px;bottom:4px}
+}
