@@ -1019,11 +1019,12 @@ for (const p of PAGES) {
   if (iEtapes >= 0) {
     const debut = corps.lastIndexOf('<ol', iEtapes)
     const titreEtapes = [...corps.slice(0, debut).matchAll(/<h2\b[^>]*>([\s\S]*?)<\/h2>/g)].pop()
+    // Une étape peut porter un titre en <b> suivi de sa phrase (#comment, 17/09/2026) : le titre devient le nom de l'étape.
     const etapes = [...corps.slice(debut, corps.indexOf('</ol>', iEtapes)).matchAll(/<li\b[^>]*>([\s\S]*?)<\/li>/g)]
-      .map(m => texteDe(m[1].replace(/<span>\d+<\/span>/, '')))
+      .map(m => { const li = m[1].replace(/<span>\d+<\/span>/, ''), b = li.match(/<b>([\s\S]*?)<\/b>/); return { nom: texteDe(b ? b[1] : li), texte: texteDe(li) } })
     if (titreEtapes && etapes.length) {
       blocs.push({ '@context': 'https://schema.org', '@type': 'HowTo', name: texteDe(titreEtapes[1]), ...(url ? { url } : {}), ...lu,
-        step: etapes.map((t, i) => ({ '@type': 'HowToStep', position: i + 1, name: t, text: t })) })
+        step: etapes.map((e, i) => ({ '@type': 'HowToStep', position: i + 1, name: e.nom, text: e.texte })) })
     } else notesSeo.push(`  (${nomSortie} : data-schema="howto" sans titre ou sans étape lisible)`)
   }
   const structure = blocs.map(b =>
