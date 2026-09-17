@@ -16,9 +16,10 @@
        200 API units à vie (le site en ligne affiche Free, 3 appels), poids de 100 API units par classification douanière (à
        coder). ⚠️ À faire avant publication (document, « Avant de publier le nouveau pricing ») : quota Starter réel dans le
        middleware, Price IDs Stripe de production, droits d'usage.
-     - Preuve : 64 portails publics primaires vérifiés, 44 pays ou périmètres (audit official-only du 16/09). Le total de
-       documents n'est pas affiché : il compte aussi les sources secondaires. Réponse réelle AU : Therapeutic Goods Act 1989,
-       source legislation_au, portail officiel www.legislation.gov.au (ligne vérifiée de la matrice).
+     - Preuve : chiffres canon du site, 106 pays, 25 000 réglementations, 19 000 autorités (Naomie, 17/09/2026 : « on va rester
+       sur 106, 25k et 19k parce que c'est repris partout » ; les 64 portails et 44 pays de l'audit official-only ne sont pas
+       affichés). Le total de documents n'est pas affiché non plus. Réponse réelle AU : Therapeutic Goods Act 1989, source
+       legislation_au, portail officiel www.legislation.gov.au (ligne vérifiée de la matrice).
      - Liens relevés le 17/09 : /legal-data/docs et /legal-data/docs/customs (200), /legal-data/playground (200, onglet Customs
        lookup), legaldata-public.cleolabs.co/signup (200). ⚠️ Le bouton « Get API key » de www.cleolabs.co/legal-data/pricing
        pointe vers /signup, qui répond 404 sur www.cleolabs.co. -->
@@ -140,14 +141,13 @@ Authorization: Bearer $CLEO_API_KEY</code></pre></div>
   </div>
 </section>
 
-<!-- ═══ PREUVE ET COUVERTURE ═══ Bloc sombre du site. Chiffres : audit official-only du 16/09/2026 (document, « Legal Data,
-     exactement ce qui est ingéré »). Panneau : réponse réelle du 17/09 (outputs/cleo-internal-api-strategy.html). -->
+<!-- ═══ PREUVE ET COUVERTURE ═══ Bloc sombre du site. Chiffres canon du site (106, 25 000, 19 000), décision de Naomie du 17/09. Panneau : réponse réelle du 17/09 (outputs/cleo-internal-api-strategy.html). -->
 <section class="section sy-sombre dt-trace-section" id="couverture">
   <div class="conteneur dt-duo dt-trace sy-sur-profond">
     <div class="dt-trace-texte">
       <h2>Chaque document garde sa source</h2>
       <p class="sy-lead">Chaque résultat renvoie son identifiant, sa source et l'URL du portail d'origine. Les sources incluses sont celles de votre contrat, et la couverture se consulte pays par pays.</p>
-      <ul class="sy-chiffres dt-preuve-chiffres"><li><b>64</b><span>portails publics primaires vérifiés</span></li><li><b>44</b><span>pays ou périmètres, audit du 16 septembre 2026</span></li></ul>
+      <ul class="sy-chiffres dt-preuve-chiffres"><li><b>106</b><span>pays suivis</span></li><li><b>25 000</b><span>réglementations cartographiées</span></li><li><b>19 000</b><span>autorités réglementaires suivies</span></li></ul>
       <div class="sy-actions dt-actions"><a class="sy-bouton-blanc" href="26-legal-data.html">Explorer la couverture</a></div>
     </div>
     <div class="dt-panneau" aria-hidden="true" data-apparait>
