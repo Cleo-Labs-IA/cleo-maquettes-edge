@@ -1,7 +1,8 @@
-/* ═══ PAGE DATA, LES API PAR CAS D'USAGE ═══ 17/09/2026, Naomie : « fais par cas d'usage de l'API » et « ça fait froid ».
-   Page 39 (FR et EN) seulement : toutes les classes commencent par api-. Matière chaude (couche 17 z) : crème, cartes posées,
-   photos de personnes en couleur, la vraie réponse de l'API posée sur la photo (le geste Legora). Le bleu ne marque que le
-   résultat de l'API. Aucune monospace (règle du DS). */
+/* ═══ PAGE DATA, LES API PAR CAS D'USAGE ═══ 17/09/2026, Naomie : « fais par cas d'usage de l'API ».
+   Page 39 (FR et EN) seulement : toutes les classes commencent par api-. Dans les couleurs du site (papier, encre, cartes
+   blanches à filet, rayons de la couche ElevenLabs) : la couche chaude posée sur tout le site a été retirée le même soir
+   (« ça va pas du tout », « tout le site a changé », « revenir en arrière »). Reste propre à la page : les photos de
+   personnes en couleur, sans trame (clés data-*), et la vraie réponse de l'API posée dessus. Aucune monospace. */
 
 /* Haut de page : texte à gauche, scène à droite */
 body[data-cleo-ds="v6"] main .api-hero:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){padding:clamp(40px, 5vw, 80px) 0 clamp(72px, 8vw, 128px) !important;background:transparent !important}
@@ -10,14 +11,14 @@ body[data-cleo-ds="v6"] main .api-hero-texte h1:not(#_):not(#_):not(#_):not(#_):
 body[data-cleo-ds="v6"] main .api-chapeau:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){max-width:44ch;margin:24px 0 0;font-size:clamp(1.0625rem, .95rem + .35vw, 1.25rem);line-height:1.5;color:var(--o-encre-2)}
 body[data-cleo-ds="v6"] main .api-hero-texte .sy-actions:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:34px}
 body[data-cleo-ds="v6"] main .api-hero-scene:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){position:relative;margin:0;padding:0 0 48px}
-body[data-cleo-ds="v6"] main .api-hero-scene > img:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){display:block;width:100%;height:clamp(380px, 38vw, 540px);object-fit:cover;object-position:46% 50%;border-radius:24px}
-body[data-cleo-ds="v6"] main .api-bulle:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){position:absolute;left:-44px;bottom:0;box-sizing:border-box;width:min(330px, 82%);padding:20px 22px;border-radius:18px;background:var(--o-carte-chaude);box-shadow:inset 0 0 0 1px var(--o-filet), 0 28px 60px -26px rgba(60,38,18,.42)}
+body[data-cleo-ds="v6"] main .api-hero-scene > img:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){display:block;width:100%;height:clamp(380px, 38vw, 540px);object-fit:cover;object-position:46% 50%;border-radius:var(--o-rayon-media)}
+body[data-cleo-ds="v6"] main .api-bulle:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){position:absolute;left:-44px;bottom:0;box-sizing:border-box;width:min(330px, 82%);padding:20px 22px;border-radius:12px;background:#FFFFFF;box-shadow:inset 0 0 0 1px var(--o-filet), 0 28px 60px -26px rgba(0,0,0,.22)}
 body[data-cleo-ds="v6"] main .api-bulle-nom:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){margin:0 0 14px;font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--o-encre-2)}
 body[data-cleo-ds="v6"] main .api-bulle-entrees:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){display:grid;gap:8px;margin:0}
 body[data-cleo-ds="v6"] main .api-bulle-entrees > div:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){display:flex;justify-content:space-between;gap:12px;font-size:14px;line-height:1.35}
 body[data-cleo-ds="v6"] main .api-bulle-entrees dt:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){color:var(--o-encre-2)}
 body[data-cleo-ds="v6"] main .api-bulle-entrees dd:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){margin:0;text-align:right;color:var(--o-encre)}
-body[data-cleo-ds="v6"] main .api-bulle-sortie:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){margin-top:14px;padding:14px 16px;border-radius:12px;background:var(--o-sable)}
+body[data-cleo-ds="v6"] main .api-bulle-sortie:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){margin-top:14px;padding:14px 16px;border-radius:12px;background:var(--c-fond-2)}
 body[data-cleo-ds="v6"] main .api-bulle-sortie p:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){margin:0;font-size:12px;color:var(--o-encre-2)}
 body[data-cleo-ds="v6"] main .api-bulle-sortie b:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){display:block;margin-top:4px;font-size:28px;font-weight:500;line-height:1.1;letter-spacing:-.01em;font-variant-numeric:tabular-nums;color:var(--o-encre)}
 body[data-cleo-ds="v6"] main .api-bulle-sortie span:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){display:block;margin-top:4px;font-size:13px;color:#0008CF}
@@ -29,30 +30,30 @@ body[data-cleo-ds="v6"] main .api-entete h2:not(#_):not(#_):not(#_):not(#_):not(
 body[data-cleo-ds="v6"] main .api-entete > h2:first-child:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){margin-top:0 !important}
 
 /* Cas d'usage : une liste posée, une ligne par cas */
-body[data-cleo-ds="v6"] main .api-cas-liste:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){list-style:none;margin:0;padding:8px;border-radius:24px;background:var(--o-carte-chaude);box-shadow:inset 0 0 0 1px var(--o-filet), var(--o-ombre)}
+body[data-cleo-ds="v6"] main .api-cas-liste:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){list-style:none;margin:0;padding:8px;border-radius:var(--o-rayon-media);background:#FFFFFF;box-shadow:inset 0 0 0 1px var(--o-filet)}
 body[data-cleo-ds="v6"] main .api-cas-liste > li:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){margin:0;padding:0}
 body[data-cleo-ds="v6"] main .api-cas-liste > li + li:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){border-top:1px solid var(--o-filet)}
 body[data-cleo-ds="v6"] main .api-cas-liste a:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){display:grid;grid-template-columns:130px minmax(0,1fr) 240px 96px;align-items:center;gap:24px;padding:22px 24px;border-radius:16px;color:var(--o-encre);text-decoration:none;transition:background-color .35s var(--o-courbe)}
-body[data-cleo-ds="v6"] main .api-cas-liste a:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):hover{background:var(--o-sable)}
+body[data-cleo-ds="v6"] main .api-cas-liste a:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_):hover{background:var(--c-fond-2)}
 body[data-cleo-ds="v6"] main .api-cas-qui:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--o-encre-2)}
 body[data-cleo-ds="v6"] main .api-cas-liste b:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){font-size:clamp(1.0625rem, .95rem + .4vw, 1.3125rem);font-weight:400;line-height:1.3}
 body[data-cleo-ds="v6"] main .api-cas-api:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){font-size:15px;color:var(--o-encre-2)}
-body[data-cleo-ds="v6"] main .api-statut:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){justify-self:start;display:inline-flex;align-items:center;height:26px;margin:0;padding:0 10px;border-radius:6px;background:var(--o-sable);color:var(--o-encre-2);font-size:12px;font-weight:500;letter-spacing:0;text-transform:none}
+body[data-cleo-ds="v6"] main .api-statut:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){justify-self:start;display:inline-flex;align-items:center;height:26px;margin:0;padding:0 10px;border-radius:6px;background:var(--c-fond-2);color:var(--o-encre-2);font-size:12px;font-weight:500;letter-spacing:0;text-transform:none}
 body[data-cleo-ds="v6"] main .api-statut-dispo:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){background:#E2EFE5;color:#0B5634}
 
 /* Les deux API disponibles : texte d'un côté, scène de l'autre */
-body[data-cleo-ds="v6"] main .api-produit:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);border-radius:28px;overflow:clip;background:var(--o-carte-chaude);box-shadow:inset 0 0 0 1px var(--o-filet), var(--o-ombre)}
+body[data-cleo-ds="v6"] main .api-produit:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);border-radius:var(--o-rayon-media);overflow:clip;background:#FFFFFF;box-shadow:inset 0 0 0 1px var(--o-filet)}
 body[data-cleo-ds="v6"] main .api-produit + .api-produit:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){margin-top:28px}
 body[data-cleo-ds="v6"] main .api-produit-inverse:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr)}
 body[data-cleo-ds="v6"] main .api-produit-inverse > .api-produit-scene:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){order:-1}
 body[data-cleo-ds="v6"] main .api-produit-texte:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){padding:clamp(28px, 4vw, 56px)}
-body[data-cleo-ds="v6"] main .api-produit-nom:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){display:inline-flex;align-items:center;height:32px;margin:0;padding:0 12px;border-radius:8px;background:var(--o-sable);color:var(--o-encre);font-size:15px;font-weight:500}
+body[data-cleo-ds="v6"] main .api-produit-nom:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){display:inline-flex;align-items:center;height:32px;margin:0;padding:0 12px;border-radius:8px;background:var(--c-fond-2);color:var(--o-encre);font-size:15px;font-weight:500}
 body[data-cleo-ds="v6"] main .api-produit-texte h3:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){max-width:26ch;margin:20px 0 0 !important;font-size:clamp(1.5rem, 1rem + 1.25vw, 2.125rem) !important;font-weight:400 !important;line-height:1.16 !important;letter-spacing:-.02em !important;color:var(--o-encre) !important}
 body[data-cleo-ds="v6"] main .api-pour:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){margin:16px 0 0;font-size:16px;line-height:1.5;color:var(--o-encre-2)}
 body[data-cleo-ds="v6"] main .api-pour span:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){font-weight:500;color:var(--o-encre)}
 body[data-cleo-ds="v6"] main .api-flux:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;margin-top:28px}
 body[data-cleo-ds="v6"] main .api-flux-bloc:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){padding:18px 20px;border-radius:16px;background:var(--o-papier)}
-body[data-cleo-ds="v6"] main .api-flux-retour:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){background:var(--o-sable)}
+body[data-cleo-ds="v6"] main .api-flux-retour:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){background:var(--c-fond-2)}
 body[data-cleo-ds="v6"] main .api-flux-titre:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){margin:0 0 10px;font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--o-encre-2)}
 body[data-cleo-ds="v6"] main .api-flux ul:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){display:grid;gap:7px;margin:0;padding:0;list-style:none}
 body[data-cleo-ds="v6"] main .api-flux li:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){position:relative;margin:0;padding:0 0 0 16px;font-size:15px;line-height:1.4;color:var(--o-encre)}
@@ -60,9 +61,9 @@ body[data-cleo-ds="v6"] main .api-flux li:not(#_):not(#_):not(#_):not(#_):not(#_
 body[data-cleo-ds="v6"] main .api-actions:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-top:28px}
 body[data-cleo-ds="v6"] main .api-mcp:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){margin:18px 0 0;font-size:14px;line-height:1.45;color:var(--o-encre-2)}
 body[data-cleo-ds="v6"] main .api-mcp a:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){color:var(--o-encre);text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--o-filet-fort)}
-body[data-cleo-ds="v6"] main .api-produit-scene:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){position:relative;min-height:540px;margin:0;background:var(--o-sable)}
+body[data-cleo-ds="v6"] main .api-produit-scene:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){position:relative;min-height:540px;margin:0;background:var(--c-fond-2)}
 body[data-cleo-ds="v6"] main .api-produit-scene > img:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:0}
-body[data-cleo-ds="v6"] main .api-reponse:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){position:absolute;left:24px;right:24px;bottom:24px;box-sizing:border-box;padding:18px 20px;border-radius:16px;background:rgba(255,253,249,.95);box-shadow:0 22px 48px -22px rgba(40,24,10,.5)}
+body[data-cleo-ds="v6"] main .api-reponse:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){position:absolute;left:24px;right:24px;bottom:24px;box-sizing:border-box;padding:18px 20px;border-radius:16px;background:rgba(255,255,255,.96);box-shadow:0 22px 48px -22px rgba(0,0,0,.3)}
 body[data-cleo-ds="v6"] main .api-reponse-requete:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){margin:0 0 12px;font-size:13px;line-height:1.5;color:var(--o-encre-2);overflow-wrap:anywhere}
 body[data-cleo-ds="v6"] main .api-reponse-requete b:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){margin-right:6px;padding:2px 7px;border-radius:5px;background:var(--o-encre);color:#FFFFFF;font-size:11px;font-weight:500;letter-spacing:.04em}
 body[data-cleo-ds="v6"] main .api-reponse dl:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){margin:0}
@@ -73,8 +74,8 @@ body[data-cleo-ds="v6"] main .api-reponse dd:not(#_):not(#_):not(#_):not(#_):not
 /* Bientôt : plus bas, plus petit, sur le sable, sans ombre */
 body[data-cleo-ds="v6"] main .api-bientot .api-entete h2:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){font-size:clamp(1.75rem, 1.1rem + 1.6vw, 2.5rem) !important}
 body[data-cleo-ds="v6"] main .api-bientot-grille:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){display:grid;grid-template-columns:repeat(2, minmax(0,1fr));gap:20px}
-body[data-cleo-ds="v6"] main .api-bientot-carte:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){display:flex;flex-direction:column;align-items:flex-start;padding:clamp(24px, 3vw, 36px);border-radius:24px;background:var(--o-sable)}
-body[data-cleo-ds="v6"] main .api-bientot-carte .api-statut:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){background:var(--o-carte-chaude)}
+body[data-cleo-ds="v6"] main .api-bientot-carte:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){display:flex;flex-direction:column;align-items:flex-start;padding:clamp(24px, 3vw, 36px);border-radius:var(--o-rayon-media);background:var(--c-fond-2)}
+body[data-cleo-ds="v6"] main .api-bientot-carte .api-statut:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){background:#FFFFFF}
 body[data-cleo-ds="v6"] main .api-bientot-carte h3:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){margin:16px 0 0 !important;font-size:clamp(1.375rem, 1rem + .9vw, 1.75rem) !important;font-weight:400 !important;line-height:1.2 !important;color:var(--o-encre) !important}
 body[data-cleo-ds="v6"] main .api-bientot-promesse:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){margin:10px 0 0;font-size:16px;line-height:1.5;color:var(--o-encre)}
 body[data-cleo-ds="v6"] main .api-prevu:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_){align-self:stretch;display:grid;gap:12px;margin:22px 0 26px}
