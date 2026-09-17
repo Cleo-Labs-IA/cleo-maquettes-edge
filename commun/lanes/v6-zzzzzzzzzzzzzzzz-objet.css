@@ -159,3 +159,61 @@ body[data-cleo-ds="v6"] main .sy-carte-photo > b:not(#_):not(#_):not(#_):not(#_)
 body[data-cleo-ds="v6"] main section.sy-hero-photo > .conteneur > :not(.sy-chapitre-hero):not(#_):not(#_):not(#_):not(#_){box-sizing:border-box;width:var(--l-conteneur);margin-left:auto !important;margin-right:auto !important}
 body[data-cleo-ds="v6"] main section.sy-hero-photo:has(> .conteneur > :not(.sy-chapitre-hero)):not(#_):not(#_):not(#_):not(#_){padding-bottom:var(--e-section) !important}
 body[data-cleo-ds="v6"] main section.sy-hero-photo > .conteneur > .sy-chapitre-hero + :not(#_):not(#_):not(#_):not(#_){margin-top:var(--e-titre-contenu) !important}
+
+/* ═══ 17/09/2026, soir : « bouton pilule, ça fait trop IA », « inspire-toi aussi d'ElevenLabs et mets de l'humain » ═══
+   Captures d'elevenlabs.io envoyées par Naomie : fond presque blanc, médias et cartes aux coins arrondis (≈ 16 px), photos de personnes
+   légendées en bas, interface posée sur un fond doux. Ce bloc passe après la marque et la corrige :
+   1. plus de pilule ni de point bleu décoratif : bouton rectangle aux angles doux (8 px), sans icône ; secondaire à filet ;
+   2. médias et cartes arrondis à 16 px (le haut de page plein cadre reste droit) ;
+   3. photos de la soirée du 9 septembre (clés terrain-*) en couleur naturelle, sans grain ;
+   4. mosaïque .sy-terrain : une grande photo et deux petites, légende sur un voile en bas. */
+:root, body[data-cleo-ds="v6"]{ --o-rayon-media: 16px; --o-rayon-bouton: 8px }
+
+body[data-cleo-ds="v6"] :is(main, .nav, .pied) :is(.sy-bouton, .btn, .tk-bouton, .fx-bouton, .ap-bouton, .sc-bouton, .dd-bouton, .dd-cle-bouton, .en-bouton, .ent-bouton, .hq-bouton, .mu-bouton, .av-prix-bouton, [class$="-bouton"], [class*="-bouton "], .sy-bouton-blanc, [class*="-bouton-blanc"], .sy-bouton-secondaire, .btn-contour, .btn-clair, [class*="-bouton-contour"], [class*="-bouton-secondaire"], [class*="-bouton-clair"], .ac-pilule):not(#_):not(#_):not(#_):not(#_):not(#_){border-radius:var(--o-rayon-bouton) !important;min-height:46px !important}
+body[data-cleo-ds="v6"] :is(main, .nav, .pied) :is(.sy-bouton, .btn-marque, .sy-bouton-blanc, .mu-bouton, .sc-bouton, .en-bouton, .ent-bouton, .tk-bouton, .hq-bouton):not(#_):not(#_):not(#_):not(#_):not(#_)::after{content:none !important;display:none !important}
+body[data-cleo-ds="v6"] main .ac-pilule i:not(#_):not(#_):not(#_):not(#_):not(#_){display:none !important}
+/* Secondaire : un vrai bouton à filet (plus un lien souligné), transparent. */
+body[data-cleo-ds="v6"] :is(main, .nav, .pied) :is(.sy-bouton-secondaire, .btn-contour, .btn-clair, [class*="-bouton-contour"], [class*="-bouton-secondaire"], [class*="-bouton-clair"], [class*="-bouton-ligne"], [class*="-bouton-fantome"]):not(#_):not(#_):not(#_):not(#_):not(#_){padding:0 22px !important;text-decoration:none !important;box-shadow:inset 0 0 0 1px var(--o-filet-fort) !important;background:transparent !important}
+body[data-cleo-ds="v6"] :is(main, .nav, .pied) :is(.sy-bouton-secondaire, .btn-contour, .btn-clair, [class*="-bouton-contour"], [class*="-bouton-secondaire"], [class*="-bouton-clair"], [class*="-bouton-ligne"], [class*="-bouton-fantome"]):not(#_):not(#_):not(#_):not(#_):not(#_):hover{box-shadow:inset 0 0 0 1px var(--o-encre) !important}
+body[data-cleo-ds="v6"] :is(main, .nav, .pied) :is(.sy-bouton, .btn) ~ :is(.sy-bouton-blanc, [class*="-bouton-blanc"]):not(.sy-bouton-secondaire):not(#_):not(#_):not(#_):not(#_):not(#_),
+body[data-cleo-ds="v6"] main :is(.sy-chapitre, .sy-final-photo, .sy-bande-photo, .sy-sombre, .sy-sur-profond, .tk-photo, .en-hero, .tk-onglets) :is(.sy-bouton-secondaire, .btn-contour, [class*="-bouton-contour"], [class*="-bouton-clair"]):not(#_):not(#_):not(#_):not(#_):not(#_){padding:0 22px !important;text-decoration:none !important;background:rgba(255,255,255,.08) !important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4) !important;color:#FFFFFF !important}
+body[data-cleo-ds="v6"] main .ac-lien-clair:not(#_):not(#_):not(#_):not(#_):not(#_){display:inline-flex;align-items:center;min-height:46px;padding:0 22px;border-radius:var(--o-rayon-bouton);background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.4);text-decoration:none}
+body[data-cleo-ds="v6"] main .ac-puces li:not(#_):not(#_):not(#_):not(#_){border-radius:6px}
+
+/* Médias et cartes arrondis. */
+body[data-cleo-ds="v6"] main :is(.sy-chapitre:not(.sy-chapitre-hero), .sy-bande-photo > figure, .sy-final-photo > figure, .sy-bento-photo, .sy-bento-creme, .sy-bento-bleu, .sy-carte-photo, .sy-carte, .sy-carte-blanche, .carte, .res-carte, .terme-carte, .mu-carte, .sc-carte, .dd-carte, .ac-marche-exemple, .en-carte, .tk-onglets-scene, .ap-histoire-lieu figure):not(#_):not(#_):not(#_):not(#_){border-radius:var(--o-rayon-media) !important;overflow:clip}
+body[data-cleo-ds="v6"] main :is(.ac-app, .ac-portrait img, .sy-verre, .ac-objet-carte):not(#_):not(#_):not(#_):not(#_){border-radius:12px !important}
+
+/* Photos de la soirée : couleur naturelle. */
+body[data-cleo-ds="v6"] main img[data-img^="terrain-"]:not(#_):not(#_):not(#_):not(#_){filter:none !important}
+body[data-cleo-ds="v6"] main .sy-final-photo:has(img[data-img^="terrain-"]) > figure:not(#_):not(#_):not(#_):not(#_)::after{background:linear-gradient(180deg, rgba(0,0,0,.28) 0%, rgba(0,0,0,.48) 55%, rgba(0,0,0,.72) 100%) !important}
+
+/* Appel final sur une photo de la soirée : un titre centré tombait sur les visages (captures du 17/09). Texte à gauche sur l'encre,
+   photo à droite sans voile ; sur téléphone, la photo passe au-dessus du texte. */
+body[data-cleo-ds="v6"] main .sy-final-photo:has(img[data-img^="terrain-"]) > figure:not(#_):not(#_):not(#_):not(#_):not(#_){height:480px;background:var(--o-encre)}
+body[data-cleo-ds="v6"] main .sy-final-photo:has(img[data-img^="terrain-"]) > figure > img:first-child:not(#_):not(#_):not(#_):not(#_):not(#_){inset:0 0 0 45%;width:auto;height:100%}
+body[data-cleo-ds="v6"] main .sy-final-photo:has(img[data-img^="terrain-"]) > figure:not(#_):not(#_):not(#_):not(#_):not(#_)::after{content:none !important}
+body[data-cleo-ds="v6"] main .sy-final-photo:has(img[data-img^="terrain-"]) .sy-final-texte:not(#_):not(#_):not(#_):not(#_):not(#_){width:45%;align-items:flex-start;padding:56px;text-align:left}
+body[data-cleo-ds="v6"] main .sy-final-photo:has(img[data-img^="terrain-"]) .sy-final-texte h2:not(#_):not(#_):not(#_):not(#_):not(#_){max-width:14ch;font-size:clamp(32px, 3.2vw, 46px) !important;line-height:1.08 !important;text-align:left !important}
+body[data-cleo-ds="v6"] main .sy-final-photo:has(img[data-img^="terrain-"]) .sy-final-texte .sy-actions:not(#_):not(#_):not(#_):not(#_):not(#_){justify-content:flex-start}
+@media (max-width:760px){
+  body[data-cleo-ds="v6"] main .sy-final-photo:has(img[data-img^="terrain-"]) > figure:not(#_):not(#_):not(#_):not(#_):not(#_){height:auto}
+  body[data-cleo-ds="v6"] main .sy-final-photo:has(img[data-img^="terrain-"]) > figure > img:first-child:not(#_):not(#_):not(#_):not(#_):not(#_){position:relative;inset:auto;display:block;width:100%;height:240px}
+  body[data-cleo-ds="v6"] main .sy-final-photo:has(img[data-img^="terrain-"]) .sy-final-texte:not(#_):not(#_):not(#_):not(#_):not(#_){width:auto;height:auto;padding:28px 24px 32px}
+}
+
+/* Mosaïque « sur le terrain ». */
+body[data-cleo-ds="v6"] main .sy-terrain:not(#_):not(#_):not(#_):not(#_){display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-rows:repeat(2, clamp(220px, 20vw, 290px));gap:16px}
+body[data-cleo-ds="v6"] main .sy-terrain-carte:not(#_):not(#_):not(#_):not(#_){position:relative;margin:0;border-radius:var(--o-rayon-media);overflow:clip;background:var(--o-encre)}
+body[data-cleo-ds="v6"] main .sy-terrain-grande:not(#_):not(#_):not(#_):not(#_){grid-row:1 / span 2}
+body[data-cleo-ds="v6"] main .sy-terrain-carte > img:not(#_):not(#_):not(#_):not(#_){position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:scale .8s var(--o-courbe)}
+body[data-cleo-ds="v6"] main .sy-terrain-carte:hover > img:not(#_):not(#_):not(#_):not(#_){scale:1.03}
+body[data-cleo-ds="v6"] main .sy-terrain-carte:not(#_):not(#_):not(#_):not(#_)::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0) 52%, rgba(0,0,0,.66) 100%);pointer-events:none}
+body[data-cleo-ds="v6"] main .sy-terrain-carte figcaption:not(#_):not(#_):not(#_):not(#_){position:absolute;z-index:1;left:24px;right:24px;bottom:20px;font-size:16px;line-height:1.35;font-weight:400;color:#FFFFFF}
+body[data-cleo-ds="v6"] main .sy-terrain-grande figcaption:not(#_):not(#_):not(#_):not(#_){font-size:19px}
+body[data-cleo-ds="v6"] main .sy-terrain-carte img[data-img="terrain-salle"]:not(#_):not(#_):not(#_):not(#_){object-position:50% 60%}
+@media (max-width:760px){
+  body[data-cleo-ds="v6"] main .sy-terrain:not(#_):not(#_):not(#_):not(#_){grid-template-columns:minmax(0,1fr);grid-template-rows:auto}
+  body[data-cleo-ds="v6"] main .sy-terrain-carte:not(#_):not(#_):not(#_):not(#_){aspect-ratio:4 / 3}
+  body[data-cleo-ds="v6"] main .sy-terrain-grande:not(#_):not(#_):not(#_):not(#_){grid-row:auto}
+}

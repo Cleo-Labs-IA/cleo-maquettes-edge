@@ -129,6 +129,16 @@ const IMAGES = {
   'pneus':            ['local/pneus.jpg', 1100],
   /* La masse et l'unique, six variations. Images generees, ajoutees le 27/08 :
      aucun droit tiers, aucune marque reconnaissable, le bleu est le notre. */
+  /* 17/09/2026, Naomie : « rajoute des photos, que ça fasse plus naturel, comme Legora ou Harvey » puis « mets de l'humain ». Photos de la
+     soirée Cleo « Product Safety in the Age of AI » (Bruxelles, 9 septembre 2026), lues À LEUR PLACE dans Téléchargements : le dépôt
+     est public et des participants y apparaissent, elles ne sont donc jamais copiées ici. Retenues : Naomie qui présente, la salle, un
+     échange au poste de démo (une participante de face), les autocollants. Consentement des participants à confirmer avant la production. */
+  'terrain-keynote':  ['/Users/naomiehalioua/Downloads/2026-09-07/_98A3739.jpg_compressed.JPEG', 1600],
+  'terrain-echange':  ['/Users/naomiehalioua/Downloads/2026-09-07/_98A3939.jpg_compressed.JPEG', 1600],
+  'terrain-salle':    ['/Users/naomiehalioua/Downloads/2026-09-07/_46A8005.jpg_compressed.JPEG', 1600],
+  'terrain-autocollants': ['/Users/naomiehalioua/Downloads/2026-09-07/_98A3806.jpg_compressed.JPEG', 1600],
+  'terrain-demo':     ['/Users/naomiehalioua/Downloads/2026-09-07/_98A3718.jpg_compressed.JPEG', 1600],
+  'terrain-parole':   ['/Users/naomiehalioua/Downloads/2026-09-07/_98A3762.jpg_compressed.JPEG', 1600],
   'classeurs':        ['local/classeurs.jpg', 1600],
   'cables':           ['local/cables.jpg', 1600],
   'chaines':          ['local/chaines.jpg', 1600],
@@ -274,7 +284,7 @@ fs.mkdirSync(DOSSIER_IMAGES, { recursive: true })
 /* 16/09/2026, refonte (agent F1) : le portrait de la citation Decathlon (36 à 64 px affichés) recevait la trame et devenait
    illisible. Mesuré sur toutes les pages (scratchpad/agents/refonte/systeme/tailles-images.mjs) : seuls les logos, le logo
    Cleo et philippine s'affichent sous 120 px ; les portraits anaelle, naomie et alex étaient déjà exclus. */
-const GRAIN_EXCLUS = /^(logo-|cleo-logo$|globe-|produit-|veille-produit$|rond-|anaelle$|naomie$|alex$|darcial(-grand)?$|thezi(-grand)?$|philippine$)/
+const GRAIN_EXCLUS = /^(logo-|cleo-logo$|globe-|produit-|veille-produit$|rond-|anaelle$|naomie$|alex$|darcial(-grand)?$|thezi(-grand)?$|philippine$|terrain-)/
 let tuileGrainCache = null
 async function tuileGrain() {
   if (!tuileGrainCache) tuileGrainCache = await sharp(Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="4" height="4" fill="#15162E"/><circle cx="2" cy="2" r="1.55" fill="#FFFFFF"/></svg>')).png().toBuffer()
@@ -285,7 +295,8 @@ async function cheminImage(nom) {
   const entree = IMAGES[nom]
   if (!entree) throw new Error(`IMAGE INCONNUE : "${nom}" — ajoute-la dans la table IMAGES`)
   const [rel, largeur, format] = entree
-  const abs = rel.startsWith('local/') ? path.join(LOCAL, rel.slice(6)) : path.join(PUB, rel)
+  // Chemin absolu : photo lue hors du dépôt (photos de la soirée du 09/09/2026, jamais versionnées).
+  const abs = path.isAbsolute(rel) ? rel : rel.startsWith('local/') ? path.join(LOCAL, rel.slice(6)) : path.join(PUB, rel)
   if (!fs.existsSync(abs)) throw new Error(`IMAGE ABSENTE : ${abs}`)
   const ext = format === 'svg' ? 'svg' : format === 'png' ? 'png' : 'webp'
   const dest = path.join(DOSSIER_IMAGES, `${nom}.${ext}`)
