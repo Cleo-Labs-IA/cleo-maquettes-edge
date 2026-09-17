@@ -246,7 +246,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-entete-ligne{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 32px}
 
 /* ── Experts ── */
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-experts-grille{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,3fr) minmax(0,5fr);gap:24px clamp(24px, 4vw, 56px);align-items:end}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-experts-grille{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,3fr) minmax(0,5fr);gap:24px clamp(24px, 4vw, 56px);align-items:start}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-portrait{margin:0}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-portrait img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--r-media);background:var(--c-fond-2)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-portrait figcaption{display:grid;gap:4px;margin-top:14px}
@@ -295,14 +295,14 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-aller-liens a:not(#_):not(#_):not(#_){display:inline-flex;align-items:center;min-height:44px;font-size:.875rem;font-weight:500;color:var(--c-texte-2);text-decoration:none}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-aller-liens a:hover:not(#_):not(#_):not(#_){color:var(--c-accent)}
 
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tete:not(#_):not(#_):not(#_){display:grid;grid-template-columns:72px minmax(0, 760px);column-gap:24px;row-gap:14px;margin-bottom:clamp(40px, 5vw, 64px)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tete .ac-index:not(#_):not(#_):not(#_){grid-row:1 / span 2;padding-top:12px}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tete:not(#_):not(#_):not(#_){display:block;max-width:760px;margin-bottom:clamp(40px, 5vw, 64px)}
+
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tete .ac-h2:not(#_):not(#_):not(#_){margin:0 !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tete .ac-lead:not(#_):not(#_):not(#_){grid-column:2;margin:0 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tete .ac-lead:not(#_):not(#_):not(#_){margin:14px 0 0 !important}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-index:not(#_):not(#_):not(#_){display:inline-block;font-size:12px;font-weight:500;letter-spacing:.12em;color:var(--c-accent)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-questions .ac-entete .ac-index:not(#_):not(#_):not(#_){margin-bottom:14px}
 
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-besoin-sur:not(#_):not(#_):not(#_){font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--c-accent)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-besoin-sur:not(#_):not(#_):not(#_){font-size:var(--t-surtitre);font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--c-accent)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main a.ac-besoin h3:not(#_):not(#_):not(#_){margin-top:18px !important}
 
 
@@ -343,8 +343,10 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-phrase:not(#_):not(#_):not(#_){max-width:18ch;margin:0 0 clamp(48px, 6vw, 88px) !important;font-size:clamp(2.5rem, 1rem + 4.2vw, 5rem) !important;font-weight:500 !important;line-height:1 !important;letter-spacing:-.04em !important;color:var(--c-texte) !important;text-wrap:balance}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-phrase span:not(#_):not(#_):not(#_){color:inherit}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier:not(#_):not(#_):not(#_){display:grid;grid-template-columns:minmax(0, 5fr) minmax(0, 7fr);gap:clamp(32px, 4vw, 64px);align-items:center}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier-sur:not(#_):not(#_):not(#_){display:flex;align-items:center;gap:12px;margin:0 0 16px;font-size:var(--t-surtitre);font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--c-texte-2)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier-texte .ac-h2:not(#_):not(#_):not(#_){margin:0 !important;font-size:clamp(1.75rem, 1rem + 1.5vw, 2.625rem) !important;line-height:1.08 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tete-sur:not(#_):not(#_):not(#_){display:flex;align-items:center;gap:10px;margin:0 0 18px;font-size:var(--t-surtitre);font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--c-accent)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tete-sur .ac-index:not(#_):not(#_):not(#_){letter-spacing:.06em}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tete-sur .ac-index:not(#_):not(#_):not(#_)::after{content:"·";margin-left:10px;color:var(--c-texte-3)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier-texte .ac-h2:not(#_):not(#_):not(#_){margin:0 !important}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier-lead:not(#_):not(#_):not(#_){margin:16px 0 0;max-width:46ch;font-size:1rem;line-height:1.5;color:var(--c-texte-2)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etapes:not(#_):not(#_):not(#_){position:relative;display:grid;gap:8px;margin:28px 0 0;padding:0;list-style:none}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etapes:not(#_):not(#_):not(#_)::before{content:"";position:absolute;left:31px;top:32px;bottom:32px;width:2px;border-radius:1px;background:var(--c-filet)}
@@ -356,13 +358,13 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-app-avance:not(#_):not(#_):not(#_){height:4px;margin:16px 0 0;border-radius:2px;background:var(--c-fond-2);overflow:clip}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-app-avance i:not(#_):not(#_):not(#_){display:block;height:100%;border-radius:inherit;background:var(--c-accent);transform-origin:0 50%}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-grille .ac-action:not(#_):not(#_):not(#_){box-shadow:inset 3px 0 0 var(--c-accent)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tampon:not(#_):not(#_):not(#_){display:inline-grid;margin:16px 0 0;padding:9px 12px;border-radius:var(--r-petit);background:rgba(77,87,255,.08);font-size:.8125rem;font-weight:500;line-height:1.3;color:var(--c-accent)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tampon:not(#_):not(#_):not(#_){display:inline-grid;margin:16px 0 0;padding:9px 12px;border-radius:var(--r-carte);background:rgba(77,87,255,.08);font-size:.8125rem;font-weight:500;line-height:1.3;color:var(--c-accent)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tampon > span:not(#_):not(#_):not(#_){grid-area:1 / 1;display:inline-flex;align-items:center;gap:8px}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tampon-attente:not(#_):not(#_):not(#_){display:none !important}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-expertise .sy-bento:not(#_):not(#_):not(#_){margin-top:clamp(56px, 7vw, 96px)}
 @media (min-width:701px){
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier .ac-media:not(#_):not(#_):not(#_){width:auto;min-height:0;margin:0;padding:clamp(20px, 3vw, 40px)}
-  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier .ac-app:not(#_):not(#_):not(#_){max-width:none;grid-template-columns:212px minmax(0, 1fr)}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier .ac-app:not(#_):not(#_):not(#_){max-width:none;grid-template-columns:232px minmax(0, 1fr)}
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier .ac-app-corps:not(#_):not(#_):not(#_){padding:26px 26px 24px}
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier .ac-exigence:not(#_):not(#_):not(#_){margin-top:18px}
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier .ac-exigence-grille > div:not(#_):not(#_):not(#_){padding:13px 16px}
@@ -449,8 +451,8 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 /* Écrans bas (portables 720 à 800 px de haut) : la colonne des étapes se resserre pour tenir dans la scène collante */
 @media (min-width:1024px) and (max-height:820px) and (prefers-reduced-motion:no-preference){
   @supports (animation-timeline: view()){
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier-sur:not(#_):not(#_):not(#_){margin-bottom:10px}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier-texte .ac-h2:not(#_):not(#_):not(#_){font-size:clamp(1.5rem, 1rem + 1.1vw, 2.125rem) !important}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tete-sur:not(#_):not(#_):not(#_){margin-bottom:12px}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier-texte .ac-h2:not(#_):not(#_):not(#_){font-size:clamp(1.5rem, 1rem + 1.4vw, 2.375rem) !important}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier-lead:not(#_):not(#_):not(#_){margin-top:10px;font-size:.9375rem;line-height:1.45}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etapes:not(#_):not(#_):not(#_){margin-top:16px;gap:2px}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etape:not(#_):not(#_):not(#_){padding:11px 16px 11px 16px}
@@ -477,7 +479,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-roue-liste:not(#_):not(#_):not(#_){display:flex;flex-direction:column;align-items:flex-start;margin:0;padding:0 0 0 6%;list-style:none}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-roue-liste li:not(#_):not(#_):not(#_){rotate:-6deg;transform-origin:0 50%;margin:0;padding:8px 0;font-size:clamp(1.375rem, 1rem + 1.4vw, 2.5rem);font-weight:500;line-height:1.1;letter-spacing:-.02em;white-space:nowrap;color:var(--c-texte)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-roue-liste li:nth-child(3n+2):not(#_):not(#_):not(#_){color:var(--c-texte-3)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-roue-liste li:nth-child(3n):not(#_):not(#_):not(#_){color:var(--c-accent)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-roue-liste li:nth-child(3n):not(#_):not(#_):not(#_){color:var(--c-texte-2)}
 @media (prefers-reduced-motion:no-preference){
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-roue-liste:not(#_):not(#_):not(#_){animation:acRoue 70s linear infinite}
   @keyframes acRoue{from{translate:0 0}to{translate:0 -50%}}
@@ -503,3 +505,14 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 }
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-faq summary:not(#_):not(#_):not(#_){justify-content:flex-start !important;text-align:left !important}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-faq summary .chev:not(#_):not(#_):not(#_){margin-left:auto}
+
+/* ═══ HARMONIE ═══ 18/09/2026, Naomie : « insiste plus sur la DA, ne touche pas les animations, il faut une DA plus
+   harmonieuse ». Relevé au navigateur avant/après : un seul en-tête de section (« NN · Libellé » puis titre à l'échelle
+   des autres), une seule matière de carte (blanc, filet 1 px, rayon 4, aucune ombre portée sauf l'interface posée sur la
+   photo), le bleu réservé aux repères (index, kickers, liens, prochaine action, avancement) et retiré de la roue et du
+   surtitre de l'interface, et le même rythme vertical d'une section à l'autre. Aucune animation modifiée. */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-besoins .sy-carte:not(#_):not(#_):not(#_){background-color:var(--c-carte) !important;box-shadow:0 0 0 1px var(--c-filet) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-app-surtitre:not(#_):not(#_):not(#_){color:var(--c-texte-2) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-prestations .sy-etiquette:not(#_):not(#_):not(#_){color:var(--c-accent) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-roue-texte h3:not(#_):not(#_):not(#_){font-size:clamp(1.375rem, 1rem + 0.9vw, 2rem) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-questions .ac-entete .ac-index:not(#_):not(#_):not(#_){margin-bottom:0}

@@ -26,7 +26,7 @@ body[data-cleo-ds="v6"]:not(#_):not(#_):not(#_){background:var(--c-fond)}
 body[data-cleo-ds="v6"] main > section:not([class*="sy-final"]):not([class*="sombre"]):not(#_):not(#_):not(#_){background-color:transparent}
 
 /* Repères bleus : surtitres et numéros d'étapes ou de listes, la couleur de la marque dans chaque écran. */
-body[data-cleo-ds="v6"] main :is([class*="surtitre"], [class*="etiquette"], [class*="famille"], .ra-meta):not(.sy-etiquette):not(.sy-sombre *):not(.sy-final-photo *):not(.sy-bande-photo *):not(.sy-bento *):not(#_):not(#_):not(#_){color:var(--c-accent) !important}
+body[data-cleo-ds="v6"] main :is([class*="surtitre"], [class*="etiquette"], [class*="famille"], .ra-meta):not(.sy-etiquette):not(.sy-sombre *):not(.sy-final-photo *):not(.sy-bande-photo *):not(.sy-bento *):not(.ac-app *):not(#_):not(#_):not(#_){color:var(--c-accent) !important}
 body[data-cleo-ds="v6"] main :is(.ac-recit-etapes span, .fx-etapes span, .sc-etape > span:first-child, .dd-etape > span:first-child, .mu-etape > span:first-child):not(#_):not(#_):not(#_){color:var(--c-accent) !important}
 body[data-cleo-ds="v6"] main :is(.sy-lignes, .ac-prestations, .sc-cas) a:hover:not(#_):not(#_):not(#_){color:var(--c-accent)}
 
