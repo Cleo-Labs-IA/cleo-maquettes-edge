@@ -39,12 +39,15 @@
         <div class="dt-code" aria-label="Request example"><p class="dt-code-tete"><span>GET /v2/search</span></p><pre><code>GET /v2/search?q=product+safety&amp;country=AU&amp;type=legislation
 Host: api.legaldata.cleolabs.co
 Authorization: Bearer $CLEO_API_KEY</code></pre></div>
-        <dl class="dt-es">
+        <details class="dt-plus">
+          <summary>Inputs, outputs and coverage<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+          <dl class="dt-es">
           <div><dt>You send</dt><dd>a query, then country, document type, language or dates</dd></div>
           <div><dt>Cleo returns</dt><dd>title, country, type, source, date, source URL, excerpt; the full text when it has been captured</dd></div>
           <div><dt>For</dt><dd>legaltechs, AI agents, regulatory monitoring, compliance tools</dd></div>
         </dl>
-        <ul class="dt-liste"><li>Legislation, case law, guidelines, sanctions, recalls, treaties</li><li>History, amendments and change log</li><li>REST, OpenAPI and MCP server</li></ul>
+          <ul class="dt-liste"><li>Legislation, case law, guidelines, sanctions, recalls, treaties</li><li>History, amendments and change log</li><li>REST, OpenAPI and MCP server</li></ul>
+        </details>
         <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/signup">Get API key</a><a class="sy-bouton-secondaire" href="https://www.cleolabs.co/legal-data/docs">Docs</a></div>
       </article>
       <article class="sy-carte dt-acces-carte" id="classification">
@@ -54,12 +57,15 @@ Authorization: Bearer $CLEO_API_KEY</code></pre></div>
         <div class="dt-code" aria-label="Request example"><p class="dt-code-tete"><span>GET /v2/customs/lookup</span></p><pre><code>GET /v2/customs/lookup?description=cotton+t-shirt&amp;system=cn8&amp;top=5
 Host: api.legaldata.cleolabs.co
 Authorization: Bearer $CLEO_API_KEY</code></pre></div>
-        <dl class="dt-es">
+        <details class="dt-plus">
+          <summary>Inputs, outputs and coverage<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+          <dl class="dt-es">
           <div><dt>You send</dt><dd>a product description, then country, language and nomenclature</dd></div>
           <div><dt>Cleo returns</dt><dd>candidates with code, nomenclature, chapter, confidence level, rationale and an ambiguity flag</dd></div>
           <div><dt>For</dt><dd>e-commerce, marketplaces, PIM, PLM, ERP, import-export teams and customs brokers</dd></div>
         </dl>
-        <ul class="dt-liste"><li>Nomenclatures served: HS6, EU CN8, Kazakhstan TN VED</li><li>Covered countries confirmed before the contract</li><li>Candidates to validate, never a binding ruling</li></ul>
+          <ul class="dt-liste"><li>Nomenclatures served: HS6, EU CN8, Kazakhstan TN VED</li><li>Covered countries confirmed before the contract</li><li>Candidates to validate, never a binding ruling</li></ul>
+        </details>
         <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://www.cleolabs.co/legal-data/playground">Try classification</a><a class="sy-bouton-secondaire" href="https://www.cleolabs.co/legal-data/docs/customs">Docs</a></div>
       </article>
     </div>

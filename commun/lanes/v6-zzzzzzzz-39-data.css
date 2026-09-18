@@ -108,6 +108,19 @@ body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"],
   & main .dt-es > div:not(#_):not(#_){display:grid;grid-template-columns:112px minmax(0,1fr);gap:12px;padding:10px 0;border-top:1px solid var(--c-filet)}
   & main .dt-es dt:not(#_):not(#_){font-size:var(--t-legende);font-weight:500;line-height:1.45;color:var(--c-texte)}
   & main .dt-es dd:not(#_):not(#_){margin:0;font-size:.9375rem;line-height:1.45;color:var(--c-texte-2)}
+
+  /* Le dépliant des cartes API (18/09/2026) : leurs cartes portent un titre, une ligne et un lien ; les
+     nôtres portaient 99 mots. Le détail n'est pas coupé, il est replié. Fermé, la carte montre le titre,
+     la phrase, l'exemple de requête et les deux boutons. */
+  & main .dt-plus:not(#_):not(#_){width:100%;margin:20px 0 0;border-top:1px solid var(--c-filet)}
+  & main .dt-plus > summary:not(#_):not(#_){display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;font-size:.875rem;font-weight:500;color:var(--c-texte-2);cursor:pointer;list-style:none}
+  & main .dt-plus > summary::-webkit-details-marker{display:none}
+  & main .dt-plus > summary:hover:not(#_):not(#_){color:var(--c-texte)}
+  & main .dt-plus > summary .chev:not(#_):not(#_){flex:none;transition:rotate var(--m-duree, .3s) var(--m-courbe, ease)}
+  & main .dt-plus[open] > summary .chev:not(#_):not(#_){rotate:180deg}
+  & main .dt-plus .dt-es:not(#_):not(#_){margin-top:0}
+  & main .dt-plus .dt-es > div:first-child:not(#_):not(#_){border-top:0}
+  & main .dt-plus .dt-liste:not(#_):not(#_){margin-top:12px;padding-bottom:4px}
   & main .dt-usage:not(#_):not(#_){display:grid;grid-template-columns:repeat(4, minmax(0, 1fr));gap:var(--e-bento);margin:0;padding:0;list-style:none}
   & main .dt-usage > li:not(#_):not(#_){display:flex;flex-direction:column;align-items:flex-start;margin:0;padding:var(--p-carte);border-radius:var(--r-carte);background:var(--c-carte);box-shadow:0 0 0 1px var(--c-filet)}
   & main .dt-usage > li > b:not(#_):not(#_){font-size:var(--t-h2);line-height:1;letter-spacing:var(--t-h2-ls);font-weight:500;font-variant-numeric:tabular-nums;color:var(--c-texte)}

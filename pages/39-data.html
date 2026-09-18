@@ -59,12 +59,15 @@
         <div class="dt-code" aria-label="Exemple de requête"><p class="dt-code-tete"><span>GET /v2/search</span></p><pre><code>GET /v2/search?q=product+safety&amp;country=AU&amp;type=legislation
 Host: api.legaldata.cleolabs.co
 Authorization: Bearer $CLEO_API_KEY</code></pre></div>
-        <dl class="dt-es">
+        <details class="dt-plus">
+          <summary>Entrées, sorties et couverture<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+          <dl class="dt-es">
           <div><dt>Vous envoyez</dt><dd>une recherche, puis le pays, le type de document, la langue ou les dates</dd></div>
           <div><dt>Cleo renvoie</dt><dd>titre, pays, type, source, date, URL de la source, extrait ; le texte intégral lorsqu'il a été capturé</dd></div>
           <div><dt>Pour</dt><dd>legaltechs, agents IA, veille réglementaire, outils de conformité</dd></div>
         </dl>
-        <ul class="dt-liste"><li>Législation, jurisprudence, lignes directrices, sanctions, rappels, traités</li><li>Historique, amendements et journal des changements</li><li>REST, OpenAPI et serveur MCP</li></ul>
+          <ul class="dt-liste"><li>Législation, jurisprudence, lignes directrices, sanctions, rappels, traités</li><li>Historique, amendements et journal des changements</li><li>REST, OpenAPI et serveur MCP</li></ul>
+        </details>
         <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/signup">Obtenir une clé API</a><a class="sy-bouton-secondaire" href="https://www.cleolabs.co/legal-data/docs">Documentation</a></div>
       </article>
       <article class="sy-carte dt-acces-carte" id="classification">
@@ -74,12 +77,15 @@ Authorization: Bearer $CLEO_API_KEY</code></pre></div>
         <div class="dt-code" aria-label="Exemple de requête"><p class="dt-code-tete"><span>GET /v2/customs/lookup</span></p><pre><code>GET /v2/customs/lookup?description=cotton+t-shirt&amp;system=cn8&amp;top=5
 Host: api.legaldata.cleolabs.co
 Authorization: Bearer $CLEO_API_KEY</code></pre></div>
-        <dl class="dt-es">
+        <details class="dt-plus">
+          <summary>Entrées, sorties et couverture<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+          <dl class="dt-es">
           <div><dt>Vous envoyez</dt><dd>une description produit, puis le pays, la langue et la nomenclature</dd></div>
           <div><dt>Cleo renvoie</dt><dd>des candidats avec code, nomenclature, chapitre, niveau de confiance, justification et indicateur d'ambiguïté</dd></div>
           <div><dt>Pour</dt><dd>e-commerce, marketplaces, PIM, PLM, ERP, équipes import-export et commissionnaires</dd></div>
         </dl>
-        <ul class="dt-liste"><li>Nomenclatures servies : HS6, NC8 de l'Union européenne, TN VED du Kazakhstan</li><li>Pays couverts annoncés avant le contrat</li><li>Des candidats à faire valider, jamais un classement opposable</li></ul>
+          <ul class="dt-liste"><li>Nomenclatures servies : HS6, NC8 de l'Union européenne, TN VED du Kazakhstan</li><li>Pays couverts annoncés avant le contrat</li><li>Des candidats à faire valider, jamais un classement opposable</li></ul>
+        </details>
         <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://www.cleolabs.co/legal-data/playground">Tester la classification</a><a class="sy-bouton-secondaire" href="https://www.cleolabs.co/legal-data/docs/customs">Documentation</a></div>
       </article>
     </div>
