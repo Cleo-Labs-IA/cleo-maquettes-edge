@@ -100,9 +100,9 @@ const PAGES = [
 const IMAGES = {
   /* 18/09/2026, Naomie : « ça fait un peu peur, limite » puis « rajoute ces images aussi pour mixer et casser de
      temps en temps le bleu ». Quatre photos couleur du terrain, posées dans la banque du dépôt. */
-  'atelier-velos':    ['atelier-velos.jpg', 1600],
-  'camion-route':     ['camion-route.jpg', 1600],
-  'labo-jouets':      ['labo-jouets.jpg', 1600],
+  'atelier-velos':    ['atelier-velos.jpg', 1200],
+  'camion-route':     ['camion-route.jpg', 1200],
+  'labo-jouets':      ['labo-jouets.jpg', 1200],
   'port-conteneurs':  ['port-conteneurs.jpg', 1200],
   'cleo-logo':        ['cleo-logo.png', 200, 'png'],
   'humain-bureau':    ['human-desk.webp', 760],
@@ -130,19 +130,19 @@ const IMAGES = {
   'thezi-grand':      ['experts/thezi-mabuza.jpg', 560],
   'veille-produit':   ['veille/produit-3b9ed4d5.png', 320, 'png'],
   // Les deux photographies de Naomie : la masse et l'unique, en vrai.
-  'parc-voitures':    ['local/parc-voitures.jpg', 1600],
-  'echangeur':        ['local/echangeur.jpg', 1600],
+  'parc-voitures':    ['local/parc-voitures.jpg', 1200],
+  'echangeur':        ['local/echangeur.jpg', 1200],
   'pneus':            ['local/pneus.jpg', 1100],
   /* La masse et l'unique, six variations. Images generees, ajoutees le 27/08 :
      aucun droit tiers, aucune marque reconnaissable, le bleu est le notre. */
-  'classeurs':        ['local/classeurs.jpg', 1600],
-  'cables':           ['local/cables.jpg', 1600],
-  'chaines':          ['local/chaines.jpg', 1600],
+  'classeurs':        ['local/classeurs.jpg', 1200],
+  'cables':           ['local/cables.jpg', 1200],
+  'chaines':          ['local/chaines.jpg', 1200],
   'flacons':          ['local/flacons.jpg', 1100],
   'vis':              ['local/vis.jpg', 1100],
-  'semelles':         ['local/semelles.jpg', 1600],
-  'briques':          ['local/briques.jpg', 1600],
-  'fenetres':         ['local/fenetres.jpg', 1600],
+  'semelles':         ['local/semelles.jpg', 1200],
+  'briques':          ['local/briques.jpg', 1200],
+  'fenetres':         ['local/fenetres.jpg', 1200],
   'produit-1':        ['product-1.webp', 520],
   'produit-2':        ['product-2.webp', 520],
   'produit-3':        ['product-3.webp', 520],
@@ -179,47 +179,47 @@ const IMAGES = {
      choisir la vignette sur le SUJET de l'article et non au hasard.
      34 familles, livrees par Naomie le 02/09/2026. Chaque image existe
      en deux tailles : la carte prend la large, la ligne de breve la fine. */
-  'masse-ampoule':           ['local/serie/ampoule.jpg', 1600],
+  'masse-ampoule':           ['local/serie/ampoule.jpg', 1200],
   'masse-ampoule-carre':       ['local/serie/ampoule.jpg', 560],
-  'masse-basket':            ['local/serie/basket.jpg', 1600],
+  'masse-basket':            ['local/serie/basket.jpg', 1200],
   'masse-basket-carre':        ['local/serie/basket.jpg', 560],
-  'masse-biberon':           ['local/serie/biberon.jpg', 1600],
+  'masse-biberon':           ['local/serie/biberon.jpg', 1200],
   'masse-biberon-carre':       ['local/serie/biberon.jpg', 560],
-  'masse-bougie':            ['local/serie/bougie.jpg', 1600],
+  'masse-bougie':            ['local/serie/bougie.jpg', 1200],
   'masse-bougie-carre':        ['local/serie/bougie.jpg', 560],
-  'masse-brique-jouet':      ['local/serie/brique-jouet.jpg', 1600],
+  'masse-brique-jouet':      ['local/serie/brique-jouet.jpg', 1200],
   'masse-brique-jouet-carre':  ['local/serie/brique-jouet.jpg', 560],
-  'masse-brosse-dents':      ['local/serie/brosse-dents.jpg', 1600],
+  'masse-brosse-dents':      ['local/serie/brosse-dents.jpg', 1200],
   'masse-brosse-dents-carre':  ['local/serie/brosse-dents.jpg', 560],
-  'masse-canette':           ['local/serie/canette.jpg', 1600],
+  'masse-canette':           ['local/serie/canette.jpg', 1200],
   'masse-canette-carre':       ['local/serie/canette.jpg', 560],
-  'masse-capsule':           ['local/serie/capsule.jpg', 1600],
+  'masse-capsule':           ['local/serie/capsule.jpg', 1200],
   'masse-capsule-carre':       ['local/serie/capsule.jpg', 560],
-  'masse-casque':            ['local/serie/casque.jpg', 1600],
+  'masse-casque':            ['local/serie/casque.jpg', 1200],
   'masse-casque-carre':        ['local/serie/casque.jpg', 560],
-  'masse-chargeur':          ['local/serie/chargeur.jpg', 1600],
+  'masse-chargeur':          ['local/serie/chargeur.jpg', 1200],
   'masse-chargeur-carre':      ['local/serie/chargeur.jpg', 560],
-  'masse-chaussette':        ['local/serie/chaussette.jpg', 1600],
+  'masse-chaussette':        ['local/serie/chaussette.jpg', 1200],
   'masse-chaussette-carre':    ['local/serie/chaussette.jpg', 560],
-  'masse-couche':            ['local/serie/couche.jpg', 1600],
+  'masse-couche':            ['local/serie/couche.jpg', 1200],
   'masse-couche-carre':        ['local/serie/couche.jpg', 560],
-  'masse-couverts':          ['local/serie/couverts.jpg', 1600],
+  'masse-couverts':          ['local/serie/couverts.jpg', 1200],
   'masse-couverts-carre':      ['local/serie/couverts.jpg', 560],
-  'masse-detergent':         ['local/serie/detergent.jpg', 1600],
+  'masse-detergent':         ['local/serie/detergent.jpg', 1200],
   'masse-detergent-carre':     ['local/serie/detergent.jpg', 560],
-  'masse-ecouteurs':         ['local/serie/ecouteurs.jpg', 1600],
+  'masse-ecouteurs':         ['local/serie/ecouteurs.jpg', 1200],
   'masse-ecouteurs-carre':     ['local/serie/ecouteurs.jpg', 560],
-  'masse-flacon':            ['local/serie/flacon.jpg', 1600],
+  'masse-flacon':            ['local/serie/flacon.jpg', 1200],
   'masse-flacon-carre':        ['local/serie/flacon.jpg', 560],
-  'masse-gant':              ['local/serie/gant.jpg', 1600],
+  'masse-gant':              ['local/serie/gant.jpg', 1200],
   'masse-gant-carre':          ['local/serie/gant.jpg', 560],
-  'masse-gourde':            ['local/serie/gourde.jpg', 1600],
+  'masse-gourde':            ['local/serie/gourde.jpg', 1200],
   'masse-gourde-carre':        ['local/serie/gourde.jpg', 560],
-  'masse-lunettes':          ['local/serie/lunettes.jpg', 1600],
+  'masse-lunettes':          ['local/serie/lunettes.jpg', 1200],
   'masse-lunettes-carre':      ['local/serie/lunettes.jpg', 560],
-  'masse-manette':           ['local/serie/manette.jpg', 1600],
+  'masse-manette':           ['local/serie/manette.jpg', 1200],
   'masse-manette-carre':       ['local/serie/manette.jpg', 560],
-  'masse-montre':            ['local/serie/montre.jpg', 1600],
+  'masse-montre':            ['local/serie/montre.jpg', 1200],
   'masse-montre-carre':        ['local/serie/montre.jpg', 560],
   /* Ronds du bloc « usages » de la page Data (15/09/2026) : 120 px, pour ne pas embarquer douze fois 900 px. */
   'rond-telephone': ['local/serie/telephone.jpg', 120],
@@ -234,31 +234,31 @@ const IMAGES = {
   'rond-peluche': ['local/serie/peluche.jpg', 120],
   'rond-biberon': ['local/serie/biberon.jpg', 120],
   'rond-pile': ['local/serie/pile.jpg', 120],
-  'masse-peluche':           ['local/serie/peluche.jpg', 1600],
+  'masse-peluche':           ['local/serie/peluche.jpg', 1200],
   'masse-peluche-carre':       ['local/serie/peluche.jpg', 560],
-  'masse-pile':              ['local/serie/pile.jpg', 1600],
+  'masse-pile':              ['local/serie/pile.jpg', 1200],
   'masse-pile-carre':          ['local/serie/pile.jpg', 560],
-  'masse-poele':             ['local/serie/poele.jpg', 1600],
+  'masse-poele':             ['local/serie/poele.jpg', 1200],
   'masse-poele-carre':         ['local/serie/poele.jpg', 560],
-  'masse-rasoir':            ['local/serie/rasoir.jpg', 1600],
+  'masse-rasoir':            ['local/serie/rasoir.jpg', 1200],
   'masse-rasoir-carre':        ['local/serie/rasoir.jpg', 560],
-  'masse-rouge-levres':      ['local/serie/rouge-levres.jpg', 1600],
+  'masse-rouge-levres':      ['local/serie/rouge-levres.jpg', 1200],
   'masse-rouge-levres-carre':  ['local/serie/rouge-levres.jpg', 560],
-  'masse-savon':             ['local/serie/savon.jpg', 1600],
+  'masse-savon':             ['local/serie/savon.jpg', 1200],
   'masse-savon-carre':         ['local/serie/savon.jpg', 560],
-  'masse-shampooing':        ['local/serie/shampooing.jpg', 1600],
+  'masse-shampooing':        ['local/serie/shampooing.jpg', 1200],
   'masse-shampooing-carre':    ['local/serie/shampooing.jpg', 560],
-  'masse-skate':             ['local/serie/skate.jpg', 1600],
+  'masse-skate':             ['local/serie/skate.jpg', 1200],
   'masse-skate-carre':         ['local/serie/skate.jpg', 560],
-  'masse-tasse':             ['local/serie/tasse.jpg', 1600],
+  'masse-tasse':             ['local/serie/tasse.jpg', 1200],
   'masse-tasse-carre':         ['local/serie/tasse.jpg', 560],
-  'masse-telephone':         ['local/serie/telephone.jpg', 1600],
+  'masse-telephone':         ['local/serie/telephone.jpg', 1200],
   'masse-telephone-carre':     ['local/serie/telephone.jpg', 560],
-  'masse-tshirt':            ['local/serie/tshirt.jpg', 1600],
+  'masse-tshirt':            ['local/serie/tshirt.jpg', 1200],
   'masse-tshirt-carre':        ['local/serie/tshirt.jpg', 560],
-  'masse-velo':              ['local/serie/velo.jpg', 1600],
+  'masse-velo':              ['local/serie/velo.jpg', 1200],
   'masse-velo-carre':          ['local/serie/velo.jpg', 560],
-  'masse-vernis':            ['local/serie/vernis.jpg', 1600],
+  'masse-vernis':            ['local/serie/vernis.jpg', 1200],
   'masse-vernis-carre':        ['local/serie/vernis.jpg', 560],
 }
 
@@ -286,21 +286,28 @@ async function tuileGrain() {
   if (!tuileGrainCache) tuileGrainCache = await sharp(Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="4" height="4" fill="#15162E"/><circle cx="2" cy="2" r="1.55" fill="#FFFFFF"/></svg>')).png().toBuffer()
   return tuileGrainCache
 }
-async function cheminImage(nom) {
-  if (cacheImg.has(nom)) return cacheImg.get(nom)
+async function cheminImage(nom, largeurDemandee) {
+  /* 18/09/2026, Naomie : « ça bug, c'est trop lourd ». Mesuré : 7,46 Mo sur l'accueil, dont 6,6 Mo d'images servies en
+     1200 à 1600 px pour des emplacements de 230 à 700 px. Une page peut désormais demander une largeur par usage,
+     `img:nom@520`, et le fichier correspondant est fabriqué à part (`nom-520.webp`). Le grain reste cuit après la
+     réduction, donc il garde sa taille de point. */
+  const cle = largeurDemandee ? `${nom}@${largeurDemandee}` : nom
+  if (cacheImg.has(cle)) return cacheImg.get(cle)
   const entree = IMAGES[nom]
   if (!entree) throw new Error(`IMAGE INCONNUE : "${nom}" — ajoute-la dans la table IMAGES`)
-  const [rel, largeur, format] = entree
+  const [rel, largeurTable, format] = entree
+  const largeur = largeurDemandee ? Math.min(largeurDemandee, largeurTable) : largeurTable
   const abs = rel.startsWith('local/') ? path.join(LOCAL, rel.slice(6)) : path.join(PUB, rel)
   if (!fs.existsSync(abs)) throw new Error(`IMAGE ABSENTE : ${abs}`)
   const ext = format === 'svg' ? 'svg' : format === 'png' ? 'png' : 'webp'
-  const dest = path.join(DOSSIER_IMAGES, `${nom}.${ext}`)
+  const suffixe = largeurDemandee ? `-${largeur}` : ''
+  const dest = path.join(DOSSIER_IMAGES, `${nom}${suffixe}.${ext}`)
   if (format === 'svg') fs.copyFileSync(abs, dest)
   else if (format === 'png') await sharp(abs).resize({ width: largeur, withoutEnlargement: true }).png({ compressionLevel: 9, quality: 82 }).toFile(dest)
   else if (GRAIN_EXCLUS.test(nom)) await sharp(abs).resize({ width: largeur, withoutEnlargement: true }).webp({ quality: 72 }).toFile(dest)
-  else await sharp(abs).resize({ width: largeur, withoutEnlargement: true }).linear(1.14, 8).composite([{ input: await tuileGrain(), tile: true, blend: 'multiply' }]).webp({ quality: 74 }).toFile(dest)
-  const chemin = `/images/${nom}.${ext}`
-  cacheImg.set(nom, chemin)
+  else await sharp(abs).resize({ width: largeur, withoutEnlargement: true }).linear(1.14, 8).composite([{ input: await tuileGrain(), tile: true, blend: 'multiply' }]).webp({ quality: 62 }).toFile(dest)
+  const chemin = `/images/${nom}${suffixe}.${ext}`
+  cacheImg.set(cle, chemin)
   return chemin
 }
 const dataUri = cheminImage
@@ -351,11 +358,12 @@ function masseRefs() {
 async function injecterImages(html) {
   /* 15/09/2026, « le grain partout sur les images, c'est la DA » : chaque image garde sa clé dans data-img, pour que la
      couche de grain choisisse les photos (et laisse les logos, les avatars et les objets détourés). */
-  html = html.replace(/src="img:([a-z0-9-]+)"/g, (t, k) => t + ` data-img="${k}"`)
-  const noms = [...new Set([...html.matchAll(/img:([a-z0-9-]+)/g)].map(m => m[1]))]
-  for (const n of noms) {
-    const uri = await dataUri(n)
-    html = html.replaceAll(`img:${n}`, uri)
+  html = html.replace(/src="img:([a-z0-9-]+)(@\d+)?"/g, (t, k) => t + ` data-img="${k}"`)
+  const refs = [...new Set([...html.matchAll(/img:([a-z0-9-]+)(?:@(\d+))?/g)].map(m => m[0]))]
+  for (const r of refs.sort((x, y) => y.length - x.length)) {
+    const [, n, l] = r.match(/img:([a-z0-9-]+)(?:@(\d+))?/)
+    const uri = await cheminImage(n, l ? +l : undefined)
+    html = html.replaceAll(r, uri)
   }
   return html
 }
@@ -679,6 +687,14 @@ function icone(nom, taille) {
   if (!d) throw new Error(`ICÔNE INCONNUE : « ${nom} » — ajoute-la dans commun/icones.js`)
   return `<svg class="ico" width="${taille || 20}" height="${taille || 20}" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="${d}"/></svg>`
 }
+
+/* 18/09/2026, « ça bug, c'est trop lourd » : la feuille était inlinée dans CHAQUE page (572 Ko de CSS × 65 pages).
+   Elle sort dans /cleo.css : une seule requête, mise en cache pour toute la visite, et le HTML passe de 715 à ~145 Ko. */
+const FEUILLE_COMMUNE = sansCommentairesCss('@font-face{font-family:"Satoshi";src:url(/fonts/Satoshi-Variable.woff2) format("woff2");font-weight:300 900;font-style:normal;font-display:swap}\n'
+  + base + '\n' + composants + '\n' + lanesCss + '\n' + mouvement)
+fs.mkdirSync(path.join(ICI, 'sortie'), { recursive: true })
+fs.writeFileSync(path.join(ICI, 'sortie', 'cleo.css'), FEUILLE_COMMUNE)
+
 
 const globeJs = fs.existsSync(path.join(ICI, 'commun/globe.js'))
   ? fs.readFileSync(path.join(ICI, 'commun/globe.js'), 'utf8') : ''
@@ -1059,11 +1075,8 @@ ${url ? `<link rel="canonical" href="${url}">` : ''}
 ${alternates}
 ${og}
 ${structure}
-<style>
-@font-face{font-family:"Satoshi";src:url(/fonts/Satoshi-Variable.woff2) format("woff2");
-  font-weight:300 900;font-style:normal;font-display:swap}
-${sansCommentairesCss(base + '\n' + composants + '\n' + lanesCss + '\n' + regimeDePage + '\n' + mouvement)}
-</style>
+<style>@font-face{font-family:"Satoshi";src:url(/fonts/Satoshi-Variable.woff2) format("woff2");font-weight:300 900;font-style:normal;font-display:swap}${regimeDePage ? sansCommentairesCss(regimeDePage) : ''}</style>
+<link rel="stylesheet" href="/cleo.css">
 </head>
 <body data-cleo-ds="v6" data-v6-family="${familleV6}" data-v6-page="${pageV6}">
 ${corps}
