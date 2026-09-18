@@ -9,14 +9,14 @@
 
 /* 1. La matière sombre */
 body[data-cleo-ds="v6"]:not(#_):not(#_):not(#_):not(#_){
-  --c-fond:#000000;
-  --c-fond-2:#141414;
-  --c-carte:#141414;
+  --c-fond:#0A0A0B;
+  --c-fond-2:#17171A;
+  --c-carte:#17171A;
   --c-texte:#FFFFFF;
   --c-texte-2:rgba(255,255,255,.66);
   --c-texte-3:rgba(255,255,255,.52);
   --c-filet:rgba(255,255,255,.14);
-  background-color:#000000 !important;
+  background-color:#0A0A0B !important;
   color:#FFFFFF;
 }
 body[data-cleo-ds="v6"]:not(#_) main:not(#_):not(#_):not(#_){background-color:#000000;color:#FFFFFF}
@@ -301,3 +301,15 @@ body[data-cleo-ds="v6"]:not(#_) main :is(.flottant, [class*="flottant"]):not(#__
    reste sombre, l'objet garde sa couleur de papier. */
 body[data-cleo-ds="v6"]:not(#_) main :is(.livre, .couverture):not(#__):not(#___):not(#____):not(#_____){color:#1A1A1A !important}
 body[data-cleo-ds="v6"]:not(#_) main :is(.livre, .couverture) *:not(#__):not(#___):not(#____):not(#_____){color:#1A1A1A !important}
+
+/* 31. « Ça fait un peu peur, limite » : la bande industrie passe à trois photos en couleur (port, camion, atelier vélos)
+   et respire davantage ; les photos couleur cassent le bleu du reste de la page. */
+body[data-cleo-ds="v6"]:not(#_) main .ac-bande-grille:not(#_):not(#_):not(#_){grid-template-columns:repeat(3, minmax(0, 1fr))}
+@media (max-width:900px){
+  body[data-cleo-ds="v6"]:not(#_) main .ac-bande-grille:not(#_):not(#_):not(#_){grid-template-columns:repeat(2, minmax(0, 1fr))}
+  body[data-cleo-ds="v6"]:not(#_) main .ac-bande-grille figure:last-child:not(#_):not(#_):not(#_){display:none}
+}
+@media (max-width:700px){
+  body[data-cleo-ds="v6"]:not(#_) main .ac-bande-grille:not(#_):not(#_):not(#_){grid-template-columns:minmax(0, 1fr)}
+  body[data-cleo-ds="v6"]:not(#_) main .ac-bande-grille figure:last-child:not(#_):not(#_):not(#_){display:block}
+}

@@ -98,6 +98,12 @@ const PAGES = [
    affichent jusqu'à 1 360 px et le grain cuit sortait agrandi et flou. withoutEnlargement reste : une source plus petite
    garde sa taille. */
 const IMAGES = {
+  /* 18/09/2026, Naomie : « ça fait un peu peur, limite » puis « rajoute ces images aussi pour mixer et casser de
+     temps en temps le bleu ». Quatre photos couleur du terrain, posées dans la banque du dépôt. */
+  'atelier-velos':    ['atelier-velos.jpg', 1600],
+  'camion-route':     ['camion-route.jpg', 1600],
+  'labo-jouets':      ['labo-jouets.jpg', 1600],
+  'port-conteneurs':  ['port-conteneurs.jpg', 1200],
   'cleo-logo':        ['cleo-logo.png', 200, 'png'],
   'humain-bureau':    ['human-desk.webp', 760],
   'humain-reunion':   ['human-meeting.webp', 760],
