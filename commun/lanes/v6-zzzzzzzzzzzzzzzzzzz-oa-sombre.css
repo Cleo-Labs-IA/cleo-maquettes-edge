@@ -313,3 +313,12 @@ body[data-cleo-ds="v6"]:not(#_) main .ac-bande-grille:not(#_):not(#_):not(#_){gr
   body[data-cleo-ds="v6"]:not(#_) main .ac-bande-grille:not(#_):not(#_):not(#_){grid-template-columns:minmax(0, 1fr)}
   body[data-cleo-ds="v6"]:not(#_) main .ac-bande-grille figure:last-child:not(#_):not(#_):not(#_){display:block}
 }
+/* 32. La bande de respiration réunit les quatre photos couleur : quatre colonnes, deux sous 1100 px, une sous 700 px */
+body[data-cleo-ds="v6"]:not(#_) main .ac-bande-grille:not(#_):not(#_):not(#_){grid-template-columns:repeat(4, minmax(0, 1fr))}
+@media (max-width:1100px){
+  body[data-cleo-ds="v6"]:not(#_) main .ac-bande-grille:not(#_):not(#_):not(#_){grid-template-columns:repeat(2, minmax(0, 1fr))}
+  body[data-cleo-ds="v6"]:not(#_) main .ac-bande-grille figure:last-child:not(#_):not(#_):not(#_){display:block}
+}
+@media (max-width:700px){
+  body[data-cleo-ds="v6"]:not(#_) main .ac-bande-grille:not(#_):not(#_):not(#_){grid-template-columns:minmax(0, 1fr)}
+}
