@@ -129,3 +129,24 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-secteurs-grille:not(#_):not(#_):not(#_){grid-template-columns:minmax(0, 1fr)}
 }
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-besoin .sy-lien:not(#_):not(#_):not(#_){width:auto;align-self:stretch;margin-top:auto}
+
+/* 12. Section 04 dans leur registre : quatre cartes égales, visuel en haut, une phrase, trois étiquettes courtes,
+   le prix puis le lien. Le détail complet reste sur les pages de prestation. */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-cartes:not(#_):not(#_):not(#_){grid-template-columns:repeat(2, minmax(0, 1fr));gap:20px}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-carte:not(#_):not(#_):not(#_){display:flex;flex-direction:column;padding:0 !important;overflow:clip}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-carte > .ac-visuel:not(#_):not(#_):not(#_){order:0;width:100%;aspect-ratio:16 / 9;min-height:0;border-radius:0;background:#0F0F0F}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-carte-texte:not(#_):not(#_):not(#_){display:flex;flex-direction:column;gap:14px;padding:24px 24px 26px}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-carte-texte h3:not(#_):not(#_):not(#_){font-size:1.25rem !important;letter-spacing:-.01em !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-carte-texte > p:not(.ac-prix):not(#_):not(#_):not(#_){max-width:none;font-size:.9375rem;line-height:1.5;color:rgba(255,255,255,.66)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-coches:not(#_):not(#_):not(#_){display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-coches li:not(#_):not(#_):not(#_){margin:0;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.08);font-size:13px;line-height:1.2;color:rgba(255,255,255,.78)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-coches li svg:not(#_):not(#_):not(#_){display:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-prix:not(#_):not(#_):not(#_){margin:0;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);font-size:14px;font-weight:500;color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-carte-texte .sy-actions:not(#_):not(#_):not(#_){margin-top:0;padding-top:0}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-carte .sy-bouton-secondaire:not(#_):not(#_):not(#_){width:100%;justify-content:center}
+@media (max-width:900px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-cartes:not(#_):not(#_):not(#_){grid-template-columns:minmax(0, 1fr)}
+}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-carte-texte .sy-actions:not(#_):not(#_):not(#_){display:flex;width:100%;margin-top:auto}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-carte .sy-bouton-secondaire:not(#_):not(#_):not(#_){flex:1;width:100%;justify-content:center}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-carte .ac-coches:not(#_):not(#_):not(#_){margin-bottom:2px}
