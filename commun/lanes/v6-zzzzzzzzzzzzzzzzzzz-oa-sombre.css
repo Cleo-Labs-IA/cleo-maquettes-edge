@@ -343,3 +343,10 @@ body[data-cleo-ds="v6"]:not(#_) main .ac-cercle:not(#__):not(#___):not(#____){bo
 body[data-cleo-ds="v6"]:not(#_) main .ac-etoiles:not(#__):not(#___):not(#____){fill:rgba(255,255,255,.35)}
 body[data-cleo-ds="v6"]:not(#_) main .ac-media:not(#__):not(#___):not(#____){background:#121214;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
 body[data-cleo-ds="v6"]:not(#_) main .ac-media:not(#__):not(#___):not(#____){outline:0}
+
+/* 36. « Casser le bleu » : les hauts de page photo portaient un aplat #0008CF en multiplication par-dessus l'image
+   (.sy-chapitre::after), qui repeignait tout en bleu nuit, y compris les photos couleur. L'aplat bleu disparaît ; seul
+   reste un dégradé sombre neutre, assez pour que le titre blanc tienne. */
+body[data-cleo-ds="v6"]:not(#_) main .sy-chapitre:not(#__):not(#___):not(#____)::after{background:transparent !important;mix-blend-mode:normal !important}
+body[data-cleo-ds="v6"]:not(#_) main .sy-chapitre:not(#__):not(#___):not(#____)::before{background:linear-gradient(0deg, rgba(0,0,0,.78) 0%, rgba(0,0,0,.42) 46%, rgba(0,0,0,.18) 100%) !important}
+body[data-cleo-ds="v6"]:not(#_) main .sy-chapitre:not(#__):not(#___):not(#____){background:#0A0A0B}
