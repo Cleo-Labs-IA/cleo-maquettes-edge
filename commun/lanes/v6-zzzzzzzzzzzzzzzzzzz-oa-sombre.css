@@ -1,5 +1,5 @@
 /* ═══ VARIANTE « OPENAI BUSINESS », FOND SOMBRE ═══ 18/09/2026, Naomie envoie sept captures des pages Business d'OpenAI :
-   « voilà leur DA, qu'est-ce que tu peux reprendre ? ». Relevé sur les captures : fond noir, surfaces #141414, texte blanc,
+   « voilà leur DA, qu'est-ce que tu peux reprendre ? ». Relevé sur les captures : fond noir, surfaces #17171A, texte blanc,
    gris de service à 60 %, composition CENTRÉE (titre, chapeau, puis deux actions : une pilule blanche pleine et un lien
    fléché), cartes à bloc visuel en haut avec un bouton pleine largeur à l'intérieur, captures produit dans un cadre à trois
    pastilles de fenêtre, panneaux de chiffres (logo, chiffre énorme, légende grise), panneau final arrondi plus clair que
@@ -19,10 +19,10 @@ body[data-cleo-ds="v6"]:not(#_):not(#_):not(#_):not(#_){
   background-color:#0A0A0B !important;
   color:#FFFFFF;
 }
-body[data-cleo-ds="v6"]:not(#_) main:not(#_):not(#_):not(#_){background-color:#000000;color:#FFFFFF}
+body[data-cleo-ds="v6"]:not(#_) main:not(#_):not(#_):not(#_){background-color:#0A0A0B;color:#FFFFFF}
 body[data-cleo-ds="v6"]:not(#_) main section:not(#_):not(#_):not(#_){background-color:transparent}
-body[data-cleo-ds="v6"]:not(#_) main section.sy-final-photo:not(#_):not(#_):not(#_){background:#000000 !important}
-body[data-cleo-ds="v6"]:not(#_) .nav:not(#_):not(#_):not(#_):not(#__){background:#000000 !important;border-bottom:1px solid rgba(255,255,255,.12) !important}
+body[data-cleo-ds="v6"]:not(#_) main section.sy-final-photo:not(#_):not(#_):not(#_){background:#0A0A0B !important}
+body[data-cleo-ds="v6"]:not(#_) .nav:not(#_):not(#_):not(#_):not(#__){background:#0A0A0B !important;border-bottom:1px solid rgba(255,255,255,.12) !important}
 body[data-cleo-ds="v6"]:not(#_) .nav :is(a, button):not(#_):not(#_):not(#_):not(#__){color:#FFFFFF !important}
 body[data-cleo-ds="v6"]:not(#_) .nav .nav-logo img:not(#_):not(#_):not(#_){filter:brightness(0) invert(1)}
 body[data-cleo-ds="v6"]:not(#_) main .ac-aller:not(#_):not(#_):not(#_){background:rgba(0,0,0,.92);border-bottom:1px solid rgba(255,255,255,.12)}
@@ -37,8 +37,8 @@ body[data-cleo-ds="v6"]:not(#_) main :is(.ac-expertise, .ac-besoins, .ac-questio
 body[data-cleo-ds="v6"]:not(#_) main :is(.ac-expertise, .ac-besoins, .ac-questions) .ac-tete-sur:not(#_):not(#_):not(#_){justify-content:center}
 body[data-cleo-ds="v6"]:not(#_) main .ac-questions .ac-entete:not(#_):not(#_):not(#_){text-align:center}
 
-/* 3. Les surfaces : cartes #141414, filet blanc à 8 %, rayon 12 */
-body[data-cleo-ds="v6"]:not(#_) main :is(.ac-besoins .sy-carte, .ac-carte, .ac-etape, .ac-choix, .ac-roue-bloc, .ac-visuel):not(#_):not(#_):not(#_){background-color:#141414 !important;box-shadow:0 0 0 1px rgba(255,255,255,.08) !important;border:0 !important;border-radius:12px}
+/* 3. Les surfaces : cartes #17171A, filet blanc à 8 %, rayon 12 */
+body[data-cleo-ds="v6"]:not(#_) main :is(.ac-besoins .sy-carte, .ac-carte, .ac-etape, .ac-choix, .ac-roue-bloc, .ac-visuel):not(#_):not(#_):not(#_){background-color:#17171A !important;box-shadow:0 0 0 1px rgba(255,255,255,.08) !important;border:0 !important;border-radius:12px}
 body[data-cleo-ds="v6"]:not(#_) main .ac-besoins .sy-carte:not(#_):not(#_):not(#_):hover{background-color:#1C1C1C !important}
 body[data-cleo-ds="v6"]:not(#_) main .ac-etape > span:not(#_):not(#_):not(#_){background:#FFFFFF;color:#000000}
 body[data-cleo-ds="v6"]:not(#_) main .ac-media:not(#_):not(#_):not(#_){box-shadow:0 0 0 1px rgba(255,255,255,.10)}
@@ -61,9 +61,9 @@ body[data-cleo-ds="v6"]:not(#_) main .ac-app:not(#_):not(#_):not(#_)::before{con
 body[data-cleo-ds="v6"]:not(#_) main .ac-app:not(#_):not(#_):not(#_)::after{content:"";position:absolute;left:14px;top:12px;width:44px;height:10px;background-image:radial-gradient(circle 5px at 5px 5px, #E0E0E0 98%, transparent 100%), radial-gradient(circle 5px at 22px 5px, #E0E0E0 98%, transparent 100%), radial-gradient(circle 5px at 39px 5px, #E0E0E0 98%, transparent 100%)}
 
 /* 6. Les chiffres en panneaux, comme leurs cartes de preuve */
-body[data-cleo-ds="v6"]:not(#_) main .sy-bento-creme:not(#_):not(#_):not(#_){background:#141414 !important;box-shadow:0 0 0 1px rgba(255,255,255,.08)}
+body[data-cleo-ds="v6"]:not(#_) main .sy-bento-creme:not(#_):not(#_):not(#_){background:#17171A !important;box-shadow:0 0 0 1px rgba(255,255,255,.08)}
 body[data-cleo-ds="v6"]:not(#_) main .sy-bento-creme :is(b, span):not(#_):not(#_):not(#_){color:#FFFFFF}
-body[data-cleo-ds="v6"]:not(#_) main .sy-bento-bleu:not(#_):not(#_):not(#_){background:#141414 !important;box-shadow:0 0 0 1px rgba(255,255,255,.08)}
+body[data-cleo-ds="v6"]:not(#_) main .sy-bento-bleu:not(#_):not(#_):not(#_){background:#17171A !important;box-shadow:0 0 0 1px rgba(255,255,255,.08)}
 body[data-cleo-ds="v6"]:not(#_) main .sy-bento-photo:not(#_):not(#_):not(#_){box-shadow:0 0 0 1px rgba(255,255,255,.08)}
 
 /* 7. La FAQ et les filets */
@@ -80,7 +80,7 @@ body[data-cleo-ds="v6"]:not(#_) main .ac-tete-sur:not(#_):not(#_):not(#_):not(#_
 body[data-cleo-ds="v6"]:not(#_) main .ac-tete-sur .ac-index:not(#_):not(#_):not(#_):not(#__):not(#___){color:rgba(255,255,255,.52) !important}
 body[data-cleo-ds="v6"]:not(#_) main .ac-besoin-sur:not(#_):not(#_):not(#_):not(#__):not(#___){color:rgba(255,255,255,.52) !important}
 body[data-cleo-ds="v6"]:not(#_) main .ac-logos p:not(#_):not(#_):not(#_):not(#__):not(#___){color:rgba(255,255,255,.52) !important}
-body[data-cleo-ds="v6"]:not(#_) main .ac-globe-legende:not(#_):not(#_):not(#_):not(#__):not(#___){background:#141414 !important;box-shadow:0 0 0 1px rgba(255,255,255,.10) !important;color:rgba(255,255,255,.66) !important}
+body[data-cleo-ds="v6"]:not(#_) main .ac-globe-legende:not(#_):not(#_):not(#_):not(#__):not(#___){background:#17171A !important;box-shadow:0 0 0 1px rgba(255,255,255,.10) !important;color:rgba(255,255,255,.66) !important}
 body[data-cleo-ds="v6"]:not(#_) main .ac-globe-legende b:not(#_):not(#_):not(#_):not(#__):not(#___){color:#FFFFFF !important}
 body[data-cleo-ds="v6"]:not(#_) main .ac-app:not(#_):not(#_):not(#_):not(#__):not(#___)::before{background:#1C1C1C;border-bottom:1px solid rgba(255,255,255,.08)}
 body[data-cleo-ds="v6"]:not(#_) main .ac-app:not(#_):not(#_):not(#_):not(#__):not(#___)::after{background-image:radial-gradient(circle 5px at 5px 5px, rgba(255,255,255,.22) 98%, transparent 100%), radial-gradient(circle 5px at 22px 5px, rgba(255,255,255,.22) 98%, transparent 100%), radial-gradient(circle 5px at 39px 5px, rgba(255,255,255,.22) 98%, transparent 100%)}
@@ -101,7 +101,7 @@ body[data-cleo-ds="v6"]:not(#_) main .sy-bento-bleu .sy-fiche:not(#_):not(#_):no
 
 /* 10. Au téléphone : les trois barres du bouton de menu suivent la couleur d'encre du site (--c-ink), invisible sur noir */
 body[data-cleo-ds="v6"]:not(#_) .nav-burger span:not(#_):not(#_):not(#_):not(#__):not(#___){background:#FFFFFF}
-body[data-cleo-ds="v6"]:not(#_) .menu-mobile:not(#_):not(#_):not(#_):not(#__):not(#___){background:#000000;color:#FFFFFF}
+body[data-cleo-ds="v6"]:not(#_) .menu-mobile:not(#_):not(#_):not(#_):not(#__):not(#___){background:#0A0A0B;color:#FFFFFF}
 body[data-cleo-ds="v6"]:not(#_) .menu-mobile a:not(#_):not(#_):not(#_):not(#__):not(#___){color:#FFFFFF}
 body[data-cleo-ds="v6"]:not(#_) .mm-fermer:not(#_):not(#_):not(#_):not(#__):not(#___){color:#FFFFFF}
 
@@ -153,7 +153,7 @@ body[data-cleo-ds="v6"]:not(#_) main .ac-carte .ac-coches:not(#_):not(#_):not(#_
 
 /* 13. L'appel final devient un panneau en deux volets, comme leur « Deployment: make AI part of everyday work » :
    la vraie photo de l'équipe Cleo à gauche, le texte à droite. Jamais de titre posé sur un visage (règle de DA). */
-body[data-cleo-ds="v6"]:not(#_) main section.sy-final-photo > figure:not(#_):not(#_):not(#_):not(#__):not(#___){display:grid;grid-template-columns:minmax(0, 1fr) minmax(0, 1.1fr);align-items:center;gap:0;border-radius:12px;overflow:clip;background:#141414;box-shadow:0 0 0 1px rgba(255,255,255,.08)}
+body[data-cleo-ds="v6"]:not(#_) main section.sy-final-photo > figure:not(#_):not(#_):not(#_):not(#__):not(#___){display:grid;grid-template-columns:minmax(0, 1fr) minmax(0, 1.1fr);align-items:center;gap:0;border-radius:12px;overflow:clip;background:#17171A;box-shadow:0 0 0 1px rgba(255,255,255,.08)}
 body[data-cleo-ds="v6"]:not(#_) main section.sy-final-photo > figure > img:not(#_):not(#_):not(#_):not(#__):not(#___){position:relative;inset:auto;width:100%;height:100%;min-height:380px;object-fit:cover}
 body[data-cleo-ds="v6"]:not(#_) main .sy-final-texte:not(#_):not(#_):not(#_):not(#__):not(#___){position:relative;inset:auto;max-width:none;padding:clamp(28px, 4vw, 56px);text-align:left;transform:none}
 body[data-cleo-ds="v6"]:not(#_) main .sy-final-texte h2:not(#_):not(#_):not(#_):not(#__):not(#___){margin-left:0;margin-right:0}
@@ -209,24 +209,24 @@ body[data-cleo-ds="v6"]:not(#_) main .ac-etoiles:not(#_):not(#_):not(#_){fill:rg
    Relevé automatique (scratchpad/fonds-blancs.mjs) : les surfaces qui codaient le blanc en dur gardaient du texte blanc
    sur blanc. Liste tirée de la mesure, pas devinée : tableaux défilants et matrices, boutons blancs, champs de
    formulaire, panneaux des pages Service et Atlas, blocs de code, filets et points du globe. */
-body[data-cleo-ds="v6"]:not(#_) main :is(.table-defilante, table.matrice, .ap-matrice, .atlas-matrice, .atlas-sh6, .atlas-carte-legende, .dt-code, .sc-panneau-demande, .sc-devis, .sc-doc, .sc-invite, .sc-relecteur, .sc-etape, .sc-flottant, .radar-fiche, .radar-source, .doc-apercu, .prix-bloc, .fiche-service, .fiche-inclus, .res-carte, .terme-carte, .ig-item, .mc-reponse, .pc-fichier, .texte-chip, .hq-puce-document, .hr-puce, .carte, .cl-demande, .data-chiffres > div, .scene):not(#__):not(#___):not(#____){background-color:#141414 !important;border-color:rgba(255,255,255,.14) !important}
+body[data-cleo-ds="v6"]:not(#_) main :is(.table-defilante, table.matrice, .ap-matrice, .atlas-matrice, .atlas-sh6, .atlas-carte-legende, .dt-code, .sc-panneau-demande, .sc-devis, .sc-doc, .sc-invite, .sc-relecteur, .sc-etape, .sc-flottant, .radar-fiche, .radar-source, .doc-apercu, .prix-bloc, .fiche-service, .fiche-inclus, .res-carte, .terme-carte, .ig-item, .mc-reponse, .pc-fichier, .texte-chip, .hq-puce-document, .hr-puce, .carte, .cl-demande, .data-chiffres > div, .scene):not(#__):not(#___):not(#____){background-color:#17171A !important;border-color:rgba(255,255,255,.14) !important}
 body[data-cleo-ds="v6"]:not(#_) main :is(table, th, td):not(#__):not(#___):not(#____){border-color:rgba(255,255,255,.14) !important;color:#FFFFFF}
 body[data-cleo-ds="v6"]:not(#_) main :is(thead, tr):not(#__):not(#___):not(#____){background-color:transparent !important}
 body[data-cleo-ds="v6"]:not(#_) main tbody tr:nth-child(even):not(#__):not(#___):not(#____){background-color:rgba(255,255,255,.03) !important}
 body[data-cleo-ds="v6"]:not(#_) main .sy-bouton-blanc:not(#__):not(#___):not(#____){background:#FFFFFF !important;color:#000000 !important}
-body[data-cleo-ds="v6"]:not(#_) main :is(input, textarea, select):not(#__):not(#___):not(#____){background-color:#141414 !important;color:#FFFFFF !important;border-color:rgba(255,255,255,.18) !important}
+body[data-cleo-ds="v6"]:not(#_) main :is(input, textarea, select):not(#__):not(#___):not(#____){background-color:#17171A !important;color:#FFFFFF !important;border-color:rgba(255,255,255,.18) !important}
 body[data-cleo-ds="v6"]:not(#_) main :is(input, textarea)::placeholder{color:rgba(255,255,255,.45)}
 body[data-cleo-ds="v6"]:not(#_) main .gp-point:not(#__):not(#___):not(#____){background:var(--c-accent) !important}
 body[data-cleo-ds="v6"]:not(#_) main .filet:not(#__):not(#___):not(#____){background:rgba(255,255,255,.22) !important}
 body[data-cleo-ds="v6"]:not(#_) main .sc-ok:not(#__):not(#___):not(#____){color:#000000 !important}
 body[data-cleo-ds="v6"]:not(#_) main .marqueur:not(#__):not(#___):not(#____){color:#FFFFFF !important;background:rgba(255,255,255,.12) !important}
-body[data-cleo-ds="v6"]:not(#_) .menu-mobile:not(#__):not(#___):not(#____){background:#000000 !important}
+body[data-cleo-ds="v6"]:not(#_) .menu-mobile:not(#__):not(#___):not(#____){background:#0A0A0B !important}
 body[data-cleo-ds="v6"]:not(#_) .menu-mobile :is(a, button, span, p):not(#__):not(#___):not(#____){color:#FFFFFF !important}
-body[data-cleo-ds="v6"]:not(#_) .nav :is(.mega, .mega-plein, .mega-noeud, .mega-client, .mega-pastille, .mega-carte):not(#__):not(#___):not(#____){background-color:#141414 !important;border-color:rgba(255,255,255,.12) !important;color:#FFFFFF}
+body[data-cleo-ds="v6"]:not(#_) .nav :is(.mega, .mega-plein, .mega-noeud, .mega-client, .mega-pastille, .mega-carte):not(#__):not(#___):not(#____){background-color:#17171A !important;border-color:rgba(255,255,255,.12) !important;color:#FFFFFF}
 body[data-cleo-ds="v6"]:not(#_) .nav .mega :is(a, span, p, b, small):not(#__):not(#___):not(#____){color:#FFFFFF}
-body[data-cleo-ds="v6"]:not(#_) .pied:not(#__):not(#___):not(#____){background:#000000 !important;border-top:1px solid rgba(255,255,255,.12)}
+body[data-cleo-ds="v6"]:not(#_) .pied:not(#__):not(#___):not(#____){background:#0A0A0B !important;border-top:1px solid rgba(255,255,255,.12)}
 body[data-cleo-ds="v6"]:not(#_) .pied :is(a, p, span, b, small, h2, h3):not(#__):not(#___):not(#____){color:#FFFFFF}
-body[data-cleo-ds="v6"]:not(#_) main table.comparatif:not(#__):not(#___):not(#____){background-color:#141414 !important}
+body[data-cleo-ds="v6"]:not(#_) main table.comparatif:not(#__):not(#___):not(#____){background-color:#17171A !important}
 body[data-cleo-ds="v6"]:not(#_) main .sy-bouton-blanc:not(#__):not(#___):not(#____), body[data-cleo-ds="v6"]:not(#_) main .sy-bouton-blanc *:not(#__):not(#___):not(#____){color:#000000 !important}
 body[data-cleo-ds="v6"]:not(#_) main .sy-bouton-blanc svg:not(#__):not(#___):not(#____){stroke:#000000 !important;fill:none}
 
@@ -243,18 +243,18 @@ body[data-cleo-ds="v6"]:not(#_) main :is(.sy-bouton, .sy-bouton-chevrons):not(#_
 body[data-cleo-ds="v6"]:not(#_) main :is(.sy-bouton, .sy-bouton-chevrons) *:not(#__):not(#___):not(#____){color:inherit !important}
 
 /* 20. Tous les tableaux, quel que soit leur conteneur (les codes SH de la page Atlas restaient blancs sur blanc) */
-body[data-cleo-ds="v6"]:not(#_) main table:not(#__):not(#___):not(#____){background-color:#141414 !important}
+body[data-cleo-ds="v6"]:not(#_) main table:not(#__):not(#___):not(#____){background-color:#17171A !important}
 body[data-cleo-ds="v6"]:not(#_) main :is(td, th):not(#__):not(#___):not(#____){background-color:transparent !important}
-body[data-cleo-ds="v6"]:not(#_) main :is([class*="table"], [class*="matrice"], [class*="tableau"]):not(#__):not(#___):not(#____){background-color:#141414 !important}
+body[data-cleo-ds="v6"]:not(#_) main :is([class*="table"], [class*="matrice"], [class*="tableau"]):not(#__):not(#___):not(#____){background-color:#17171A !important}
 
 /* 21. Cohérence des blocs sombres existants : les sections « sy-sombre » étaient en bleu nuit #08093B, sur une page
-   noire elles font tache. Elles prennent la surface #141414 du registre. */
-body[data-cleo-ds="v6"]:not(#_) main section.sy-sombre:not(#__):not(#___):not(#____){background:#141414 !important}
-body[data-cleo-ds="v6"]:not(#_) main :is(.tk-onglets, .tk-onglets-vue, .tk-photo, .tk-bandeau):not(#__):not(#___):not(#____){background-color:#141414 !important;border-color:rgba(255,255,255,.12) !important}
-body[data-cleo-ds="v6"]:not(#_) main :is(.blog-art, .res-carte, .ap-chapitre, .sc-carte, .dt-acces-carte, .dt-tarif, .dt-pilier):not(#__):not(#___):not(#____){background-color:#141414 !important;box-shadow:0 0 0 1px rgba(255,255,255,.08) !important;border:0 !important}
+   noire elles font tache. Elles prennent la surface #17171A du registre. */
+body[data-cleo-ds="v6"]:not(#_) main section.sy-sombre:not(#__):not(#___):not(#____){background:#17171A !important}
+body[data-cleo-ds="v6"]:not(#_) main :is(.tk-onglets, .tk-onglets-vue, .tk-photo, .tk-bandeau):not(#__):not(#___):not(#____){background-color:#17171A !important;border-color:rgba(255,255,255,.12) !important}
+body[data-cleo-ds="v6"]:not(#_) main :is(.blog-art, .res-carte, .ap-chapitre, .sc-carte, .dt-acces-carte, .dt-tarif, .dt-pilier):not(#__):not(#___):not(#____){background-color:#17171A !important;box-shadow:0 0 0 1px rgba(255,255,255,.08) !important;border:0 !important}
 body[data-cleo-ds="v6"]:not(#_) main :is(.faq details, details):not(#__):not(#___):not(#____){border-color:rgba(255,255,255,.14) !important}
 /* 22. Les plaques « etiquette » restaient blanches : elles passent en surface sombre, leur libellé en bleu clair */
-body[data-cleo-ds="v6"]:not(#_) main .etiquette:not(.sy-etiquette):not(#__):not(#___):not(#____){background-color:#141414 !important;box-shadow:0 0 0 1px rgba(255,255,255,.12)}
+body[data-cleo-ds="v6"]:not(#_) main .etiquette:not(.sy-etiquette):not(#__):not(#___):not(#____){background-color:#17171A !important;box-shadow:0 0 0 1px rgba(255,255,255,.12)}
 
 /* 23. iPad : en paysage 1024, la scène collante se déclenchait sans avoir la place, le dossier était écrasé et illisible
    (« en mode iPad on comprend rien »). Le seuil de la scène passe à 1180 px dans la feuille 43 ; ici, l'atelier repasse
@@ -264,7 +264,7 @@ body[data-cleo-ds="v6"]:not(#_) main .etiquette:not(.sy-etiquette):not(#__):not(
   body[data-cleo-ds="v6"]:not(#_) main .ac-atelier .ac-media:not(#_):not(#_):not(#_){width:100%}
 }
 /* 24. Deux dernières surfaces blanches relevées : les cartes flottantes des pages Ressources et les légendes d'article */
-body[data-cleo-ds="v6"]:not(#_) main :is(.ra-flottant, .ra-flottant-texte, .ra-carte, .ra-panneau):not(#__):not(#___):not(#____){background-color:#141414 !important;box-shadow:0 0 0 1px rgba(255,255,255,.10) !important}
+body[data-cleo-ds="v6"]:not(#_) main :is(.ra-flottant, .ra-flottant-texte, .ra-carte, .ra-panneau):not(#__):not(#___):not(#____){background-color:#17171A !important;box-shadow:0 0 0 1px rgba(255,255,255,.10) !important}
 
 /* 25. LE défaut iPad, mesuré : sous 1280 px la barre latérale du dossier est masquée (display:none), mais sa colonne de
    196 px restait déclarée, donc le corps du dossier tombait dedans et s'affichait sur 196 px de large, un mot par ligne.
@@ -296,7 +296,7 @@ body[data-cleo-ds="v6"]:not(#_) main .ra-livre *:not(#__):not(#___):not(#____){c
 body[data-cleo-ds="v6"]:not(#_) main [class*="ra-livre"]:not(#__):not(#___):not(#____):not(#_____){color:#1A1A1A !important}
 body[data-cleo-ds="v6"]:not(#_) main [class*="ra-livre"] *:not(#__):not(#___):not(#____):not(#_____){color:#1A1A1A !important}
 /* 29. Les cartes flottantes blanches (relevé : DIV.flottant sur la page campagne) passent en surface sombre */
-body[data-cleo-ds="v6"]:not(#_) main :is(.flottant, [class*="flottant"]):not(#__):not(#___):not(#____){background-color:#141414 !important;box-shadow:0 0 0 1px rgba(255,255,255,.12) !important}
+body[data-cleo-ds="v6"]:not(#_) main :is(.flottant, [class*="flottant"]):not(#__):not(#___):not(#____){background-color:#17171A !important;box-shadow:0 0 0 1px rgba(255,255,255,.12) !important}
 /* 30. La maquette de couverture du guide (DIV.livre dans DIV.couverture) est un objet blanc volontaire : son texte
    reste sombre, l'objet garde sa couleur de papier. */
 body[data-cleo-ds="v6"]:not(#_) main :is(.livre, .couverture):not(#__):not(#___):not(#____):not(#_____){color:#1A1A1A !important}
@@ -322,3 +322,14 @@ body[data-cleo-ds="v6"]:not(#_) main .ac-bande-grille:not(#_):not(#_):not(#_){gr
 @media (max-width:700px){
   body[data-cleo-ds="v6"]:not(#_) main .ac-bande-grille:not(#_):not(#_):not(#_){grid-template-columns:minmax(0, 1fr)}
 }
+
+/* 33. Cohérence de la coque, relevé sur les 59 pages (scratchpad/sombre-coherent.mjs, menus ouverts) : le fond des barres,
+   du méga-menu, du pied et du menu mobile était déjà sombre ; restaient trois détails clairs, les mêmes partout. */
+body[data-cleo-ds="v6"]:not(#_) .nav :is(.mega-icone, .mega-schema):not(#__):not(#___):not(#____){background-color:rgba(255,255,255,.08) !important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12);color:#FFFFFF !important}
+body[data-cleo-ds="v6"]:not(#_) .nav :is(.mega-icone, .mega-schema) *:not(#__):not(#___):not(#____){color:#FFFFFF !important;border-color:rgba(255,255,255,.2) !important}
+body[data-cleo-ds="v6"]:not(#_) .nav-langue:not(#__):not(#___):not(#____){background-color:rgba(255,255,255,.10) !important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}
+body[data-cleo-ds="v6"]:not(#_) .nav-langue a:not(#__):not(#___):not(#____){color:rgba(255,255,255,.66) !important}
+body[data-cleo-ds="v6"]:not(#_) .nav-langue :is(a[aria-current], .actif, [class*="actif"]):not(#__):not(#___):not(#____){background-color:#FFFFFF !important;color:#000000 !important}
+/* 34. Menu mobile : les intitulés de groupe (« SERVICE », « DATA ») restaient gris sombre sur noir */
+body[data-cleo-ds="v6"]:not(#_) .menu-mobile .mm-groupe > :is(p, span, b, small):first-child:not(#__):not(#___):not(#____){color:rgba(255,255,255,.55) !important}
+body[data-cleo-ds="v6"]:not(#_) .menu-mobile .mm-titre:not(#__):not(#___):not(#____){color:rgba(255,255,255,.55) !important}
