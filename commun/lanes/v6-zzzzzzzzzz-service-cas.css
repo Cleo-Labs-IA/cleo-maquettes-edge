@@ -161,7 +161,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page=
 /* La scène (bureau seulement) : les étapes collent à l'écran, la carte change avec l'étape active. */
 @media (prefers-reduced-motion: no-preference) and (min-width:981px){
   @supports (animation-timeline: view()){
-    body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-comment-scene{height:280vh;view-timeline-name:--sc-comment}
+    body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-comment-scene{height:220vh;view-timeline-name:--sc-comment}
     body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-comment-collant{position:sticky;top:max(96px, calc(50vh - 250px))}
     body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-carte{opacity:1;animation:scCarte linear both;animation-timeline:--sc-comment}
     body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) .sc-carte-1{animation-name:scCarteDebut;animation-range:contain 0% contain 25%}

@@ -30,24 +30,27 @@
       <figcaption class="sy-chapitre-texte">
         <p class="sy-etiquette">Data</p>
         <h1>Donnée juridique traçable, classification douanière expliquée.</h1>
-        <p class="sy-chapitre-lead">Deux API prêtes pour votre produit : chercher et récupérer des documents juridiques avec leur source, et pré-classer votre catalogue en codes douaniers.</p>
+        <p class="sy-chapitre-lead">Deux API pour votre produit : la donnée juridique avec sa source, et la pré-classification douanière de votre catalogue.</p>
         <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://legaldata-public.cleolabs.co/signup">Obtenir une clé API</a><a class="sy-bouton-blanc" href="https://www.cleolabs.co/legal-data/docs">Voir la documentation</a></div>
       </figcaption>
     </figure>
   </div>
 </section>
 
+<!-- ═══ ALLER À ═══ 18/09/2026 : la barre d'ancres de l'accueil, posée sur les pages d'offre. Leur site fait pareil :
+     on voit le plan de la page sans défiler. Composant repris tel quel (.ac-aller), portée de la règle élargie. -->
+<nav class="ac-aller" aria-label="Accès rapide à la page">
+  <div class="conteneur ac-aller-liens"><span>Aller à</span><a href="#disponible">Les API</a><a href="#usage">L'usage</a><a href="#tarifs">Les prix</a><a href="#couverture">La couverture</a></div>
+</nav>
+
 <!-- ═══ DISPONIBLE MAINTENANT ═══ Deux cartes : entrée, sortie, exemple (document, « Available now »). -->
 <section class="section dt-acces-section" id="disponible">
   <div class="conteneur">
-    <figure class="sy-chapitre">
-      <img src="img:chaines" alt="">
-      <figcaption class="sy-chapitre-texte">
-        <p class="sy-etiquette">Disponible maintenant</p>
-        <h2>Deux API à intégrer aujourd'hui</h2>
-        <p class="sy-chapitre-lead">La donnée juridique et sa provenance pour les logiciels juridiques et de conformité. La pré-classification douanière pour les catalogues produits.</p>
-      </figcaption>
-    </figure>
+    <div class="sy-entete" data-apparait>
+      <p class="sy-surtitre">01 · Disponible maintenant</p>
+      <h2>Deux API à intégrer aujourd'hui</h2>
+      <p class="sy-lead">La donnée juridique et sa provenance pour les logiciels juridiques et de conformité. La pré-classification douanière pour les catalogues produits.</p>
+    </div>
     <div class="dt-acces" data-apparait>
       <article class="sy-carte dt-acces-carte" id="legal-data">
         <p class="sy-surtitre">En production</p>
@@ -100,14 +103,11 @@ Authorization: Bearer $CLEO_API_KEY</code></pre></div>
 <!-- ═══ TARIFS ═══ Sandbox, Starter, Pro, Enterprise. Aucun produit futur dans ces cartes (document). -->
 <section class="section dt-offre-section" id="tarifs">
   <div class="conteneur">
-    <figure class="sy-chapitre">
-      <img src="img:fenetres" alt="">
-      <figcaption class="sy-chapitre-texte">
-        <p class="sy-etiquette">Tarifs</p>
-        <h2>Commencer gratuitement, passer en production quand vous êtes prêt</h2>
-        <p class="sy-chapitre-lead">Les mêmes données et les mêmes endpoints dans chaque offre. Seul le volume change.</p>
-      </figcaption>
-    </figure>
+    <div class="sy-entete" data-apparait>
+      <p class="sy-surtitre">02 · Tarifs</p>
+      <h2>Commencer gratuitement, passer en production quand vous êtes prêt</h2>
+      <p class="sy-lead">Les mêmes données et les mêmes endpoints dans chaque offre. Seul le volume change.</p>
+    </div>
     <div class="dt-tarifs" data-apparait>
       <article class="sy-carte dt-offre-carte dt-tarif">
         <p class="sy-surtitre">Sandbox</p>
@@ -146,7 +146,7 @@ Authorization: Bearer $CLEO_API_KEY</code></pre></div>
   <div class="conteneur dt-duo dt-trace sy-sur-profond">
     <div class="dt-trace-texte">
       <h2>Chaque document garde sa source</h2>
-      <p class="sy-lead">Chaque résultat renvoie son identifiant, sa source et l'URL du portail d'origine. Les sources incluses sont celles de votre contrat, et la couverture se consulte pays par pays.</p>
+      <p class="sy-lead">Chaque résultat renvoie son identifiant, sa source et l'URL du portail d'origine.</p>
       <ul class="sy-chiffres dt-preuve-chiffres"><li><b>106</b><span>pays suivis</span></li><li><b>25 000</b><span>réglementations cartographiées</span></li><li><b>19 000</b><span>autorités réglementaires suivies</span></li></ul>
       <div class="sy-actions dt-actions"><a class="sy-bouton-blanc" href="26-legal-data.html">Explorer la couverture</a></div>
     </div>

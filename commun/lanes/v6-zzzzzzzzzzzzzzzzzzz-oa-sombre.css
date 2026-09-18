@@ -218,7 +218,10 @@ body[data-cleo-ds="v6"]:not(#_) main :is(input, textarea, select):not(#__):not(#
 body[data-cleo-ds="v6"]:not(#_) main :is(input, textarea)::placeholder{color:rgba(255,255,255,.45)}
 body[data-cleo-ds="v6"]:not(#_) main .gp-point:not(#__):not(#___):not(#____){background:var(--c-accent) !important}
 body[data-cleo-ds="v6"]:not(#_) main .filet:not(#__):not(#___):not(#____){background:rgba(255,255,255,.22) !important}
-body[data-cleo-ds="v6"]:not(#_) main .sc-ok:not(#__):not(#___):not(#____){color:#000000 !important}
+/* Les sceaux de la scène Service sont des pastilles BLANCHES : leur texte doit rester noir. On ne visait que
+   .sc-ok, or la pastille voisine n'a pas de classe : « À signer par le fabricant » sortait blanc sur blanc,
+   invisible, et seulement à un moment du défilement (l'oracle de contraste la trouvait à opacité 0). */
+body[data-cleo-ds="v6"]:not(#_) main :is(.sc-ok, .sc-sceaux span):not(#__):not(#___):not(#____){color:#000000 !important}
 body[data-cleo-ds="v6"]:not(#_) main .marqueur:not(#__):not(#___):not(#____){color:#FFFFFF !important;background:rgba(255,255,255,.12) !important}
 body[data-cleo-ds="v6"]:not(#_) .menu-mobile:not(#__):not(#___):not(#____){background:#0A0A0B !important}
 body[data-cleo-ds="v6"]:not(#_) .menu-mobile :is(a, button, span, p):not(#__):not(#___):not(#____){color:#FFFFFF !important}
@@ -350,3 +353,49 @@ body[data-cleo-ds="v6"]:not(#_) main .ac-media:not(#__):not(#___):not(#____){out
 body[data-cleo-ds="v6"]:not(#_) main .sy-chapitre:not(#__):not(#___):not(#____)::after{background:transparent !important;mix-blend-mode:normal !important}
 body[data-cleo-ds="v6"]:not(#_) main .sy-chapitre:not(#__):not(#___):not(#____)::before{background:linear-gradient(0deg, rgba(0,0,0,.78) 0%, rgba(0,0,0,.42) 46%, rgba(0,0,0,.18) 100%) !important}
 body[data-cleo-ds="v6"]:not(#_) main .sy-chapitre:not(#__):not(#___):not(#____){background:#0A0A0B}
+
+/* ═══ 37. LA SCÈNE SERVICE DEVIENT UNE FENÊTRE, ET SA PHOTO TOMBE ═══════════════════════════════════════
+   Mesuré le 18/09/2026 : la carte active de la scène « Comment ça marche » couvre TOUTE la figure
+   (804 × 528, inset 0) avec un fond opaque #17171A — la passe des surfaces blanches (§18) l'avait
+   repeinte, alors que la feuille de la page la voulait transparente. Résultat : la photo derrière
+   (personne-equipe) n'était jamais visible, et les cartes flottaient dans un rectangle noir de 800 px.
+   On tranche dans le sens d'OpenAI et de l'accueil validé : pas de photo décorative, une vraie fenêtre
+   d'application à trois pastilles. La photo est retirée de l'écran (elle ne servait à rien), le cadre
+   porte la barre de fenêtre, et les cartes repassent transparentes pour vivre DANS la fenêtre. */
+body[data-cleo-ds="v6"]:not(#_) main .sc-carte:not(#__):not(#___):not(#____){background:transparent !important}
+body[data-cleo-ds="v6"]:not(#_) main .sc-comment-image > img:not(#__):not(#___):not(#____){display:none !important}
+body[data-cleo-ds="v6"]:not(#_) main .sc-comment-image:not(#__):not(#___):not(#____){background:#17171A !important;border:1px solid rgba(255,255,255,.10) !important;border-radius:12px !important}
+body[data-cleo-ds="v6"]:not(#_) main .sc-comment-image:not(#__):not(#___):not(#____)::after{background:transparent !important}
+/* La barre de fenêtre et ses trois pastilles, même grammaire que .ac-app sur l'accueil. */
+body[data-cleo-ds="v6"]:not(#_) main .sc-comment-image:not(#__):not(#___):not(#____)::before{
+  content:"";position:absolute;inset:0 0 auto 0;height:38px;z-index:2;pointer-events:none;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  background:
+    radial-gradient(circle at 20px 19px, rgba(255,255,255,.26) 4px, transparent 4.5px),
+    radial-gradient(circle at 38px 19px, rgba(255,255,255,.26) 4px, transparent 4.5px),
+    radial-gradient(circle at 56px 19px, rgba(255,255,255,.26) 4px, transparent 4.5px)}
+/* Les cartes commencent sous la barre de fenêtre. */
+body[data-cleo-ds="v6"]:not(#_) main .sc-carte:not(#__):not(#___):not(#____){inset:38px 0 0 0 !important}
+/* Les lignes fantômes du document étaient peintes avec --c-fond-2, devenu #17171A : même couleur que la
+   carte, donc un document vide à l'écran. Et les lignes « relues » étaient en bleu profond à 16 %,
+   invisible sur sombre. On les repasse en blanc discret et en bleu clair. */
+body[data-cleo-ds="v6"]:not(#_) main .sc-doc i:not(#__):not(#___):not(#____){background:rgba(255,255,255,.14) !important}
+body[data-cleo-ds="v6"]:not(#_) main .sc-doc i.sc-m:not(#__):not(#___):not(#____){background:rgba(140,146,255,.55) !important}
+
+/* ═══ 38. LES EN-TÊTES DE SECTION AU MILIEU, PARTOUT ════════════════════════════════════════════════════
+   18/09/2026, Naomie : « inspire-toi vraiment de l'architecture de leur site ». Sur leurs pages Business,
+   TOUT en-tête de section est centré, avec un chapeau étroit : c'est ce qui donne la lecture rapide. On
+   l'avait fait sur l'accueil (§2) pour .ac-tete ; on le fait ici pour .sy-entete, l'en-tête de chapitre du
+   site, employé par Service, Data, Secteur, Marché, Solutions et les pages Data. */
+body[data-cleo-ds="v6"]:not(#_) main .sy-entete:not(#__):not(#___):not(#____){max-width:720px;margin-left:auto;margin-right:auto;text-align:center}
+body[data-cleo-ds="v6"]:not(#_) main .sy-entete > :is(p, .sy-lead):not(#__):not(#___):not(#____){margin-left:auto;margin-right:auto}
+/* Les titres de section propres aux pages Service (.sc-titre) et Enterprise (.en-titre) suivent la même
+   règle : au milieu, comme sur leurs pages Business. */
+body[data-cleo-ds="v6"]:not(#_) main :is(.sc-titre, .en-titre):not(#__):not(#___):not(#____){text-align:center;margin-left:auto;margin-right:auto;max-width:860px}
+
+/* ═══ 39. LE DERNIER APLAT BLEU DE LA PAGE ENTERPRISE ═══════════════════════════════════════════════════
+   Mesuré : la section « Ce que nous mettons en place » est peinte en #08093B par la feuille de la page
+   (main > section.en-valeurs, en !important). Sur fond noir, c'est un grand bloc bleu au milieu d'une
+   page qui n'en a plus nulle part ailleurs. Leurs pages Business alternent le noir et un panneau à peine
+   plus clair : on fait pareil. Le bleu reste dans les repères et les liens, jamais en aplat de section. */
+body[data-cleo-ds="v6"]:not(#_) main > section.en-valeurs:not(#__):not(#___):not(#____){background:#17171A !important}

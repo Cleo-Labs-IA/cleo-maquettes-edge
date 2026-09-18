@@ -11,12 +11,18 @@
       <figcaption class="sy-chapitre-texte">
         <p class="sy-etiquette">Service</p>
         <h1>Product compliance services, with a price shown before you order.</h1>
-        <p class="sy-chapitre-lead">You just want someone to put the file together. Cleo prepares it, and a compliance expert reviews and validates it. One price per file, never by the hour, with monitoring included.</p>
+        <p class="sy-chapitre-lead">You just want someone to put the file together. Cleo prepares it, a compliance expert reviews and validates it. One price per file, monitoring included.</p>
         <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Describe my product</a><a class="sy-bouton-blanc" href="#catalogue">See the services</a></div>
       </figcaption>
     </figure>
   </div>
 </section>
+
+<!-- ═══ ALLER À ═══ 18/09/2026 : la barre d'ancres de l'accueil, posée sur les pages d'offre. Leur site fait pareil :
+     on voit le plan de la page sans défiler. Composant repris tel quel (.ac-aller), portée de la règle élargie. -->
+<nav class="ac-aller" aria-label="Jump to a section">
+  <div class="conteneur ac-aller-liens"><span>Go to</span><a href="#catalogue">The services</a><a href="#comment">How it works</a><a href="#tarifs">Pricing</a><a href="#experts">The experts</a></div>
+</nav>
 
 <!-- ═══ BENTO DE PREUVE ═══ 16/09/2026, passe identité (IDENTITE.md 2.1) : la citation de Philippine Tamic, extrait
      verbatim de DecathlonQuote.tsx (seul témoignage utilisable), les chiffres canon 106 pays et 25 000 réglementations
@@ -48,14 +54,11 @@
 <section class="sc-s sc-cas-section" id="catalogue">
   <div class="sc-conteneur">
     <!-- 16/09/2026, « Photo partout » : en-tête du chapitre sur photo, h2 repris mot pour mot. -->
-    <figure class="sy-chapitre">
-      <img src="img:briques" alt="">
-      <figcaption class="sy-chapitre-texte">
-        <p class="sy-etiquette">Service</p>
-        <h2>The services, one by one</h2>
-        <p class="sy-chapitre-lead">Your questions, in plain language, from design to product launch.</p>
-      </figcaption>
-    </figure>
+    <div class="sy-entete" data-apparait>
+      <p class="sy-surtitre">01</p>
+      <h2>The services, one by one</h2>
+      <p class="sy-lead">Your questions, in plain language, from design to product launch.</p>
+    </div>
     <!-- 16/09/2026, passe « le pain » (wording/sources/pains-ministere-commission.md) : chaque panneau s'ouvre sur la question
          du client, le nom de la prestation reste sur l'onglet ; le prix reste au pied du panneau. -->
     <div class="sc-cas" style="--rangs:6" role="radiogroup" aria-label="The services, one by one">
@@ -134,30 +137,15 @@
 </section>
 
 <!-- PRIX : 16/09/2026, décision de Naomie : prix d'EcoComply affichés sur l'évaluation (ecocomply.ai/product-compliance-assessment, « €399 per product »), l'étiquetage (product-documentation-labelling, « From €1,200 per product · single language »), le marquage CE (ce-marking, « €3,800 per product (testing costs excluded) ») et le mandataire (eu-authorised-representative, « €1,500 per year (per product category) »), relevés le 16/09/2026. Les autres prestations gardent « Price stated before you order ». -->
-<!-- ═══ BANDE PHOTO ═══ 16/09/2026, passe identité (IDENTITE.md 2.2) : la photo des classeurs, seconde phrase tirée de la FAQ de la page (« Un expert regarde votre catalogue avec vous. »), question tournée au positif. -->
-<section class="section sy-bande-photo">
-  <figure>
-    <img src="img:classeurs" alt="">
-    <div class="sy-bande-texte">
-      <p class="sy-etiquette">Design, development and product launch</p>
-      <h2>Another service in mind? An expert looks at your catalogue with you.</h2>
-      <a class="sy-bouton-blanc" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Talk to an expert</a>
-    </div>
-  </figure>
-</section>
-
 <!-- ═══ COMMENT ÇA MARCHE ═══ titre tiré des chiffres de l'ancienne page (80 % / 20 %) ; quatre étapes collantes, la
      carte d'interface posée sur la photo change à chaque étape. -->
 <section class="sc-s sc-comment-section" id="comment">
   <div class="sc-conteneur">
     <!-- 16/09/2026, « Photo partout » : en-tête du chapitre sur photo, h2 repris mot pour mot. -->
-    <figure class="sy-chapitre">
-      <img src="img:masse-tshirt" alt="">
-      <figcaption class="sy-chapitre-texte">
-        <p class="sy-etiquette">Service</p>
-        <h2>Cleo prepares the file, a compliance expert reviews and validates it</h2>
-      </figcaption>
-    </figure>
+    <div class="sy-entete" data-apparait>
+      <p class="sy-surtitre">02</p>
+      <h2>Cleo prepares the file, a compliance expert reviews and validates it</h2>
+    </div>
     <div class="sc-comment-scene" data-scene>
       <div class="sc-comment-collant">
         <figure class="sc-comment-image">
@@ -194,13 +182,10 @@
 <section class="sc-s" id="tarifs">
   <div class="sc-conteneur">
     <!-- 16/09/2026, « Photo partout » : en-tête du chapitre sur photo, h2 repris mot pour mot. -->
-    <figure class="sy-chapitre">
-      <img src="img:semelles" alt="">
-      <figcaption class="sy-chapitre-texte">
-        <p class="sy-etiquette">Service</p>
-        <h2>One price per service, shown before you order</h2>
-      </figcaption>
-    </figure>
+    <div class="sy-entete" data-apparait>
+      <p class="sy-surtitre">03</p>
+      <h2>One price per service, shown before you order</h2>
+    </div>
     <div class="sc-tarifs" data-apparait>
       <div class="sc-tarifs-table">
         <p class="sc-etiquette">Per service · price shown before you order</p>
