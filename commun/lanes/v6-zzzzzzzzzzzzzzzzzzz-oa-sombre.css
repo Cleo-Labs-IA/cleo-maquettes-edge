@@ -189,3 +189,18 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 /* le voile bleu de l'appel final n'a plus lieu d'être : le texte n'est plus posé sur la photo */
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main section.sy-final-photo > figure:not(#_):not(#_):not(#_):not(#__):not(#___)::after{display:none}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main section.sy-final-photo > figure:not(#_):not(#_):not(#_):not(#__):not(#___)::before{display:none}
+
+/* 17. Section 04 : une vraie photo sous chaque visuel, l'élément d'interface flotte dessus (le geste Legora repris par
+   OpenAI pour leurs cartes produit). Un voile sombre garde les libellés lisibles. */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-carte > .ac-visuel:not(#_):not(#_):not(#_){position:relative;isolation:isolate;background:#0F0F0F}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-visuel-photo:not(#_):not(#_):not(#_){position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;transition:scale .8s cubic-bezier(.22,1,.36,1)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-carte:hover .ac-visuel-photo:not(#_):not(#_):not(#_){scale:1.04}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-carte > .ac-visuel:not(#_):not(#_):not(#_)::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg, rgba(0,0,0,.30) 0%, rgba(0,0,0,.62) 100%)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-carte > .ac-visuel > :not(.ac-visuel-photo):not(#_):not(#_):not(#_){position:relative;z-index:2}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-puce:not(#_):not(#_):not(#_){background:rgba(20,20,20,.86);color:#FFFFFF;box-shadow:0 0 0 1px rgba(255,255,255,.12)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-doc:not(#_):not(#_):not(#_){background:rgba(20,20,20,.88);box-shadow:0 0 0 1px rgba(255,255,255,.12)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-fichier:not(#_):not(#_):not(#_){background:rgba(20,20,20,.88);color:#FFFFFF;box-shadow:0 0 0 1px rgba(255,255,255,.12)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-depot:not(#_):not(#_):not(#_){background:rgba(20,20,20,.88);box-shadow:0 0 0 1px rgba(255,255,255,.12)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-plaque:not(#_):not(#_):not(#_){background:rgba(20,20,20,.88);color:#FFFFFF;box-shadow:0 0 0 1px rgba(255,255,255,.12)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-cercle:not(#_):not(#_):not(#_){border-color:rgba(255,255,255,.22)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-etoiles:not(#_):not(#_):not(#_){fill:rgba(255,255,255,.5)}
