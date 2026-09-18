@@ -1,0 +1,144 @@
+/* ═══ VARIANTE « REGISTRE OPENAI » ═══ 18/09/2026, Naomie : « comme openai la DA un peu ».
+   Relevé au navigateur le même jour sur openai.com (scratchpad/openai/) : fond #FFFFFF, texte noir, rayon 6 px dominant
+   (39 éléments), boutons en pilule de 36 à 40 px de haut (libellé 14 px graisse 500, noir plein ou gris à 4 %), titres de
+   section à 22 px, gros titre à 48 px graisse 500 (interlettrage -0,03 em), métas à 14 px graisse 500, sections jusqu'à
+   120 px, pleine largeur 1440, aucun grain, quasi aucune couleur.
+   Ce qu'on prend : la matière blanche, le rayon 6, la pilule, l'échelle de titres, la petite typo de méta, l'air.
+   Ce qu'on garde de Cleo : Satoshi, le bleu #0008CF pour les repères, la structure et toutes les animations.
+   ⚠️ La pilule avait été écartée le 17/09 (« bouton pilule ça fait trop IA ») : elle revient ici parce que c'est LA
+   signature d'OpenAI. Une ligne à changer si tu préfères le rectangle. */
+
+/* 1. La matière : blanc, gris à 4 %, filets noirs légers, rayon 6 */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]):not(#_):not(#_):not(#_){
+  --c-fond:#FFFFFF;
+  --c-fond-2:#F7F7F7;
+  --c-carte:#FFFFFF;
+  --c-filet:rgba(13,13,13,.10);
+  --c-texte:#0D0D0D;
+  --c-texte-2:rgba(0,0,0,.66);
+  --c-texte-3:rgba(0,0,0,.56);
+  --r-petit:6px;
+  --r-carte:6px;
+  --r-media:6px;
+  --r-bouton:999px;
+  --l-conteneur:min(1320px, 100% - (2 * var(--l-marge)));
+  background-color:#FFFFFF !important;
+}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main:not(#_):not(#_):not(#_){background-color:#FFFFFF}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main section.sy-final-photo:not(#_):not(#_):not(#_){background:#FFFFFF !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .nav:not(#_):not(#_):not(#_){background:#FFFFFF !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-aller:not(#_):not(#_):not(#_){background:rgba(255,255,255,.94)}
+/* pas de grain chez eux */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"])::after{opacity:0 !important}
+/* ni cadre en retrait sur les photos, ni halo : leur page est nette */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(.sy-final-photo > figure, .sy-chapitre, .ac-media):not(#_):not(#_):not(#_){outline:0}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-globe-scene:not(#_):not(#_):not(#_)::before{display:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(.ac-media-photo, .ac-portrait img, .sy-chapitre > img, .sy-bento-photo > img, .sy-final-photo img):not(#_):not(#_):not(#_){filter:none}
+
+/* 2. Le rayon 6 partout où il y a une surface */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(.sy-bento > *, .sy-bento-photo, .sy-bento-creme, .sy-bento-bleu, .sy-chapitre, .sy-final-photo > figure, .ac-media, .ac-app, .ac-portrait img, .ac-etape, .ac-carte, .ac-choix, .ac-visuel, .ac-roue-bloc):not(#_):not(#_):not(#_){border-radius:6px}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-besoins .sy-carte:not(#_):not(#_):not(#_){border-radius:6px}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(.sy-chapitre, .sy-final-photo > figure, .ac-media):not(#_):not(#_):not(#_){overflow:clip}
+
+/* 3. Les boutons : pilule, 40 px de haut, libellé 14 px graisse 500, un plein et un gris */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(.sy-bouton, .sy-bouton-secondaire, .sy-bouton-blanc, .sy-bouton-chevrons):not(#_):not(#_):not(#_){border-radius:999px;min-height:44px;padding:0 22px;font-size:.875rem;font-weight:500;letter-spacing:0;text-transform:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-bouton-secondaire:not(#_):not(#_):not(#_){background:rgba(13,13,13,.05);box-shadow:none;color:var(--c-texte)}
+
+/* 4. L'échelle de titres et la petite typo de méta */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-h1:not(#_):not(#_):not(#_){font-size:clamp(2.5rem, 0.6rem + 4.6vw, 4.5rem) !important;letter-spacing:-.03em !important;line-height:1.06 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-h2:not(#_):not(#_):not(#_){font-size:clamp(1.75rem, 0.9rem + 2.2vw, 3rem) !important;letter-spacing:-.03em !important;line-height:1.12 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-chapitre-texte h2:not(#_):not(#_):not(#_){letter-spacing:-.03em !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-final-texte h2:not(#_):not(#_):not(#_){letter-spacing:-.03em !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-lead:not(#_):not(#_):not(#_){font-size:1.0625rem;line-height:1.5}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-atelier-lead:not(#_):not(#_):not(#_){font-size:.9375rem}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-tete-sur:not(#_):not(#_):not(#_){font-size:.875rem;letter-spacing:0;text-transform:none;color:var(--c-texte-2)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-tete-sur .ac-index:not(#_):not(#_):not(#_){font-size:.875rem;letter-spacing:0;color:var(--c-accent)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-hero .ac-surtitre:not(#_):not(#_):not(#_){font-size:.875rem;letter-spacing:0;text-transform:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-besoin-sur:not(#_):not(#_):not(#_){font-size:.875rem;letter-spacing:0;text-transform:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-aller-liens a:not(#_):not(#_):not(#_){font-size:.875rem;letter-spacing:0;text-transform:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-aller-liens span:not(#_):not(#_):not(#_){letter-spacing:.06em}
+
+/* ═══ V2, PLUS PRÈS D'OPENAI ═══ 18/09/2026, Naomie : « registre openai mais va encore plus loin dans la ressemblance ».
+   Deuxième relevé (scratchpad/openai/mesure2) : barre à liens 17 px graisse 400 en casse normale, pilule grise
+   rgba(0,0,0,.04) + pilule NOIRE 36 px pour l'action, cartes SANS bordure ni ombre (image arrondie 6 px, titre 18 px,
+   méta 14 px), filets à rgba(0,0,0,.12), texte discret à rgba(0,0,0,.56), liens de pied à 13 px graisse 500.
+   ⚠️ Deux écarts à la DA Cleo, assumés parce qu'ils SONT la ressemblance : les boutons passent au noir (le bleu ne reste
+   que sur les liens, les numéros d'étape et la prochaine action), et les capitales espacées disparaissent. */
+
+/* Les gris et les filets exacts */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]):not(#_):not(#_):not(#_){--c-filet:rgba(0,0,0,.12);--c-texte:#000000;--c-texte-2:rgba(0,0,0,.66);--c-texte-3:rgba(0,0,0,.56)}
+
+/* La barre du site : liens 17 px en casse normale, pilule grise, pilule noire pour l'action */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .nav a:not(#_):not(#_):not(#_){font-size:17px;font-weight:400;letter-spacing:0;text-transform:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .nav :is(.sy-bouton, .nav-bouton, [class*="bouton"]):not(#_):not(#_):not(#_){border-radius:999px;min-height:36px;padding:0 20px;font-size:14px;font-weight:500;letter-spacing:0;text-transform:none;background:#000000;color:#FFFFFF;border:0}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .nav :is(.sy-bouton, .nav-bouton, [class*="bouton"]).over{background:rgba(0,0,0,.82)}
+
+/* Les boutons de la page : noir plein, gris à 4 %, casse normale */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-bouton:not(#_):not(#_):not(#_){background:#000000;color:#FFFFFF;border-radius:999px;min-height:44px;padding:0 22px;font-size:14px;font-weight:500;letter-spacing:0;text-transform:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-bouton.over{background:rgba(0,0,0,.82)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-bouton-chevrons:not(#_):not(#_):not(#_){background:#000000;color:#FFFFFF;border-radius:999px;min-height:44px;padding:0 22px;font-size:14px;font-weight:500;letter-spacing:0;text-transform:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-bouton-secondaire:not(#_):not(#_):not(#_){background:rgba(0,0,0,.05);color:#000000;box-shadow:none;border:0;border-radius:999px;min-height:44px;padding:0 22px;font-size:14px;font-weight:500;letter-spacing:0;text-transform:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-bouton-secondaire.over{background:rgba(0,0,0,.09)}
+
+/* Les cartes : plus de bordure ni d'ombre, une surface grise très claire qui se fonce au survol */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-besoins .sy-carte:not(#_):not(#_):not(#_){background-color:#F7F7F7 !important;box-shadow:none !important;border:0 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-besoins .sy-carte.over{background-color:#F1F1F1 !important;box-shadow:none !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-carte:not(#_):not(#_):not(#_){background-color:#FFFFFF !important;box-shadow:none !important;border:1px solid rgba(0,0,0,.10) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-etape:not(#_):not(#_):not(#_){box-shadow:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-visuel:not(#_):not(#_):not(#_){background:#F7F7F7}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-roue-bloc:not(#_):not(#_):not(#_){background:#F7F7F7}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-app:not(#_):not(#_):not(#_){box-shadow:0 0 0 1px rgba(0,0,0,.08), 0 18px 40px -28px rgba(0,0,0,.4)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-choix:not(#_):not(#_):not(#_){background:#F7F7F7;box-shadow:none}
+
+/* Les repères : casse normale, gris, sans tiret bleu ni capitales */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-tete-sur:not(#_):not(#_):not(#_){font-size:14px;font-weight:500;letter-spacing:0;text-transform:none;color:rgba(0,0,0,.66)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-tete-sur:not(#_):not(#_):not(#_)::before{display:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-tete-sur .ac-index:not(#_):not(#_):not(#_){color:rgba(0,0,0,.56);font-weight:500}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-hero .ac-surtitre:not(#_):not(#_):not(#_){font-size:14px;font-weight:500;letter-spacing:0;text-transform:none !important;color:rgba(0,0,0,.66)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-hero .ac-surtitre:not(#_):not(#_):not(#_)::before{display:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-besoin-sur:not(#_):not(#_):not(#_){font-size:14px;font-weight:500;letter-spacing:0;text-transform:none !important;color:rgba(0,0,0,.56)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-logos p:not(#_):not(#_):not(#_){font-size:14px;font-weight:500;letter-spacing:0;text-transform:none;color:rgba(0,0,0,.56)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-etiquette:not(#_):not(#_):not(#_){font-size:13px !important;font-weight:500 !important;letter-spacing:0 !important;text-transform:none !important;border-radius:999px !important;padding:6px 14px !important;color:#000000 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-app-surtitre:not(#_):not(#_):not(#_){font-size:13px !important;letter-spacing:0 !important;text-transform:none !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-exigence-grille small:not(#_):not(#_):not(#_){font-size:13px;letter-spacing:0;text-transform:none;color:rgba(0,0,0,.56)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-flottante small:not(#_):not(#_):not(#_){letter-spacing:0;text-transform:none}
+
+/* La barre « Aller à » et le pied : 14 et 13 px, casse normale */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-aller-liens a:not(#_):not(#_):not(#_){font-size:14px;font-weight:500;letter-spacing:0;text-transform:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-aller-liens span:not(#_):not(#_):not(#_){font-size:14px;letter-spacing:0;text-transform:none;color:rgba(0,0,0,.56)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .pied a:not(#_):not(#_):not(#_){font-size:13px;font-weight:500;letter-spacing:0}
+
+/* Titres : leur échelle exacte (48 px pour les sections, 22 px pour les titres de bloc) */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-h2:not(#_):not(#_):not(#_){font-size:clamp(1.75rem, 0.9rem + 2.2vw, 3rem) !important;font-weight:500 !important;letter-spacing:-.03em !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-roue-texte h3:not(#_):not(#_):not(#_){font-size:1.375rem !important;letter-spacing:-.01em !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-etape b:not(#_):not(#_):not(#_){font-size:1.125rem}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-prix:not(#_):not(#_):not(#_){font-size:14px;font-weight:500;border-top:1px solid rgba(0,0,0,.12)}
+
+/* ═══ V3 : forcer ce que la feuille système impose en !important (capitales, bleu des boutons) ═══ */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .nav a:not(#_):not(#_):not(#_){text-transform:none !important;letter-spacing:0 !important;font-size:16px !important;font-weight:400 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .nav .sy-bouton:not(#_):not(#_):not(#_){background:#000000 !important;color:#FFFFFF !important;border-radius:999px !important;text-transform:none !important;letter-spacing:0 !important;font-size:14px !important;font-weight:500 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .nav .sy-bouton.over{background:rgba(0,0,0,.82) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-bouton:not(#_):not(#_):not(#_){background:#000000 !important;color:#FFFFFF !important;border-radius:999px !important;text-transform:none !important;letter-spacing:0 !important;font-size:14px !important;font-weight:500 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-bouton.over{background:rgba(0,0,0,.82) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-bouton-chevrons:not(#_):not(#_):not(#_){background:#000000 !important;color:#FFFFFF !important;border-radius:999px !important;text-transform:none !important;letter-spacing:0 !important;font-size:14px !important;font-weight:500 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-bouton-secondaire:not(#_):not(#_):not(#_){background:rgba(0,0,0,.05) !important;color:#000000 !important;border-radius:999px !important;box-shadow:none !important;text-transform:none !important;letter-spacing:0 !important;font-size:14px !important;font-weight:500 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-bouton-secondaire.over{background:rgba(0,0,0,.09) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-hero .ac-surtitre:not(#_):not(#_):not(#_){color:rgba(0,0,0,.66) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-besoin-sur:not(#_):not(#_):not(#_){color:rgba(0,0,0,.56) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-tete-sur:not(#_):not(#_):not(#_){color:rgba(0,0,0,.66) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-tete-sur .ac-index:not(#_):not(#_):not(#_){color:rgba(0,0,0,.56) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-aller-liens a:not(#_):not(#_):not(#_){text-transform:none !important;letter-spacing:0 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-lien:not(#_):not(#_):not(#_){font-weight:500}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-lien:not(#_):not(#_):not(#_){font-weight:500}
+
+/* ═══ V4 : la barre du site (classes relevées dans le HTML : nav-declencheur, lien-secondaire, btn btn-marque) ═══ */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .nav :is(a, button):not(#_):not(#_):not(#_):not(#_){text-transform:none !important;letter-spacing:0 !important;font-weight:400 !important;font-size:16px !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .nav :is(.btn, .btn-marque):not(#_):not(#_):not(#_):not(#_){background:#000000 !important;color:#FFFFFF !important;border:0 !important;border-radius:999px !important;min-height:36px;padding:0 20px !important;font-size:14px !important;font-weight:500 !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .nav :is(.btn, .btn-marque).over{background:rgba(0,0,0,.82) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .nav .mega-item:not(#_):not(#_):not(#_):not(#_){font-size:15px !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-hero .ac-surtitre:not(#_):not(#_):not(#_):not(#_){color:rgba(0,0,0,.66) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-tete-sur:not(#_):not(#_):not(#_):not(#_){color:rgba(0,0,0,.66) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-tete-sur .ac-index:not(#_):not(#_):not(#_):not(#_){color:rgba(0,0,0,.56) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-besoin-sur:not(#_):not(#_):not(#_):not(#_){color:rgba(0,0,0,.56) !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .menu-mobile .btn:not(#_):not(#_):not(#_):not(#_){background:#000000 !important;color:#FFFFFF !important;border-radius:999px !important;text-transform:none !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .menu-mobile a:not(#_):not(#_):not(#_):not(#_){text-transform:none !important;letter-spacing:0 !important}

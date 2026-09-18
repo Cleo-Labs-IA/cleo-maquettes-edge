@@ -92,7 +92,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 
 /* ── 12. Le globe se pose sur un halo, au lieu de flotter sur la crème ── */
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-globe-scene:not(#_):not(#_):not(#_){position:relative;isolation:isolate}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-globe-scene:not(#_):not(#_):not(#_)::before{content:"";position:absolute;z-index:-1;left:50%;top:48%;width:min(120%, 820px);aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:radial-gradient(circle, rgba(0,8,207,.10) 0%, rgba(0,8,207,.04) 45%, rgba(0,8,207,0) 70%)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-globe-scene:not(#_):not(#_):not(#_)::before{content:"";position:absolute;z-index:-1;left:50%;top:48%;width:min(100%, 820px);aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:radial-gradient(circle, rgba(0,8,207,.10) 0%, rgba(0,8,207,.04) 45%, rgba(0,8,207,0) 70%)}
 
 /* ── 13. Deux détails de finition : la sélection en bleu Cleo, les chiffres alignés dans la FAQ ── */
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main ::selection{background:rgba(0,8,207,.16)}
