@@ -333,3 +333,13 @@ body[data-cleo-ds="v6"]:not(#_) .nav-langue :is(a[aria-current], .actif, [class*
 /* 34. Menu mobile : les intitulés de groupe (« SERVICE », « DATA ») restaient gris sombre sur noir */
 body[data-cleo-ds="v6"]:not(#_) .menu-mobile .mm-groupe > :is(p, span, b, small):first-child:not(#__):not(#___):not(#____){color:rgba(255,255,255,.55) !important}
 body[data-cleo-ds="v6"]:not(#_) .menu-mobile .mm-titre:not(#__):not(#___):not(#____){color:rgba(255,255,255,.55) !important}
+
+/* 35. « Des photos posées pour être posées » : les fonds photo du dossier et des visuels de la 04 sont retirés. Les
+   éléments d'interface restent seuls sur une surface nette, comme leurs captures produit ; leurs traits sont remontés
+   puisqu'ils ne se détachent plus d'une photo. */
+body[data-cleo-ds="v6"]:not(#_) main .ac-carte > .ac-visuel:not(#__):not(#___):not(#____){aspect-ratio:16 / 10;background:#121214}
+body[data-cleo-ds="v6"]:not(#_) main .ac-carte > .ac-visuel:not(#__):not(#___):not(#____)::after{background:none}
+body[data-cleo-ds="v6"]:not(#_) main .ac-cercle:not(#__):not(#___):not(#____){border-color:rgba(255,255,255,.16) !important}
+body[data-cleo-ds="v6"]:not(#_) main .ac-etoiles:not(#__):not(#___):not(#____){fill:rgba(255,255,255,.35)}
+body[data-cleo-ds="v6"]:not(#_) main .ac-media:not(#__):not(#___):not(#____){background:#121214;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+body[data-cleo-ds="v6"]:not(#_) main .ac-media:not(#__):not(#___):not(#____){outline:0}
