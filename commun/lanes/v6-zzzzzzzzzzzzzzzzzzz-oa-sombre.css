@@ -150,3 +150,42 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-carte-texte .sy-actions:not(#_):not(#_):not(#_){display:flex;width:100%;margin-top:auto}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-carte .sy-bouton-secondaire:not(#_):not(#_):not(#_){flex:1;width:100%;justify-content:center}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-carte .ac-coches:not(#_):not(#_):not(#_){margin-bottom:2px}
+
+/* 13. L'appel final devient un panneau en deux volets, comme leur « Deployment: make AI part of everyday work » :
+   la vraie photo de l'équipe Cleo à gauche, le texte à droite. Jamais de titre posé sur un visage (règle de DA). */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main section.sy-final-photo > figure:not(#_):not(#_):not(#_):not(#__):not(#___){display:grid;grid-template-columns:minmax(0, 1fr) minmax(0, 1.1fr);align-items:center;gap:0;border-radius:12px;overflow:clip;background:#141414;box-shadow:0 0 0 1px rgba(255,255,255,.08)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main section.sy-final-photo > figure > img:not(#_):not(#_):not(#_):not(#__):not(#___){position:relative;inset:auto;width:100%;height:100%;min-height:380px;object-fit:cover}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-final-texte:not(#_):not(#_):not(#_):not(#__):not(#___){position:relative;inset:auto;max-width:none;padding:clamp(28px, 4vw, 56px);text-align:left;transform:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-final-texte h2:not(#_):not(#_):not(#_):not(#__):not(#___){margin-left:0;margin-right:0}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-final-texte p:not(#_):not(#_):not(#_):not(#__):not(#___){margin-left:0;margin-right:0;color:rgba(255,255,255,.66)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-final .ac-equipe:not(#_):not(#_):not(#_):not(#__):not(#___){justify-content:flex-start;color:rgba(255,255,255,.66)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-final-texte .sy-actions:not(#_):not(#_):not(#_):not(#__):not(#___){justify-content:flex-start}
+@media (max-width:860px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main section.sy-final-photo > figure:not(#_):not(#_):not(#_):not(#__):not(#___){grid-template-columns:minmax(0, 1fr)}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main section.sy-final-photo > figure > img:not(#_):not(#_):not(#_):not(#__):not(#___){min-height:240px}
+}
+
+/* 14. Leurs vignettes zooment doucement au survol de la carte */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(.ac-besoin-img, .ac-secteur img):not(#_):not(#_):not(#_){transition:scale .6s cubic-bezier(.22,1,.36,1)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-besoin:hover .ac-besoin-img:not(#_):not(#_):not(#_){scale:1.04}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-secteur:hover img:not(#_):not(#_):not(#_){scale:1.04}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-besoin:not(#_):not(#_):not(#_){overflow:clip}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-secteur:not(#_):not(#_):not(#_){overflow:clip;border-radius:12px}
+
+/* 15. Moins de vide : la scène et la rangée de catégories se resserrent */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-methode:not(#_):not(#_):not(#_){padding-bottom:clamp(32px, 4vw, 64px)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-secteurs:not(#_):not(#_):not(#_){margin-top:clamp(32px, 4vw, 48px)}
+
+/* 16. La bande industrie : deux photos côte à côte, sans texte, comme leurs bandes de respiration */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-bande-industrie:not(#_):not(#_):not(#_){padding-block:clamp(16px, 2vw, 32px)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-bande-grille:not(#_):not(#_):not(#_){display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:16px}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-bande-grille figure:not(#_):not(#_):not(#_){margin:0;border-radius:12px;overflow:clip}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-bande-grille img:not(#_):not(#_):not(#_){display:block;width:100%;height:clamp(220px, 26vw, 360px);object-fit:cover;transition:scale .8s cubic-bezier(.22,1,.36,1)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-bande-grille figure:hover img:not(#_):not(#_):not(#_){scale:1.03}
+@media (max-width:700px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-bande-grille:not(#_):not(#_):not(#_){grid-template-columns:minmax(0, 1fr)}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-bande-grille img:not(#_):not(#_):not(#_){height:200px}
+}
+/* le voile bleu de l'appel final n'a plus lieu d'être : le texte n'est plus posé sur la photo */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main section.sy-final-photo > figure:not(#_):not(#_):not(#_):not(#__):not(#___)::after{display:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main section.sy-final-photo > figure:not(#_):not(#_):not(#_):not(#__):not(#___)::before{display:none}
