@@ -480,3 +480,14 @@ body[data-cleo-ds="v6"]:not(#_) main .sc-etape :is(b, p):not(#__):not(#___):not(
 @keyframes scEtape{0%,100%{color:rgba(255,255,255,.52);background-color:rgba(255,255,255,0)}12%,88%{color:#FFFFFF;background-color:#1F1F23}}
 @keyframes scEtapeDebut{0%,88%{color:#FFFFFF;background-color:#1F1F23}100%{color:rgba(255,255,255,.52);background-color:rgba(255,255,255,0)}}
 @keyframes scEtapeFin{0%{color:rgba(255,255,255,.52);background-color:rgba(255,255,255,0)}12%,100%{color:#FFFFFF;background-color:#1F1F23}}
+
+/* ═══ 45. LES ÉTATS DU DOSSIER, EN PASTILLES LISIBLES ═══════════════════════════════════════════════════
+   22/09/2026, Naomie : « 01 la méthode, fais un truc plus visuel ». La fenêtre montrait UNE exigence
+   dépliée ; elle montre maintenant la suite du dossier, trois lignes avec leur état, qui se remplissent
+   l'une après l'autre. Sur fond sombre il faut des valeurs explicites : le color-mix ne donnait aucun
+   fond visible, et le bleu profond #0008CF tombe à 2:1 sur noir (il passe au bleu clair #8C92FF).
+   « Complète » est une pastille blanche pleine : c'est le signal qu'on doit voir de loin. */
+body[data-cleo-ds="v6"]:not(#_) main .ac-suite li:not(#__):not(#___):not(#____){background:rgba(255,255,255,.03)}
+body[data-cleo-ds="v6"]:not(#_) main .ac-suite .ac-etat-ok:not(#__):not(#___):not(#____){color:#0A0A0B !important;background:#FFFFFF !important}
+body[data-cleo-ds="v6"]:not(#_) main .ac-suite .ac-etat-attente:not(#__):not(#___):not(#____){color:#8C92FF !important;background:rgba(140,146,255,.16) !important}
+body[data-cleo-ds="v6"]:not(#_) main .ac-suite .ac-etat-faire:not(#__):not(#___):not(#____){color:rgba(255,255,255,.62) !important;background:transparent !important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.20)}
