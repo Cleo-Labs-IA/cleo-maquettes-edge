@@ -38,7 +38,7 @@ body[data-cleo-ds="v6"]:not(#_) main :is(.ac-expertise, .ac-besoins, .ac-questio
 body[data-cleo-ds="v6"]:not(#_) main .ac-questions .ac-entete:not(#_):not(#_):not(#_){text-align:center}
 
 /* 3. Les surfaces : cartes #17171A, filet blanc à 8 %, rayon 12 */
-body[data-cleo-ds="v6"]:not(#_) main :is(.ac-besoins .sy-carte, .ac-carte, .ac-etape, .ac-roue-bloc, .ac-visuel):not(#_):not(#_):not(#_){background-color:#17171A !important;box-shadow:0 0 0 1px rgba(255,255,255,.08) !important;border:0 !important;border-radius:12px}
+body[data-cleo-ds="v6"]:not(#_) main :is(.ac-besoins .sy-carte, .ac-carte, .ac-roue-bloc, .ac-visuel):not(#_):not(#_):not(#_){background-color:#17171A !important;box-shadow:0 0 0 1px rgba(255,255,255,.08) !important;border:0 !important;border-radius:12px}
 body[data-cleo-ds="v6"]:not(#_) main .ac-besoins .sy-carte:not(#_):not(#_):not(#_):hover{background-color:#1C1C1C !important}
 body[data-cleo-ds="v6"]:not(#_) main .ac-etape > span:not(#_):not(#_):not(#_){background:#FFFFFF;color:#000000}
 body[data-cleo-ds="v6"]:not(#_) main .ac-media:not(#_):not(#_):not(#_){box-shadow:0 0 0 1px rgba(255,255,255,.10)}
@@ -236,8 +236,8 @@ body[data-cleo-ds="v6"]:not(#_) main .sy-bouton-blanc svg:not(#__):not(#___):not
 /* 19. La couche typographique force #1A1A1A en !important sur les classes t-* : sur fond noir, les titres étaient gris
    sombre sur noir (mesuré au CDP sur 54-service-evaluation). Tout le texte repasse en blanc, les repères en bleu clair
    (#8C92FF, le bleu que le site utilise déjà sur ses sections sombres ; #0008CF sur noir tombe à 2:1). */
-body[data-cleo-ds="v6"]:not(#_) main :is(h1, h2, h3, h4, .t-hero, .t-titre-page, .t-display, .t-h1, .t-h2, .t-h3, .t-h4, b, strong):not(#__):not(#___):not(#____){color:#FFFFFF !important}
-body[data-cleo-ds="v6"]:not(#_) main :is(.t-body, .t-corps, .t-legende, .t-caption, p, li, dd, dt, figcaption, small, time):not(.ac-index):not(.sc-etape):not(#__):not(#___):not(#____){color:rgba(255,255,255,.72) !important}
+body[data-cleo-ds="v6"]:not(#_) main :is(h1, h2, h3, h4, .t-hero, .t-titre-page, .t-display, .t-h1, .t-h2, .t-h3, .t-h4, b, strong):not(.ac-r1):not(.ac-r2):not(.ac-r3):not(#__):not(#___):not(#____){color:#FFFFFF !important}
+body[data-cleo-ds="v6"]:not(#_) main :is(.t-body, .t-corps, .t-legende, .t-caption, p, li, dd, dt, figcaption, small, time):not(.ac-index):not(.sc-etape):not(.ac-r1):not(.ac-r2):not(.ac-r3):not(#__):not(#___):not(#____){color:rgba(255,255,255,.72) !important}
 body[data-cleo-ds="v6"]:not(#_) main :is([class*="surtitre"], .etiquette, .mu-num, .ra-rang, .dt-numero, .sc-famille, .ap-etat, .marqueur):not(.sy-etiquette):not(#__):not(#___):not(#____){color:#8C92FF !important}
 body[data-cleo-ds="v6"]:not(#_) main :is(.sy-lien, .ac-lien, .dt-lien, .sc-lien, .ra-lien, .res-lien):not(#__):not(#___):not(#____){color:#FFFFFF !important}
 body[data-cleo-ds="v6"]:not(#_) main a:not([class]):not(#__):not(#___):not(#____){color:#8C92FF}
@@ -534,3 +534,16 @@ body[data-cleo-ds="v6"]:not(#_) main .ac-app:not(#__):not(#___):not(#____){z-ind
     @keyframes acVoile{from{background:linear-gradient(180deg, rgba(10,10,11,.18) 0%, rgba(10,10,11,.32) 100%)}to{background:linear-gradient(180deg, rgba(10,10,11,.58) 0%, rgba(10,10,11,.74) 100%)}}
   }
 }
+
+/* ═══ 48. LA SCÈNE 01 ÉTAIT MORTE, MESURÉE ET RÉPARÉE ═══════════════════════════════════════════════════
+   22/09/2026, Naomie : « je vais être clair, l'animation en 01 est pas claire ». Troisième fois sur cette
+   scène. Mesuré à douze moments du défilement, au lieu de retoucher encore le texte : les TROIS étapes
+   étaient allumées de 0 % à 100 %, et les cases du dossier étaient déjà remplies dès 0 %. Rien ne se
+   construisait. Le visiteur voyait une phrase se remplir, puis une fenêtre déjà terminée monter.
+   Même cause que sur Service, et c'est la troisième occurrence : une animation CSS ne gagne jamais
+   contre un !important. La passe des surfaces (§3) figeait le fond de l'étape, la passe typographique
+   (§19) figeait le texte des cases, qui doit partir de « transparent » pour que le squelette gris se
+   retire dessus. Les trois sélecteurs les excluent désormais, et les images-clés repassent au sombre :
+   l'étape éteinte est transparente, l'étape allumée est un panneau plus clair avec un filet blanc. */
+@keyframes acEtape{0%,100%{background-color:transparent;box-shadow:0 0 0 1px transparent, 0 18px 40px -24px transparent}12%,88%{background-color:#1F1F23;box-shadow:0 0 0 1px rgba(255,255,255,.14), 0 18px 40px -24px rgba(0,0,0,.8)}}
+@keyframes acEtapeDerniere{0%{background-color:transparent;box-shadow:0 0 0 1px transparent, 0 18px 40px -24px transparent}12%,100%{background-color:#1F1F23;box-shadow:0 0 0 1px rgba(255,255,255,.14), 0 18px 40px -24px rgba(0,0,0,.8)}}
