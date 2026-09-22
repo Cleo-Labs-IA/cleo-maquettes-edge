@@ -413,3 +413,25 @@ body[data-cleo-ds="v6"]:has(.ac-aller):not(#_) main [id]:not(#__):not(#___):not(
       texte qui suit : les trois cartes ne s'alignent plus. On réserve la hauteur de deux lignes au titre,
       la carte la plus longue donne la mesure aux autres. */
 body[data-cleo-ds="v6"]:not(#_) main :is(.ac-facons-grille, .ac-besoins-grille) > * h3:not(#__):not(#___):not(#____){min-height:2.4em}
+
+/* ═══ 41. L'ÉVENTAIL D'ENTERPRISE REDEVIENT UNE RANGÉE ══════════════════════════════════════════════════
+   22/09/2026, choix de Naomie parmi les détails relevés. Les quatre cartes « Ce que nous mettons en place »
+   étaient posées en absolu, penchées de -6° à +6°, décalées de 0 à 48 px et superposées : 43 px d'écart
+   mesuré entre les débuts de texte, la première carte coupée au bord gauche, quatre hauteurs de titre.
+   Elles reprennent la grille — même taille, même ligne, même hauteur de texte. La version tablette et
+   téléphone faisait déjà ça, on ne fait que l'étendre au bureau.
+   Leur voile et leur fond étaient au bleu profond #08093B, reste de la zone bleue retirée en §39 : neutres. */
+body[data-cleo-ds="v6"]:not(#_) main .en-cartes:not(#__):not(#___):not(#____){display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--e-grille);height:auto;max-width:none}
+body[data-cleo-ds="v6"]:not(#_) main .en-carte:not(#__):not(#___):not(#____){position:relative;left:auto;top:auto;width:auto;height:380px;rotate:none;border-radius:12px;background:#17171A}
+body[data-cleo-ds="v6"]:not(#_) main .en-carte:not(#__):not(#___):not(#____)::after{background:linear-gradient(180deg, rgba(10,10,11,0) 28%, rgba(10,10,11,.66) 60%, rgba(10,10,11,.95) 100%)}
+
+/* ═══ 42. UN SEUL ARRONDI POUR LES SURFACES ═════════════════════════════════════════════════════════════
+   Chaque page mélangeait deux rayons sur des surfaces de même nature : 12 px et 6 px sur l'accueil, et
+   l'inverse ailleurs (le 6 vient de leur page d'accueil blanche, le 12 du registre Business sombre).
+   Les cartes, panneaux, médias et cadres prennent tous 12 px. Restent volontairement à part : les
+   pilules (arrondi complet) et les petites étiquettes. */
+body[data-cleo-ds="v6"]:not(#_) main :is(article, figure, .sy-carte, .ac-carte, .ac-visuel, .ac-media, .ac-app, .en-carte, .dt-carte, .dt-code, .dt-acces-carte, .dt-offre-carte, .sc-panneau, .sy-bento > *, .sy-bento-photo, .sy-chapitre, .sc-comment-image, .en-illustration, .tk-trame):not(#__):not(#___):not(#____){border-radius:12px !important}
+body[data-cleo-ds="v6"]:not(#_) main :is(.sy-etiquette, .sy-surtitre, .etiquette, [class*="pastille"], [class*="pilule"]):not(#__):not(#___):not(#____){border-radius:999px !important}
+/* Le corps de carte est ancré en bas : un texte de deux lignes à côté de textes de trois faisait descendre
+   son titre. On réserve trois lignes, les quatre titres retombent sur la même ligne. */
+body[data-cleo-ds="v6"]:not(#_) main .en-carte-corps p:not(#__):not(#___):not(#____){min-height:calc(3 * 1.45em)}
