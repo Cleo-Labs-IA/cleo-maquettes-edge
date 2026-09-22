@@ -286,26 +286,36 @@ async function tuileGrain() {
   if (!tuileGrainCache) tuileGrainCache = await sharp(Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="4" height="4" fill="#15162E"/><circle cx="2" cy="2" r="1.55" fill="#FFFFFF"/></svg>')).png().toBuffer()
   return tuileGrainCache
 }
-async function cheminImage(nom, largeurDemandee) {
+async function cheminImage(nom, largeurDemandee, auDelaDuPlafond) {
   /* 18/09/2026, Naomie : « ça bug, c'est trop lourd ». Mesuré : 7,46 Mo sur l'accueil, dont 6,6 Mo d'images servies en
      1200 à 1600 px pour des emplacements de 230 à 700 px. Une page peut désormais demander une largeur par usage,
      `img:nom@520`, et le fichier correspondant est fabriqué à part (`nom-520.webp`). Le grain reste cuit après la
-     réduction, donc il garde sa taille de point. */
-  const cle = largeurDemandee ? `${nom}@${largeurDemandee}` : nom
+     réduction, donc il garde sa taille de point.
+     22/09/2026, « pas assez classe » : mesuré, les grandes photos étaient servies en 1200 px pour un emplacement de
+     1320 px. Sur un écran Retina il en faut le double, sinon la photo est agrandie 2,2 fois et le grain devient une
+     moustiquaire visible. Le troisième argument autorise à DÉPASSER le plafond de la table, jusqu'à la taille réelle
+     du fichier source : il n'est employé que pour fabriquer la variante 2×, jamais pour l'image servie par défaut. */
+  const cle = `${nom}${largeurDemandee ? '@' + largeurDemandee : ''}${auDelaDuPlafond ? '!' : ''}`
   if (cacheImg.has(cle)) return cacheImg.get(cle)
   const entree = IMAGES[nom]
   if (!entree) throw new Error(`IMAGE INCONNUE : "${nom}" — ajoute-la dans la table IMAGES`)
   const [rel, largeurTable, format] = entree
-  const largeur = largeurDemandee ? Math.min(largeurDemandee, largeurTable) : largeurTable
   const abs = rel.startsWith('local/') ? path.join(LOCAL, rel.slice(6)) : path.join(PUB, rel)
   if (!fs.existsSync(abs)) throw new Error(`IMAGE ABSENTE : ${abs}`)
+  let plafond = largeurTable
+  if (auDelaDuPlafond && format !== 'svg') plafond = (await sharp(abs).metadata()).width || largeurTable
+  const largeur = largeurDemandee ? Math.min(largeurDemandee, plafond) : largeurTable
   const ext = format === 'svg' ? 'svg' : format === 'png' ? 'png' : 'webp'
   const suffixe = largeurDemandee ? `-${largeur}` : ''
   const dest = path.join(DOSSIER_IMAGES, `${nom}${suffixe}.${ext}`)
+  /* Un fichier 2× est affiché à la moitié de sa taille : on peut descendre sa qualité sans que ça se voie,
+     et c'est nécessaire — mesuré le 22/09/2026, l'accueil en pleine qualité passait de 2,3 à 6,6 Mo sur un
+     écran Retina, soit le poids qui avait fait dire « ça bug, c'est trop lourd ». */
+  const qDouble = auDelaDuPlafond
   if (format === 'svg') fs.copyFileSync(abs, dest)
   else if (format === 'png') await sharp(abs).resize({ width: largeur, withoutEnlargement: true }).png({ compressionLevel: 9, quality: 82 }).toFile(dest)
-  else if (GRAIN_EXCLUS.test(nom)) await sharp(abs).resize({ width: largeur, withoutEnlargement: true }).webp({ quality: 72 }).toFile(dest)
-  else await sharp(abs).resize({ width: largeur, withoutEnlargement: true }).linear(1.14, 8).composite([{ input: await tuileGrain(), tile: true, blend: 'multiply' }]).webp({ quality: 62 }).toFile(dest)
+  else if (GRAIN_EXCLUS.test(nom)) await sharp(abs).resize({ width: largeur, withoutEnlargement: true }).webp({ quality: qDouble ? 50 : 72 }).toFile(dest)
+  else await sharp(abs).resize({ width: largeur, withoutEnlargement: true }).linear(1.14, 8).composite([{ input: await tuileGrain(), tile: true, blend: 'multiply' }]).webp({ quality: qDouble ? 40 : 62 }).toFile(dest)
   const chemin = `/images/${nom}${suffixe}.${ext}`
   cacheImg.set(cle, chemin)
   return chemin
@@ -360,11 +370,24 @@ async function injecterImages(html) {
      couche de grain choisisse les photos (et laisse les logos, les avatars et les objets détourés). */
   html = html.replace(/src="img:([a-z0-9-]+)(@\d+)?"/g, (t, k) => t + ` data-img="${k}"`)
   const refs = [...new Set([...html.matchAll(/img:([a-z0-9-]+)(?:@(\d+))?/g)].map(m => m[0]))]
+  /* 22/09/2026 : pour chaque image à largeur d'usage, on fabrique aussi la variante 2×, et on la propose en
+     srcset. Un écran Retina prend le double et la photo devient nette ; les autres gardent le fichier simple,
+     donc le poids réseau ne bouge pas pour eux. Si la source est trop petite, la variante 2× vaut la 1× et
+     aucun srcset n'est écrit. */
+  const doubles = new Map()
   for (const r of refs.sort((x, y) => y.length - x.length)) {
     const [, n, l] = r.match(/img:([a-z0-9-]+)(?:@(\d+))?/)
     const uri = await cheminImage(n, l ? +l : undefined)
+    /* Seulement pour les images vraiment grandes à l'écran : c'est là que le manque de définition se voit.
+       En dessous de 600 px d'emplacement, le 2× ne se remarque pas et ne fait qu'alourdir (mesuré le
+       22/09/2026 : en le posant partout, l'accueil passait à 5,84 Mo sur un écran Retina). */
+    if (l && +l >= 600) {
+      const uri2 = await cheminImage(n, +l * 2, true)
+      if (uri2 !== uri) doubles.set(uri, uri2)
+    }
     html = html.replaceAll(r, uri)
   }
+  for (const [un, deux] of doubles) html = html.replaceAll(`src="${un}"`, `src="${un}" srcset="${un} 1x, ${deux} 2x"`)
   return html
 }
 

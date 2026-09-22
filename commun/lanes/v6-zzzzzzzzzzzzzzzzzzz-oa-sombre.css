@@ -399,3 +399,17 @@ body[data-cleo-ds="v6"]:not(#_) main :is(.sc-titre, .en-titre):not(#__):not(#___
    page qui n'en a plus nulle part ailleurs. Leurs pages Business alternent le noir et un panneau à peine
    plus clair : on fait pareil. Le bleu reste dans les repères et les liens, jamais en aplat de section. */
 body[data-cleo-ds="v6"]:not(#_) main > section.en-valeurs:not(#__):not(#___):not(#____){background:#17171A !important}
+
+/* ═══ 40. DEUX DÉTAILS QUI FONT « PAS PRO », MESURÉS LE 22/09/2026 ══════════════════════════════════════
+   Naomie : « il y a des détails qui font pas assez pro, pas assez beau, pas assez classe ».
+
+   a) Les ancres tombaient 28 px trop haut. La marge de défilement du site vaut 96 px, or sur les pages
+      qui portent la barre « Aller à » il y a DEUX barres collantes, 124 px en tout : le surtitre de
+      section (« 05 · Par où commencer ») arrivait coupé en deux sous la barre. Mesuré au navigateur,
+      pas à l'œil. On donne la bonne marge aux pages qui ont la barre, et seulement à celles-là. */
+body[data-cleo-ds="v6"]:has(.ac-aller):not(#_) main [id]:not(#__):not(#___):not(#____){scroll-margin-top:148px}
+
+/* b) Dans une rangée de cartes, un titre sur deux lignes et ses voisins sur une seule décalent tout le
+      texte qui suit : les trois cartes ne s'alignent plus. On réserve la hauteur de deux lignes au titre,
+      la carte la plus longue donne la mesure aux autres. */
+body[data-cleo-ds="v6"]:not(#_) main :is(.ac-facons-grille, .ac-besoins-grille) > * h3:not(#__):not(#___):not(#____){min-height:2.4em}
