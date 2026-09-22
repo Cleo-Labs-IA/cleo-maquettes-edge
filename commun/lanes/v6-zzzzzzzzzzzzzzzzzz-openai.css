@@ -88,7 +88,7 @@ body[data-cleo-ds="v6"]:not(#_) main .ac-etape:not(#_):not(#_):not(#_){box-shado
 body[data-cleo-ds="v6"]:not(#_) main .ac-visuel:not(#_):not(#_):not(#_){background:#F7F7F7}
 body[data-cleo-ds="v6"]:not(#_) main .ac-roue-bloc:not(#_):not(#_):not(#_){background:#F7F7F7}
 body[data-cleo-ds="v6"]:not(#_) main .ac-app:not(#_):not(#_):not(#_){box-shadow:0 0 0 1px rgba(0,0,0,.08), 0 18px 40px -28px rgba(0,0,0,.4)}
-body[data-cleo-ds="v6"]:not(#_) main .ac-choix:not(#_):not(#_):not(#_){background:#F7F7F7;box-shadow:none}
+body[data-cleo-ds="v6"]:not(#_) main .ac-choix:not(#_):not(#_):not(#_){background:transparent;box-shadow:none}
 
 /* Les repères : casse normale, gris, sans tiret bleu ni capitales */
 body[data-cleo-ds="v6"]:not(#_) main .ac-tete-sur:not(#_):not(#_):not(#_){font-size:14px;font-weight:500;letter-spacing:0;text-transform:none;color:rgba(0,0,0,.66)}

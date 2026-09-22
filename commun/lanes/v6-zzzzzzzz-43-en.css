@@ -333,7 +333,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
    (phrase géante remplie mot à mot, photo collante, cartes qui glissent une à une), roue des catégories, FAQ numérotée.
    Animations en CSS natif liées au défilement ; sans prise en charge, sous 1024 px ou avec « réduire les animations » :
    tout est posé à plat, lisible. Les cartes glissent sans jouer sur l'opacité (le vérificateur signale le pâle). */
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-choix:not(#_):not(#_):not(#_){display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));max-width:680px;margin-top:32px;border-radius:var(--r-carte);background:rgba(255,255,255,.6);box-shadow:0 0 0 1px var(--c-filet);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-choix:not(#_):not(#_):not(#_){display:flex;flex-wrap:wrap;align-items:center;gap:12px;max-width:none;margin-top:32px;padding:0;border-radius:0;background:transparent;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-choix-col:not(#_):not(#_):not(#_){display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:18px 20px}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-choix-col + .ac-choix-col:not(#_):not(#_):not(#_){border-left:1px solid var(--c-filet)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-choix-col p:not(#_):not(#_):not(#_){flex:1;margin:0;font-size:.875rem;line-height:1.45;color:var(--c-texte-2)}
@@ -506,7 +506,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-faq summary::before{content:counter(acfaq) ".";flex:none;min-width:2.2ch;margin-right:18px;font-size:.875rem;font-weight:400;font-variant-numeric:tabular-nums;color:var(--c-texte-3)}
 
 @media (max-width:620px){
-  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-choix:not(#_):not(#_):not(#_){grid-template-columns:minmax(0, 1fr)}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-choix:not(#_):not(#_):not(#_){flex-direction:column;align-items:stretch}
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-choix-col + .ac-choix-col:not(#_):not(#_):not(#_){border-left:0;border-top:1px solid var(--c-filet)}
 }
 /* Correctifs : noms longs de la roue coupés à gauche ; question de la FAQ recentrée par le numéro. */

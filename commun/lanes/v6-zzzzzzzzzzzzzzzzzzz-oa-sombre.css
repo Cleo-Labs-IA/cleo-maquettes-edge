@@ -38,7 +38,7 @@ body[data-cleo-ds="v6"]:not(#_) main :is(.ac-expertise, .ac-besoins, .ac-questio
 body[data-cleo-ds="v6"]:not(#_) main .ac-questions .ac-entete:not(#_):not(#_):not(#_){text-align:center}
 
 /* 3. Les surfaces : cartes #17171A, filet blanc à 8 %, rayon 12 */
-body[data-cleo-ds="v6"]:not(#_) main :is(.ac-besoins .sy-carte, .ac-carte, .ac-etape, .ac-choix, .ac-roue-bloc, .ac-visuel):not(#_):not(#_):not(#_){background-color:#17171A !important;box-shadow:0 0 0 1px rgba(255,255,255,.08) !important;border:0 !important;border-radius:12px}
+body[data-cleo-ds="v6"]:not(#_) main :is(.ac-besoins .sy-carte, .ac-carte, .ac-etape, .ac-roue-bloc, .ac-visuel):not(#_):not(#_):not(#_){background-color:#17171A !important;box-shadow:0 0 0 1px rgba(255,255,255,.08) !important;border:0 !important;border-radius:12px}
 body[data-cleo-ds="v6"]:not(#_) main .ac-besoins .sy-carte:not(#_):not(#_):not(#_):hover{background-color:#1C1C1C !important}
 body[data-cleo-ds="v6"]:not(#_) main .ac-etape > span:not(#_):not(#_):not(#_){background:#FFFFFF;color:#000000}
 body[data-cleo-ds="v6"]:not(#_) main .ac-media:not(#_):not(#_):not(#_){box-shadow:0 0 0 1px rgba(255,255,255,.10)}
