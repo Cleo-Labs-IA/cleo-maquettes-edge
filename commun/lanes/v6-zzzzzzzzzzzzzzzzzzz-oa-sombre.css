@@ -491,3 +491,46 @@ body[data-cleo-ds="v6"]:not(#_) main .ac-suite li:not(#__):not(#___):not(#____){
 body[data-cleo-ds="v6"]:not(#_) main .ac-suite .ac-etat-ok:not(#__):not(#___):not(#____){color:#0A0A0B !important;background:#FFFFFF !important}
 body[data-cleo-ds="v6"]:not(#_) main .ac-suite .ac-etat-attente:not(#__):not(#___):not(#____){color:#8C92FF !important;background:rgba(140,146,255,.16) !important}
 body[data-cleo-ds="v6"]:not(#_) main .ac-suite .ac-etat-faire:not(#__):not(#___):not(#____){color:rgba(255,255,255,.62) !important;background:transparent !important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.20)}
+
+/* ═══ 46. LA PHRASE NE FAIT PLUS QUE CHANGER DE COULEUR ═════════════════════════════════════════════════
+   22/09/2026, Naomie : « l'animation de "Nous rendons la conformité produit mondiale accessible à toutes
+   les entreprises", c'est pas ouf, on peut l'améliorer ». Mesuré image par image : le mot ne faisait
+   QUE changer de couleur — aucun mouvement, aucune échelle, et onze pas de 2 % sans recouvrement, donc
+   onze sauts au lieu d'une vague.
+   Le mot monte maintenant de 0,1 em en se remplissant, et les plages se recouvrent (6 % au lieu de 2),
+   si bien que trois mots sont en train de se remplir à tout instant. Pas d'opacité : la règle posée le
+   17/09 tient, le remplissage passe par la couleur, jamais par la transparence. */
+@keyframes acMot{from{color:#8A8A8F;translate:0 .1em}to{color:#FFFFFF;translate:0 0}}
+
+/* ═══ 47. LA SCÈNE 01 PART D'UNE IMAGE ══════════════════════════════════════════════════════════════════
+   22/09/2026, Naomie : « en 01 tu peux pas partir d'une image pour l'animation ». La photo de fond avait
+   été retirée du HTML alors que sa règle et son animation existaient toujours (.ac-media-photo, acPhoto).
+   Elle est remise : le laboratoire d'essais jouets, c'est-à-dire le sujet même du dossier montré (un jeu
+   de construction vendu en Europe), pas une image décorative.
+   Mesuré en la remettant : elle ne dépassait que de 40 px autour de la fenêtre, ce qui faisait deux
+   bandes étroites sur les côtés — un défaut, pas une image. Trois gestes :
+     a) la photo a de la place autour de la fenêtre ;
+     b) un voile sombre passe entre la photo et la fenêtre, pour que l'application reste lisible ;
+     c) la fenêtre ARRIVE par-dessus la photo au lieu d'être là d'emblée : on voit d'abord le produit,
+        puis le dossier qui se construit dessus. */
+body[data-cleo-ds="v6"]:not(#_) main .ac-atelier .ac-media:not(#__):not(#___):not(#____){padding:clamp(24px, 4.6vw, 68px);background:#0A0A0B}
+body[data-cleo-ds="v6"]:not(#_) main .ac-media-photo:not(#__):not(#___):not(#____){z-index:0}
+body[data-cleo-ds="v6"]:not(#_) main .ac-atelier .ac-media:not(#__):not(#___):not(#____)::after{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg, rgba(10,10,11,.58) 0%, rgba(10,10,11,.74) 100%)}
+body[data-cleo-ds="v6"]:not(#_) main .ac-app:not(#__):not(#___):not(#____){z-index:2}
+
+@media (prefers-reduced-motion: no-preference) and (min-width:1180px){
+  @supports (animation-timeline: view()){
+    /* la fenêtre monte et grandit légèrement sur la photo, juste après l'arrivée de l'atelier */
+    /* ⚠️ Le bloc média fait 876 px de haut pour 776 px visibles sous les deux barres : encadrer la
+       fenêtre par de la marge photo ne se VOIT jamais, on n'en aperçoit que deux bandes sur les côtés.
+       La fenêtre monte donc PAR-DESSUS la photo, qui occupe l'écran au début de la scène (le bloc est
+       en overflow:clip, la fenêtre descendue reste hors champ). On voit le produit, puis le dossier. */
+    body[data-cleo-ds="v6"]:not(#_) main .ac-app:not(#__):not(#___):not(#____){animation:acAppArrive linear both;animation-timeline:--ac-scene;animation-range:contain 26% contain 46%}
+    @keyframes acAppArrive{from{translate:0 64%}to{translate:0 0}}
+    /* la photo est nette au départ, puis s'efface derrière le dossier */
+    body[data-cleo-ds="v6"]:not(#_) main .ac-atelier .ac-media:not(#__):not(#___):not(#____)::after{animation:acVoile linear both;animation-timeline:--ac-scene;animation-range:contain 28% contain 50%}
+    @keyframes acVoile{from{background:linear-gradient(180deg, rgba(10,10,11,.18) 0%, rgba(10,10,11,.32) 100%)}to{background:linear-gradient(180deg, rgba(10,10,11,.58) 0%, rgba(10,10,11,.74) 100%)}}
+  }
+}

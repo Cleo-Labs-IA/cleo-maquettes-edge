@@ -234,7 +234,7 @@ const IMAGES = {
   'rond-peluche': ['local/serie/peluche.jpg', 120],
   'rond-biberon': ['local/serie/biberon.jpg', 120],
   'rond-pile': ['local/serie/pile.jpg', 120],
-  'masse-peluche':           ['local/serie/peluche.jpg', 1200],
+  'masse-peluche':           ['local/serie/peluche.jpg', 1800],
   'masse-peluche-carre':       ['local/serie/peluche.jpg', 560],
   'masse-pile':              ['local/serie/pile.jpg', 1200],
   'masse-pile-carre':          ['local/serie/pile.jpg', 560],
