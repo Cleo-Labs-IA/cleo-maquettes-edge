@@ -1,0 +1,36 @@
+/* ═══ VARIANTE « CLARTÉ OPENAI », ACCUEIL SEULEMENT ═══ 22/09/2026, Naomie : « essaye une version comme
+   eux, plus ». Elle suit la comparaison mesurée du même jour (reference_openai_pourquoi_plus_clair) :
+   leur échelle tient sur TROIS tailles qui portent 93 % du texte (16, 14, 18 px) plus le titre ; la
+   nôtre employait DIX-HUIT tailles, dont huit entre 11 et 18 px sur 159 éléments, sans taille dominante.
+   L'œil ne pouvait pas construire de hiérarchie : tout se ressemblait sans être identique.
+
+   Cette couche ne change ni la structure, ni les animations, ni les textes. Elle écrase la bande basse
+   sur trois crans et laisse les tailles d'affichage tranquilles. Elle est posée SUR l'accueil seulement,
+   et elle se retire en supprimant ce fichier.
+   Ordre de chargement : après oa-sombre (un z de plus), donc elle gagne à spécificité égale. */
+
+/* ── 1. Le corps : leur 16 px ─────────────────────────────────────────────────────────────────────── */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(p, li, dd, .reponse, blockquote, figcaption):not(#_):not(#_):not(#_):not(#__){font-size:16px !important}
+
+/* ── 2. L'interface : leur 14 px. Liens, boutons, valeurs du dossier, barre latérale, repères ──────── */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(a, button, small, dt, .ac-r1, .ac-r2, .ac-index, .ac-tete-sur, .ac-prix, .gp-nom, .ac-app-nav li, .ac-suite b, .ac-suite-source, .ac-app-meta):not(#_):not(#_):not(#_):not(#__){font-size:14px !important}
+
+/* ── 3. La méta : leur petite capitale. Surtitres, pastilles, états, intitulés de champ ────────────── */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(.sy-surtitre, .ac-surtitre, .sy-etiquette, .ac-puce, .ac-etat, .ac-fichier, .ac-app-surtitre, .ac-exigence-grille small, .ac-exigence-tete span):not(#_):not(#_):not(#_):not(#__){font-size:12px !important}
+
+/* ── 4. Les titres de carte et les questions : leur 18 px ──────────────────────────────────────────── */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(h3, summary, .ac-exigence-tete b):not(#_):not(#_):not(#_):not(#__){font-size:18px !important}
+
+/* ── 5. On rend leur taille aux éléments d'AFFICHAGE, que les règles ci-dessus viennent d'écraser ──── */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-phrase span:not(#_):not(#_):not(#_):not(#__){font-size:inherit !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-roue-liste li:not(#_):not(#_):not(#_):not(#__){font-size:36px !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(.ac-lead, .ac-atelier-lead, .sy-chapitre-lead):not(#_):not(#_):not(#_):not(#__){font-size:22px !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-chiffre-raye:not(#_):not(#_):not(#_):not(#__){font-size:71px !important}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-bento-creme span:not(#_):not(#_):not(#_):not(#__){font-size:14px !important}
+
+/* ── 6. Un span ou un em générique ne déclare PAS sa taille : il hérite de sa phrase ────────────────
+   Relevé après la première passe : il restait huit span à 13 px, un à 11, un à 15 et quatre em à 11 —
+   des tailles qui n'appartenaient à aucun cran et qui à elles seules gardaient l'échelle à seize
+   valeurs. On les fait hériter, sauf ceux qui sont de vrais objets typographiques (le mot de la phrase
+   géante, le numéro d'étape, la pastille d'état, l'étiquette, le chiffre rayé). */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(span, em):not(.ac-index):not(.mm-mot):not(.sy-chiffre-raye):not(.ac-etat):not(.sy-etiquette):not(.sy-surtitre):not(.ac-surtitre):not(#_):not(#_):not(#_):not(#__){font-size:inherit !important}
