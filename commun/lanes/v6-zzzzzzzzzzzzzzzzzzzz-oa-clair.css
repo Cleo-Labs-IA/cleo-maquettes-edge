@@ -34,3 +34,10 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
    valeurs. On les fait hériter, sauf ceux qui sont de vrais objets typographiques (le mot de la phrase
    géante, le numéro d'étape, la pastille d'état, l'étiquette, le chiffre rayé). */
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(span, em):not(.ac-index):not(.mm-mot):not(.sy-chiffre-raye):not(.ac-etat):not(.sy-etiquette):not(.sy-surtitre):not(.ac-surtitre):not(#_):not(#_):not(#_):not(#__){font-size:inherit !important}
+
+/* ── 7. La scène de la méthode coûtait 4,4 ÉCRANS, soit 31 % de la page, pour 106 mots et un visuel ──
+   Mesuré section par section le 22/09/2026 : c'est de loin le plus gros poste de la page, et c'est du
+   défilement réservé, pas du contenu. Leur site n'a rien qui coûte quatre écrans. On passe de 420vh à
+   320vh : l'animation est identique (toutes ses plages sont en pourcentage de la scène, elles suivent),
+   elle se joue simplement sur moins de défilement. Aucun élément retiré. −900 px, soit un écran. */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-scene:not(#_):not(#_):not(#_):not(#__){height:320vh}
