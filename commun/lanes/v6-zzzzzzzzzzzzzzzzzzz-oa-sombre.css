@@ -209,7 +209,7 @@ body[data-cleo-ds="v6"]:not(#_) main .ac-etoiles:not(#_):not(#_):not(#_){fill:rg
    Relevé automatique (scratchpad/fonds-blancs.mjs) : les surfaces qui codaient le blanc en dur gardaient du texte blanc
    sur blanc. Liste tirée de la mesure, pas devinée : tableaux défilants et matrices, boutons blancs, champs de
    formulaire, panneaux des pages Service et Atlas, blocs de code, filets et points du globe. */
-body[data-cleo-ds="v6"]:not(#_) main :is(.table-defilante, table.matrice, .ap-matrice, .atlas-matrice, .atlas-sh6, .atlas-carte-legende, .dt-code, .sc-panneau-demande, .sc-devis, .sc-doc, .sc-invite, .sc-relecteur, .sc-etape, .sc-flottant, .radar-fiche, .radar-source, .doc-apercu, .prix-bloc, .fiche-service, .fiche-inclus, .res-carte, .terme-carte, .ig-item, .mc-reponse, .pc-fichier, .texte-chip, .hq-puce-document, .hr-puce, .carte, .cl-demande, .data-chiffres > div, .scene):not(#__):not(#___):not(#____){background-color:#17171A !important;border-color:rgba(255,255,255,.14) !important}
+body[data-cleo-ds="v6"]:not(#_) main :is(.table-defilante, table.matrice, .ap-matrice, .atlas-matrice, .atlas-sh6, .atlas-carte-legende, .dt-code, .sc-panneau-demande, .sc-devis, .sc-doc, .sc-invite, .sc-relecteur, .sc-flottant, .radar-fiche, .radar-source, .doc-apercu, .prix-bloc, .fiche-service, .fiche-inclus, .res-carte, .terme-carte, .ig-item, .mc-reponse, .pc-fichier, .texte-chip, .hq-puce-document, .hr-puce, .carte, .cl-demande, .data-chiffres > div, .scene):not(#__):not(#___):not(#____){background-color:#17171A !important;border-color:rgba(255,255,255,.14) !important}
 body[data-cleo-ds="v6"]:not(#_) main :is(table, th, td):not(#__):not(#___):not(#____){border-color:rgba(255,255,255,.14) !important;color:#FFFFFF}
 body[data-cleo-ds="v6"]:not(#_) main :is(thead, tr):not(#__):not(#___):not(#____){background-color:transparent !important}
 body[data-cleo-ds="v6"]:not(#_) main tbody tr:nth-child(even):not(#__):not(#___):not(#____){background-color:rgba(255,255,255,.03) !important}
@@ -237,7 +237,7 @@ body[data-cleo-ds="v6"]:not(#_) main .sy-bouton-blanc svg:not(#__):not(#___):not
    sombre sur noir (mesuré au CDP sur 54-service-evaluation). Tout le texte repasse en blanc, les repères en bleu clair
    (#8C92FF, le bleu que le site utilise déjà sur ses sections sombres ; #0008CF sur noir tombe à 2:1). */
 body[data-cleo-ds="v6"]:not(#_) main :is(h1, h2, h3, h4, .t-hero, .t-titre-page, .t-display, .t-h1, .t-h2, .t-h3, .t-h4, b, strong):not(#__):not(#___):not(#____){color:#FFFFFF !important}
-body[data-cleo-ds="v6"]:not(#_) main :is(.t-body, .t-corps, .t-legende, .t-caption, p, li, dd, dt, figcaption, small, time):not(.ac-index):not(#__):not(#___):not(#____){color:rgba(255,255,255,.72) !important}
+body[data-cleo-ds="v6"]:not(#_) main :is(.t-body, .t-corps, .t-legende, .t-caption, p, li, dd, dt, figcaption, small, time):not(.ac-index):not(.sc-etape):not(#__):not(#___):not(#____){color:rgba(255,255,255,.72) !important}
 body[data-cleo-ds="v6"]:not(#_) main :is([class*="surtitre"], .etiquette, .mu-num, .ra-rang, .dt-numero, .sc-famille, .ap-etat, .marqueur):not(.sy-etiquette):not(#__):not(#___):not(#____){color:#8C92FF !important}
 body[data-cleo-ds="v6"]:not(#_) main :is(.sy-lien, .ac-lien, .dt-lien, .sc-lien, .ra-lien, .res-lien):not(#__):not(#___):not(#____){color:#FFFFFF !important}
 body[data-cleo-ds="v6"]:not(#_) main a:not([class]):not(#__):not(#___):not(#____){color:#8C92FF}
@@ -455,3 +455,28 @@ body[data-cleo-ds="v6"]:not(#_) main :is(.sy-etiquette, .sy-surtitre, .etiquette
 /* Le corps de carte est ancré en bas : un texte de deux lignes à côté de textes de trois faisait descendre
    son titre. On réserve trois lignes, les quatre titres retombent sur la même ligne. */
 body[data-cleo-ds="v6"]:not(#_) main .en-carte-corps p:not(#__):not(#___):not(#____){min-height:calc(3 * 1.45em)}
+
+/* ═══ 43. LA PHRASE QUI SE REMPLIT : GRIS CLAIR, PUIS BLANC ═════════════════════════════════════════════
+   22/09/2026, Naomie : « celle qui affiche "Nous rendons la conformité" : mettre gris clair puis blanc,
+   parce que là c'est pas très clair avant ». Mesuré : les mots pas encore remplis étaient en
+   rgba(20,20,20,.14) — du noir à 14 %, couleur pensée pour le registre CLAIR. Sur fond noir, ils étaient
+   invisibles : la phrase apparaissait par morceaux au lieu de se remplir.
+   Le mot attend maintenant en gris clair lisible, puis passe au blanc. On lit la phrase entière dès
+   qu'elle entre, et on voit quand même la lecture avancer. */
+@keyframes acMot{from{color:#8A8A8F}to{color:#FFFFFF}}
+
+/* ═══ 44. LES QUATRE ÉTAPES DE SERVICE S'ALLUMENT À NOUVEAU ═════════════════════════════════════════════
+   22/09/2026, en révisant les animations à la demande de Naomie. Mesuré : la couleur des quatre étapes
+   de « Comment ça marche » ne bougeait à AUCUN moment de la scène — l'animation était morte, deux fois.
+     1. ses couleurs étaient celles du registre clair (#1A1A1A actif, noir à 42 % en attente) : invisible
+        sur fond noir ;
+     2. et de toute façon mes propres règles la battaient — une animation CSS ne gagne jamais contre un
+        !important. La passe des surfaces (§18) figeait le fond de l'étape en #17171A, la passe
+        typographique (§19) figeait le titre en blanc et le texte à 72 %.
+   .sc-etape sort donc de la liste des surfaces (son fond est animé, ce n'est pas une surface fixe), son
+   titre et son texte suivent la couleur animée du parent, et les trois images-clés repassent au sombre :
+   l'étape attend en blanc à 38 %, s'allume en blanc plein sur un panneau à peine plus clair que le fond. */
+body[data-cleo-ds="v6"]:not(#_) main .sc-etape :is(b, p):not(#__):not(#___):not(#____){color:inherit !important}
+@keyframes scEtape{0%,100%{color:rgba(255,255,255,.52);background-color:rgba(255,255,255,0)}12%,88%{color:#FFFFFF;background-color:#1F1F23}}
+@keyframes scEtapeDebut{0%,88%{color:#FFFFFF;background-color:#1F1F23}100%{color:rgba(255,255,255,.52);background-color:rgba(255,255,255,0)}}
+@keyframes scEtapeFin{0%{color:rgba(255,255,255,.52);background-color:rgba(255,255,255,0)}12%,100%{color:#FFFFFF;background-color:#1F1F23}}
