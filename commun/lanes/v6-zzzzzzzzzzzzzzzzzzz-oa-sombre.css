@@ -421,8 +421,28 @@ body[data-cleo-ds="v6"]:not(#_) main :is(.ac-facons-grille, .ac-besoins-grille) 
    Elles reprennent la grille — même taille, même ligne, même hauteur de texte. La version tablette et
    téléphone faisait déjà ça, on ne fait que l'étendre au bureau.
    Leur voile et leur fond étaient au bleu profond #08093B, reste de la zone bleue retirée en §39 : neutres. */
-body[data-cleo-ds="v6"]:not(#_) main .en-cartes:not(#__):not(#___):not(#____){display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--e-grille);height:auto;max-width:none}
-body[data-cleo-ds="v6"]:not(#_) main .en-carte:not(#__):not(#___):not(#____){position:relative;left:auto;top:auto;width:auto;height:380px;rotate:none;border-radius:12px;background:#17171A}
+/* ⚠️ La rangée de quatre n'existe qu'au BUREAU. Posée sans point de rupture, elle écrasait la version
+   mobile de la feuille de page (4 identifiants contre 1 : ma règle gagnait même dans son @media), et la
+   carte restait haute de 380 px alors que son texte en demandait 432 au téléphone : le corps, ancré en
+   bas, débordait par le HAUT et se faisait couper par l'overflow. Le titre disparaissait. Mesuré le
+   22/09/2026 après « le texte s'affiche mais c'est bizarre, on voit rien ». */
+/* Quatre de front SEULEMENT au-dessus de 1180 px. À 1024 (l'iPad en paysage) chaque carte tombait à
+   218 px de large : le titre passait sur deux lignes, le texte remplissait la carte et le voile sombre
+   mangeait la photo — « on voit rien ». Entre 981 et 1180, deux de front, hauteur libre. */
+@media (min-width:1181px){
+  body[data-cleo-ds="v6"]:not(#_) main .en-cartes:not(#__):not(#___):not(#____){display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--e-grille);height:auto;max-width:none}
+  body[data-cleo-ds="v6"]:not(#_) main .en-carte:not(#__):not(#___):not(#____){position:relative;left:auto;top:auto;width:auto;height:380px;rotate:none;background:#17171A}
+}
+@media (min-width:981px) and (max-width:1180px){
+  body[data-cleo-ds="v6"]:not(#_) main .en-cartes:not(#__):not(#___):not(#____){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--e-grille);height:auto;max-width:none}
+  body[data-cleo-ds="v6"]:not(#_) main .en-carte:not(#__):not(#___):not(#____){position:relative;left:auto;top:auto;width:auto;height:auto;min-height:340px;rotate:none;background:#17171A}
+  body[data-cleo-ds="v6"]:not(#_) main .en-carte-corps p:not(#__):not(#___):not(#____){min-height:0}
+}
+/* En dessous, la hauteur suit le texte : une carte ne coupe jamais son propre titre. */
+@media (max-width:980px){
+  body[data-cleo-ds="v6"]:not(#_) main .en-carte:not(#__):not(#___):not(#____){height:auto !important;min-height:340px}
+  body[data-cleo-ds="v6"]:not(#_) main .en-carte-corps p:not(#__):not(#___):not(#____){min-height:0}
+}
 body[data-cleo-ds="v6"]:not(#_) main .en-carte:not(#__):not(#___):not(#____)::after{background:linear-gradient(180deg, rgba(10,10,11,0) 28%, rgba(10,10,11,.66) 60%, rgba(10,10,11,.95) 100%)}
 
 /* ═══ 42. UN SEUL ARRONDI POUR LES SURFACES ═════════════════════════════════════════════════════════════
