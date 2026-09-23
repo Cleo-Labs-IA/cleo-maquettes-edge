@@ -111,3 +111,20 @@ html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-re
   html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-rencontre-grille{grid-template-columns:minmax(0, 1fr)}
   html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-rencontre-grille li:first-child{grid-column:auto}
 }
+
+/* PHRASE DE MISSION — 23/09/2026, Naomie : « tu as retiré l'animation avec les lettres qui s'affichent petit à petit ».
+   La phrase a quitté la scène 01 (qui s'ouvre sur la méthode), elle garde son mouvement à sa nouvelle place :
+   chaque mot passe du gris au blanc, l'un après l'autre, pendant que la phrase entre dans l'écran. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-phrase-fin span{color:inherit}
+@media (prefers-reduced-motion:no-preference){
+  @supports (animation-timeline:view()){
+    /* la ligne de temps est celle de la SECTION (640 px de course), pas celle du mot (60 px) : mesuré,
+       avec view() sur chaque mot les onze mots passaient au blanc en un seul cran de molette. */
+    html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-manifeste{view-timeline-name:--acManif}
+    html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-phrase-fin span{
+      animation:acMotFin linear both;animation-timeline:--acManif;
+      animation-range:cover calc(10% + var(--i) * 3%) cover calc(22% + var(--i) * 3%);
+    }
+    @keyframes acMotFin{from{color:rgba(255,255,255,.18);translate:0 .08em}to{color:#FFFFFF;translate:0 0}}
+  }
+}
