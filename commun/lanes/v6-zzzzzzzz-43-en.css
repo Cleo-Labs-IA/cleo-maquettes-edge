@@ -350,6 +350,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-ancre:not(#_):not(#_):not(#_){position:absolute;top:0;left:0;width:1px;height:1px;pointer-events:none}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-phrase:not(#_):not(#_):not(#_){max-width:18ch;margin:0 0 clamp(48px, 6vw, 88px) !important;font-size:clamp(2.5rem, 1rem + 4.2vw, 5rem) !important;font-weight:500 !important;line-height:1 !important;letter-spacing:-.04em !important;color:var(--c-texte) !important;text-wrap:balance}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-phrase span:not(#_):not(#_):not(#_){color:inherit}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-manifeste .ac-phrase-fin:not(#_):not(#_):not(#_){max-width:20ch;margin:0 auto !important;text-align:center;font-size:3.5rem !important;font-weight:500 !important;line-height:1.05 !important;letter-spacing:-.03em !important;color:var(--c-texte) !important;text-wrap:balance}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier:not(#_):not(#_):not(#_){display:grid;grid-template-columns:minmax(0, 5fr) minmax(0, 7fr);gap:clamp(32px, 4vw, 64px);align-items:center}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tete-sur:not(#_):not(#_):not(#_){display:flex;align-items:center;gap:10px;margin:0 0 18px;font-size:var(--t-surtitre);font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--c-accent)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tete-sur .ac-index:not(#_):not(#_):not(#_){letter-spacing:.06em}
@@ -391,9 +392,9 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 
 @media (min-width:1180px) and (prefers-reduced-motion:no-preference){
   @supports (animation-timeline: view()){
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-scene:not(#_):not(#_):not(#_){height:420vh;view-timeline-name:--ac-scene}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-scene:not(#_):not(#_):not(#_){height:220vh;view-timeline-name:--ac-scene}
     /* « Voir un exemple » arrive sur le dossier rempli : 300vh sur les 320vh de course de la scène */
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-ancre:not(#_):not(#_):not(#_){top:calc(300vh + 130px);scroll-margin-top:130px}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-ancre:not(#_):not(#_):not(#_){top:calc(114vh + 130px);scroll-margin-top:130px}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-scene-collant:not(#_):not(#_):not(#_){position:sticky;top:122px;height:calc(100vh - 122px);overflow:clip}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-phrase:not(#_):not(#_):not(#_){position:absolute;left:0;right:0;top:44%;z-index:1;display:flex;flex-wrap:wrap;justify-content:center;column-gap:.24em;max-width:1320px;margin:0 auto !important;padding:0 24px;text-align:center;font-size:clamp(3rem, 0.4rem + 5vw, 6.25rem) !important;line-height:.98 !important;animation:acPhraseSort linear both;animation-timeline:--ac-scene;animation-range:contain 24% contain 36%}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-phrase span:not(#_):not(#_):not(#_){animation:acMot linear both;animation-timeline:--ac-scene}
@@ -409,15 +410,15 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-phrase span:nth-child(10):not(#_):not(#_):not(#_){animation-range:contain 18% contain 24%}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-phrase span:nth-child(11):not(#_):not(#_):not(#_){animation-range:contain 20% contain 26%}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-phrase span:nth-child(12):not(#_):not(#_):not(#_){animation-range:contain 22% contain 24%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier:not(#_):not(#_):not(#_){position:absolute;inset:0;padding-block:clamp(12px, 3vh, 32px);animation:acAtelier linear both;animation-timeline:--ac-scene;animation-range:contain 0% contain 36%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier:not(#_):not(#_):not(#_){position:absolute;inset:0;padding-block:clamp(12px, 3vh, 32px)}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-media-photo:not(#_):not(#_):not(#_){animation:acPhoto linear both;animation-timeline:--ac-scene;animation-range:contain 0% contain 100%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etapes:not(#_):not(#_):not(#_)::after{animation:acRail linear both;animation-timeline:--ac-scene;animation-range:contain 38% contain 90%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-app-avance i:not(#_):not(#_):not(#_){animation:acAvance linear both;animation-timeline:--ac-scene;animation-range:contain 38% contain 90%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etapes:not(#_):not(#_):not(#_)::after{animation:acRail linear both;animation-timeline:--ac-scene;animation-range:contain 6% contain 92%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-app-avance i:not(#_):not(#_):not(#_){animation:acAvance linear both;animation-timeline:--ac-scene;animation-range:contain 6% contain 92%}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etape:not(#_):not(#_):not(#_){animation:acEtape linear both;animation-timeline:--ac-scene;animation-range:contain var(--de) contain var(--a)}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etape > span:not(#_):not(#_):not(#_){animation:acNumero linear both;animation-timeline:--ac-scene;animation-range:contain var(--de) contain var(--a)}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etape-1:not(#_):not(#_):not(#_){--de:36%;--a:58%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etape-2:not(#_):not(#_):not(#_){--de:56%;--a:76%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etape-3:not(#_):not(#_):not(#_){--de:74%;--a:100%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etape-1:not(#_):not(#_):not(#_){--de:6%;--a:36%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etape-2:not(#_):not(#_):not(#_){--de:34%;--a:66%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etape-3:not(#_):not(#_):not(#_){--de:64%;--a:100%}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etape-3:not(#_):not(#_):not(#_){animation-name:acEtapeDerniere}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etape-3 > span:not(#_):not(#_):not(#_){animation-name:acNumeroDernier}
     /* les cases : ligne grise qui se retire, texte qui prend sa couleur */
@@ -427,21 +428,21 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier .ac-r1:not(#_):not(#_):not(#_)::after{content:"";position:absolute;inset:0;border-radius:3px;background:repeating-linear-gradient(180deg, transparent 0 .32em, var(--c-fond-2) .32em 1.12em, transparent 1.12em 1.45em);transform-origin:0 50%;pointer-events:none;animation:acSquelette linear both;animation-timeline:--ac-scene;animation-range:contain var(--de) contain var(--a)}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier .ac-r2:not(#_):not(#_):not(#_)::after{content:"";position:absolute;inset:0;border-radius:3px;background:repeating-linear-gradient(180deg, transparent 0 .32em, var(--c-fond-2) .32em 1.12em, transparent 1.12em 1.45em);transform-origin:0 50%;pointer-events:none;animation:acSquelette linear both;animation-timeline:--ac-scene;animation-range:contain var(--de) contain var(--a)}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier .ac-r3:not(#_):not(#_):not(#_)::after{content:"";position:absolute;inset:0;border-radius:3px;background:repeating-linear-gradient(180deg, transparent 0 .32em, var(--c-fond-2) .32em 1.12em, transparent 1.12em 1.45em);transform-origin:0 50%;pointer-events:none;animation:acSquelette linear both;animation-timeline:--ac-scene;animation-range:contain var(--de) contain var(--a)}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-app-surtitre.ac-r1:not(#_):not(#_):not(#_){--de:39%;--a:43%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-app-meta.ac-r1:not(#_):not(#_):not(#_){--de:41%;--a:45%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-tete b.ac-r1:not(#_):not(#_):not(#_){--de:43%;--a:47%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-tete span.ac-r1:not(#_):not(#_):not(#_){--de:45%;--a:49%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-r2-1:not(#_):not(#_):not(#_){--de:59%;--a:63%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-r2-2:not(#_):not(#_):not(#_){--de:62%;--a:66%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-r2-3:not(#_):not(#_):not(#_){--de:65%;--a:69%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-r3-1:not(#_):not(#_):not(#_){--de:77%;--a:82%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-r3-2:not(#_):not(#_):not(#_){--de:84%;--a:88%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-r3-3:not(#_):not(#_):not(#_){--de:88%;--a:92%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-r3-4:not(#_):not(#_):not(#_){--de:92%;--a:96%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier .ac-exigence-grille .ac-action:not(#_):not(#_):not(#_){animation:acBarre linear both;animation-timeline:--ac-scene;animation-range:contain 77% contain 82%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tampon:not(#_):not(#_):not(#_){animation:acTamponFond linear both;animation-timeline:--ac-scene;animation-range:contain 83% contain 88%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tampon-attente:not(#_):not(#_):not(#_){display:inline-flex !important;color:var(--c-texte-3);animation:acTamponSort linear both;animation-timeline:--ac-scene;animation-range:contain 83% contain 86%}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tampon-relu:not(#_):not(#_):not(#_){animation:acTexte linear both;animation-timeline:--ac-scene;animation-range:contain 85% contain 88%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-app-surtitre.ac-r1:not(#_):not(#_):not(#_){--de:9%;--a:36%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-app-meta.ac-r1:not(#_):not(#_):not(#_){--de:11%;--a:36%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-tete b.ac-r1:not(#_):not(#_):not(#_){--de:13%;--a:36%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-tete span.ac-r1:not(#_):not(#_):not(#_){--de:16%;--a:36%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-r2-1:not(#_):not(#_):not(#_){--de:37%;--a:66%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-r2-2:not(#_):not(#_):not(#_){--de:40%;--a:66%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-r2-3:not(#_):not(#_):not(#_){--de:43%;--a:66%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-r3-1:not(#_):not(#_):not(#_){--de:67%;--a:100%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-r3-2:not(#_):not(#_):not(#_){--de:74%;--a:100%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-r3-3:not(#_):not(#_):not(#_){--de:78%;--a:100%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-r3-4:not(#_):not(#_):not(#_){--de:82%;--a:100%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier .ac-exigence-grille .ac-action:not(#_):not(#_):not(#_){animation:acBarre linear both;animation-timeline:--ac-scene;animation-range:contain 67% contain 72%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tampon:not(#_):not(#_):not(#_){animation:acTamponFond linear both;animation-timeline:--ac-scene;animation-range:contain 84% contain 90%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tampon-attente:not(#_):not(#_):not(#_){display:inline-flex !important;color:var(--c-texte-3);animation:acTamponSort linear both;animation-timeline:--ac-scene;animation-range:contain 84% contain 87%}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tampon-relu:not(#_):not(#_):not(#_){animation:acTexteSimple linear both;animation-timeline:--ac-scene;animation-range:contain 86% contain 90%}
     @keyframes acMot{from{color:rgba(20,20,20,.14)}to{color:var(--c-texte)}}
     @keyframes acPhraseSort{from{translate:0 -50%}to{translate:0 calc(-50% - 78vh)}}
     @keyframes acAtelier{0%{translate:0 86%}66%{translate:0 72%}100%{translate:0 0}}
@@ -452,8 +453,9 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
     @keyframes acEtapeDerniere{0%{background-color:transparent;box-shadow:0 0 0 1px transparent, 0 18px 40px -24px transparent}12%,100%{background-color:var(--c-carte);box-shadow:0 0 0 1px var(--c-filet), 0 18px 40px -24px rgba(8,9,59,.3)}}
     @keyframes acNumero{0%,100%{background-color:var(--c-carte);color:var(--c-texte-2);box-shadow:inset 0 0 0 1px var(--c-filet)}12%,88%{background-color:var(--c-accent);color:#FFFFFF;box-shadow:inset 0 0 0 1px var(--c-accent)}}
     @keyframes acNumeroDernier{0%{background-color:var(--c-carte);color:var(--c-texte-2);box-shadow:inset 0 0 0 1px var(--c-filet)}12%,100%{background-color:var(--c-accent);color:#FFFFFF;box-shadow:inset 0 0 0 1px var(--c-accent)}}
-    @keyframes acTexte{0%,35%{color:transparent}}
-    @keyframes acSquelette{0%,35%{scale:1 1}100%{scale:0 1}}
+    @keyframes acTexte{0%{color:transparent}12%,86%{color:var(--c-accent)}}
+    @keyframes acTexteSimple{0%,35%{color:transparent}}
+    @keyframes acSquelette{0%{scale:1 1}12%,100%{scale:0 1}}
     @keyframes acBarre{from{box-shadow:inset 0 0 0 var(--c-accent)}}
     @keyframes acTamponFond{from{background-color:var(--c-fond-2)}}
     @keyframes acTamponSort{to{color:transparent}}

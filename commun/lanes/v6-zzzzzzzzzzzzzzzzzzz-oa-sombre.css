@@ -527,10 +527,10 @@ body[data-cleo-ds="v6"]:not(#_) main .ac-app:not(#__):not(#___):not(#____){z-ind
        fenêtre par de la marge photo ne se VOIT jamais, on n'en aperçoit que deux bandes sur les côtés.
        La fenêtre monte donc PAR-DESSUS la photo, qui occupe l'écran au début de la scène (le bloc est
        en overflow:clip, la fenêtre descendue reste hors champ). On voit le produit, puis le dossier. */
-    body[data-cleo-ds="v6"]:not(#_) main .ac-app:not(#__):not(#___):not(#____){animation:acAppArrive linear both;animation-timeline:--ac-scene;animation-range:contain 26% contain 46%}
+    body[data-cleo-ds="v6"]:not(#_) main .ac-app:not(#__):not(#___):not(#____){animation:acAppArrive linear both;animation-timeline:--ac-scene;animation-range:contain 0% contain 8%}
     @keyframes acAppArrive{from{translate:0 64%}to{translate:0 0}}
     /* la photo est nette au départ, puis s'efface derrière le dossier */
-    body[data-cleo-ds="v6"]:not(#_) main .ac-atelier .ac-media:not(#__):not(#___):not(#____)::after{animation:acVoile linear both;animation-timeline:--ac-scene;animation-range:contain 28% contain 50%}
+    body[data-cleo-ds="v6"]:not(#_) main .ac-atelier .ac-media:not(#__):not(#___):not(#____)::after{animation:acVoile linear both;animation-timeline:--ac-scene;animation-range:contain 0% contain 8%}
     @keyframes acVoile{from{background:linear-gradient(180deg, rgba(10,10,11,.18) 0%, rgba(10,10,11,.32) 100%)}to{background:linear-gradient(180deg, rgba(10,10,11,.58) 0%, rgba(10,10,11,.74) 100%)}}
   }
 }

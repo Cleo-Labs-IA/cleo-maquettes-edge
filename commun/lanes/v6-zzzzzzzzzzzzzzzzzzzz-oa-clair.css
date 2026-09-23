@@ -48,5 +48,5 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
    320vh : l'animation est identique (toutes ses plages sont en pourcentage de la scène, elles suivent),
    elle se joue simplement sur moins de défilement. Aucun élément retiré. −900 px, soit un écran. */
 @media (min-width:1180px){
-  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-scene:not(#_):not(#_):not(#_):not(#__){height:320vh}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-scene:not(#_):not(#_):not(#_):not(#__){height:220vh}
 }

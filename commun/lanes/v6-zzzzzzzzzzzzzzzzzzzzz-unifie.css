@@ -55,3 +55,10 @@ html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main :is(.s
   html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main > section:has(> .conteneur > .sy-chapitre:first-child, > div > .sy-chapitre:first-child){padding-top:42px !important}
   html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] :is(main, .pied, footer) :is(.btn, .sy-bouton, .sy-bouton-blanc, .sy-bouton-secondaire, .mu-bouton, .sc-bouton, .tk-bouton, .fx-bouton){white-space:normal; height:auto; padding:12px 20px !important; line-height:1.2 !important}
 }
+
+/* SCÈNE 01, ÉTAT FIGÉ (sous 1180 px ou avec « réduire les animations ») — mesuré le 23/09/2026 :
+   la pastille de chaque étape était blanche avec son chiffre blanc à 72 %, donc sans chiffre.
+   Sur pastille blanche, le chiffre est noir. L'animation de bureau (pastille sombre, chiffre blanc) ne change pas. */
+@media (max-width:1179px), (prefers-reduced-motion:reduce){
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-etape > span{color:#000000 !important}
+}
