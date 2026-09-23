@@ -1,0 +1,77 @@
+<!--NAV-->
+<!-- Article porté depuis www.cleolabs.co/en/blog/explainable-ai-compliance-decisions le 23/09/2026 par blog/porter.mjs puis blog/fragments.mjs.
+     Titre, chapô, corps, FAQ et sources sont repris tels quels (blog-posts.json + HTML rendu). Ne pas éditer à la main : régénérer. -->
+<section class="sur-sombre section-serree bl-tete">
+  <div class="conteneur">
+    <div class="article-tete">
+      <p class="sy-surtitre">AI</p>
+      <h1 class="t-titre-page" style="margin:20px 0 20px">Building Explainable AI for Compliance: Why Transparency Is Non-Negotiable</h1>
+      <p class="t-body" style="margin:0 0 28px">Regulators demand that AI-driven compliance decisions be auditable and explainable. Black-box models create risk even when they perform well. Here's how to build AI that regulators trust.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="https://www.linkedin.com/in/naomie-halioua/" rel="author noopener" target="_blank" style="display:flex;align-items:center;gap:12px"><img src="img:naomie" alt="Naomie Halioua" style="width:44px;height:44px;border-radius:50%;object-fit:cover"><span style="display:block"><span class="t-h3" style="display:block">Naomie Halioua</span><span class="t-caption" style="display:block">CDO and co-founder</span></span></a>
+        <span class="t-caption" style="padding-left:14px;border-left:1px solid var(--c-filet-sombre)"><time datetime="2026-02-13">13 February 2026</time> · 6 min read</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-bande-photo">
+  <figure>
+    <img src="img:masse-pile" alt="">
+    <div class="sy-bande-texte">
+      <p class="sy-etiquette">AI</p>
+    </div>
+  </figure>
+</section>
+
+<section class="section bl-corps" style="padding-top:56px">
+  <div class="conteneur">
+    <div class="corps-sommaire">
+      <nav class="sommaire">
+        <div class="titre">On this page</div>
+        <a href="#s1">The explainability imperative</a>
+        <a href="#s2">What explainability means in practice</a>
+        <a href="#s3">How Cleo approaches explainability</a>
+        <a href="#s4">Sources &amp;amp; references</a>
+        <a href="#questions">Frequently asked questions</a>
+      </nav>
+      <div class="article bl-article" style="margin:0">
+<h2 id="s1">The explainability imperative</h2><p>The EU AI Act mandates that high-risk AI systems provide transparency about their decision-making process. GDPR Article 22 gives individuals the right to meaningful information about the logic of automated decisions. Financial regulators require model risk management documentation. The message is consistent across jurisdictions: AI decisions must be explainable, auditable, and reproducible.</p>
+<h2 id="s2">What explainability means in practice</h2><p>Building explainable AI for compliance is not about adding a "why" button to a black box. It requires designing for transparency from the architecture level:</p><div><div class="bl-encart"><h3>Step-by-step reasoning</h3><p>Every determination produces a trace showing what evidence was gathered, what factors were weighed, and how the conclusion was reached.</p></div><div class="bl-encart"><h3>Source traceability</h3><p>Every conclusion references specific regulatory texts, articles, and enforcement precedents. No unsourced claims.</p></div><div class="bl-encart"><h3>Confidence scoring</h3><p>The system communicates its certainty level, flagging areas where human expertise is needed for edge cases or ambiguous requirements.</p></div><div class="bl-encart"><h3>Audit trail preservation</h3><p>Complete decision history retained with tamper-proof timestamps, reconstructable months or years later for regulatory examinations.</p></div></div>
+<h2 id="s3">How Cleo approaches explainability</h2><p>At Cleo, every AI determination includes three layers of explainability. First, the source layer: which regulatory text, article, or enforcement decision led to this finding. Second, the reasoning layer: the logic chain connecting the source to the conclusion, including how the company's specific context was factored in. Third, the confidence layer: a calibrated score reflecting the AI's certainty, with automatic escalation to human review for low-confidence determinations.</p><p>This approach means compliance officers can validate AI outputs in minutes, not hours. They review the reasoning, confirm the sources, and approve or override. The AI does the heavy lifting; humans maintain authority over every decision that matters.</p>
+<h2 id="s4">Sources &amp; references</h2><ol><li><cite><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj">Regulation (EU) 2016/679: General Data Protection Regulation (GDPR)</a></cite></li><li><cite><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">Regulation (EU) 2024/1689: Artificial Intelligence Act</a></cite></li></ol>
+<h2 id="questions">Frequently asked questions</h2>
+<div class="faq" data-schema="faq" style="margin-bottom:36px">
+<details open><summary>Why is explainability important for AI in compliance?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Regulators including the EU (AI Act, GDPR Article 22), US (SR 11-7, OCC guidance), and UK (FCA) require that AI-driven compliance decisions be explainable and auditable. A black-box AI that flags or clears a transaction without documented reasoning creates regulatory risk, even if it performs accurately. Explainability enables human oversight, regulatory examination, and defense of compliance decisions.</div></details>
+<details><summary>How does Cleo ensure AI explainability?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Every Cleo determination includes three explainability layers: (1) Source layer, which regulatory text, article, or enforcement decision led to the finding, (2) Reasoning layer, the logic chain connecting source to conclusion, including how company context was factored in, (3) Confidence layer, a calibrated certainty score with automatic escalation to human review for low-confidence determinations. All decisions include tamper-proof timestamps for audit readiness.</div></details>
+<details><summary>What regulations require AI explainability?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Key regulations requiring AI explainability include: the EU AI Act (transparency obligations for high-risk and limited-risk AI systems), GDPR Article 22 (right to meaningful information about automated decision logic), US Federal Reserve SR 11-7 (model risk management), OCC guidance on AI in banking, the UK FCA's AI framework, and emerging APAC regulations. These require documentation of model design, validation of performance, ongoing monitoring, and governance processes.</div></details>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="conteneur">
+    <h2 class="t-h1" style="margin-bottom:28px">Read next</h2>
+    <div class="sy-carrousel" data-apparait>
+      <a class="sy-carte-photo" href="blog-regulatory-intelligence-trends-2026-en.html"><img src="img:masse-pile" alt=""><span class="sy-etiquette">Compliance</span><b>Regulatory Intelligence in 2026: 5 Trends Compliance Leaders Can't Ignore</b></a>
+      <a class="sy-carte-photo" href="blog-automating-third-party-due-diligence-en.html"><img src="img:masse-pile" alt=""><span class="sy-etiquette">Compliance</span><b>Automating Third-Party Due Diligence: From 5 Days to 2 Hours</b></a>
+      <a class="sy-carte-photo" href="blog-gdpr-beyond-compliance-checklist-en.html"><img src="img:masse-pile" alt=""><span class="sy-etiquette">Compliance</span><b>GDPR in 2026: Beyond the Compliance Checklist</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-final-photo">
+  <figure>
+    <img src="img:classeurs" alt="">
+    <div class="sy-final-texte" data-apparait>
+      <p class="sy-etiquette">30 minutes with the team</p>
+      <h2>See what Cleo finds on your own products</h2>
+      <p>One range and two markets are enough.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Book a demo</a></div>
+    </div>
+  </figure>
+</section>
+<!--PIED-->

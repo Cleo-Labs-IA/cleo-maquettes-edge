@@ -1,0 +1,82 @@
+<!--NAV-->
+<!-- Article porté depuis www.cleolabs.co/en/blog/mcp-server-week-1-retrospective le 23/09/2026 par blog/porter.mjs puis blog/fragments.mjs.
+     Titre, chapô, corps, FAQ et sources sont repris tels quels (blog-posts.json + HTML rendu). Ne pas éditer à la main : régénérer. -->
+<section class="sur-sombre section-serree bl-tete">
+  <div class="conteneur">
+    <div class="article-tete">
+      <p class="sy-surtitre">Behind the scenes</p>
+      <h1 class="t-titre-page" style="margin:20px 0 20px">Why we open-sourced our MCP server: week 1 retrospective</h1>
+      <p class="t-body" style="margin:0 0 28px">Seven days after open-sourcing the Cleo skills_library and its MCP server, here is the honest retrospective: the decision, what shipped in a week, what worked (dev.to traction, npm wedge), what flopped (awesome-llm-apps rejection, bad Show HN timing), and the roadmap for the next 60 skills.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <span style="display:flex;align-items:center;gap:12px"><img src="img:alex" alt="Alexandre Bloch" style="width:44px;height:44px;border-radius:50%;object-fit:cover"><span style="display:block"><span class="t-h3" style="display:block">Alexandre Bloch</span><span class="t-caption" style="display:block">CTO</span></span></span>
+        <span class="t-caption" style="padding-left:14px;border-left:1px solid var(--c-filet-sombre)"><time datetime="2026-06-04">4 June 2026</time> · 6 min read</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-bande-photo">
+  <figure>
+    <img src="img:blog-office-colorful-brainstorming" alt="">
+    <div class="sy-bande-texte">
+      <p class="sy-etiquette">Behind the scenes</p>
+    </div>
+  </figure>
+</section>
+
+<section class="section bl-corps" style="padding-top:56px">
+  <div class="conteneur">
+    <div class="corps-sommaire">
+      <nav class="sommaire">
+        <div class="titre">On this page</div>
+        <a href="#s1">1. The decision</a>
+        <a href="#s2">2. What shipped in 7 days</a>
+        <a href="#s3">3. What worked</a>
+        <a href="#s4">4. What did not work</a>
+        <a href="#s5">5. What is next</a>
+        <a href="#s6">6. Install and tell us what is broken</a>
+        <a href="#questions">Frequently asked questions</a>
+      </nav>
+      <div class="article bl-article" style="margin:0">
+<h2 id="s1">1. The decision</h2><p>For 18 months I had been building Cleo as a closed SaaS: pretty UI, paid seats, gated knowledge. The product worked. The numbers were okay. But every demo I did, the same question came back: "this is amazing, can I use it inside Claude Code / Cursor / my own agent?". The answer was always "soon". Soon kept slipping.</p><p>On a Tuesday night in May, I made two decisions in 30 minutes. First: open-source the skills under MIT, the entire library, no holdback, no premium tier locked behind features. Second: keep the API monetized, the live regulatory data, the customs rates, the sanctions screening, the things that actually need to be maintained daily. The skills are the distribution. The API is the business.</p><p>Three days later, we shipped. The repo went public, the npm package landed, the dev.to article went out. I had no marketing plan beyond "post it, see what happens".</p>
+<h2 id="s2">2. What shipped in 7 days</h2><div class="bl-encart"><div><div><span>1</span></div><p>45 skills covering 14 verticals (cosmetics, food, electronics, toys, textiles, supplements, jewelry, medical devices, pet products, sustainability reporting, packaging, chemicals, alcohol, automotive aftermarket).</p></div><div><div><span>2</span></div><p>An MCP server, published as @cleo-labs/skills-mcp on npm: same package works in Claude Code, Cursor, Cline, Windsurf and any MCP-compatible host.</p></div><div><div><span>3</span></div><p>A Glama.ai listing in the MCP server directory, indexed within 36 hours of submission.</p></div><div><div><span>4</span></div><p>A dev.to long-form article: the kind of post we used to ghost-write for B2B SaaS, this time signed in our own name.</p></div><div><div><span>5</span></div><p>A landing page on cleo-labs-ia.github.io with one-click install snippets and the full skill catalogue.</p></div><div><div><span>6</span></div><p>A second blog post on cleolabs.co explaining the business behind the open-source move.</p></div></div>
+<h2 id="s3">3. What worked</h2><p><strong>dev.to traction.</strong> <!-- -->The article hit the front page of the #ai tag within four hours. The dev.to community has a high tolerance for "I built a thing and it might be useful" content as long as the code is real. Ours was: 45 skills, an MCP server, an MIT license, a working npm install. The post is still picking up reads two days later.</p><p><strong>GitHub topology.</strong> <!-- -->We split the repo into clean tier folders (Product Core, Market Intelligence, Action, Reference + Verticals). Every skill lives in its own subfolder with a README that doubles as the prompt prelude. People who skim README files, that is everyone, saw the structure immediately. The first three stars came from regulatory consultants. That signal mattered more than I expected.</p><p><strong>npm package as a wedge.</strong> <!-- -->Publishing the MCP server on npm (<a href="https://www.npmjs.com/package/@cleo-labs/skills-mcp">@cleo-labs/skills-mcp</a>) turned a "clone the repo" friction into a single "npx -y" command. Cursor users in particular found us through the package, not the repo. Distribution surface matters.</p>
+<h2 id="s4">4. What did not work</h2><p><strong>awesome-llm-apps rejection.</strong> <!-- -->We submitted the skills_library to the awesome-llm-apps repo. The maintainer closed the PR within an hour with a polite "out of scope: your project is a skills library not an LLM app". They were technically right, and the rejection was clean, but it stung. I had over-indexed on the awesome-list ecosystem as a discovery channel. Lesson: those lists optimize for a narrow definition of what counts as an "app", and dev.to / Glama / direct repo discovery turned out to be far better channels for our format.</p><p><strong>Show HN dropped.</strong> <!-- -->Posted on a Friday afternoon: wrong window. 7 upvotes, off the front page in 90 minutes. I should have waited for Monday 9 AM PT. The post is queued for a re-attempt next week with a sharper hook.</p><p><strong>Cold outbound to influencers.</strong> <!-- -->I emailed five AI-tools newsletter writers with the launch. Zero replies. Probably the email volume they receive on launch days, probably my pitch. Either way, organic dev.to + GitHub discovery beat cold outreach 100x in week one.</p>
+<h2 id="s5">5. What is next</h2><ul><li><strong>60 skills by end of Q3.</strong> <!-- -->Next batch focuses on alcohol &amp; tobacco, agricultural inputs, and packaging-specific verticals (PPWR is coming). The community has already volunteered three skills via PR: they will land first.</li><li><strong>Anthropic plugin registry submission.</strong> <!-- -->The registry opened on May 27. We are packaging the skills as a single plugin bundle for one-click install from claude.com. Submission window: this week.</li><li><strong>Partnerships with test labs.</strong> <!-- -->Three EU testing labs (one for cosmetics, one for electronics, one for toys) reached out after the launch. The model: skill suggests test, lab gives instant quote, founder books in one flow. First integration target: end of June.</li><li><strong>A skill marketplace.</strong> <!-- -->Versioned skills, public reviews, signed contributions. The end-state is a place where a regulatory consultant can publish their own niche skill, and a D2C founder can install it like an npm package. Q3 target.</li><li><strong>The Cleo Legal API gets a free tier upgrade.</strong> <!-- -->Currently 3 lifetime requests. Moving to 100 free requests per month for verified GitHub accounts that have starred the skills_library. The signal of an installed user is more valuable than the noise of a junk email.</li></ul><p>The free tier link, for the record: <a href="https://legaldata-public.cleolabs.co">legaldata-public.cleolabs.co</a>.</p>
+<h2 id="s6">6. Install and tell us what is broken</h2><p>I read every issue on the repo. Every PR gets a review within 48 hours. If a skill returns a wrong threshold, an outdated reference or a confusing output: open an issue with the prompt and the response. That is the loop that makes the next 45 skills better than the first 45.</p><div><code>npx -y @cleo-labs/skills-mcp@latest</code></div><div><a href="https://github.com/Cleo-Labs-IA/skills_library">Star and install</a><a href="https://www.npmjs.com/package/@cleo-labs/skills-mcp">Or open the npm page →</a></div>
+<h2 id="questions">Frequently asked questions</h2>
+<div class="faq" data-schema="faq" style="margin-bottom:36px">
+<details open><summary>Why open-source the skills but keep the API paid?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">The skills are static knowledge artifacts, once written, they cost nothing to distribute. The API is live regulatory data that requires daily maintenance (customs rates, sanctions lists, new substance restrictions). Open-sourcing the skills builds distribution; the API funds the maintenance team. Product-led growth, not gatekeeping.</div></details>
+<details><summary>What did the awesome-llm-apps rejection teach you?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">That awesome-lists optimize for a narrow definition of 'app': typically a deployed product with a UI. A skills library does not fit, and that is fine. The lesson was to redirect that energy: dev.to, Glama.ai, direct repo discovery and the Anthropic plugin registry are far better channels for a developer-tools format.</div></details>
+<details><summary>What is the biggest takeaway for other founders considering open-source?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Pick the right boundary. Open-source what creates distribution; keep paid what creates ongoing operational cost. The mistake is open-sourcing nothing (no distribution) or everything (no business model). For us, skills = MIT, live data = API. Decision took 30 minutes once the framing clicked.</div></details>
+<details><summary>What is the timeline for the Anthropic plugin registry submission?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">The registry opened on May 27, 2026. We submit this week as a single bundled plugin: one-click install from claude.com. Decision criteria are public; we expect approval or feedback within two weeks based on early submitter timelines.</div></details>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="conteneur">
+    <h2 class="t-h1" style="margin-bottom:28px">Read next</h2>
+    <div class="sy-carrousel" data-apparait>
+      <a class="sy-carte-photo" href="blog-espr-ecodesign-sustainable-products-regulation-guide-en.html"><img src="img:masse-pile" alt=""><span class="sy-etiquette">Product Compliance</span><b>ESPR (Regulation EU 2024/1781): what it requires, which products it covers, and when obligations apply</b></a>
+      <a class="sy-carte-photo" href="blog-shein-22m-dgccrf-fine-traceability-2026-en.html"><img src="img:masse-pile" alt=""><span class="sy-etiquette">Product Compliance</span><b>France fines Shein €22M again: what the DGCCRF actually sanctioned, and why traceability is now non-negotiable for every brand</b></a>
+      <a class="sy-carte-photo" href="blog-cursor-mcp-compliance-skills-en.html"><img src="img:blog-woman-at-desk-pastel" alt=""><span class="sy-etiquette">Engineering</span><b>How to use Cleo Skills MCP in Cursor in 60 seconds</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-final-photo">
+  <figure>
+    <img src="img:classeurs" alt="">
+    <div class="sy-final-texte" data-apparait>
+      <p class="sy-etiquette">30 minutes with the team</p>
+      <h2>See what Cleo finds on your own products</h2>
+      <p>One range and two markets are enough.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Book a demo</a></div>
+    </div>
+  </figure>
+</section>
+<!--PIED-->

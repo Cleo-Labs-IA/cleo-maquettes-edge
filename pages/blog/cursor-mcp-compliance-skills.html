@@ -1,0 +1,91 @@
+<!--NAV-->
+<!-- Article porté depuis www.cleolabs.co/fr/blog/cursor-mcp-compliance-skills le 23/09/2026 par blog/porter.mjs puis blog/fragments.mjs.
+     Titre, chapô, corps, FAQ et sources sont repris tels quels (blog-posts.json + HTML rendu). Ne pas éditer à la main : régénérer. -->
+<section class="sur-sombre section-serree bl-tete">
+  <div class="conteneur">
+    <div class="article-tete">
+      <p class="sy-surtitre">Ingénierie</p>
+      <h1 class="t-titre-page" style="margin:20px 0 20px">Comment utiliser Cleo Skills MCP dans Cursor en 60 secondes</h1>
+      <p class="t-body" style="margin:0 0 28px">Guide pas à pas : branchez le package @cleo-labs/skills-mcp dans Cursor, obtenez 45 skills de conformité produit dans n'importe quel projet et lancez votre première vraie requête conformité en moins d'une minute. Aucune clé API requise pour le catalogue de base.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <span style="display:flex;align-items:center;gap:12px"><img src="img:alex" alt="Alexandre Bloch" style="width:44px;height:44px;border-radius:50%;object-fit:cover"><span style="display:block"><span class="t-h3" style="display:block">Alexandre Bloch</span><span class="t-caption" style="display:block">CTO</span></span></span>
+        <span class="t-caption" style="padding-left:14px;border-left:1px solid var(--c-filet-sombre)"><time datetime="2026-06-03">3 juin 2026</time> · 5 min de lecture</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-bande-photo">
+  <figure>
+    <img src="img:blog-woman-at-desk-pastel" alt="">
+    <div class="sy-bande-texte">
+      <p class="sy-etiquette">Ingénierie</p>
+    </div>
+  </figure>
+</section>
+
+<section class="section bl-corps" style="padding-top:56px">
+  <div class="conteneur">
+    <div class="corps-sommaire">
+      <nav class="sommaire">
+        <div class="titre">Sur cette page</div>
+        <a href="#s1">1. Pourquoi ça compte</a>
+        <a href="#s2">2. L’installation en une ligne</a>
+        <a href="#s3">3. Trois requêtes à tester dans les 60 prochaines secondes</a>
+        <a href="#s4">4. Pourquoi c’est important pour les fondateurs D2C</a>
+        <a href="#s5">5. Dépannage (les trois seuls trucs qui plantent)</a>
+        <a href="#s6">6. Commencer maintenant</a>
+        <a href="#s7">Sources et références</a>
+        <a href="#questions">Questions fréquentes</a>
+      </nav>
+      <div class="article bl-article" style="margin:0">
+<h2 id="s1">1. Pourquoi ça compte</h2><p>Quand nous avons open-sourcé la skills_library il y a quelques jours, le feedback le plus fréquent était : « j’adore Cursor, est-ce que je peux l’utiliser sans quitter mon éditeur ? ». La réponse est oui, et depuis cette semaine, l’expérience est identique à celle de Claude Code. Mêmes 45 skills, même pont vers la Cleo Legal API, même licence MIT. Seule la fenêtre où vous tapez le prompt change.</p><p>Si vous développez une app Shopify, une intégration marketplace, un tunnel de paiement ou un générateur d’étiquettes et que vous avez besoin de réponses conformité réelles (seuils REACH, périmètre CE, flux de notification JIS) sans switcher vers un consultant ou un cabinet à 5 K€ : c’est le chemin le plus court que nous connaissions.</p>
+<h2 id="s2">2. L’installation en une ligne</h2><p>Cursor lit ses serveurs MCP depuis un seul fichier JSON. Ouvrez Cursor → Settings → MCP, cliquez sur « Add new MCP server » et collez ceci :</p><div class="bl-encart"><code>{
+  "mcpServers": {
+    "cleo-skills": {
+      "command": "npx",
+      "args": ["-y", "@cleo-labs/skills-mcp@latest"]
+    }
+  }
+}</code></div><p>Sauvegardez le fichier. Cursor relance l’hôte MCP automatiquement. Le premier lancement télécharge le package (~4 Mo) depuis npm, enregistre les 45 skills, et vous êtes en ligne. Pas besoin de clé API pour le catalogue de base : les skills fonctionnent en autonome via la connaissance de Claude et WebSearch.</p><p>Le package est ici : <a href="https://www.npmjs.com/package/@cleo-labs/skills-mcp">npmjs.com/package/@cleo-labs/skills-mcp</a>. Source sur GitHub : <a href="https://github.com/Cleo-Labs-IA/skills_library">github.com/Cleo-Labs-IA/skills_library</a>.</p>
+<h2 id="s3">3. Trois requêtes à tester dans les 60 prochaines secondes</h2><p>Ouvrez la composer de Cursor (Cmd-K ou Cmd-I), passez en mode Agent et essayez ces trois prompts. Chacun appelle un skill différent pour vous montrer l’éventail.</p><div><div class="bl-encart"><div class="bl-encart"><p>Requête 1 : check substance</p><p>« L’hexylresorcinol est-il autorisé dans un sérum visage vendu en France à 0,5 % ? »</p></div><div><p>Ce que vous voyez dans Cursor</p><p>L’agent appelle le skill product-compliance, renvoie un verdict en environ 9 secondes : l’hexylresorcinol n’est ni en Annexe II (interdit) ni en Annexe III (restreint) du règlement 1223/2009, donc autorisé en leave-on à la discrétion du formulateur sous réserve du dossier sécurité. Le skill cite l’entrée CosIng 56-43-9 et suggère un check CMR via ECHA. Vous voyez aussi la trace de raisonnement : utile quand vous collez la réponse dans une description de PR.</p></div></div><div class="bl-encart"><div class="bl-encart"><p>Requête 2 : générateur d’étiquette</p><p>« Génère les mentions obligatoires du dos de l’étiquette d’un shampoing 50 ml vendu en Allemagne, Espagne et Italie. »</p></div><div><p>Ce que vous voyez dans Cursor</p><p>Le skill labeling-compliance renvoie le template INCI complet, le format du numéro de lot, la règle du symbole PAO (12M classique pour les shampoings), le contenu nominal en métrique, le bloc Personne Responsable et les trois exigences linguistiques (DE, ES, IT). Temps total : environ 11 secondes. L’agent propose de coller le résultat directement dans votre fichier product.tsx sous forme de constante. C’est précisément ce détail qui a fait demander Cursor par la communauté.</p></div></div><div class="bl-encart"><div class="bl-encart"><p>Requête 3 : scan multi-marchés</p><p>« Puis-je vendre une lampe de bureau LED 12V dans l’UE, au UK, aux US et au Canada ? Liste les certifications. »</p></div><div><p>Ce que vous voyez dans Cursor</p><p>Le skill multi-jurisdiction-scan lance quatre vérifications en parallèle. Environ 18 secondes plus tard : UE = marquage CE (LVD 2014/35/UE, CEM 2014/30/UE, RoHS 3, ErP), UK = UKCA, US = FCC Part 15 + UL safety listing, Canada = ISED + CSA / cULus. Le résultat arrive sous forme de tableau à quatre colonnes que vous collez dans votre ticket ingénierie. Le budget tests cumulé (~4 à 7 K€) est inclus en note de bas de page.</p></div></div></div>
+<h2 id="s4">4. Pourquoi c’est important pour les fondateurs D2C</h2><p>Un fondateur qui code dans Cursor aujourd’hui est probablement aussi celui qui écrit le copy marketing, les flows Klaviyo, les extensions de checkout Shopify et qui review le legal à 23 h. Le coût du context-switching est réel. À chaque fois que vous quittez votre éditeur pour poser une question à 30 secondes à un consultant, vous perdez 20 minutes de flow.</p><p>Cleo Skills dans Cursor compriment cette boucle. Les skills tournent là où vous codez. La réponse atterrit dans le fichier. La citation est dans le commentaire. Votre reviewer (ou votre vous dans trois mois) lit la réglementation à côté du code.</p><p>Et puisque la <a href="https://legaldata-public.cleolabs.co">Cleo Legal API</a> (en option) peut être branchée en complément des skills via MCP, vous obtenez les données live quand vous en avez besoin (limites de substances mises à jour chaque semaine, taux de douane chaque jour) sans rien rebuilder.</p>
+<h2 id="s5">5. Dépannage (les trois seuls trucs qui plantent)</h2><ul><li>Version Node : le serveur MCP requiert Node 18+. Si npx échoue silencieusement, lancez « node -v » et upgradez via nvm. Cursor n’embarque pas Node.</li><li>Cache obsolète : si un skill renvoie « not found » au premier appel, lancez une fois « npx -y @cleo-labs/skills-mcp@latest --refresh » et relancez Cursor.</li><li>Proxy d’entreprise : si vous êtes derrière un proxy, définissez HTTPS_PROXY avant de lancer Cursor. Le package est du npm classique : mêmes règles.</li></ul>
+<h2 id="s6">6. Commencer maintenant</h2><p>Trois liens, une minute. Installez le package, starz le repo, et envoyez-nous le premier skill que vous construirez par-dessus les nôtres.</p><div><a href="https://www.npmjs.com/package/@cleo-labs/skills-mcp">Installer depuis npm</a><a href="https://github.com/Cleo-Labs-IA/skills_library">Ou starz le repo sur GitHub →</a></div>
+<h2 id="s7">Sources et références</h2><ol><li><cite><a href="https://eur-lex.europa.eu/eli/reg/2006/1907/oj">Regulation (EC) No 1907/2006: REACH</a></cite></li></ol>
+<h2 id="questions">Questions fréquentes</h2>
+<div class="faq" data-schema="faq" style="margin-bottom:36px">
+<details open><summary>Faut-il une clé API pour utiliser les skills dans Cursor ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Non. Les 45 skills fonctionnent en autonome via la connaissance interne de Claude et WebSearch. La Cleo Legal API (optionnelle) n'ajoute que les données en temps réel : seuils de substances mis à jour chaque semaine, taux de douane chaque jour. Un free tier existe si vous voulez essayer.</div></details>
+<details><summary>Ça marche dans Cline, Windsurf ou d'autres hôtes MCP ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Oui. Le package npm @cleo-labs/skills-mcp implémente le protocole MCP standard : n'importe quel hôte MCP peut le lancer. Le snippet JSON de l'article fonctionne à l'identique dans Cline, Windsurf, Continue et Claude Desktop.</div></details>
+<details><summary>Quelle version de Node est requise ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Node 18 ou supérieur. Cursor n'embarque pas Node, donc installez-le globalement via nvm ou votre gestionnaire de packages avant de configurer le serveur MCP. Lancez « node -v » pour vérifier avant le premier appel npx.</div></details>
+<details><summary>Est-ce vraiment gratuit ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Oui. La skills_library est sous licence MIT sur GitHub. Le package npm est gratuit à installer. Pas de télémétrie, pas d'inscription, pas de plafond d'usage sur le catalogue de base. La Cleo Legal API a des paliers payants mais ils sont optionnels et ne s'activent que pour les données en temps réel.</div></details>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="conteneur">
+    <h2 class="t-h1" style="margin-bottom:28px">À lire aussi</h2>
+    <div class="sy-carrousel" data-apparait>
+      <a class="sy-carte-photo" href="blog-shein-22m-dgccrf-fine-traceability-2026.html"><img src="img:masse-pile" alt=""><span class="sy-etiquette">Conformité produit</span><b>La France inflige 22 M€ d’amende à Shein : ce que la DGCCRF a réellement sanctionné, et pourquoi la traçabilité n’est plus négociable pour aucune marque</b></a>
+      <a class="sy-carte-photo" href="blog-compliance-checks-claude-code-60-seconds.html"><img src="img:blog-legal-books-compliance" alt=""><span class="sy-etiquette">Conformité produit</span><b>5 vrais checks de conformité faits avec Claude Code en moins de 60 secondes</b></a>
+      <a class="sy-carte-photo" href="blog-cleo-runs-on-claude-opus-4-8.html"><img src="img:blog-opus-4-8-with-cleo" alt=""><span class="sy-etiquette">Produit</span><b>Cleo tourne désormais sur Claude Opus 4.8, et nous avons fait l'éval pour le prouver</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-final-photo">
+  <figure>
+    <img src="img:classeurs" alt="">
+    <div class="sy-final-texte" data-apparait>
+      <p class="sy-etiquette">30 minutes avec l'équipe</p>
+      <h2>Voyez ce que Cleo relève sur vos propres produits</h2>
+      <p>Une gamme et deux marchés suffisent.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo</a></div>
+    </div>
+  </figure>
+</section>
+<!--PIED-->

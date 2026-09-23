@@ -1,0 +1,83 @@
+<!--NAV-->
+<!-- Article porté depuis www.cleolabs.co/en/blog/multi-agent-ai-compliance-research-2026 le 23/09/2026 par blog/porter.mjs puis blog/fragments.mjs.
+     Titre, chapô, corps, FAQ et sources sont repris tels quels (blog-posts.json + HTML rendu). Ne pas éditer à la main : régénérer. -->
+<section class="sur-sombre section-serree bl-tete">
+  <div class="conteneur">
+    <div class="article-tete">
+      <p class="sy-surtitre">AI</p>
+      <h1 class="t-titre-page" style="margin:20px 0 20px">Multi-Agent AI for Compliance: What 2026 Research Says</h1>
+      <p class="t-body" style="margin:0 0 28px">Peer-reviewed 2026 studies confirm multi-agent AI can evaluate compliance across GDPR, AI Act, NIS2, and DORA: faster and more accurately.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="https://www.linkedin.com/in/naomie-halioua/" rel="author noopener" target="_blank" style="display:flex;align-items:center;gap:12px"><img src="img:naomie" alt="Naomie Halioua" style="width:44px;height:44px;border-radius:50%;object-fit:cover"><span style="display:block"><span class="t-h3" style="display:block">Naomie Halioua</span><span class="t-caption" style="display:block">CDO and co-founder</span></span></a>
+        <span class="t-caption" style="padding-left:14px;border-left:1px solid var(--c-filet-sombre)"><time datetime="2026-03-09">9 March 2026</time> · 8 min read</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-bande-photo">
+  <figure>
+    <img src="img:masse-pile" alt="">
+    <div class="sy-bande-texte">
+      <p class="sy-etiquette">AI</p>
+    </div>
+  </figure>
+</section>
+
+<section class="section bl-corps" style="padding-top:56px">
+  <div class="conteneur">
+    <div class="corps-sommaire">
+      <nav class="sommaire">
+        <div class="titre">On this page</div>
+        <a href="#s1">The research shift happening right now</a>
+        <a href="#s2">Paper 1: LLMs evaluate 5 regulations simultaneously, in 2 minutes</a>
+        <a href="#s3">Paper 2: Trust architecture for agentic compliance</a>
+        <a href="#s4">Paper 3: What companies actually struggle with under the AI Act</a>
+        <a href="#s5">What the research converges on</a>
+        <a href="#s6">How Cleo implements this</a>
+        <a href="#s7">Sources &amp;amp; references</a>
+        <a href="#questions">Frequently asked questions</a>
+      </nav>
+      <div class="article bl-article" style="margin:0">
+<h2 id="s1">The research shift happening right now</h2><p>For decades, compliance was treated as a manual, linear process. One regulation. One team. One checklist. In the first months of 2026, a wave of peer-reviewed research has emerged challenging this model at its foundations: from arXiv, Elsevier, and major AI conferences. The common thread: multi-agent architectures are the necessary evolution for compliance.</p>
+<h2 id="s2">Paper 1: LLMs evaluate 5 regulations simultaneously, in 2 minutes</h2><p>PASTA: A Scalable Framework for Multi-Policy AI Compliance Evaluation, Yang, Kim &amp; Yoon, arXiv:2601.11702, January 2026</p><p>The PASTA framework evaluates compliance against 5 regulatory policies simultaneously using LLMs: GDPR, EU AI Act, CCPA, Canada's AIDA, and the Colorado AI Act. It delivers a visual compliance heatmap and actionable recommendations per gap identified.</p><div><div class="bl-encart"><p>&lt; 2 min</p><p>5 regulations evaluated</p></div><div><p>$3</p><p>per evaluation</p></div><div><p>ρ≥.626</p><p>expert correlation</p></div></div><p>The core contribution: compliance evaluation is a parallelizable problem, one that multi-policy AI architectures solve better than human teams working sequentially.</p>
+<h2 id="s3">Paper 2: Trust architecture for agentic compliance</h2><p>TRISM: Trust, Risk and Security Management in LLM-Based Agentic Multi-Agent Systems, Raza et al., AI Open (Elsevier), 2026: Cited ×66</p><p>The most-cited paper on agentic AI systems in 2026, TRISM addresses a critical question: how do you trust an AI agent making compliance decisions? The framework covers trust propagation between agents, risk layering (technical vs. compliance risks), and auditability requirements: what multi-agent systems must log to be defensible under regulatory scrutiny.</p><div class="bl-encart"><p>Regulators will increasingly ask not just "what did your AI decide?" but "how did it decide, and can you prove it was reliable?" TRISM gives the architectural blueprint for what auditability looks like in practice.</p></div>
+<h2 id="s4">Paper 3: What companies actually struggle with under the AI Act</h2><p>AI Act High-Risk Compliance Challenges: Wagner, Song, Borg &amp; Engström, Information and Software Technology (Elsevier), 2026</p><div class="bl-encart"><div><div><span>1</span></div><div><p>Classification uncertainty</p><p>Companies don't know if their AI systems qualify as "high-risk" under Annex III. The boundary is genuinely ambiguous for many real-world products.</p></div></div><div><div><span>2</span></div><div><p>Documentation burden</p><p>High-risk systems require technical documentation, conformity assessments, data governance records, and human oversight logs. Most organizations underestimate the scope.</p></div></div><div><div><span>3</span></div><div><p>Monitoring in production</p><p>The AI Act requires continuous monitoring post-deployment. Companies built compliance for product launch: not for ongoing operations.</p></div></div></div>
+<h2 id="s5">What the research converges on</h2><div><div class="bl-encart"><p>🤝</p><p>Multi-agent</p><p>Not a single AI, but orchestrated specialists each handling a narrow task</p></div><div class="bl-encart"><p>📋</p><p>Multi-policy</p><p>Evaluating multiple regulations simultaneously, not sequentially</p></div><div class="bl-encart"><p>🔮</p><p>Predictive</p><p>Identifying risk before it becomes violation, not after</p></div><div class="bl-encart"><p>🔍</p><p>Auditable</p><p>Every decision traceable, every step logged, every output defensible</p></div></div>
+<h2 id="s6">How Cleo implements this</h2><p>Cleo Insight was built on exactly the principles that 2026 research is now validating. Our pipeline runs 30+ specialized agents, evaluates GDPR, AI Act, NIS2, DORA, and DSA simultaneously, monitors 3,700+ regulatory sources continuously, and produces fully sourced, auditable findings: built for the explainability requirements of GDPR Article 22 and AI Act Article 14.</p><p>References: Yang et al. (2026) arXiv:2601.11702 · Raza et al. (2026) AI Open, Elsevier · Wagner et al. (2026) Information and Software Technology, Elsevier · Restrepo Amariles &amp; Satoh (2026) Compliance for AI Systems</p>
+<h2 id="s7">Sources &amp; references</h2><ol><li><cite><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj">Regulation (EU) 2016/679: General Data Protection Regulation (GDPR)</a></cite></li><li><cite><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">Regulation (EU) 2024/1689: Artificial Intelligence Act</a></cite></li><li><cite><a href="https://eur-lex.europa.eu/eli/reg/2022/2554/oj">Regulation (EU) 2022/2554: Digital Operational Resilience Act (DORA)</a></cite></li><li><cite><a href="https://eur-lex.europa.eu/eli/dir/2022/2555/oj">Directive (EU) 2022/2555: NIS2 Directive</a></cite></li></ol>
+<h2 id="questions">Frequently asked questions</h2>
+<div class="faq" data-schema="faq" style="margin-bottom:36px">
+<details open><summary>What is multi-agent AI for compliance?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Multi-agent AI for compliance uses an orchestrated system of specialized AI agents (each handling a specific task like regulatory discovery, risk scoring, or documentation analysis) to evaluate compliance across multiple frameworks simultaneously. Unlike single-model approaches, multi-agent systems enable parallel processing, cross-validation, and specialization that dramatically improves accuracy and speed.</div></details>
+<details><summary>What did the PASTA research paper find?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">PASTA (Yang, Kim &amp; Yoon, arXiv:2601.11702, 2026) demonstrated that LLMs can evaluate compliance across 5 major regulatory frameworks (GDPR, EU AI Act, CCPA, AIDA, Colorado AI Act) simultaneously in under 2 minutes for approximately $3, with expert correlation of ρ ≥ .626.</div></details>
+<details><summary>When do AI Act high-risk requirements take effect?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">August 2, 2026. Companies have approximately 5 months from March 2026. High-risk AI systems require risk management systems, data governance, technical documentation, human oversight mechanisms, and conformity assessments. Penalties reach €35M or 7% of global annual turnover.</div></details>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="conteneur">
+    <h2 class="t-h1" style="margin-bottom:28px">Read next</h2>
+    <div class="sy-carrousel" data-apparait>
+      <a class="sy-carte-photo" href="blog-epistemic-vigilance-compliance-ai-fake-regulations-en.html"><img src="img:masse-pile" alt=""><span class="sy-etiquette">AI</span><b>What If Someone Fed Your Compliance AI a Fake GDPR Text?</b></a>
+      <a class="sy-carte-photo" href="blog-gpsr-compliance-guide-consumer-goods-en.html"><img src="img:blog-colorful-blocks-compliance-team" alt=""><span class="sy-etiquette">Product Compliance</span><b>GPSR Compliance Guide for Consumer Goods Brands (2026)</b></a>
+      <a class="sy-carte-photo" href="blog-what-is-product-compliance-eu-en.html"><img src="img:masse-pile" alt=""><span class="sy-etiquette">Compliance</span><b>Product Compliance in the EU: The Complete Guide for Tech Companies</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-final-photo">
+  <figure>
+    <img src="img:classeurs" alt="">
+    <div class="sy-final-texte" data-apparait>
+      <p class="sy-etiquette">30 minutes with the team</p>
+      <h2>See what Cleo finds on your own products</h2>
+      <p>One range and two markets are enough.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Book a demo</a></div>
+    </div>
+  </figure>
+</section>
+<!--PIED-->

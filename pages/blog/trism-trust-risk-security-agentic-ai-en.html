@@ -1,0 +1,82 @@
+<!--NAV-->
+<!-- Article porté depuis www.cleolabs.co/en/blog/trism-trust-risk-security-agentic-ai le 23/09/2026 par blog/porter.mjs puis blog/fragments.mjs.
+     Titre, chapô, corps, FAQ et sources sont repris tels quels (blog-posts.json + HTML rendu). Ne pas éditer à la main : régénérer. -->
+<section class="sur-sombre section-serree bl-tete">
+  <div class="conteneur">
+    <div class="article-tete">
+      <p class="sy-surtitre">AI</p>
+      <h1 class="t-titre-page" style="margin:20px 0 20px">TRISM: Why Agentic AI Doesn't Have a Trust Problem; It Has an Architecture Problem</h1>
+      <p class="t-body" style="margin:0 0 28px">A landmark paper introduces TRISM, the first framework to separate trust, risk, and security in multi-agent AI systems. 66 citations in 3 months: here's why compliance teams should pay attention.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <span style="display:flex;align-items:center;gap:12px"><img src="img:alex" alt="Alexandre Bloch" style="width:44px;height:44px;border-radius:50%;object-fit:cover"><span style="display:block"><span class="t-h3" style="display:block">Alexandre Bloch</span><span class="t-caption" style="display:block">CTO</span></span></span>
+        <span class="t-caption" style="padding-left:14px;border-left:1px solid var(--c-filet-sombre)"><time datetime="2026-03-17">17 March 2026</time> · 9 min read</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-bande-photo">
+  <figure>
+    <img src="img:masse-pile" alt="">
+    <div class="sy-bande-texte">
+      <p class="sy-etiquette">AI</p>
+    </div>
+  </figure>
+</section>
+
+<section class="section bl-corps" style="padding-top:56px">
+  <div class="conteneur">
+    <div class="corps-sommaire">
+      <nav class="sommaire">
+        <div class="titre">On this page</div>
+        <a href="#s1">The multi-agent trust gap</a>
+        <a href="#s2">What TRISM proposes</a>
+        <a href="#s3">Why this matters for compliance teams</a>
+        <a href="#s4">The architecture lesson: trust is a design choice</a>
+        <a href="#s5">From theory to practice: what this means for Cleo</a>
+        <a href="#s6">Sources &amp;amp; references</a>
+        <a href="#questions">Frequently asked questions</a>
+      </nav>
+      <div class="article bl-article" style="margin:0">
+<h2 id="s1">The multi-agent trust gap</h2><p>Most conversations about AI trust focus on a single model: is GPT-4 reliable? Does Claude hallucinate? But the frontier of AI deployment has moved far beyond single models. Enterprises are building multi-agent systems: pipelines where a dozen specialized AI agents collaborate, each handling one step of a complex workflow.</p><p>In compliance, this architecture is particularly powerful, and particularly dangerous. One agent identifies applicable regulations. Another maps obligations. A third scores risk. A fourth generates reports. When it works, you get consistent, explainable regulatory analysis in minutes. When it fails, each agent amplifies the previous one's errors, and by the time a human reviews the output, the mistake is buried six layers deep.</p>
+<h2 id="s2">What TRISM proposes</h2><p>The TRISM paper (Trust, Risk and Security Management) is the first serious attempt to build a unified governance framework for multi-agent AI systems. Published in AI Open (Elsevier) and already cited 66 times in under three months, it has clearly struck a nerve in the research community.</p><p>The core insight is deceptively simple: most AI governance frameworks fail because they treat trust, risk, and security as a single, undifferentiated problem. TRISM separates them into three distinct architectural layers, each requiring its own mechanisms.</p><div><div class="bl-encart"><p>Trust: Will this agent do what I expect?</p><p>Trust is about behavioral predictability. Can you verify that an agent's outputs match its stated purpose? TRISM proposes formal verification mechanisms, behavioral contracts between agents, and continuous trust scoring: each agent earns or loses trust based on output quality, not just initial calibration.</p></div><div class="bl-encart"><p>Risk: What happens if it doesn't?</p><p>Risk management in multi-agent systems isn't just about one agent failing: it's about cascade failures. If Agent 3 in a six-agent pipeline produces a flawed risk score, every downstream agent inherits and compounds the error. TRISM introduces inter-agent risk propagation models: quantifying how uncertainty compounds across the pipeline.</p></div><div class="bl-encart"><p>Security: Who can interfere from the outside?</p><p>Multi-agent systems introduce novel attack surfaces. Prompt injection on one agent can cascade across an entire pipeline. Data poisoning at the source level affects every downstream decision. TRISM defines security perimeters at the agent level, not just at the system boundary, treating each agent as its own security domain.</p></div></div>
+<h2 id="s3">Why this matters for compliance teams</h2><p>The implications of TRISM extend well beyond academic research. Whether you're a compliance officer, a product builder, or operating in a regulated sector, this framework changes what you can demand from your AI systems.</p><div><div><span>→</span><div><p>For DPOs and compliance officers</p><p>When an AI agent takes a compliance decision in your system, you need to be able to explain it to a regulator. "The AI decided" is not an acceptable answer under the AI Act, GDPR, or any serious regulatory framework. TRISM gives you the vocabulary, and the architecture, to decompose an automated decision into verifiable trust, risk, and security components. Each component becomes auditable independently.</p></div></div><div><span>→</span><div><p>For AI product builders</p><p>The AI Act holds you responsible for your system's outputs, even when those outputs come from a chain of agents you don't fully control. If you're building with LangChain, CrewAI, AutoGen, or any multi-agent framework, you need a governance layer that goes beyond prompt engineering. TRISM provides the blueprint: trust contracts between agents, risk propagation tracking, and security perimeters at each node.</p></div></div><div><span>→</span><div><p>For regulated sectors (healthcare, finance, energy, HR)</p><p>DORA and NIS2 both require you to demonstrate operational resilience in automated systems. As multi-agent AI moves from labs to production, regulators will ask how you manage trust propagation, error cascading, and adversarial resilience across your AI pipeline. Multi-agent trust frameworks like TRISM are how you prove it, before they ask.</p></div></div></div>
+<h2 id="s4">The architecture lesson: trust is a design choice</h2><p>The deepest insight from the TRISM paper isn't a technique: it's a perspective shift. Trust in AI systems is not something you add after deployment. It's not a monitoring dashboard. It's not an audit you run quarterly. Trust is an architectural property that must be designed into the system from day one.</p><p>This means separating trust (behavioral reliability), risk (failure propagation), and security (external interference) into distinct, independently auditable layers. When a regulator asks "why did your system make this decision?", you should be able to answer at each level: which agent made the determination, what was its trust score at the time, how was risk propagated from upstream agents, and what security controls prevented external manipulation.</p>
+<h2 id="s5">From theory to practice: what this means for Cleo</h2><p>At Cleo, we built our multi-agent pipeline with exactly this separation in mind. Each regulatory scan triggers 30+ specialized agents, and each agent operates within explicit trust boundaries. Trust, risk, and security are three distinct layers: not an afterthought bolted on top.</p><p>This is why our audit decisions are explainable, not just accurate. Every determination includes the regulatory source, the reasoning chain, the confidence score, and the risk propagation path. Compliance officers can validate at any point in the pipeline without having to reconstruct the logic from scratch.</p><p>The TRISM framework validates what we've been building: that the future of compliant AI isn't about trusting AI more; it's about building AI systems where trust is verifiable, risk is quantifiable, and security is structural.</p>
+<h2 id="s6">Sources &amp; references</h2><ol><li><cite><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">Regulation (EU) 2024/1689: Artificial Intelligence Act</a></cite></li><li><cite><a href="https://eur-lex.europa.eu/eli/reg/2022/2554/oj">Regulation (EU) 2022/2554: Digital Operational Resilience Act (DORA)</a></cite></li><li><cite><a href="https://eur-lex.europa.eu/eli/dir/2022/2555/oj">Directive (EU) 2022/2555: NIS2 Directive</a></cite></li></ol>
+<h2 id="questions">Frequently asked questions</h2>
+<div class="faq" data-schema="faq" style="margin-bottom:36px">
+<details open><summary>What is the TRISM framework for AI?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">TRISM (Trust, Risk and Security Management) is a governance framework for multi-agent AI systems published in AI Open (Elsevier) in 2026. It separates trust (behavioral predictability), risk (failure propagation), and security (external interference) into three distinct architectural layers, each requiring its own governance mechanisms. It was cited 66 times in its first three months.</div></details>
+<details><summary>Why is trust different from security in multi-agent AI?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Trust concerns whether an agent will behave as expected: it's about behavioral reliability and output quality. Security concerns whether external actors can interfere with the system: prompt injection, data poisoning, or unauthorized access. Conflating them leads to governance frameworks that check for attacks but don't verify behavioral consistency, or vice versa.</div></details>
+<details><summary>How does the AI Act apply to multi-agent AI systems?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">The AI Act holds deployers responsible for their system's outputs regardless of the internal architecture. In a multi-agent pipeline, this means you're liable even if the error originated in an upstream agent you didn't directly configure. Frameworks like TRISM help by providing auditable trust, risk, and security layers that demonstrate due diligence at each step of the pipeline.</div></details>
+<details><summary>What is risk propagation in multi-agent AI systems?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Risk propagation describes how errors compound across a multi-agent pipeline. If Agent 3 in a six-agent chain produces a flawed output, every downstream agent inherits and amplifies the error. TRISM introduces inter-agent risk propagation models to quantify how uncertainty grows across the pipeline, enabling early detection before cascading failures reach the final output.</div></details>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="conteneur">
+    <h2 class="t-h1" style="margin-bottom:28px">Read next</h2>
+    <div class="sy-carrousel" data-apparait>
+      <a class="sy-carte-photo" href="blog-legal-here-illegal-there-en.html"><img src="img:masse-pile" alt=""><span class="sy-etiquette">Product Compliance</span><b>8 Products That Are Legal Here, Illegal There</b></a>
+      <a class="sy-carte-photo" href="blog-cosmetic-regulation-by-country-en.html"><img src="img:blog-woman-at-desk-pastel" alt=""><span class="sy-etiquette">Product Compliance</span><b>Cosmetic Regulation by Country: EU vs US vs Japan vs Brazil vs China</b></a>
+      <a class="sy-carte-photo" href="blog-digital-product-passport-retail-guide-en.html"><img src="img:blog-office-multiple-screens" alt=""><span class="sy-etiquette">Product Compliance</span><b>Digital Product Passport (DPP): What Retail Brands Need to Know</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-final-photo">
+  <figure>
+    <img src="img:classeurs" alt="">
+    <div class="sy-final-texte" data-apparait>
+      <p class="sy-etiquette">30 minutes with the team</p>
+      <h2>See what Cleo finds on your own products</h2>
+      <p>One range and two markets are enough.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Book a demo</a></div>
+    </div>
+  </figure>
+</section>
+<!--PIED-->

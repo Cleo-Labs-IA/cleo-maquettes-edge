@@ -1,0 +1,92 @@
+<!--NAV-->
+<!-- Article porté depuis www.cleolabs.co/en/blog/open-source-product-compliance-skills-ai-agents le 23/09/2026 par blog/porter.mjs puis blog/fragments.mjs.
+     Titre, chapô, corps, FAQ et sources sont repris tels quels (blog-posts.json + HTML rendu). Ne pas éditer à la main : régénérer. -->
+<section class="sur-sombre section-serree bl-tete">
+  <div class="conteneur">
+    <div class="article-tete">
+      <p class="sy-surtitre">Product Compliance</p>
+      <h1 class="t-titre-page" style="margin:20px 0 20px">We open-sourced 40 product compliance skills for AI agents</h1>
+      <p class="t-body" style="margin:0 0 28px">Cleo Labs just released a library of 40 production-grade compliance skills for Claude Code and AI agents. Install in 30 seconds. Powered by the Cleo Legal API. Open-source under MIT.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="https://www.linkedin.com/in/naomie-halioua/" rel="author noopener" target="_blank" style="display:flex;align-items:center;gap:12px"><img src="img:naomie" alt="Naomie Halioua" style="width:44px;height:44px;border-radius:50%;object-fit:cover"><span style="display:block"><span class="t-h3" style="display:block">Naomie Halioua</span><span class="t-caption" style="display:block">CDO and co-founder</span></span></a>
+        <span class="t-caption" style="padding-left:14px;border-left:1px solid var(--c-filet-sombre)"><time datetime="2026-05-29">29 May 2026</time> · 8 min read</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-bande-photo">
+  <figure>
+    <img src="img:blog-office-multiple-screens" alt="">
+    <div class="sy-bande-texte">
+      <p class="sy-etiquette">Product Compliance</p>
+    </div>
+  </figure>
+</section>
+
+<section class="section bl-corps" style="padding-top:56px">
+  <div class="conteneur">
+    <div class="corps-sommaire">
+      <nav class="sommaire">
+        <div class="titre">On this page</div>
+        <a href="#s1">1. What we shipped</a>
+        <a href="#s2">2. What each skill actually does</a>
+        <a href="#s3">3. Demo: three real prompts</a>
+        <a href="#s4">4. Why open-source: the business behind it</a>
+        <a href="#s5">5. How it integrates with Claude Code</a>
+        <a href="#s6">6. Who it is for</a>
+        <a href="#s7">7. What is coming next</a>
+        <a href="#s8">8. Get started</a>
+        <a href="#s9">Sources &amp;amp; references</a>
+        <a href="#questions">Frequently asked questions</a>
+      </nav>
+      <div class="article bl-article" style="margin:0">
+<h2 id="s1">1. What we shipped</h2><p>Today we are releasing the Cleo skills_library: 40 production-grade compliance skills covering cosmetics, food and beverage, electronics, toys, textiles, supplements, jewelry, medical devices, pet products, sustainability reporting and more. They are organised in four tiers (Product Core, Market Intelligence, Action, and Reference + Verticals) so an AI agent can pick the right capability at the right depth, without you orchestrating it.</p><p>Drop-in install, MIT license, free forever:</p><div class="bl-encart"><code>git clone https://github.com/Cleo-Labs-IA/skills_library.git \
+  ~/.claude/skills/comply</code></div><p>That is the entire onboarding. Restart Claude Code and the skills auto-load. The repository is here: <a href="https://github.com/Cleo-Labs-IA/skills_library">github.com/Cleo-Labs-IA/skills_library</a>.</p>
+<h2 id="s2">2. What each skill actually does</h2><p>Each skill is a self-contained capability with a documented contract: inputs, outputs, jurisdictions covered, data sources cited. A few concrete examples:</p><div class="bl-encart"><div><span>product-compliance</span><p>Checks ingredients against 13 substance databases (CosIng, ECHA, REACH SVHC, California Prop 65, FDA, EFSA and others). Returns a verdict per substance per jurisdiction with concentration thresholds and the citing regulation.</p></div><div><span>labeling-compliance</span><p>Generates country-specific labeling rules: INCI nomenclature, allergen disclosures, mandatory warnings, Responsible Person, CE / UKCA marking, language requirements.</p></div><div><span>customs-and-trade</span><p>HS code classification, duty-rate lookup, landed-cost calculator, free-trade-agreement eligibility: across the 106 markets covered by the Cleo Legal API.</p></div><div><span>multi-jurisdiction-scan</span><p>Spawns parallel sub-agents per market, runs every applicable skill, then consolidates everything into one risk map you can ship to your lawyer.</p></div></div>
+<h2 id="s3">3. Demo: three real prompts</h2><p>These are unedited examples. Type the question, get the answer. The skills handle source citation, jurisdiction nuances, and follow-up actions automatically.</p><div><div class="bl-encart"><div class="bl-encart"><p>You ask</p><p>"I want to launch a retinol face cream in France, Germany and Italy. What are the rules?"</p></div><div><p>Claude answers</p><p>Retinol is restricted under EU Regulation 1223/2009, Annex III, entry 339: max 0.3% in body products, max 0.05% in face products. You will need a CPNP notification and an EU Responsible Person established in one of the three target countries. Labeling rules: INCI list, batch code, PAO symbol, claims compliant with EU 655/2013. Estimated time to market: 6–8 weeks if your stability and PIF dossier are ready.</p></div></div><div class="bl-encart"><div class="bl-encart"><p>You ask</p><p>"Bluetooth speaker, made in Shenzhen, selling in US and EU. What certifications do I need?"</p></div><div><p>Claude answers</p><p>EU: CE marking covering RED (Radio Equipment Directive 2014/53/EU), LVD (2014/35/EU) and EMC (2014/30/EU); RoHS 3 substance declaration; WEEE registration in each Member State of import; from August 2026, GPSR responsible person and Digital Product Passport on the way for electronics. US: FCC Part 15 testing for unintentional radiators, SDoC labeling, Prop 65 warning if applicable. Total testing budget: roughly €8–15K, 6–12 weeks. HS code 8518.22: EU duty 2.5%, US duty 0% MFN.</p></div></div><div class="bl-encart"><div class="bl-encart"><p>You ask</p><p>"Can I sell my vitamin D3 supplement in Japan?"</p></div><div><p>Claude answers</p><p>Yes, as a Food with Function Claims (FFC) or general dietary supplement under the Food Sanitation Act. You need a pre-import notification to the Ministry of Health, Labour and Welfare, full Japanese-language labeling (name, ingredients, allergens, nutrition facts, importer details), and a domestic importer of record. Vitamin D3 has no statutory upper limit but Consumer Affairs Agency recommends staying below 100 µg/day. HS 2106.90, duty 8.8%, plus 10% consumption tax. Lead time: 4–6 weeks.</p></div></div></div>
+<h2 id="s4">4. Why open-source: the business behind it</h2><p>Honest section. We are not pretending this is pure altruism. Here is how it actually works:</p><ul><li>The skills are open-source under MIT: free forever, no signup, no telemetry.</li><li>They are pre-wired to call the <a href="https://legaldata-public.cleolabs.co">Cleo Legal API</a> for real-time data: substance limits, customs rates, sanctions screening, regulatory updates.</li><li>Free tier: 3 requests forever, no card. Pro: €349/month for 1M requests. Enterprise: contact us.</li><li>Open-source is how we distribute. The API is how we monetise. Product-led growth, not gatekeeping.</li></ul><p>Every founder who installs the skills discovers what compliance automation can look like. Most do not need the paid API for a while. The few who scale eventually pay, and they get a tool they have already trusted for months.</p>
+<h2 id="s5">5. How it integrates with Claude Code</h2><p>Skills auto-trigger when you ask compliance questions, nothing to configure, no slash commands to remember. For live data (real-time substance lookups, customs rates), add the optional Cleo Legal API MCP server:</p><div class="bl-encart"><code>claude mcp add cleo-legal-api \
+  https://api.legaldata.cleolabs.co/mcp \
+  --header "Authorization: Bearer ld_live_YOUR_KEY"</code></div><p>A landing page with the full skill catalog and copy-paste install snippets lives at <a href="https://cleo-labs-ia.github.io/skills_library/">cleo-labs-ia.github.io/skills_library</a>.</p>
+<h2 id="s6">6. Who it is for</h2><div><div class="bl-encart"><h3>D2C cosmetics founders</h3><p>Launching in 5 countries, no in-house reg-affairs team, need answers before the next sprint.</p></div><div class="bl-encart"><h3>Shopify merchants</h3><p>Prepping Amazon EU listings with the GPSR deadline closing in: responsible person, traceability, recalls.</p></div><div class="bl-encart"><h3>Marketplace sellers</h3><p>Cross-checking Prop 65 warnings, CPSC reports and California labeling before shipping into the US.</p></div><div class="bl-encart"><h3>Indie brands post-Brexit</h3><p>Expanding from US to UK: UKCA marking, UK Responsible Person, post-Brexit conformity assessments.</p></div><div class="bl-encart"><h3>Pet food and pet care</h3><p>Navigating EU 767/2009 feed labeling, claim limitations and category-specific notification flows.</p></div><div class="bl-encart"><h3>Solo compliance consultants</h3><p>Doing the work of three people: use the skills to draft, then keep your expert eye for the edge cases.</p></div></div>
+<h2 id="s7">7. What is coming next</h2><div class="bl-encart"><div><div><span>1</span></div><p>60+ skills by end of Q3: alcohol and tobacco, agricultural inputs, automotive aftermarket, packaging-specific verticals.</p></div><div><div><span>2</span></div><p>A skill marketplace for community contributions, with versioning and a public review process.</p></div><div><div><span>3</span></div><p>Native integrations with Shopify, WooCommerce, BigCommerce: compliance check before publish, surfaced in your admin UI.</p></div><div><div><span>4</span></div><p>A Compliance Academy: long-form guides built around the skills, covering the rules behind the prompts.</p></div></div>
+<h2 id="s8">8. Get started</h2><p>One command, 30 seconds, zero lock-in. If you build with AI agents and ship physical products: this is for you.</p><div><a href="https://github.com/Cleo-Labs-IA/skills_library">Star the repo on GitHub</a><a href="https://legaldata-public.cleolabs.co">Or get an API key →</a></div>
+<h2 id="s9">Sources &amp; references</h2><ol><li><cite><a href="https://eur-lex.europa.eu/eli/reg/2006/1907/oj">Regulation (EC) No 1907/2006: REACH</a></cite></li></ol>
+<h2 id="questions">Frequently asked questions</h2>
+<div class="faq" data-schema="faq" style="margin-bottom:36px">
+<details open><summary>Is it really free?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Yes. The skills_library is MIT licensed and available on GitHub with no signup required. Clone the repo, restart Claude Code, and you're ready. The optional Cleo Legal API has a free tier (3 requests forever, no card) and paid tiers starting at €349/month if you need higher volume.</div></details>
+<details><summary>Do I need the Cleo Legal API to use the skills?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">No. The skills work standalone using Claude's WebSearch capability and built-in knowledge. The Cleo Legal API adds real-time data (live substance thresholds, current customs rates, sanctions screening) and roughly 100x faster responses for compliance lookups.</div></details>
+<details><summary>What is Claude Code?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Claude Code is Anthropic's agentic CLI for developers. It runs Claude inside your terminal with file system access, tool use, and the skills system used by this library. Available at claude.com/code.</div></details>
+<details><summary>Can I contribute skills?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Yes. Pull requests are welcome on GitHub. We have a contribution guide covering skill structure, jurisdiction coverage, source citation and review criteria. Verticals we're prioritising next include alcohol, agricultural inputs and automotive aftermarket.</div></details>
+<details><summary>Is this legal advice?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">No. The skills provide compliance guidance based on regulatory data, not legal advice. For critical decisions (product launches in regulated categories, formal certifications, litigation risk) verify with a qualified regulatory consultant or lawyer in the target jurisdiction.</div></details>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="conteneur">
+    <h2 class="t-h1" style="margin-bottom:28px">Read next</h2>
+    <div class="sy-carrousel" data-apparait>
+      <a class="sy-carte-photo" href="blog-legal-atlas-machine-readable-law-en.html"><img src="img:blog-legal-books-compliance" alt=""><span class="sy-etiquette">Product</span><b>Legal Atlas: the world's law, machine-readable</b></a>
+      <a class="sy-carte-photo" href="blog-temu-200m-dsa-fine-illegal-products-2026-en.html"><img src="img:masse-pile" alt=""><span class="sy-etiquette">Product Compliance</span><b>Temu fined €200M under the DSA: what the Commission actually said, and why it matters for every European brand</b></a>
+      <a class="sy-carte-photo" href="blog-regulatory-data-quality-plm-integration-en.html"><img src="img:masse-pile" alt=""><span class="sy-etiquette">Product Compliance</span><b>Why your PLM is only as good as the regulatory data you feed it</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-final-photo">
+  <figure>
+    <img src="img:classeurs" alt="">
+    <div class="sy-final-texte" data-apparait>
+      <p class="sy-etiquette">30 minutes with the team</p>
+      <h2>See what Cleo finds on your own products</h2>
+      <p>One range and two markets are enough.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Book a demo</a></div>
+    </div>
+  </figure>
+</section>
+<!--PIED-->

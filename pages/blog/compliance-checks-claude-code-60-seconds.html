@@ -1,0 +1,86 @@
+<!--NAV-->
+<!-- Article porté depuis www.cleolabs.co/fr/blog/compliance-checks-claude-code-60-seconds le 23/09/2026 par blog/porter.mjs puis blog/fragments.mjs.
+     Titre, chapô, corps, FAQ et sources sont repris tels quels (blog-posts.json + HTML rendu). Ne pas éditer à la main : régénérer. -->
+<section class="sur-sombre section-serree bl-tete">
+  <div class="conteneur">
+    <div class="article-tete">
+      <p class="sy-surtitre">Conformité produit</p>
+      <h1 class="t-titre-page" style="margin:20px 0 20px">5 vrais checks de conformité faits avec Claude Code en moins de 60 secondes</h1>
+      <p class="t-body" style="margin:0 0 28px">Cinq scénarios de conformité produit (cosmétiques au rétinol, marquage CE Bluetooth, export complément alimentaire au Japon, limites de migration EN 71-3 sur jouet, échéances règlement Batteries UE) résolus en 49 secondes au total avec la skills_library Cleo sur Claude Code. Avec timing, citations et coût à l'ancienne.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="https://www.linkedin.com/in/naomie-halioua/" rel="author noopener" target="_blank" style="display:flex;align-items:center;gap:12px"><img src="img:naomie" alt="Naomie Halioua" style="width:44px;height:44px;border-radius:50%;object-fit:cover"><span style="display:block"><span class="t-h3" style="display:block">Naomie Halioua</span><span class="t-caption" style="display:block">CDO et cofondatrice</span></span></a>
+        <span class="t-caption" style="padding-left:14px;border-left:1px solid var(--c-filet-sombre)"><time datetime="2026-06-02">2 juin 2026</time> · 7 min de lecture</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-bande-photo">
+  <figure>
+    <img src="img:blog-legal-books-compliance" alt="">
+    <div class="sy-bande-texte">
+      <p class="sy-etiquette">Conformité produit</p>
+    </div>
+  </figure>
+</section>
+
+<section class="section bl-corps" style="padding-top:56px">
+  <div class="conteneur">
+    <div class="corps-sommaire">
+      <nav class="sommaire">
+        <div class="titre">Sur cette page</div>
+        <a href="#s1">Méthodologie</a>
+        <a href="#s2">Check 1 : Le rétinol en cosmétique UE</a>
+        <a href="#s3">Check 2 : Enceinte Bluetooth, périmètre CE</a>
+        <a href="#s4">Check 3 : Export d’un complément vitaminé au Japon</a>
+        <a href="#s5">Check 4 : Jouet enfant, limites de migration EN 71-3</a>
+        <a href="#s6">Check 5 : Échéances du règlement Batteries UE</a>
+        <a href="#s7">Le total cumulé</a>
+        <a href="#s8">Reproduisez en deux minutes</a>
+        <a href="#questions">Questions fréquentes</a>
+      </nav>
+      <div class="article bl-article" style="margin:0">
+<h2 id="s1">Méthodologie</h2><p>Cinq vraies questions produit, prises dans le Slack Cleo de la semaine du 24 mai. Pour chacune : j’ai ouvert Claude Code (le CLI d’Anthropic) avec la skills_library de Cleo installée, démarré une nouvelle session, tapé le prompt, et arrêté le chrono dès la verdict final. Pas de relance, pas d’aide, pas de Google. La Cleo Legal API optionnelle était branchée via MCP pour les données live substances et douane : la configuration par défaut de tout installeur.</p><p>Vous pouvez reproduire chaque résultat avec : <code>npx -y @cleo-labs/skills-mcp@latest</code>. Le package est sur npm : <a href="https://www.npmjs.com/package/@cleo-labs/skills-mcp">@cleo-labs/skills-mcp</a>.</p>
+<h2 id="s2">Check 1 : Le rétinol en cosmétique UE</h2><div class="bl-encart"><div class="bl-encart"><p>Prompt</p><p>« Le rétinol est-il autorisé en cosmétique UE ? À quelle concentration ? »</p></div><div><p>Verdict (8 secondes)</p><p>Oui, avec des plafonds stricts. Règlement (CE) 1223/2009 Annexe III entrée 339, en vigueur depuis novembre 2025 : max 0,05 % en produits visage, 0,3 % en lotions corps et 0,005 % en produits lèvres. Mention obligatoire au-dessus de 0,05 % : « contient du rétinol, déconseillé aux femmes enceintes et allaitantes ». Réévaluation CMR par le SCCS attendue Q4 2026.</p></div></div><p>Sans les skills : 600 à 900 € de consultant pour un avis écrit, 4 à 7 jours ouvrés. Ou vous croyez un post de forum et vous shippez un produit non conforme.</p>
+<h2 id="s3">Check 2 : Enceinte Bluetooth, périmètre CE</h2><div class="bl-encart"><div class="bl-encart"><p>Prompt</p><p>« Que faut-il pour le marquage CE d’une enceinte Bluetooth ? »</p></div><div><p>Verdict (14 secondes)</p><p>Quatre directives s’appliquent simultanément. RED 2014/53/UE (équipements radio) : la radio Bluetooth est réglementée. CEM 2014/30/UE : tests émission et immunité. LVD 2014/35/UE (basse tension) : applicable si l’alimentation dépasse 50V AC / 75V DC, normalement couverte par la spec du chargeur USB-C. RoHS 3 (2011/65/UE + acte délégué 2015/863) : déclaration substances restreintes. À partir du 13 août 2026 : GPSR (règlement 2023/988) impose un opérateur responsable UE et un canal de rappel public. Standards harmonisés : EN 300 328, EN 301 489-1/-17, EN 62368-1. Budget labo typique : 6 à 12 K€, 4 à 8 semaines.</p></div></div><p>Sans les skills : un consultant CE démarre à 3 à 5 K€ rien que pour l’analyse de périmètre. Avec les skills vous demandez directement des devis labo.</p>
+<h2 id="s4">Check 3 : Export d’un complément vitaminé au Japon</h2><div class="bl-encart"><div class="bl-encart"><p>Prompt</p><p>« Puis-je exporter mon complément effervescent vitamine C au Japon ? »</p></div><div><p>Verdict (12 secondes)</p><p>Oui, sous la Food Sanitation Act, en complément alimentaire général (pas en Food with Function Claim sauf à déposer le dossier). Notification pré-import au Ministry of Health, Labour and Welfare via un importateur établi au Japon : obligatoire. Étiquette intégralement en japonais : nom, ingrédients, allergènes, valeurs nutritionnelles, coordonnées de l’importateur, mention d’origine. La vitamine C n’a pas de limite réglementaire mais la Consumer Affairs Agency recommande de rester sous 2 000 mg/jour pour les compléments généraux. Code HS 2106.90.90, droit NPF 8,8 % plus 10 % de taxe à la consommation. Délai dossier prêt : 4 à 6 semaines. Attention aux allégations santé floues : elles déclenchent la Pharmaceutical and Medical Device Act et vous basculent en quasi-médicament.</p></div></div><p>Sans les skills : un cabinet spécialisé Japon facture 4 à 8 K€ pour la même note de cadrage, souvent en envoyant des templates en PDF.</p>
+<h2 id="s5">Check 4 : Jouet enfant, limites de migration EN 71-3</h2><div class="bl-encart"><div class="bl-encart"><p>Prompt</p><p>« Mon jouet en bois peint est-il soumis aux limites de migration EN 71-3 ? Donne la table complète. »</p></div><div><p>Verdict (6 secondes)</p><p>Oui. EN 71-3:2019 + A1:2021 s’applique à tout jouet mis sur le marché UE au titre de la directive Sécurité des jouets 2009/48/CE. Limites de migration (mg/kg de matériau), Catégorie II (matériau pouvant être gratté), catégorie pertinente pour un jouet en bois peint : Aluminium 1 406, Antimoine 11,3, Arsenic 0,9, Baryum 1 125, Bore 1 200, Cadmium 1,3, Chrome III 37,5, Chrome VI 0,02, Cobalt 10,5, Cuivre 622,5, Plomb 2,0, Manganèse 1 200, Mercure 1,9, Nickel 75, Sélénium 37,5, Strontium 4 500, Étain 15 000, Étain organique 0,9, Zinc 3 750. Tests requis : ICP-OES ou ICP-MS selon l’Annexe C, plus étain organique en GC-MS. Budget : 450 à 900 € par couleur testée.</p></div></div><p>Sans les skills : 30 minutes à scroller EUR-Lex, une copie payante de EN 71-3 à 240 € chez CEN, et il faut encore se souvenir du mapping des catégories. Six secondes contre un après-midi.</p>
+<h2 id="s6">Check 5 : Échéances du règlement Batteries UE</h2><div class="bl-encart"><div class="bl-encart"><p>Prompt</p><p>« Mon appareil embarque une batterie lithium-ion. Quelles échéances du règlement Batteries UE dois-je suivre ? »</p></div><div><p>Verdict (9 secondes)</p><p>Règlement (UE) 2023/1542, échéances phasées pour batteries portables : 18 août 2024, restrictions mercure et cadmium durcies, marquage CE avec déclaration spécifique batterie obligatoire pour toute nouvelle mise sur le marché. 18 février 2027 : exigence de retirabilité et remplaçabilité pour les portables (fin des cellules collées sans procédure SAV). 18 août 2027 : Battery Passport obligatoire pour LMT, EV et industrielles au-dessus de 2 kWh (les portables grand public sont exclus pour l’instant). 1er janvier 2028, seuils minimum de contenu recyclé : 16 % cobalt, 85 % plomb, 6 % lithium, 6 % nickel. Suivre via la page actes d’exécution de la Commission, plusieurs specs tertiaires sont encore en consultation jusqu’à fin 2026.</p></div></div><p>Sans les skills : un abonnement à un tracker réglementaire à 4 à 9 K€/an, ou une demi-journée à l’Inrae ou équivalent. Avec les skills la carte des deadlines est dans votre terminal en neuf secondes.</p>
+<h2 id="s7">Le total cumulé</h2><div class="bl-encart"><p>Cinq checks. Temps de réponse cumulé : 49 secondes. Coût total : 0 €.</p><p>L’équivalent à l’ancienne (consultants au forfait, normes payantes, notes de cadrage, abonnements veille) coûte entre 12 et 28 K€ par fondateur et par an, avant même de shipper. Les skills coûtent une étoile gratuite sur GitHub.</p><p>Avant qu’on nous le demande : non, ça ne remplace pas un consultant pour un lancement en catégorie organisme notifié. Ça remplace les 80 % du travail de conformité qui sont documentaires, répétitifs et bien documentés : exactement les 80 % qui pèsent pour 80 % de la facture des fondateurs.</p></div>
+<h2 id="s8">Reproduisez en deux minutes</h2><p>Installez le package, lancez les cinq mêmes prompts et dites-nous où les skills se trompent. Toute issue ouverte sur GitHub est traitée sous 48 heures.</p><div><code>npx -y @cleo-labs/skills-mcp@latest</code></div><div><a href="https://github.com/Cleo-Labs-IA/skills_library">Star le repo sur GitHub</a><a href="https://legaldata-public.cleolabs.co">Ou obtenir une clé API →</a></div>
+<h2 id="questions">Questions fréquentes</h2>
+<div class="faq" data-schema="faq" style="margin-bottom:36px">
+<details open><summary>Les skills remplacent-ils complètement un consultant réglementaire ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Non, et ce n'est pas leur objet. Ils remplacent les 80 % du travail conformité qui sont documentaires, répétitifs et bien documentés : notes de cadrage, recherche de seuils, suivi d'échéances, génération d'étiquettes. Pour les produits en catégorie organisme notifié (DM Classe IIa+, machines, EPI), gardez un consultant qualifié en boucle pour le dossier final.</div></details>
+<details><summary>Les temps de réponse cités dans l'article sont-ils précis ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Les cinq temps ont été mesurés au chronomètre sur une seule session Claude Code avec la Cleo Legal API optionnelle branchée via MCP. Plage : 6 à 14 secondes. Sans le plugin Legal API (skills seuls, fallback WebSearch), comptez 1,5x à 2x plus long parce que l'agent fait une vérif citation en live avant de répondre.</div></details>
+<details><summary>D'où viennent les chiffres de coût (600–900 €/avis, 4–9 K€/abonnement) ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">De vraies factures fondateurs partagées dans le Slack Cleo sur les 12 derniers mois. Les plages reflètent des engagements typiques petite D2C avec des consultants de niveau intermédiaire en France, Allemagne et UK. Les big-four ou spécialistes US sont souvent 2x à 3x plus chers.</div></details>
+<details><summary>Puis-je reproduire ces résultats ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Oui. Installez avec « npx -y @cleo-labs/skills-mcp@latest » dans Claude Code ou Cursor, collez les prompts exacts de l'article et chronométrez vous-même. Si un skill renvoie une autre réponse ou un mauvais seuil, ouvrez une issue sur le repo : toute issue est traitée sous 48 heures.</div></details>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="conteneur">
+    <h2 class="t-h1" style="margin-bottom:28px">À lire aussi</h2>
+    <div class="sy-carrousel" data-apparait>
+      <a class="sy-carte-photo" href="blog-cursor-mcp-compliance-skills.html"><img src="img:blog-woman-at-desk-pastel" alt=""><span class="sy-etiquette">Ingénierie</span><b>Comment utiliser Cleo Skills MCP dans Cursor en 60 secondes</b></a>
+      <a class="sy-carte-photo" href="blog-cleo-runs-on-claude-opus-4-8.html"><img src="img:blog-opus-4-8-with-cleo" alt=""><span class="sy-etiquette">Produit</span><b>Cleo tourne désormais sur Claude Opus 4.8, et nous avons fait l'éval pour le prouver</b></a>
+      <a class="sy-carte-photo" href="blog-legal-atlas-machine-readable-law.html"><img src="img:blog-legal-books-compliance" alt=""><span class="sy-etiquette">Produit</span><b>Legal Atlas : le droit mondial, lisible par les machines</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-final-photo">
+  <figure>
+    <img src="img:classeurs" alt="">
+    <div class="sy-final-texte" data-apparait>
+      <p class="sy-etiquette">30 minutes avec l'équipe</p>
+      <h2>Voyez ce que Cleo relève sur vos propres produits</h2>
+      <p>Une gamme et deux marchés suffisent.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo</a></div>
+    </div>
+  </figure>
+</section>
+<!--PIED-->

@@ -1,0 +1,82 @@
+<!--NAV-->
+<!-- Article porté depuis www.cleolabs.co/en/blog/data-quality-ml-compliance-gdpr le 23/09/2026 par blog/porter.mjs puis blog/fragments.mjs.
+     Titre, chapô, corps, FAQ et sources sont repris tels quels (blog-posts.json + HTML rendu). Ne pas éditer à la main : régénérer. -->
+<section class="sur-sombre section-serree bl-tete">
+  <div class="conteneur">
+    <div class="article-tete">
+      <p class="sy-surtitre">AI</p>
+      <h1 class="t-titre-page" style="margin:20px 0 20px">&quot;Detective Work We Shouldn't Have to Do&quot;: Why Data Quality Is the Blind Spot of ML Compliance</h1>
+      <p class="t-body" style="margin:0 0 28px">A new research paper interviews EU-based data practitioners and exposes 5 systemic gaps between GDPR requirements and ML pipeline reality.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="https://www.linkedin.com/in/naomie-halioua/" rel="author noopener" target="_blank" style="display:flex;align-items:center;gap:12px"><img src="img:naomie" alt="Naomie Halioua" style="width:44px;height:44px;border-radius:50%;object-fit:cover"><span style="display:block"><span class="t-h3" style="display:block">Naomie Halioua</span><span class="t-caption" style="display:block">CDO and co-founder</span></span></a>
+        <span class="t-caption" style="padding-left:14px;border-left:1px solid var(--c-filet-sombre)"><time datetime="2026-03-31">31 March 2026</time> · 5 min read</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-bande-photo">
+  <figure>
+    <img src="img:masse-pile" alt="">
+    <div class="sy-bande-texte">
+      <p class="sy-etiquette">AI</p>
+    </div>
+  </figure>
+</section>
+
+<section class="section bl-corps" style="padding-top:56px">
+  <div class="conteneur">
+    <div class="corps-sommaire">
+      <nav class="sommaire">
+        <div class="titre">On this page</div>
+        <a href="#s1">What the paper reveals</a>
+        <a href="#s2">5 gaps that keep appearing</a>
+        <a href="#s3">The detail that changes everything</a>
+        <a href="#s4">Why this matters to you</a>
+        <a href="#s5">How Cleo handles this</a>
+        <a href="#s6">Sources &amp;amp; references</a>
+        <a href="#questions">Frequently asked questions</a>
+      </nav>
+      <div class="article bl-article" style="margin:0">
+<div class="bl-encart"><p>"Detective Work We Shouldn't Have to Do": Practitioner Challenges in Regulatory-Aligned Data Quality in Machine Learning Systems</p><p>Wang, Irion, Groth, Harmouch · <a href="https://arxiv.org/abs/2602.05944">arXiv:2602.05944</a>, February 2026</p></div>
+<h2 id="s1">What the paper reveals</h2><p>The researchers interviewed EU-based data practitioners working on ML systems in regulated industries. Not consultants. Not academics. The people who wake up every morning trying to make their data pipelines GDPR-compliant while shipping features on deadline. What they found is a pattern so consistent it's almost a diagnosis.</p>
+<h2 id="s2">5 gaps that keep appearing</h2><div><div class="bl-encart"><span>01</span><div><p>Legal principles vs. engineering workflows</p><p>The GDPR says "data quality." Your data engineer hears "no nulls in production." These are not the same thing, and nobody in the organization is bridging the gap.</p></div></div><div class="bl-encart"><span>02</span><div><p>Pipeline fragmentation</p><p>Data quality is checked at ingestion but degrades silently through transformation, training, and inference. By the time a regulator asks, nobody can trace what happened.</p></div></div><div class="bl-encart"><span>03</span><div><p>Tool limitations</p><p>Existing tools were built for analytics, not for regulatory evidence. They measure completeness and consistency: not whether your data processing is lawful under Article 5.</p></div></div><div class="bl-encart"><span>04</span><div><p>Responsibility fog</p><p>Legal teams own compliance. Engineering owns data. Nobody owns regulatory-aligned data quality. Everyone assumes someone else is handling it.</p></div></div><div class="bl-encart"><span>05</span><div><p>Reactive culture</p><p>Most teams only think about data quality when an audit is coming. By then, it's detective work: reverse-engineering what happened months ago.</p></div></div></div>
+<h2 id="s3">The detail that changes everything</h2><p>Practitioners don't need more regulation. They need compliance-aware tooling: tools that understand both data engineering and legal requirements simultaneously, not tools that bolt legal checklists onto existing pipelines.</p>
+<h2 id="s4">Why this matters to you</h2><div><div><span>→</span><div><p>You are a DPO or compliance officer</p><p>Your biggest data quality risk isn't a technical failure. It's the gap between what you think your data pipeline does and what it actually does. This paper gives you the vocabulary to have that conversation with your engineering team.</p></div></div><div><span>→</span><div><p>You are building an AI product</p><p>Article 10 of the AI Act (data governance) is consistently ranked as the most challenging requirement to implement. This research tells you exactly where other teams get stuck, so you don't have to learn the hard way.</p></div></div><div><span>→</span><div><p>Your sector is regulated (healthcare, finance, energy, HR)</p><p>If you can't demonstrate data quality governance across your entire ML pipeline, from collection to inference, you're exposed. Not just to fines, but to decisions that can't be explained or reproduced.</p></div></div></div>
+<h2 id="s5">How Cleo handles this</h2><p>This is exactly why we built Cleo the way we did. Our pipeline doesn't just check compliance at one point in time: it traces regulatory alignment across the entire data lifecycle, producing evidence that both your legal team and your engineering team can understand. If you want to see what that looks like for your stack, reply to this email or take 20 minutes with us.</p><p>Reference: Wang, Irion, Groth, Harmouch (2026), "Detective Work We Shouldn't Have to Do": Practitioner Challenges in Regulatory-Aligned Data Quality in ML Systems, arXiv:2602.05944</p>
+<h2 id="s6">Sources &amp; references</h2><ol><li><cite><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj">Regulation (EU) 2016/679: General Data Protection Regulation (GDPR)</a></cite></li><li><cite><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">Regulation (EU) 2024/1689: Artificial Intelligence Act</a></cite></li></ol>
+<h2 id="questions">Frequently asked questions</h2>
+<div class="faq" data-schema="faq" style="margin-bottom:36px">
+<details open><summary>What is regulatory-aligned data quality?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Regulatory-aligned data quality goes beyond traditional data quality metrics (completeness, consistency, accuracy). It means ensuring that every stage of your ML data pipeline, from collection to inference, meets the legal requirements of regulations like GDPR Article 5 and AI Act Article 10, including lawfulness, purpose limitation, and data minimization.</div></details>
+<details><summary>Why do existing data quality tools fail for compliance?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Existing data quality tools were designed for analytics and business intelligence, not for producing regulatory evidence. They measure technical metrics like null rates and format consistency, but they cannot assess whether data processing is lawful, whether consent was properly obtained, or whether the data minimization principle is respected throughout the ML pipeline.</div></details>
+<details><summary>What is Article 10 of the AI Act?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Article 10 of the EU AI Act sets data governance requirements for high-risk AI systems. It mandates that training, validation, and testing datasets meet specific quality criteria including relevance, representativeness, and freedom from errors. It is consistently ranked by practitioners as one of the most challenging requirements to implement in practice.</div></details>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="conteneur">
+    <h2 class="t-h1" style="margin-bottom:28px">Read next</h2>
+    <div class="sy-carrousel" data-apparait>
+      <a class="sy-carte-photo" href="blog-one-toy-two-legal-outcomes-magnetic-recalls-en.html"><img src="img:masse-pile" alt=""><span class="sy-etiquette">Product Compliance</span><b>One toy, two legal outcomes: why magnetic toys get recalled in some markets and not others</b></a>
+      <a class="sy-carte-photo" href="blog-legal-here-illegal-there-en.html"><img src="img:masse-pile" alt=""><span class="sy-etiquette">Product Compliance</span><b>8 Products That Are Legal Here, Illegal There</b></a>
+      <a class="sy-carte-photo" href="blog-trism-trust-risk-security-agentic-ai-en.html"><img src="img:masse-pile" alt=""><span class="sy-etiquette">AI</span><b>TRISM: Why Agentic AI Doesn't Have a Trust Problem; It Has an Architecture Problem</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-final-photo">
+  <figure>
+    <img src="img:classeurs" alt="">
+    <div class="sy-final-texte" data-apparait>
+      <p class="sy-etiquette">30 minutes with the team</p>
+      <h2>See what Cleo finds on your own products</h2>
+      <p>One range and two markets are enough.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Book a demo</a></div>
+    </div>
+  </figure>
+</section>
+<!--PIED-->

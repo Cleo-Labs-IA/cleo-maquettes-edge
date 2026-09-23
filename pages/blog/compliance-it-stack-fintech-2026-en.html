@@ -1,0 +1,78 @@
+<!--NAV-->
+<!-- Article porté depuis www.cleolabs.co/en/blog/compliance-it-stack-fintech-2026 le 23/09/2026 par blog/porter.mjs puis blog/fragments.mjs.
+     Titre, chapô, corps, FAQ et sources sont repris tels quels (blog-posts.json + HTML rendu). Ne pas éditer à la main : régénérer. -->
+<section class="sur-sombre section-serree bl-tete">
+  <div class="conteneur">
+    <div class="article-tete">
+      <p class="sy-surtitre">FinTech</p>
+      <h1 class="t-titre-page" style="margin:20px 0 20px">The Compliance IT Stack in 2026: Why Fintechs Need Regulatory Intelligence, Not More GRC Tools</h1>
+      <p class="t-body" style="margin:0 0 28px">GRC platforms were built for 5 regulations. Fintechs face 50+. Here's why compliance IT teams are switching to AI-powered regulatory intelligence.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <span style="display:flex;align-items:center;gap:12px"><img src="img:alex" alt="Alexandre Bloch" style="width:44px;height:44px;border-radius:50%;object-fit:cover"><span style="display:block"><span class="t-h3" style="display:block">Alexandre Bloch</span><span class="t-caption" style="display:block">CTO</span></span></span>
+        <span class="t-caption" style="padding-left:14px;border-left:1px solid var(--c-filet-sombre)"><time datetime="2026-02-27">27 February 2026</time> · 8 min read</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-bande-photo">
+  <figure>
+    <img src="img:masse-pile" alt="">
+    <div class="sy-bande-texte">
+      <p class="sy-etiquette">FinTech</p>
+    </div>
+  </figure>
+</section>
+
+<section class="section bl-corps" style="padding-top:56px">
+  <div class="conteneur">
+    <div class="corps-sommaire">
+      <nav class="sommaire">
+        <div class="titre">On this page</div>
+        <a href="#s1">The GRC gap in fintech</a>
+        <a href="#s2">The modern compliance IT stack</a>
+        <a href="#s3">Why DORA and MiCA change the equation</a>
+        <a href="#s4">Sources &amp;amp; references</a>
+        <a href="#questions">Frequently asked questions</a>
+      </nav>
+      <div class="article bl-article" style="margin:0">
+<h2 id="s1">The GRC gap in fintech</h2><p>Most fintechs start compliance with a GRC tool. It manages policies, tracks controls, and generates audit reports. But there is a critical gap: GRC platforms don't tell you which regulations apply to you. They manage compliance once you know your obligations, but discovering those obligations is still a manual, research-heavy process that takes 2-5 weeks per market.</p><p>For a payments fintech expanding into Germany, France, and Spain, that's 3 separate regulatory mapping exercises, each involving PSD2 transposition differences, local AML requirements, consumer protection variations, and DORA implementation specifics. Multiply by the number of products and the complexity explodes.</p>
+<h2 id="s2">The modern compliance IT stack</h2><p>In 2026, leading fintech compliance teams are structuring their technology stack in four layers, with regulatory intelligence as the foundation that feeds everything downstream.</p><div><div><span>01</span><h3>Regulatory Intelligence Layer</h3></div><p>The foundation of a modern compliance stack. AI-powered platforms like Cleo automatically identify which regulations apply to your specific products and markets, monitor 3,700+ sources for changes, and generate risk-scored alerts. This replaces the analyst-driven research that used to take weeks per market.</p></div><div><div><span>02</span><h3>AML/KYC Engine</h3></div><p>Transaction monitoring, sanctions screening, and customer due diligence remain critical for fintechs. Modern AML engines use machine learning to reduce false positives while maintaining high recall rates. Under AML6 and MiCA, fintechs face stricter requirements than ever.</p></div><div><div><span>03</span><h3>GRC &amp; Policy Management</h3></div><p>GRC platforms manage the downstream workflow: policies, controls, evidence collection, and audit documentation. The key shift in 2026 is that GRC tools work best when fed by upstream regulatory intelligence, turning Cleo's automated mapping into structured controls and trackable obligations.</p></div><div><div><span>04</span><h3>Integration &amp; Orchestration</h3></div><p>Compliance doesn't live in isolation. Modern stacks connect to Slack and Teams for real-time alerts, Jira for compliance task tracking, and CI/CD pipelines for automated policy checks. DORA specifically requires that ICT risk management be integrated into existing operational processes.</p></div>
+<h2 id="s3">Why DORA and MiCA change the equation</h2><p>DORA requires financial entities to maintain a comprehensive ICT risk management framework, including third-party risk registers, incident reporting protocols, and resilience testing. MiCA introduces licensing and operational requirements for crypto-asset service providers. Both regulations demand continuous monitoring and rapid response to regulatory updates.</p><div class="bl-encart"><div><p>50+</p><p>Frameworks</p></div><div><p>106</p><p>Countries</p></div><div><p>5 min</p><p>Mapping time</p></div><div><p>10x</p><p>Faster vs manual</p></div></div>
+<blockquote><p>"Cleo replaced 3 FTEs dedicated to regulatory monitoring. Our compliance team now spends time on strategy and implementation instead of research and tracking."</p><p>Head of Compliance, Series B Fintech</p></blockquote>
+<h2 id="s4">Sources &amp; references</h2><ol><li><cite><a href="https://eur-lex.europa.eu/eli/reg/2022/2554/oj">Regulation (EU) 2022/2554: Digital Operational Resilience Act (DORA)</a></cite></li><li><cite><a href="https://eur-lex.europa.eu/eli/reg/2023/1114/oj">Regulation (EU) 2023/1114: Markets in Crypto-Assets (MiCA)</a></cite></li></ol>
+<h2 id="questions">Frequently asked questions</h2>
+<div class="faq" data-schema="faq" style="margin-bottom:36px">
+<details open><summary>What is a compliance IT stack for fintechs?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">A compliance IT stack is the set of technology tools and platforms that fintech compliance teams use to manage regulatory obligations. In 2026, a modern stack typically includes: a regulatory intelligence layer (like Cleo) for automated mapping and monitoring, an AML/KYC engine for transaction screening, a GRC platform for policy management, and integration connectors (Slack, Teams, Jira) for cross-team workflows.</div></details>
+<details><summary>Why are GRC tools not enough for fintechs in 2026?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Traditional GRC tools manage policies and controls but cannot automatically identify which regulations apply to your specific products and markets. They require manual input for regulatory mapping, don't monitor regulatory changes in real time, and lack the contextual intelligence to score risks. With 50+ frameworks (DORA, MiCA, PSD2, AML6, AI Act, GDPR) evolving simultaneously, fintechs need an upstream regulatory intelligence layer that feeds actionable, company-specific insights into their GRC workflow.</div></details>
+<details><summary>How does Cleo fit into a fintech compliance IT stack?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Cleo sits at the top of the compliance stack as the regulatory intelligence layer. It automatically scans 3,700+ sources across 106 countries, maps applicable regulations to your fintech products, scores risks (0-100), and generates action cards with obligations and deadlines. Cleo feeds into your existing GRC, Slack/Teams, and ticketing systems, replacing the manual research that currently takes weeks with AI-powered analysis in minutes.</div></details>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="conteneur">
+    <h2 class="t-h1" style="margin-bottom:28px">Read next</h2>
+    <div class="sy-carrousel" data-apparait>
+      <a class="sy-carte-photo" href="blog-uk-post-brexit-compliance-2026-en.html"><img src="img:masse-pile" alt=""><span class="sy-etiquette">Compliance</span><b>UK Post-Brexit Compliance: What EU Companies Must Know in 2026</b></a>
+      <a class="sy-carte-photo" href="blog-brazil-lgpd-vs-gdpr-differences-en.html"><img src="img:masse-pile" alt=""><span class="sy-etiquette">Compliance</span><b>Brazil's LGPD vs GDPR: Key Differences for Compliance Teams</b></a>
+      <a class="sy-carte-photo" href="blog-product-compliance-checklist-fintech-eu-en.html"><img src="img:masse-pile" alt=""><span class="sy-etiquette">FinTech</span><b>Product Compliance Checklist: Launching a Fintech Product Across the EU</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-final-photo">
+  <figure>
+    <img src="img:classeurs" alt="">
+    <div class="sy-final-texte" data-apparait>
+      <p class="sy-etiquette">30 minutes with the team</p>
+      <h2>See what Cleo finds on your own products</h2>
+      <p>One range and two markets are enough.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Book a demo</a></div>
+    </div>
+  </figure>
+</section>
+<!--PIED-->

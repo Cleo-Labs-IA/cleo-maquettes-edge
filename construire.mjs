@@ -12,6 +12,7 @@ import sharp from '/Users/naomiehalioua/cleo-landing/node_modules/sharp/lib/inde
 const ICI = path.dirname(fileURLToPath(import.meta.url))
 const PUB = path.join('/Users/naomiehalioua/cleo-maquettes-edge', 'images/depot')
 const CHEMINS = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/chemins.json'), 'utf8'))
+if (fs.existsSync(path.join(ICI, 'blog/chemins-blog.json'))) Object.assign(CHEMINS.pages, JSON.parse(fs.readFileSync(path.join(ICI, 'blog/chemins-blog.json'), 'utf8')))
 /* L'hôte de production : les canonicals, les hreflang et le sitemap y pointent. Les pages d'aperçu (/apercu/…) restent hors index. */
 const HOTE = 'https://www.cleolabs.co'
 const cheminDe = n => CHEMINS.pages[n] && CHEMINS.pages[n].chemin
@@ -84,6 +85,11 @@ const PAGES = [
   // Vercel sert 404.html à la racine du dossier statique pour toute adresse inconnue.
   { fichier: '99-404.html', titre: '404', source: 'page introuvable', sortie: '404.html' },
 ]
+/* LES ARTICLES DE BLOG PORTÉS (23/09/2026, blog/porter.mjs puis blog/fragments.mjs) : une entrée par article et par
+   langue, lue dans blog/articles.json. Routes, SEO et couvertures viennent des fichiers blog/*.json, fusionnés plus bas. */
+const ARTICLES_BLOG = fs.existsSync(path.join(ICI, 'blog/articles.json')) ? JSON.parse(fs.readFileSync(path.join(ICI, 'blog/articles.json'), 'utf8')) : []
+for (const a of ARTICLES_BLOG) PAGES.push({ fichier: a.fichier, sortie: a.sortie, titre: a.titre, source: `cleolabs.co/${a.langue}/blog/${a.slug}`, en: a.langue === 'en' })
+const SORTIES = new Set(PAGES.map(p => p.sortie || p.fichier))
 
 /* Table des images : nom logique -> fichier source + largeur de rendu.
    Toute image citee dans un fragment DOIT figurer ici, sinon la
@@ -283,6 +289,7 @@ fs.mkdirSync(DOSSIER_IMAGES, { recursive: true })
 /* 16/09/2026, refonte (agent F1) : le portrait de la citation Decathlon (36 à 64 px affichés) recevait la trame et devenait
    illisible. Mesuré sur toutes les pages (scratchpad/agents/refonte/systeme/tailles-images.mjs) : seuls les logos, le logo
    Cleo et philippine s'affichent sous 120 px ; les portraits anaelle, naomie et alex étaient déjà exclus. */
+if (fs.existsSync(path.join(ICI, 'blog/images-blog.json'))) Object.assign(IMAGES, JSON.parse(fs.readFileSync(path.join(ICI, 'blog/images-blog.json'), 'utf8')))
 const GRAIN_EXCLUS = /^(rencontre-|logo-|cleo-logo$|globe-|produit-|veille-produit$|rond-|anaelle$|naomie$|alex$|darcial$|thezi$|philippine$)/
 let tuileGrainCache = null
 async function tuileGrain() {
@@ -691,6 +698,11 @@ const dossierLanes = path.join(ICI, 'commun/lanes')
 const lanesCss = fs.existsSync(dossierLanes)
   ? fs.readdirSync(dossierLanes).filter(f => f.endsWith('.css')).sort()
       .map(f => `/* ── lane ${f} ── */\n` + fs.readFileSync(path.join(dossierLanes, f), 'utf8')).join('\n')
+      /* 23/09/2026, les 262 articles de blog portés : leur body porte data-v6-page="blog-<slug>", et les calques
+         ciblent les articles page par page (12-article, 27-article-levee…). Mesuré avant ce rattachement : h1 88 px
+         au lieu de 48, chapeau 14 px au lieu de 22, sommaire bleu sur fond blanc. Chaque sélecteur qui vise 12-article
+         vise donc aussi tout blog-* : une seule feuille pour tous les articles, sans copier les règles. */
+      .replace(/\[data-v6-page="12-article"\]/g, ':is([data-v6-page="12-article"],[data-v6-page^="blog-"])')
   : ''
 /* Les commentaires des feuilles sont des notes d'atelier (mesures, sources, dont
    edgecomply.com) : ils ne sortent pas dans la page. Mesuré le 03/09/2026 : 192 mentions
@@ -820,11 +832,12 @@ for (const bloc of brutVignettes.split(/<!--VIGNETTE:/).slice(1)) {
 function jumeauLangue(nom) {
   const jum = nom.endsWith('-en.html') ? nom.replace(/-en\.html$/, '.html')
                                        : nom.replace(/\.html$/, '-en.html')
-  return fs.existsSync(path.join(ICI, 'pages', jum)) ? jum : null
+  return (SORTIES.has(jum) || fs.existsSync(path.join(ICI, 'pages', jum))) ? jum : null
 }
 
 const notesSeo = []   // les notes de la couche de tete, PAS le journal des controles
 const SEO = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/seo.json'), 'utf8'))
+if (fs.existsSync(path.join(ICI, 'blog/seo-blog.json'))) { const b = JSON.parse(fs.readFileSync(path.join(ICI, 'blog/seo-blog.json'), 'utf8')); Object.assign(SEO.pages, b.pages); Object.assign(SEO.structure, b.structure) }
 const sansNotes = (o, langue) => {
   if (Array.isArray(o)) return o.map(x => sansNotes(x, langue))
   if (o && typeof o === 'object') {
@@ -1121,7 +1134,7 @@ ${corps}
      que le portage garde les memes adresses. Les ancres sont preservees. */
   /* Depuis le 15/09/2026 l'accueil est la page 43 : tout lien vers l'ancien accueil (logo, pied, 404, campagne) mène au nouveau. */
   const ACCUEIL_ALIAS = { '01-accueil.html': '43-accueil-avant-vendre.html', '01-accueil-en.html': '43-accueil-avant-vendre-en.html' }
-  doc = doc.replace(/href="(\d\d-[a-z0-9-]+\.html)(#[^"]*)?"/g, (tout, fichier, ancre) => {
+  doc = doc.replace(/href="((?:\d\d-|blog-)[a-z0-9-]+\.html)(#[^"]*)?"/g, (tout, fichier, ancre) => {
     const c = CHEMINS.pages[ACCUEIL_ALIAS[fichier] || fichier]
     return c ? `href="${c.chemin}${ancre || ''}"` : tout
   })
