@@ -25,7 +25,12 @@ const V6_ROUTES = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/v6-routes.js
    cleo-landing soit réglée sur « Only Preview Deployments » (sinon l'alias répond 302 vers la connexion Vercel). */
 const REDIRECTIONS_HERITEES = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/redirections-heritees.json'), 'utf8')).regles
 const ANCIEN_SITE = 'https://cleo-landing-naomie-7307s-projects.vercel.app'
-const RELAIS_ANCIEN_SITE = ['/api/:path*', '/legal-data/:path*', '/legal-data-static/:path*'].map(s => ({ source: s, destination: ANCIEN_SITE + s }))
+const RELAIS_ANCIEN_SITE = ['/api/:path*'].map(s => ({ source: s, destination: ANCIEN_SITE + s }))
+/* Le portail Legal Data (docs, playground, coverage, status) vit sur legaldata-public.cleolabs.co. Mesuré le 23/09/2026 :
+   relayé vers l'alias de cleo-landing, /legal-data/docs répond 307 vers /fr/legal-data/docs, qui n'existe pas. On y va donc
+   directement, en 308, avec le chemin conservé. Les pages /fr/legal-data et /en/legal-data restent des pages d'ici. */
+const VERS_PORTAIL_LEGAL = [{ source: '/legal-data/:path+', destination: 'https://legaldata-public.cleolabs.co/:path+', permanent: true },
+  { source: '/legal-data-static/:path+', destination: 'https://legaldata-public.cleolabs.co/legal-data-static/:path+', permanent: true }]
 /* L'image de partage social : la même que le site en ligne (public/og-image.jpg, 1200 × 630), servie ici à la
    racine pour que le lien ne dépende plus de l'ancien projet. Toute page publique la déclare, sauf fiche SEO qui en porte une autre. */
 const OG_IMAGE_SOURCE = '/Users/naomiehalioua/cleo-landing/public/og-image.jpg'
@@ -1257,10 +1262,14 @@ fs.writeFileSync(path.join(ICI, 'sortie', 'vercel.json'), JSON.stringify({
     { source: '/fr/platform', destination: '/fr/platform/compliance-service', permanent: true },
     { source: '/fr/platform/research', destination: '/fr/platform/compliance-service', permanent: true },
     { source: '/fr/platform/regulations', destination: '/fr/data', permanent: true },
-    ...REDIRECTIONS_HERITEES.filter(r => !reecritures.some(w => w.source === r.source)).map(r => ({ source: r.source, destination: r.destination, permanent: true }))],
+    ...REDIRECTIONS_HERITEES.filter(r => !reecritures.some(w => w.source === r.source)).map(r => ({ source: r.source, destination: r.destination, permanent: true })),
+    ...VERS_PORTAIL_LEGAL],
   rewrites: [...reecritures, ...RELAIS_ANCIEN_SITE]
 }, null, 2))
-console.log(`  ${REDIRECTIONS_HERITEES.length} redirections héritées du site en ligne (308), ${RELAIS_ANCIEN_SITE.length} relais vers l'ancien site`)
+console.log(`  ${REDIRECTIONS_HERITEES.length} redirections héritées du site en ligne (308), ${RELAIS_ANCIEN_SITE.length} relais vers l'ancien site, ${VERS_PORTAIL_LEGAL.length} vers le portail Legal Data`)
+/* Une page retirée du registre ne doit pas survivre dans sortie/ d'un build à l'autre (mesuré le 23/09/2026 : sept
+   anciennes pages d'articles faites main restaient servies à leur nom de fichier). */
+for (const f of fs.readdirSync(path.join(ICI, 'sortie'))) if (f.endsWith('.html') && !construites.includes(f)) { fs.unlinkSync(path.join(ICI, 'sortie', f)); console.log(`  purgé : ${f} (plus au registre)`) }
 console.log(`  ${reecritures.length} URL propres, calquees sur les routes de www.cleolabs.co`)
 console.log(`  robots.txt + sitemap.xml + vercel.json : ${publiques.length} pages indexables, /apercu hors index`)
 
