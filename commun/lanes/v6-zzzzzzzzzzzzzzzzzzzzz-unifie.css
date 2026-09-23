@@ -179,3 +179,39 @@ html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-re
   html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-final{padding-top:64px !important;padding-bottom:64px !important}
   html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .section{padding-top:72px;padding-bottom:72px}
 }
+
+/* ── Téléphone et tablette (< 1180 px), 23/09/2026 soir, Naomie : « retire l'animation dans 01 en responsive sinon ça casse,
+   et le menu de la navbar responsive ne veut rien dire ». ──
+   Scène 01 : plus aucune animation au défilement sous 1180 px (acMonteVue faisait glisser étapes et cellules de 32 px),
+   la photo de fond disparaît (elle dépassait au-dessus du dossier), le dossier se pose simplement sous les étapes. */
+@media (max-width:1179px){
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-scene :is(.ac-etape,.ac-etape > span,.ac-exigence-grille > div,.ac-app,.ac-media-photo,.ac-etapes::after,.ac-app-avance i){animation:none !important;translate:none !important;transform:none !important;opacity:1 !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-scene{height:auto !important;view-timeline-name:none}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-scene-collant{position:static !important;height:auto !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-atelier{position:static !important;padding-block:0 !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-media{position:relative;min-height:0;margin-top:24px}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-media-photo{display:none !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-app{position:relative !important;inset:auto !important;margin:0 auto !important;width:100% !important;max-width:520px}
+}
+/* Menu du téléphone : une hiérarchie lisible. Titre de groupe en petites capitales grises (lien vers la page générale
+   pour Services et Data), entrées blanches serrées, un filet entre les groupes, l'action en bas. */
+@media (max-width:1179px){
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .menu-mobile{padding:4px 20px 40px !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .menu-mobile .mm-groupe{padding:14px 0 10px;margin:0;border:0;border-bottom:1px solid rgba(255,255,255,.1)}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .menu-mobile .mm-titre,
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .menu-mobile .mm-titre a{display:block;font-size:.75rem !important;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5) !important;padding:0 0 6px !important;margin:0}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .menu-mobile .mm-titre a::after{content:" \2192";letter-spacing:0}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .menu-mobile .mm-groupe > a{display:block;font-size:1.0625rem !important;line-height:1.3;padding:8px 0 !important;margin:0;color:#FFFFFF !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .menu-mobile .mm-groupe > a:only-child{font-weight:500;padding:6px 0 !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .menu-mobile .mm-actions{padding-top:20px;margin:0;border:0}
+}
+
+/* ── Épure au téléphone, 23/09/2026 soir, Naomie : « épure un peu dans le responsive, c'est pas grave s'il y a moins,
+   il faut les infos direct ». Sous 760 px, ce qui est décoratif disparaît : la phrase-manifeste plein écran, la roue
+   des catégories, les photos des cartes « Par où commencer ». Le texte utile, les étapes, les prix, la FAQ restent. */
+@media (max-width:760px){
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-manifeste-scene{display:none !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-roue-bloc{display:none !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-besoin-img{display:none !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-logos{padding-top:40px;padding-bottom:40px}
+}
