@@ -24,7 +24,7 @@ const V6_ROUTES = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/v6-routes.js
    et le portail Legal Data continuent de marcher. Ce relais exige que la protection de déploiement de
    cleo-landing soit réglée sur « Only Preview Deployments » (sinon l'alias répond 302 vers la connexion Vercel). */
 const REDIRECTIONS_HERITEES = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/redirections-heritees.json'), 'utf8')).regles
-const ANCIEN_SITE = 'https://cleo-landing-naomie-7307s-projects.vercel.app'
+const ANCIEN_SITE = 'https://cleo-landing-cleo-academys-projects.vercel.app' // le projet cleo-landing relié à GitHub, équipe cleo-academys-projects, celui qui servait www ; l'homonyme de naomie-7307 est une copie orpheline de 146 jours
 const RELAIS_ANCIEN_SITE = ['/api/:path*'].map(s => ({ source: s, destination: ANCIEN_SITE + s }))
 /* Le portail Legal Data (docs, playground, coverage, status) vit sur legaldata-public.cleolabs.co. Mesuré le 23/09/2026 :
    relayé vers l'alias de cleo-landing, /legal-data/docs répond 307 vers /fr/legal-data/docs, qui n'existe pas. On y va donc
