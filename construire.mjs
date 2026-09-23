@@ -113,6 +113,14 @@ const IMAGES = {
   'chercheuse-2':     ['researcher-2.webp', 560],
   'equipe':           ['team.webp', 900],
   'station-f':        ['apropos-station-f.jpg', 1100],
+  /* 23/09/2026, Naomie : « À propos, toutes les images de la rencontre ». Les cinq photos DÉJÀ publiées sur
+     www.cleolabs.co/fr/event (dépôt cleo-landing), lues par chemin absolu : elles n'entrent pas dans ce dépôt public.
+     Les 95 autres photos de la soirée restent hors ligne (participants tiers, badges lisibles : accord à obtenir). */
+  'rencontre-keynote': ['/Users/naomiehalioua/cleo-landing/public/events/product-safety-ai-brussels-2026/01-keynote.jpg', 1200],
+  'rencontre-salle': ['/Users/naomiehalioua/cleo-landing/public/events/product-safety-ai-brussels-2026/02-salle.jpg', 1200],
+  'rencontre-anaelle': ['/Users/naomiehalioua/cleo-landing/public/events/product-safety-ai-brussels-2026/03-anaelle.jpg', 1200],
+  'rencontre-coupe': ['/Users/naomiehalioua/cleo-landing/public/events/product-safety-ai-brussels-2026/04-coupe.jpg', 1200],
+  'rencontre-verre': ['/Users/naomiehalioua/cleo-landing/public/events/product-safety-ai-brussels-2026/05-verre-cleo.jpg', 1200],
   'paris':            ['cleo-paris.webp', 1000],
   'philippine':       ['philippine-tamic.jpg', 900],
   'anaelle':          ['author-anaelle.png', 200, 'png'],
@@ -275,7 +283,7 @@ fs.mkdirSync(DOSSIER_IMAGES, { recursive: true })
 /* 16/09/2026, refonte (agent F1) : le portrait de la citation Decathlon (36 à 64 px affichés) recevait la trame et devenait
    illisible. Mesuré sur toutes les pages (scratchpad/agents/refonte/systeme/tailles-images.mjs) : seuls les logos, le logo
    Cleo et philippine s'affichent sous 120 px ; les portraits anaelle, naomie et alex étaient déjà exclus. */
-const GRAIN_EXCLUS = /^(logo-|cleo-logo$|globe-|produit-|veille-produit$|rond-|anaelle$|naomie$|alex$|darcial$|thezi$|philippine$)/
+const GRAIN_EXCLUS = /^(rencontre-|logo-|cleo-logo$|globe-|produit-|veille-produit$|rond-|anaelle$|naomie$|alex$|darcial$|thezi$|philippine$)/
 let tuileGrainCache = null
 async function tuileGrain() {
   if (!tuileGrainCache) tuileGrainCache = await sharp(Buffer.from('<svg xmlns="http://www.w3.org/2000/svg" width="4" height="4"><rect width="4" height="4" fill="#15162E"/><circle cx="2" cy="2" r="1.55" fill="#FFFFFF"/></svg>')).png().toBuffer()
@@ -295,7 +303,8 @@ async function cheminImage(nom, largeurDemandee, auDelaDuPlafond) {
   const entree = IMAGES[nom]
   if (!entree) throw new Error(`IMAGE INCONNUE : "${nom}" — ajoute-la dans la table IMAGES`)
   const [rel, largeurTable, format] = entree
-  const abs = rel.startsWith('local/') ? path.join(LOCAL, rel.slice(6)) : path.join(PUB, rel)
+  /* Un chemin absolu désigne un fichier hors de tout dépôt (photos de personnes : jamais sur GitHub, le dépôt est public). */
+  const abs = rel.startsWith('/') ? rel : rel.startsWith('local/') ? path.join(LOCAL, rel.slice(6)) : path.join(PUB, rel)
   if (!fs.existsSync(abs)) throw new Error(`IMAGE ABSENTE : ${abs}`)
   let plafond = largeurTable
   if (auDelaDuPlafond && format !== 'svg') plafond = (await sharp(abs).metadata()).width || largeurTable

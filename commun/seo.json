@@ -957,16 +957,16 @@
    "_mesure": "titre 54 caractères, description 146 caractères"
   },
   "53-data-plateforme.html": {
-   "titre": "Plateforme de recherche réglementaire produit | Cleo Labs",
-   "description": "Cherchez dans les textes qui visent vos produits et suivez ceux qui changent, dans 106 pays.",
+   "titre": "Veille réglementaire produit : la plateforme | Cleo Labs",
+   "description": "La veille réglementaire produit : les textes qui visent vos produits et ceux qui changent, suivis dans 106 pays.",
    "source": "redige",
    "url_source": null,
    "appui_contenu": "16/09/2026, agent D : structure de moonlit.ai (connect, mcp, platform) ; faits dans scratchpad/agents/refonte/identite-data/faits.md.",
    "_mesure": "titre 57 caractères, description 92 caractères"
   },
   "53-data-plateforme-en.html": {
-   "titre": "Product regulatory research platform | Cleo Labs",
-   "description": "Search the texts that apply to your products and follow the ones that change, across 106 countries.",
+   "titre": "Product regulatory monitoring platform | Cleo Labs",
+   "description": "Product regulatory monitoring: the texts that apply to your products and the ones that change, tracked across 106 countries.",
    "source": "redige",
    "url_source": null,
    "appui_contenu": "16/09/2026, agent D : structure de moonlit.ai (connect, mcp, platform) ; faits dans scratchpad/agents/refonte/identite-data/faits.md.",
