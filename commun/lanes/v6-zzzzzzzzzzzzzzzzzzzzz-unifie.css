@@ -62,3 +62,8 @@ html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main :is(.s
 @media (max-width:1179px), (prefers-reduced-motion:reduce){
   html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-etape > span{color:#000000 !important}
 }
+
+/* LOGOS CLIENTS — mesuré le 23/09/2026 : sur À propos, Secteur et les pages d'audience, les logos
+   restaient en grayscale(1), donc noirs sur fond noir (Electrolux et Mercedes invisibles), alors que
+   l'accueil les passe en blanc (brightness(0) invert(1)). Une seule règle pour toutes les bandes. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] :is(.ap-logos, .bande-logos, .ac-logos, .ac-logos-imgs, .hq-logos-imgs) img:not(.nav-logo img){filter:brightness(0) invert(1) !important; opacity:.9 !important}
