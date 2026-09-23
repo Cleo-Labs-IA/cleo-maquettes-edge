@@ -25,13 +25,13 @@
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(.sy-surtitre, .ac-surtitre, .sy-etiquette, .ac-puce, .ac-etat, .ac-fichier, .ac-app-surtitre, .ac-exigence-grille small, .ac-exigence-tete span):not(#_):not(#_):not(#_):not(#__){font-size:12px !important}
 
   /* ── 4. Les titres de carte et les questions : leur 18 px ──────────────────────────────────────────── */
-  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(h3, summary, .ac-exigence-tete b):not(#_):not(#_):not(#_):not(#__){font-size:18px !important}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(h3, summary, .ac-exigence-tete b):not(#_):not(#_):not(#_):not(#__){font-size:1rem !important}
 
   /* ── 5. On rend leur taille aux éléments d'AFFICHAGE, que les règles ci-dessus viennent d'écraser ──── */
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-phrase span:not(#_):not(#_):not(#_):not(#__){font-size:inherit !important}
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-roue-liste li:not(#_):not(#_):not(#_):not(#__){font-size:36px !important}
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(.ac-lead, .ac-atelier-lead, .sy-chapitre-lead):not(#_):not(#_):not(#_):not(#__){font-size:22px !important}
-  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-chiffre-raye:not(#_):not(#_):not(#_):not(#__){font-size:71px !important}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-chiffre-raye:not(#_):not(#_):not(#_):not(#__){font-size:72px !important}
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-bento-creme span:not(#_):not(#_):not(#_):not(#__){font-size:14px !important}
 }
 

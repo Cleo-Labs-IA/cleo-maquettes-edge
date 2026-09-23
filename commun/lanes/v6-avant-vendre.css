@@ -8,7 +8,7 @@ body[data-cleo-ds="v6"] .pa-colonnes h4{margin:0 0 16px;font-size:.75rem;font-we
 body[data-cleo-ds="v6"] .pa-colonnes ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:.875rem;color:#1A1A1A}
 body[data-cleo-ds="v6"] .pa-colonnes a{color:#1A1A1A}
 body[data-cleo-ds="v6"] .pa-colonnes a:hover{text-decoration:underline;text-underline-offset:4px}
-body[data-cleo-ds="v6"] .pa-bas{display:flex;align-items:center;gap:12px 28px;flex-wrap:wrap;margin-top:56px;padding-top:24px;border-top:1px solid rgba(26,26,26,.10);font-size:.8125rem;color:rgb(115,115,115)}
+body[data-cleo-ds="v6"] .pa-bas{display:flex;align-items:center;gap:12px 28px;flex-wrap:wrap;margin-top:56px;padding-top:24px;border-top:1px solid rgba(26,26,26,.10);font-size:0.875rem;color:rgb(115,115,115)}
 body[data-cleo-ds="v6"] .pa-bas img{height:20px;width:auto;margin-right:auto}
 body[data-cleo-ds="v6"] .pa-bas a{color:rgb(115,115,115)}
 @media (max-width:980px){

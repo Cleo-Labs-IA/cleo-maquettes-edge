@@ -24,8 +24,8 @@ body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"],
   /* ── Le champ « dites-nous ce que vous voulez faire » (Moonlit Connect) ── */
   & main .dt-besoin:not(#_):not(#_){display:flex;flex-direction:column;gap:0;margin:0;padding:var(--p-carte) !important}
   & main h2.dt-besoin-titre:not(#_):not(#_):not(#_){margin:0 !important;font-size:var(--t-h3) !important;line-height:var(--t-h3-lh) !important;letter-spacing:var(--t-h3-ls) !important;font-weight:500 !important;color:var(--c-texte) !important}
-  & main .dt-besoin-texte:not(#_):not(#_){margin:10px 0 20px;font-size:.9375rem;line-height:1.5;color:var(--c-texte-2)}
-  & main .dt-besoin :is(textarea, input):not(#_):not(#_){box-sizing:border-box;width:100%;margin:0;padding:12px 14px;border:1px solid var(--c-filet);border-radius:var(--r-petit);background:var(--c-fond);font:inherit;font-size:.9375rem;line-height:1.5;color:var(--c-texte);resize:vertical}
+  & main .dt-besoin-texte:not(#_):not(#_){margin:10px 0 20px;font-size:0.875rem;line-height:1.5;color:var(--c-texte-2)}
+  & main .dt-besoin :is(textarea, input):not(#_):not(#_){box-sizing:border-box;width:100%;margin:0;padding:12px 14px;border:1px solid var(--c-filet);border-radius:var(--r-petit);background:var(--c-fond);font:inherit;font-size:0.875rem;line-height:1.5;color:var(--c-texte);resize:vertical}
   & main .dt-besoin :is(textarea, input):focus-visible:not(#_):not(#_){outline:2px solid var(--c-accent);outline-offset:1px;border-color:transparent}
   & main .dt-besoin :is(textarea, input)::placeholder{color:var(--c-texte-3)}
   & main .dt-besoin-ligne:not(#_):not(#_){display:flex;gap:8px;margin-top:8px}
@@ -50,22 +50,22 @@ body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"],
   & main .dt-code:not(#_):not(#_){box-sizing:border-box;width:100%;border-radius:var(--r-petit);background:var(--c-texte);color:#FFFFFF;overflow:clip}
   & main .dt-code-tete:not(#_):not(#_){display:flex;align-items:center;gap:6px;margin:0;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.12);font-size:var(--t-legende);color:rgba(255,255,255,.6)}
   & main .dt-code-tete::before{content:"";width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.28);box-shadow:14px 0 0 rgba(255,255,255,.2), 28px 0 0 rgba(255,255,255,.12);margin-right:36px}
-  & main .dt-code pre:not(#_):not(#_){margin:0;padding:14px 16px 16px;overflow-x:auto;font:inherit;font-size:.8125rem;line-height:1.6;font-variant-numeric:tabular-nums;white-space:pre;color:rgba(255,255,255,.88)}
+  & main .dt-code pre:not(#_):not(#_){margin:0;padding:14px 16px 16px;overflow-x:auto;font:inherit;font-size:0.875rem;line-height:1.6;font-variant-numeric:tabular-nums;white-space:pre;color:rgba(255,255,255,.88)}
   & main .dt-code code:not(#_):not(#_){font:inherit;background:none;padding:0;color:inherit}
   /* La liste des clients (Moonlit : les connecteurs) */
   & main .dt-clients:not(#_):not(#_){box-sizing:border-box;width:100%;border-radius:var(--r-petit);background:var(--c-carte);box-shadow:0 0 0 1px var(--c-filet)}
   & main .dt-clients-tete:not(#_):not(#_){display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:4px 12px;margin:0;padding:12px 16px;border-bottom:1px solid var(--c-filet);font-size:var(--t-legende);color:var(--c-texte-3)}
   & main .dt-clients-tete code:not(#_):not(#_){font:inherit;font-size:var(--t-legende);color:var(--c-texte);background:none;padding:0;word-break:break-all}
   & main .dt-clients ul:not(#_):not(#_){margin:0;padding:0;list-style:none}
-  & main .dt-clients li:not(#_):not(#_){display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 16px;border-bottom:1px solid var(--c-filet);font-size:.9375rem}
+  & main .dt-clients li:not(#_):not(#_){display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 16px;border-bottom:1px solid var(--c-filet);font-size:0.875rem}
   & main .dt-clients li:last-child:not(#_):not(#_){border-bottom:0}
   & main .dt-clients li b:not(#_):not(#_){font-weight:500;color:var(--c-texte)}
-  & main .dt-clients li span:not(#_):not(#_){padding:2px 8px;border-radius:var(--r-petit);background:var(--c-fond-2);font-size:11px;font-weight:500;letter-spacing:.06em;color:var(--c-texte-2)}
+  & main .dt-clients li span:not(#_):not(#_){padding:2px 8px;border-radius:var(--r-petit);background:var(--c-fond-2);font-size:0.75rem;font-weight:500;letter-spacing:.06em;color:var(--c-texte-2)}
   & main .dt-clients-tous b:not(#_):not(#_){color:var(--c-texte-2) !important}
 
   /* ── Listes courtes (Moonlit : le tiret long ; ici un filet de 10 px, jamais de tiret cadratin dans le texte) ── */
   & main .dt-liste:not(#_):not(#_){margin:20px 0 0;padding:0;list-style:none}
-  & main .dt-liste li:not(#_):not(#_){position:relative;margin:0;padding:6px 0 6px 22px;font-size:.9375rem;line-height:1.45;color:var(--c-texte-2)}
+  & main .dt-liste li:not(#_):not(#_){position:relative;margin:0;padding:6px 0 6px 22px;font-size:0.875rem;line-height:1.45;color:var(--c-texte-2)}
   & main .dt-liste li::before{content:"";position:absolute;left:0;top:1.02em;width:10px;height:1px;background:currentColor;opacity:.6}
 
   /* ── La traçabilité, bloc sombre (seule zone #08093B de la page ; fond posé par sy-sombre) ── */
@@ -78,7 +78,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"],
   & main .dt-panneau-note:not(#_):not(#_){font-size:var(--t-legende);letter-spacing:.02em;color:rgba(255,255,255,.52)}
   & main .dt-panneau-note:first-child:not(#_):not(#_){margin-bottom:14px !important}
   & main .dt-panneau-note:last-child:not(#_):not(#_){margin-top:14px !important}
-  & main .dt-panneau-ligne:not(#_):not(#_){display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--r-petit);background:rgba(255,255,255,.08);font-size:.9375rem;line-height:1.4;color:#FFFFFF;font-variant-numeric:tabular-nums}
+  & main .dt-panneau-ligne:not(#_):not(#_){display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--r-petit);background:rgba(255,255,255,.08);font-size:0.875rem;line-height:1.4;color:#FFFFFF;font-variant-numeric:tabular-nums}
   & main .dt-panneau-question i:not(#_):not(#_){flex:none;width:7px;height:7px;border-radius:50%;background:#FFFFFF}
   & main .dt-panneau-fleche:not(#_):not(#_){padding:8px 0 8px 2px;font-size:var(--t-legende);letter-spacing:.02em;color:rgba(255,255,255,.62)}
   & main .dt-panneau-fleche::before{content:"↓";margin-right:8px}
@@ -107,7 +107,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"],
   & main .dt-es:not(#_):not(#_){width:100%;margin:20px 0 0;padding:0}
   & main .dt-es > div:not(#_):not(#_){display:grid;grid-template-columns:112px minmax(0,1fr);gap:12px;padding:10px 0;border-top:1px solid var(--c-filet)}
   & main .dt-es dt:not(#_):not(#_){font-size:var(--t-legende);font-weight:500;line-height:1.45;color:var(--c-texte)}
-  & main .dt-es dd:not(#_):not(#_){margin:0;font-size:.9375rem;line-height:1.45;color:var(--c-texte-2)}
+  & main .dt-es dd:not(#_):not(#_){margin:0;font-size:0.875rem;line-height:1.45;color:var(--c-texte-2)}
 
   /* Le dépliant des cartes API (18/09/2026) : leurs cartes portent un titre, une ligne et un lien ; les
      nôtres portaient 99 mots. Le détail n'est pas coupé, il est replié. Fermé, la carte montre le titre,
@@ -125,10 +125,10 @@ body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"],
   & main .dt-usage > li:not(#_):not(#_){display:flex;flex-direction:column;align-items:flex-start;margin:0;padding:var(--p-carte);border-radius:var(--r-carte);background:var(--c-carte);box-shadow:0 0 0 1px var(--c-filet)}
   & main .dt-usage > li > b:not(#_):not(#_){font-size:var(--t-h2);line-height:1;letter-spacing:var(--t-h2-ls);font-weight:500;font-variant-numeric:tabular-nums;color:var(--c-texte)}
   & main .dt-usage > li > span:not(#_):not(#_){margin-top:8px;font-size:var(--t-legende);font-weight:500;letter-spacing:.04em;color:var(--c-accent)}
-  & main .dt-usage > li > p:not(#_):not(#_){margin:16px 0 0;font-size:.9375rem;line-height:1.45;color:var(--c-texte-2)}
+  & main .dt-usage > li > p:not(#_):not(#_){margin:16px 0 0;font-size:0.875rem;line-height:1.45;color:var(--c-texte-2)}
   & main .dt-tarifs:not(#_):not(#_){display:grid;grid-template-columns:repeat(4, minmax(0, 1fr));gap:var(--e-bento)}
-  & main .dt-tarif .dt-offre-grand:not(#_):not(#_){font-size:clamp(2rem, 1.3rem + 1.1vw, 2.625rem);white-space:nowrap}
-  & main .dt-tarif .dt-offre-grand small:not(#_):not(#_){margin-left:4px;font-size:.9375rem;font-weight:400;letter-spacing:0;color:var(--c-texte-3)}
+  & main .dt-tarif .dt-offre-grand:not(#_):not(#_){font-size:2.25rem;white-space:nowrap}
+  & main .dt-tarif .dt-offre-grand small:not(#_):not(#_){margin-left:4px;font-size:0.875rem;font-weight:400;letter-spacing:0;color:var(--c-texte-3)}
   & main .dt-tarif .dt-offre-texte:not(#_):not(#_){min-height:4.4em}
   & main .dt-bientot:not(#_):not(#_){display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:var(--e-bento)}
   & main .dt-bientot .dt-pilier h3:not(#_):not(#_){margin-top:12px}

@@ -197,7 +197,7 @@
 /* Retour à l'essentiel, 03/09 13:30 : le globe, le grand portrait et la carte large
    reviennent tels quels. Trois restes mesurés après : « US » / « UE » à 12 px dans la
    fiche, le lien du témoignage à 24 px de haut, les villes du globe à 13 px sur téléphone. */
-.fiche-entete-pays span{font-size:0.8125rem}
+.fiche-entete-pays span{font-size:0.875rem}
 .duo-temoin a.t-body{padding:10px 0; margin-top:18px}
 @media (max-width:640px){ .fiche-entete-pays span{font-size:0.875rem} .hero-globe .gp-nom{font-size:14px} }
 
@@ -224,7 +224,7 @@
   transition:opacity 0.4s ease-out, border-color 0.3s ease-out, box-shadow 0.3s ease-out}
 .radar-autorite{display:block; font-size:0.75rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--c-text-3)}
 .radar-texte{display:block; font-size:0.875rem; line-height:1.4; color:var(--c-text); margin-top:3px}
-.radar-etat{display:block; font-size:0.8125rem; margin-top:6px; min-height:1.3em; color:var(--c-text-3)}
+.radar-etat{display:block; font-size:0.875rem; margin-top:6px; min-height:1.3em; color:var(--c-text-3)}
 .radar-source.actif{opacity:1; border-color:var(--c-blue); box-shadow:0 0 0 3px var(--c-blue-light), var(--shadow-md)}
 .radar-source.touche{opacity:1; border-color:var(--c-border)}
 .radar-source.touche .radar-etat{color:var(--c-blue); font-weight:500}
@@ -234,11 +234,11 @@
 .radar-produit{display:flex; align-items:center; gap:14px; padding:14px}
 .radar-produit img{width:72px; height:72px; object-fit:contain; background:var(--c-surface); border-radius:var(--r-sm); padding:6px; flex:none}
 .radar-nom{font-weight:600; color:var(--c-ink)}
-.radar-ref{font-size:0.8125rem; color:var(--c-text-3)}
+.radar-ref{font-size:0.875rem; color:var(--c-text-3)}
 .radar-ligne{display:none; justify-content:space-between; align-items:center; gap:10px; padding:10px 14px; font-size:0.875rem; color:var(--c-text-2); border-top:1px solid var(--c-border)}
 .radar-ligne.vu{display:flex; animation:radar-arrive 0.45s var(--ease-reveal)}
 @keyframes radar-arrive{from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none}}
-.radar-compte{padding:10px 14px; border-top:1px solid var(--c-border); background:var(--c-surface); font-size:0.8125rem; color:var(--c-text-2)}
+.radar-compte{padding:10px 14px; border-top:1px solid var(--c-border); background:var(--c-surface); font-size:0.875rem; color:var(--c-text-2)}
 .radar-compte b{color:var(--c-ink); font-weight:600}
 .radar-legende{max-width:720px; margin:14px auto 0}
 .radar-points{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:32px; margin-top:48px}
@@ -268,8 +268,8 @@
 .hs-item:hover{border-color:rgba(255,255,255,0.3); background:rgba(255,255,255,0.08)}
 .hs-item > span:last-child{min-width:0}
 .hs-ico{flex:none; width:36px; height:36px; border-radius:var(--r-sm); background:rgba(255,255,255,0.08); color:#fff; display:grid; place-items:center}
-.hs-item b{display:block; font-size:0.9375rem; font-weight:500; line-height:1.3; color:#fff}
-.hs-item i{display:block; font-style:normal; font-size:0.8125rem; line-height:1.5; color:var(--c-text-on-dark-2); margin-top:4px}
+.hs-item b{display:block; font-size:0.875rem; font-weight:500; line-height:1.3; color:#fff}
+.hs-item i{display:block; font-style:normal; font-size:0.875rem; line-height:1.5; color:var(--c-text-on-dark-2); margin-top:4px}
 @media (max-width:1024px){ .hero-securite-grille{grid-template-columns:repeat(2,minmax(0,1fr))} .hero-securite{margin-top:40px} }
 @media (max-width:640px){ .hero-securite-grille{grid-template-columns:minmax(0,1fr)} .hs-item i{font-size:0.875rem} }
 /* Téléphone : rien sous 14 px dans l'écran (le sélecteur de langue et le globe ont leurs
@@ -288,8 +288,8 @@
    chiffres canon en tête de la scène, la colonne de gauche dite « agrégée depuis ». */
 .radar-stats{grid-column:1 / -1; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:12px; margin-bottom:22px; padding-bottom:22px; border-bottom:1px solid var(--c-border)}
 .radar-stats > div{min-width:0}
-.radar-stats b{display:block; font-size:1.625rem; font-weight:500; letter-spacing:-0.02em; line-height:1.1; color:var(--c-ink)}
-.radar-stats span{display:block; font-size:0.8125rem; color:var(--c-text-3); margin-top:4px}
+.radar-stats b{display:block; font-size:1.5rem; font-weight:500; letter-spacing:-0.02em; line-height:1.1; color:var(--c-ink)}
+.radar-stats span{display:block; font-size:0.875rem; color:var(--c-text-3); margin-top:4px}
 @media (max-width:760px){ .radar-stats{grid-template-columns:repeat(2,minmax(0,1fr))} .radar-stats b{font-size:1.375rem} .radar-stats span{font-size:0.875rem} }
 
 /* ── Compliance as a service, épuré (03/09, 14:55) : trois étapes sans paragraphe, et
@@ -297,13 +297,13 @@
       signe. Le bleu = la part de l'agent (action), l'encre = la part signée. ── */
 .flux-epure .flux-etape{padding-bottom:26px}
 .flux-epure .flux-etape .t-h2{margin-bottom:6px}
-.flux-part{font-size:0.8125rem; color:var(--c-text-3)}
+.flux-part{font-size:0.875rem; color:var(--c-text-3)}
 .flux-partage{max-width:760px; margin:8px auto 0; padding:6px 0 0}
 .fp-barre{display:flex; height:10px; border-radius:var(--r-pill); overflow:hidden; background:var(--c-field-pale)}
 .fp-agent{width:80%; background:var(--c-blue); transform-origin:left; transform:scaleX(0); transition:transform 0.9s var(--ease-reveal)}
 .fp-expert{width:20%; background:var(--c-ink); transform-origin:left; transform:scaleX(0); transition:transform 0.5s var(--ease-reveal) 0.9s}
 .flux-partage.vu .fp-agent,.flux-partage.vu .fp-expert{transform:none}
-.fp-legende{display:flex; justify-content:space-between; gap:16px; margin-top:12px; font-size:0.9375rem; color:var(--c-text-2)}
+.fp-legende{display:flex; justify-content:space-between; gap:16px; margin-top:12px; font-size:0.875rem; color:var(--c-text-2)}
 .fp-legende b{color:var(--c-ink); font-weight:600}
 .fp-legende span:last-child{text-align:right}
 @media (max-width:640px){ .fp-legende{flex-direction:column; gap:6px} .fp-legende span:last-child{text-align:left} }

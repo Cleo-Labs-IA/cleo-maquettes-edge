@@ -111,7 +111,7 @@ body[data-cleo-ds="v6"] main :is(.sy-sur-profond, .tk-photo, .en-hero, .tk-ongle
 body[data-cleo-ds="v6"] main :is(.sy-sur-profond, .tk-photo, .en-hero, .tk-onglets, .sc-tarifs-volume) :is(.sy-bouton-secondaire, .btn-contour, .sc-bouton-clair, .dd-bouton-clair):not(#_):not(#_){color:#FFFFFF !important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.3) !important}
 
 /* Lien d'action. */
-body[data-cleo-ds="v6"] main :is(.sy-lien, .cta-texte):not(#_):not(#_){display:inline-flex;align-items:center;gap:8px;padding:0;border:0;background:none;font-size:.9375rem !important;font-weight:500 !important;letter-spacing:0 !important;text-transform:none !important;color:var(--c-texte) !important;text-decoration:none}
+body[data-cleo-ds="v6"] main :is(.sy-lien, .cta-texte):not(#_):not(#_){display:inline-flex;align-items:center;gap:8px;padding:0;border:0;background:none;font-size:0.875rem !important;font-weight:500 !important;letter-spacing:0 !important;text-transform:none !important;color:var(--c-texte) !important;text-decoration:none}
 body[data-cleo-ds="v6"] main :is(.sy-lien, .cta-texte):not(#_):not(#_):hover{text-decoration:underline;text-underline-offset:4px}
 
 /* ═══ 5. Les cartes : r12, ni bord ni ombre ═══ */
@@ -258,7 +258,7 @@ body[data-cleo-ds="v6"] main .sy-bento-photo figcaption span:not(#_):not(#_):not
 body[data-cleo-ds="v6"] main :is(.sy-bento-creme, .sy-bento-bleu):not(#_):not(#_):not(#_){grid-column:span 3;justify-content:flex-end;gap:10px;container-type:inline-size}
 body[data-cleo-ds="v6"] main .sy-bento-creme:not(#_):not(#_):not(#_){background:var(--c-creme) !important;color:var(--c-accent);--raye-c:var(--c-accent)}
 body[data-cleo-ds="v6"] main .sy-bento-bleu:not(#_):not(#_):not(#_){background:var(--c-accent) !important;color:#FFFFFF;--raye-c:#FFFFFF}
-body[data-cleo-ds="v6"] main :is(.sy-bento-creme, .sy-bento-bleu) > span:not(#_):not(#_):not(#_){position:relative;z-index:1;font-size:1.125rem;font-weight:500;line-height:1.3;letter-spacing:-.005em;color:inherit}
+body[data-cleo-ds="v6"] main :is(.sy-bento-creme, .sy-bento-bleu) > span:not(#_):not(#_):not(#_){position:relative;z-index:1;font-size:1rem;font-weight:500;line-height:1.3;letter-spacing:-.005em;color:inherit}
 /* Le chiffre rayé : contour et rayures horizontales, statique. Plafonné à 28 % de la largeur de contenu de sa carte, pour que
    « 25 000 » tienne dans une carte de 3 colonnes (≈ 3,15 em de Satoshi Black). */
 body[data-cleo-ds="v6"] main .sy-chiffre-raye:not(#_):not(#_):not(#_){position:relative;z-index:1;display:block;margin:0;font-family:"Satoshi Black", "Satoshi", sans-serif !important;font-size:min(var(--t-chiffre-raye), 28cqi) !important;font-weight:900 !important;line-height:.9 !important;letter-spacing:-.02em !important;font-variant-numeric:tabular-nums;white-space:nowrap;color:transparent !important;-webkit-text-fill-color:transparent;-webkit-text-stroke:1.5px var(--raye-c, var(--c-accent));background:repeating-linear-gradient(180deg, var(--raye-c, var(--c-accent)) 0 .035em, transparent .035em .085em);-webkit-background-clip:text;background-clip:text;padding-bottom:.04em}
@@ -267,7 +267,7 @@ body[data-cleo-ds="v6"] main :not(.sy-bento-creme, .sy-bento-bleu) > .sy-chiffre
 /* Les fiches de la carte bleue : de petits tableaux à filet blanc derrière le chiffre, qui débordent du bord (le cadre
    sort, le texte reste dans la carte). Toujours dans la moitié haute : le chiffre et sa légende restent nets. */
 body[data-cleo-ds="v6"] main .sy-fiches:not(#_):not(#_):not(#_){position:absolute;inset:16px 0 auto 0;z-index:0;display:flex;flex-direction:column;align-items:flex-start;gap:14px;pointer-events:none}
-body[data-cleo-ds="v6"] main .sy-fiche:not(#_):not(#_):not(#_){position:relative;box-sizing:border-box;width:min(176px, 64%);margin:0;padding:8px 10px;border:1px solid rgba(255,255,255,.4);border-radius:0;font-size:11px;line-height:1.35;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.66)}
+body[data-cleo-ds="v6"] main .sy-fiche:not(#_):not(#_):not(#_){position:relative;box-sizing:border-box;width:min(176px, 64%);margin:0;padding:8px 10px;border:1px solid rgba(255,255,255,.4);border-radius:0;font-size:0.75rem;line-height:1.35;letter-spacing:.04em;text-transform:uppercase;color:rgba(255,255,255,.66)}
 body[data-cleo-ds="v6"] main .sy-fiche dt:not(#_):not(#_):not(#_){margin:0 0 5px;font-weight:700;color:#FFFFFF;overflow-wrap:anywhere}
 body[data-cleo-ds="v6"] main .sy-fiche dd:not(#_):not(#_):not(#_){display:flex;justify-content:space-between;align-items:baseline;gap:8px;margin:0}
 body[data-cleo-ds="v6"] main .sy-fiche dd > span:first-child:not(#_):not(#_):not(#_){color:rgba(255,255,255,.5)}
@@ -308,7 +308,7 @@ body[data-cleo-ds="v6"] main .sy-onglets .tk-onglets-scene:not(#_):not(#_):not(#
 body[data-cleo-ds="v6"] main .sy-onglets .tk-onglets-vue:not(#_):not(#_):not(#_)::after{content:"";position:absolute;inset:0;background:rgba(8,9,59,.28);pointer-events:none}
 body[data-cleo-ds="v6"] main .sy-verre:not(#_):not(#_):not(#_){z-index:1;position:absolute;left:12%;top:50%;translate:0 -50%;box-sizing:border-box;max-width:min(640px, 72%);padding:28px 32px;border-radius:var(--r-petit);background:rgba(255,255,255,.12);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);color:#FFFFFF}
 body[data-cleo-ds="v6"] main .sy-verre > p:not(#_):not(#_):not(#_){margin:0;font-size:var(--t-citation);font-weight:500;line-height:1.25;letter-spacing:-.012em;color:#FFFFFF}
-body[data-cleo-ds="v6"] main .sy-verre > b:not(#_):not(#_):not(#_){display:block;margin-top:24px;font-size:1.25rem;font-weight:500;line-height:1.2;color:#FFFFFF}
+body[data-cleo-ds="v6"] main .sy-verre > b:not(#_):not(#_):not(#_){display:block;margin-top:24px;font-size:1.375rem;font-weight:500;line-height:1.2;color:#FFFFFF}
 body[data-cleo-ds="v6"] main .sy-verre > span:not(#_):not(#_):not(#_){display:block;margin-top:8px;font-size:var(--t-surtitre);font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.72)}
 
 /* ─── 2.4 Appel final sur photo ─── */

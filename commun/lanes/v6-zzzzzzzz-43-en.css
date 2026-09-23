@@ -22,7 +22,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 
 /* Boutons : classes du système (.sy-bouton, .sy-bouton-secondaire). Liens d'action au gabarit de .sy-lien. */
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:40px}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-lien{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:500;color:var(--c-texte);text-decoration:none}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-lien{display:inline-flex;align-items:center;gap:8px;font-size:0.875rem;font-weight:500;color:var(--c-texte);text-decoration:none}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-lien:hover{text-decoration:underline;text-underline-offset:4px}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-pied-chapitre{display:flex;flex-wrap:wrap;align-items:center;gap:16px 32px;margin-top:40px}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-pied-chapitre p{margin:0;font-size:var(--t-corps);line-height:1.55;color:var(--c-texte-2)}
@@ -59,7 +59,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-image{position:relative;margin:0;height:min(640px, calc(100vh - 200px));min-height:480px;border-radius:var(--r-media);overflow:clip;background:var(--c-fond-2)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-recit-image img{display:block;width:100%;height:100%;object-fit:cover;object-position:55% 58%}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-flottante{position:absolute;z-index:1;display:grid;gap:4px;padding:14px 16px;border-radius:var(--r-carte);background:var(--c-carte);box-shadow:var(--o-flottante)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-flottante b{font-size:15px;font-weight:500;line-height:1.3;color:var(--c-texte)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-flottante b{font-size:0.875rem;font-weight:500;line-height:1.3;color:var(--c-texte)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-flottante span{font-size:var(--t-legende);line-height:1.4;color:var(--c-texte-2)}
 /* 16/09/2026 : la carte « Directive basse tension, ne s'applique pas » est remplacée par une carte par étape, au positif
    (Naomie). Sans animation liée au défilement (téléphone, réduire les animations, navigateur sans support), seule la
@@ -127,7 +127,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-app-meta{margin:8px 0 0;font-size:var(--t-legende);color:var(--c-texte-3)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence{margin-top:24px;border:1px solid var(--c-filet);border-radius:var(--r-petit);overflow:clip}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-tete{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--c-filet)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-tete b{font-size:15px;font-weight:500;color:var(--c-texte)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-tete b{font-size:0.875rem;font-weight:500;color:var(--c-texte)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-tete span{margin-left:auto;font-size:var(--t-legende);color:var(--c-texte-2)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-grille{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-grille > div{padding:16px 18px;border-bottom:1px solid var(--c-filet)}
@@ -164,12 +164,12 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-app-meta{display:none}
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence{margin-top:10px;border:0;border-radius:0;overflow:visible}
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-tete{padding:0 0 14px;border-bottom:0}
-  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-tete b{font-size:1.0625rem}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-tete b{font-size:1rem}
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-grille{grid-template-columns:minmax(0,1fr);gap:12px}
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-grille > div,
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-grille > div:nth-child(odd),
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-grille > div:nth-last-child(-n+2){padding:18px;border:1px solid var(--c-filet);border-radius:var(--r-carte);background:var(--c-carte)}
-  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-grille p{font-size:.9375rem}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-grille p{font-size:0.875rem}
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-grille > div:nth-child(2){padding-bottom:12px;border-bottom:0;border-bottom-left-radius:0;border-bottom-right-radius:0}
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-grille > div:nth-child(3){margin-top:-12px;padding-top:12px;border-top:1px dashed var(--c-filet);border-top-left-radius:0;border-top-right-radius:0}
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-grille > .ac-action{box-shadow:inset 3px 0 0 var(--c-accent)}
@@ -186,9 +186,9 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-carte-texte h3:not(#_):not(#_):not(#_){margin:0 !important;font-size:var(--t-h3) !important;line-height:var(--t-h3-lh) !important;font-weight:500 !important;color:var(--c-texte) !important}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-carte-texte > p:not(.ac-prix):not(#_):not(#_):not(#_){max-width:52ch;margin:0;font-size:var(--t-corps);line-height:1.55;color:var(--c-texte-2)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-coches:not(#_):not(#_):not(#_){display:grid;gap:8px;margin:2px 0 0;padding:0;list-style:none}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-coches li:not(#_):not(#_):not(#_){position:relative;margin:0;padding:0 0 0 26px;font-size:.9375rem;line-height:1.45;color:var(--c-texte)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-coches li:not(#_):not(#_):not(#_){position:relative;margin:0;padding:0 0 0 26px;font-size:0.875rem;line-height:1.45;color:var(--c-texte)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-coches li svg:not(#_):not(#_):not(#_){position:absolute;left:0;top:.18em;color:var(--c-texte)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-prix:not(#_):not(#_):not(#_){margin:6px 0 0;font-size:1.125rem;font-weight:500;line-height:1.3;color:var(--c-texte)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-prix:not(#_):not(#_):not(#_){margin:6px 0 0;font-size:1rem;font-weight:500;line-height:1.3;color:var(--c-texte)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-carte-texte .sy-actions:not(#_):not(#_):not(#_){margin-top:auto;padding-top:10px}
 
 /* Visuels (décoratifs) */
@@ -201,8 +201,8 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-point:not(#_):not(#_):not(#_){position:absolute;left:50%;top:50%;translate:-50% -50%;width:22px;height:22px;border-radius:50%;background:var(--c-accent);box-shadow:0 0 0 10px rgba(0,8,207,.10), 0 0 0 22px rgba(0,8,207,.05)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-puce:not(#_):not(#_):not(#_){position:absolute;left:var(--x);top:var(--y);padding:6px 10px;border-radius:var(--r-petit);background:var(--c-carte);box-shadow:0 0 0 1px var(--c-filet);font-size:12px;font-weight:500;white-space:nowrap;color:var(--c-texte)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-doc:not(#_):not(#_):not(#_){position:absolute;left:50%;top:50%;translate:-58% -50%;box-sizing:border-box;width:230px;padding:18px;border-radius:var(--r-carte);background:var(--c-carte);box-shadow:0 0 0 1px var(--c-filet), 0 18px 40px -24px rgba(8,9,59,.35)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-doc small:not(#_):not(#_):not(#_){display:block;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--c-texte-3)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-doc b:not(#_):not(#_):not(#_){display:block;margin:4px 0 14px;font-size:1.0625rem;font-weight:500;color:var(--c-texte)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-doc small:not(#_):not(#_):not(#_){display:block;font-size:0.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--c-texte-3)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-doc b:not(#_):not(#_):not(#_){display:block;margin:4px 0 14px;font-size:1rem;font-weight:500;color:var(--c-texte)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-doc i:not(#_):not(#_):not(#_){display:block;height:8px;margin-top:8px;border-radius:2px;background:var(--c-fond-2)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-doc i.ac-court:not(#_):not(#_):not(#_){width:60%}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etoiles:not(#_):not(#_):not(#_){position:absolute;left:50%;top:50%;translate:52px -86px;width:78px;height:78px;padding:6px;border-radius:50%;background:var(--c-carte);box-shadow:0 0 0 1px var(--c-filet);fill:var(--c-accent)}
@@ -211,13 +211,13 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-fichier-1:not(#_):not(#_):not(#_){left:12%;top:18%;rotate:-4deg}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-fichier-2:not(#_):not(#_):not(#_){left:46%;top:30%;rotate:3deg}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-depot:not(#_):not(#_):not(#_){position:absolute;left:10%;right:10%;bottom:14%;display:grid;gap:4px;padding:14px 16px;border-radius:var(--r-carte);background:var(--c-carte);box-shadow:0 0 0 1px var(--c-filet), 0 18px 40px -24px rgba(8,9,59,.35)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-depot b:not(#_):not(#_):not(#_){font-size:.9375rem;font-weight:500;color:var(--c-texte)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-depot b:not(#_):not(#_):not(#_){font-size:0.875rem;font-weight:500;color:var(--c-texte)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-depot span:not(#_):not(#_):not(#_){font-size:12px;color:var(--c-texte-2)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-plaque:not(#_):not(#_):not(#_){position:absolute;left:50%;top:50%;translate:-50% -50%;box-sizing:border-box;display:grid;gap:6px;width:220px;padding:16px 18px;border-radius:var(--r-carte);background:var(--c-carte);box-shadow:0 0 0 1px var(--c-filet), 0 18px 40px -24px rgba(8,9,59,.35)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-plaque b:not(#_):not(#_):not(#_){font-size:2rem;font-weight:500;line-height:1;letter-spacing:.02em;color:var(--c-texte)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-plaque b:not(#_):not(#_):not(#_){font-size:1.875rem;font-weight:500;line-height:1;letter-spacing:.02em;color:var(--c-texte)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-plaque span:not(#_):not(#_):not(#_){font-size:12px;color:var(--c-texte-2)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-langues:not(#_):not(#_):not(#_){display:flex;gap:6px;margin-top:4px}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-langues em:not(#_):not(#_):not(#_){padding:3px 7px;border-radius:var(--r-petit);background:var(--c-fond-2);font-size:11px;font-style:normal;font-weight:500;color:var(--c-texte)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-langues em:not(#_):not(#_):not(#_){padding:3px 7px;border-radius:var(--r-petit);background:var(--c-fond-2);font-size:0.75rem;font-style:normal;font-weight:500;color:var(--c-texte)}
 @media (max-width:900px){
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-cartes:not(#_):not(#_):not(#_){grid-template-columns:minmax(0, 1fr)}
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-carte-large:not(#_):not(#_):not(#_){display:flex;flex-direction:column}
@@ -277,7 +277,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-questions .ac-entete{margin-bottom:0}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-faq{margin:0;border-top:1px solid var(--c-filet)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-faq details{margin:0;padding:0;border:0;border-bottom:1px solid var(--c-filet);border-radius:0;background:transparent !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-faq summary{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 0;cursor:pointer;list-style:none;font-size:1.125rem;font-weight:500;line-height:1.35;color:var(--c-texte)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-faq summary{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 0;cursor:pointer;list-style:none;font-size:1rem;font-weight:500;line-height:1.35;color:var(--c-texte)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-faq summary::-webkit-details-marker{display:none}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-faq summary .chev{flex:none;color:var(--c-texte-3);transition:rotate .2s var(--m-courbe)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-faq details[open] summary .chev{rotate:180deg}
@@ -294,12 +294,12 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-livrables li:not(#_):not(#_):not(#_){display:flex;align-items:center;gap:8px;margin:0;font-size:.875rem;color:var(--c-texte-2)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-livrables li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--c-texte-2)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-globe-scene:not(#_):not(#_):not(#_){position:relative;min-width:0}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-globe-legende:not(#_):not(#_):not(#_){position:absolute;right:0;bottom:16px;z-index:3;max-width:210px;margin:0;padding:13px 15px;border-radius:var(--r-carte);background:rgba(255,255,255,.92);box-shadow:0 0 0 1px var(--c-filet), 0 16px 34px rgba(17,17,17,.08);font-size:.8125rem;line-height:1.42;color:var(--c-texte-2)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-globe-legende:not(#_):not(#_):not(#_){position:absolute;right:0;bottom:16px;z-index:3;max-width:210px;margin:0;padding:13px 15px;border-radius:var(--r-carte);background:rgba(255,255,255,.92);box-shadow:0 0 0 1px var(--c-filet), 0 16px 34px rgba(17,17,17,.08);font-size:0.875rem;line-height:1.42;color:var(--c-texte-2)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-globe-legende b:not(#_):not(#_):not(#_){display:block;margin-bottom:3px;font-size:.875rem;font-weight:500;color:var(--c-texte)}
 
 body[data-cleo-ds="v6"]:not(#_) .ac-aller:not(#_):not(#_):not(#_){position:sticky;top:64px;z-index:40;border-bottom:1px solid var(--c-filet);background:rgba(247,246,245,.94);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
 body[data-cleo-ds="v6"]:not(#_) .ac-aller-liens:not(#_):not(#_):not(#_){display:flex;align-items:center;gap:32px;min-height:58px}
-body[data-cleo-ds="v6"]:not(#_) .ac-aller-liens span:not(#_):not(#_):not(#_){font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--c-texte-3)}
+body[data-cleo-ds="v6"]:not(#_) .ac-aller-liens span:not(#_):not(#_):not(#_){font-size:0.75rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--c-texte-3)}
 body[data-cleo-ds="v6"]:not(#_) .ac-aller-liens a:not(#_):not(#_):not(#_){display:inline-flex;align-items:center;min-height:44px;font-size:.875rem;font-weight:500;color:var(--c-texte-2);text-decoration:none}
 body[data-cleo-ds="v6"]:not(#_) .ac-aller-liens a:hover:not(#_):not(#_):not(#_){color:var(--c-accent)}
 
@@ -314,7 +314,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main a.ac-besoin h3:not(#_):not(#_):not(#_){margin-top:18px !important}
 
 
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-final .ac-equipe:not(#_):not(#_):not(#_){display:flex;align-items:center;justify-content:center;gap:14px;margin-top:24px;font-size:.9375rem;color:rgba(255,255,255,.88)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-final .ac-equipe:not(#_):not(#_):not(#_){display:flex;align-items:center;justify-content:center;gap:14px;margin-top:24px;font-size:0.875rem;color:rgba(255,255,255,.88)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-avatars:not(#_):not(#_):not(#_){display:flex}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-avatars img:not(#_):not(#_):not(#_){width:44px;height:44px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 2px rgba(255,255,255,.9)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-avatars img + img:not(#_):not(#_):not(#_){margin-left:-10px}
@@ -360,13 +360,13 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etapes:not(#_):not(#_):not(#_)::before{content:"";position:absolute;left:31px;top:32px;bottom:32px;width:2px;border-radius:1px;background:var(--c-filet)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etapes:not(#_):not(#_):not(#_)::after{content:"";position:absolute;left:31px;top:32px;bottom:32px;width:2px;border-radius:1px;background:var(--c-accent);transform-origin:50% 0}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etape:not(#_):not(#_):not(#_){position:relative;z-index:1;display:grid;grid-template-columns:32px minmax(0, 1fr);gap:16px;margin:0;padding:16px 18px 16px 16px;border-radius:var(--r-carte);background:var(--c-carte);box-shadow:0 0 0 1px var(--c-filet)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etape > span:not(#_):not(#_):not(#_){display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--c-accent);color:#FFFFFF;font-size:13px;font-weight:500;font-variant-numeric:tabular-nums}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etape b:not(#_):not(#_):not(#_){display:block;font-size:1.125rem;font-weight:500;line-height:1.3;color:var(--c-texte)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etape p:not(#_):not(#_):not(#_){margin:4px 0 0;font-size:.9375rem;line-height:1.45;color:var(--c-texte-2)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etape > span:not(#_):not(#_):not(#_){display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--c-accent);color:#FFFFFF;font-size:0.875rem;font-weight:500;font-variant-numeric:tabular-nums}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etape b:not(#_):not(#_):not(#_){display:block;font-size:1rem;font-weight:500;line-height:1.3;color:var(--c-texte)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etape p:not(#_):not(#_):not(#_){margin:4px 0 0;font-size:0.875rem;line-height:1.45;color:var(--c-texte-2)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-app-avance:not(#_):not(#_):not(#_){height:4px;margin:16px 0 0;border-radius:2px;background:var(--c-fond-2);overflow:clip}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-app-avance i:not(#_):not(#_):not(#_){display:block;height:100%;border-radius:inherit;background:var(--c-accent);transform-origin:0 50%}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-grille .ac-action:not(#_):not(#_):not(#_){box-shadow:inset 3px 0 0 var(--c-accent)}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tampon:not(#_):not(#_):not(#_){display:inline-grid;margin:16px 0 0;padding:9px 12px;border-radius:var(--r-carte);background:rgba(77,87,255,.08);font-size:.8125rem;font-weight:500;line-height:1.3;color:var(--c-accent)}
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tampon:not(#_):not(#_):not(#_){display:inline-grid;margin:16px 0 0;padding:9px 12px;border-radius:var(--r-carte);background:rgba(77,87,255,.08);font-size:0.875rem;font-weight:500;line-height:1.3;color:var(--c-accent)}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tampon > span:not(#_):not(#_):not(#_){grid-area:1 / 1;display:inline-flex;align-items:center;gap:8px}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tampon-attente:not(#_):not(#_):not(#_){display:none !important}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-expertise .sy-bento:not(#_):not(#_):not(#_){margin-top:clamp(56px, 7vw, 96px)}
@@ -464,7 +464,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
   @supports (animation-timeline: view()){
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-tete-sur:not(#_):not(#_):not(#_){margin-bottom:12px}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier-texte .ac-h2:not(#_):not(#_):not(#_){font-size:clamp(1.5rem, 1rem + 1.4vw, 2.375rem) !important}
-    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier-lead:not(#_):not(#_):not(#_){margin-top:10px;font-size:.9375rem;line-height:1.45}
+    body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-atelier-lead:not(#_):not(#_):not(#_){margin-top:10px;font-size:0.875rem;line-height:1.45}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etapes:not(#_):not(#_):not(#_){margin-top:16px;gap:2px}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etape:not(#_):not(#_):not(#_){padding:11px 16px 11px 16px}
     body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-etape p:not(#_):not(#_):not(#_){font-size:.875rem;line-height:1.4}
@@ -541,7 +541,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
    couture… ». Le plus long fait 42 signes : à 17 px il tient dans 390 px moins la gouttière. L'inclinaison
    reste, adoucie, parce qu'une ligne penchée est plus large que son texte. Mesuré le 23/09/2026. */
 @media (max-width:560px){
-  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-roue-liste li:not(#_):not(#_):not(#_){font-size:17px;rotate:-4deg;padding:6px 0}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-roue-liste li:not(#_):not(#_):not(#_){font-size:1rem;rotate:-4deg;padding:6px 0}
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-roue:not(#_):not(#_):not(#_){height:180px}
 }
 
