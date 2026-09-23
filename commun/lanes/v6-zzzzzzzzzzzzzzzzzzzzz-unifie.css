@@ -215,3 +215,11 @@ html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-re
   html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-besoin-img{display:none !important}
   html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-logos{padding-top:40px;padding-bottom:40px}
 }
+
+/* ── Scène 01 au téléphone, 23/09/2026 soir, Naomie : « retire complètement le dossier dans le 01, garde juste le texte ».
+   Sous 760 px, la scène n'est plus que le titre, le chapô et les trois étapes. Le dossier d'exemple reste au bureau. */
+@media (max-width:760px){
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-scene .ac-media{display:none !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-scene .ac-atelier{display:block}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-scene .ac-etapes{margin-bottom:0}
+}
