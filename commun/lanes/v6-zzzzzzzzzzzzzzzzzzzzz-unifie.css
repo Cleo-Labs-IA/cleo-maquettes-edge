@@ -1,0 +1,57 @@
+/* ═══ UNIFICATION, 23/09/2026 ═══ Points 1, 3, 5, 7 et 8 de la revue UX/UI mesurée
+   (35 pages, Playwright). Cette feuille se charge en DERNIER (21 « z ») et ne fait
+   que supprimer des langages parallèles : elle n'ajoute aucun habillage.
+   Spécificité : cinq :not(#_) sur html pour passer devant les calques oa-* (4 ids). */
+
+/* 1. BOUTONS — six styles mesurés (blanc 14 px, blanc CAPITALES 13 px, fantôme sans
+   filet, translucide, bleu CAPITALES, blanc sur encre) deviennent deux : plein et filet.
+   Même hauteur, même casse (phrase), même taille, aucun ornement (chevrons, flèches SVG). */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] :is(main, .pied, footer) :is(.btn, .sy-bouton, .sy-bouton-blanc, .sy-bouton-secondaire, .mu-bouton, .sc-bouton, .tk-bouton, .fx-bouton){
+  display:inline-flex; align-items:center; justify-content:center; gap:8px; box-sizing:border-box;
+  min-height:44px; height:44px; padding:0 22px !important; border-radius:999px !important;
+  font-family:inherit; font-size:.875rem !important; font-weight:500 !important; letter-spacing:0 !important;
+  text-transform:none !important; line-height:1 !important; text-decoration:none !important; white-space:nowrap;
+  background:#FFFFFF !important; color:#000000 !important; border:1px solid #FFFFFF !important; box-shadow:none !important;
+  transition:background .15s ease-out, border-color .15s ease-out, color .15s ease-out, transform .15s ease-out;
+}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] :is(main, .pied, footer) :is(.btn, .sy-bouton, .sy-bouton-blanc, .mu-bouton, .sc-bouton):not(.btn-contour):not(.btn-clair):not(.sy-bouton-secondaire):not(.mu-bouton-contour):not(.sc-bouton-clair):hover{background:#E8E7E3 !important; border-color:#E8E7E3 !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] :is(main, .pied, footer) :is(.btn-contour, .btn-clair, .sy-bouton-secondaire, .mu-bouton-contour, .sc-bouton-clair){
+  background:transparent !important; color:#FFFFFF !important; border:1px solid rgba(255,255,255,.38) !important;
+}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] :is(main, .pied, footer) :is(.btn-contour, .btn-clair, .sy-bouton-secondaire, .mu-bouton-contour, .sc-bouton-clair):hover{background:rgba(255,255,255,.06) !important; border-color:rgba(255,255,255,.75) !important; color:#FFFFFF !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] :is(main, .pied, footer) :is(.sy-bouton-chevrons, .btn-marque, .sy-bouton, .btn)::after,
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] :is(main, .pied, footer) :is(.sy-bouton-chevrons, .btn-marque, .sy-bouton, .btn)::before{content:none !important; display:none !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] :is(main, .pied, footer) :is(.btn, .sy-bouton, .sy-bouton-blanc, .sy-bouton-secondaire, .mu-bouton, .sc-bouton, .tk-bouton, .fx-bouton) > :is(svg, .rond, .chev){display:none !important}
+
+/* 3. BANDES DE CHAPITRE — un seul traitement. Le voile bleu multiply (.78) du calque
+   « vivant » restait sur .sy-bande-photo alors que le calque sombre l'avait déjà retiré
+   des .sy-chapitre : même dégradé noir partout, l'objet bleu de la photo fait l'accent. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .sy-bande-photo > figure::after{
+  background:linear-gradient(0deg, rgba(0,0,0,.78) 0%, rgba(0,0,0,.42) 46%, rgba(0,0,0,.18) 100%) !important;
+  mix-blend-mode:normal !important; opacity:1 !important;
+}
+
+/* 5. RYTHME VERTICAL — neuf valeurs mesurées (144, 0, 72, 110, 56, 112, 48, 108, 58)
+   ramenées à 144 (section), 112 (haut de page), 72 (demi-section, sous un chapitre),
+   48 (bande de logos) et 0 (chapitre photo, voulu). */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]{--e-section:9rem; --e-titre-contenu:4.5rem; --e-hero-haut:7rem}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .section{padding-top:144px; padding-bottom:144px}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-hero{padding-top:112px !important; padding-bottom:112px !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-methode{padding-bottom:72px !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main > section:has(> .conteneur > .sy-chapitre:first-child, > div > .sy-chapitre:first-child){padding-top:72px !important}
+
+/* 7. ARRONDIS — 12 px et 6 px se mélangeaient sur chaque fiche. Un seul rayon pour carte,
+   panneau, média et cadre (12 px) ; --r-petit (6 px) reste aux pastilles et lignes internes. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]{--r-carte:12px; --r-media:12px}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main :is(.sy-bento > *, .sy-bento-photo, .sy-bento-creme, .sy-bento-bleu, .sy-bento > * img, .sc-panneau-image, .sc-panneau-image img, .ap-histoire-equipe img, .atlas-carte, .ap-histoire-carte, .dt-panneau){border-radius:12px !important}
+
+/* 8. QUESTIONS FRÉQUENTES — l'en-tête était centré sur Service, Data et Enterprise,
+   aligné à gauche sur les fiches et l'accueil : à gauche partout. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main :is(.sc-titre, .en-titre, .dt-questions-section .sy-entete, .dt-questions-section .sy-entete > *){text-align:left !important; margin-left:0 !important; margin-right:auto !important}
+
+@media (max-width:640px){
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .section{padding-top:84px; padding-bottom:84px}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-hero{padding-top:64px !important; padding-bottom:64px !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main > section:has(> .conteneur > .sy-chapitre:first-child, > div > .sy-chapitre:first-child){padding-top:42px !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] :is(main, .pied, footer) :is(.btn, .sy-bouton, .sy-bouton-blanc, .sy-bouton-secondaire, .mu-bouton, .sc-bouton, .tk-bouton, .fx-bouton){white-space:normal; height:auto; padding:12px 20px !important; line-height:1.2 !important}
+}
