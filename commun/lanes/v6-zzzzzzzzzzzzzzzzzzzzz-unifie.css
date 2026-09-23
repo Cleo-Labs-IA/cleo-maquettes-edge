@@ -128,3 +128,19 @@ html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-ph
     @keyframes acMotFin{from{color:rgba(255,255,255,.18);translate:0 .08em}to{color:#FFFFFF;translate:0 0}}
   }
 }
+
+/* LA PHRASE EN GRAND — 23/09/2026, Naomie : « les lettres animées, tu peux les remettre ». Sa propre courte scène avant la
+   méthode : plein écran, centrée, 78 px, chaque mot passe du gris au blanc au fil du défilement. La scène 01 ne bouge pas. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-manifeste-scene{padding-top:0 !important;padding-bottom:0 !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-manif-collant{display:grid;place-items:center;padding:96px 24px}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-manifeste-scene .ac-phrase-fin{max-width:1320px;margin:0 auto !important;text-align:center;font-size:clamp(3rem, 0.4rem + 5vw, 6.25rem) !important;font-weight:500 !important;line-height:.98 !important;letter-spacing:-.04em !important;color:#FFFFFF !important;text-wrap:balance}
+@media (min-width:1180px) and (prefers-reduced-motion:no-preference){
+  @supports (animation-timeline:view()){
+    html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-manif-scene{height:160vh;view-timeline-name:--acManifScene}
+    html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-manif-collant{position:sticky;top:122px;height:calc(100vh - 122px);padding:0 24px}
+    html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-manifeste-scene .ac-phrase-fin span{
+      animation:acMotFin linear both;animation-timeline:--acManifScene;
+      animation-range:contain calc(var(--i) * 4%) contain calc(22% + var(--i) * 4%);
+    }
+  }
+}
