@@ -144,3 +144,10 @@ html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-ma
     }
   }
 }
+
+/* ── Offres d'emploi (19-poste-*.html), 23/09/2026. Mesuré : dans .ra-corps-section, .carte-encre gardait le fond
+   clair du V5 (rgba(255,255,255,.88)) sous des titres blancs, illisible. Même carte sombre que l'aside du glossaire. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .ra-corps-section .carte-encre{background:rgb(23,23,26);color:#FFFFFF;box-shadow:none}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .ra-corps-section .carte-encre :is(h2,h3,strong){color:#FFFFFF}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .ra-corps-section .carte-encre :is(p,li,.t-caption,.t-sm){color:rgba(255,255,255,.72)}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .ra-corps-section .carte-encre a:not(.btn){color:#8C92FF}
