@@ -142,9 +142,8 @@ function verifier(html, ref) {
   ok('liens internes', liensManquants.length === 0, `manquent : ${liensManquants.join(', ')}`)
   ok('volume de texte', m.mots >= Math.round(ref.mots * 0.9), `${m.mots} mots contre ${ref.mots} en ligne`)
   ok('aucun lien vers la préversion', !m.vercel, 'un lien mène à un hôte vercel.app')
-  /* La préversion ne doit pas être indexée : elle reprend le contenu du vrai site. En production,
-     la même page sert « index, follow » (relevé dans l'instantané). */
-  ok('préversion non indexable', /noindex/.test(m.metas.robots || ''), `robots « ${m.metas.robots} »`)
+  /* Depuis le 23/09/2026 la page est destinée à la production : elle s'indexe, seul /apercu reste hors index. */
+  ok('page indexable', /index,follow/.test(m.metas.robots || ''), `robots « ${m.metas.robots} »`)
   return r
 }
 
@@ -184,7 +183,7 @@ for (const [langue, fichier] of Object.entries(PAGES)) {
     ['types structurés', h => h.replace(/<script type="application\/ld\+json">(?=\{"@context":"https:\/\/schema\.org","@type":"FAQPage")[\s\S]*?<\/script>/, '')],
     ['FAQ visible', h => h.replace(/(<div class="reponse">)[\s\S]*?(<\/div>)/, '$1$2')],
     ['og:image', h => h.replace(/<meta property="og:image" content="[^"]*">/, '')],
-    ['préversion non indexable', h => h.replace(/<meta name="robots" content="[^"]*">/, '<meta name="robots" content="index,follow">')],
+    ['page indexable', h => h.replace(/<meta name="robots" content="[^"]*">/, '<meta name="robots" content="noindex,nofollow">')],
   ]
   let muets = 0
   for (const [nom, alterer] of alterations) {

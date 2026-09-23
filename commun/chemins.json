@@ -33,10 +33,10 @@
       "chemin": "/en/platform/compliance-service"
     },
     "45-service-etiquetage.html": {
-      "chemin": "/fr/compliance-as-a-service/etiquetage-et-publicite"
+      "chemin": "/fr/compliance-as-a-service/etiquetage-et-documentation"
     },
     "45-service-etiquetage-en.html": {
-      "chemin": "/en/compliance-as-a-service/labelling-and-advertising"
+      "chemin": "/en/compliance-as-a-service/labelling-and-documentation"
     },
     "51-service-mandataire.html": {
       "chemin": "/fr/compliance-as-a-service/mandataire-ue"
@@ -118,7 +118,8 @@
       "chemin": "/fr/resources/events"
     },
     "16-evenement.html": {
-      "chemin": "/fr/resources/events/ppwr-ce-qui-change"
+      "chemin": "/fr/event",
+      "reelle": true
     },
     "17-modeles.html": {
       "chemin": "/fr/resources/templates"

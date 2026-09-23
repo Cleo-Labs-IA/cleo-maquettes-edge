@@ -40,7 +40,7 @@
 <!-- ═══ ALLER À ═══ 18/09/2026 : la barre d'ancres de l'accueil, posée sur les pages d'offre. Leur site fait pareil :
      on voit le plan de la page sans défiler. Composant repris tel quel (.ac-aller), portée de la règle élargie. -->
 <nav class="ac-aller" aria-label="Accès rapide à la page">
-  <div class="conteneur ac-aller-liens"><span>Aller à</span><a href="#disponible">Les API</a><a href="#usage">L'usage</a><a href="#tarifs">Les prix</a><a href="#couverture">La couverture</a></div>
+  <div class="conteneur ac-aller-liens"><span>Aller à</span><a href="#disponible">Les API</a><a href="#tarifs">Les prix</a><a href="#couverture">La couverture</a></div>
 </nav>
 
 <!-- ═══ DISPONIBLE MAINTENANT ═══ Deux cartes : entrée, sortie, exemple (document, « Available now »). -->
@@ -92,19 +92,6 @@ Authorization: Bearer $CLEO_API_KEY</code></pre></div>
   </div>
 </section>
 
-<!-- ═══ COMMENT L'USAGE FONCTIONNE ═══ Document : « Une clé. Un wallet. Des unités pondérées. » Poids 1, N et 5 : codés
-     (enforce-quota.ts, compliance-check.ts). ⚠️ Poids 100 de la classification : recommandation, à coder avant publication. -->
-<section class="section dt-usage-section" id="usage">
-  <div class="conteneur">
-    <div class="sy-entete" data-apparait><p class="sy-surtitre">Usage</p><h2>Une clé, un volume mensuel, un barème public</h2><p class="sy-lead">Chaque appel consomme des API units. Voici ce que coûte chaque opération.</p></div>
-    <ol class="dt-usage" data-apparait>
-      <li><b>1</b><span>API unit</span><p>Une recherche ou une lecture de document Legal Data</p></li>
-      <li><b>N</b><span>API units</span><p>Une opération groupée : une unité par requête ou par identifiant traité</p></li>
-      <li><b>5</b><span>API units</span><p>Un contrôle composite de conformité</p></li>
-      <li><b>100</b><span>API units</span><p>Une classification douanière</p></li>
-    </ol>
-  </div>
-</section>
 
 <!-- ═══ TARIFS ═══ Sandbox, Starter, Pro, Enterprise. Aucun produit futur dans ces cartes (document). -->
 <section class="section dt-offre-section" id="tarifs">
@@ -116,24 +103,24 @@ Authorization: Bearer $CLEO_API_KEY</code></pre></div>
     </div>
     <div class="dt-tarifs" data-apparait>
       <article class="sy-carte dt-offre-carte dt-tarif">
-        <p class="sy-surtitre">Sandbox</p>
+        <p class="sy-surtitre">Gratuit</p>
         <p class="dt-offre-grand">0 €</p>
-        <p class="dt-offre-texte">Tester l'intégration, sans carte bancaire.</p>
-        <ul class="dt-liste"><li>200 API units à vie</li><li>Mêmes endpoints, débit limité</li><li>Usage de test</li></ul>
+        <p class="dt-offre-texte">Brancher le SDK, envoyer une vraie requête et voir ce qui revient, sans carte bancaire.</p>
+        <ul class="dt-liste"><li>3 appels gratuits, au total</li><li>Mêmes endpoints, débit limité</li><li>Usage de test</li></ul>
         <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="https://legaldata-public.cleolabs.co/signup">Obtenir une clé API</a></div>
       </article>
       <article class="sy-carte dt-offre-carte dt-tarif">
         <p class="sy-surtitre">Starter</p>
         <p class="dt-offre-grand">100 €<small>/mois</small></p>
-        <p class="dt-offre-texte">Construire un premier produit et démarrer en production. 80 € par mois en annuel, soit 960 € par an.</p>
-        <ul class="dt-liste"><li>100 000 API units par mois</li><li>Mêmes données et mêmes endpoints</li><li>Soit 1 000 classifications douanières par mois</li></ul>
+        <p class="dt-offre-texte">Construire un premier produit et démarrer en production.</p>
+        <ul class="dt-liste"><li>100 000 appels par mois</li><li>Mêmes données et mêmes endpoints</li><li>Support par e-mail sous deux jours ouvrés</li></ul>
         <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/signup">Choisir Starter</a></div>
       </article>
       <article class="sy-carte dt-offre-carte dt-tarif">
         <p class="sy-surtitre">Pro</p>
         <p class="dt-offre-grand">349 €<small>/mois</small></p>
-        <p class="dt-offre-texte">Faire tourner un produit client à volume supérieur. 279 € par mois en annuel, soit 3 348 € par an.</p>
-        <ul class="dt-liste"><li>1 000 000 API units par mois</li><li>Accompagnement à l'intégration</li><li>20 % de remise en facturation annuelle</li></ul>
+        <p class="dt-offre-texte">Faire tourner un produit client à volume supérieur.</p>
+        <ul class="dt-liste"><li>1 000 000 appels par mois</li><li>File prioritaire aux heures de pointe</li><li>Support le jour même et appel d'onboarding</li></ul>
         <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/signup">Choisir Pro</a></div>
       </article>
       <article class="sy-carte dt-offre-carte dt-tarif">
@@ -212,7 +199,7 @@ Authorization: Bearer $CLEO_API_KEY</code></pre></div>
       </details>
       <details>
         <summary>Combien coûte l'accès ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">Sandbox gratuit pour tester, Starter à 100 € par mois, Pro à 349 € par mois, Enterprise sur devis. <a href="#tarifs">Voir les tarifs</a>.</div>
+        <div class="reponse">3 appels gratuits pour tester, Starter à 100 € par mois, Pro à 349 € par mois, Enterprise sur devis. <a href="#tarifs">Voir les tarifs</a>.</div>
       </details>
       <details>
         <summary>Peut-on utiliser Legal Data dans un assistant IA ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>

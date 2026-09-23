@@ -483,7 +483,7 @@
   },
   "02-entreprise.html": {
    "titre": "À Propos de Cleo Labs : Soutenue par Kima Ventures | Cleo Labs",
-   "description": "L'histoire de Cleo, l'espace de travail IA des personnes qui appliquent la réglementation aux produits. Fondée en 2023 par Anaëlle Guez et Naomie Halioua.",
+   "description": "L'histoire de Cleo Labs, qui automatise la conformité produit pour les marques internationales. Fondée en 2023 par Anaëlle Guez et Naomie Halioua, à Neuilly-sur-Seine.",
    "source": "site",
    "url_source": "https://www.cleolabs.co/fr/company",
    "appariement": "https://www.cleolabs.co/fr/company, la page entreprise.",
@@ -509,8 +509,8 @@
    "_mesure": "titre 53 caracteres, description 144 caracteres"
   },
   "05-marche.html": {
-   "titre": "Conformité réglementaire UE",
-   "description": "Naviguez la complexité réglementaire européenne avec l'IA. Cleo cartographie le RGPD, l'AI Act, DORA, la CSRD et plus de 25 000 réglementations dans les 27 États membres.",
+   "titre": "Conformité produit dans l'Union européenne | Cleo Labs",
+   "description": "Ce qui s'applique à vos produits dans l'Union européenne : REACH, RSGP, PPWR, batteries. 25 000 réglementations cartographiées dans les 27 États membres, citées à l'article.",
    "source": "site",
    "url_source": "https://www.cleolabs.co/fr/jurisdictions/european-union",
    "appariement": "https://www.cleolabs.co/fr/jurisdictions/european-union, la juridiction Union europeenne.",
@@ -547,7 +547,7 @@
    "_gabarit_le": "2026-09-03"
   },
   "37-compliance-service.html": {
-   "titre": "Service, du jet à la signature | Cleo Labs",
+   "titre": "Prestations de conformité produit, à prix fixe | Cleo Labs",
    "description": "Évaluation, étiquetage, marquage CE et mandataire dans l'UE : Cleo prépare le dossier, un expert conformité le relit, avec un prix affiché avant la commande.",
    "source": "redige",
    "url_source": null,
@@ -558,7 +558,7 @@
    "_signature": "15/09/2026 : « un expert relit et signe » retiré. La déclaration UE de conformité est signée par le fabricant ou son mandataire ; l expert Cleo relit."
   },
   "37-compliance-service-en.html": {
-   "titre": "Service, draft to sign-off | Cleo Labs",
+   "titre": "Product compliance services, fixed price | Cleo Labs",
    "description": "Assessment, labelling, CE marking and EU authorised representative: Cleo prepares the file, a compliance expert reviews it, with a price shown before you order.",
    "source": "redige",
    "url_source": null,
@@ -578,8 +578,8 @@
    "_mesure": "titre 63 caracteres, description 148 caracteres"
   },
   "10-ressources.html": {
-   "titre": "Ressources & Guides de Conformité Réglementaire | Cleo Labs",
-   "description": "Guides experts sur la conformité réglementaire UE : AI Act, DORA, CSRD, RGPD. Obligations, calendriers et automatisation par l'IA.",
+   "titre": "Ressources conformité produit | Cleo Labs",
+   "description": "Blog, travaux de recherche, skills, glossaire et rencontres : tout ce que l'équipe Cleo publie sur la conformité produit.",
    "source": "site",
    "url_source": "https://www.cleolabs.co/fr/resources",
    "appariement": "https://www.cleolabs.co/fr/resources, l'index des ressources.",
@@ -605,8 +605,8 @@
    "_note_titre": "2026-09-03 : le titre servi fait 250 caractères, tronqué partout ; on sert le h1 de la page. Le canonical reste celui du vrai site."
   },
   "13-glossaire.html": {
-   "titre": "Glossaire de Conformité Réglementaire | 20+ Termes Clés Expliqués",
-   "description": "Glossaire complet des termes de conformité réglementaire européenne et internationale : RGPD, AI Act, DORA, CSRD, NIS2, ESPR, REACH, MiCA et plus. Définitions claires pour les professionnels de la conformité.",
+   "titre": "Glossaire de conformité produit | Cleo Labs",
+   "description": "Les termes des textes, définis : mandataire, déclaration UE de conformité, documentation technique, signalétique de tri, norme harmonisée, surveillance du marché, mise sur le marché.",
    "source": "site",
    "url_source": "https://www.cleolabs.co/fr/resources/glossary",
    "appariement": "https://www.cleolabs.co/fr/resources/glossary, le glossaire.",
@@ -622,8 +622,8 @@
    "_mesure": "titre 49 caracteres, description 143 caracteres"
   },
   "15-evenements.html": {
-   "titre": "Rencontres et rediffusions conformité produit | Cleo Labs",
-   "description": "Des sessions courtes sur un texte, un marché ou une famille de produits. Les rediffusions restent disponibles après la rencontre.",
+   "titre": "Rencontres conformité produit | Cleo Labs",
+   "description": "Des sessions courtes sur un texte, un marché ou une famille de produits, avec l'équipe Cleo. Dernière rencontre : Product Safety in the Age of AI, à Bruxelles.",
    "source": "redige",
    "url_source": null,
    "appariement": "pas d'equivalent : aucune route evenement sur cleolabs.co, zero occurrence au sitemap.",
@@ -650,7 +650,7 @@
   },
   "18-recrutement.html": {
    "titre": "Carrières : rejoindre Cleo Labs | Cleo Labs",
-   "description": "Rejoindre l’équipe qui automatise la conformité produit : 25 000 réglementations, 106 pays, de grandes marques déjà à bord.",
+   "description": "Rejoindre l’équipe qui automatise la conformité produit : 25 000 réglementations, 106 pays.",
    "source": "site",
    "url_source": "https://www.cleolabs.co/fr/careers",
    "appariement": "https://www.cleolabs.co/fr/careers, l'index des postes.",
@@ -666,7 +666,7 @@
    "_mesure": "titre 62 caracteres, description 145 caracteres"
   },
   "20-campagne.html": {
-   "titre": "Guide PPWR gratuit, article par article | Cleo Labs",
+   "titre": "Guide PPWR, article par article | Cleo Labs",
    "description": "Ce qui s'applique le 12 août 2026, ce qui suit par étapes, et les quatre familles d'obligations qui touchent un emballage. Avec les articles cités.",
    "source": "redige",
    "url_source": null,
@@ -675,8 +675,8 @@
    "_mesure": "titre 51 caracteres, description 147 caracteres"
   },
   "21-inscription.html": {
-   "titre": "Réserver une Démo | Cleo Labs",
-   "description": "Réservez une démo de 20 minutes. Nous lançons un scan réglementaire en direct sur votre entreprise et vous présentons vos résultats personnalisés.",
+   "titre": "Voir Cleo sur vos produits | Cleo Labs",
+   "description": "Une gamme et deux marchés suffisent : demandez un accès et voyez ce que Cleo relève sur vos propres produits, sans engagement.",
    "source": "site",
    "url_source": "https://www.cleolabs.co/fr/meet",
    "appariement": "https://www.cleolabs.co/fr/meet : c'est la cible des 10 liens « Essai gratuit » mesures sur /fr, et « Essai gratuit » est le CTA de la maquette.",
@@ -685,7 +685,7 @@
   },
   "22-legal.html": {
    "titre": "Conditions Générales d'Utilisation | Cleo Labs",
-   "description": "Consultez les conditions générales d'utilisation de Cleo Labs. Comprenez vos droits et obligations lors de l'utilisation de notre plateforme d'intelligence réglementaire par IA.",
+   "description": "Les conditions générales d'utilisation du site et des services de Cleo Labs : éditeur, accès, données, portée des réponses, droit applicable.",
    "source": "site",
    "url_source": "https://www.cleolabs.co/fr/terms",
    "appariement": "https://www.cleolabs.co/fr/terms, les conditions generales.",
@@ -879,7 +879,7 @@
    "_titre_avant": "Sell anywhere, comply everywhere | Cleo Labs"
   },
   "45-service-etiquetage.html": {
-   "titre": "Étiquetage et documentation produit | Cleo Labs",
+   "titre": "Étiquetage et documentation | Cleo Labs",
    "description": "Notices, étiquettes, textes d'emballage et allégations pour chaque marché, à partir de 1 200 € par produit.",
    "source": "redige",
    "url_source": null,
@@ -887,7 +887,7 @@
    "_mesure": "titre 47 caractères, description 107 caractères"
   },
   "45-service-etiquetage-en.html": {
-   "titre": "Labelling and product documentation | Cleo Labs",
+   "titre": "Labelling and documentation | Cleo Labs",
    "description": "Manuals, labels, packaging copy and claims for every market, from €1,200 per product.",
    "source": "redige",
    "url_source": null,
@@ -896,7 +896,7 @@
   },
   "39-data.html": {
    "titre": "API Legal Data et classification douanière | Cleo Labs",
-   "description": "Donnée juridique traçable et classification douanière expliquée, prêtes pour votre produit. Deux API, un barème public, un Sandbox gratuit.",
+   "description": "Donnée juridique traçable et classification douanière expliquée, prêtes pour votre produit. Deux API, des prix publics, 3 appels gratuits pour tester.",
    "source": "redige",
    "url_source": null,
    "appui_contenu": "16/09/2026, agent D : structure de moonlit.ai (connect, mcp, platform) ; faits dans scratchpad/agents/refonte/identite-data/faits.md.",
@@ -904,7 +904,7 @@
   },
   "39-data-en.html": {
    "titre": "Legal Data API and Customs Classification API | Cleo Labs",
-   "description": "Traceable legal data and explainable customs classification, ready for your product. Two APIs, a public rate card and a free Sandbox.",
+   "description": "Traceable legal data and explainable customs classification, ready for your product. Two APIs, public pricing and 3 free calls to test.",
    "source": "redige",
    "url_source": null,
    "appui_contenu": "16/09/2026, agent D : structure de moonlit.ai (connect, mcp, platform) ; faits dans scratchpad/agents/refonte/identite-data/faits.md.",

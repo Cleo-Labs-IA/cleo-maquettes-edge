@@ -6,20 +6,21 @@
    ============================================================ */
 import fs from 'fs'
 import path from 'path'
+import { fileURLToPath } from 'url'
 import sharp from '/Users/naomiehalioua/cleo-landing/node_modules/sharp/lib/index.js'
 
-const ICI = '/Users/naomiehalioua/cleo-maquettes-edge'
+const ICI = path.dirname(fileURLToPath(import.meta.url))
 const PUB = path.join('/Users/naomiehalioua/cleo-maquettes-edge', 'images/depot')
 const CHEMINS = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/chemins.json'), 'utf8'))
+/* L'hôte de production : les canonicals, les hreflang et le sitemap y pointent. Les pages d'aperçu (/apercu/…) restent hors index. */
+const HOTE = 'https://www.cleolabs.co'
+const cheminDe = n => CHEMINS.pages[n] && CHEMINS.pages[n].chemin
+const estApercu = n => !cheminDe(n) || cheminDe(n).startsWith('/apercu')
 const V6_ROUTES = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/v6-routes.json'), 'utf8'))
 const LOCAL = path.join('/Users/naomiehalioua/cleo-maquettes-edge', 'images')
 const POLICE = '/Users/naomiehalioua/Downloads/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Variable.woff2'
 
 const PAGES = [
-  { fichier: '00-composants.html', titre: 'Kit',        source: 'kit de composants' },
-  { fichier: '01-accueil.html',   titre: 'Accueil',     source: 'edgecomply.com/' },
-  { fichier: '01-accueil.html',   titre: 'Accueil noir', source: 'edgecomply.com/', noir: true, sortie: '01-accueil-noir.html' },
-  { fichier: '01-accueil-en.html', titre: 'Accueil EN', source: 'edgecomply.com/', en: true },
   { fichier: '02-entreprise.html', titre: 'Entreprise',  source: 'edgecomply.com/about-us' },
   /* 14/09/2026, trois entrées : Regulatory Change, Research et Compliance Data ne sont plus des
      pages. Les fragments restent dans pages/ ; leurs routes redirigent (voir vercel.json). */
@@ -34,7 +35,6 @@ const PAGES = [
   // Maquette d'exemple « trois entrées », réunion d'équipe du 14/09/2026.
   { fichier: '39-data.html',        titre: 'Data',        source: 'maquette trois entrées, 14/09/2026' },
   { fichier: '40-enterprise.html',  titre: 'Enterprise',  source: 'maquette trois entrées, 14/09/2026' },
-  { fichier: '41-accueil-resultat.html', titre: 'Accueil, angle résultat', source: 'maquette angle résultat, 14/09/2026' },
   { fichier: '43-accueil-avant-vendre.html', titre: 'Accueil, avant de vendre', source: 'maquette avant de vendre, 14/09/2026' },
   { fichier: '45-service-etiquetage.html', titre: 'Fiche Étiquetage et documentation produit', source: 'ecocomply.ai/product-documentation-labelling (structure et prix), 16/09/2026' },
   { fichier: '45-service-etiquetage-en.html', titre: 'Service page Labelling and product documentation EN', source: 'ecocomply.ai/product-documentation-labelling (structure and price)', en: true },
@@ -53,15 +53,12 @@ const PAGES = [
   { fichier: '43-accueil-avant-vendre-en.html', titre: 'Home, before you sell EN', source: 'pages/43-accueil-avant-vendre.html', en: true },
   { fichier: '09-texte.html',       titre: 'Un texte',    source: 'edgecomply.com/topics/reach-regulation-compliance' },
   { fichier: '10-ressources.html',  titre: 'Ressources',  source: 'edgecomply.com/library' },
-  { fichier: '11-blog.html',        titre: 'Publications',source: 'edgecomply.com/library/blog' },
   { fichier: '12-article.html',     titre: 'Article',     source: 'edgecomply.com/library/blog/*' },
   { fichier: '13-glossaire.html',   titre: 'Glossaire',   source: 'edgecomply.com/library/glossary' },
   { fichier: '14-terme.html',       titre: 'Un terme',    source: 'edgecomply.com/library/glossary/*' },
   { fichier: '15-evenements.html',  titre: 'Rencontres',  source: 'edgecomply.com/library/events' },
   { fichier: '16-evenement.html',   titre: 'Une rencontre', source: 'edgecomply.com/library/events/*' },
-  { fichier: '17-modeles.html',     titre: 'Modèles',     source: 'edgecomply.com/library/assets' },
   { fichier: '18-recrutement.html', titre: 'Recrutement', source: 'edgecomply.com/careers' },
-  { fichier: '19-poste.html',       titre: 'Un poste',    source: 'edgecomply.com/jobs/*' },
   { fichier: '20-campagne.html',    titre: 'Campagne',    source: 'edgecomply.com/landing/ce-certification-guide' },
   { fichier: '21-inscription.html', titre: 'Inscription', source: 'edgecomply.com/waitlist' },
   { fichier: '22-legal.html',       titre: 'Légal',       source: 'edgecomply.com/terms' },
@@ -70,8 +67,6 @@ const PAGES = [
   { fichier: '25-skills.html',      titre: 'Skills',      source: 'cleolabs.co/fr/skills' },
   { fichier: '26-legal-data.html',  titre: 'Legal Data',  source: 'cleolabs.co/fr/legal-data' },
   { fichier: '30-securite.html', titre: 'Sécurité', source: 'cleolabs.co/fr/security' },
-  { fichier: '31-journal.html', titre: 'Journal', source: 'cleolabs.co/fr/changelog' },
-  { fichier: '32-plan-action.html', titre: 'Plan action MARIA', source: 'cleolabs.co/fr/maria-action-plan' },
   { fichier: '33-fabricants.html', titre: 'Fabricants', source: 'cleolabs.co/fr/for/manufacturers' },
   { fichier: '34-importateurs.html', titre: 'Importateurs', source: 'cleolabs.co/fr/for/importers-distributors' },
   { fichier: '35-marketplaces.html', titre: 'Marketplaces', source: 'cleolabs.co/fr/for/marketplaces' },
@@ -776,9 +771,9 @@ const CTA_EN = `
 const resNav = (actif, en) => {
   const liens = en
     ? [['10-ressources.html','Tout','All'],['24-blog-en.html','Blog','Blog'],['23-research-en.html','Recherche','Research'],['25-skills-en.html','Skills','Skills'],
-       ['15-evenements.html','Rencontres','Events'],['17-modeles.html','Modèles','Templates'],['13-glossaire.html','Glossaire','Glossary']]
+       ['15-evenements.html','Rencontres','Events'],['13-glossaire.html','Glossaire','Glossary']]
     : [['10-ressources.html','Tout','Tout'],['24-blog.html','Blog','Blog'],['23-research.html','Recherche','Travaux de recherche'],['25-skills.html','Skills','Skills'],
-       ['15-evenements.html','Rencontres','Rencontres'],['17-modeles.html','Modèles','Modèles'],['13-glossaire.html','Glossaire','Glossaire']]
+       ['15-evenements.html','Rencontres','Rencontres'],['13-glossaire.html','Glossaire','Glossaire']]
   const cle = actif === 'Publications' ? 'Blog' : actif
   return `<nav class="res-nav">
     <div class="titre">${en ? 'Resources' : 'Ressources'}</div>
@@ -966,14 +961,15 @@ for (const p of PAGES) {
      — mesuré à 404. Un canonical vers une page inexistante est pire que pas de
      canonical : il désigne le vide comme original. Quand la page a un équivalent
      servi (source « site »), on prend SON url. Sinon on n'en déclare aucune. */
-  const url = seoP && seoP.source === 'site' && seoP.url_source ? seoP.url_source : null
+  const url = seoP && seoP.source === 'site' && seoP.url_source ? seoP.url_source : (estApercu(nomSortie) ? null : HOTE + cheminDe(nomSortie))
 
   /* Le jumeau linguistique : SEULE l'accueil en a un dans cette maquette.
      On ne fabrique pas d'alternate vers un fichier qui n'existe pas. */
   const jumeau = jumeauLangue(nomSortie)
   const nomFr = p.en ? jumeau : nomSortie, nomEn = p.en ? nomSortie : jumeau
-  const urlFr = jumeau && SEO.pages[nomFr] && SEO.pages[nomFr].url_source
-  const urlEn = jumeau && SEO.pages[nomEn] && SEO.pages[nomEn].url_source
+  const urlDe = n => (SEO.pages[n] && SEO.pages[n].url_source) || (estApercu(n) ? null : HOTE + cheminDe(n))
+  const urlFr = jumeau && urlDe(nomFr)
+  const urlEn = jumeau && urlDe(nomEn)
   const alternates = (jumeau && urlFr && urlEn) ? [
     `<link rel="alternate" hreflang="fr" href="${urlFr}">`,
     `<link rel="alternate" hreflang="en" href="${urlEn}">`,
@@ -1091,7 +1087,7 @@ for (const p of PAGES) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" type="image/svg+xml" href="${FAVICON}">
-<meta name="robots" content="noindex,nofollow">
+${estApercu(nomSortie) ? '<meta name="robots" content="noindex,nofollow">' : '<meta name="robots" content="index,follow">'}
 <title>${ech(titre)}</title>
 ${metaDesc}
 ${url ? `<link rel="canonical" href="${url}">` : ''}
@@ -1136,23 +1132,32 @@ ${corps}
    on LAISSE crawler, et on refuse l'indexation dans l'en-tete HTTP et
    dans la page. */
 fs.writeFileSync(path.join(ICI, 'sortie', 'robots.txt'),
-`# Maquette de travail Cleo Labs. Deploiement jetable, jamais un site public.
-# On autorise volontairement le crawl : c'est la seule facon pour qu'un robot
-# LISE le « noindex » servi en en-tete HTTP et dans chaque page. Un
-# « Disallow: / » ici rendrait ce noindex invisible et donc inoperant.
-User-agent: *
+`User-agent: *
 Allow: /
+Disallow: /apercu/
+Sitemap: ${HOTE}/sitemap.xml
 `)
+/* Le sitemap ne liste que les pages construites qui ont une route publique. */
+const construites = journal.map(j => j.fichier)
+const publiques = construites.filter(f => !estApercu(f))
+const jour = new Date().toISOString().slice(0, 10)
+fs.writeFileSync(path.join(ICI, 'sortie', 'sitemap.xml'),
+  '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
+  publiques.map(f => `  <url><loc>${HOTE}${cheminDe(f)}</loc><lastmod>${jour}</lastmod></url>`).join('\n') +
+  '\n</urlset>\n')
 /* Les URL propres. Vercel sert le fichier plat derriere l'adresse calquee sur
    le vrai site : aucune duplication de fichier, et la barre d'adresse dit
    « /fr/company » comme en production. La racine mene a /fr, comme le 307
    que sert deja www.cleolabs.co. */
 const reecritures = Object.entries(CHEMINS.pages)
+  .filter(([fichier]) => construites.includes(fichier))
   .map(([fichier, c]) => ({ source: c.chemin, destination: '/' + fichier }))
+/* Le nom de fichier plat n'est pas une adresse : il renvoie vers la route propre, pour qu'une seule URL porte chaque page. */
+const versRoutePropre = publiques.map(f => ({ source: '/' + f, destination: cheminDe(f), permanent: false }))
 fs.writeFileSync(path.join(ICI, 'sortie', 'vercel.json'), JSON.stringify({
-  headers: [{ source: '/(.*)', headers: [
+  headers: [{ source: '/apercu/(.*)', headers: [
     { key: 'X-Robots-Tag', value: 'noindex, nofollow, noarchive, nosnippet' }] }],
-  redirects: [{ source: '/', destination: CHEMINS.racine, permanent: false },
+  redirects: [{ source: '/', destination: CHEMINS.racine, permanent: false }, ...versRoutePropre,
     // Les routes des trois features retirées le 14/09/2026 mènent aux entrées qui les remplacent.
     // L'ancienne adresse d'aperçu de la page « avant de vendre », devenue l'accueil le 15/09/2026.
     { source: '/apercu/avant-de-vendre', destination: '/fr', permanent: false },
@@ -1160,10 +1165,10 @@ fs.writeFileSync(path.join(ICI, 'sortie', 'vercel.json'), JSON.stringify({
     { source: '/fr/platform', destination: '/fr/platform/compliance-service', permanent: false },
     { source: '/fr/platform/research', destination: '/fr/platform/compliance-service', permanent: false },
     { source: '/fr/platform/regulations', destination: '/fr/data', permanent: false }],
-  rewrites: [...reecritures, { source: '/apercu', destination: '/index.html' }]
+  rewrites: reecritures
 }, null, 2))
 console.log(`  ${reecritures.length} URL propres, calquees sur les routes de www.cleolabs.co`)
-console.log("  robots.txt + vercel.json : crawl autorise, indexation refusee (en-tete + page)")
+console.log(`  robots.txt + sitemap.xml + vercel.json : ${publiques.length} pages indexables, /apercu hors index`)
 
 if (notesSeo.length) { console.log(`\n  couche de tete, ${notesSeo.length} note(s) :`); notesSeo.forEach(n => console.log(n)) }
 
