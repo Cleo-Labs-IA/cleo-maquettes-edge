@@ -5,7 +5,7 @@ import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 const ICI = path.dirname(path.dirname(fileURLToPath(import.meta.url)))
-const SRC = '/private/tmp/claude-501/-Users-naomiehalioua-cleo-landing/b32a4fc1-7a13-4475-84be-385bbde13f98/scratchpad/blogsrc'
+const SRC = process.env.BLOGSRC || '/private/tmp/claude-501/-Users-naomiehalioua-cleo-landing/b32a4fc1-7a13-4475-84be-385bbde13f98/scratchpad/blogsrc'
 const BANK = '/Users/naomiehalioua/cleo-landing/public/blog-bank/'
 const brut = JSON.parse(fs.readFileSync(path.join(ICI, 'blog/brut.json'), 'utf8'))
 const POSTS = JSON.parse(fs.readFileSync(path.join(SRC, 'blog-posts.json'), 'utf8'))
@@ -117,8 +117,9 @@ ${cartes.join('\n')}
   const chemin = `/${a.langue}/blog/${a.slug}`
   chemins[a.sortie] = { chemin, reelle: true }
   seo.pages[a.sortie] = { titre: `${a.titre} | Cleo Labs`, description: a.description, source: 'site', url_source: `https://www.cleolabs.co${chemin}` }
-  seo.structure[a.sortie] = { types: ['BlogPosting', 'BreadcrumbList'], proprietes: {
-    BlogPosting: { headline: a.titre, description: a.description, datePublished: a.date, author: { '@type': 'Person', name: au.nom, ...(au.lien ? { url: au.lien } : {}) }, publisher: { '@id': 'https://www.cleolabs.co/#organization' }, inLanguage: en ? 'en-US' : 'fr-FR', articleSection: a.categorie },
+  seo.structure[a.sortie] = { types: ['TechArticle', 'WebPage', 'BreadcrumbList'], proprietes: {
+    WebPage: { name: a.titre, description: a.description },
+    TechArticle: { headline: a.titre, description: a.description, datePublished: a.date, author: { '@type': 'Person', name: au.nom, ...(au.lien ? { url: au.lien } : {}) }, publisher: { '@id': 'https://www.cleolabs.co/#organization' }, inLanguage: en ? 'en-US' : 'fr-FR', articleSection: a.categorie },
     BreadcrumbList: { itemListElement: [
       { '@type': 'ListItem', position: 1, name: en ? 'Home' : 'Accueil', item: `https://www.cleolabs.co/${a.langue}` },
       { '@type': 'ListItem', position: 2, name: 'Blog', item: `https://www.cleolabs.co/${a.langue}/blog` },

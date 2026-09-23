@@ -1,0 +1,82 @@
+[
+ {
+  "motif": "JSON-LD VideoObject",
+  "raison": "le site en ligne déclare sur chaque page une vidéo hero-video.mp4 (« Infrastructure IA de Conformité pour le Retail », 2024) qui n'est embarquée sur aucune page de la V6 : déclarer une vidéo absente serait une donnée structurée trompeuse, retirée volontairement le 23/09/2026"
+ },
+ {
+  "motif": "JSON-LD BreadcrumbList : 2 → 1",
+  "raison": "le site en ligne émettait deux fils d'Ariane identiques par page (layout + composant) ; un seul suffit"
+ },
+ {
+  "motif": "JSON-LD Organization : 2 → 1",
+  "raison": "l'entité Organization est déclarée une fois par page (le site en ligne la répétait dans le layout et dans la page)"
+ },
+ {
+  "motif": "JSON-LD Person : 3 → 2",
+  "raison": "deux fondatrices déclarées depuis l'entité ; la troisième fiche Person du site en ligne n'a pas d'équivalent visible sur la page V6"
+ },
+ {
+  "motif": "JSON-LD ItemList : 1 → 0",
+  "raison": "la page industries V6 présente le textile et l'habillement, sans liste de secteurs à déclarer"
+ },
+ {
+  "motif": "JSON-LD FAQPage : 1 → 0",
+  "raison": "pas de FAQ visible sur cette page V6 ; une FAQPage ne décrit que du contenu visible (contrat SEO/GEO)"
+ },
+ {
+  "motif": "legal-data  texte",
+  "raison": "page Legal Data réécrite le 23/09 : la matrice de couverture de l'ancien site vit sur le portail legaldata-public"
+ },
+ {
+  "motif": "security  texte",
+  "raison": "page sécurité réécrite le 23/09 : les affirmations non sourcées de l'ancien texte ont été retirées"
+ },
+ {
+  "motif": "security  h2",
+  "raison": "page sécurité réécrite le 23/09, six sections au lieu de dix"
+ },
+ {
+  "motif": "glossary  texte",
+  "raison": "glossaire recentré sur la conformité produit (7 termes) ; les entrées finance de l'ancien site (GDPR, DORA, CSRD) sont retirées"
+ },
+ {
+  "motif": "glossary  h2",
+  "raison": "glossaire recentré, termes en liste de définitions"
+ },
+ {
+  "motif": "/blog  texte",
+  "raison": "l'index du blog liste titres et dates ; les extraits vivent dans les articles"
+ },
+ {
+  "motif": "/blog  h2",
+  "raison": "index du blog : titres de cartes en h3 sous un h2 de section"
+ },
+ {
+  "motif": "industries  h2",
+  "raison": "page industries réécrite le 23/09 (textile et habillement)"
+ },
+ {
+  "motif": "company  liens sortants",
+  "raison": "la page entreprise V6 ne renvoie plus vers la presse et les outils cités par l'ancien site"
+ },
+ {
+  "motif": "skills  liens sortants",
+  "raison": "la page skills V6 renvoie vers GitHub et le blog, sans les liens outils de l'ancien site"
+ },
+ {
+  "motif": "/fr  liens sortants",
+  "raison": "l'accueil V6 renvoie vers les profils publics, HubSpot et le portail Legal Data ; l'ancien accueil liait en plus des sites tiers (logos, presse)"
+ },
+ {
+  "motif": "/en  liens sortants",
+  "raison": "l'accueil V6 renvoie vers les profils publics, HubSpot et le portail Legal Data ; l'ancien accueil liait en plus des sites tiers (logos, presse)"
+ },
+ {
+  "motif": "jurisdictions/european-union  h2",
+  "raison": "page Union européenne réécrite le 23/09 (REACH, RSGP, PPWR, batteries), quatre sections"
+ },
+ {
+  "motif": "jurisdictions/european-union  liens sortants",
+  "raison": "page Union européenne réécrite le 23/09, les liens vers GDPR, AI Act, DORA et CSRD sont retirés avec le positionnement finance"
+ }
+]

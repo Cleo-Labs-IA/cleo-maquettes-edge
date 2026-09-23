@@ -1,4 +1,12 @@
 {
+ "blog-sauna360-cross-border-recall-2026.html": {
+  "chemin": "/fr/blog/sauna360-cross-border-recall-2026",
+  "reelle": true
+ },
+ "blog-sauna360-cross-border-recall-2026-en.html": {
+  "chemin": "/en/blog/sauna360-cross-border-recall-2026",
+  "reelle": true
+ },
  "blog-eu-data-act-access-by-design-2026.html": {
   "chemin": "/fr/blog/eu-data-act-access-by-design-2026",
   "reelle": true
@@ -351,6 +359,14 @@
   "chemin": "/en/blog/us-cpsc-section-12-imminent-hazard-2026",
   "reelle": true
  },
+ "blog-eu-ppwr-packaging-conformity-2026.html": {
+  "chemin": "/fr/blog/eu-ppwr-packaging-conformity-2026",
+  "reelle": true
+ },
+ "blog-eu-ppwr-packaging-conformity-2026-en.html": {
+  "chemin": "/en/blog/eu-ppwr-packaging-conformity-2026",
+  "reelle": true
+ },
  "blog-uk-sand-toys-asbestos-supply-chain-2026.html": {
   "chemin": "/fr/blog/uk-sand-toys-asbestos-supply-chain-2026",
   "reelle": true
@@ -527,6 +543,14 @@
   "chemin": "/en/blog/eu-de-minimis-end-product-data",
   "reelle": true
  },
+ "blog-cleo-labs-vivatech-2026-scaleway-startup-challenge.html": {
+  "chemin": "/fr/blog/cleo-labs-vivatech-2026-scaleway-startup-challenge",
+  "reelle": true
+ },
+ "blog-cleo-labs-vivatech-2026-scaleway-startup-challenge-en.html": {
+  "chemin": "/en/blog/cleo-labs-vivatech-2026-scaleway-startup-challenge",
+  "reelle": true
+ },
  "blog-espr-ecodesign-sustainable-products-regulation-guide.html": {
   "chemin": "/fr/blog/espr-ecodesign-sustainable-products-regulation-guide",
   "reelle": true
@@ -623,6 +647,14 @@
   "chemin": "/en/blog/whats-new-april-2026",
   "reelle": true
  },
+ "blog-cleo-labs-raises-1-5m-preseed.html": {
+  "chemin": "/fr/blog/cleo-labs-raises-1-5m-preseed",
+  "reelle": true
+ },
+ "blog-cleo-labs-raises-1-5m-preseed-en.html": {
+  "chemin": "/en/blog/cleo-labs-raises-1-5m-preseed",
+  "reelle": true
+ },
  "blog-lipstick-legal-risk-cosmetics-recalls-2026.html": {
   "chemin": "/fr/blog/lipstick-legal-risk-cosmetics-recalls-2026",
   "reelle": true
@@ -637,6 +669,14 @@
  },
  "blog-one-toy-two-legal-outcomes-magnetic-recalls-en.html": {
   "chemin": "/en/blog/one-toy-two-legal-outcomes-magnetic-recalls",
+  "reelle": true
+ },
+ "blog-global-product-compliance-pitch-by-deel.html": {
+  "chemin": "/fr/blog/global-product-compliance-pitch-by-deel",
+  "reelle": true
+ },
+ "blog-global-product-compliance-pitch-by-deel-en.html": {
+  "chemin": "/en/blog/global-product-compliance-pitch-by-deel",
   "reelle": true
  },
  "blog-data-quality-ml-compliance-gdpr.html": {

@@ -1,0 +1,1213 @@
+{
+ "_note": "Redirections 301 des URL du site en ligne (sitemap du 23/09/2026, 590 URL) qui n'existent plus dans la V6, vers la page la plus proche. Générées depuis le sitemap de production comparé aux routes construites ; reprend aussi les redirections de next.config.ts de cleo-landing. Lues par construire.mjs.",
+ "regles": [
+  {
+   "source": "/en/careers/forward-deployed-engineer",
+   "destination": "/en/careers"
+  },
+  {
+   "source": "/en/careers/legal-engineer",
+   "destination": "/en/careers"
+  },
+  {
+   "source": "/en/changelog",
+   "destination": "/en/resources"
+  },
+  {
+   "source": "/en/industries/cosmetics",
+   "destination": "/en/industries"
+  },
+  {
+   "source": "/en/industries/drugs",
+   "destination": "/en/industries"
+  },
+  {
+   "source": "/en/industries/electronics",
+   "destination": "/en/industries"
+  },
+  {
+   "source": "/en/industries/energy",
+   "destination": "/en/industries"
+  },
+  {
+   "source": "/en/industries/food-beverage",
+   "destination": "/en/industries"
+  },
+  {
+   "source": "/en/industries/insurance",
+   "destination": "/en/industries"
+  },
+  {
+   "source": "/en/industries/medical-devices",
+   "destination": "/en/industries"
+  },
+  {
+   "source": "/en/industries/pet-care",
+   "destination": "/en/industries"
+  },
+  {
+   "source": "/en/industries/retail",
+   "destination": "/en/industries"
+  },
+  {
+   "source": "/en/industries/sporting-goods",
+   "destination": "/en/industries"
+  },
+  {
+   "source": "/en/jurisdictions/australia",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/australia/cosmetics",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/australia/drugs",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/australia/electronics",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/australia/energy",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/australia/food-beverage",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/australia/insurance",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/australia/medical-devices",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/australia/pet-care",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/australia/regulations/ai-act",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/australia/regulations/csrd",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/australia/regulations/dora",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/australia/regulations/gdpr",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/australia/retail",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/australia/sporting-goods",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/brazil",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/brazil/cosmetics",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/brazil/drugs",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/brazil/electronics",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/brazil/energy",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/brazil/food-beverage",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/brazil/insurance",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/brazil/medical-devices",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/brazil/pet-care",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/brazil/regulations/ai-act",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/brazil/regulations/csrd",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/brazil/regulations/dora",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/brazil/regulations/gdpr",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/brazil/retail",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/brazil/sporting-goods",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/european-union/cosmetics",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/european-union/drugs",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/european-union/electronics",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/european-union/energy",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/european-union/food-beverage",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/european-union/insurance",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/european-union/medical-devices",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/european-union/pet-care",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/european-union/regulations/ai-act",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/european-union/regulations/csrd",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/european-union/regulations/dora",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/european-union/regulations/gdpr",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/european-union/retail",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/european-union/sporting-goods",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/france",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/france/cosmetics",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/france/drugs",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/france/electronics",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/france/energy",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/france/food-beverage",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/france/insurance",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/france/medical-devices",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/france/pet-care",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/france/regulations/ai-act",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/france/regulations/csrd",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/france/regulations/dora",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/france/regulations/gdpr",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/france/retail",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/france/sporting-goods",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/germany",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/germany/cosmetics",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/germany/drugs",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/germany/electronics",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/germany/energy",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/germany/food-beverage",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/germany/insurance",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/germany/medical-devices",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/germany/pet-care",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/germany/regulations/ai-act",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/germany/regulations/csrd",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/germany/regulations/dora",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/germany/regulations/gdpr",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/germany/retail",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/germany/sporting-goods",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/india",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/india/cosmetics",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/india/drugs",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/india/electronics",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/india/energy",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/india/food-beverage",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/india/insurance",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/india/medical-devices",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/india/pet-care",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/india/regulations/ai-act",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/india/regulations/csrd",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/india/regulations/dora",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/india/regulations/gdpr",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/india/retail",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/india/sporting-goods",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-kingdom",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-kingdom/cosmetics",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-kingdom/drugs",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-kingdom/electronics",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-kingdom/energy",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-kingdom/food-beverage",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-kingdom/insurance",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-kingdom/medical-devices",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-kingdom/pet-care",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-kingdom/regulations/ai-act",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-kingdom/regulations/csrd",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-kingdom/regulations/dora",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-kingdom/regulations/gdpr",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-kingdom/retail",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-kingdom/sporting-goods",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-states",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-states/cosmetics",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-states/drugs",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-states/electronics",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-states/energy",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-states/food-beverage",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-states/insurance",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-states/medical-devices",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-states/pet-care",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-states/regulations/ai-act",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-states/regulations/csrd",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-states/regulations/dora",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-states/regulations/gdpr",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-states/retail",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions/united-states/sporting-goods",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/maria-action-plan",
+   "destination": "/en/solutions/product-compliance"
+  },
+  {
+   "source": "/en/resources/ai-act-compliance",
+   "destination": "/en/resources"
+  },
+  {
+   "source": "/en/resources/csrd-compliance",
+   "destination": "/en/resources"
+  },
+  {
+   "source": "/en/resources/data",
+   "destination": "/en/resources"
+  },
+  {
+   "source": "/en/resources/dora-compliance",
+   "destination": "/en/resources"
+  },
+  {
+   "source": "/en/resources/gdpr-compliance",
+   "destination": "/en/resources"
+  },
+  {
+   "source": "/en/resources/product-compliance-retail",
+   "destination": "/en/resources"
+  },
+  {
+   "source": "/fr/careers/forward-deployed-engineer",
+   "destination": "/fr/careers"
+  },
+  {
+   "source": "/fr/careers/legal-engineer",
+   "destination": "/fr/careers"
+  },
+  {
+   "source": "/fr/changelog",
+   "destination": "/fr/resources"
+  },
+  {
+   "source": "/fr/industries/cosmetics",
+   "destination": "/fr/industries"
+  },
+  {
+   "source": "/fr/industries/drugs",
+   "destination": "/fr/industries"
+  },
+  {
+   "source": "/fr/industries/electronics",
+   "destination": "/fr/industries"
+  },
+  {
+   "source": "/fr/industries/energy",
+   "destination": "/fr/industries"
+  },
+  {
+   "source": "/fr/industries/food-beverage",
+   "destination": "/fr/industries"
+  },
+  {
+   "source": "/fr/industries/insurance",
+   "destination": "/fr/industries"
+  },
+  {
+   "source": "/fr/industries/medical-devices",
+   "destination": "/fr/industries"
+  },
+  {
+   "source": "/fr/industries/pet-care",
+   "destination": "/fr/industries"
+  },
+  {
+   "source": "/fr/industries/retail",
+   "destination": "/fr/industries"
+  },
+  {
+   "source": "/fr/industries/sporting-goods",
+   "destination": "/fr/industries"
+  },
+  {
+   "source": "/fr/jurisdictions/australia",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/australia/cosmetics",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/australia/drugs",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/australia/electronics",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/australia/energy",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/australia/food-beverage",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/australia/insurance",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/australia/medical-devices",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/australia/pet-care",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/australia/regulations/ai-act",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/australia/regulations/csrd",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/australia/regulations/dora",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/australia/regulations/gdpr",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/australia/retail",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/australia/sporting-goods",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/brazil",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/brazil/cosmetics",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/brazil/drugs",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/brazil/electronics",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/brazil/energy",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/brazil/food-beverage",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/brazil/insurance",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/brazil/medical-devices",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/brazil/pet-care",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/brazil/regulations/ai-act",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/brazil/regulations/csrd",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/brazil/regulations/dora",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/brazil/regulations/gdpr",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/brazil/retail",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/brazil/sporting-goods",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/european-union/cosmetics",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/european-union/drugs",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/european-union/electronics",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/european-union/energy",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/european-union/food-beverage",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/european-union/insurance",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/european-union/medical-devices",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/european-union/pet-care",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/european-union/regulations/ai-act",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/european-union/regulations/csrd",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/european-union/regulations/dora",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/european-union/regulations/gdpr",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/european-union/retail",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/european-union/sporting-goods",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/france",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/france/cosmetics",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/france/drugs",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/france/electronics",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/france/energy",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/france/food-beverage",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/france/insurance",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/france/medical-devices",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/france/pet-care",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/france/regulations/ai-act",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/france/regulations/csrd",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/france/regulations/dora",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/france/regulations/gdpr",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/france/retail",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/france/sporting-goods",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/germany",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/germany/cosmetics",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/germany/drugs",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/germany/electronics",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/germany/energy",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/germany/food-beverage",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/germany/insurance",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/germany/medical-devices",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/germany/pet-care",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/germany/regulations/ai-act",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/germany/regulations/csrd",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/germany/regulations/dora",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/germany/regulations/gdpr",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/germany/retail",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/germany/sporting-goods",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/india",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/india/cosmetics",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/india/drugs",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/india/electronics",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/india/energy",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/india/food-beverage",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/india/insurance",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/india/medical-devices",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/india/pet-care",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/india/regulations/ai-act",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/india/regulations/csrd",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/india/regulations/dora",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/india/regulations/gdpr",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/india/retail",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/india/sporting-goods",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-kingdom",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-kingdom/cosmetics",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-kingdom/drugs",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-kingdom/electronics",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-kingdom/energy",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-kingdom/food-beverage",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-kingdom/insurance",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-kingdom/medical-devices",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-kingdom/pet-care",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-kingdom/regulations/ai-act",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-kingdom/regulations/csrd",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-kingdom/regulations/dora",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-kingdom/regulations/gdpr",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-kingdom/retail",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-kingdom/sporting-goods",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-states",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-states/cosmetics",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-states/drugs",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-states/electronics",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-states/energy",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-states/food-beverage",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-states/insurance",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-states/medical-devices",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-states/pet-care",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-states/regulations/ai-act",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-states/regulations/csrd",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-states/regulations/dora",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-states/regulations/gdpr",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-states/retail",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/jurisdictions/united-states/sporting-goods",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/fr/maria-action-plan",
+   "destination": "/fr/solutions/product-compliance"
+  },
+  {
+   "source": "/fr/resources/ai-act-compliance",
+   "destination": "/fr/resources"
+  },
+  {
+   "source": "/fr/resources/csrd-compliance",
+   "destination": "/fr/resources"
+  },
+  {
+   "source": "/fr/resources/data",
+   "destination": "/fr/resources"
+  },
+  {
+   "source": "/fr/resources/dora-compliance",
+   "destination": "/fr/resources"
+  },
+  {
+   "source": "/fr/resources/gdpr-compliance",
+   "destination": "/fr/resources"
+  },
+  {
+   "source": "/fr/resources/product-compliance-retail",
+   "destination": "/fr/resources"
+  },
+  {
+   "source": "/fr/pricing",
+   "destination": "/fr/platform/compliance-service"
+  },
+  {
+   "source": "/fr/by-product",
+   "destination": "/fr/meet"
+  },
+  {
+   "source": "/fr/by-sku",
+   "destination": "/fr/meet"
+  },
+  {
+   "source": "/fr/sme",
+   "destination": "/fr/meet"
+  },
+  {
+   "source": "/fr/solutions/due-diligence",
+   "destination": "/fr/solutions/product-compliance"
+  },
+  {
+   "source": "/fr/industries/sustainability",
+   "destination": "/fr/industries"
+  },
+  {
+   "source": "/fr/industries/healthtech",
+   "destination": "/fr/industries"
+  },
+  {
+   "source": "/en/pricing",
+   "destination": "/en/platform/compliance-service"
+  },
+  {
+   "source": "/en/by-product",
+   "destination": "/en/meet"
+  },
+  {
+   "source": "/en/by-sku",
+   "destination": "/en/meet"
+  },
+  {
+   "source": "/en/sme",
+   "destination": "/en/meet"
+  },
+  {
+   "source": "/en/solutions/due-diligence",
+   "destination": "/en/solutions/product-compliance"
+  },
+  {
+   "source": "/en/industries/sustainability",
+   "destination": "/en/industries"
+  },
+  {
+   "source": "/en/industries/healthtech",
+   "destination": "/en/industries"
+  },
+  {
+   "source": "/coverage",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/docs",
+   "destination": "https://legaldata-public.cleolabs.co/docs"
+  },
+  {
+   "source": "/playground",
+   "destination": "https://legaldata-public.cleolabs.co/playground"
+  },
+  {
+   "source": "/general",
+   "destination": "https://legaldata-public.cleolabs.co/general"
+  },
+  {
+   "source": "/hs-code",
+   "destination": "https://legaldata-public.cleolabs.co/hs-code"
+  },
+  {
+   "source": "/fr/jurisdictions",
+   "destination": "/fr/legal-data"
+  },
+  {
+   "source": "/en/jurisdictions",
+   "destination": "/en/legal-data"
+  },
+  {
+   "source": "/en/platform",
+   "destination": "/en/platform/compliance-service"
+  },
+  {
+   "source": "/en/platform/research",
+   "destination": "/en/platform/compliance-service"
+  },
+  {
+   "source": "/en/platform/regulations",
+   "destination": "/en/data"
+  }
+ ]
+}

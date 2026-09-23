@@ -103,10 +103,6 @@
     "11-blog.html": {
       "chemin": "/apercu/publications"
     },
-    "12-article.html": {
-      "chemin": "/fr/blog/eu-ppwr-packaging-conformity-2026",
-      "reelle": true
-    },
     "13-glossaire.html": {
       "chemin": "/fr/resources/glossary",
       "reelle": true
@@ -180,30 +176,6 @@
     "01-accueil-noir.html": {
       "chemin": "/apercu/accueil-champ-profond"
     },
-    "27-article-levee.html": {
-      "chemin": "/fr/blog/cleo-labs-raises-1-5m-preseed",
-      "reelle": true
-    },
-    "27-article-levee-en.html": {
-      "chemin": "/en/blog/cleo-labs-raises-1-5m-preseed",
-      "reelle": true
-    },
-    "28-article-vivatech.html": {
-      "chemin": "/fr/blog/cleo-labs-vivatech-2026-scaleway-startup-challenge",
-      "reelle": true
-    },
-    "28-article-vivatech-en.html": {
-      "chemin": "/en/blog/cleo-labs-vivatech-2026-scaleway-startup-challenge",
-      "reelle": true
-    },
-    "29-article-deel.html": {
-      "chemin": "/fr/blog/global-product-compliance-pitch-by-deel",
-      "reelle": true
-    },
-    "29-article-deel-en.html": {
-      "chemin": "/en/blog/global-product-compliance-pitch-by-deel",
-      "reelle": true
-    },
     "30-securite.html": {
       "chemin": "/fr/security",
       "reelle": true
@@ -230,6 +202,98 @@
     },
     "36-solutions.html": {
       "chemin": "/fr/solutions/product-compliance",
+      "reelle": true
+    },
+    "02-entreprise-en.html": {
+      "chemin": "/en/company",
+      "reelle": true
+    },
+    "04-secteur-en.html": {
+      "chemin": "/en/industries",
+      "reelle": true
+    },
+    "05-marche-en.html": {
+      "chemin": "/en/jurisdictions/european-union",
+      "reelle": true
+    },
+    "06-cas-client-en.html": {
+      "chemin": "/en/customers",
+      "reelle": true
+    },
+    "09-texte-en.html": {
+      "chemin": "/en/jurisdictions/european-union/regulations/ppwr",
+      "reelle": true
+    },
+    "10-ressources-en.html": {
+      "chemin": "/en/resources",
+      "reelle": true
+    },
+    "13-glossaire-en.html": {
+      "chemin": "/en/resources/glossary",
+      "reelle": true
+    },
+    "14-terme-en.html": {
+      "chemin": "/en/resources/glossary/authorised-representative",
+      "reelle": true
+    },
+    "15-evenements-en.html": {
+      "chemin": "/en/resources/events",
+      "reelle": true
+    },
+    "16-evenement-en.html": {
+      "chemin": "/en/event",
+      "reelle": true
+    },
+    "18-recrutement-en.html": {
+      "chemin": "/en/careers",
+      "reelle": true
+    },
+    "20-campagne-en.html": {
+      "chemin": "/en/guide/ppwr",
+      "reelle": true
+    },
+    "21-inscription-en.html": {
+      "chemin": "/en/meet",
+      "reelle": true
+    },
+    "22-legal-en.html": {
+      "chemin": "/en/terms",
+      "reelle": true
+    },
+    "30-securite-en.html": {
+      "chemin": "/en/security",
+      "reelle": true
+    },
+    "33-fabricants-en.html": {
+      "chemin": "/en/for/manufacturers",
+      "reelle": true
+    },
+    "34-importateurs-en.html": {
+      "chemin": "/en/for/importers-distributors",
+      "reelle": true
+    },
+    "35-marketplaces-en.html": {
+      "chemin": "/en/for/marketplaces",
+      "reelle": true
+    },
+    "36-solutions-en.html": {
+      "chemin": "/en/solutions/product-compliance",
+      "reelle": true
+    },
+    "19-poste-fde-en.html": {
+      "chemin": "/en/careers/forward-deployed-engineer",
+      "reelle": true
+    },
+    "19-poste-fde.html": {
+      "chemin": "/fr/careers/forward-deployed-engineer",
+      "reelle": true
+    },
+    "19-poste-legal-en.html": {
+      "chemin": "/en/careers/legal-engineer",
+      "reelle": true
+    },
+    "19-poste-legal.html": {
+      "chemin": "/fr/careers/legal-engineer",
       "reelle": true
     }
   }

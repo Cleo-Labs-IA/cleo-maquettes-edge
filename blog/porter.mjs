@@ -11,7 +11,10 @@ import { chromium } from '/Users/naomiehalioua/cleo-landing/node_modules/playwri
 const ICI = path.dirname(path.dirname(fileURLToPath(import.meta.url)))
 const SRC = process.env.BLOGSRC || '/private/tmp/claude-501/-Users-naomiehalioua-cleo-landing/b32a4fc1-7a13-4475-84be-385bbde13f98/scratchpad/blogsrc'
 const POSTS = JSON.parse(fs.readFileSync(path.join(SRC, 'blog-posts.json'), 'utf8'))
-const DEJA = new Set(['eu-ppwr-packaging-conformity-2026', 'cleo-labs-raises-1-5m-preseed', 'cleo-labs-vivatech-2026-scaleway-startup-challenge', 'global-product-compliance-pitch-by-deel'])
+const DEJA = new Set([]) // 23/09/2026 : plus aucune page de blog faite à la main, tout passe par le porteur (fidélité mesurée par garde-seo.mjs).
+/* L'article PPWR existe en français comme page dessinée à la main (pages/12-article.html, route /fr/blog/eu-ppwr-…) :
+   on ne porte que sa version anglaise, pour que chaque route n'ait qu'une source. */
+const LANGUES_DE = {}
 const MODE = process.argv[2] || 'ecrire'
 const SEULEMENT = process.argv[3] ? new Set(process.argv[3].split(',')) : null
 
@@ -26,7 +29,12 @@ const EXTRAIRE = (langue) => {
   const time = art.querySelector('time')
   const cover = [...art.querySelectorAll('img')].map(i => i.getAttribute('srcset') || i.getAttribute('src') || '').map(s => decodeURIComponent(s)).find(s => /\/blog-bank\//.test(s))
   const coverFile = cover ? (cover.match(/\/blog-bank\/([^&\s?]+)/) || [])[1] : null
-  const sections = [...art.querySelectorAll('section')]
+  /* Les blocs de contenu, dans l'ordre du document : les <section>, et aussi les encadrés posés directement dans la
+     colonne de texte hors de toute section (mesuré le 23/09/2026 sur legal-here-illegal-there : huit fiches pays,
+     780 mots, que la seule lecture des <section> laissait de côté). */
+  const colonne = h1 && h1.parentElement ? h1.parentElement : art
+  const blocs = [...colonne.children].filter(el => el.tagName === 'SECTION' || (el.tagName === 'DIV' && /rounded-(xl|2xl)|grid-cols/.test(el.getAttribute('class') || '') && !el.querySelector('h1') && norm(el.textContent).split(' ').length > 3))
+  const sections = blocs.length ? blocs : [...art.querySelectorAll('section')]
   const corps = [], sources = []; let faqCorps = 0, relies = 0, cta = 0, faqGabarit = 0
   const nettoyer = (el) => {
     const c = el.cloneNode(true)
@@ -44,6 +52,7 @@ const EXTRAIRE = (langue) => {
     return c.innerHTML
   }
   for (const s of sections) {
+    if (s.tagName !== 'SECTION') { corps.push({ titre: '', html: nettoyer(s), mots: norm(s.textContent).split(' ').length }); continue }
     const h2 = s.querySelector('h2'); const t = norm(h2 && h2.textContent).toLowerCase()
     const cls = s.getAttribute('class') || ''
     if (FAQ_TITRES.includes(t)) { if (cls.includes('border-t')) faqGabarit++; else faqCorps++; continue }
@@ -76,7 +85,7 @@ const manifeste = []; const stats = { ok: 0, repli: 0, erreurs: [], sansCover: [
 for (const post of POSTS) {
   if (DEJA.has(post.slug)) continue
   if (SEULEMENT && !SEULEMENT.has(post.slug)) continue
-  for (const langue of ['fr', 'en']) {
+  for (const langue of (LANGUES_DE[post.slug] || ['fr', 'en'])) {
     const f = path.join(SRC, `${langue}-${post.slug}.html`)
     if (!fs.existsSync(f)) { stats.erreurs.push(`${langue} ${post.slug} : fichier absent`); continue }
     await page.setContent(fs.readFileSync(f, 'utf8'), { waitUntil: 'domcontentloaded' })

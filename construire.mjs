@@ -18,6 +18,18 @@ const HOTE = 'https://www.cleolabs.co'
 const cheminDe = n => CHEMINS.pages[n] && CHEMINS.pages[n].chemin
 const estApercu = n => !cheminDe(n) || cheminDe(n).startsWith('/apercu')
 const V6_ROUTES = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/v6-routes.json'), 'utf8'))
+/* 23/09/2026, bascule : les URL du site en ligne qui n'existent plus ici mènent en 308 à la page la plus proche
+   (commun/redirections-heritees.json, générées depuis le sitemap de production). L'ancien site Next reste
+   déployé sur son adresse Vercel : /api/* et /legal-data/* lui sont relayés pour que Stripe, HubSpot, Resend
+   et le portail Legal Data continuent de marcher. Ce relais exige que la protection de déploiement de
+   cleo-landing soit réglée sur « Only Preview Deployments » (sinon l'alias répond 302 vers la connexion Vercel). */
+const REDIRECTIONS_HERITEES = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/redirections-heritees.json'), 'utf8')).regles
+const ANCIEN_SITE = 'https://cleo-landing-naomie-7307s-projects.vercel.app'
+const RELAIS_ANCIEN_SITE = ['/api/:path*', '/legal-data/:path*', '/legal-data-static/:path*'].map(s => ({ source: s, destination: ANCIEN_SITE + s }))
+/* L'image de partage social : la même que le site en ligne (public/og-image.jpg, 1200 × 630), servie ici à la
+   racine pour que le lien ne dépende plus de l'ancien projet. Toute page publique la déclare, sauf fiche SEO qui en porte une autre. */
+const OG_IMAGE_SOURCE = '/Users/naomiehalioua/cleo-landing/public/og-image.jpg'
+const IMAGE_SOCIALE = { url: `${HOTE}/og-image.jpg`, largeur: 1200, hauteur: 630, alt: 'Cleo Labs, la conformité produit dans 106 pays' }
 const LOCAL = path.join('/Users/naomiehalioua/cleo-maquettes-edge', 'images')
 const POLICE = '/Users/naomiehalioua/Downloads/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Variable.woff2'
 
@@ -54,7 +66,7 @@ const PAGES = [
   { fichier: '43-accueil-avant-vendre-en.html', titre: 'Home, before you sell EN', source: 'pages/43-accueil-avant-vendre.html', en: true },
   { fichier: '09-texte.html',       titre: 'Un texte',    source: 'edgecomply.com/topics/reach-regulation-compliance' },
   { fichier: '10-ressources.html',  titre: 'Ressources',  source: 'edgecomply.com/library' },
-  { fichier: '12-article.html',     titre: 'Article',     source: 'edgecomply.com/library/blog/*' },
+  //   { fichier: '12-article.html',     titre: 'Article',     source: 'edgecomply.com/library/blog/*' },  // 23/09/2026 : remplacée par l'article porté (blog/porter.mjs)
   { fichier: '13-glossaire.html',   titre: 'Glossaire',   source: 'edgecomply.com/library/glossary' },
   { fichier: '14-terme.html',       titre: 'Un terme',    source: 'edgecomply.com/library/glossary/*' },
   { fichier: '15-evenements.html',  titre: 'Rencontres',  source: 'edgecomply.com/library/events' },
@@ -72,16 +84,39 @@ const PAGES = [
   { fichier: '34-importateurs.html', titre: 'Importateurs', source: 'cleolabs.co/fr/for/importers-distributors' },
   { fichier: '35-marketplaces.html', titre: 'Marketplaces', source: 'cleolabs.co/fr/for/marketplaces' },
   { fichier: '36-solutions.html', titre: 'Solutions', source: 'cleolabs.co/fr/solutions/product-compliance' },
-  { fichier: '27-article-levee.html', titre: 'Article levee', source: 'cleolabs.co/fr/blog/cleo-labs-raises-1-5m-preseed' },
-  { fichier: '27-article-levee-en.html', titre: 'Article levee EN', source: 'cleolabs.co/en/blog/cleo-labs-raises-1-5m-preseed', en: true },
-  { fichier: '28-article-vivatech.html', titre: 'Article VivaTech', source: 'cleolabs.co/fr/blog/cleo-labs-vivatech-2026-scaleway-startup-challenge' },
-  { fichier: '28-article-vivatech-en.html', titre: 'Article VivaTech EN', source: 'cleolabs.co/en/blog/cleo-labs-vivatech-2026-scaleway-startup-challenge', en: true },
-  { fichier: '29-article-deel.html', titre: 'Article Deel', source: 'cleolabs.co/fr/blog/global-product-compliance-pitch-by-deel' },
-  { fichier: '29-article-deel-en.html', titre: 'Article Deel EN', source: 'cleolabs.co/en/blog/global-product-compliance-pitch-by-deel', en: true },
+  //   { fichier: '27-article-levee.html', titre: 'Article levee', source: 'cleolabs.co/fr/blog/cleo-labs-raises-1-5m-preseed' },  // 23/09/2026 : remplacée par l'article porté (blog/porter.mjs)
+  //   { fichier: '27-article-levee-en.html', titre: 'Article levee EN', source: 'cleolabs.co/en/blog/cleo-labs-raises-1-5m-preseed', en: true },  // 23/09/2026 : remplacée par l'article porté (blog/porter.mjs)
+  //   { fichier: '28-article-vivatech.html', titre: 'Article VivaTech', source: 'cleolabs.co/fr/blog/cleo-labs-vivatech-2026-scaleway-startup-challenge' },  // 23/09/2026 : remplacée par l'article porté (blog/porter.mjs)
+  //   { fichier: '28-article-vivatech-en.html', titre: 'Article VivaTech EN', source: 'cleolabs.co/en/blog/cleo-labs-vivatech-2026-scaleway-startup-challenge', en: true },  // 23/09/2026 : remplacée par l'article porté (blog/porter.mjs)
+  //   { fichier: '29-article-deel.html', titre: 'Article Deel', source: 'cleolabs.co/fr/blog/global-product-compliance-pitch-by-deel' },  // 23/09/2026 : remplacée par l'article porté (blog/porter.mjs)
+  //   { fichier: '29-article-deel-en.html', titre: 'Article Deel EN', source: 'cleolabs.co/en/blog/global-product-compliance-pitch-by-deel', en: true },  // 23/09/2026 : remplacée par l'article porté (blog/porter.mjs)
   { fichier: '23-research-en.html',   titre: 'Research EN',   source: 'cleolabs.co/en/research', en: true },
   { fichier: '24-blog-en.html',       titre: 'Blog EN',       source: 'cleolabs.co/en/blog', en: true },
   { fichier: '25-skills-en.html',     titre: 'Skills EN',     source: 'cleolabs.co/en/skills', en: true },
   { fichier: '26-legal-data-en.html', titre: 'Legal Data EN', source: 'cleolabs.co/en/legal-data', en: true },
+  { fichier: '19-poste-legal.html', titre: 'Legal Engineer à Paris', source: 'https://www.cleolabs.co/fr/careers/legal-engineer' },
+  { fichier: '19-poste-legal-en.html', titre: 'Legal Engineer in Paris', source: 'https://www.cleolabs.co/en/careers/legal-engineer', en: true },
+  { fichier: '19-poste-fde.html', titre: 'Forward Deployed Engineer à Paris', source: 'https://www.cleolabs.co/fr/careers/forward-deployed-engineer' },
+  { fichier: '19-poste-fde-en.html', titre: 'Forward Deployed Engineer in Paris', source: 'https://www.cleolabs.co/en/careers/forward-deployed-engineer', en: true },
+  { fichier: '36-solutions-en.html', titre: 'Product compliance across 106 countries EN', source: 'pages/36-solutions.html, traduction du 23/09/2026', en: true },
+  { fichier: '35-marketplaces-en.html', titre: 'Product compliance for marketplaces EN', source: 'pages/35-marketplaces.html, traduction du 23/09/2026', en: true },
+  { fichier: '34-importateurs-en.html', titre: 'Product compliance for importers EN', source: 'pages/34-importateurs.html, traduction du 23/09/2026', en: true },
+  { fichier: '33-fabricants-en.html', titre: 'Product compliance for manufacturers EN', source: 'pages/33-fabricants.html, traduction du 23/09/2026', en: true },
+  { fichier: '30-securite-en.html', titre: 'Data security EN', source: 'pages/30-securite.html, traduction du 23/09/2026', en: true },
+  { fichier: '22-legal-en.html', titre: 'Terms of Use EN', source: 'pages/22-legal.html, traduction du 23/09/2026', en: true },
+  { fichier: '21-inscription-en.html', titre: 'See Cleo on your products EN', source: 'pages/21-inscription.html, traduction du 23/09/2026', en: true },
+  { fichier: '20-campagne-en.html', titre: 'PPWR guide, article by article EN', source: 'pages/20-campagne.html, traduction du 23/09/2026', en: true },
+  { fichier: '18-recrutement-en.html', titre: 'Careers: join Cleo Labs EN', source: 'pages/18-recrutement.html, traduction du 23/09/2026', en: true },
+  { fichier: '16-evenement-en.html', titre: 'Product Safety in the Age of AI, Brussels EN', source: 'pages/16-evenement.html, traduction du 23/09/2026', en: true },
+  { fichier: '15-evenements-en.html', titre: 'Product compliance events EN', source: 'pages/15-evenements.html, traduction du 23/09/2026', en: true },
+  { fichier: '14-terme-en.html', titre: 'Authorised representative, definition and obligations EN', source: 'pages/14-terme.html, traduction du 23/09/2026', en: true },
+  { fichier: '13-glossaire-en.html', titre: 'Product compliance glossary EN', source: 'pages/13-glossaire.html, traduction du 23/09/2026', en: true },
+  { fichier: '10-ressources-en.html', titre: 'Product compliance resources EN', source: 'pages/10-ressources.html, traduction du 23/09/2026', en: true },
+  { fichier: '09-texte-en.html', titre: 'PPWR, packaging compliance article by article EN', source: 'pages/09-texte.html, traduction du 23/09/2026', en: true },
+  { fichier: '06-cas-client-en.html', titre: 'Decathlon customer story, multi-market compliance EN', source: 'pages/06-cas-client.html, traduction du 23/09/2026', en: true },
+  { fichier: '05-marche-en.html', titre: 'Product compliance in the European Union EN', source: 'pages/05-marche.html, traduction du 23/09/2026', en: true },
+  { fichier: '04-secteur-en.html', titre: 'Textile and apparel product compliance EN', source: 'pages/04-secteur.html, traduction du 23/09/2026', en: true },
+  { fichier: '02-entreprise-en.html', titre: 'About Cleo Labs: Backed by Kima Ventures EN', source: 'pages/02-entreprise.html, traduction du 23/09/2026', en: true },
   // Vercel sert 404.html à la racine du dossier statique pour toute adresse inconnue.
   { fichier: '99-404.html', titre: '404', source: 'page introuvable', sortie: '404.html' },
 ]
@@ -682,6 +717,7 @@ if (fs.existsSync(dossierPolices)) for (const f of fs.readdirSync(dossierPolices
 const FAVICON = 'data:image/svg+xml;base64,' + fs.readFileSync(path.join(LOCAL, 'favicon.svg')).toString('base64')
 fs.mkdirSync(path.join(ICI, 'sortie'), { recursive: true })
 fs.copyFileSync(path.join(LOCAL, 'favicon.svg'), path.join(ICI, 'sortie', 'favicon.svg'))
+if (fs.existsSync(OG_IMAGE_SOURCE)) fs.copyFileSync(OG_IMAGE_SOURCE, path.join(ICI, 'sortie', 'og-image.jpg')); else console.log('  ⚠ og-image.jpg introuvable, aucune image sociale copiée')
 /* UN SEUL BUILD À LA FOIS. Plusieurs lanes construisent en parallèle depuis le
    03/09/2026 : deux écritures croisées de sortie/ donneraient une page à moitié
    écrite à l'outil de capture de l'autre. Le verrou est un dossier, atomique. */
@@ -791,7 +827,7 @@ const CTA_EN = `
    appartient au menu Data. Skills reste ici, et seulement ici (Naomie : « skills que dans ressources, pas dans data »). */
 const resNav = (actif, en) => {
   const liens = en
-    ? [['10-ressources.html','Tout','All'],['24-blog-en.html','Blog','Blog'],['23-research-en.html','Recherche','Research'],['25-skills-en.html','Skills','Skills'],
+    ? [['10-ressources-en.html','Tout','All'],['24-blog-en.html','Blog','Blog'],['23-research-en.html','Recherche','Research'],['25-skills-en.html','Skills','Skills'],
        ['15-evenements.html','Rencontres','Events'],['13-glossaire.html','Glossaire','Glossary']]
     : [['10-ressources.html','Tout','Tout'],['24-blog.html','Blog','Blog'],['23-research.html','Recherche','Travaux de recherche'],['25-skills.html','Skills','Skills'],
        ['15-evenements.html','Rencontres','Rencontres'],['13-glossaire.html','Glossaire','Glossaire']]
@@ -1004,7 +1040,7 @@ for (const p of PAGES) {
      (tests/seo-accueil.mjs les compare à www.cleolabs.co). seo.json les porte sous « og_titre » et « image » ;
      sans elles, on reste sur le titre et on n'invente aucune URL d'image. */
   const ogTitre = seoP && seoP.og_titre ? seoP.og_titre : titre
-  const image = seoP && seoP.image ? seoP.image : null
+  const image = seoP && seoP.image ? seoP.image : (estApercu(nomSortie) ? null : IMAGE_SOCIALE)
   const og = [
     `<meta property="og:type" content="website">`,
     `<meta property="og:site_name" content="Cleo Labs">`,
@@ -1054,7 +1090,11 @@ for (const p of PAGES) {
   if (st && Array.isArray(st.types)) {
     for (const type of st.types) {
       if (type === 'Organization' || type === 'WebSite') continue
-      const props = sansNotes((st.proprietes && st.proprietes[type]) || {}, langue)
+      const brut = st.proprietes && st.proprietes[type]
+      /* seo.json transcrit le fil d'Ariane comme une liste d'étapes (position, name, item) : c'est itemListElement. */
+      const props = type === 'BreadcrumbList' && Array.isArray(brut)
+        ? { itemListElement: brut.map(x => ({ '@type': 'ListItem', position: x.position, name: sansNotes(x.name, langue), item: x.item })) }
+        : sansNotes(brut || {}, langue)
       const bloc = { '@context': 'https://schema.org', '@type': type }
       if (!props.name) bloc.name = titre
       if (url && !props.url) bloc.url = url
@@ -1068,6 +1108,30 @@ for (const p of PAGES) {
       if (trous.length) { notesSeo.push(`  (${nomSortie} : ${type} non emis, il manque ${trous.join(', ')})`); continue }
       blocs.push(bloc)
     }
+  }
+  /* LE FIL D'ARIANE SUR TOUTE PAGE PUBLIQUE (23/09/2026, bascule). Le site en ligne en sert un sur chaque page depuis
+     son layout ; ici il se déduit de la route : Accueil, puis chaque section qui existe comme page, puis la page.
+     Une page dont seo.json décrit déjà le fil garde le sien. */
+  if (url && !estApercu(nomSortie) && !blocs.some(b => b['@type'] === 'BreadcrumbList')) {
+    const chemin = cheminDe(nomSortie), segs = chemin.split('/').filter(Boolean)
+    if (segs.length > 1) {
+      const NOMS = { resources: ['Ressources', 'Resources'], blog: ['Blog', 'Blog'], data: ['Data', 'Data'], careers: ['Carrières', 'Careers'],
+        'compliance-as-a-service': ['Services', 'Services'], platform: ['Plateforme', 'Platform'], jurisdictions: ['Juridictions', 'Jurisdictions'],
+        solutions: ['Solutions', 'Solutions'], guide: ['Guide', 'Guide'], for: ['Pour', 'For'], glossary: ['Glossaire', 'Glossary'], regulations: ['Réglementations', 'Regulations'] }
+      const existe = new Set(Object.values(CHEMINS.pages).map(c => c.chemin))
+      const etapes = [{ name: langue === 'en' ? 'Home' : 'Accueil', item: `${HOTE}/${segs[0]}` }]
+      for (let i = 1; i < segs.length - 1; i++) { const c = '/' + segs.slice(0, i + 1).join('/'); if (existe.has(c)) etapes.push({ name: (NOMS[segs[i]] || [segs[i], segs[i]])[langue === 'en' ? 1 : 0], item: HOTE + c }) }
+      etapes.push({ name: titre.replace(/ \| Cleo Labs$/, ''), item: url })
+      blocs.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: etapes.map((e, i) => ({ '@type': 'ListItem', position: i + 1, name: e.name, item: e.item })) })
+    }
+  }
+  /* LES FONDATRICES SUR LA PAGE ENTREPRISE : le site en ligne y sert une fiche Person par personne présentée. */
+  if (nomSortie.startsWith('02-entreprise')) for (const f of (SEO.entite.founder || [])) {
+    const per = { '@context': 'https://schema.org', '@type': 'Person', '@id': f['@id'], name: f.name, worksFor: { '@id': SEO.entite['@id'] } }
+    if (f.jobTitle) per.jobTitle = f.jobTitle
+    if (f.url) per.url = f.url
+    if (f.description) per.description = sansNotes(f.description, langue)
+    blocs.push(per)
   }
   /* LA FAQ ET LES ÉTAPES DU STRUCTURÉ SONT CELLES QU'ON LIT (17/09/2026, accueil).
      www.cleolabs.co sert FAQPage et HowTo sur /fr et /en, et une donnée structurée ne décrit que du contenu
@@ -1157,6 +1221,9 @@ fs.writeFileSync(path.join(ICI, 'sortie', 'robots.txt'),
 `User-agent: *
 Allow: /
 Disallow: /apercu/
+Disallow: /api/
+
+${['GPTBot', 'ChatGPT-User', 'ClaudeBot', 'anthropic-ai', 'PerplexityBot', 'Google-Extended', 'CCBot'].map(a => `User-agent: ${a}\nAllow: /\n`).join('\n')}
 Sitemap: ${HOTE}/sitemap.xml
 `)
 /* Le sitemap ne liste que les pages construites qui ont une route publique. */
@@ -1187,13 +1254,51 @@ fs.writeFileSync(path.join(ICI, 'sortie', 'vercel.json'), JSON.stringify({
     // L'ancienne adresse d'aperçu de la page « avant de vendre », devenue l'accueil le 15/09/2026.
     { source: '/apercu/avant-de-vendre', destination: '/fr', permanent: false },
     { source: '/apercu/before-you-sell', destination: '/en', permanent: false },
-    { source: '/fr/platform', destination: '/fr/platform/compliance-service', permanent: false },
-    { source: '/fr/platform/research', destination: '/fr/platform/compliance-service', permanent: false },
-    { source: '/fr/platform/regulations', destination: '/fr/data', permanent: false }],
-  rewrites: reecritures
+    { source: '/fr/platform', destination: '/fr/platform/compliance-service', permanent: true },
+    { source: '/fr/platform/research', destination: '/fr/platform/compliance-service', permanent: true },
+    { source: '/fr/platform/regulations', destination: '/fr/data', permanent: true },
+    ...REDIRECTIONS_HERITEES.filter(r => !reecritures.some(w => w.source === r.source)).map(r => ({ source: r.source, destination: r.destination, permanent: true }))],
+  rewrites: [...reecritures, ...RELAIS_ANCIEN_SITE]
 }, null, 2))
+console.log(`  ${REDIRECTIONS_HERITEES.length} redirections héritées du site en ligne (308), ${RELAIS_ANCIEN_SITE.length} relais vers l'ancien site`)
 console.log(`  ${reecritures.length} URL propres, calquees sur les routes de www.cleolabs.co`)
 console.log(`  robots.txt + sitemap.xml + vercel.json : ${publiques.length} pages indexables, /apercu hors index`)
+
+/* llms.txt (EN), llms-fr.txt (FR), llms-full.txt (les deux, avec le blog) : servis par le site en ligne depuis
+   juin 2026, lus par les moteurs IA. Tout ce qui y figure vient de seo.json (entité, levée, fiches des pages) et
+   des articles construits : aucune phrase n'y est écrite sans source dans le site lui-même. */
+const llms = (langue, complet) => {
+  const E = SEO.entite, L = SEO.levee || {}
+  const t = (fr, en) => langue === 'fr' ? fr : en
+  const pagesL = publiques.filter(f => (f.endsWith('-en.html') || f.startsWith('blog-') && (ARTICLES_BLOG.find(a => a.sortie === f) || {}).langue === 'en') === (langue === 'en'))
+  const blog = pagesL.filter(f => f.startsWith('blog-')), hors = pagesL.filter(f => !f.startsWith('blog-'))
+  const ligne = f => { const sp = SEO.pages[f] || {}; return `- [${(sp.titre || f).replace(/ \| Cleo Labs$/, '')}](${HOTE}${cheminDe(f)})${sp.description ? ': ' + sp.description : ''}` }
+  const financeurs = (L.financeurs || []).map(x => x.name).filter(Boolean).join(', ')
+  const fondatrices = (E.founder || []).map(x => x.name + (x.jobTitle ? ` (${x.jobTitle})` : '')).join(', ')
+  const adresse = E.address ? [E.address.addressLocality, E.address.addressCountry === 'FR' ? 'France' : E.address.addressCountry].filter(Boolean).join(', ') : ''
+  return [
+    `# Cleo Labs`, ``,
+    `> ${t('Cleo Labs automatise la conformité produit pour les marques et les fabricants : 25 000 réglementations et 19 000 autorités suivies dans 106 pays, chaque réponse citant son texte officiel.', 'Cleo Labs automates product compliance for brands and manufacturers: 25,000 regulations and 19,000 authorities tracked across 106 countries, every answer citing its official text.')}`, ``,
+    `## ${t('Entreprise', 'Company')}`, ``,
+    `- ${t('Raison sociale', 'Legal entity')}: ${E.legalName || 'Cleo Corp SAS'}`,
+    E.foundingDate ? `- ${t('Création', 'Founded')}: ${E.foundingDate}` : '',
+    adresse ? `- ${t('Siège', 'Headquarters')}: ${adresse}` : '',
+    fondatrices ? `- ${t('Fondatrices', 'Founders')}: ${fondatrices}` : '',
+    L.montant && L.montant.value ? `- ${t('Financement', 'Funding')}: ${t('pré-amorçage de', 'pre-seed of')} ${(L.montant.value / 1e6).toString().replace('.', t(',', '.'))} M€${financeurs ? ` (${financeurs})` : ''}` : '',
+    `- ${t('Site', 'Website')}: ${HOTE}`,
+    ...(E.sameAs || []).map(u => `- ${t('Profil', 'Profile')}: ${u}`), ``,
+    `## ${t('Ce que Cleo propose', 'What Cleo offers')}`, ``,
+    `- ${t('Services de conformité produit à prix affiché : étiquetage et documentation (à partir de 1 200 € par produit), marquage CE (à partir de 3 800 €), évaluation de conformité, mandataire dans l\'Union européenne.', 'Product compliance services with the price shown up front: labelling and documentation (from €1,200 per product), CE marking (from €3,800), product compliance assessment, EU authorised representative.')}`,
+    `- ${t('Data : API Legal Data et API de classification douanière, serveur MCP. 3 appels gratuits, Starter 100 € par mois, Pro 349 € par mois, Enterprise sur devis.', 'Data: Legal Data API and Customs Classification API, MCP server. 3 free calls, Starter €100 per month, Pro €349 per month, Enterprise on quote.')}`,
+    `- ${t('Enterprise : la plateforme de veille produit, les textes qui visent vos produits et ceux qui changent, dans 106 pays.', 'Enterprise: the product monitoring platform, the texts that target your products and those that change, across 106 countries.')}`, ``,
+    `## ${t('Pages', 'Pages')}`, ``, ...hors.map(ligne), ``,
+    ...(complet ? [`## ${t('Blog', 'Blog')} (${blog.length} ${t('articles', 'articles')})`, ``, ...blog.map(f => { const a = ARTICLES_BLOG.find(x => x.sortie === f) || {}; return `- [${a.titre || f}](${HOTE}${cheminDe(f)})${a.date ? ' (' + a.date + ')' : ''}` }), ``] : [`${t('Le blog complet est listé dans', 'The full blog is listed in')} ${HOTE}/llms-full.txt`, ``]),
+  ].filter(l => l !== undefined && l !== null && l !== '' || l === '').join('\n').replace(/\n{3,}/g, '\n\n')
+}
+fs.writeFileSync(path.join(ICI, 'sortie', 'llms.txt'), llms('en', false))
+fs.writeFileSync(path.join(ICI, 'sortie', 'llms-fr.txt'), llms('fr', false))
+fs.writeFileSync(path.join(ICI, 'sortie', 'llms-full.txt'), llms('en', true) + '\n\n---\n\n' + llms('fr', true))
+console.log(`  llms.txt, llms-fr.txt, llms-full.txt écrits depuis seo.json et les pages construites`)
 
 if (notesSeo.length) { console.log(`\n  couche de tete, ${notesSeo.length} note(s) :`); notesSeo.forEach(n => console.log(n)) }
 
