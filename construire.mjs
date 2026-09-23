@@ -736,7 +736,7 @@ process.on('exit', () => { try { fs.rmdirSync(VERROU) } catch {} })
    concaténé après composants.css. Personne ne touche composants.css pendant
    qu'une lane tourne : c'est ce qui rend les territoires réellement disjoints. */
 const dossierLanes = path.join(ICI, 'commun/lanes')
-const lanesCss = fs.existsSync(dossierLanes)
+const lanesCssBrut = fs.existsSync(dossierLanes)
   ? fs.readdirSync(dossierLanes).filter(f => f.endsWith('.css')).sort()
       .map(f => `/* ── lane ${f} ── */\n` + fs.readFileSync(path.join(dossierLanes, f), 'utf8')).join('\n')
       /* 23/09/2026, les 262 articles de blog portés : leur body porte data-v6-page="blog-<slug>", et les calques
@@ -745,6 +745,21 @@ const lanesCss = fs.existsSync(dossierLanes)
          vise donc aussi tout blog-* : une seule feuille pour tous les articles, sans copier les règles. */
       .replace(/\[data-v6-page="12-article"\]/g, ':is([data-v6-page="12-article"],[data-v6-page^="blog-"])')
   : ''
+/* 23/09/2026 : dix-neuf pages EN traduites le jour même portent data-v6-page="<page>-en", et 3 434 sélecteurs de
+   calques ne visaient que le nom FR. Mesuré sur www.cleolabs.co/en/company le soir de la bascule : logos et portraits
+   en colonne, valeurs en texte nu. Tout sélecteur de page dont le jumeau -en n'est pas déclaré vise aussi ce jumeau ;
+   les offres d'emploi (19-poste-fde, 19-poste-legal, et leurs -en) prennent les calques du gabarit 19-poste. */
+const lanesCss = (() => {
+  const valeurs = new Set([...lanesCssBrut.matchAll(/\[data-v6-page="([^"]+)"\]/g)].map(m => m[1]))
+  let css = lanesCssBrut
+  for (const v of valeurs) {
+    if (v.endsWith('-en') || v.startsWith('blog-') || v === '12-article' || v === '19-poste') continue
+    if (valeurs.has(v + '-en')) continue
+    css = css.split(`[data-v6-page="${v}"]`).join(`:is([data-v6-page="${v}"],[data-v6-page="${v}-en"])`)
+  }
+  css = css.split('[data-v6-page="19-poste"]').join(':is([data-v6-page="19-poste"],[data-v6-page^="19-poste-"])')
+  return css
+})()
 /* Les commentaires des feuilles sont des notes d'atelier (mesures, sources, dont
    edgecomply.com) : ils ne sortent pas dans la page. Mesuré le 03/09/2026 : 192 mentions
    d'edgecomply sur 47 pages, toutes dans le CSS inclus. */
@@ -911,7 +926,10 @@ function avecMenuMobile(navHtml, langue = 'fr') {
     const m = bloc.match(/<(button|a) class="nav-declencheur"(?: href="([^"]*)")?>([\s\S]*?)<\/\1>/)
     if (!m) continue
     const titre = m[3].replace(/<svg[\s\S]*?<\/svg>/g, '').trim()
-    if (m[2]) { groupes.push({ titre, href: m[2] }); continue }
+    /* 23/09/2026 : un déclencheur-lien peut aussi porter un méga-menu (Services, Data) ; au téléphone, le titre est
+       le lien vers la page générale et les entrées suivent. */
+    if (m[2] && !/class="mega-item"/.test(bloc)) { groupes.push({ titre, href: m[2] }); continue }
+    const hrefTitre = m[2] || null
     const liens = []
     for (const a of bloc.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)) {
       /* La carte visuelle d'un méga-menu (menu Data à la Moonlit, 15/09/2026) redit un lien de la liste : pas au téléphone. */
@@ -920,7 +938,7 @@ function avecMenuMobile(navHtml, langue = 'fr') {
       const texte = (b ? b[1] : a[2]).replace(/<span class="mega-badge">[\s\S]*?<\/span>/g, '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim()
       if (texte) liens.push({ href: a[1], texte })
     }
-    groupes.push({ titre, liens })
+    groupes.push({ titre, liens, hrefTitre })
   }
   const fin = navHtml.match(/<div class="nav-fin">([\s\S]*?)<\/div>/)
   if (!fin) throw new Error('nav : .nav-fin introuvable')
@@ -936,7 +954,7 @@ function avecMenuMobile(navHtml, langue = 'fr') {
   <div class="mm-tete"><p class="mm-cache" id="menu-mobile-titre">${L.titre}</p><button class="mm-fermer" type="button">${L.fermer}</button></div>
 ${groupes.map(g => g.href
     ? `  <div class="mm-groupe"><a href="${g.href}">${g.titre}</a></div>`
-    : `  <div class="mm-groupe"><div class="mm-titre">${g.titre}</div>
+    : `  <div class="mm-groupe"><div class="mm-titre">${g.hrefTitre ? `<a href="${g.hrefTitre}">${g.titre}</a>` : g.titre}</div>
 ${g.liens.map(l => `    <a href="${l.href}">${l.texte}</a>`).join('\n')}
   </div>`).join('\n')}
   <div class="mm-actions">
