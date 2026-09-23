@@ -36,5 +36,5 @@ node construire.mjs > /tmp/relais-build.log 2>&1 || { dit "build en échec"; tai
 for t in tests/v6-structure.mjs tests/seo-accueil.mjs tests/servir-routes.mjs; do node "$t" > /tmp/relais-test.log 2>&1 || { dit "test en échec : $t"; tail -5 /tmp/relais-test.log; exit 1 }; done
 git add pages/blog blog commun/v6-routes.json pages/24-blog.html pages/24-blog-en.html && git commit -q -m "blog : relais quotidien, $nouveaux fichier(s) nouveau(x) ($(date '+%d/%m/%Y'))" && dit "commité $(git rev-parse --short HEAD)"
 git push -q origin HEAD 2>/dev/null && dit "poussé" || dit "push différé (hook ou réseau), le commit reste local"
-url=$(vercel deploy sortie --prod --yes 2>&1 | grep -oE 'https://[a-z0-9.-]*vercel.app' | tail -1)
+url=$(vercel deploy sortie --prod --yes --scope cleo-academys-projects 2>&1 | grep -oE 'https://[a-z0-9.-]*vercel.app' | tail -1)
 dit "déployé : ${url:-?}"
