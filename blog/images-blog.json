@@ -1,6 +1,6 @@
 {
- "monde-rd-chocolat": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/02-rd-chocolat-20260923-195822-01.jpg",
+ "monde-chargement-conteneur": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/17-chargement-conteneur-20260923-195620-01.jpg",
   1200
  ],
  "monde-rd-peluche": [
@@ -15,8 +15,8 @@
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/15-etiquetage-controle-20260923-195603-01.jpg",
   1200
  ],
- "monde-chargement-conteneur": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/17-chargement-conteneur-20260923-195620-01.jpg",
+ "monde-douane-inspection": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/18-douane-inspection-20260923-195620-01.jpg",
   1200
  ],
  "monde-prod-peluche": [
@@ -25,10 +25,6 @@
  ],
  "monde-entrepot-palettes": [
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/16-entrepot-palettes-20260923-195607-01.jpg",
-  1200
- ],
- "monde-douane-inspection": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/18-douane-inspection-20260923-195620-01.jpg",
   1200
  ],
  "monde-fret-aerien": [
@@ -43,8 +39,8 @@
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/10-test-traction-jouet-20260923-195545-01.jpg",
   1200
  ],
- "monde-prod-chocolat": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/08-prod-chocolat-20260923-195529-01.jpg",
+ "monde-rd-chocolat": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/02-rd-chocolat-20260923-195822-01.jpg",
   1200
  ],
  "monde-prod-dentifrice": [
@@ -59,8 +55,8 @@
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/04-rd-voiture-20260923-195511-01.jpg",
   1200
  ],
- "monde-qualite-chocolat": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/14-qualite-chocolat-20260923-195603-01.jpg",
+ "monde-prod-chocolat": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/08-prod-chocolat-20260923-195529-01.jpg",
   1200
  ],
  "monde-prod-voiture": [
@@ -73,6 +69,10 @@
  ],
  "monde-proto-impression-3d": [
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/05-proto-impression-3d-20260923-195526-01.jpg",
+  1200
+ ],
+ "monde-qualite-chocolat": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/14-qualite-chocolat-20260923-195603-01.jpg",
   1200
  ],
  "monde-test-crash-voiture": [

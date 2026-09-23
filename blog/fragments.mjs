@@ -34,11 +34,11 @@ const MONDE = fs.existsSync(BANQUE) ? fs.readdirSync(BANQUE).filter(f => /^\d\d-
 const THEMES = [
   [/toy|jouet|peluche|plush|child|enfant|kid/i, /^(01|06|10)-/],
   [/cosmet|fragran|parfum|dentifrice|soap|skin|hair|sunscreen|allergen|enzacamene|kohl/i, /^(03|07|11)-/],
-  [/food|aliment|chocolat|formula|drink|alcohol|cereulide|nutrition|beverage|sauna/i, /^(02|08|14)-/],
+  [/food|aliment|chocolat|formula|drink|alcohol|cereulide|nutrition|beverage/i, /^(02|08|14)-/],
   [/\bcar\b|vehicle|automotive|voiture|bike|battery|batter|dryer|appliance|electr/i, /^(04|09|12)-/],
   [/customs|douane|tariff|import|export|minimis|parcel|border|hs.?code|fee/i, /^(18|17|19)-/],
   [/label|étiquet|packag|emballage|ppwr|marking|claim|passport/i, /^(15)-/],
-  [/textile|apparel|flamm|fire|inflamm|firework|sand|asbestos/i, /^(13|16)-/],
+  [/textile|apparel|flamm|fire|inflamm|firework|sand|asbestos|sauna|heater/i, /^(13|16)-/],
   [/3d|print|prototype|innovation|\bai\b|agent|llm|model|data act|skills|agentic/i, /^(05)-/],
   [/marketplace|retail|store|shop|recall|amazon|shein|temu|magasin|deliver|supply|warehouse|entrep|logist|opss|surveillance/i, /^(20|16|18)-/]]
 const usage = {}; const couvertures = {}
