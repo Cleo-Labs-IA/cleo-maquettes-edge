@@ -1,0 +1,48 @@
+  340 URL déclarées au sitemap de https://www.cleolabs.co
+  relevé des pages…
+  8/340  16/340  24/340  32/340  40/340  48/340  56/340  64/340  72/340  80/340  88/340  96/340  104/340  112/340  120/340  128/340  136/340  144/340  152/340  160/340  168/340  176/340  184/340  192/340  200/340  208/340  216/340  224/340  232/340  240/340  248/340  256/340  264/340  272/340  280/340  288/340  296/340  304/340  312/340  320/340  328/340  336/340  340/340
+
+════ GARDE-SEO : 590 pages comparées à la référence du 2026-09-23
+
+  171 changement(s) sans perte :
+  /fr/solutions/product-compliance  titre change : « Conformité Produit pour les Retailers :  » → « Conformité produit sur 106 pays | Cleo L »
+  /en/solutions/product-compliance  titre change : « Product Compliance for Retailers: Multi- » → « Product compliance across 106 countries  »
+  /en/for/importers-distributors  titre change : « Product Compliance &amp; Customs for Imp » → « Product compliance for importers | Cleo  »
+  /en/for/importers-distributors  canonical corrigé : https://www.cleolabs.co/en → lui-même
+  /en/for/manufacturers  titre change : « Product Compliance for Manufacturers | C » → « Product compliance for manufacturers | C »
+  /en/for/manufacturers  canonical corrigé : https://www.cleolabs.co/en → lui-même
+  /en/for/marketplaces  titre change : « Product Compliance for Marketplaces | Cl » → « Product compliance for marketplaces | Cl »
+  /en/for/marketplaces  canonical corrigé : https://www.cleolabs.co/en → lui-même
+
+  278 URL redirigée(s) en permanent vers une page en 200 :
+  /en/platform  →  /en/platform/compliance-service
+  /fr/maria-action-plan  →  /fr/solutions/product-compliance
+  /en/maria-action-plan  →  /en/solutions/product-compliance
+  /fr/platform  →  /fr/platform/compliance-service
+  /fr/resources/ai-act-compliance  →  /fr/resources
+  /en/resources/ai-act-compliance  →  /en/resources
+  … et 272 autres
+
+  927 écart(s) assumé(s), par raison :
+   312 × le site en ligne déclare sur chaque page une vidéo hero-video.mp4 (« Infrastructure IA de Conformité pour le Retail », 2024
+   2 × l'accueil V6 renvoie vers les profils publics, HubSpot et le portail Legal Data ; l'ancien accueil liait en plus des sites tiers (logos, presse
+   556 × le site en ligne émettait deux fils d'Ariane identiques par page (layout + composant
+   4 × pas de FAQ visible sur cette page V6 ; une FAQPage ne décrit que du contenu visible (contrat SEO/GEO
+   2 × page Legal Data réécrite le 23/09 : la matrice de couverture de l'ancien site vit sur le portail legaldata-public
+   2 × page sécurité réécrite le 23/09, six sections au lieu de dix
+   1 × page sécurité réécrite le 23/09 : les affirmations non sourcées de l'ancien texte ont été retirées
+   16 × un lien sortant de moins sur chaque page depuis le retrait du lien Connexion (insight.cleolabs.co
+   4 × la page skills V6 renvoie vers GitHub et le blog, sans les liens outils de l'ancien site
+   2 × glossaire recentré, termes en liste de définitions
+   2 × glossaire recentré sur la conformité produit (7 termes
+   4 × l'entité Organization est déclarée une fois par page (le site en ligne la répétait dans le layout et dans la page
+   6 × deux fondatrices déclarées depuis l'entité ; la troisième fiche Person du site en ligne n'a pas d'équivalent visible sur la page V6
+   2 × la page entreprise V6 ne renvoie plus vers la presse et les outils cités par l'ancien site
+   2 × index du blog : titres de cartes en h3 sous un h2 de section
+   2 × l'index du blog liste titres et dates ; les extraits vivent dans les articles
+   2 × la page industries V6 présente le textile et l'habillement, sans liste de secteurs à déclarer
+   2 × page industries réécrite le 23/09 (textile et habillement
+   2 × page Union européenne réécrite le 23/09 (REACH, RSGP, PPWR, batteries
+   2 × page Union européenne réécrite le 23/09, les liens vers GDPR, AI Act, DORA et CSRD sont retirés avec le positionnement finance
+
+  ✓ aucun signal dégradé.
