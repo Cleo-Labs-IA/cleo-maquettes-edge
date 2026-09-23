@@ -947,6 +947,8 @@ function avecMenuMobile(navHtml, langue = 'fr') {
     const hrefTitre = m[2] || null
     const liens = []
     for (const a of bloc.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)) {
+      /* Le déclencheur-lien du méga-menu est déjà le titre du groupe : il ne se répète pas dans la liste (mesuré au téléphone le 23/09 : « Data » deux fois). */
+      if (/class="nav-declencheur"/.test(a[0])) continue
       /* La carte visuelle d'un méga-menu (menu Data à la Moonlit, 15/09/2026) redit un lien de la liste : pas au téléphone. */
       if (/class="mega-carte"/.test(a[0])) continue
       const b = a[2].match(/<b>([\s\S]*?)<\/b>/)

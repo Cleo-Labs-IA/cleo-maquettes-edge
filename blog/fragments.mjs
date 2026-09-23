@@ -25,16 +25,50 @@ const T = {
 }
 const cle = f => 'blog-' + f.replace(/\.[a-z]+$/i, '').toLowerCase().replace(/[^a-z0-9]+/g, '-')
 const COUVERTURE_DEFAUT = 'masse-pile'
+/* 23/09/2026, Naomie : « utilise ~/outils-image-gemini/serie-monde-qui-bouge-v2 comme banque d'images pour les blogs,
+   pour ne jamais avoir deux fois la même image ». Vingt visuels (R&D, production, essais, étiquetage, logistique),
+   hors dépôt. Chaque article reçoit le visuel le moins utilisé de son thème (mots du slug, du titre, de la catégorie),
+   les deux langues partagent le même, et le fil du blog ne montre jamais le même visuel deux cartes de suite. */
+const BANQUE = process.env.BANQUE_MONDE || '/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/'
+const MONDE = fs.existsSync(BANQUE) ? fs.readdirSync(BANQUE).filter(f => /^\d\d-.*\.jpg$/.test(f)).sort() : []
+const THEMES = [
+  [/toy|jouet|peluche|plush|child|enfant|kid/i, /^(01|06|10)-/],
+  [/cosmet|fragran|parfum|dentifrice|soap|skin|hair|sunscreen|allergen|enzacamene|kohl/i, /^(03|07|11)-/],
+  [/food|aliment|chocolat|formula|drink|alcohol|cereulide|nutrition|beverage|sauna/i, /^(02|08|14)-/],
+  [/\bcar\b|vehicle|automotive|voiture|bike|battery|batter|dryer|appliance|electr/i, /^(04|09|12)-/],
+  [/customs|douane|tariff|import|export|minimis|parcel|border|hs.?code|fee/i, /^(18|17|19)-/],
+  [/label|étiquet|packag|emballage|ppwr|marking|claim|passport/i, /^(15)-/],
+  [/textile|apparel|flamm|fire|inflamm|firework|sand|asbestos/i, /^(13|16)-/],
+  [/3d|print|prototype|innovation|\bai\b|agent|llm|model|data act|skills|agentic/i, /^(05)-/],
+  [/marketplace|retail|store|shop|recall|amazon|shein|temu|magasin|deliver|supply|warehouse|entrep|logist|opss|surveillance/i, /^(20|16|18)-/]]
+const usage = {}; const couvertures = {}
+const cleBanque = f => 'monde-' + f.replace(/-\d{8}-\d{6}-\d+\.jpg$/, '').replace(/^\d\d-/, '')
+const moinsUtilise = (cands) => cands.slice().sort((a, b) => (usage[a] || 0) - (usage[b] || 0) || a.localeCompare(b))[0]
+const couvertureDe = (a) => {
+  if (couvertures[a.slug]) return couvertures[a.slug]
+  if (!MONDE.length) return null
+  const texte = `${a.slug} ${a.titre} ${a.categorie}`
+  const theme = THEMES.find(([re]) => re.test(texte))
+  const cands = theme ? MONDE.filter(f => theme[1].test(f)) : MONDE
+  const f = moinsUtilise(cands.length ? cands : MONDE); usage[f] = (usage[f] || 0) + 1
+  couvertures[a.slug] = f; return f
+}
 const images = {}; const chemins = {}; const seo = { pages: {}, structure: {} }; const manifeste = []
 fs.mkdirSync(path.join(ICI, 'pages/blog'), { recursive: true })
 const parLangue = { fr: brut.filter(a => a.langue === 'fr'), en: brut.filter(a => a.langue === 'en') }
 for (const l of ['fr', 'en']) parLangue[l].sort((a, b) => b.date.localeCompare(a.date))
+for (const a of parLangue.fr) couvertureDe(a)
+for (const a of parLangue.en) couvertureDe(a)
+// deux cartes voisines du fil ne montrent jamais le même visuel : on échange avec la première suivante qui diffère
+{ const fil = parLangue.fr; for (let i = 1; i < fil.length; i++) { if (couvertures[fil[i].slug] !== couvertures[fil[i - 1].slug]) continue
+  const j = fil.findIndex((x, k) => k > i && couvertures[x.slug] !== couvertures[fil[i - 1].slug] && (!fil[i + 1] || couvertures[x.slug] !== couvertures[fil[i + 1].slug]) && (!fil[k + 1] || couvertures[fil[i].slug] !== couvertures[fil[k + 1].slug]) && couvertures[fil[i].slug] !== couvertures[fil[k - 1].slug])
+  if (j > 0) { const t = couvertures[fil[i].slug]; couvertures[fil[i].slug] = couvertures[fil[j].slug]; couvertures[fil[j].slug] = t } } }
+const couvertureCle = (a) => { const f = couvertureDe(a); if (f) { const k = cleBanque(f); images[k] = [BANQUE + f, 1200]; return k } return a.couverture && fs.existsSync(BANK + a.couverture) ? cle(a.couverture) : COUVERTURE_DEFAUT }
 const existants = { fr: [['12-article.html', 'PPWR : ce que le 12 août 2026 change pour vos emballages', 'masse-capsule', 'Emballage'], ['27-article-levee.html', 'Cleo lève 1,5 M€ pour automatiser la conformité réglementaire produit à l\'échelle mondiale', 'equipe', 'Entreprise']],
   en: [['27-article-levee-en.html', 'Cleo Labs raises €1.5M to automate product regulatory compliance at a global scale', 'equipe', 'Company'], ['28-article-vivatech-en.html', 'Cleo Labs wins the Scaleway Startup Challenge and joins VivaTech 2026', 'paris', 'Company']] }
 for (const a of brut) {
   const en = a.langue === 'en'; const t = T[a.langue]; const au = AUTEURS[a.auteur] || AUTEURS.naomie
-  const cover = a.couverture && fs.existsSync(BANK + a.couverture) ? cle(a.couverture) : COUVERTURE_DEFAUT
-  if (cover !== COUVERTURE_DEFAUT) images[cover] = [BANK + a.couverture, 1200]
+  const cover = couvertureCle(a)
   // corps : ancres sur les h2
   let n = 0; const ancres = []
   const corps = a.corps.map(c => c.html.replace(/<h2>([\s\S]*?)<\/h2>/, (m, titre) => { n++; ancres.push([`s${n}`, titre.replace(/<[^>]+>/g, '')]); return `<h2 id="s${n}">${titre}</h2>` })).join('\n')
@@ -43,8 +77,10 @@ for (const a of brut) {
   const sommaire = [...ancres.map(([id, ti]) => `<a href="#${id}">${ech(ti)}</a>`), ...(a.faq.length ? [`<a href="#questions">${t.faq}</a>`] : []), ...(a.sources ? [`<a href="#sources">${t.sources}</a>`] : [])].join('\n        ')
   // à lire aussi : les trois articles voisins par date, même langue
   const liste = parLangue[a.langue]; const i = liste.findIndex(x => x.slug === a.slug)
-  const voisins = [liste[i - 1], liste[i + 1], liste[i + 2], liste[i - 2]].filter(Boolean).slice(0, 3)
-  const cartes = voisins.map(v => { const c = v.couverture && fs.existsSync(BANK + v.couverture) ? cle(v.couverture) : COUVERTURE_DEFAUT; return `      <a class="sy-carte-photo" href="blog-${v.slug}${en ? '-en' : ''}.html"><img src="img:${c}" alt=""><span class="sy-etiquette">${ech(v.categorie)}</span><b>${ech(v.titre)}</b></a>` })
+  // à lire aussi : trois voisines, de préférence avec un autre visuel que l'article lui-même
+  const proches = [liste[i - 1], liste[i + 1], liste[i + 2], liste[i - 2], liste[i + 3], liste[i - 3]].filter(Boolean)
+  const voisins = [...proches.filter(v => couvertureCle(v) !== cover), ...proches.filter(v => couvertureCle(v) === cover)].slice(0, 3)
+  const cartes = voisins.map(v => { const c = couvertureCle(v); return `      <a class="sy-carte-photo" href="blog-${v.slug}${en ? '-en' : ''}.html"><img src="img:${c}" alt=""><span class="sy-etiquette">${ech(v.categorie)}</span><b>${ech(v.titre)}</b></a>` })
   for (const [f, ti, im, cat] of existants[a.langue].slice(0, 3 - cartes.length)) cartes.push(`      <a class="sy-carte-photo" href="${f}"><img src="img:${im}" alt=""><span class="sy-etiquette">${cat}</span><b>${ech(ti)}</b></a>`)
   const auteurHtml = au.lien
     ? `<a href="${au.lien}" rel="author noopener" target="_blank" style="display:flex;align-items:center;gap:12px"><img src="img:${au.img}" alt="${au.nom}" style="width:44px;height:44px;border-radius:50%;object-fit:cover"><span style="display:block"><span class="t-h3" style="display:block">${au.nom}</span><span class="t-caption" style="display:block">${au.role[a.langue]}</span></span></a>`
@@ -137,7 +173,7 @@ fs.writeFileSync(path.join(ICI, 'commun/v6-routes.json'), JSON.stringify(vr, nul
 // les deux index : le fil complet, du plus récent au plus ancien, par mois
 for (const l of ['fr', 'en']) {
   const en = l === 'en'; const t = T[l]; const f = path.join(ICI, 'pages', en ? '24-blog-en.html' : '24-blog.html'); let s = fs.readFileSync(f, 'utf8')
-  const tous = [...parLangue[l].map(a => ({ href: `blog-${a.slug}${en ? '-en' : ''}.html`, titre: a.titre, date: a.date, cat: a.categorie, img: a.couverture && fs.existsSync(BANK + a.couverture) ? cle(a.couverture) : COUVERTURE_DEFAUT })),
+  const tous = [...parLangue[l].map(a => ({ href: `blog-${a.slug}${en ? '-en' : ''}.html`, titre: a.titre, date: a.date, cat: a.categorie, img: couvertureCle(a) })),
     ...POSTS.filter(p => ['eu-ppwr-packaging-conformity-2026', 'cleo-labs-raises-1-5m-preseed', 'cleo-labs-vivatech-2026-scaleway-startup-challenge', 'global-product-compliance-pitch-by-deel'].includes(p.slug)).map(p => ({ href: { 'eu-ppwr-packaging-conformity-2026': '12-article.html', 'cleo-labs-raises-1-5m-preseed': '27-article-levee.html', 'cleo-labs-vivatech-2026-scaleway-startup-challenge': '28-article-vivatech.html', 'global-product-compliance-pitch-by-deel': '29-article-deel.html' }[p.slug].replace('.html', en ? '-en.html' : '.html'), titre: p.title[l], date: p.date, cat: p.category[l], img: p.coverImage && fs.existsSync(BANK + p.coverImage.replace('/blog-bank/', '')) ? cle(p.coverImage.replace('/blog-bank/', '')) : COUVERTURE_DEFAUT }))]
     .filter(x => !(en && x.href === '12-article-en.html')).sort((a, b) => b.date.localeCompare(a.date))
   for (const x of tous) if (x.img !== COUVERTURE_DEFAUT && !images[x.img]) { const p = POSTS.find(p => p.coverImage && cle(p.coverImage.replace('/blog-bank/', '')) === x.img); if (p) images[x.img] = [BANK + p.coverImage.replace('/blog-bank/', ''), 1200] }

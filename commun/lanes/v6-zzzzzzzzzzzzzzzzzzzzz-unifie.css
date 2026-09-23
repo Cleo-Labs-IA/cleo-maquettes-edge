@@ -164,3 +164,18 @@ html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-re
 @keyframes evDiapo{0%{opacity:0}2%{opacity:1}8.4%{opacity:1}10.4%{opacity:0}100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ev-diapo img{animation:none}}
 @media (max-width:760px){html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-rencontre-grille{grid-template-columns:repeat(2, minmax(0, 1fr))}}
+
+/* ── Téléphone, 23/09/2026 soir, quatre captures iPhone de Naomie (mesurées dans WebKit à 390 px) ──
+   1. scène 01 : la ligne « Sécurité mécanique du jouet · Applicable » collait au bord droit de la carte ;
+   2. experts : deux portraits de hauteurs différentes, centrés verticalement, donc décalés ;
+   3. bas de page : 144 px de marge avant l'appel final ;
+   4. le doublon « Data » du menu venait du générateur (déclencheur-lien répété), corrigé dans construire.mjs. */
+@media (max-width:760px){
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-app-corps{padding-right:16px;padding-left:16px}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-exigence-tete{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;padding-right:8px}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-experts-grille{align-items:start}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-experts-grille .ac-portrait img{aspect-ratio:3 / 4;height:auto;width:100%;object-fit:cover}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .section.sy-final-photo,
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-final{padding-top:64px !important;padding-bottom:64px !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .section{padding-top:72px;padding-bottom:72px}
+}
