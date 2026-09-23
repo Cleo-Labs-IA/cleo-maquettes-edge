@@ -547,3 +547,29 @@ body[data-cleo-ds="v6"]:not(#_) main .ac-app:not(#__):not(#___):not(#____){z-ind
    l'étape éteinte est transparente, l'étape allumée est un panneau plus clair avec un filet blanc. */
 @keyframes acEtape{0%,100%{background-color:transparent;box-shadow:0 0 0 1px transparent, 0 18px 40px -24px transparent}12%,88%{background-color:#1F1F23;box-shadow:0 0 0 1px rgba(255,255,255,.14), 0 18px 40px -24px rgba(0,0,0,.8)}}
 @keyframes acEtapeDerniere{0%{background-color:transparent;box-shadow:0 0 0 1px transparent, 0 18px 40px -24px transparent}12%,100%{background-color:#1F1F23;box-shadow:0 0 0 1px rgba(255,255,255,.14), 0 18px 40px -24px rgba(0,0,0,.8)}}
+
+/* ═══ 49. LE SURVOL DU MÉGA-MENU : 16 ENTRÉES SUR 23 DEVENAIENT INVISIBLES ═════════════════════════════
+   23/09/2026, capture de Naomie : « quand on fait passer le curseur, ça fait pas clair ». Mesuré en
+   survolant chaque entrée : texte blanc sur #F9F8F6, contraste 1,06. La feuille du méga-menu peint le
+   survol en crème clair, en dur, et AUCUN de mes contrôles n'avait jamais testé l'état :hover — ils
+   mesuraient tous la page au repos. C'est un angle mort entier, pas un oubli ponctuel. */
+body[data-cleo-ds="v6"]:not(#_) .nav .mega-item:hover:not(#__):not(#___):not(#____),
+body[data-cleo-ds="v6"]:not(#_) .nav .mega-item:focus-visible:not(#__):not(#___):not(#____){background:rgba(255,255,255,.08) !important}
+body[data-cleo-ds="v6"]:not(#_) .nav .mega-item:hover .mega-icone:not(#__):not(#___):not(#____){background:rgba(140,146,255,.20) !important;color:#8C92FF !important}
+body[data-cleo-ds="v6"]:not(#_) .nav .mega-liste a:hover:not(#__):not(#___):not(#____){color:#8C92FF !important}
+body[data-cleo-ds="v6"]:not(#_) .nav .mega-carte:hover:not(#__):not(#___):not(#____){background:rgba(255,255,255,.08) !important}
+/* Le survol de la barre « Aller à » passait au bleu profond #0008CF sur noir : 1,94. Sur fond sombre,
+   le repère bleu est le bleu clair, comme partout ailleurs (§19). Et le bouton clair d'Enterprise
+   gardait un texte bleu nuit sur son fond gris de survol : 2,35. */
+body[data-cleo-ds="v6"]:not(#_) main .ac-aller-liens a:hover:not(#__):not(#___):not(#____){color:#8C92FF !important}
+body[data-cleo-ds="v6"]:not(#_) main .en-bouton:hover:not(#__):not(#___):not(#____){background:#FFFFFF !important;color:#0A0A0B !important}
+body[data-cleo-ds="v6"]:not(#_) main .en-bouton:hover *:not(#__):not(#___):not(#____){color:#0A0A0B !important}
+/* Deux derniers bleus profonds restés sur fond sombre : les mentions « relit » et « Relue » de la scène
+   Service (1,65) et le bouton clair « Voir Enterprise » (2,31). */
+body[data-cleo-ds="v6"]:not(#_) main :is(.sc-relecteur em, .sc-doc-relu .sc-doc-tete em):not(#__):not(#___):not(#____){color:#8C92FF !important}
+body[data-cleo-ds="v6"]:not(#_) main .sc-bouton-clair:hover:not(#__):not(#___):not(#____){background:#FFFFFF !important;color:#0A0A0B !important}
+body[data-cleo-ds="v6"]:not(#_) main .sc-bouton-clair:hover *:not(#__):not(#___):not(#____){color:#0A0A0B !important}
+/* Le bouton « Voir Enterprise » porte .sc-bouton-blanc, pas .sc-bouton-clair : son texte bleu nuit
+   restait sur le gris de survol (2,35). Même traitement, et pour ses enfants. */
+body[data-cleo-ds="v6"]:not(#_) main .sc-bouton-blanc:hover:not(#__):not(#___):not(#____){background:#FFFFFF !important;color:#0A0A0B !important}
+body[data-cleo-ds="v6"]:not(#_) main .sc-bouton-blanc:hover *:not(#__):not(#___):not(#____){color:#0A0A0B !important}
