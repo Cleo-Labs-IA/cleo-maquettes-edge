@@ -527,3 +527,20 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-prestations .sy-etiquette:not(#_):not(#_):not(#_){color:var(--c-accent) !important}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-roue-texte h3:not(#_):not(#_):not(#_){font-size:clamp(1.375rem, 1rem + 0.9vw, 2rem) !important}
 body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-questions .ac-entete .ac-index:not(#_):not(#_):not(#_){margin-bottom:0}
+
+/* Les lignes du dossier au téléphone : à 390 px, la grille « nom | pastille » écrasait le libellé dans
+   une colonne étroite (« Substances restreintes / REACH, annexe XVII » sur trois lignes) contre une
+   pastille large. Mesuré le 23/09/2026. En dessous de 560 px, la pastille passe sous le libellé. */
+@media (max-width:560px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-suite li:not(#_):not(#_):not(#_){grid-template-columns:minmax(0,1fr)}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-suite .ac-etat:not(#_):not(#_):not(#_){grid-column:1;grid-row:3;justify-self:start;margin-top:10px}
+}
+
+/* La roue des catégories au téléphone : à 390 px les libellés sortaient en 22 px (clamp minimum) et se
+   faisaient couper en plein mot — « Bijoux, lunettes de soleil, montr… », « Loisirs créatifs, tissus et
+   couture… ». Le plus long fait 42 signes : à 17 px il tient dans 390 px moins la gouttière. L'inclinaison
+   reste, adoucie, parce qu'une ligne penchée est plus large que son texte. Mesuré le 23/09/2026. */
+@media (max-width:560px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-roue-liste li:not(#_):not(#_):not(#_){font-size:17px;rotate:-4deg;padding:6px 0}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-roue:not(#_):not(#_):not(#_){height:180px}
+}

@@ -9,24 +9,31 @@
    et elle se retire en supprimant ce fichier.
    Ordre de chargement : après oa-sombre (un z de plus), donc elle gagne à spécificité égale. */
 
-/* ── 1. Le corps : leur 16 px ─────────────────────────────────────────────────────────────────────── */
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(p, li, dd, .reponse, blockquote, figcaption):not(#_):not(#_):not(#_):not(#__){font-size:16px !important}
+/* ⚠️ TOUTE l'échelle en pixels fixes est bornée aux grands écrans. Mesuré le 23/09/2026 :
+   posée sans point de rupture, elle figeait le chapeau à 22 px jusqu'au téléphone, alors que la
+   feuille d'origine le fait respirer de 18 à 22 px selon la largeur. Et la hauteur de scène,
+   censée RACCOURCIR le bureau, allongeait la tablette de 1 885 px parce qu'en dessous de 1180 px
+   la scène n'a pas de hauteur imposée. En dessous de 981 px, on ne touche plus à rien. */
+@media (min-width:981px){
+  /* ── 1. Le corps : leur 16 px ─────────────────────────────────────────────────────────────────────── */
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(p, li, dd, .reponse, blockquote, figcaption):not(#_):not(#_):not(#_):not(#__){font-size:16px !important}
 
-/* ── 2. L'interface : leur 14 px. Liens, boutons, valeurs du dossier, barre latérale, repères ──────── */
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(a, button, small, dt, .ac-r1, .ac-r2, .ac-index, .ac-tete-sur, .ac-prix, .gp-nom, .ac-app-nav li, .ac-suite b, .ac-suite-source, .ac-app-meta):not(#_):not(#_):not(#_):not(#__){font-size:14px !important}
+  /* ── 2. L'interface : leur 14 px. Liens, boutons, valeurs du dossier, barre latérale, repères ──────── */
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(a, button, small, dt, .ac-r1, .ac-r2, .ac-index, .ac-tete-sur, .ac-prix, .gp-nom, .ac-app-nav li, .ac-suite b, .ac-suite-source, .ac-app-meta):not(#_):not(#_):not(#_):not(#__){font-size:14px !important}
 
-/* ── 3. La méta : leur petite capitale. Surtitres, pastilles, états, intitulés de champ ────────────── */
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(.sy-surtitre, .ac-surtitre, .sy-etiquette, .ac-puce, .ac-etat, .ac-fichier, .ac-app-surtitre, .ac-exigence-grille small, .ac-exigence-tete span):not(#_):not(#_):not(#_):not(#__){font-size:12px !important}
+  /* ── 3. La méta : leur petite capitale. Surtitres, pastilles, états, intitulés de champ ────────────── */
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(.sy-surtitre, .ac-surtitre, .sy-etiquette, .ac-puce, .ac-etat, .ac-fichier, .ac-app-surtitre, .ac-exigence-grille small, .ac-exigence-tete span):not(#_):not(#_):not(#_):not(#__){font-size:12px !important}
 
-/* ── 4. Les titres de carte et les questions : leur 18 px ──────────────────────────────────────────── */
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(h3, summary, .ac-exigence-tete b):not(#_):not(#_):not(#_):not(#__){font-size:18px !important}
+  /* ── 4. Les titres de carte et les questions : leur 18 px ──────────────────────────────────────────── */
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(h3, summary, .ac-exigence-tete b):not(#_):not(#_):not(#_):not(#__){font-size:18px !important}
 
-/* ── 5. On rend leur taille aux éléments d'AFFICHAGE, que les règles ci-dessus viennent d'écraser ──── */
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-phrase span:not(#_):not(#_):not(#_):not(#__){font-size:inherit !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-roue-liste li:not(#_):not(#_):not(#_):not(#__){font-size:36px !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(.ac-lead, .ac-atelier-lead, .sy-chapitre-lead):not(#_):not(#_):not(#_):not(#__){font-size:22px !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-chiffre-raye:not(#_):not(#_):not(#_):not(#__){font-size:71px !important}
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-bento-creme span:not(#_):not(#_):not(#_):not(#__){font-size:14px !important}
+  /* ── 5. On rend leur taille aux éléments d'AFFICHAGE, que les règles ci-dessus viennent d'écraser ──── */
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-phrase span:not(#_):not(#_):not(#_):not(#__){font-size:inherit !important}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .ac-roue-liste li:not(#_):not(#_):not(#_):not(#__){font-size:36px !important}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main :is(.ac-lead, .ac-atelier-lead, .sy-chapitre-lead):not(#_):not(#_):not(#_):not(#__){font-size:22px !important}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-chiffre-raye:not(#_):not(#_):not(#_):not(#__){font-size:71px !important}
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main .sy-bento-creme span:not(#_):not(#_):not(#_):not(#__){font-size:14px !important}
+}
 
 /* ── 6. Un span ou un em générique ne déclare PAS sa taille : il hérite de sa phrase ────────────────
    Relevé après la première passe : il restait huit span à 13 px, un à 11, un à 15 et quatre em à 11 —
@@ -40,4 +47,6 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
    défilement réservé, pas du contenu. Leur site n'a rien qui coûte quatre écrans. On passe de 420vh à
    320vh : l'animation est identique (toutes ses plages sont en pourcentage de la scène, elles suivent),
    elle se joue simplement sur moins de défilement. Aucun élément retiré. −900 px, soit un écran. */
-body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-scene:not(#_):not(#_):not(#_):not(#__){height:320vh}
+@media (min-width:1180px){
+  body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-scene:not(#_):not(#_):not(#_):not(#__){height:320vh}
+}
