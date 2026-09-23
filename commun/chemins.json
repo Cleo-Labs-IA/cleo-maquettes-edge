@@ -74,12 +74,6 @@
     "53-data-plateforme-en.html": {
       "chemin": "/en/data/platform"
     },
-    "40-enterprise.html": {
-      "chemin": "/fr/enterprise"
-    },
-    "40-enterprise-en.html": {
-      "chemin": "/en/enterprise"
-    },
     "41-accueil-resultat.html": {
       "chemin": "/apercu/accueil-resultat"
     },

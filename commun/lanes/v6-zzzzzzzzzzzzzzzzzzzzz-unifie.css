@@ -151,3 +151,16 @@ html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .ra-corps-s
 html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .ra-corps-section .carte-encre :is(h2,h3,strong){color:#FFFFFF}
 html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .ra-corps-section .carte-encre :is(p,li,.t-caption,.t-sm){color:rgba(255,255,255,.72)}
 html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .ra-corps-section .carte-encre a:not(.btn){color:#8C92FF}
+
+/* ── Diaporama de la rencontre (16-evenement), 23/09/2026, Naomie : « une page qui change avec au moins 10 photos ».
+   Douze photos empilées, chacune visible 4 s, fondu de 1 s, cycle de 48 s, sans JavaScript ; la première reste
+   affichée quand le visiteur préfère moins d'animations. La grille complète suit, avec les légendes. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ev-diapo{position:relative;aspect-ratio:16 / 9;border-radius:12px;overflow:hidden;background:#17171A;margin:0 0 40px}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ev-diapo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;filter:none;animation:evDiapo 48s linear infinite;animation-delay:calc(var(--i) * 4s - 48s)}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ev-diapo img:first-child{opacity:1}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ev-diapo-legende{position:absolute;left:20px;bottom:16px;padding:6px 12px;border-radius:8px;background:rgba(0,0,0,.55);color:#FFFFFF;font-size:.875rem}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-rencontre-grille.ev-grille-large li:first-child{grid-row:auto}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-rencontre-grille.ev-grille-large li:first-child img{aspect-ratio:4 / 3}
+@keyframes evDiapo{0%{opacity:0}2%{opacity:1}8.4%{opacity:1}10.4%{opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ev-diapo img{animation:none}}
+@media (max-width:760px){html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-rencontre-grille{grid-template-columns:repeat(2, minmax(0, 1fr))}}

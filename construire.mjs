@@ -52,7 +52,7 @@ const PAGES = [
   { fichier: '37-compliance-service-en.html', titre: 'Service EN', source: 'pages/01-accueil-en.html#compliance-service', en: true },
   // Maquette d'exemple « trois entrées », réunion d'équipe du 14/09/2026.
   { fichier: '39-data.html',        titre: 'Data',        source: 'maquette trois entrées, 14/09/2026' },
-  { fichier: '40-enterprise.html',  titre: 'Enterprise',  source: 'maquette trois entrées, 14/09/2026' },
+  //   { fichier: '40-enterprise.html',  titre: 'Enterprise',  source: 'maquette trois entrées, 14/09/2026' },  // 23/09/2026, Naomie : « la page entreprise sert à rien, tout est dans le about »
   { fichier: '43-accueil-avant-vendre.html', titre: 'Accueil, avant de vendre', source: 'maquette avant de vendre, 14/09/2026' },
   { fichier: '45-service-etiquetage.html', titre: 'Fiche Étiquetage et documentation produit', source: 'ecocomply.ai/product-documentation-labelling (structure et prix), 16/09/2026' },
   { fichier: '45-service-etiquetage-en.html', titre: 'Service page Labelling and product documentation EN', source: 'ecocomply.ai/product-documentation-labelling (structure and price)', en: true },
@@ -67,7 +67,7 @@ const PAGES = [
   { fichier: '52-data-mcp-en.html', titre: 'Data, MCP server EN', source: 'pages/52-data-mcp.html', en: true },
   { fichier: '53-data-plateforme.html', titre: 'Data, plateforme', source: 'moonlit.ai/platform (structure), 16/09/2026' },
   { fichier: '53-data-plateforme-en.html', titre: 'Data, platform EN', source: 'pages/53-data-plateforme.html', en: true },
-  { fichier: '40-enterprise-en.html', titre: 'Enterprise EN', source: 'pages/40-enterprise.html', en: true },
+  //   { fichier: '40-enterprise-en.html', titre: 'Enterprise EN', source: 'pages/40-enterprise.html', en: true },  // 23/09/2026, Naomie : « la page entreprise sert à rien, tout est dans le about »
   { fichier: '43-accueil-avant-vendre-en.html', titre: 'Home, before you sell EN', source: 'pages/43-accueil-avant-vendre.html', en: true },
   { fichier: '09-texte.html',       titre: 'Un texte',    source: 'edgecomply.com/topics/reach-regulation-compliance' },
   { fichier: '10-ressources.html',  titre: 'Ressources',  source: 'edgecomply.com/library' },
@@ -167,6 +167,21 @@ const IMAGES = {
   'rencontre-anaelle': ['/Users/naomiehalioua/cleo-landing/public/events/product-safety-ai-brussels-2026/03-anaelle.jpg', 1200],
   'rencontre-coupe': ['/Users/naomiehalioua/cleo-landing/public/events/product-safety-ai-brussels-2026/04-coupe.jpg', 1200],
   'rencontre-verre': ['/Users/naomiehalioua/cleo-landing/public/events/product-safety-ai-brussels-2026/05-verre-cleo.jpg', 1200],
+  /* 23/09/2026, Naomie : « au moins 10 photos de la rencontre sur la page événement, au moins 6 dans À propos ». Douze photos de plus,
+     choisies dans ~/cleo-photos-terrain/2026-09-07-ipsw (hors dépôt) : équipe Cleo, salle vue de loin, objets ; aucun gros plan
+     de participant tiers avec badge lisible. */
+  'rencontre-scene': ['/Users/naomiehalioua/cleo-photos-terrain/2026-09-07-ipsw/_46A7990.jpg_compressed.JPEG', 1600],
+  'rencontre-micro': ['/Users/naomiehalioua/cleo-photos-terrain/2026-09-07-ipsw/_98A3762.jpg_compressed.JPEG', 1600],
+  'rencontre-public': ['/Users/naomiehalioua/cleo-photos-terrain/2026-09-07-ipsw/_98A3785.jpg_compressed.JPEG', 1600],
+  'rencontre-demo': ['/Users/naomiehalioua/cleo-photos-terrain/2026-09-07-ipsw/_46A8005.jpg_compressed.JPEG', 1600],
+  'rencontre-anaelle-jardin': ['/Users/naomiehalioua/cleo-photos-terrain/2026-09-07-ipsw/_98A4008.jpg_compressed.JPEG', 1600],
+  'rencontre-jardin': ['/Users/naomiehalioua/cleo-photos-terrain/2026-09-07-ipsw/_98A3998.jpg_compressed.JPEG', 1600],
+  'rencontre-stand': ['/Users/naomiehalioua/cleo-photos-terrain/2026-09-07-ipsw/_46A7974.jpg_compressed.JPEG', 1600],
+  'rencontre-verre-2': ['/Users/naomiehalioua/cleo-photos-terrain/2026-09-07-ipsw/_98A3802.jpg_compressed.JPEG', 1600],
+  'rencontre-stickers': ['/Users/naomiehalioua/cleo-photos-terrain/2026-09-07-ipsw/_98A3806.jpg_compressed.JPEG', 1600],
+  'rencontre-table': ['/Users/naomiehalioua/cleo-photos-terrain/2026-09-07-ipsw/_98A3822.jpg_compressed.JPEG', 1600],
+  'rencontre-accueil': ['/Users/naomiehalioua/cleo-photos-terrain/2026-09-07-ipsw/_46A7983.jpg_compressed.JPEG', 1600],
+  'rencontre-soiree': ['/Users/naomiehalioua/cleo-photos-terrain/2026-09-07-ipsw/_46A8021.jpg_compressed.JPEG', 1600],
   'paris':            ['cleo-paris.webp', 1000],
   'philippine':       ['philippine-tamic.jpg', 900],
   'anaelle':          ['author-anaelle.png', 200, 'png'],
@@ -364,9 +379,9 @@ async function cheminImage(nom, largeurDemandee, auDelaDuPlafond) {
      écran Retina, soit le poids qui avait fait dire « ça bug, c'est trop lourd ». */
   const qDouble = auDelaDuPlafond
   if (format === 'svg') fs.copyFileSync(abs, dest)
-  else if (format === 'png') await sharp(abs).resize({ width: largeur, withoutEnlargement: true }).png({ compressionLevel: 9, quality: 82 }).toFile(dest)
-  else if (GRAIN_EXCLUS.test(nom)) await sharp(abs).resize({ width: largeur, withoutEnlargement: true }).webp({ quality: qDouble ? 50 : 72 }).toFile(dest)
-  else await sharp(abs).resize({ width: largeur, withoutEnlargement: true }).linear(1.14, 8).composite([{ input: await tuileGrain(), tile: true, blend: 'multiply' }]).webp({ quality: qDouble ? 40 : 62 }).toFile(dest)
+  else if (format === 'png') await sharp(abs).rotate().resize({ width: largeur, withoutEnlargement: true }).png({ compressionLevel: 9, quality: 82 }).toFile(dest)
+  else if (GRAIN_EXCLUS.test(nom)) await sharp(abs).rotate().resize({ width: largeur, withoutEnlargement: true }).webp({ quality: qDouble ? 50 : 72 }).toFile(dest)
+  else await sharp(abs).rotate().resize({ width: largeur, withoutEnlargement: true }).linear(1.14, 8).composite([{ input: await tuileGrain(), tile: true, blend: 'multiply' }]).webp({ quality: qDouble ? 40 : 62 }).toFile(dest)
   const chemin = `/images/${nom}${suffixe}.${ext}`
   cacheImg.set(cle, chemin)
   return chemin

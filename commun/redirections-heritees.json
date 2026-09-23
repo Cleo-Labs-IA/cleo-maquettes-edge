@@ -1208,6 +1208,14 @@
   {
    "source": "/en/platform/regulations",
    "destination": "/en/data"
+  },
+  {
+   "source": "/fr/enterprise",
+   "destination": "/fr/company"
+  },
+  {
+   "source": "/en/enterprise",
+   "destination": "/en/company"
   }
  ]
 }
