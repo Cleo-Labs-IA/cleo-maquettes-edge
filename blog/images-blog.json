@@ -1,6 +1,6 @@
 {
- "monde-chargement-conteneur": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/17-chargement-conteneur-20260923-195620-01.jpg",
+ "monde-frigo-fin-de-ligne": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/23-frigo-fin-de-ligne-20260923-202549-01.jpg",
   1200
  ],
  "monde-rd-peluche": [
@@ -15,8 +15,8 @@
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/15-etiquetage-controle-20260923-195603-01.jpg",
   1200
  ],
- "monde-douane-inspection": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/18-douane-inspection-20260923-195620-01.jpg",
+ "monde-chargement-conteneur": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/17-chargement-conteneur-20260923-195620-01.jpg",
   1200
  ],
  "monde-prod-peluche": [
@@ -27,56 +27,136 @@
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/16-entrepot-palettes-20260923-195607-01.jpg",
   1200
  ],
- "monde-fret-aerien": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/19-fret-aerien-20260923-195621-01.jpg",
+ "monde-douane-inspection": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/18-douane-inspection-20260923-195620-01.jpg",
+  1200
+ ],
+ "monde-casque-audio-anechoique": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/31-casque-audio-anechoique-20260923-202623-01.jpg",
   1200
  ],
  "monde-livraison-magasin": [
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/20-livraison-magasin-20260923-195625-01.jpg",
   1200
  ],
- "monde-test-traction-jouet": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/10-test-traction-jouet-20260923-195545-01.jpg",
-  1200
- ],
- "monde-rd-chocolat": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/02-rd-chocolat-20260923-195822-01.jpg",
-  1200
- ],
- "monde-prod-dentifrice": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/07-prod-dentifrice-20260923-195822-01.jpg",
-  1200
- ],
- "monde-test-inflammabilite": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/13-test-inflammabilite-20260923-195602-01.jpg",
-  1200
- ],
- "monde-rd-voiture": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/04-rd-voiture-20260923-195511-01.jpg",
-  1200
- ],
- "monde-prod-chocolat": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/08-prod-chocolat-20260923-195529-01.jpg",
-  1200
- ],
- "monde-prod-voiture": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/09-prod-voiture-20260923-195543-01.jpg",
-  1200
- ],
- "monde-test-chimie": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/11-test-chimie-20260923-195545-01.jpg",
-  1200
- ],
- "monde-proto-impression-3d": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/05-proto-impression-3d-20260923-195526-01.jpg",
+ "monde-medicament-blisters": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/22-medicament-blisters-20260923-202548-01.jpg",
   1200
  ],
  "monde-qualite-chocolat": [
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/14-qualite-chocolat-20260923-195603-01.jpg",
   1200
  ],
+ "monde-voiture-quai-export": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/21-voiture-quai-export-20260923-202548-01.jpg",
+  1200
+ ],
+ "monde-lessive-etiquetage": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/37-lessive-etiquetage-20260923-202644-01.jpg",
+  1200
+ ],
+ "monde-test-traction-jouet": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/10-test-traction-jouet-20260923-195545-01.jpg",
+  1200
+ ],
+ "monde-prod-dentifrice": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/07-prod-dentifrice-20260923-195822-01.jpg",
+  1200
+ ],
+ "monde-chaussures-ligne-collage": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/28-chaussures-ligne-collage-20260923-202605-01.jpg",
+  1200
+ ],
+ "monde-siege-auto-enfant-test-choc": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/38-siege-auto-enfant-test-choc-20260923-202652-01.jpg",
+  1200
+ ],
+ "monde-conserves-ligne": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/40-conserves-ligne-20260923-202853-01.jpg",
+  1200
+ ],
+ "monde-rd-chocolat": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/02-rd-chocolat-20260923-195822-01.jpg",
+  1200
+ ],
+ "monde-test-inflammabilite": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/13-test-inflammabilite-20260923-195602-01.jpg",
+  1200
+ ],
+ "monde-poele-revetement": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/35-poele-revetement-20260923-202639-01.jpg",
+  1200
+ ],
+ "monde-rd-voiture": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/04-rd-voiture-20260923-195511-01.jpg",
+  1200
+ ],
+ "monde-test-chimie": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/11-test-chimie-20260923-195545-01.jpg",
+  1200
+ ],
+ "monde-shampooing-remplissage": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/33-shampooing-remplissage-20260923-202634-01.jpg",
+  1200
+ ],
+ "monde-chaise-test-resistance": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/24-chaise-test-resistance-20260923-202549-01.jpg",
+  1200
+ ],
+ "monde-prod-chocolat": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/08-prod-chocolat-20260923-195529-01.jpg",
+  1200
+ ],
+ "monde-tee-shirt-serigraphie": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/27-tee-shirt-serigraphie-20260923-202605-01.jpg",
+  1200
+ ],
+ "monde-velo-test-fatigue": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/32-velo-test-fatigue-20260923-202623-01.jpg",
+  1200
+ ],
+ "monde-proto-impression-3d": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/05-proto-impression-3d-20260923-195526-01.jpg",
+  1200
+ ],
+ "monde-fret-aerien": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/19-fret-aerien-20260923-195621-01.jpg",
+  1200
+ ],
+ "monde-prod-voiture": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/09-prod-voiture-20260923-195543-01.jpg",
+  1200
+ ],
  "monde-test-crash-voiture": [
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/12-test-crash-voiture-20260923-195546-01.jpg",
+  1200
+ ],
+ "monde-tensiometre-controle": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/25-tensiometre-controle-20260923-202604-01.jpg",
+  1200
+ ],
+ "monde-lunettes-atelier": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/26-lunettes-atelier-20260923-202605-01.jpg",
+  1200
+ ],
+ "monde-chargeur-test-thermique": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/34-chargeur-test-thermique-20260923-202639-01.jpg",
+  1200
+ ],
+ "monde-tablette-banc-test": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/29-tablette-banc-test-20260923-202619-01.jpg",
+  1200
+ ],
+ "monde-perceuse-test-endurance": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/36-perceuse-test-endurance-20260923-202730-01.jpg",
+  1200
+ ],
+ "monde-montre-test-etancheite": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/30-montre-test-etancheite-20260923-202853-01.jpg",
+  1200
+ ],
+ "monde-drone-banc-essai": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/39-drone-banc-essai-20260923-202656-01.jpg",
   1200
  ],
  "blog-paris-office-eiffel-tower": [

@@ -32,14 +32,33 @@ const COUVERTURE_DEFAUT = 'masse-pile'
 const BANQUE = process.env.BANQUE_MONDE || '/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/'
 const MONDE = fs.existsSync(BANQUE) ? fs.readdirSync(BANQUE).filter(f => /^\d\d-.*\.jpg$/.test(f)).sort() : []
 const THEMES = [
-  [/toy|jouet|peluche|plush|child|enfant|kid/i, /^(01|06|10)-/],
-  [/cosmet|fragran|parfum|dentifrice|soap|skin|hair|sunscreen|allergen|enzacamene|kohl/i, /^(03|07|11)-/],
-  [/food|aliment|chocolat|formula|drink|alcohol|cereulide|nutrition|beverage/i, /^(02|08|14)-/],
-  [/\bcar\b|vehicle|automotive|voiture|bike|battery|batter|dryer|appliance|electr/i, /^(04|09|12)-/],
-  [/customs|douane|tariff|import|export|minimis|parcel|border|hs.?code|fee/i, /^(18|17|19)-/],
-  [/label|étiquet|packag|emballage|ppwr|marking|claim|passport/i, /^(15)-/],
-  [/textile|apparel|flamm|fire|inflamm|firework|sand|asbestos|sauna|heater/i, /^(13|16)-/],
-  [/3d|print|prototype|innovation|\bai\b|agent|llm|model|data act|skills|agentic/i, /^(05)-/],
+  // du plus précis au plus général ; 40 visuels au 23/09/2026 soir (01-20 puis 21-40 ajoutés par Naomie)
+  [/medic|pharma|drug|anvisa|gmp|blister|prescription|melatonin|mélatonine/i, /^(22)-/],
+  [/car seat|siège auto|child seat|booster/i, /^(38)-/],
+  [/toy|jouet|peluche|plush|child|enfant|kid|sand/i, /^(01|06|10|38)-/],
+  [/watch|montre|jewel|bijou|waterproof/i, /^(30)-/],
+  [/eyewear|glasses|lunettes|sunglass|optic/i, /^(26)-/],
+  [/shoe|chaussure|footwear|sneaker/i, /^(28)-/],
+  [/tee|t-shirt|textile|apparel|garment|clothing|vêtement|fibre|fiber|print/i, /^(27|13)-/],
+  [/detergent|lessive|cleaning|chemical|clp|reach|substance|pfas/i, /^(37|11|35)-/],
+  [/cookware|pan|poêle|non-stick|coating|food contact|kitchen/i, /^(35)-/],
+  [/canned|conserve|tin|packaged food|infant formula|formula/i, /^(40|14)-/],
+  [/food|aliment|chocolat|drink|alcohol|cereulide|nutrition|beverage/i, /^(02|08|14|40)-/],
+  [/shampoo|cosmet|fragran|parfum|dentifrice|soap|skin|hair|sunscreen|allergen|enzacamene|kohl/i, /^(33|03|07)-/],
+  [/drill|perceuse|power tool|tool|machinery|machine/i, /^(36)-/],
+  [/drone|uav|aircraft|aviation/i, /^(39)-/],
+  [/headphone|casque|audio|speaker|acoustic|noise/i, /^(31)-/],
+  [/tablet|phone|smartphone|laptop|screen|electronic|semiconductor|chip|iot|connected|data act/i, /^(29|31)-/],
+  [/charger|battery|batter|thermal|usb|power bank|e-?bike|ebike/i, /^(34|32)-/],
+  [/bike|bicycle|vélo|helmet|casque vélo|sport/i, /^(32)-/],
+  [/fridge|refriger|appliance|dryer|heater|sauna|washing|dishwasher|energy label|ecodesign|espr/i, /^(23|34)-/],
+  [/chair|furniture|meuble|sofa|mattress|bed/i, /^(24)-/],
+  [/tensio|medical device|mdr|blood pressure|health/i, /^(25)-/],
+  [/\bcar\b|vehicle|automotive|voiture|motor/i, /^(04|09|12|21)-/],
+  [/customs|douane|tariff|import|export|minimis|parcel|border|hs.?code|fee|quai/i, /^(18|17|19|21)-/],
+  [/label|étiquet|packag|emballage|ppwr|marking|claim|passport/i, /^(15|37)-/],
+  [/flamm|fire|inflamm|firework|asbestos/i, /^(13)-/],
+  [/3d|prototype|innovation|\bai\b|agent|llm|model|skills|agentic|research/i, /^(05|29)-/],
   [/marketplace|retail|store|shop|recall|amazon|shein|temu|magasin|deliver|supply|warehouse|entrep|logist|opss|surveillance/i, /^(20|16|18)-/]]
 const usage = {}; const couvertures = {}
 const cleBanque = f => 'monde-' + f.replace(/-\d{8}-\d{6}-\d+\.jpg$/, '').replace(/^\d\d-/, '')
