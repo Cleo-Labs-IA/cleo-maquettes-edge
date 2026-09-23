@@ -544,3 +544,8 @@ body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-pag
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-roue-liste li:not(#_):not(#_):not(#_){font-size:17px;rotate:-4deg;padding:6px 0}
   body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-roue:not(#_):not(#_):not(#_){height:180px}
 }
+
+/* La fiche d'exigence est passée de quatre cellules à trois (« État du dossier » redisait ce que les
+   pastilles d'état disent juste en dessous). Dans une grille à deux colonnes, la dernière restait seule
+   avec un trou à sa droite : elle court désormais sur toute la largeur. Mesuré le 23/09/2026. */
+body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) .ac-exigence-grille .ac-action:not(#_):not(#_):not(#_){grid-column:1 / -1;border-right:0}
