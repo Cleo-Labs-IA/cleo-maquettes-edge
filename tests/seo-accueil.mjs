@@ -35,6 +35,8 @@ const EXCEPTIONS = {
   liens: {
     '/fr/event': "page de l'événement de Bruxelles du 09/09/2026, passé. L'adresse reste servie ; elle quitte seulement l'accueil. À trancher par Naomie.",
     '/en/event': 'idem, en anglais.',
+    '/legal-data/docs': "mesuré le 23/09/2026 : www.cleolabs.co/legal-data/docs sert la page SANS ses styles (ses deux feuilles /_next/static répondent 404 sur ce domaine). Le lien mène à legaldata-public.cleolabs.co/docs, où la même page est stylée. Retour de Naomie (PDF du 23/09).",
+    '/legal-data/playground': 'idem, pour le bac à sable.',
   },
 }
 

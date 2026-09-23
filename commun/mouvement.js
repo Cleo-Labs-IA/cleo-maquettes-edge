@@ -391,3 +391,49 @@
     logos.appendChild(piste); logos.appendChild(copie); logos.classList.add('ac-logos-defile');
   }
 })();
+
+/* ═══ RETOURS DU 23/09/2026 ═══ */
+/* FAQ : sur bureau (souris), passer sur une question l'ouvre et referme les autres du même bloc ;
+   au clic, rien ne change. Sur tactile, le comportement natif reste. */
+(function () {
+  if (!window.matchMedia || !matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+  var blocs = document.querySelectorAll('.faq, .sc-faq, .ac-faq, .mu-faq, .dt-faq, .en-faq, [data-schema="faq"]');
+  for (var i = 0; i < blocs.length; i++) (function (bloc) {
+    var items = bloc.querySelectorAll(':scope > details, :scope details');
+    for (var j = 0; j < items.length; j++) (function (d) {
+      d.addEventListener('mouseenter', function () {
+        if (d.open) return;
+        for (var k = 0; k < items.length; k++) if (items[k] !== d) items[k].open = false;
+        d.open = true;
+      });
+    })(items[j]);
+  })(blocs[i]);
+})();
+/* Skills : chaque nom se copie d'un clic, et un bouton copie les 45 noms. */
+(function () {
+  var noms = document.querySelectorAll('.skill-nom[data-copiable]');
+  if (!noms.length || !navigator.clipboard) return;
+  var en = document.documentElement.lang === 'en';
+  var copier = function (texte, btn) {
+    navigator.clipboard.writeText(texte).then(function () {
+      btn.setAttribute('data-fait', ''); var t = btn.textContent; btn.textContent = en ? 'Copied' : 'Copié';
+      setTimeout(function () { btn.removeAttribute('data-fait'); btn.textContent = t; }, 1400);
+    });
+  };
+  for (var i = 0; i < noms.length; i++) (function (nom) {
+    var b = document.createElement('button'); b.type = 'button'; b.className = 'sk-copier'; b.textContent = en ? 'Copy' : 'Copier';
+    b.setAttribute('aria-label', (en ? 'Copy ' : 'Copier ') + nom.textContent.trim());
+    b.addEventListener('click', function () { copier(nom.firstChild.textContent.trim(), b); });
+    nom.appendChild(b);
+  })(noms[i]);
+  var titre = document.getElementById('inventaire');
+  if (titre) {
+    var tout = document.createElement('button'); tout.type = 'button'; tout.className = 'sk-copier sk-copier-tout';
+    tout.textContent = en ? 'Copy the 45 names' : 'Copier les 45 noms';
+    tout.addEventListener('click', function () {
+      var liste = []; for (var i = 0; i < noms.length; i++) liste.push(noms[i].firstChild.textContent.trim());
+      copier(liste.join('\n'), tout);
+    });
+    titre.parentNode.insertBefore(tout, titre.nextSibling);
+  }
+})();

@@ -1157,7 +1157,10 @@ const versRoutePropre = publiques.map(f => ({ source: '/' + f, destination: chem
 fs.writeFileSync(path.join(ICI, 'sortie', 'vercel.json'), JSON.stringify({
   headers: [{ source: '/apercu/(.*)', headers: [
     { key: 'X-Robots-Tag', value: 'noindex, nofollow, noarchive, nosnippet' }] }],
-  redirects: [{ source: '/', destination: CHEMINS.racine, permanent: false }, ...versRoutePropre,
+  /* 23/09/2026, Naomie : « mettre le site en auto-détection de langue ». La racine lit l'en-tête
+     Accept-Language : anglais en tête → /en, sinon /fr. La règle « has » se lit avant la règle par défaut. */
+  redirects: [{ source: '/', has: [{ type: 'header', key: 'accept-language', value: '^en.*' }], destination: '/en', permanent: false },
+    { source: '/', destination: CHEMINS.racine, permanent: false }, ...versRoutePropre,
     // Les routes des trois features retirées le 14/09/2026 mènent aux entrées qui les remplacent.
     // L'ancienne adresse d'aperçu de la page « avant de vendre », devenue l'accueil le 15/09/2026.
     { source: '/apercu/avant-de-vendre', destination: '/fr', permanent: false },

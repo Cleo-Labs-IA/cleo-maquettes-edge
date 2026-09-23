@@ -67,3 +67,27 @@ html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main :is(.s
    restaient en grayscale(1), donc noirs sur fond noir (Electrolux et Mercedes invisibles), alors que
    l'accueil les passe en blanc (brightness(0) invert(1)). Une seule règle pour toutes les bandes. */
 html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] :is(.ap-logos, .bande-logos, .ac-logos, .ac-logos-imgs, .hq-logos-imgs) img:not(.nav-logo img){filter:brightness(0) invert(1) !important; opacity:.9 !important}
+
+/* ═══ RETOURS DU PDF, 23/09/2026 ═══ */
+/* Experts : « centrer le texte aux images » — la liste des trois rôles est centrée sur la hauteur des portraits. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-experts-grille{align-items:center}
+/* Bento chiffré : les deux petites fiches se chevauchaient et sortaient de la carte (« ce bloc est cassé, sur toutes les pages »).
+   Elles se posent l'une sous l'autre, dans la carte, sans décalage ni rognage ; le chiffre rayé reste en bas. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .sy-fiches{position:absolute !important;inset:18px 18px auto 18px !important;display:flex !important;flex-direction:column !important;align-items:stretch !important;justify-content:flex-start !important;gap:10px !important;z-index:1}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .sy-fiche{width:100% !important;max-width:none !important;margin:0 !important;padding:9px 12px !important;align-self:auto !important;border:1px solid rgba(255,255,255,.22) !important;border-radius:8px !important;background:rgba(255,255,255,.04)}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .sy-fiche:nth-child(n+3){display:none !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main :is(.sy-bento-bleu, .sy-bento-creme):has(.sy-fiches){min-height:26rem}
+/* Grille des prix (Service) : la colonne des prix s'étirait à la hauteur de la carte Enterprise et laissait un grand vide. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .sc-tarifs{align-items:start !important}
+/* Méga-menu : au survol, le titre de l'entrée passe en bleu (« il faudrait avoir le texte en bleu quand on est en mode surlignage »). */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .nav .mega-item:hover{background:rgba(255,255,255,.06) !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .nav .mega-item:hover b{color:#8C92FF !important}
+/* FAQ : la réponse se déroule avec un mouvement quand un panneau s'ouvre (au survol sur bureau, au clic partout). */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main details[open] > :not(summary){animation:faqDeroule .32s cubic-bezier(.625,.05,0,1) both}
+@keyframes faqDeroule{from{opacity:0;translate:0 -6px}to{opacity:1;translate:0 0}}
+/* Skills : bouton « Copier » discret à côté de chaque nom, et un bouton pour toute la liste. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .skill-nom{display:inline-flex;align-items:center;gap:8px}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .sk-copier{display:inline-flex;align-items:center;height:22px;padding:0 8px;border:1px solid rgba(255,255,255,.28);border-radius:6px;background:transparent;color:rgba(255,255,255,.72);font:inherit;font-size:.75rem;line-height:1;cursor:pointer}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .sk-copier:hover{border-color:rgba(255,255,255,.7);color:#fff}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .sk-copier[data-fait]{border-color:#8C92FF;color:#8C92FF}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .sk-copier-tout{margin:0 0 24px;height:36px;padding:0 14px;font-size:.875rem;border-radius:999px}
