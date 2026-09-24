@@ -3,7 +3,7 @@
 <plist version="1.0"><dict>
   <key>Label</key><string>com.cleolabs.relais-blog</string>
   <key>ProgramArguments</key><array><string>/bin/zsh</string><string>-lc</string><string>$HOME/cleo-maquettes-edge-avant-vendre/scripts/relais-blog.sh</string></array>
-  <key>StartCalendarInterval</key><dict><key>Hour</key><integer>10</integer><key>Minute</key><integer>40</integer></dict>
+  <key>StartCalendarInterval</key><array><dict><key>Hour</key><integer>10</integer><key>Minute</key><integer>40</integer></dict><dict><key>Hour</key><integer>14</integer><key>Minute</key><integer>10</integer></dict></array>
   <key>StandardOutPath</key><string>/Users/naomiehalioua/Library/Logs/cleo-relais-blog.log</string>
   <key>StandardErrorPath</key><string>/Users/naomiehalioua/Library/Logs/cleo-relais-blog.log</string>
   <key>RunAtLoad</key><false/>
