@@ -33,6 +33,9 @@ const VERS_PORTAIL_LEGAL = [{ source: '/legal-data/:path+', destination: 'https:
   { source: '/legal-data-static/:path+', destination: 'https://legaldata-public.cleolabs.co/legal-data-static/:path+', permanent: true }]
 /* L'image de partage social : la même que le site en ligne (public/og-image.jpg, 1200 × 630), servie ici à la
    racine pour que le lien ne dépende plus de l'ancien projet. Toute page publique la déclare, sauf fiche SEO qui en porte une autre. */
+/* 24/09/2026 : le site en ligne portait PostHog et Vercel Analytics ; la V6 statique n'en avait aucun, et le tableau de bord
+   affichait « plus personne depuis 13 h » alors que le garde SEO disait zéro dégradation. Les traceurs vivent dans commun/traceurs.html. */
+const TRACEURS = fs.existsSync(path.join(ICI, 'commun/traceurs.html')) ? fs.readFileSync(path.join(ICI, 'commun/traceurs.html'), 'utf8').trim() : ''
 const OG_IMAGE_SOURCE = '/Users/naomiehalioua/cleo-landing/public/og-image.jpg'
 const IMAGE_SOCIALE = { url: `${HOTE}/og-image.jpg`, largeur: 1200, hauteur: 630, alt: 'Cleo Labs, la conformité produit dans 106 pays' }
 const LOCAL = path.join('/Users/naomiehalioua/cleo-maquettes-edge', 'images')
@@ -1222,6 +1225,7 @@ ${og}
 ${structure}
 <style>@font-face{font-family:"Satoshi";src:url(/fonts/Satoshi-Variable.woff2) format("woff2");font-weight:300 900;font-style:normal;font-display:swap}${regimeDePage ? sansCommentairesCss(regimeDePage) : ''}</style>
 <link rel="stylesheet" href="/cleo.css">
+${estApercu(nomSortie) ? '' : TRACEURS}
 </head>
 <body data-cleo-ds="v6" data-v6-family="${familleV6}" data-v6-page="${pageV6}">
 ${corps}
