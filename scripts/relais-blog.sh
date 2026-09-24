@@ -4,7 +4,7 @@
 # articles nouveaux téléchargé depuis l'ancien site, portage, fragments, build, tests, déploiement du projet Vercel sortie.
 # Usage : scripts/relais-blog.sh [dossier-du-depot]   (par défaut ~/cleo-maquettes-edge-avant-vendre)
 # Lancé chaque jour à 10 h 40 par launchd (scripts/com.cleolabs.relais-blog.plist). Journal : ~/Library/Logs/cleo-relais-blog.log
-# FORCER=1 relance portage, build et déploiement même sans article nouveau.
+# FORCER=1 relance portage, build et déploiement même sans article nouveau. SANS_DEPLOI=1 s'arrête avant la mise en ligne (essai).
 set -u
 export PATH="/opt/homebrew/bin:/usr/local/bin:$HOME/.nvm/versions/node/v24.2.0/bin:/usr/bin:/bin"
 DEPOT="${1:-$HOME/cleo-maquettes-edge-avant-vendre}"
@@ -38,5 +38,6 @@ node construire.mjs > /tmp/relais-build.log 2>&1 || { dit "build en échec"; tai
 for t in tests/v6-structure.mjs tests/seo-accueil.mjs tests/servir-routes.mjs; do node "$t" > /tmp/relais-test.log 2>&1 || { dit "test en échec : $t"; tail -5 /tmp/relais-test.log; exit 1 }; done
 git add pages/blog blog commun/v6-routes.json pages/24-blog.html pages/24-blog-en.html && git commit -q -m "blog : relais quotidien, $nouveaux fichier(s) nouveau(x) ($(date '+%d/%m/%Y'))" && dit "commité $(git rev-parse --short HEAD)"
 git push -q origin HEAD 2>/dev/null && dit "poussé" || dit "push différé (hook ou réseau), le commit reste local"
+if [ "${SANS_DEPLOI:-0}" = "1" ]; then dit "SANS_DEPLOI=1 : build et tests faits, pas de mise en ligne"; exit 0; fi
 url=$(vercel deploy sortie --prod --yes --scope cleo-academys-projects 2>&1 | grep -oE 'https://[a-z0-9.-]*vercel.app' | tail -1)
 dit "déployé : ${url:-?}"
