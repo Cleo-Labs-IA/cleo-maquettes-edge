@@ -29,6 +29,8 @@ for slug in $(node -e 'const p=require(process.env.BLOGSRC+"/blog-posts.json");f
     fi
   done
 done
+# Chaque jour, quoi qu'il arrive : le garde SEO relit les 590 adresses de référence sur le domaine et refuse de se taire.
+if node garde-seo.mjs verifier https://www.cleolabs.co > /tmp/relais-garde.log 2>&1; then dit "garde SEO : aucun signal dégradé sur www.cleolabs.co"; else dit "GARDE SEO EN ÉCHEC sur www.cleolabs.co :"; grep -E "DÉGRADATION|^  /" /tmp/relais-garde.log | head -12; fi
 if [ "$nouveaux" = "0" ] && [ "${FORCER:-0}" != "1" ]; then dit "aucun article nouveau, rien à faire"; exit 0; fi
 node blog/porter.mjs > /tmp/relais-porter.log 2>&1 || { dit "porter en échec"; tail -5 /tmp/relais-porter.log; exit 1 }
 node blog/fragments.mjs > /tmp/relais-fragments.log 2>&1 || { dit "fragments en échec"; tail -5 /tmp/relais-fragments.log; exit 1 }
