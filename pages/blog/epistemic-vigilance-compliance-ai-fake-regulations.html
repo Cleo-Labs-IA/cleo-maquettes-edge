@@ -1,0 +1,81 @@
+<!--NAV-->
+<!-- Article porté depuis www.cleolabs.co/fr/blog/epistemic-vigilance-compliance-ai-fake-regulations le 23/09/2026 par blog/porter.mjs puis blog/fragments.mjs.
+     Titre, chapô, corps, FAQ et sources sont repris tels quels (blog-posts.json + HTML rendu). Ne pas éditer à la main : régénérer. -->
+<section class="sur-sombre section-serree bl-tete">
+  <div class="conteneur">
+    <div class="article-tete">
+      <p class="sy-surtitre">IA</p>
+      <h1 class="t-titre-page" style="margin:20px 0 20px">Et si quelqu'un soumettait un faux texte RGPD à votre IA de conformité ?</h1>
+      <p class="t-body" style="margin:0 0 28px">La plupart des IA de conformité supposent que le texte réglementaire est authentique. Un nouvel article introduit DEF, détectant les documents falsifiés.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="https://www.linkedin.com/in/naomie-halioua/" rel="author noopener" target="_blank" style="display:flex;align-items:center;gap:12px"><img src="img:naomie" alt="Naomie Halioua" style="width:44px;height:44px;border-radius:50%;object-fit:cover"><span style="display:block"><span class="t-h3" style="display:block">Naomie Halioua</span><span class="t-caption" style="display:block">CDO et cofondatrice</span></span></a>
+        <span class="t-caption" style="padding-left:14px;border-left:1px solid var(--c-filet-sombre)"><time datetime="2026-03-10">10 mars 2026</time> · 6 min de lecture</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-bande-photo">
+  <figure>
+    <img src="img:monde-tablette-banc-test" alt="">
+    <div class="sy-bande-texte">
+      <p class="sy-etiquette">IA</p>
+    </div>
+  </figure>
+</section>
+
+<section class="section bl-corps" style="padding-top:56px">
+  <div class="conteneur">
+    <div class="corps-sommaire">
+      <nav class="sommaire">
+        <div class="titre">Sur cette page</div>
+        <a href="#s1">Ce que l’article introduit</a>
+        <a href="#s2">Le détail qui change tout</a>
+        <a href="#s3">Pourquoi ça vous concerne</a>
+        <a href="#s4">Comment Cleo gère ça</a>
+        <a href="#s5">Sources et références</a>
+        <a href="#questions">Questions fréquentes</a>
+      </nav>
+      <div class="article bl-article" style="margin:0">
+<div class="bl-encart"><p>Safer Policy Compliance with Dynamic Epistemic Fallback (DEF)</p><p>Imperial, Tayyar Madabushi · <a href="https://arxiv.org/abs/2601.23094">arXiv:2601.23094</a>, January 2026</p></div>
+<div class="bl-encart"><p>«&nbsp;Les humains développent une série de défenses cognitives, connues sous le nom de vigilance épistémique, pour combattre les risques de tromperie et de désinformation. Développer des garde-fous pour les LLM inspirés de ce mécanisme pourrait être particulièrement utile pour leur application dans des tâches à haut enjeu telles que l'automatisation de la conformité aux lois sur la protection des données.&nbsp;»</p><p>Imperial &amp; Tayyar Madabushi, arXiv:2601.23094</p></div>
+<h2 id="s1">Ce que l’article introduit</h2><p>L'article introduit DEF, un protocole qui donne aux LLM l'équivalent de la vigilance épistémique humaine. Quand le système rencontre un texte réglementaire qui a été malicieusement modifié, il signale l'incohérence, refuse de s'y conformer, et repasse sur ses propres connaissances vérifiées. Testé sur le RGPD et HIPAA, avec DeepSeek-R1 atteignant 100&nbsp;% de détection dans un cas.</p><div><div><p>100%</p><p>détection (DeepSeek-R1)</p></div><div><p>GDPR</p><p>&amp; HIPAA testés</p></div><div class="bl-encart"><p>DEF</p><p>premier cadre de défense</p></div></div>
+<h2 id="s2">Le détail qui change tout</h2><p>La plupart des systèmes IA de conformité supposent que le texte réglementaire qu'ils lisent est authentique. DEF est le premier cadre construit sur l'hypothèse inverse : que l'input pourrait être compromis. Dans un environnement où les artefacts juridiques peuvent être manipulés, ce n'est pas un risque théorique.</p><p>Un extrait RGPD falsifié soumis à un LLM non protégé peut produire un résultat de conformité faussement confiant. L'IA n'hésitera pas, ne signalera pas d'incertitude : elle appliquera les fausses règles comme si elles étaient réelles. DEF est la première défense documentée contre ce vecteur d'attaque.</p>
+<h2 id="s3">Pourquoi ça vous concerne</h2><div><div><span>→</span><div><p>Vous êtes DPO ou responsable conformité</p><p>Si votre organisation utilise un outil IA pour interpréter ou appliquer des textes réglementaires, cet article introduit une menace que vous n'avez peut-être pas envisagée. Un extrait RGPD falsifié soumis à un LLM non protégé peut produire un résultat de conformité faussement confiant. DEF est la première défense documentée.</p></div></div><div><span>→</span><div><p>Vous développez un produit IA</p><p>L’article montre que des modèles frontier comme DeepSeek-R1 peuvent atteindre 100&nbsp;% de détection avec le bon protocole d'inférence. C'est une décision d'ingénierie, pas un problème de recherche. Si votre couche de conformité lit des textes réglementaires externes, ça devrait être sur votre checklist d'architecture.</p></div></div><div><span>→</span><div><p>Votre secteur est régulé (santé, finance, énergie, RH)</p><p>L’article teste explicitement sur le RGPD et HIPAA. Les artefacts juridiques dans les secteurs régulés sont exactement le type de document que des acteurs adverses cibleraient. Si votre processus compliance repose sur une IA lisant des textes réglementaires, l'intégrité de ces textes est un enjeu de sécurité.</p></div></div></div>
+<h2 id="s4">Comment Cleo gère ça</h2><p>Chez Cleo, chaque texte réglementaire que nous traitons passe par une couche de vérification avant d'entrer dans notre chaîne. Cet article formalise ce que nous considérons comme non négociable&nbsp;: l'intégrité des inputs réglementaires est un prérequis, pas une réflexion après coup. Nos 30+ agents spécialisés croisent les sources avec les bases officielles, signalent les incohérences et escaladent vers la revue humaine quand la confiance est basse.</p><p>Référence&nbsp;: Imperial &amp; Tayyar Madabushi (2026), Safer Policy Compliance with Dynamic Epistemic Fallback, arXiv:2601.23094</p>
+<h2 id="s5">Sources et références</h2><ol><li><cite><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj">Regulation (EU) 2016/679: General Data Protection Regulation (GDPR)</a></cite></li></ol>
+<h2 id="questions">Questions fréquentes</h2>
+<div class="faq" data-schema="faq" style="margin-bottom:36px">
+<details open><summary>Qu'est-ce que la vigilance épistémique en IA de conformité ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">La vigilance épistémique est un concept issu des sciences cognitives : les humains développent des défenses cognitives contre la tromperie et la désinformation. Appliquée à la conformité IA, elle consiste à construire des systèmes capables de détecter qu'un texte réglementaire a été falsifié, plutôt que de suivre aveuglément tout input présenté comme une loi.</div></details>
+<details><summary>Qu'est-ce que le cadre DEF pour l'IA de conformité ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">DEF (Dynamic Epistemic Fallback) est un protocole introduit par Imperial &amp; Tayyar Madabushi (arXiv:2601.23094, janvier 2026). Quand un LLM rencontre un texte réglementaire malicieusement modifié, DEF signale l'incohérence, refuse de se conformer au texte falsifié, et repasse sur ses connaissances vérifiées. Testé sur le RGPD et HIPAA, DeepSeek-R1 a atteint 100 % de détection.</div></details>
+<details><summary>Peut-on vraiment falsifier un texte RGPD pour tromper une IA ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Oui. La plupart des systèmes IA de conformité ingèrent les textes réglementaires de sources externes sans vérifier leur authenticité. Un extrait RGPD falsifié, avec des obligations subtilement modifiées ou des exceptions fabriquées, peut produire un résultat de conformité faussement confiant. Ce n'est pas un risque théorique : l'injection de documents adversariaux est un vecteur d'attaque connu des pipelines RAG.</div></details>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="conteneur">
+    <h2 class="t-h1" style="margin-bottom:28px">À lire aussi</h2>
+    <div class="sy-carrousel" data-apparait>
+      <a class="sy-carte-photo" href="blog-multi-market-product-compliance-retail.html"><img src="img:monde-entrepot-palettes" alt=""><span class="sy-etiquette">Conformité</span><b>Conformité produit multi-marchés pour le retail : le guide définitif</b></a>
+      <a class="sy-carte-photo" href="blog-multi-agent-ai-compliance-research-2026.html"><img src="img:monde-proto-impression-3d" alt=""><span class="sy-etiquette">IA</span><b>L'IA multi-agents pour la conformité : Ce que dit la Recherche en 2026</b></a>
+      <a class="sy-carte-photo" href="blog-gpsr-compliance-guide-consumer-goods.html"><img src="img:monde-chaise-test-resistance" alt=""><span class="sy-etiquette">Conformité produit</span><b>Guide de conformité GPSR pour les marques de biens de consommation (2026)</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-final-photo">
+  <figure>
+    <img src="img:classeurs" alt="">
+    <div class="sy-final-texte" data-apparait>
+      <p class="sy-etiquette">30 minutes avec l'équipe</p>
+      <h2>Voyez ce que Cleo relève sur vos propres produits</h2>
+      <p>Une gamme et deux marchés suffisent.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo</a></div>
+    </div>
+  </figure>
+</section>
+<!--PIED-->

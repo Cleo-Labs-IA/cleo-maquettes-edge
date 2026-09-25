@@ -23,11 +23,11 @@
   --card-blur: none; --btn-glow: none; --btn-edge: none; --btn-lift: var(--shadow-sm);
   --r-xs: 6px;
 }
-.t-lead{font-size:clamp(1rem, 0.95rem + 0.3vw, 1.125rem); line-height:1.66; color:var(--c-text-2)}
-.t-sm{font-size:0.9375rem; line-height:1.6; color:var(--c-text-2)}
-.t-micro{font-size:0.8125rem; line-height:1.5; color:var(--c-text-3)}
+.t-lead{font-size:1rem; line-height:1.66; color:var(--c-text-2)}
+.t-sm{font-size:0.875rem; line-height:1.6; color:var(--c-text-2)}
+.t-micro{font-size:0.875rem; line-height:1.5; color:var(--c-text-3)}
 .t-h4{font-size:1rem; font-weight:500; line-height:1.35; letter-spacing:-0.01em; color:var(--c-ink)}
-.surtitre{font-size:0.8125rem; font-weight:600; letter-spacing:0.13em; text-transform:uppercase; color:var(--c-text-3)}
+.surtitre{font-size:0.875rem; font-weight:600; letter-spacing:0.13em; text-transform:uppercase; color:var(--c-text-3)}
 .sur-lavande{background:var(--c-field-pale)}
 .sur-sombre .t-lead,.sur-sombre .t-sm{color:var(--c-text-on-dark-2)}
 .sur-sombre .t-micro,.sur-sombre .surtitre{color:var(--c-text-on-dark-3)}
@@ -73,7 +73,7 @@
   transition:opacity 160ms var(--ease-apple), transform 160ms var(--ease-apple), visibility 160ms; z-index:70}
 .nav-item:hover .mega{opacity:1; visibility:visible; transform:translateY(0)}
 .mega-etroit{left:auto; right:var(--gouttiere); width:250px}
-.mega-titre{font-size:0.9375rem; font-weight:500; color:var(--c-text); margin-bottom:20px}
+.mega-titre{font-size:0.875rem; font-weight:500; color:var(--c-text); margin-bottom:20px}
 .mega-grille{display:grid; gap:8px}
 .mega-grille.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .mega-grille.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
@@ -84,14 +84,14 @@
   display:grid; place-items:center; font-size:1rem; flex:none}
 .mega-item span:last-child{min-width:0}
 .mega-item b{display:block; font-size:0.875rem; font-weight:500; color:var(--c-text); line-height:1.35}
-.mega-item i{display:block; font-style:normal; font-size:0.8125rem; color:var(--c-text-3); line-height:1.4; margin-top:2px}
+.mega-item i{display:block; font-style:normal; font-size:0.875rem; color:var(--c-text-3); line-height:1.4; margin-top:2px}
 .mega-colonnes{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:48px}
 .mega-liste{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:9px 20px;
   padding-top:14px; border-top:1px solid var(--c-border)}
 .mega-liste a{font-size:0.875rem; color:var(--c-text-2); display:flex; align-items:center; gap:7px; padding:4px 0}
 .mega-liste a:hover{color:var(--c-blue)}
 .mega-liste-seule{grid-template-columns:minmax(0,1fr); border-top:none; padding-top:0}
-.mega-badge{font-size:0.8125rem; font-weight:600; background:var(--c-blue-light); color:var(--c-blue);
+.mega-badge{font-size:0.875rem; font-weight:600; background:var(--c-blue-light); color:var(--c-blue);
   padding:2px 7px; border-radius:4px}
 .mega-pied{margin-top:20px; padding:14px 16px; background:var(--c-surface); border-radius:var(--r-sm);
   font-size:0.75rem; color:var(--c-text-3)}
@@ -104,7 +104,7 @@
       Sur champ profond le primaire devient blanc, le secondaire un contour blanc. ── */
 .btn{display:inline-flex; align-items:center; justify-content:center; gap:9px; border:1px solid transparent; cursor:pointer;
   font-family:var(--font); font-weight:500; letter-spacing:-0.005em; text-decoration:none;
-  font-size:0.9375rem; padding:12px 24px; border-radius:var(--r-pill); min-height:48px;
+  font-size:0.875rem; padding:12px 24px; border-radius:var(--r-pill); min-height:48px;
   transition:var(--transition-hover)}
 .btn:hover{transform:translateY(-1px)}
 .btn:active{transform:translateY(0)}
@@ -112,7 +112,7 @@
 .btn-primaire:hover,.btn-marque:hover,.btn-bleu:hover{background:var(--c-blue-hover); box-shadow:var(--shadow-md)}
 .btn-clair,.btn-contour{background:transparent; color:var(--c-ink); border-color:var(--c-contour-btn)}
 .btn-clair:hover,.btn-contour:hover{border-color:var(--c-ink); background:var(--c-white)}
-.btn-sm{padding:9px 18px; font-size:0.8125rem; min-height:40px}
+.btn-sm{padding:9px 18px; font-size:0.875rem; min-height:40px}
 .btn .rond{display:none}
 /* Sur champ profond, les boutons s'inversent */
 .sur-sombre .btn-primaire,.sur-sombre .btn-marque,.sur-sombre .btn-bleu{background:#fff; color:var(--c-ink)}
@@ -132,14 +132,14 @@
 .etiquette{display:inline-block; padding:5px 12px; border-radius:var(--r-pill); font-size:0.75rem;
   font-weight:500; background:var(--c-field-pale); color:var(--c-text-2)}
 .sur-sombre .etiquette{background:rgba(255,255,255,0.08); color:var(--c-text-on-dark-2)}
-.pilule-dispo{display:inline-flex; align-items:center; gap:9px; font-size:0.9375rem; color:var(--c-text-2)}
+.pilule-dispo{display:inline-flex; align-items:center; gap:9px; font-size:0.875rem; color:var(--c-text-2)}
 .pilule-dispo .point{width:8px; height:8px; border-radius:50%; background:var(--c-pass); box-shadow:0 0 0 4px rgba(13,110,68,0.12)}
 .pilule-dispo .sep{width:1px; height:14px; background:var(--c-border-hover)}
 .sur-sombre .pilule-dispo{color:var(--c-text-on-dark-2)}
 .sur-sombre .pilule-dispo .sep{background:rgba(255,255,255,0.20)}
 
 /* ── Badges de statut. COUCHE 3 : produit uniquement. ── */
-.badge,.marqueur{display:inline-flex; align-items:center; font-size:0.8125rem; font-weight:700;
+.badge,.marqueur{display:inline-flex; align-items:center; font-size:0.875rem; font-weight:700;
   letter-spacing:0.04em; text-transform:uppercase; padding:4px 10px; border-radius:var(--r-xs)}
 .m-couvert{background:var(--c-pass-bg); color:var(--c-pass)}
 .m-attente{background:var(--c-risk-bg); color:var(--c-risk)}
@@ -159,7 +159,7 @@
 
 /* ── Liste à puces cochées ── */
 .coches{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:15px}
-.coches li{display:flex; gap:12px; align-items:flex-start; font-size:0.9375rem; line-height:1.6; color:var(--c-text-2)}
+.coches li{display:flex; gap:12px; align-items:flex-start; font-size:0.875rem; line-height:1.6; color:var(--c-text-2)}
 .coches .coche{flex:none; width:19px; height:19px; border-radius:50%; background:var(--c-ink);
   display:grid; place-items:center; margin-top:2px}
 .coches .coche svg{width:10px; height:10px}
@@ -227,9 +227,9 @@
 .regle-flottante{display:flex; align-items:center; gap:11px; background:var(--verre-bg);
   backdrop-filter:var(--verre-blur); -webkit-backdrop-filter:var(--verre-blur);
   border:var(--verre-bord); border-radius:var(--r-pill); padding:8px 12px 8px 9px;
-  box-shadow:var(--shadow-md); font-size:0.9375rem; font-weight:500; color:var(--c-ink)}
+  box-shadow:var(--shadow-md); font-size:0.875rem; font-weight:500; color:var(--c-ink)}
 .regle-flottante .drapeau{width:24px; height:24px; border-radius:50%; display:grid; place-items:center;
-  font-size:0.9375rem; background:var(--c-field-pale); flex:none}
+  font-size:0.875rem; background:var(--c-field-pale); flex:none}
 .regle-flottante .statut{width:19px; height:19px; border-radius:50%; display:grid; place-items:center; flex:none; margin-left:auto}
 .statut-ok{background:var(--c-blue)} .statut-vide{background:rgba(0,0,0,0.09)}
 .pile-regles{position:absolute; right:-40px; top:44px; display:flex; flex-direction:column; gap:12px; width:280px}
@@ -246,11 +246,11 @@
 
 /* Fiche produit */
 .fiche{background:var(--c-white); border-radius:var(--r-sm); box-shadow:var(--shadow-lg);
-  overflow:hidden; font-size:0.8125rem; color:var(--c-text); border:1px solid var(--c-border)}
+  overflow:hidden; font-size:0.875rem; color:var(--c-text); border:1px solid var(--c-border)}
 .fiche-tete{display:flex; gap:12px; align-items:center; padding:14px}
 .fiche-vignette{width:44px; height:44px; border-radius:var(--r-xs); background:var(--c-card); object-fit:cover; flex:none}
-.fiche-nom{font-weight:600; color:var(--c-ink); font-size:0.9375rem}
-.fiche-ref{color:var(--c-text-3); font-size:0.8125rem}
+.fiche-nom{font-weight:600; color:var(--c-ink); font-size:0.875rem}
+.fiche-ref{color:var(--c-text-3); font-size:0.875rem}
 .jauge{height:5px; border-radius:var(--r-pill); background:rgba(0,0,0,0.08); overflow:hidden; flex:1}
 .jauge span{display:block; height:100%; background:var(--c-ink); border-radius:var(--r-pill)}
 .fiche-ligne{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:11px 14px;
@@ -269,11 +269,11 @@
 .nd .titre{font-size:12px; line-height:1.35; font-weight:500; color:var(--c-text);
   display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden}
 .nd .bas{display:flex; align-items:center; gap:6px; margin-top:7px}
-.nd .id{font-size:10px; color:var(--c-text-3); letter-spacing:0.02em}
-.nd .op{font-size:10px; font-weight:700; letter-spacing:0.05em; color:var(--c-text-3);
+.nd .id{font-size:0.75rem; color:var(--c-text-3); letter-spacing:0.02em}
+.nd .op{font-size:0.75rem; font-weight:700; letter-spacing:0.05em; color:var(--c-text-3);
   border:1px solid var(--c-border); border-radius:4px; padding:1px 4px}
 .nd .nb{margin-left:auto; width:17px; height:17px; border-radius:50%; border:1px solid var(--c-border);
-  display:grid; place-items:center; font-size:10px; color:var(--c-text-3)}
+  display:grid; place-items:center; font-size:0.75rem; color:var(--c-text-3)}
 .nd .pt{width:7px; height:7px; border-radius:50%; margin-left:auto}
 .nd.chemin{border-color:var(--c-blue)}
 .nd.v-conforme .pt{background:var(--c-pass)}
@@ -298,7 +298,7 @@
 .ca-texte{font-size:12px; line-height:1.6; color:var(--c-text); margin-bottom:13px}
 .ca-bas{display:flex; align-items:center; gap:10px}
 .ca-joindre{color:var(--c-text-3); display:grid; place-items:center; margin-right:auto}
-.ca-mode{font-size:10px; font-weight:600; color:var(--c-blue); background:var(--c-blue-light);
+.ca-mode{font-size:0.75rem; font-weight:600; color:var(--c-blue); background:var(--c-blue-light);
   border:1px solid var(--c-signal-line); border-radius:var(--r-pill); padding:5px 12px}
 .ca-envoi{width:26px; height:26px; border-radius:var(--r-xs); background:var(--c-blue); display:grid; place-items:center; flex:none}
 .chat-fil-ecran .cf-corps{padding:22px 26px 20px; background:var(--c-surface); display:flex; flex-direction:column; gap:14px}
@@ -312,7 +312,7 @@
 .cf-reponse p{font-size:12px; line-height:1.7; color:var(--c-text); margin:0 0 12px}
 .cf-cite{background:var(--c-white); border-left:2px solid var(--c-blue); border-radius:0 var(--r-xs) var(--r-xs) 0;
   padding:11px 14px; font-size:12px; line-height:1.55; color:var(--c-text-2); margin-bottom:12px}
-.cf-ref{display:block; margin-top:7px; font-size:10px; font-weight:700; color:var(--c-blue)}
+.cf-ref{display:block; margin-top:7px; font-size:0.75rem; font-weight:700; color:var(--c-blue)}
 .cf-composeur{margin-top:auto; padding-top:6px}
 .cf-saisie{display:flex; align-items:center; gap:10px; background:var(--c-white);
   border:1.5px solid var(--c-signal-line); border-radius:var(--r-sm); padding:11px 13px}
@@ -325,25 +325,25 @@
 .vv-ligne.hors{opacity:0.5}
 .vv-date{flex:none; text-align:center; min-width:24px}
 .vv-date b{display:block; font-size:12px; font-weight:700; color:var(--c-text); line-height:1}
-.vv-date span{font-size:10px; color:var(--c-text-3); text-transform:uppercase; letter-spacing:0.06em}
+.vv-date span{font-size:0.75rem; color:var(--c-text-3); text-transform:uppercase; letter-spacing:0.06em}
 .vv-texte{flex:1; min-width:0}
-.vv-titre{font-size:10px; line-height:1.35; color:var(--c-text);
+.vv-titre{font-size:0.75rem; line-height:1.35; color:var(--c-text);
   display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden}
-.vv-ref{font-size:10px; color:var(--c-text-3); margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
-.vv-etat{flex:none; font-size:10px; font-weight:700; letter-spacing:0.04em; text-transform:uppercase;
+.vv-ref{font-size:0.75rem; color:var(--c-text-3); margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.vv-etat{flex:none; font-size:0.75rem; font-weight:700; letter-spacing:0.04em; text-transform:uppercase;
   padding:3px 6px; border-radius:5px; background:rgba(0,0,0,0.04); color:var(--c-text-3)}
 .vv-etat.touche{background:var(--c-pass-bg); color:var(--c-pass)}
 .vv-produit{display:flex; align-items:center; gap:9px; padding:2px 3px; min-width:0}
 .vv-produit img{width:30px; height:30px; object-fit:contain; flex:none}
-.vv-bilan{margin-left:auto; flex:none; font-size:10px; color:var(--c-pass); font-weight:600; white-space:nowrap}
+.vv-bilan{margin-left:auto; flex:none; font-size:0.75rem; color:var(--c-pass); font-weight:600; white-space:nowrap}
 .vignette-ecran{border-radius:var(--r-sm); box-shadow:var(--shadow-md); overflow:hidden}
 .vignette-ecran .ecran-tete{padding:8px 12px}
 .vignette-ecran .pastilles i{width:7px; height:7px}
-.vignette-ecran .fil-ariane{font-size:10px}
+.vignette-ecran .fil-ariane{font-size:0.75rem}
 .vignette-ecran .nd{padding:7px 9px 6px; border-radius:7px}
-.vignette-ecran .nd .id{font-size:10px}
-.vignette-ecran .nd .op{font-size:10px; padding:1px 3px}
-.vignette-ecran .nd .nb{width:14px; height:14px; font-size:10px}
+.vignette-ecran .nd .id{font-size:0.75rem}
+.vignette-ecran .nd .op{font-size:0.75rem; padding:1px 3px}
+.vignette-ecran .nd .nb{width:14px; height:14px; font-size:0.75rem}
 .g3 > .carte-encre .vignette-ecran,.g3 > .carte .vignette-ecran{height:224px; display:flex; flex-direction:column}
 .g3 > .carte-encre .vignette-ecran > *:last-child,.g3 > .carte .vignette-ecran > *:last-child{flex:1; overflow:hidden}
 
@@ -358,25 +358,25 @@
 .sur-sombre .mass-item.alt{color:rgba(255,255,255,0.26)}
 .sur-sombre .mass-item.found{color:var(--c-signal-clair)}
 .mass-refs{display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:8px}
-.mass-ref{font-size:13px; font-weight:500; padding:8px 10px; border-radius:var(--r-xs); text-align:center;
+.mass-ref{font-size:0.875rem; font-weight:500; padding:8px 10px; border-radius:var(--r-xs); text-align:center;
   background:rgba(0,0,0,0.035); color:var(--c-mass-2); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
 .mass-ref.alt{color:var(--c-mass)}
 .mass-ref.found{background:var(--c-blue); color:#fff; font-weight:700; box-shadow:0 6px 20px rgba(0,8,207,0.24)}
-.mass-ref.found .mass-mark{display:block; font-size:10px; font-weight:500; opacity:0.78; margin-top:2px}
+.mass-ref.found .mass-mark{display:block; font-size:0.75rem; font-weight:500; opacity:0.78; margin-top:2px}
 .sur-sombre .mass-ref{background:rgba(255,255,255,0.05); color:rgba(255,255,255,0.26)}
 .sur-sombre .mass-ref.alt{color:rgba(255,255,255,0.16)}
 
 /* ── Le geste Harvey : chiffres en lignes à filets ── */
 .mesures{border-top:1px solid var(--c-border)}
 .mesures .ligne{display:flex; align-items:baseline; gap:32px; padding:26px 0; border-bottom:1px solid var(--c-border)}
-.mesures .libelle{flex:1; min-width:120px; font-size:0.9375rem; color:var(--c-text-2); line-height:1.5}
-.mesures .valeur{flex:none; font-size:2rem; font-weight:400; letter-spacing:-0.015em;
+.mesures .libelle{flex:1; min-width:120px; font-size:0.875rem; color:var(--c-text-2); line-height:1.5}
+.mesures .valeur{flex:none; font-size:1.875rem; font-weight:400; letter-spacing:-0.015em;
   line-height:1; color:var(--c-ink); min-width:clamp(150px,22vw,260px)}
 .sur-sombre .mesures{border-top-color:var(--c-filet-sombre)}
 .sur-sombre .mesures .ligne{border-bottom-color:var(--c-filet-sombre)}
 .sur-sombre .mesures .libelle{color:var(--c-text-on-dark-2)}
 .sur-sombre .mesures .valeur{color:var(--c-text-on-dark)}
-.chiffre{font-size:2rem; font-weight:400; letter-spacing:-0.015em; line-height:1; color:var(--c-ink)}
+.chiffre{font-size:1.875rem; font-weight:400; letter-spacing:-0.015em; line-height:1; color:var(--c-ink)}
 .sur-sombre .chiffre{color:var(--c-text-on-dark)}
 .escalier{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:var(--s-24); align-items:start}
 
@@ -384,7 +384,7 @@
 .table-defilante{overflow-x:auto; -webkit-overflow-scrolling:touch}
 .table-defilante .comparatif{min-width:620px}
 .comparatif{width:100%; border-collapse:separate; border-spacing:0}
-.comparatif th{font-weight:500; font-size:0.8125rem; color:var(--c-text-3); padding:0 14px 16px; text-align:center}
+.comparatif th{font-weight:500; font-size:0.875rem; color:var(--c-text-3); padding:0 14px 16px; text-align:center}
 .comparatif td{padding:22px 14px; text-align:center; border-bottom:1px solid var(--c-border)}
 .comparatif td:first-child{text-align:left; width:36%}
 .comparatif .nous td{border-bottom-color:var(--c-border-hover)}
@@ -409,14 +409,14 @@
 .faq summary::-webkit-details-marker{display:none}
 .faq summary .chev{transition:transform 220ms var(--ease-apple); opacity:0.4; flex:none}
 .faq details[open] summary .chev{transform:rotate(180deg)}
-.faq .reponse{padding:0 4px 28px; max-width:820px; font-size:0.9375rem; line-height:1.7; color:var(--c-text-2)}
+.faq .reponse{padding:0 4px 28px; max-width:820px; font-size:0.875rem; line-height:1.7; color:var(--c-text-2)}
 .sur-sombre .faq,.sur-sombre .faq details{border-color:var(--c-filet-sombre)}
 .sur-sombre .faq summary{color:var(--c-text-on-dark)}
 .sur-sombre .faq .reponse{color:var(--c-text-on-dark-2)}
 
 /* ── Témoignage et fin de page ── */
 .temoignage{display:grid; grid-template-columns:340px minmax(0,1fr); gap:80px; align-items:center}
-.citation{font-size:0.9375rem; line-height:1.65; font-weight:400;
+.citation{font-size:0.875rem; line-height:1.65; font-weight:400;
   letter-spacing:-0.01em; color:var(--c-text)}
 .sur-sombre .citation{color:var(--c-text-on-dark)}
 .auteur{display:flex; align-items:center; gap:12px; margin-top:var(--s-24)}
@@ -446,19 +446,19 @@
   border-radius:var(--r-md); padding:24px; max-width:300px}
 .infolettre *{color:var(--c-text-on-dark)}
 .infolettre input{width:100%; padding:10px 13px; border-radius:var(--r-xs); border:1px solid var(--c-filet-sombre);
-  background:rgba(255,255,255,0.06); font-size:0.9375rem; margin-bottom:9px; font-family:inherit; color:#fff}
+  background:rgba(255,255,255,0.06); font-size:0.875rem; margin-bottom:9px; font-family:inherit; color:#fff}
 .infolettre input::placeholder{color:var(--c-text-on-dark-3)}
 .infolettre button{width:100%; padding:11px; border-radius:var(--r-xs); border:none; background:#fff;
-  color:var(--c-ink) !important; font-weight:600; font-size:0.9375rem; cursor:pointer}
+  color:var(--c-ink) !important; font-weight:600; font-size:0.875rem; cursor:pointer}
 .signature-cleo{background:var(--c-field-deep); padding:32px 0 0; overflow:hidden}
 .signature-cleo .wordmark{width:52%; max-width:560px; height:auto; display:block; margin:0 auto; opacity:0.07;
   filter:brightness(0) invert(1); transform:translateY(18%)}
 
 /* ── Formulaires ── */
 .form-carte{border-radius:var(--r-md); padding:var(--s-32)}
-.form-carte label{display:block; font-size:0.8125rem; font-weight:500; margin-bottom:7px; color:var(--c-text-2)}
+.form-carte label{display:block; font-size:0.875rem; font-weight:500; margin-bottom:7px; color:var(--c-text-2)}
 .form-carte input{width:100%; padding:11px 14px; border-radius:var(--r-xs); border:1px solid var(--c-border-hover);
-  background:var(--c-white); font-size:0.9375rem; font-family:inherit; margin-bottom:16px; color:var(--c-text)}
+  background:var(--c-white); font-size:0.875rem; font-family:inherit; margin-bottom:16px; color:var(--c-text)}
 .form-carte input::placeholder{color:var(--c-text-3)}
 .form-carte .paire{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px}
 .sur-sombre .form-carte label{color:var(--c-text-on-dark-2)}
@@ -472,8 +472,8 @@
 /* ── Ressources ── */
 .res-corps{display:grid; grid-template-columns:200px minmax(0,1fr); gap:88px; align-items:start}
 .res-nav{position:sticky; top:88px; align-self:start; display:flex; flex-direction:column; gap:12px}
-.res-nav .titre{font-size:0.9375rem; font-weight:600; color:var(--c-text); margin-bottom:4px}
-.res-nav a{font-size:0.9375rem; color:var(--c-text-2)}
+.res-nav .titre{font-size:0.875rem; font-weight:600; color:var(--c-text); margin-bottom:4px}
+.res-nav a{font-size:0.875rem; color:var(--c-text-2)}
 .res-nav a:hover{color:var(--c-text)}
 .res-nav a.actif{color:var(--c-blue)}
 .res-tete{display:grid; grid-template-columns:1.4fr minmax(0,1fr); gap:48px; align-items:end; margin-bottom:var(--s-64)}
@@ -484,7 +484,7 @@
 .res-carte .vignette img{width:100%; height:100%; object-fit:cover}
 .res-carte .corps{padding:20px 22px 24px; display:flex; flex-direction:column; gap:11px; flex:1}
 .res-carte .titre{font-size:1rem; font-weight:500; line-height:1.4; letter-spacing:-0.012em; color:var(--c-ink)}
-.res-carte .lien{margin-top:auto; display:inline-flex; align-items:center; gap:7px; font-size:0.9375rem;
+.res-carte .lien{margin-top:auto; display:inline-flex; align-items:center; gap:7px; font-size:0.875rem;
   font-weight:500; color:var(--c-blue)}
 .res-carte:hover .lien svg{transform:translateX(3px)}
 .res-carte .lien svg{transition:transform var(--dur-fast) var(--ease-apple)}
@@ -495,7 +495,7 @@
 .terme-carte{border-radius:var(--r-lg); padding:26px; background:var(--c-white); border:none;
   box-shadow:none; display:flex; flex-direction:column; gap:11px}
 .terme-carte .nom{font-size:1rem; font-weight:500; letter-spacing:-0.012em; color:var(--c-ink)}
-.terme-carte .def{font-size:0.9375rem; line-height:1.6; color:var(--c-text-2); flex:1}
+.terme-carte .def{font-size:0.875rem; line-height:1.6; color:var(--c-text-2); flex:1}
 .ligne-liste{display:flex; align-items:center; gap:24px; padding:24px 26px; border-radius:var(--r-lg);
   background:var(--c-white); border:none; box-shadow:none; transition:var(--transition-hover)}
 .ligne-liste .principal{flex:1; min-width:0}
@@ -515,7 +515,7 @@
 .article{max-width:720px; margin:0 auto}
 .article h2{font-size:1.5rem; font-weight:500; letter-spacing:-0.022em;
   line-height:1.28; margin:56px 0 20px; color:var(--c-ink)}
-.article h3{font-size:1.125rem; font-weight:500; margin:32px 0 14px; color:var(--c-ink)}
+.article h3{font-size:1rem; font-weight:500; margin:32px 0 14px; color:var(--c-ink)}
 .article p{font-size:1rem; line-height:1.8; color:var(--c-text-2); margin:0 0 22px}
 .article ul,.article ol{margin:0 0 20px; padding-left:22px}
 .article li{font-size:1rem; line-height:1.8; color:var(--c-text-2); margin-bottom:22px}
@@ -529,7 +529,7 @@
 .sur-sombre .article blockquote{background:rgba(255,255,255,0.04)}
 .sur-sombre .article blockquote p{color:var(--c-text-on-dark)}
 .sur-sombre .article .source-citee{color:var(--c-signal-clair)}
-.sommaire{position:sticky; top:88px; align-self:start; font-size:0.9375rem}
+.sommaire{position:sticky; top:88px; align-self:start; font-size:0.875rem}
 .sommaire .titre{font-size:0.75rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase;
   color:var(--c-text-3); margin-bottom:16px}
 .sommaire a{display:block; padding:7px 0 7px 14px; border-left:1px solid var(--c-border); color:var(--c-text-2)}
@@ -540,7 +540,7 @@
 .corps-aside{display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:88px; align-items:start}
 .legal{max-width:760px}
 .legal h2{font-size:1.5rem; font-weight:500; letter-spacing:-0.018em; margin:40px 0 14px; color:var(--c-ink)}
-.legal p,.legal li{font-size:0.9375rem; line-height:1.8; color:var(--c-text-2); margin:0 0 15px}
+.legal p,.legal li{font-size:0.875rem; line-height:1.8; color:var(--c-text-2); margin:0 0 15px}
 .sur-sombre .legal h2{color:var(--c-text-on-dark)}
 .sur-sombre .legal p,.sur-sombre .legal li{color:var(--c-text-on-dark-2)}
 
@@ -550,10 +550,10 @@
 .fiche-laterale .bloc{margin-bottom:26px}
 .fiche-laterale .cle{font-size:0.75rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase;
   color:var(--c-text-3); margin-bottom:8px}
-.fiche-laterale .valeur{font-size:0.9375rem; color:var(--c-text); line-height:1.6}
+.fiche-laterale .valeur{font-size:0.875rem; color:var(--c-text); line-height:1.6}
 .sur-sombre .fiche-laterale .valeur{color:var(--c-text-on-dark)}
 .recit{max-width:640px}
-.recit p,.recit li{font-size:1.0625rem; line-height:1.72; color:var(--c-text-2); margin:0 0 17px}
+.recit p,.recit li{font-size:1rem; line-height:1.72; color:var(--c-text-2); margin:0 0 17px}
 .recit ul{margin:0 0 17px; padding-left:20px}
 .recit b{color:var(--c-text)}
 .sur-sombre .recit p,.sur-sombre .recit li{color:var(--c-text-on-dark-2)}
@@ -561,7 +561,7 @@
 .sceau{position:relative; width:auto; height:auto; margin:0 0 18px; display:flex; align-items:baseline; gap:8px}
 .sceau svg{display:none}
 .sceau .dedans{position:relative; text-align:left; line-height:1.2; display:flex; align-items:baseline; gap:9px}
-.sceau .nom{font-size:1.125rem; font-weight:500; letter-spacing:-0.02em; color:var(--c-ink)}
+.sceau .nom{font-size:1rem; font-weight:500; letter-spacing:-0.02em; color:var(--c-ink)}
 .sceau .sous{font-size:0.75rem; font-weight:400; letter-spacing:0; text-transform:none;
   color:var(--c-text-3); margin:0; font-variant-numeric:tabular-nums}
 .alterne{display:grid; grid-template-columns:minmax(0,1fr) 1.06fr; gap:96px; align-items:center; padding:var(--s-64) 0}
@@ -595,7 +595,7 @@
 .kit-nom{font-size:1rem; font-weight:500; letter-spacing:-0.012em; color:var(--c-ink)}
 .kit-ou{font-size:0.75rem; font-weight:600; letter-spacing:0.06em; text-transform:uppercase;
   color:var(--c-text-3); border:1px solid var(--c-border); border-radius:var(--r-pill); padding:3px 10px}
-.kit-note{font-size:0.9375rem; line-height:1.6; color:var(--c-text-2); margin:0 0 20px; max-width:640px}
+.kit-note{font-size:0.875rem; line-height:1.6; color:var(--c-text-2); margin:0 0 20px; max-width:640px}
 .kit-cadre{border:1px solid var(--c-border); border-radius:var(--r-md); padding:32px; background:var(--c-white); overflow:hidden}
 .kit-cadre.serre{padding:20px}
 .kit-cadre.nu{padding:0; border:none; background:none}
@@ -639,7 +639,7 @@
   .nav-fin .btn{white-space:nowrap; padding:9px 16px; font-size:0.875rem}
   .nav-fin .lien-secondaire{display:none}
   .nav-langue{margin-right:4px; padding:1px}
-  .nav-langue span,.nav-langue a{padding:3px 7px; font-size:0.6875rem}
+  .nav-langue span,.nav-langue a{padding:3px 7px; font-size:0.75rem}
   .g2,.g3,.g4,.escalier,.pied-colonnes,.pied-regs,.form-carte .paire,.kit-duo,.kit-trio{grid-template-columns:minmax(0,1fr)}
   .bande-logos .cellule{min-width:110px}
   .mass-20{grid-template-columns:repeat(8,minmax(0,1fr))}
@@ -774,8 +774,8 @@
    encore 13 et 11 ; c'est base.css qu'il faut réparer, pas ces deux lignes.
    Tant que ce n'est pas fait, elles doivent rester ici pour gagner. */
 /* 13 px minimum sur desktop, décision du 03/09/2026 ; 14 sur téléphone (bloc 640). */
-.t-caption{font-size:0.8125rem}
-.t-label{font-size:0.8125rem; letter-spacing:0.11em}
+.t-caption{font-size:0.875rem}
+.t-label{font-size:0.875rem; letter-spacing:0.11em}
 
 /* Une surface sombre posée à la main porte sa propre encre. Sans ça, ses enfants
    gardent l'encre du régime clair et rendent sombre sur sombre. Symétrique de
@@ -881,7 +881,7 @@
 .agent-inverse .agent-texte{order:2; padding:44px 44px 44px 0}
 .agent-inverse .agent-visuel{order:1}
 .agent .coches{margin:22px 0 26px}
-.agent .coches li{font-size:0.9375rem}
+.agent .coches li{font-size:0.875rem}
 @media (max-width:1024px){
   .agent{grid-template-columns:minmax(0,1fr); gap:0}
   .agent-texte,.agent-inverse .agent-texte{order:2; padding:32px}
@@ -902,7 +902,7 @@
 .enc-eparpille{display:flex; flex-wrap:wrap; gap:10px}
 .enc-bribe{display:inline-block; padding:9px 14px; border-radius:var(--r-sm);
   background:rgba(255,255,255,0.05); border:1px solid var(--c-filet-sombre);
-  color:var(--c-text-2); font-size:0.8125rem; line-height:1.4}
+  color:var(--c-text-2); font-size:0.875rem; line-height:1.4}
 /* Les bribes ne sont pas alignées : c'est la dispersion, elle se voit. */
 .enc-eparpille .enc-bribe:nth-child(2n){transform:translateY(6px)}
 .enc-eparpille .enc-bribe:nth-child(3n){transform:translateY(-5px)}
@@ -946,7 +946,7 @@
 .flux{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; margin-bottom:22px}
 .flux-etape{min-width:0; background:var(--c-white); border-radius:var(--r-lg);
   padding:32px; box-shadow:var(--shadow-sm); position:relative}
-.flux-rang{font-size:0.8125rem; font-weight:600; letter-spacing:0.13em;
+.flux-rang{font-size:0.875rem; font-weight:600; letter-spacing:0.13em;
   color:var(--c-blue); margin-bottom:14px}
 .flux-etape .t-h2{margin-bottom:10px}
 /* Le fil qui relie les étapes : il dit l'ordre sans l'écrire. */
@@ -962,7 +962,7 @@
       Discret, il ne dispute rien au bouton de démo. ── */
 .nav-langue{display:inline-flex; align-items:center; gap:2px; margin-right:14px;
   border:1px solid var(--c-border); border-radius:999px; padding:2px}
-.nav-langue span,.nav-langue a{font-size:0.8125rem; font-weight:600; letter-spacing:0.05em;
+.nav-langue span,.nav-langue a{font-size:0.875rem; font-weight:600; letter-spacing:0.05em;
   padding:4px 9px; border-radius:999px; line-height:1; color:var(--c-text-3)}
 .nav-langue .actif{background:var(--c-ink); color:var(--c-white)}
 .nav-langue a:hover{color:var(--c-ink)}
@@ -992,7 +992,7 @@
 
 /* Une citation de trois paragraphes ne se lit pas à la taille d'une accroche :
    on descend d'un cran et on resserre l'interligne. */
-.citation-longue{font-size:0.9375rem; line-height:1.68}
+.citation-longue{font-size:0.875rem; line-height:1.68}
 .citation-longue p:last-child{margin-bottom:0}
 
 /* ══ LE PIPELINE D'ENCODAGE, schéma technique. Demandé le 02/09.
@@ -1006,7 +1006,7 @@
   gap:0; align-items:center; margin-top:56px}
 .pl-etage{min-width:0}
 .pl-tete{display:flex; align-items:baseline; gap:10px; margin-bottom:16px}
-.pl-num{font-size:0.8125rem; font-weight:600; letter-spacing:0.12em; color:var(--c-blue)}
+.pl-num{font-size:0.875rem; font-weight:600; letter-spacing:0.12em; color:var(--c-blue)}
 /* Sur champ profond, le bleu de marque rend 1,37:1 (mesuré le 03/09) : périwinkle, 6,87:1. */
 .sur-sombre .pl-num{color:var(--c-periwinkle)}
 .sur-sombre .pl-n{border-left-color:rgba(255,255,255,0.30)}
@@ -1018,7 +1018,7 @@
 .pl-noeuds{display:flex; flex-direction:column; gap:8px}
 .pl-n{padding:9px 13px; border:1px solid var(--c-filet-sombre); border-left:2px solid var(--c-blue);
   border-radius:4px; background:rgba(255,255,255,0.04); color:var(--c-text-on-dark-2);
-  font-size:0.8125rem; line-height:1.35}
+  font-size:0.875rem; line-height:1.35}
 
 /* Le moteur : cinq opérations numérotées, reliées par un filet vertical. */
 .pl-moteur{position:relative}
@@ -1029,14 +1029,14 @@
 .pl-etapes li:last-child{padding-bottom:0}
 .pl-etapes li::before{content:''; position:absolute; left:-22px; top:6px; width:9px; height:9px;
   border-radius:50%; border:1px solid var(--c-blue); background:var(--c-field-deep)}
-.pl-etapes b{display:block; font-size:0.9375rem; font-weight:500; color:var(--c-text-on-dark)}
-.pl-etapes span{display:block; font-size:0.8125rem; color:var(--c-text-on-dark-3); margin-top:2px}
+.pl-etapes b{display:block; font-size:0.875rem; font-weight:500; color:var(--c-text-on-dark)}
+.pl-etapes span{display:block; font-size:0.875rem; color:var(--c-text-on-dark-3); margin-top:2px}
 
 /* La sortie : une fiche, pas un paragraphe. C'est le propos du bloc. */
 .pl-regle{background:var(--c-white); border-radius:var(--r-md); padding:22px}
 .pl-regle .t-h3{margin-bottom:14px}
 .pl-champ{display:flex; justify-content:space-between; gap:14px; padding:8px 0;
-  border-top:1px solid var(--c-border); font-size:0.8125rem}
+  border-top:1px solid var(--c-border); font-size:0.875rem}
 .pl-champ span{color:var(--c-text-3)}
 .pl-champ b{color:var(--c-ink); font-weight:500; text-align:right}
 .pl-verdict{display:flex; align-items:center; gap:8px; margin-top:14px; padding-top:12px;
@@ -1062,7 +1062,7 @@
   transition:border-color var(--dur-survol) ease-out, background var(--dur-survol) ease-out}
 .champ-demo:focus-within{border-color:rgba(255,255,255,0.28); background:rgba(255,255,255,0.07)}
 .champ-demo input{flex:1; min-width:0; background:none; border:0; padding:0;
-  font-family:inherit; font-size:0.9375rem; color:#fff; letter-spacing:-0.01em}
+  font-family:inherit; font-size:0.875rem; color:#fff; letter-spacing:-0.01em}
 .champ-demo input::placeholder{color:rgba(255,255,255,0.42)}
 .champ-demo .btn{flex:none; white-space:nowrap; margin:0}
 @media (max-width:560px){
@@ -1109,9 +1109,9 @@
 .blog-art .date{color:var(--c-text-3); margin-bottom:8px; display:block}
 .blog-art h3{margin:0 0 12px; display:-webkit-box; -webkit-line-clamp:6;
   -webkit-box-orient:vertical; overflow:hidden}
-.titre-carte{font-size:1.125rem; font-weight:500; line-height:1.32; letter-spacing:-0.012em;
+.titre-carte{font-size:1rem; font-weight:500; line-height:1.32; letter-spacing:-0.012em;
   color:var(--c-ink)}
-.blog-art .resume{font-size:0.9375rem; line-height:1.5; margin:0 0 14px; color:var(--c-text-2);
+.blog-art .resume{font-size:0.875rem; line-height:1.5; margin:0 0 14px; color:var(--c-text-2);
   display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden}
 .blog-art .signature{display:flex; align-items:center; gap:9px; margin-top:auto; padding-top:2px}
 .blog-art .signature img{width:26px; height:26px; border-radius:50%; object-fit:cover; flex:none}
@@ -1185,7 +1185,7 @@
 .matrice th{font-weight:500; font-size:0.75rem; letter-spacing:0.04em; text-transform:uppercase;
   color:var(--c-text-3); padding:0 20px 14px 0; text-align:left; white-space:nowrap;
   border-bottom:1px solid var(--c-border)}
-.matrice td{padding:18px 20px 18px 0; text-align:left; font-size:0.9375rem;
+.matrice td{padding:18px 20px 18px 0; text-align:left; font-size:0.875rem;
   border-bottom:1px solid var(--c-border); vertical-align:top}
 .matrice tr:last-child td{border-bottom:0}
 .matrice td:first-child{font-weight:500; color:var(--c-ink)}
@@ -1229,9 +1229,9 @@
    donnee sans changer le titre. */
 .bande-chiffres{display:flex; justify-content:center; gap:56px; flex-wrap:wrap;
   margin:38px auto 0; max-width:620px}
-.bande-chiffres b{display:block; font-size:1.75rem; font-weight:500; letter-spacing:-0.02em;
+.bande-chiffres b{display:block; font-size:1.875rem; font-weight:500; letter-spacing:-0.02em;
   line-height:1.1; color:var(--c-text-on-dark, #fff)}
-.bande-chiffres span{display:block; margin-top:6px; font-size:0.8125rem;
+.bande-chiffres span{display:block; margin-top:6px; font-size:0.875rem;
   color:rgba(255,255,255,0.58)}
 @media (max-width:560px){ .bande-chiffres{gap:28px} .bande-chiffres b{font-size:1.375rem} }
 
@@ -1244,7 +1244,7 @@
 .trio-socle > div:first-child{padding-left:26px}
 .trio-socle b{display:block; font-size:0.75rem; font-weight:700; letter-spacing:0.09em;
   text-transform:uppercase; color:var(--c-signal,#4D57FF); margin-bottom:9px}
-.trio-socle span{display:block; font-size:0.9375rem; line-height:1.45;
+.trio-socle span{display:block; font-size:0.875rem; line-height:1.45;
   color:rgba(255,255,255,0.66)}
 @media (max-width:720px){
   .trio-socle{grid-template-columns:minmax(0,1fr); gap:22px; max-width:420px}
@@ -1277,7 +1277,7 @@
   html.menu-ouvert{overflow:hidden}
   .mm-groupe{padding:12px 0; border-bottom:1px solid var(--c-border)}
   .mm-titre{font-size:0.75rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--c-text-3); padding:8px 0 4px}
-  .menu-mobile a{display:flex; align-items:center; min-height:48px; font-size:1.0625rem; color:var(--c-text); padding:2px 0}
+  .menu-mobile a{display:flex; align-items:center; min-height:48px; font-size:1rem; color:var(--c-text); padding:2px 0}
   .mm-groupe > a{font-weight:500}
   .mm-actions{display:flex; flex-direction:column; gap:10px; padding-top:20px}
   .mm-actions .btn{justify-content:center}
@@ -1305,8 +1305,8 @@
       le lien vers le cas. Avant, 540 px de photo pour deux phrases. ── */
 .temoin-compact{max-width:780px; margin:0 auto; text-align:center; display:flex; flex-direction:column; align-items:center; gap:22px}
 .temoin-portrait{width:112px; height:112px; border-radius:50%; object-fit:cover; object-position:top}
-.temoin-compact .citation{font-size:1.25rem; line-height:1.55; letter-spacing:-0.012em; color:var(--c-text)}
-@media (max-width:640px){ .temoin-compact .citation{font-size:1.0625rem} }
+.temoin-compact .citation{font-size:1.375rem; line-height:1.55; letter-spacing:-0.012em; color:var(--c-text)}
+@media (max-width:640px){ .temoin-compact .citation{font-size:1rem} }
 
 /* ── Le bloc identité du pied, sur une ligne ── */
 .pied-identite{display:flex; gap:48px; flex-wrap:wrap; align-items:flex-start; padding:32px 0 28px; border-top:1px solid var(--c-filet-sombre)}
@@ -1342,7 +1342,7 @@
   .badge,.marqueur,.vv-etat,.flux-rang,.pl-num{font-size:0.875rem}
   .nav-logo{min-width:44px; justify-content:center}
   .mass-refs{grid-template-columns:repeat(4,minmax(0,1fr))} .mass-ref{font-size:0.875rem; padding:6px 4px}
-  .ca-mode,.cf-ref,.nd .bas span,.nd .id,.nd .op,.nd .nb{font-size:11px}
+  .ca-mode,.cf-ref,.nd .bas span,.nd .id,.nd .op,.nd .nb{font-size:0.75rem}
   .comparatif td,.comparatif th,.tab-donnees td,.tab-donnees th,table td,table th{font-size:0.875rem}
   .pied ul a,.res-nav a,.sommaire a,.fiche-laterale a,.cta-texte,.mega-liste a{min-height:44px; display:inline-flex; align-items:center}
   .pied-bas a{min-height:44px; display:inline-flex; align-items:center}
@@ -1352,4 +1352,4 @@
 
 /* ── Maquettes d'application : plancher 11 px à toutes les largeurs (audit en ligne du
       03/09 : 8 à 10 px relevés sur desktop). Ce sont des écrans produit, 11 px y est admis. ── */
-.nd .id,.nd .op,.nd .nb,.vv-date span,.vv-titre,.vv-ref,.vv-etat,.vv-bilan,.ca-mode,.cf-ref{font-size:11px}
+.nd .id,.nd .op,.nd .nb,.vv-date span,.vv-titre,.vv-ref,.vv-etat,.vv-bilan,.ca-mode,.cf-ref{font-size:0.75rem}

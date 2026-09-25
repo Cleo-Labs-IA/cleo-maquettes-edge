@@ -1,0 +1,81 @@
+<!--NAV-->
+<!-- Article porté depuis www.cleolabs.co/en/blog/epistemic-vigilance-compliance-ai-fake-regulations le 23/09/2026 par blog/porter.mjs puis blog/fragments.mjs.
+     Titre, chapô, corps, FAQ et sources sont repris tels quels (blog-posts.json + HTML rendu). Ne pas éditer à la main : régénérer. -->
+<section class="sur-sombre section-serree bl-tete">
+  <div class="conteneur">
+    <div class="article-tete">
+      <p class="sy-surtitre">AI</p>
+      <h1 class="t-titre-page" style="margin:20px 0 20px">What If Someone Fed Your Compliance AI a Fake GDPR Text?</h1>
+      <p class="t-body" style="margin:0 0 28px">Most compliance AI assumes regulatory text is authentic. A new research paper introduces DEF, the first framework that detects falsified legal documents.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="https://www.linkedin.com/in/naomie-halioua/" rel="author noopener" target="_blank" style="display:flex;align-items:center;gap:12px"><img src="img:naomie" alt="Naomie Halioua" style="width:44px;height:44px;border-radius:50%;object-fit:cover"><span style="display:block"><span class="t-h3" style="display:block">Naomie Halioua</span><span class="t-caption" style="display:block">CDO and co-founder</span></span></a>
+        <span class="t-caption" style="padding-left:14px;border-left:1px solid var(--c-filet-sombre)"><time datetime="2026-03-10">10 March 2026</time> · 6 min read</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-bande-photo">
+  <figure>
+    <img src="img:monde-tablette-banc-test" alt="">
+    <div class="sy-bande-texte">
+      <p class="sy-etiquette">AI</p>
+    </div>
+  </figure>
+</section>
+
+<section class="section bl-corps" style="padding-top:56px">
+  <div class="conteneur">
+    <div class="corps-sommaire">
+      <nav class="sommaire">
+        <div class="titre">On this page</div>
+        <a href="#s1">What the paper introduces</a>
+        <a href="#s2">The detail that changes everything</a>
+        <a href="#s3">Why this matters to you</a>
+        <a href="#s4">How Cleo handles this</a>
+        <a href="#s5">Sources &amp;amp; references</a>
+        <a href="#questions">Frequently asked questions</a>
+      </nav>
+      <div class="article bl-article" style="margin:0">
+<div class="bl-encart"><p>Safer Policy Compliance with Dynamic Epistemic Fallback (DEF)</p><p>Imperial, Tayyar Madabushi · <a href="https://arxiv.org/abs/2601.23094">arXiv:2601.23094</a>, January 2026</p></div>
+<div class="bl-encart"><p>"Humans develop a series of cognitive defenses, known as epistemic vigilance, to combat risks of deception and misinformation. Developing safeguards for LLMs inspired by this mechanism might be particularly helpful for their application in high-stakes tasks such as automating compliance with data privacy laws."</p><p>Imperial &amp; Tayyar Madabushi, arXiv:2601.23094</p></div>
+<h2 id="s1">What the paper introduces</h2><p>The paper introduces DEF, a protocol that gives LLMs the equivalent of human epistemic vigilance. When the system encounters a regulatory text that has been maliciously modified, it flags the inconsistency, refuses to comply, and falls back to its own verified knowledge. Tested on GDPR and HIPAA, with DeepSeek-R1 reaching 100% detection in one setting.</p><div><div><p>100%</p><p>detection (DeepSeek-R1)</p></div><div><p>GDPR</p><p>&amp; HIPAA tested</p></div><div><p>DEF</p><p>first defense framework</p></div></div>
+<h2 id="s2">The detail that changes everything</h2><p>Most compliance AI systems assume the regulatory text they read is authentic. DEF is the first framework built on the opposite assumption: that the input might be compromised. In an environment where legal artifacts can be manipulated, that is not a theoretical risk.</p><p>A falsified GDPR excerpt fed to an unprotected LLM can produce a confidently wrong compliance output. The AI will not hesitate, it will not flag uncertainty: it will apply the fake rules as if they were real. DEF is the first documented defense against this attack vector.</p>
+<h2 id="s3">Why this matters to you</h2><div><div><span>→</span><div><p>You are a DPO or compliance officer</p><p>If your organization uses an AI tool to interpret or apply regulatory texts, this paper introduces a threat you may not have considered. A falsified GDPR excerpt fed to an unprotected LLM can produce a confidently wrong compliance output. DEF is the first documented defense.</p></div></div><div><span>→</span><div><p>You are building an AI product</p><p>The paper shows that frontier models like DeepSeek-R1 can be pushed to 100% detection with the right inference-time protocol. That is an engineering decision, not a research problem. If your compliance layer reads external policy texts, this should be on your architecture checklist.</p></div></div><div><span>→</span><div><p>Your sector is regulated (healthcare, finance, energy, HR)</p><p>The paper tests on GDPR and HIPAA explicitly. Legal artifacts in regulated sectors are exactly the type of document that adversarial actors would target. If your compliance workflow relies on AI reading regulatory texts, the integrity of those texts is a security concern.</p></div></div></div>
+<h2 id="s4">How Cleo handles this</h2><p>At Cleo, every regulatory text we process goes through a verification layer before it enters our pipeline. This paper formalizes what we treat as a non-negotiable: the integrity of regulatory inputs is a prerequisite, not an afterthought. Our 30+ specialized agents cross-validate sources against official databases, flag inconsistencies, and escalate to human review when confidence is low.</p><p>Reference: Imperial &amp; Tayyar Madabushi (2026), Safer Policy Compliance with Dynamic Epistemic Fallback, arXiv:2601.23094</p>
+<h2 id="s5">Sources &amp; references</h2><ol><li><cite><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj">Regulation (EU) 2016/679: General Data Protection Regulation (GDPR)</a></cite></li></ol>
+<h2 id="questions">Frequently asked questions</h2>
+<div class="faq" data-schema="faq" style="margin-bottom:36px">
+<details open><summary>What is epistemic vigilance in AI compliance?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Epistemic vigilance is a concept borrowed from cognitive science: humans develop cognitive defenses to detect deception and misinformation. Applied to AI compliance, it means building systems that can detect when a regulatory text has been falsified or tampered with, rather than blindly following any input labeled as law.</div></details>
+<details><summary>What is the DEF framework for compliance AI?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">DEF (Dynamic Epistemic Fallback) is a protocol introduced by Imperial &amp; Tayyar Madabushi (arXiv:2601.23094, January 2026). When an LLM encounters a regulatory text that has been maliciously modified, DEF flags the inconsistency, refuses to comply with the falsified text, and falls back to verified knowledge. Tested on GDPR and HIPAA, DeepSeek-R1 reached 100% detection in one setting.</div></details>
+<details><summary>Can someone really fake a GDPR text to trick an AI?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Yes. Most compliance AI systems ingest regulatory texts from external sources without verifying their authenticity. A falsified GDPR excerpt (with subtly altered obligations, removed safeguards, or fabricated exceptions) can produce confidently wrong compliance output from an unprotected LLM. This is not a theoretical risk: adversarial document injection is a known attack vector for retrieval-augmented generation (RAG) pipelines.</div></details>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="conteneur">
+    <h2 class="t-h1" style="margin-bottom:28px">Read next</h2>
+    <div class="sy-carrousel" data-apparait>
+      <a class="sy-carte-photo" href="blog-multi-market-product-compliance-retail-en.html"><img src="img:monde-entrepot-palettes" alt=""><span class="sy-etiquette">Compliance</span><b>Multi-Market Product Compliance for Retail &amp; Consumer Goods: The Definitive Guide</b></a>
+      <a class="sy-carte-photo" href="blog-multi-agent-ai-compliance-research-2026-en.html"><img src="img:monde-proto-impression-3d" alt=""><span class="sy-etiquette">AI</span><b>Multi-Agent AI for Compliance: What 2026 Research Says</b></a>
+      <a class="sy-carte-photo" href="blog-gpsr-compliance-guide-consumer-goods-en.html"><img src="img:monde-chaise-test-resistance" alt=""><span class="sy-etiquette">Product Compliance</span><b>GPSR Compliance Guide for Consumer Goods Brands (2026)</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-final-photo">
+  <figure>
+    <img src="img:classeurs" alt="">
+    <div class="sy-final-texte" data-apparait>
+      <p class="sy-etiquette">30 minutes with the team</p>
+      <h2>See what Cleo finds on your own products</h2>
+      <p>One range and two markets are enough.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Book a demo</a></div>
+    </div>
+  </figure>
+</section>
+<!--PIED-->

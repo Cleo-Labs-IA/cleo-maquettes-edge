@@ -38,7 +38,7 @@ body[data-cleo-ds="v6"]:not(#_) main :is(.ac-expertise, .ac-besoins, .ac-questio
 body[data-cleo-ds="v6"]:not(#_) main .ac-questions .ac-entete:not(#_):not(#_):not(#_){text-align:center}
 
 /* 3. Les surfaces : cartes #17171A, filet blanc à 8 %, rayon 12 */
-body[data-cleo-ds="v6"]:not(#_) main :is(.ac-besoins .sy-carte, .ac-carte, .ac-etape, .ac-choix, .ac-roue-bloc, .ac-visuel):not(#_):not(#_):not(#_){background-color:#17171A !important;box-shadow:0 0 0 1px rgba(255,255,255,.08) !important;border:0 !important;border-radius:12px}
+body[data-cleo-ds="v6"]:not(#_) main :is(.ac-besoins .sy-carte, .ac-carte, .ac-roue-bloc, .ac-visuel):not(#_):not(#_):not(#_){background-color:#17171A !important;box-shadow:0 0 0 1px rgba(255,255,255,.08) !important;border:0 !important;border-radius:12px}
 body[data-cleo-ds="v6"]:not(#_) main .ac-besoins .sy-carte:not(#_):not(#_):not(#_):hover{background-color:#1C1C1C !important}
 body[data-cleo-ds="v6"]:not(#_) main .ac-etape > span:not(#_):not(#_):not(#_){background:#FFFFFF;color:#000000}
 body[data-cleo-ds="v6"]:not(#_) main .ac-media:not(#_):not(#_):not(#_){box-shadow:0 0 0 1px rgba(255,255,255,.10)}
@@ -136,10 +136,10 @@ body[data-cleo-ds="v6"]:not(#_) main .ac-cartes:not(#_):not(#_):not(#_){grid-tem
 body[data-cleo-ds="v6"]:not(#_) main .ac-carte:not(#_):not(#_):not(#_){display:flex;flex-direction:column;padding:0 !important;overflow:clip}
 body[data-cleo-ds="v6"]:not(#_) main .ac-carte > .ac-visuel:not(#_):not(#_):not(#_){order:0;width:100%;aspect-ratio:16 / 9;min-height:0;border-radius:0;background:#0F0F0F}
 body[data-cleo-ds="v6"]:not(#_) main .ac-carte-texte:not(#_):not(#_):not(#_){display:flex;flex-direction:column;gap:14px;padding:24px 24px 26px}
-body[data-cleo-ds="v6"]:not(#_) main .ac-carte-texte h3:not(#_):not(#_):not(#_){font-size:1.25rem !important;letter-spacing:-.01em !important}
-body[data-cleo-ds="v6"]:not(#_) main .ac-carte-texte > p:not(.ac-prix):not(#_):not(#_):not(#_){max-width:none;font-size:.9375rem;line-height:1.5;color:rgba(255,255,255,.66)}
+body[data-cleo-ds="v6"]:not(#_) main .ac-carte-texte h3:not(#_):not(#_):not(#_){font-size:1.375rem !important;letter-spacing:-.01em !important}
+body[data-cleo-ds="v6"]:not(#_) main .ac-carte-texte > p:not(.ac-prix):not(#_):not(#_):not(#_){max-width:none;font-size:0.875rem;line-height:1.5;color:rgba(255,255,255,.66)}
 body[data-cleo-ds="v6"]:not(#_) main .ac-coches:not(#_):not(#_):not(#_){display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
-body[data-cleo-ds="v6"]:not(#_) main .ac-coches li:not(#_):not(#_):not(#_){margin:0;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.08);font-size:13px;line-height:1.2;color:rgba(255,255,255,.78)}
+body[data-cleo-ds="v6"]:not(#_) main .ac-coches li:not(#_):not(#_):not(#_){margin:0;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.08);font-size:0.875rem;line-height:1.2;color:rgba(255,255,255,.78)}
 body[data-cleo-ds="v6"]:not(#_) main .ac-coches li svg:not(#_):not(#_):not(#_){display:none}
 body[data-cleo-ds="v6"]:not(#_) main .ac-prix:not(#_):not(#_):not(#_){margin:0;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);font-size:14px;font-weight:500;color:#FFFFFF}
 body[data-cleo-ds="v6"]:not(#_) main .ac-carte-texte .sy-actions:not(#_):not(#_):not(#_){margin-top:0;padding-top:0}
@@ -209,7 +209,7 @@ body[data-cleo-ds="v6"]:not(#_) main .ac-etoiles:not(#_):not(#_):not(#_){fill:rg
    Relevé automatique (scratchpad/fonds-blancs.mjs) : les surfaces qui codaient le blanc en dur gardaient du texte blanc
    sur blanc. Liste tirée de la mesure, pas devinée : tableaux défilants et matrices, boutons blancs, champs de
    formulaire, panneaux des pages Service et Atlas, blocs de code, filets et points du globe. */
-body[data-cleo-ds="v6"]:not(#_) main :is(.table-defilante, table.matrice, .ap-matrice, .atlas-matrice, .atlas-sh6, .atlas-carte-legende, .dt-code, .sc-panneau-demande, .sc-devis, .sc-doc, .sc-invite, .sc-relecteur, .sc-etape, .sc-flottant, .radar-fiche, .radar-source, .doc-apercu, .prix-bloc, .fiche-service, .fiche-inclus, .res-carte, .terme-carte, .ig-item, .mc-reponse, .pc-fichier, .texte-chip, .hq-puce-document, .hr-puce, .carte, .cl-demande, .data-chiffres > div, .scene):not(#__):not(#___):not(#____){background-color:#17171A !important;border-color:rgba(255,255,255,.14) !important}
+body[data-cleo-ds="v6"]:not(#_) main :is(.table-defilante, table.matrice, .ap-matrice, .atlas-matrice, .atlas-sh6, .atlas-carte-legende, .dt-code, .sc-panneau-demande, .sc-devis, .sc-doc, .sc-invite, .sc-relecteur, .sc-flottant, .radar-fiche, .radar-source, .doc-apercu, .prix-bloc, .fiche-service, .fiche-inclus, .res-carte, .terme-carte, .ig-item, .mc-reponse, .pc-fichier, .texte-chip, .hq-puce-document, .hr-puce, .carte, .cl-demande, .data-chiffres > div, .scene):not(#__):not(#___):not(#____){background-color:#17171A !important;border-color:rgba(255,255,255,.14) !important}
 body[data-cleo-ds="v6"]:not(#_) main :is(table, th, td):not(#__):not(#___):not(#____){border-color:rgba(255,255,255,.14) !important;color:#FFFFFF}
 body[data-cleo-ds="v6"]:not(#_) main :is(thead, tr):not(#__):not(#___):not(#____){background-color:transparent !important}
 body[data-cleo-ds="v6"]:not(#_) main tbody tr:nth-child(even):not(#__):not(#___):not(#____){background-color:rgba(255,255,255,.03) !important}
@@ -236,8 +236,8 @@ body[data-cleo-ds="v6"]:not(#_) main .sy-bouton-blanc svg:not(#__):not(#___):not
 /* 19. La couche typographique force #1A1A1A en !important sur les classes t-* : sur fond noir, les titres étaient gris
    sombre sur noir (mesuré au CDP sur 54-service-evaluation). Tout le texte repasse en blanc, les repères en bleu clair
    (#8C92FF, le bleu que le site utilise déjà sur ses sections sombres ; #0008CF sur noir tombe à 2:1). */
-body[data-cleo-ds="v6"]:not(#_) main :is(h1, h2, h3, h4, .t-hero, .t-titre-page, .t-display, .t-h1, .t-h2, .t-h3, .t-h4, b, strong):not(#__):not(#___):not(#____){color:#FFFFFF !important}
-body[data-cleo-ds="v6"]:not(#_) main :is(.t-body, .t-corps, .t-legende, .t-caption, p, li, dd, dt, figcaption, small, time):not(.ac-index):not(#__):not(#___):not(#____){color:rgba(255,255,255,.72) !important}
+body[data-cleo-ds="v6"]:not(#_) main :is(h1, h2, h3, h4, .t-hero, .t-titre-page, .t-display, .t-h1, .t-h2, .t-h3, .t-h4, b, strong):not(.ac-r1):not(.ac-r2):not(.ac-r3):not(#__):not(#___):not(#____){color:#FFFFFF !important}
+body[data-cleo-ds="v6"]:not(#_) main :is(.t-body, .t-corps, .t-legende, .t-caption, p, li, dd, dt, figcaption, small, time):not(.ac-index):not(.sc-etape):not(.ac-r1):not(.ac-r2):not(.ac-r3):not(#__):not(#___):not(#____){color:rgba(255,255,255,.72) !important}
 body[data-cleo-ds="v6"]:not(#_) main :is([class*="surtitre"], .etiquette, .mu-num, .ra-rang, .dt-numero, .sc-famille, .ap-etat, .marqueur):not(.sy-etiquette):not(#__):not(#___):not(#____){color:#8C92FF !important}
 body[data-cleo-ds="v6"]:not(#_) main :is(.sy-lien, .ac-lien, .dt-lien, .sc-lien, .ra-lien, .res-lien):not(#__):not(#___):not(#____){color:#FFFFFF !important}
 body[data-cleo-ds="v6"]:not(#_) main a:not([class]):not(#__):not(#___):not(#____){color:#8C92FF}
@@ -399,3 +399,177 @@ body[data-cleo-ds="v6"]:not(#_) main :is(.sc-titre, .en-titre):not(#__):not(#___
    page qui n'en a plus nulle part ailleurs. Leurs pages Business alternent le noir et un panneau à peine
    plus clair : on fait pareil. Le bleu reste dans les repères et les liens, jamais en aplat de section. */
 body[data-cleo-ds="v6"]:not(#_) main > section.en-valeurs:not(#__):not(#___):not(#____){background:#17171A !important}
+
+/* ═══ 40. DEUX DÉTAILS QUI FONT « PAS PRO », MESURÉS LE 22/09/2026 ══════════════════════════════════════
+   Naomie : « il y a des détails qui font pas assez pro, pas assez beau, pas assez classe ».
+
+   a) Les ancres tombaient 28 px trop haut. La marge de défilement du site vaut 96 px, or sur les pages
+      qui portent la barre « Aller à » il y a DEUX barres collantes, 124 px en tout : le surtitre de
+      section (« 05 · Par où commencer ») arrivait coupé en deux sous la barre. Mesuré au navigateur,
+      pas à l'œil. On donne la bonne marge aux pages qui ont la barre, et seulement à celles-là. */
+body[data-cleo-ds="v6"]:has(.ac-aller):not(#_) main [id]:not(#__):not(#___):not(#____){scroll-margin-top:148px}
+
+/* b) Dans une rangée de cartes, un titre sur deux lignes et ses voisins sur une seule décalent tout le
+      texte qui suit : les trois cartes ne s'alignent plus. On réserve la hauteur de deux lignes au titre,
+      la carte la plus longue donne la mesure aux autres. */
+body[data-cleo-ds="v6"]:not(#_) main :is(.ac-facons-grille, .ac-besoins-grille) > * h3:not(#__):not(#___):not(#____){min-height:2.4em}
+
+/* ═══ 41. L'ÉVENTAIL D'ENTERPRISE REDEVIENT UNE RANGÉE ══════════════════════════════════════════════════
+   22/09/2026, choix de Naomie parmi les détails relevés. Les quatre cartes « Ce que nous mettons en place »
+   étaient posées en absolu, penchées de -6° à +6°, décalées de 0 à 48 px et superposées : 43 px d'écart
+   mesuré entre les débuts de texte, la première carte coupée au bord gauche, quatre hauteurs de titre.
+   Elles reprennent la grille — même taille, même ligne, même hauteur de texte. La version tablette et
+   téléphone faisait déjà ça, on ne fait que l'étendre au bureau.
+   Leur voile et leur fond étaient au bleu profond #08093B, reste de la zone bleue retirée en §39 : neutres. */
+/* ⚠️ La rangée de quatre n'existe qu'au BUREAU. Posée sans point de rupture, elle écrasait la version
+   mobile de la feuille de page (4 identifiants contre 1 : ma règle gagnait même dans son @media), et la
+   carte restait haute de 380 px alors que son texte en demandait 432 au téléphone : le corps, ancré en
+   bas, débordait par le HAUT et se faisait couper par l'overflow. Le titre disparaissait. Mesuré le
+   22/09/2026 après « le texte s'affiche mais c'est bizarre, on voit rien ». */
+/* Quatre de front SEULEMENT au-dessus de 1180 px. À 1024 (l'iPad en paysage) chaque carte tombait à
+   218 px de large : le titre passait sur deux lignes, le texte remplissait la carte et le voile sombre
+   mangeait la photo — « on voit rien ». Entre 981 et 1180, deux de front, hauteur libre. */
+@media (min-width:1181px){
+  body[data-cleo-ds="v6"]:not(#_) main .en-cartes:not(#__):not(#___):not(#____){display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--e-grille);height:auto;max-width:none}
+  body[data-cleo-ds="v6"]:not(#_) main .en-carte:not(#__):not(#___):not(#____){position:relative;left:auto;top:auto;width:auto;height:380px;rotate:none;background:#17171A}
+}
+@media (min-width:981px) and (max-width:1180px){
+  body[data-cleo-ds="v6"]:not(#_) main .en-cartes:not(#__):not(#___):not(#____){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--e-grille);height:auto;max-width:none}
+  body[data-cleo-ds="v6"]:not(#_) main .en-carte:not(#__):not(#___):not(#____){position:relative;left:auto;top:auto;width:auto;height:auto;min-height:340px;rotate:none;background:#17171A}
+  body[data-cleo-ds="v6"]:not(#_) main .en-carte-corps p:not(#__):not(#___):not(#____){min-height:0}
+}
+/* En dessous, la hauteur suit le texte : une carte ne coupe jamais son propre titre. */
+@media (max-width:980px){
+  body[data-cleo-ds="v6"]:not(#_) main .en-carte:not(#__):not(#___):not(#____){height:auto !important;min-height:340px}
+  body[data-cleo-ds="v6"]:not(#_) main .en-carte-corps p:not(#__):not(#___):not(#____){min-height:0}
+}
+body[data-cleo-ds="v6"]:not(#_) main .en-carte:not(#__):not(#___):not(#____)::after{background:linear-gradient(180deg, rgba(10,10,11,0) 28%, rgba(10,10,11,.66) 60%, rgba(10,10,11,.95) 100%)}
+
+/* ═══ 42. UN SEUL ARRONDI POUR LES SURFACES ═════════════════════════════════════════════════════════════
+   Chaque page mélangeait deux rayons sur des surfaces de même nature : 12 px et 6 px sur l'accueil, et
+   l'inverse ailleurs (le 6 vient de leur page d'accueil blanche, le 12 du registre Business sombre).
+   Les cartes, panneaux, médias et cadres prennent tous 12 px. Restent volontairement à part : les
+   pilules (arrondi complet) et les petites étiquettes. */
+body[data-cleo-ds="v6"]:not(#_) main :is(article, figure, .sy-carte, .ac-carte, .ac-visuel, .ac-media, .ac-app, .en-carte, .dt-carte, .dt-code, .dt-acces-carte, .dt-offre-carte, .sc-panneau, .sy-bento > *, .sy-bento-photo, .sy-chapitre, .sc-comment-image, .en-illustration, .tk-trame):not(#__):not(#___):not(#____){border-radius:12px !important}
+body[data-cleo-ds="v6"]:not(#_) main :is(.sy-etiquette, .sy-surtitre, .etiquette, [class*="pastille"], [class*="pilule"]):not(#__):not(#___):not(#____){border-radius:999px !important}
+/* Le corps de carte est ancré en bas : un texte de deux lignes à côté de textes de trois faisait descendre
+   son titre. On réserve trois lignes, les quatre titres retombent sur la même ligne. */
+body[data-cleo-ds="v6"]:not(#_) main .en-carte-corps p:not(#__):not(#___):not(#____){min-height:calc(3 * 1.45em)}
+
+/* ═══ 43. LA PHRASE QUI SE REMPLIT : GRIS CLAIR, PUIS BLANC ═════════════════════════════════════════════
+   22/09/2026, Naomie : « celle qui affiche "Nous rendons la conformité" : mettre gris clair puis blanc,
+   parce que là c'est pas très clair avant ». Mesuré : les mots pas encore remplis étaient en
+   rgba(20,20,20,.14) — du noir à 14 %, couleur pensée pour le registre CLAIR. Sur fond noir, ils étaient
+   invisibles : la phrase apparaissait par morceaux au lieu de se remplir.
+   Le mot attend maintenant en gris clair lisible, puis passe au blanc. On lit la phrase entière dès
+   qu'elle entre, et on voit quand même la lecture avancer. */
+@keyframes acMot{from{color:#8A8A8F}to{color:#FFFFFF}}
+
+/* ═══ 44. LES QUATRE ÉTAPES DE SERVICE S'ALLUMENT À NOUVEAU ═════════════════════════════════════════════
+   22/09/2026, en révisant les animations à la demande de Naomie. Mesuré : la couleur des quatre étapes
+   de « Comment ça marche » ne bougeait à AUCUN moment de la scène — l'animation était morte, deux fois.
+     1. ses couleurs étaient celles du registre clair (#1A1A1A actif, noir à 42 % en attente) : invisible
+        sur fond noir ;
+     2. et de toute façon mes propres règles la battaient — une animation CSS ne gagne jamais contre un
+        !important. La passe des surfaces (§18) figeait le fond de l'étape en #17171A, la passe
+        typographique (§19) figeait le titre en blanc et le texte à 72 %.
+   .sc-etape sort donc de la liste des surfaces (son fond est animé, ce n'est pas une surface fixe), son
+   titre et son texte suivent la couleur animée du parent, et les trois images-clés repassent au sombre :
+   l'étape attend en blanc à 38 %, s'allume en blanc plein sur un panneau à peine plus clair que le fond. */
+body[data-cleo-ds="v6"]:not(#_) main .sc-etape :is(b, p):not(#__):not(#___):not(#____){color:inherit !important}
+@keyframes scEtape{0%,100%{color:rgba(255,255,255,.52);background-color:rgba(255,255,255,0)}12%,88%{color:#FFFFFF;background-color:#1F1F23}}
+@keyframes scEtapeDebut{0%,88%{color:#FFFFFF;background-color:#1F1F23}100%{color:rgba(255,255,255,.52);background-color:rgba(255,255,255,0)}}
+@keyframes scEtapeFin{0%{color:rgba(255,255,255,.52);background-color:rgba(255,255,255,0)}12%,100%{color:#FFFFFF;background-color:#1F1F23}}
+
+/* ═══ 45. LES ÉTATS DU DOSSIER, EN PASTILLES LISIBLES ═══════════════════════════════════════════════════
+   22/09/2026, Naomie : « 01 la méthode, fais un truc plus visuel ». La fenêtre montrait UNE exigence
+   dépliée ; elle montre maintenant la suite du dossier, trois lignes avec leur état, qui se remplissent
+   l'une après l'autre. Sur fond sombre il faut des valeurs explicites : le color-mix ne donnait aucun
+   fond visible, et le bleu profond #0008CF tombe à 2:1 sur noir (il passe au bleu clair #8C92FF).
+   « Complète » est une pastille blanche pleine : c'est le signal qu'on doit voir de loin. */
+body[data-cleo-ds="v6"]:not(#_) main .ac-suite li:not(#__):not(#___):not(#____){background:rgba(255,255,255,.03)}
+body[data-cleo-ds="v6"]:not(#_) main .ac-suite .ac-etat-ok:not(#__):not(#___):not(#____){color:#0A0A0B !important;background:#FFFFFF !important}
+body[data-cleo-ds="v6"]:not(#_) main .ac-suite .ac-etat-attente:not(#__):not(#___):not(#____){color:#8C92FF !important;background:rgba(140,146,255,.16) !important}
+body[data-cleo-ds="v6"]:not(#_) main .ac-suite .ac-etat-faire:not(#__):not(#___):not(#____){color:rgba(255,255,255,.62) !important;background:transparent !important;box-shadow:inset 0 0 0 1px rgba(255,255,255,.20)}
+
+/* ═══ 46. LA PHRASE NE FAIT PLUS QUE CHANGER DE COULEUR ═════════════════════════════════════════════════
+   22/09/2026, Naomie : « l'animation de "Nous rendons la conformité produit mondiale accessible à toutes
+   les entreprises", c'est pas ouf, on peut l'améliorer ». Mesuré image par image : le mot ne faisait
+   QUE changer de couleur — aucun mouvement, aucune échelle, et onze pas de 2 % sans recouvrement, donc
+   onze sauts au lieu d'une vague.
+   Le mot monte maintenant de 0,1 em en se remplissant, et les plages se recouvrent (6 % au lieu de 2),
+   si bien que trois mots sont en train de se remplir à tout instant. Pas d'opacité : la règle posée le
+   17/09 tient, le remplissage passe par la couleur, jamais par la transparence. */
+@keyframes acMot{from{color:#8A8A8F;translate:0 .1em}to{color:#FFFFFF;translate:0 0}}
+
+/* ═══ 47. LA SCÈNE 01 PART D'UNE IMAGE ══════════════════════════════════════════════════════════════════
+   22/09/2026, Naomie : « en 01 tu peux pas partir d'une image pour l'animation ». La photo de fond avait
+   été retirée du HTML alors que sa règle et son animation existaient toujours (.ac-media-photo, acPhoto).
+   Elle est remise : le laboratoire d'essais jouets, c'est-à-dire le sujet même du dossier montré (un jeu
+   de construction vendu en Europe), pas une image décorative.
+   Mesuré en la remettant : elle ne dépassait que de 40 px autour de la fenêtre, ce qui faisait deux
+   bandes étroites sur les côtés — un défaut, pas une image. Trois gestes :
+     a) la photo a de la place autour de la fenêtre ;
+     b) un voile sombre passe entre la photo et la fenêtre, pour que l'application reste lisible ;
+     c) la fenêtre ARRIVE par-dessus la photo au lieu d'être là d'emblée : on voit d'abord le produit,
+        puis le dossier qui se construit dessus. */
+body[data-cleo-ds="v6"]:not(#_) main .ac-atelier .ac-media:not(#__):not(#___):not(#____){padding:clamp(24px, 4.6vw, 68px);background:#0A0A0B}
+body[data-cleo-ds="v6"]:not(#_) main .ac-media-photo:not(#__):not(#___):not(#____){z-index:0}
+body[data-cleo-ds="v6"]:not(#_) main .ac-atelier .ac-media:not(#__):not(#___):not(#____)::after{
+  content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+  background:linear-gradient(180deg, rgba(10,10,11,.58) 0%, rgba(10,10,11,.74) 100%)}
+body[data-cleo-ds="v6"]:not(#_) main .ac-app:not(#__):not(#___):not(#____){z-index:2}
+
+@media (prefers-reduced-motion: no-preference) and (min-width:1180px){
+  @supports (animation-timeline: view()){
+    /* la fenêtre monte et grandit légèrement sur la photo, juste après l'arrivée de l'atelier */
+    /* ⚠️ Le bloc média fait 876 px de haut pour 776 px visibles sous les deux barres : encadrer la
+       fenêtre par de la marge photo ne se VOIT jamais, on n'en aperçoit que deux bandes sur les côtés.
+       La fenêtre monte donc PAR-DESSUS la photo, qui occupe l'écran au début de la scène (le bloc est
+       en overflow:clip, la fenêtre descendue reste hors champ). On voit le produit, puis le dossier. */
+    body[data-cleo-ds="v6"]:not(#_) main .ac-app:not(#__):not(#___):not(#____){animation:acAppArrive linear both;animation-timeline:--ac-scene;animation-range:contain 0% contain 8%}
+    @keyframes acAppArrive{from{translate:0 64%}to{translate:0 0}}
+    /* la photo est nette au départ, puis s'efface derrière le dossier */
+    body[data-cleo-ds="v6"]:not(#_) main .ac-atelier .ac-media:not(#__):not(#___):not(#____)::after{animation:acVoile linear both;animation-timeline:--ac-scene;animation-range:contain 0% contain 8%}
+    @keyframes acVoile{from{background:linear-gradient(180deg, rgba(10,10,11,.18) 0%, rgba(10,10,11,.32) 100%)}to{background:linear-gradient(180deg, rgba(10,10,11,.58) 0%, rgba(10,10,11,.74) 100%)}}
+  }
+}
+
+/* ═══ 48. LA SCÈNE 01 ÉTAIT MORTE, MESURÉE ET RÉPARÉE ═══════════════════════════════════════════════════
+   22/09/2026, Naomie : « je vais être clair, l'animation en 01 est pas claire ». Troisième fois sur cette
+   scène. Mesuré à douze moments du défilement, au lieu de retoucher encore le texte : les TROIS étapes
+   étaient allumées de 0 % à 100 %, et les cases du dossier étaient déjà remplies dès 0 %. Rien ne se
+   construisait. Le visiteur voyait une phrase se remplir, puis une fenêtre déjà terminée monter.
+   Même cause que sur Service, et c'est la troisième occurrence : une animation CSS ne gagne jamais
+   contre un !important. La passe des surfaces (§3) figeait le fond de l'étape, la passe typographique
+   (§19) figeait le texte des cases, qui doit partir de « transparent » pour que le squelette gris se
+   retire dessus. Les trois sélecteurs les excluent désormais, et les images-clés repassent au sombre :
+   l'étape éteinte est transparente, l'étape allumée est un panneau plus clair avec un filet blanc. */
+@keyframes acEtape{0%,100%{background-color:transparent;box-shadow:0 0 0 1px transparent, 0 18px 40px -24px transparent}12%,88%{background-color:#1F1F23;box-shadow:0 0 0 1px rgba(255,255,255,.14), 0 18px 40px -24px rgba(0,0,0,.8)}}
+@keyframes acEtapeDerniere{0%{background-color:transparent;box-shadow:0 0 0 1px transparent, 0 18px 40px -24px transparent}12%,100%{background-color:#1F1F23;box-shadow:0 0 0 1px rgba(255,255,255,.14), 0 18px 40px -24px rgba(0,0,0,.8)}}
+
+/* ═══ 49. LE SURVOL DU MÉGA-MENU : 16 ENTRÉES SUR 23 DEVENAIENT INVISIBLES ═════════════════════════════
+   23/09/2026, capture de Naomie : « quand on fait passer le curseur, ça fait pas clair ». Mesuré en
+   survolant chaque entrée : texte blanc sur #F9F8F6, contraste 1,06. La feuille du méga-menu peint le
+   survol en crème clair, en dur, et AUCUN de mes contrôles n'avait jamais testé l'état :hover — ils
+   mesuraient tous la page au repos. C'est un angle mort entier, pas un oubli ponctuel. */
+body[data-cleo-ds="v6"]:not(#_) .nav .mega-item:hover:not(#__):not(#___):not(#____),
+body[data-cleo-ds="v6"]:not(#_) .nav .mega-item:focus-visible:not(#__):not(#___):not(#____){background:rgba(255,255,255,.08) !important}
+body[data-cleo-ds="v6"]:not(#_) .nav .mega-item:hover .mega-icone:not(#__):not(#___):not(#____){background:rgba(140,146,255,.20) !important;color:#8C92FF !important}
+body[data-cleo-ds="v6"]:not(#_) .nav .mega-liste a:hover:not(#__):not(#___):not(#____){color:#8C92FF !important}
+body[data-cleo-ds="v6"]:not(#_) .nav .mega-carte:hover:not(#__):not(#___):not(#____){background:rgba(255,255,255,.08) !important}
+/* Le survol de la barre « Aller à » passait au bleu profond #0008CF sur noir : 1,94. Sur fond sombre,
+   le repère bleu est le bleu clair, comme partout ailleurs (§19). Et le bouton clair d'Enterprise
+   gardait un texte bleu nuit sur son fond gris de survol : 2,35. */
+body[data-cleo-ds="v6"]:not(#_) main .ac-aller-liens a:hover:not(#__):not(#___):not(#____){color:#8C92FF !important}
+body[data-cleo-ds="v6"]:not(#_) main .en-bouton:hover:not(#__):not(#___):not(#____){background:#FFFFFF !important;color:#0A0A0B !important}
+body[data-cleo-ds="v6"]:not(#_) main .en-bouton:hover *:not(#__):not(#___):not(#____){color:#0A0A0B !important}
+/* Deux derniers bleus profonds restés sur fond sombre : les mentions « relit » et « Relue » de la scène
+   Service (1,65) et le bouton clair « Voir Enterprise » (2,31). */
+body[data-cleo-ds="v6"]:not(#_) main :is(.sc-relecteur em, .sc-doc-relu .sc-doc-tete em):not(#__):not(#___):not(#____){color:#8C92FF !important}
+body[data-cleo-ds="v6"]:not(#_) main .sc-bouton-clair:hover:not(#__):not(#___):not(#____){background:#FFFFFF !important;color:#0A0A0B !important}
+body[data-cleo-ds="v6"]:not(#_) main .sc-bouton-clair:hover *:not(#__):not(#___):not(#____){color:#0A0A0B !important}
+/* Le bouton « Voir Enterprise » porte .sc-bouton-blanc, pas .sc-bouton-clair : son texte bleu nuit
+   restait sur le gris de survol (2,35). Même traitement, et pour ses enfants. */
+body[data-cleo-ds="v6"]:not(#_) main .sc-bouton-blanc:hover:not(#__):not(#___):not(#____){background:#FFFFFF !important;color:#0A0A0B !important}
+body[data-cleo-ds="v6"]:not(#_) main .sc-bouton-blanc:hover *:not(#__):not(#___):not(#____){color:#0A0A0B !important}

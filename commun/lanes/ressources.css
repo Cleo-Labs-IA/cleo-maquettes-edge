@@ -29,8 +29,8 @@
    (La ligne « 82 caractères » qui figurait ici était une estimation à
    0,39 em par caractère ; la mesure donne 0,47 em sur cette matière.) */
 .article{max-width:580px}
-.article p,.article li{font-size:1.125rem; line-height:1.75}
-.article blockquote p{font-size:1.0625rem}
+.article p,.article li{font-size:1rem; line-height:1.75}
+.article blockquote p{font-size:1rem}
 /* Le bandeau d'un article : le titre a besoin de la largeur, son chapô non. */
 .article-tete{max-width:760px}
 .article-tete .t-body{max-width:500px}
@@ -80,7 +80,7 @@
 /* Les notes de périmètre et de provenance sont du texte suivi, pas des
    légendes : mesurées à 154 caractères par ligne, en 12 px, sur 752 px.
    Elles montent au corps du texte et prennent une mesure. */
-.atlas-note{font-size:0.9375rem; line-height:1.6; max-width:500px}
+.atlas-note{font-size:0.875rem; line-height:1.6; max-width:500px}
 
 /* ── 3. LES TEXTES QUI TOMBAIENT SOUS 14 px SUR TÉLÉPHONE ──
    Relevé à 390 px : .sommaire .titre 12 px, .article .source-citee 12 px,
@@ -231,15 +231,15 @@
    conteneur avant d'y poser la carte s'il s'exécute. */
 .atlas-carte-secours{display:flex; align-items:center; justify-content:center;
   height:100%; margin:0; padding:0 24px; text-align:center;
-  color:var(--c-text-3); font-size:0.9375rem}
+  color:var(--c-text-3); font-size:0.875rem}
 .atlas-carte .leaflet-tooltip,.atlas-carte .leaflet-popup-content{
-  font-family:var(--font); font-size:0.8125rem}
+  font-family:var(--font); font-size:0.875rem}
 .atlas-carte .leaflet-popup-content{margin:8px 10px}
 .atlas-carte .leaflet-popup-content-wrapper{border-radius:var(--r-sm)}
 /* L'attribution Leaflet garde sa taille d'origine : mention légale de
    tuile, pas du contenu de page, elle est exclue de la règle des 14 px
    sur téléphone. */
-.atlas-carte .leaflet-control-attribution{font-size:10px;
+.atlas-carte .leaflet-control-attribution{font-size:0.75rem;
   background:rgba(249,248,246,0.85)}
 /* Le bouton d'activation tactile réutilise .btn (composants.css) ; cette
    règle ne pose que sa place. Caché par défaut : sous 640 px seulement, un

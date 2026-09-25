@@ -1,28 +1,24 @@
 <!--NAV-->
-<!-- ═══ DATA · DEUX API, LEUR USAGE, LEURS TARIFS ═══ 17/09/2026, Naomie : « outputs/cleo-api-offer-pricing.html, nourris-toi
-     de ça pour refaire la partie data ». Ordre repris de la section « Nouvelle landing » de ce document : haut de page, les deux
-     API disponibles, comment l'usage fonctionne, tarifs, preuve et couverture, bientôt disponible. Puis questions et appel final.
-     Matière et composants du site tels quels (sy-hero-photo, sy-chapitre, dt-acces, dt-code, dt-offre, sy-sombre, dt-panneau) :
-     aucune couche commune modifiée, seulement la feuille dt- de Data.
-     Faits, tous tirés du document (snapshot du 17/09/2026, « 46/52 numeric claims checked against source ») :
-     - Legal Data API « API en production » ; promesse vendable reprise telle quelle : documents juridiques traçables provenant
-       des sources incluses dans le contrat. Jamais « tout le corpus est officiel » (corpus mixte, filtre official_only absent).
-     - Customs Classification API « pilote payant » ; promesse : pré-classer le catalogue et isoler les cas à faire valider.
-       Nomenclatures réellement servies par le classifieur : HS6 universel, CN8 (UE), TN VED (Kazakhstan) ; hs8 et hts acceptés
-       par la route mais sans ligne, donc non annoncés.
-     - Exemples curl : « Exemple développeur correct » du document, sans réponse inventée.
-     - Tarifs Starter et Pro, remise annuelle de 20 % : code de cleo-legal-public (PricingCards.tsx), en ligne sur
-       /legal-data/pricing le 17/09. ⚠️ RECOMMANDATIONS du document, PAS encore des conditions actives : Sandbox à 0 € avec
-       200 API units à vie (le site en ligne affiche Free, 3 appels), poids de 100 API units par classification douanière (à
-       coder). ⚠️ À faire avant publication (document, « Avant de publier le nouveau pricing ») : quota Starter réel dans le
-       middleware, Price IDs Stripe de production, droits d'usage.
-     - Preuve : chiffres canon du site, 106 pays, 25 000 réglementations, 19 000 autorités (Naomie, 17/09/2026 : « on va rester
-       sur 106, 25k et 19k parce que c'est repris partout » ; les 64 portails et 44 pays de l'audit official-only ne sont pas
-       affichés). Le total de documents n'est pas affiché non plus. Réponse réelle AU : Therapeutic Goods Act 1989, source
-       legislation_au, portail officiel www.legislation.gov.au (ligne vérifiée de la matrice).
-     - Liens relevés le 17/09 : /legal-data/docs et /legal-data/docs/customs (200), /legal-data/playground (200, onglet Customs
-       lookup), legaldata-public.cleolabs.co/signup (200). ⚠️ Le bouton « Get API key » de www.cleolabs.co/legal-data/pricing
-       pointe vers /signup, qui répond 404 sur www.cleolabs.co. -->
+<!-- ═══ DATA · L'API VENDUE EN DIRECT ═══ 25/09/2026, brief rapports/brief-data-funnel-2509.md (décisions de Naomie du 25/09,
+     « ok tout »). Ordre : haut de page, Customs Classification API (en production), Legal Data API raccourcie, trois portes
+     (#acces, déjà visée par les pages 52 et 53), tarifs, preuve et couverture, bientôt, questions, appel final.
+     Faits et leur source :
+     - Tarifs : Sandbox 0 €, 200 unités à vie, sans carte ; Starter 100 € (80 € à l'année), 100 000 unités/mois, 60 req/min ;
+       Pro 349 € (279 € à l'année), 1 000 000/mois, 300/min ; Enterprise sur devis. Décision du 25/09. ⚠️ Le 25/09 à 16 h, le
+       portail legaldata-public affiche encore « Free, 3 API calls total » sur /pricing et « 3 free calls » sur /signup.
+       Support le jour même et appel d'onboarding du Pro : repris du /pricing du portail le 25/09.
+     - Requête et réponse du T-shirt : capture réelle du 25/09/2026 (scratchpad docs-examples/classify-tshirt-fr-facts.json),
+       corps réel, réponse tronquée sans rien réécrire (status ambiguous, 610910 à 0,95, Chapter 61 Additional Note 2,
+       61091000 cn8 EU à 0,92).
+     - 112 pays sur 249 à la ligne nationale, 26 nomenclatures : GET /v2/customs/coverage/countries relevé le 25/09
+       (112 « national », 137 « hs6_only », 26 systèmes distincts) ; mêmes chiffres dans /docs/customs.
+     - Lots de 2 000 articles, webhooks, retour CSV : /docs/customs le 25/09. Le connecteur Shopify y est dit « pas encore testé
+       sur une boutique Shopify réelle » : d'où « retour CSV et Shopify après votre validation ».
+     - Playground : « 30 free calls left today on this IP » sur /playground?tab=classify, le 25/09.
+     - L'ancre #request-weight n'existe pas sur /pricing (elle vit sur /docs/customs) : le lien va donc sur /pricing, qui
+       porte les lignes « Request weight ».
+     - Preuve Legal Data : 106 pays, 25 000 réglementations, 19 000 autorités, inchangés (Naomie, 17/09/2026).
+     La section « usage » (poids de 100 unités par classification, jamais codé) reste retirée : une requête vaut une unité. -->
 <section class="section sy-hero-photo" id="haut">
   <div class="conteneur">
     <figure class="sy-chapitre sy-chapitre-hero">
@@ -30,35 +26,72 @@
       <figcaption class="sy-chapitre-texte">
         <p class="sy-etiquette">Data</p>
         <h1>Donnée juridique traçable, classification douanière expliquée.</h1>
-        <p class="sy-chapitre-lead">Deux API pour votre produit : la donnée juridique avec sa source, et la pré-classification douanière de votre catalogue.</p>
-        <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://legaldata-public.cleolabs.co/signup">Obtenir une clé API</a><a class="sy-bouton-blanc" href="https://www.cleolabs.co/legal-data/docs">Voir la documentation</a></div>
+        <p class="sy-chapitre-lead">Deux API pour votre produit : le classement douanier avec sa preuve citée, et la donnée juridique avec sa source. Testez-les sans compte, puis prenez une clé sandbox gratuite.</p>
+        <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://legaldata-public.cleolabs.co/signup">Obtenir ma clé sandbox</a><a class="sy-bouton-blanc" href="https://legaldata-public.cleolabs.co/playground?tab=classify">Tester sans compte</a></div>
       </figcaption>
     </figure>
   </div>
 </section>
 
-<!-- ═══ ALLER À ═══ 18/09/2026 : la barre d'ancres de l'accueil, posée sur les pages d'offre. Leur site fait pareil :
-     on voit le plan de la page sans défiler. Composant repris tel quel (.ac-aller), portée de la règle élargie. -->
+<!-- ═══ ALLER À ═══ 18/09/2026 : la barre d'ancres de l'accueil, posée sur les pages d'offre. -->
 <nav class="ac-aller" aria-label="Accès rapide à la page">
-  <div class="conteneur ac-aller-liens"><span>Aller à</span><a href="#disponible">Les API</a><a href="#usage">L'usage</a><a href="#tarifs">Les prix</a><a href="#couverture">La couverture</a></div>
+  <div class="conteneur ac-aller-liens"><span>Aller à</span><a href="#disponible">Les API</a><a href="#acces">L'accès</a><a href="#tarifs">Les prix</a><a href="#couverture">La couverture</a></div>
 </nav>
 
-<!-- ═══ DISPONIBLE MAINTENANT ═══ Deux cartes : entrée, sortie, exemple (document, « Available now »). -->
-<section class="section dt-acces-section" id="disponible">
+<!-- ═══ CUSTOMS CLASSIFICATION API ═══ -->
+<section class="section dt-acces-section dt-douane-section" id="disponible">
   <div class="conteneur">
-    <div class="sy-entete" data-apparait>
-      <p class="sy-surtitre">01 · Disponible maintenant</p>
-      <h2>Deux API à intégrer aujourd'hui</h2>
-      <p class="sy-lead">La donnée juridique et sa provenance pour les logiciels juridiques et de conformité. La pré-classification douanière pour les catalogues produits.</p>
+    <div class="dt-duo dt-douane" id="classification">
+      <div class="dt-douane-texte" data-apparait>
+        <p class="sy-surtitre">01 · Customs Classification API · En production</p>
+        <h2>Un titre produit n'est pas une déclaration en douane. Faites-en un dossier de classement.</h2>
+        <p class="sy-lead">Envoyez les faits dont vous disposez. Cleo demande ceux qui décident du code, cite les notes et garde le dossier que signe votre commissionnaire.</p>
+        <dl class="dt-es">
+          <div><dt>Vous envoyez</dt><dd>un produit, les faits connus, le pays et la date</dd></div>
+          <div><dt>Cleo renvoie</dt><dd>les questions manquantes, ou des candidats jusqu'à la ligne nationale avec leur preuve citée, et un dossier JSON ou PDF</dd></div>
+          <div><dt>Pour</dt><dd>éditeurs ERP et TMS, e-commerce, PIM, 3PL, commissionnaires en douane</dd></div>
+        </dl>
+        <ul class="dt-liste"><li>112 pays sur 249 à la ligne nationale, 26 nomenclatures</li><li>Lots de 2 000 articles, webhooks, retour CSV et Shopify après votre validation</li><li>Des candidats à faire valider, jamais un classement opposable</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/playground?tab=classify">Tester sans compte</a><a class="sy-bouton-secondaire" href="https://legaldata-public.cleolabs.co/docs/customs">Documentation</a></div>
+      </div>
+      <div class="dt-douane-code" data-apparait>
+        <div class="dt-code" aria-label="Exemple de requête"><p class="dt-code-tete"><span>POST /v2/customs/classifications</span></p><pre><code>{
+  "item_id": "SKU-TS-100",
+  "description": "T-shirt en coton, maille (tricoté), 100 % coton, pour hommes",
+  "country": "FR",
+  "facts": {
+    "process": "knitted",
+    "composition": [{ "material": "cotton", "percent": 100 }],
+    "audience": "men"
+  }
+}</code></pre></div>
+        <div class="dt-code" aria-label="Exemple de réponse, tronquée"><p class="dt-code-tete"><span>200 · réponse, tronquée</span></p><pre><code>{
+  "status": "ambiguous",
+  "questions": [],
+  "candidates": [
+    {
+      "code": "610910",
+      "system": "hs6",
+      "confidence": 0.95,
+      "evidence": [{
+        "kind": "additional_note",
+        "ref": "Chapter 61 Additional Note 2"
+      }]
+    },
+    { "code": "61091000", "system": "cn8",
+      "country": "EU", "confidence": 0.92 },
+    …
+  ]
+}</code></pre></div>
+        <p class="dt-code-note">Réponse réelle, relevée le 25 septembre 2026</p>
+      </div>
     </div>
-    <div class="dt-acces" data-apparait>
-      <article class="sy-carte dt-acces-carte" id="legal-data">
-        <p class="sy-surtitre">En production</p>
+
+    <article class="sy-carte dt-acces-carte dt-acces-large" id="legal-data" data-apparait>
+      <div class="dt-acces-large-texte">
+        <p class="sy-surtitre">En production aussi</p>
         <h3>Legal Data API</h3>
         <p class="dt-acces-texte">Chercher, lister, lire, citer et suivre des documents juridiques traçables, provenant des sources incluses dans votre contrat.</p>
-        <div class="dt-code" aria-label="Exemple de requête"><p class="dt-code-tete"><span>GET /v2/search</span></p><pre><code>GET /v2/search?q=product+safety&amp;country=AU&amp;type=legislation
-Host: api.legaldata.cleolabs.co
-Authorization: Bearer $CLEO_API_KEY</code></pre></div>
         <details class="dt-plus">
           <summary>Entrées, sorties et couverture<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
           <dl class="dt-es">
@@ -68,73 +101,75 @@ Authorization: Bearer $CLEO_API_KEY</code></pre></div>
         </dl>
           <ul class="dt-liste"><li>Législation, jurisprudence, lignes directrices, sanctions, rappels, traités</li><li>Historique, amendements et journal des changements</li><li>REST, OpenAPI et serveur MCP</li></ul>
         </details>
-        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/signup">Obtenir une clé API</a><a class="sy-bouton-secondaire" href="https://www.cleolabs.co/legal-data/docs">Documentation</a></div>
-      </article>
-      <article class="sy-carte dt-acces-carte" id="classification">
-        <p class="sy-surtitre">Pilote</p>
-        <h3>Customs Classification API</h3>
-        <p class="dt-acces-texte">Une description produit devient des codes douaniers candidats, expliqués, pour pré-classer votre catalogue et isoler les cas à faire valider.</p>
-        <div class="dt-code" aria-label="Exemple de requête"><p class="dt-code-tete"><span>GET /v2/customs/lookup</span></p><pre><code>GET /v2/customs/lookup?description=cotton+t-shirt&amp;system=cn8&amp;top=5
+        <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="https://legaldata-public.cleolabs.co/docs">Documentation</a></div>
+      </div>
+      <div class="dt-code" aria-label="Exemple de requête"><p class="dt-code-tete"><span>GET /v2/search</span></p><pre><code>GET /v2/search?q=product+safety&amp;country=AU&amp;type=legislation
 Host: api.legaldata.cleolabs.co
 Authorization: Bearer $CLEO_API_KEY</code></pre></div>
-        <details class="dt-plus">
-          <summary>Entrées, sorties et couverture<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-          <dl class="dt-es">
-          <div><dt>Vous envoyez</dt><dd>une description produit, puis le pays, la langue et la nomenclature</dd></div>
-          <div><dt>Cleo renvoie</dt><dd>des candidats avec code, nomenclature, chapitre, niveau de confiance, justification et indicateur d'ambiguïté</dd></div>
-          <div><dt>Pour</dt><dd>e-commerce, marketplaces, PIM, PLM, ERP, équipes import-export et commissionnaires</dd></div>
-        </dl>
-          <ul class="dt-liste"><li>Nomenclatures servies : HS6, NC8 de l'Union européenne, TN VED du Kazakhstan</li><li>Pays couverts annoncés avant le contrat</li><li>Des candidats à faire valider, jamais un classement opposable</li></ul>
-        </details>
-        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://www.cleolabs.co/legal-data/playground">Tester la classification</a><a class="sy-bouton-secondaire" href="https://www.cleolabs.co/legal-data/docs/customs">Documentation</a></div>
+    </article>
+  </div>
+</section>
+
+<!-- ═══ TROIS PORTES ═══ -->
+<section class="section dt-piliers-section" id="acces">
+  <div class="conteneur">
+    <div class="sy-entete" data-apparait>
+      <p class="sy-surtitre">02 · Accès</p>
+      <h2>Trois portes, du premier appel à la production</h2>
+      <p class="sy-lead">Commencez sans compte. Payez quand votre intégration est prête à partir.</p>
+    </div>
+    <div class="dt-piliers dt-portes" data-apparait>
+      <article class="sy-carte-blanche dt-pilier">
+        <span class="dt-numero">1</span>
+        <h3>Tester sans compte</h3>
+        <p>De vraies réponses dans le playground, 30 appels par jour, sans inscription.</p>
+        <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="https://legaldata-public.cleolabs.co/playground?tab=classify">Ouvrir le playground</a></div>
+      </article>
+      <article class="sy-carte-blanche dt-pilier">
+        <span class="dt-numero">2</span>
+        <h3>Une clé sandbox en 30 secondes</h3>
+        <p>200 unités pour appeler tous les endpoints, sans carte bancaire.</p>
+        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/signup">Obtenir ma clé sandbox</a></div>
+      </article>
+      <article class="sy-carte-blanche dt-pilier">
+        <span class="dt-numero">3</span>
+        <h3>Payer et passer en production</h3>
+        <p>Starter ou Pro au mois ou à l'année, Enterprise sur devis.</p>
+        <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="#tarifs">Voir les tarifs</a></div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ═══ COMMENT L'USAGE FONCTIONNE ═══ Document : « Une clé. Un wallet. Des unités pondérées. » Poids 1, N et 5 : codés
-     (enforce-quota.ts, compliance-check.ts). ⚠️ Poids 100 de la classification : recommandation, à coder avant publication. -->
-<section class="section dt-usage-section" id="usage">
-  <div class="conteneur">
-    <div class="sy-entete" data-apparait><p class="sy-surtitre">Usage</p><h2>Une clé, un volume mensuel, un barème public</h2><p class="sy-lead">Chaque appel consomme des API units. Voici ce que coûte chaque opération.</p></div>
-    <ol class="dt-usage" data-apparait>
-      <li><b>1</b><span>API unit</span><p>Une recherche ou une lecture de document Legal Data</p></li>
-      <li><b>N</b><span>API units</span><p>Une opération groupée : une unité par requête ou par identifiant traité</p></li>
-      <li><b>5</b><span>API units</span><p>Un contrôle composite de conformité</p></li>
-      <li><b>100</b><span>API units</span><p>Une classification douanière</p></li>
-    </ol>
-  </div>
-</section>
-
-<!-- ═══ TARIFS ═══ Sandbox, Starter, Pro, Enterprise. Aucun produit futur dans ces cartes (document). -->
+<!-- ═══ TARIFS ═══ -->
 <section class="section dt-offre-section" id="tarifs">
   <div class="conteneur">
     <div class="sy-entete" data-apparait>
-      <p class="sy-surtitre">02 · Tarifs</p>
+      <p class="sy-surtitre">03 · Tarifs</p>
       <h2>Commencer gratuitement, passer en production quand vous êtes prêt</h2>
       <p class="sy-lead">Les mêmes données et les mêmes endpoints dans chaque offre. Seul le volume change.</p>
     </div>
     <div class="dt-tarifs" data-apparait>
       <article class="sy-carte dt-offre-carte dt-tarif">
         <p class="sy-surtitre">Sandbox</p>
-        <p class="dt-offre-grand">0 €</p>
-        <p class="dt-offre-texte">Tester l'intégration, sans carte bancaire.</p>
-        <ul class="dt-liste"><li>200 API units à vie</li><li>Mêmes endpoints, débit limité</li><li>Usage de test</li></ul>
-        <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="https://legaldata-public.cleolabs.co/signup">Obtenir une clé API</a></div>
+        <p class="dt-offre-grand">0 €</p>
+        <p class="dt-offre-texte">Tester votre intégration sur tous les endpoints, sans carte bancaire.</p>
+        <ul class="dt-liste"><li>200 unités, à vie</li><li>Tous les endpoints</li><li>Sans carte bancaire</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="https://legaldata-public.cleolabs.co/signup">Obtenir ma clé sandbox</a></div>
       </article>
       <article class="sy-carte dt-offre-carte dt-tarif">
         <p class="sy-surtitre">Starter</p>
-        <p class="dt-offre-grand">100 €<small>/mois</small></p>
-        <p class="dt-offre-texte">Construire un premier produit et démarrer en production. 80 € par mois en annuel, soit 960 € par an.</p>
-        <ul class="dt-liste"><li>100 000 API units par mois</li><li>Mêmes données et mêmes endpoints</li><li>Soit 1 000 classifications douanières par mois</li></ul>
-        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/signup">Choisir Starter</a></div>
+        <p class="dt-offre-grand">100 €<small>/mois</small></p>
+        <p class="dt-offre-texte">Construire un premier produit et démarrer en production. 80 € par mois en annuel.</p>
+        <ul class="dt-liste"><li>100 000 unités par mois</li><li>60 requêtes par minute</li><li>Mêmes données et mêmes endpoints</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/buy/starter?cadence=monthly">Choisir Starter</a></div>
       </article>
       <article class="sy-carte dt-offre-carte dt-tarif">
         <p class="sy-surtitre">Pro</p>
-        <p class="dt-offre-grand">349 €<small>/mois</small></p>
-        <p class="dt-offre-texte">Faire tourner un produit client à volume supérieur. 279 € par mois en annuel, soit 3 348 € par an.</p>
-        <ul class="dt-liste"><li>1 000 000 API units par mois</li><li>Accompagnement à l'intégration</li><li>20 % de remise en facturation annuelle</li></ul>
-        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/signup">Choisir Pro</a></div>
+        <p class="dt-offre-grand">349 €<small>/mois</small></p>
+        <p class="dt-offre-texte">Faire tourner un produit client à volume supérieur. 279 € par mois en annuel.</p>
+        <ul class="dt-liste"><li>1 000 000 unités par mois</li><li>300 requêtes par minute</li><li>Support le jour même et appel d'onboarding</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/buy/pro?cadence=monthly">Choisir Pro</a></div>
       </article>
       <article class="sy-carte dt-offre-carte dt-tarif">
         <p class="sy-surtitre">Enterprise</p>
@@ -144,6 +179,7 @@ Authorization: Bearer $CLEO_API_KEY</code></pre></div>
         <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contacter l'équipe</a></div>
       </article>
     </div>
+    <p class="dt-renvoi">Une unité par requête ; un kit ou un lot pèse davantage. <a class="sy-lien dt-lien" href="https://legaldata-public.cleolabs.co/pricing">Voir le poids des requêtes <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
   </div>
 </section>
 
@@ -153,7 +189,8 @@ Authorization: Bearer $CLEO_API_KEY</code></pre></div>
     <div class="dt-trace-texte">
       <h2>Chaque document garde sa source</h2>
       <p class="sy-lead">Chaque résultat renvoie son identifiant, sa source et l'URL du portail d'origine.</p>
-      <ul class="sy-chiffres dt-preuve-chiffres"><li><b>106</b><span>pays suivis</span></li><li><b>25 000</b><span>réglementations cartographiées</span></li><li><b>19 000</b><span>autorités réglementaires suivies</span></li></ul>
+      <ul class="sy-chiffres dt-preuve-chiffres"><li><b>106</b><span>pays suivis</span></li><li><b>25 000</b><span>réglementations cartographiées</span></li><li><b>19 000</b><span>autorités réglementaires suivies</span></li></ul>
+      <p class="dt-trace-note">Douane : 112 territoires sur 249 à la ligne nationale, mesuré le 25 septembre 2026.</p>
       <div class="sy-actions dt-actions"><a class="sy-bouton-blanc" href="26-legal-data.html">Explorer la couverture</a></div>
     </div>
     <div class="dt-panneau" aria-hidden="true" data-apparait>
@@ -178,49 +215,53 @@ Authorization: Bearer $CLEO_API_KEY</code></pre></div>
       <article class="sy-carte-blanche dt-pilier">
         <p class="sy-surtitre">Bientôt</p>
         <h3>Product Scope</h3>
-        <p>Pour un produit, son usage et son marché : les textes, obligations, preuves et restrictions qui s'appliquent, et pourquoi.</p>
-        <ul class="dt-liste"><li>Pour les PLM, PIM, marques et fabricants</li><li>Entrée : produit, matériaux, usage, marché</li><li>Sortie : règles, obligations, preuves et sources</li></ul>
+        <p>Pour un produit, son usage et son marché : les textes, obligations, preuves et restrictions qui s'appliquent, et pourquoi.</p>
+        <ul class="dt-liste"><li>Pour les PLM, PIM, marques et fabricants</li><li>Entrée : produit, matériaux, usage, marché</li><li>Sortie : règles, obligations, preuves et sources</li></ul>
         <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Devenir design partner</a></div>
       </article>
       <article class="sy-carte-blanche dt-pilier">
         <p class="sy-surtitre">Bientôt</p>
         <h3>Marketplace Gate</h3>
         <p>Une fiche produit, son vendeur et leurs justificatifs, vérifiés avant la mise en ligne.</p>
-        <ul class="dt-liste"><li>Pour les marketplaces et l'onboarding vendeur</li><li>Entrée : produit, vendeur, pays, pièces justificatives</li><li>Sortie : publier, corriger ou revoir, avec les motifs</li></ul>
+        <ul class="dt-liste"><li>Pour les marketplaces et l'onboarding vendeur</li><li>Entrée : produit, vendeur, pays, pièces justificatives</li><li>Sortie : publier, corriger ou revoir, avec les motifs</li></ul>
         <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Devenir design partner</a></div>
       </article>
     </div>
   </div>
 </section>
 
-<!-- ═══ QUESTIONS FRÉQUENTES ═══ Réponses tirées du document (promesses, limites à annoncer, tarifs). -->
+<!-- ═══ QUESTIONS FRÉQUENTES ═══ -->
 <section class="section dt-questions-section" id="questions">
   <div class="conteneur">
     <div class="sy-entete"><p class="sy-surtitre">Data</p><h2>Questions fréquentes</h2></div>
     <div class="faq dt-faq" data-schema="faq">
       <details open>
-        <summary>Quelle API choisir ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <summary>Quelle API choisir ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
         <div class="reponse">Legal Data API si votre logiciel cherche, lit ou cite des documents juridiques. Customs Classification API si votre logiciel doit proposer un code douanier à partir d'une description produit.</div>
       </details>
       <details>
-        <summary>Les codes douaniers renvoyés sont-ils définitifs ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <summary>Les codes douaniers renvoyés sont-ils définitifs ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
         <div class="reponse">Ce sont des candidats expliqués, avec leur niveau de confiance et un indicateur d'ambiguïté. Votre équipe ou votre commissionnaire valide le code avant la déclaration.</div>
       </details>
       <details>
-        <summary>D'où viennent les documents de Legal Data API ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <summary>Que puis-je tester dans le sandbox ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Tous les endpoints, dans la limite de 200 unités. Après l'inscription, votre tableau de bord liste chaque endpoint et ce qu'il coûte. <a href="https://legaldata-public.cleolabs.co/signup">Obtenir ma clé sandbox</a>.</div>
+      </details>
+      <details>
+        <summary>D'où viennent les documents de Legal Data API ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
         <div class="reponse">Chaque document indique sa source et l'URL du portail d'origine. Les sources incluses dans votre accès sont nommées dans votre contrat. <a href="26-legal-data.html">Explorez la couverture</a>.</div>
       </details>
       <details>
-        <summary>Combien coûte l'accès ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">Sandbox gratuit pour tester, Starter à 100 € par mois, Pro à 349 € par mois, Enterprise sur devis. <a href="#tarifs">Voir les tarifs</a>.</div>
+        <summary>Combien coûte l'accès ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Un Sandbox gratuit avec 200 unités, Starter à 100 € par mois, Pro à 349 € par mois, Enterprise sur devis. <a href="#tarifs">Voir les tarifs</a>.</div>
       </details>
       <details>
-        <summary>Peut-on utiliser Legal Data dans un assistant IA ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <summary>Peut-on utiliser Legal Data dans un assistant IA ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
         <div class="reponse">Oui, avec <a href="52-data-mcp.html">le serveur MCP</a>, la même clé que l'API.</div>
       </details>
       <details>
-        <summary>Quand arrivent Product Scope et Marketplace Gate ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">Pour les utiliser en premier, devenez design partner : <a href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">écrivez à l'équipe</a> avec votre cas d'usage.</div>
+        <summary>Quand arrivent Product Scope et Marketplace Gate ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Pour les utiliser en premier, devenez design partner : <a href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">écrivez à l'équipe</a> avec votre cas d'usage.</div>
       </details>
     </div>
   </div>
@@ -233,7 +274,7 @@ Authorization: Bearer $CLEO_API_KEY</code></pre></div>
     <div class="sy-final-texte">
       <h2>Branchez Cleo à votre produit</h2>
       <p>Une clé, la documentation, et l'équipe pour les sources et les pays dont vous avez besoin.</p>
-      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://legaldata-public.cleolabs.co/signup">Obtenir une clé API</a><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contacter l'équipe</a></div>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://legaldata-public.cleolabs.co/signup">Obtenir ma clé sandbox</a><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contacter l'équipe</a></div>
     </div>
   </figure>
 </section>

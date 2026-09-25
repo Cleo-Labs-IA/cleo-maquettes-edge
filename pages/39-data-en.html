@@ -1,8 +1,6 @@
 <!--NAV-->
-<!-- ═══ DATA · TWO APIS, USAGE, PRICING ═══ 17/09/2026, jumeau anglais de 39-data.html (même structure, mêmes faits et mêmes
-     réserves, voir le commentaire de la page FR). Titre du haut de page : « Traceable legal data and explainable customs
-     classification, ready for your product. », repris tel quel de outputs/cleo-api-offer-pricing.html (« Nouvelle landing »).
-     ⚠️ Sandbox 200 API units et poids de 100 API units par classification : recommandations du document, pas encore codées. -->
+<!-- ═══ DATA · THE API SOLD DIRECTLY ═══ 25/09/2026, jumeau anglais de 39-data.html (même structure, mêmes faits et mêmes
+     réserves, voir le commentaire de la page FR). Brief : rapports/brief-data-funnel-2509.md. -->
 <section class="section sy-hero-photo" id="haut">
   <div class="conteneur">
     <figure class="sy-chapitre sy-chapitre-hero">
@@ -10,35 +8,72 @@
       <figcaption class="sy-chapitre-texte">
         <p class="sy-etiquette">Data</p>
         <h1>Traceable legal data, explainable customs classification.</h1>
-        <p class="sy-chapitre-lead">Two APIs for your product: legal data with its source, and customs pre-classification for your catalogue.</p>
-        <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://legaldata-public.cleolabs.co/signup">Get API key</a><a class="sy-bouton-blanc" href="https://www.cleolabs.co/legal-data/docs">View docs</a></div>
+        <p class="sy-chapitre-lead">Two APIs for your product: customs classification with its cited evidence, and legal data with its source. Try them without an account, then get a free sandbox key.</p>
+        <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://legaldata-public.cleolabs.co/signup">Get my sandbox key</a><a class="sy-bouton-blanc" href="https://legaldata-public.cleolabs.co/playground?tab=classify">Try it without an account</a></div>
       </figcaption>
     </figure>
   </div>
 </section>
 
-<!-- ═══ ALLER À ═══ 18/09/2026 : la barre d'ancres de l'accueil, posée sur les pages d'offre. Leur site fait pareil :
-     on voit le plan de la page sans défiler. Composant repris tel quel (.ac-aller), portée de la règle élargie. -->
+<!-- ═══ ALLER À ═══ 18/09/2026 : la barre d'ancres de l'accueil, posée sur les pages d'offre. -->
 <nav class="ac-aller" aria-label="Jump to a section">
-  <div class="conteneur ac-aller-liens"><span>Go to</span><a href="#disponible">The APIs</a><a href="#usage">Usage</a><a href="#tarifs">Pricing</a><a href="#couverture">Coverage</a></div>
+  <div class="conteneur ac-aller-liens"><span>Go to</span><a href="#disponible">The APIs</a><a href="#acces">Access</a><a href="#tarifs">Pricing</a><a href="#couverture">Coverage</a></div>
 </nav>
 
-<!-- ═══ AVAILABLE NOW ═══ -->
-<section class="section dt-acces-section" id="disponible">
+<!-- ═══ CUSTOMS CLASSIFICATION API ═══ -->
+<section class="section dt-acces-section dt-douane-section" id="disponible">
   <div class="conteneur">
-    <div class="sy-entete" data-apparait>
-      <p class="sy-surtitre">01 · Available now</p>
-      <h2>Two APIs to integrate today</h2>
-      <p class="sy-lead">Legal data and its provenance for legal and compliance software. Customs pre-classification for product catalogues.</p>
+    <div class="dt-duo dt-douane" id="classification">
+      <div class="dt-douane-texte" data-apparait>
+        <p class="sy-surtitre">01 · Customs Classification API · In production</p>
+        <h2>A product title is not a customs declaration. Turn it into a classification dossier.</h2>
+        <p class="sy-lead">Send the facts you have. Cleo asks for the ones that decide the code, cites the notes, and keeps the dossier your broker signs.</p>
+        <dl class="dt-es">
+          <div><dt>You send</dt><dd>a product, the facts you know, the country and the date</dd></div>
+          <div><dt>Cleo returns</dt><dd>the missing questions, or candidates down to the national line with cited evidence, and a JSON or PDF dossier</dd></div>
+          <div><dt>For</dt><dd>ERP and TMS vendors, e-commerce, PIM, 3PL, customs brokers</dd></div>
+        </dl>
+        <ul class="dt-liste"><li>112 countries at the national line out of 249, 26 nomenclatures</li><li>Batches of 2,000 items, webhooks, CSV and Shopify write-back after your review</li><li>Candidates to validate, never a binding ruling</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/playground?tab=classify">Try it without an account</a><a class="sy-bouton-secondaire" href="https://legaldata-public.cleolabs.co/docs/customs">Docs</a></div>
+      </div>
+      <div class="dt-douane-code" data-apparait>
+        <div class="dt-code" aria-label="Request example"><p class="dt-code-tete"><span>POST /v2/customs/classifications</span></p><pre><code>{
+  "item_id": "SKU-TS-100",
+  "description": "T-shirt en coton, maille (tricoté), 100 % coton, pour hommes",
+  "country": "FR",
+  "facts": {
+    "process": "knitted",
+    "composition": [{ "material": "cotton", "percent": 100 }],
+    "audience": "men"
+  }
+}</code></pre></div>
+        <div class="dt-code" aria-label="Response example, truncated"><p class="dt-code-tete"><span>200 · response, truncated</span></p><pre><code>{
+  "status": "ambiguous",
+  "questions": [],
+  "candidates": [
+    {
+      "code": "610910",
+      "system": "hs6",
+      "confidence": 0.95,
+      "evidence": [{
+        "kind": "additional_note",
+        "ref": "Chapter 61 Additional Note 2"
+      }]
+    },
+    { "code": "61091000", "system": "cn8",
+      "country": "EU", "confidence": 0.92 },
+    …
+  ]
+}</code></pre></div>
+        <p class="dt-code-note">Real response, recorded on 25 September 2026</p>
+      </div>
     </div>
-    <div class="dt-acces" data-apparait>
-      <article class="sy-carte dt-acces-carte" id="legal-data">
-        <p class="sy-surtitre">In production</p>
+
+    <article class="sy-carte dt-acces-carte dt-acces-large" id="legal-data" data-apparait>
+      <div class="dt-acces-large-texte">
+        <p class="sy-surtitre">Also in production</p>
         <h3>Legal Data API</h3>
         <p class="dt-acces-texte">Search, list, read, cite and monitor traceable legal documents from the sources included in your contract.</p>
-        <div class="dt-code" aria-label="Request example"><p class="dt-code-tete"><span>GET /v2/search</span></p><pre><code>GET /v2/search?q=product+safety&amp;country=AU&amp;type=legislation
-Host: api.legaldata.cleolabs.co
-Authorization: Bearer $CLEO_API_KEY</code></pre></div>
         <details class="dt-plus">
           <summary>Inputs, outputs and coverage<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
           <dl class="dt-es">
@@ -48,40 +83,43 @@ Authorization: Bearer $CLEO_API_KEY</code></pre></div>
         </dl>
           <ul class="dt-liste"><li>Legislation, case law, guidelines, sanctions, recalls, treaties</li><li>History, amendments and change log</li><li>REST, OpenAPI and MCP server</li></ul>
         </details>
-        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/signup">Get API key</a><a class="sy-bouton-secondaire" href="https://www.cleolabs.co/legal-data/docs">Docs</a></div>
-      </article>
-      <article class="sy-carte dt-acces-carte" id="classification">
-        <p class="sy-surtitre">Pilot</p>
-        <h3>Customs Classification API</h3>
-        <p class="dt-acces-texte">A product description becomes explained candidate customs codes, so you can pre-classify your catalogue and isolate the cases to validate.</p>
-        <div class="dt-code" aria-label="Request example"><p class="dt-code-tete"><span>GET /v2/customs/lookup</span></p><pre><code>GET /v2/customs/lookup?description=cotton+t-shirt&amp;system=cn8&amp;top=5
+        <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="https://legaldata-public.cleolabs.co/docs">Docs</a></div>
+      </div>
+      <div class="dt-code" aria-label="Request example"><p class="dt-code-tete"><span>GET /v2/search</span></p><pre><code>GET /v2/search?q=product+safety&amp;country=AU&amp;type=legislation
 Host: api.legaldata.cleolabs.co
 Authorization: Bearer $CLEO_API_KEY</code></pre></div>
-        <details class="dt-plus">
-          <summary>Inputs, outputs and coverage<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-          <dl class="dt-es">
-          <div><dt>You send</dt><dd>a product description, then country, language and nomenclature</dd></div>
-          <div><dt>Cleo returns</dt><dd>candidates with code, nomenclature, chapter, confidence level, rationale and an ambiguity flag</dd></div>
-          <div><dt>For</dt><dd>e-commerce, marketplaces, PIM, PLM, ERP, import-export teams and customs brokers</dd></div>
-        </dl>
-          <ul class="dt-liste"><li>Nomenclatures served: HS6, EU CN8, Kazakhstan TN VED</li><li>Covered countries confirmed before the contract</li><li>Candidates to validate, never a binding ruling</li></ul>
-        </details>
-        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://www.cleolabs.co/legal-data/playground">Try classification</a><a class="sy-bouton-secondaire" href="https://www.cleolabs.co/legal-data/docs/customs">Docs</a></div>
-      </article>
-    </div>
+    </article>
   </div>
 </section>
 
-<!-- ═══ HOW USAGE WORKS ═══ -->
-<section class="section dt-usage-section" id="usage">
+<!-- ═══ THREE WAYS IN ═══ -->
+<section class="section dt-piliers-section" id="acces">
   <div class="conteneur">
-    <div class="sy-entete" data-apparait><p class="sy-surtitre">Usage</p><h2>One key, a monthly volume, a public rate card</h2><p class="sy-lead">Every call uses API units. Here is what each operation costs.</p></div>
-    <ol class="dt-usage" data-apparait>
-      <li><b>1</b><span>API unit</span><p>A Legal Data search or document read</p></li>
-      <li><b>N</b><span>API units</span><p>A bulk operation: one unit per query or identifier processed</p></li>
-      <li><b>5</b><span>API units</span><p>A composite compliance check</p></li>
-      <li><b>100</b><span>API units</span><p>A customs classification</p></li>
-    </ol>
+    <div class="sy-entete" data-apparait>
+      <p class="sy-surtitre">02 · Access</p>
+      <h2>Three ways in, from the first call to production</h2>
+      <p class="sy-lead">Start without an account. Pay when your integration is ready to ship.</p>
+    </div>
+    <div class="dt-piliers dt-portes" data-apparait>
+      <article class="sy-carte-blanche dt-pilier">
+        <span class="dt-numero">1</span>
+        <h3>Test without an account</h3>
+        <p>Real responses in the playground, 30 calls a day, no sign-up.</p>
+        <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="https://legaldata-public.cleolabs.co/playground?tab=classify">Open the playground</a></div>
+      </article>
+      <article class="sy-carte-blanche dt-pilier">
+        <span class="dt-numero">2</span>
+        <h3>A sandbox key in 30 seconds</h3>
+        <p>200 units to call every endpoint, no card required.</p>
+        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/signup">Get my sandbox key</a></div>
+      </article>
+      <article class="sy-carte-blanche dt-pilier">
+        <span class="dt-numero">3</span>
+        <h3>Pay and go to production</h3>
+        <p>Starter or Pro by the month or the year, Enterprise on quote.</p>
+        <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="#tarifs">See pricing</a></div>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -89,7 +127,7 @@ Authorization: Bearer $CLEO_API_KEY</code></pre></div>
 <section class="section dt-offre-section" id="tarifs">
   <div class="conteneur">
     <div class="sy-entete" data-apparait>
-      <p class="sy-surtitre">02 · Pricing</p>
+      <p class="sy-surtitre">03 · Pricing</p>
       <h2>Start for free, go to production when you are ready</h2>
       <p class="sy-lead">The same data and the same endpoints in every plan. Only the volume changes.</p>
     </div>
@@ -97,23 +135,23 @@ Authorization: Bearer $CLEO_API_KEY</code></pre></div>
       <article class="sy-carte dt-offre-carte dt-tarif">
         <p class="sy-surtitre">Sandbox</p>
         <p class="dt-offre-grand">€0</p>
-        <p class="dt-offre-texte">Test your integration, no card required.</p>
-        <ul class="dt-liste"><li>200 API units, lifetime</li><li>Same endpoints, limited rate</li><li>Test use only</li></ul>
-        <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="https://legaldata-public.cleolabs.co/signup">Get API key</a></div>
+        <p class="dt-offre-texte">Test your integration on every endpoint, no card required.</p>
+        <ul class="dt-liste"><li>200 units, lifetime</li><li>Every endpoint</li><li>No card required</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="https://legaldata-public.cleolabs.co/signup">Get my sandbox key</a></div>
       </article>
       <article class="sy-carte dt-offre-carte dt-tarif">
         <p class="sy-surtitre">Starter</p>
         <p class="dt-offre-grand">€100<small>/month</small></p>
-        <p class="dt-offre-texte">Build a first product and go live. €80 per month billed yearly, €960 per year.</p>
-        <ul class="dt-liste"><li>100,000 API units per month</li><li>Same data and endpoints</li><li>That is 1,000 customs classifications per month</li></ul>
-        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/signup">Choose Starter</a></div>
+        <p class="dt-offre-texte">Build a first product and go live. €80 per month billed yearly.</p>
+        <ul class="dt-liste"><li>100,000 units per month</li><li>60 requests per minute</li><li>Same data and endpoints</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/buy/starter?cadence=monthly">Choose Starter</a></div>
       </article>
       <article class="sy-carte dt-offre-carte dt-tarif">
         <p class="sy-surtitre">Pro</p>
         <p class="dt-offre-grand">€349<small>/month</small></p>
-        <p class="dt-offre-texte">Run a customer-facing product at higher volume. €279 per month billed yearly, €3,348 per year.</p>
-        <ul class="dt-liste"><li>1,000,000 API units per month</li><li>Integration onboarding</li><li>20% off with yearly billing</li></ul>
-        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/signup">Choose Pro</a></div>
+        <p class="dt-offre-texte">Run a customer-facing product at higher volume. €279 per month billed yearly.</p>
+        <ul class="dt-liste"><li>1,000,000 units per month</li><li>300 requests per minute</li><li>Same-day email support and an onboarding call</li></ul>
+        <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/buy/pro?cadence=monthly">Choose Pro</a></div>
       </article>
       <article class="sy-carte dt-offre-carte dt-tarif">
         <p class="sy-surtitre">Enterprise</p>
@@ -123,6 +161,7 @@ Authorization: Bearer $CLEO_API_KEY</code></pre></div>
         <div class="sy-actions dt-actions"><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact sales</a></div>
       </article>
     </div>
+    <p class="dt-renvoi">One unit per request; a kit or a batch weighs more. <a class="sy-lien dt-lien" href="https://legaldata-public.cleolabs.co/pricing">See request weight <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></p>
   </div>
 </section>
 
@@ -133,6 +172,7 @@ Authorization: Bearer $CLEO_API_KEY</code></pre></div>
       <h2>Every document keeps its source</h2>
       <p class="sy-lead">Every result returns its identifier, its source and the URL of the original portal. The sources included are the ones in your contract, and coverage can be checked country by country.</p>
       <ul class="sy-chiffres dt-preuve-chiffres"><li><b>106</b><span>countries tracked</span></li><li><b>25,000</b><span>regulations mapped</span></li><li><b>19,000</b><span>regulatory authorities tracked</span></li></ul>
+      <p class="dt-trace-note">Customs: 112 of 249 territories at the national line, measured on 25 September 2026.</p>
       <div class="sy-actions dt-actions"><a class="sy-bouton-blanc" href="26-legal-data-en.html">Explore coverage</a></div>
     </div>
     <div class="dt-panneau" aria-hidden="true" data-apparait>
@@ -186,12 +226,16 @@ Authorization: Bearer $CLEO_API_KEY</code></pre></div>
         <div class="reponse">They are explained candidates, with their confidence level and an ambiguity flag. Your team or your customs broker validates the code before the declaration.</div>
       </details>
       <details>
+        <summary>What can I test in the sandbox?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Every endpoint, within 200 units. Once you sign up, your dashboard lists each endpoint and what it costs. <a href="https://legaldata-public.cleolabs.co/signup">Get my sandbox key</a>.</div>
+      </details>
+      <details>
         <summary>Where do the Legal Data API documents come from?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
         <div class="reponse">Every document states its source and the URL of the original portal. The sources included in your access are named in your contract. <a href="26-legal-data-en.html">Explore coverage</a>.</div>
       </details>
       <details>
         <summary>How much does access cost?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">A free Sandbox to test, Starter at €100 per month, Pro at €349 per month, Enterprise on quote. <a href="#tarifs">See pricing</a>.</div>
+        <div class="reponse">A free Sandbox with 200 units, Starter at €100 per month, Pro at €349 per month, Enterprise on quote. <a href="#tarifs">See pricing</a>.</div>
       </details>
       <details>
         <summary>Can I use Legal Data in an AI assistant?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
@@ -212,7 +256,7 @@ Authorization: Bearer $CLEO_API_KEY</code></pre></div>
     <div class="sy-final-texte">
       <h2>Connect Cleo to your product</h2>
       <p>A key, the documentation, and the team for the sources and countries you need.</p>
-      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://legaldata-public.cleolabs.co/signup">Get API key</a><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact sales</a></div>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://legaldata-public.cleolabs.co/signup">Get my sandbox key</a><a class="sy-bouton-secondaire" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Contact sales</a></div>
     </div>
   </figure>
 </section>

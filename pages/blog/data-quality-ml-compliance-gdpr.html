@@ -1,0 +1,82 @@
+<!--NAV-->
+<!-- Article porté depuis www.cleolabs.co/fr/blog/data-quality-ml-compliance-gdpr le 23/09/2026 par blog/porter.mjs puis blog/fragments.mjs.
+     Titre, chapô, corps, FAQ et sources sont repris tels quels (blog-posts.json + HTML rendu). Ne pas éditer à la main : régénérer. -->
+<section class="sur-sombre section-serree bl-tete">
+  <div class="conteneur">
+    <div class="article-tete">
+      <p class="sy-surtitre">IA</p>
+      <h1 class="t-titre-page" style="margin:20px 0 20px">« Un travail de détective qu'on ne devrait pas avoir à faire » : pourquoi la qualité des données est l'angle mort de la conformité ML</h1>
+      <p class="t-body" style="margin:0 0 28px">Un nouvel article de recherche interroge des praticiens de la donnée en UE et révèle 5 lacunes systémiques entre les exigences du RGPD et la réalité des pipelines ML.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="https://www.linkedin.com/in/naomie-halioua/" rel="author noopener" target="_blank" style="display:flex;align-items:center;gap:12px"><img src="img:naomie" alt="Naomie Halioua" style="width:44px;height:44px;border-radius:50%;object-fit:cover"><span style="display:block"><span class="t-h3" style="display:block">Naomie Halioua</span><span class="t-caption" style="display:block">CDO et cofondatrice</span></span></a>
+        <span class="t-caption" style="padding-left:14px;border-left:1px solid var(--c-filet-sombre)"><time datetime="2026-03-31">31 mars 2026</time> · 5 min de lecture</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-bande-photo">
+  <figure>
+    <img src="img:monde-test-crash-voiture" alt="">
+    <div class="sy-bande-texte">
+      <p class="sy-etiquette">IA</p>
+    </div>
+  </figure>
+</section>
+
+<section class="section bl-corps" style="padding-top:56px">
+  <div class="conteneur">
+    <div class="corps-sommaire">
+      <nav class="sommaire">
+        <div class="titre">Sur cette page</div>
+        <a href="#s1">Ce que l’article révèle</a>
+        <a href="#s2">5 lacunes qui reviennent sans cesse</a>
+        <a href="#s3">Le détail qui change tout</a>
+        <a href="#s4">Pourquoi ça vous concerne</a>
+        <a href="#s5">Comment Cleo gère ça</a>
+        <a href="#s6">Sources et références</a>
+        <a href="#questions">Questions fréquentes</a>
+      </nav>
+      <div class="article bl-article" style="margin:0">
+<div class="bl-encart"><p>«&nbsp;Detective Work We Shouldn't Have to Do&nbsp;»&nbsp;: défis pratiques de la qualité des données alignée sur la réglementation dans les systèmes de Machine Learning</p><p>Wang, Irion, Groth, Harmouch · <a href="https://arxiv.org/abs/2602.05944">arXiv:2602.05944</a>, February 2026</p></div>
+<h2 id="s1">Ce que l’article révèle</h2><p>Les chercheurs ont interrogé des praticiens de la donnée basés en UE, travaillant sur des systèmes ML dans des industries régulées. Pas des consultants. Pas des académiques. Les personnes qui se lèvent chaque matin en essayant de rendre leurs pipelines de données conformes au RGPD tout en livrant des features dans les délais. Ce qu'ils ont trouvé est un schéma si constant qu'il ressemble presque à un diagnostic.</p>
+<h2 id="s2">5 lacunes qui reviennent sans cesse</h2><div><div class="bl-encart"><span>01</span><div><p>Principes juridiques vs. processus d'ingénierie</p><p>Le RGPD dit «&nbsp;qualité des données&nbsp;». Votre ingénieur de données entend «&nbsp;pas de nulls en prod&nbsp;». Ce n'est pas la même chose, et personne dans l'organisation ne comble l'écart.</p></div></div><div class="bl-encart"><span>02</span><div><p>Fragmentation des pipelines</p><p>La qualité des données est vérifiée à l'ingestion mais se dégrade silencieusement à travers la transformation, l'entraînement et l'inférence. Quand le régulateur pose la question, personne ne peut retracer ce qui s'est passé.</p></div></div><div class="bl-encart"><span>03</span><div><p>Limites des outils</p><p>Les outils existants ont été construits pour l'analyses, pas pour la preuve réglementaire. Ils mesurent la complétude et la cohérence : pas si votre traitement est licite au sens de l'Article 5.</p></div></div><div class="bl-encart"><span>04</span><div><p>Brouillard de responsabilité</p><p>Le juridique possède la conformité. L'engineering possède la donnée. Personne ne possède la qualité des données alignée sur la réglementation. Chacun suppose que quelqu'un d'autre s'en charge.</p></div></div><div class="bl-encart"><span>05</span><div><p>Culture réactive</p><p>La plupart des équipes ne pensent à la qualité des données que quand un audit approche. À ce moment-là, c'est du travail de détective : du rétro-ingénierie de ce qui s'est passé il y a des mois.</p></div></div></div>
+<h2 id="s3">Le détail qui change tout</h2><p>Les praticiens n'ont pas besoin de plus de réglementation. Ils ont besoin d'outils conscients de la conformité : des outils qui comprennent simultanément l'ingénierie des données et les exigences juridiques, pas des outils qui greffent des checklists juridiques sur des pipelines existants.</p>
+<h2 id="s4">Pourquoi ça vous concerne</h2><div><div><span>→</span><div><p>Vous êtes DPO ou responsable conformité</p><p>Votre plus grand risque en qualité des données n'est pas une défaillance technique. C'est l'écart entre ce que vous pensez que votre pipeline fait et ce qu'il fait vraiment. Cet article vous donne le vocabulaire pour avoir cette conversation avec votre équipe technique.</p></div></div><div><span>→</span><div><p>Vous développez un produit IA</p><p>L'Article 10 de l'AI Act (gouvernance des données) est systématiquement classé comme l'exigence la plus difficile à implémenter. Cette recherche vous dit exactement où les autres équipes restent bloquées : pour que vous n'ayez pas à l'apprendre à la dure.</p></div></div><div><span>→</span><div><p>Votre secteur est régulé (santé, finance, énergie, RH)</p><p>Si vous ne pouvez pas démontrer la gouvernance de la qualité des données sur l'ensemble de votre pipeline ML, de la collecte à l'inférence, vous êtes exposé. Pas seulement aux amendes, mais à des décisions qui ne peuvent être ni expliquées ni reproduites.</p></div></div></div>
+<h2 id="s5">Comment Cleo gère ça</h2><p>C'est exactement pour cela que nous avons construit Cleo comme nous l'avons fait. Notre chaîne ne vérifie pas la conformité à un instant donné : il trace l'alignement réglementaire sur l'ensemble du cycle de vie des données, produisant des preuves que votre équipe juridique et votre équipe technique peuvent comprendre.</p><p>Référence&nbsp;: Wang, Irion, Groth, Harmouch (2026), «&nbsp;Detective Work We Shouldn't Have to Do&nbsp;»&nbsp;: Practitioner Challenges in Regulatory-Aligned Data Quality in ML Systems, arXiv:2602.05944</p>
+<h2 id="s6">Sources et références</h2><ol><li><cite><a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj">Regulation (EU) 2016/679: General Data Protection Regulation (GDPR)</a></cite></li><li><cite><a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj">Regulation (EU) 2024/1689: Artificial Intelligence Act</a></cite></li></ol>
+<h2 id="questions">Questions fréquentes</h2>
+<div class="faq" data-schema="faq" style="margin-bottom:36px">
+<details open><summary>Qu'est-ce que la qualité des données alignée sur la réglementation ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">La qualité des données alignée sur la réglementation va au-delà des métriques traditionnelles (complétude, cohérence, exactitude). Elle signifie que chaque étape de votre pipeline ML, de la collecte à l'inférence, respecte les exigences légales de réglementations comme le RGPD Article 5 et l'AI Act Article 10, incluant licéité, limitation des finalités et minimisation des données.</div></details>
+<details><summary>Pourquoi les outils de qualité des données existants échouent-ils pour la conformité ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Les outils de qualité des données existants ont été conçus pour l'analyses et la business intelligence, pas pour produire des preuves réglementaires. Ils mesurent des métriques techniques comme les taux de null et la cohérence de format, mais ne peuvent pas évaluer si le traitement est licite, si le consentement a été correctement obtenu, ou si le principe de minimisation est respecté tout au long du pipeline ML.</div></details>
+<details><summary>Qu'est-ce que l'Article 10 de l'AI Act ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">L'Article 10 de l'AI Act européen fixe les exigences de gouvernance des données pour les systèmes IA à haut risque. Il impose que les jeux de données d'entraînement, de validation et de test respectent des critères de qualité spécifiques incluant pertinence, représentativité et absence d'erreurs. Il est régulièrement classé par les praticiens comme l'une des exigences les plus difficiles à implémenter.</div></details>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="conteneur">
+    <h2 class="t-h1" style="margin-bottom:28px">À lire aussi</h2>
+    <div class="sy-carrousel" data-apparait>
+      <a class="sy-carte-photo" href="blog-global-product-compliance-pitch-by-deel.html"><img src="img:monde-livraison-magasin" alt=""><span class="sy-etiquette">Entreprise</span><b>Conformité produit mondiale en 2026 : pourquoi nous avons gagné The Pitch by Deel</b></a>
+      <a class="sy-carte-photo" href="blog-legal-here-illegal-there.html"><img src="img:monde-frigo-fin-de-ligne" alt=""><span class="sy-etiquette">Conformité Produit</span><b>8 produits légaux ici, interdits là-bas</b></a>
+      <a class="sy-carte-photo" href="blog-trism-trust-risk-security-agentic-ai.html"><img src="img:monde-proto-impression-3d" alt=""><span class="sy-etiquette">IA</span><b>TRISM : l'IA agentique n'a pas un problème de confiance ; elle a un problème d'architecture</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-final-photo">
+  <figure>
+    <img src="img:classeurs" alt="">
+    <div class="sy-final-texte" data-apparait>
+      <p class="sy-etiquette">30 minutes avec l'équipe</p>
+      <h2>Voyez ce que Cleo relève sur vos propres produits</h2>
+      <p>Une gamme et deux marchés suffisent.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo</a></div>
+    </div>
+  </figure>
+</section>
+<!--PIED-->

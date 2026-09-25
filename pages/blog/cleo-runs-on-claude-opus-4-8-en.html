@@ -1,0 +1,80 @@
+<!--NAV-->
+<!-- Article porté depuis www.cleolabs.co/en/blog/cleo-runs-on-claude-opus-4-8 le 23/09/2026 par blog/porter.mjs puis blog/fragments.mjs.
+     Titre, chapô, corps, FAQ et sources sont repris tels quels (blog-posts.json + HTML rendu). Ne pas éditer à la main : régénérer. -->
+<section class="sur-sombre section-serree bl-tete">
+  <div class="conteneur">
+    <div class="article-tete">
+      <p class="sy-surtitre">Product</p>
+      <h1 class="t-titre-page" style="margin:20px 0 20px">Cleo now runs on Claude Opus 4.8, and we ran the eval to prove it matters</h1>
+      <p class="t-body" style="margin:0 0 28px">MARIA, the engine behind Cleo, moved to Claude Opus 4.8. We ran a head-to-head eval against Opus 4.7 on 5 real product cases, grading every cited regulation against the official source. 4.8: 5/5 correct verdicts vs 4/5, and a 2.7% citation-error rate vs 9.4%.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="https://www.linkedin.com/in/naomie-halioua/" rel="author noopener" target="_blank" style="display:flex;align-items:center;gap:12px"><img src="img:naomie" alt="Naomie Halioua" style="width:44px;height:44px;border-radius:50%;object-fit:cover"><span style="display:block"><span class="t-h3" style="display:block">Naomie Halioua</span><span class="t-caption" style="display:block">CDO and co-founder</span></span></a>
+        <span class="t-caption" style="padding-left:14px;border-left:1px solid var(--c-filet-sombre)"><time datetime="2026-06-01">1 June 2026</time> · 7 min read</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-bande-photo">
+  <figure>
+    <img src="img:monde-perceuse-test-endurance" alt="">
+    <div class="sy-bande-texte">
+      <p class="sy-etiquette">Product</p>
+    </div>
+  </figure>
+</section>
+
+<section class="section bl-corps" style="padding-top:56px">
+  <div class="conteneur">
+    <div class="corps-sommaire">
+      <nav class="sommaire">
+        <div class="titre">On this page</div>
+        <a href="#s1">Why a model upgrade matters for compliance specifically</a>
+        <a href="#s2">The eval: 5 products, two models, every citation verified</a>
+        <a href="#s3">Two errors 4.7 made that 4.8 did not</a>
+        <a href="#s4">What this changes inside Cleo</a>
+        <a href="#s5">The honest limits of this test</a>
+        <a href="#questions">Frequently asked questions</a>
+      </nav>
+      <div class="article bl-article" style="margin:0">
+<h2 id="s1">Why a model upgrade matters for compliance specifically</h2><p>A legal-drafting assistant can be judged on tone and structure. A compliance engine is judged on a binary that carries money and liability: can this product be sold in this market, and on the authority of which regulation? A fabricated regulation number, or a real one applied to the wrong product category, is not a stylistic blemish: it is a wrong answer that a brand might act on.</p><p>This is the same risk we wrote about in our piece on AI fabricating regulations. Opus 4.8 is positioned by Anthropic as their more honest flagship, and it posts the highest score recorded on their Legal Agent Benchmark: the first model to break 10% on the strict all-pass standard. The question for us was narrower: does that translate into fewer wrong compliance answers, on our kind of task?</p>
+<h2 id="s2">The eval: 5 products, two models, every citation verified</h2><p>We picked five product-and-market cases across the categories Cleo covers (cosmetics, toys, electronics, food supplements, children’s textiles) chosen because the right answer hinges on precise identifiers (a regulation number, an EN standard) that a weaker model tends to invent or misapply. We sent each model the identical prompt, closed-book (no retrieval), asking for a verdict and the applicable regulations. Then we verified every single cited identifier against the official source: Légifrance, EUR-Lex, the CEN standards catalogue.</p><div class="bl-encart"><div><p>Metric (n=5, closed-book)</p><p>Opus 4.7</p><p>Opus 4.8</p></div><div><p>Correct verdict vs gold</p><p>4 / 5</p><p>5 / 5</p></div><div><p>Valid structured output</p><p>4 / 5</p><p>5 / 5</p></div><div><p>Citation error rate</p><p>9.4%</p><p>2.7%</p></div><div><p>Avg output tokens (max)</p><p>626 (1100)</p><p>484 (826)</p></div></div><p>Opus 4.8 got every verdict right, returned a clean structured answer every time, and cited regulations with roughly a third of the error rate, while using fewer tokens. On the hardest case (a mains Bluetooth speaker, the densest regulatory stack), Opus 4.7 ran long and was cut off before it returned a usable verdict; Opus 4.8 returned a complete, correct answer well within budget.</p>
+<h2 id="s3">Two errors 4.7 made that 4.8 did not</h2><p>The interesting failures were not invented numbers: they were real regulations applied to the wrong product. This is exactly the kind of error that survives a quick human glance, because the citation looks authoritative.</p><div><div class="bl-encart"><p>EN 71-14</p><p>On a plastic pull-along toy, Opus 4.7 cited EN 71-14: a real standard, but it governs domestic trampolines. It does not apply to a pull toy.</p></div><div class="bl-encart"><p>(EU) 2018/1513</p><p>On a lipstick, Opus 4.7 cited Regulation (EU) 2018/1513: a real CMR restriction, but one that targets textiles and footwear, not cosmetics.</p></div></div>
+<h2 id="s4">What this changes inside Cleo</h2><p>Fewer misapplied regulations surfaced to a user is the headline, but two operational gains matter just as much. Opus 4.8 is the strongest agentic model Anthropic has tested (84% on Online-Mind2Web), with more efficient tool-calling, which is exactly what MARIA does when it traverses Legal Atlas across 177 jurisdictions: more reliable multi-step retrieval, fewer wasted steps. And note: this eval was closed-book, model alone. Inside Cleo the model is grounded on Legal Atlas, which closes most of the remaining citation gap.</p>
+<h2 id="s5">The honest limits of this test</h2><p>Five cases is illustrative, not a statistically powered benchmark: read it as a directional signal, not a leaderboard. It was a single run per case, closed-book, so it measures the model’s parametric knowledge rather than the full grounded system. And to be fair to 4.7: on the French supplement case it was actually more complete than 4.8 (it included the arrêté du 26 septembre 2016 that 4.8 omitted). The pattern across the set was still clear: 4.8 was more accurate, more precise on citations, and more efficient: which is why it is now the default behind MARIA.</p>
+<div class="bl-encart"><p>See the grounded engine in action: scan a product, or explore the legal data underneath.</p><a href="https://legaldata-public.cleolabs.co/general">Explore Legal Atlas →</a></div><p>Methodology and Opus 4.8 figures: Anthropic (Introducing Claude Opus 4.8). Citations verified against Légifrance, EUR-Lex and the CEN standards catalogue.</p>
+<h2 id="questions">Frequently asked questions</h2>
+<div class="faq" data-schema="faq" style="margin-bottom:36px">
+<details open><summary>What changed: what model does Cleo use now?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">MARIA, the engine behind Cleo, now runs on Anthropic's Claude Opus 4.8, upgraded from Opus 4.7. Opus 4.8 is Anthropic's more honest flagship and posts the highest score on their Legal Agent Benchmark.</div></details>
+<details><summary>How did you measure that 4.8 is better than 4.7?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">We ran 5 product×market compliance cases through both models with an identical prompt, closed-book, then verified every cited regulation against the official source (Légifrance, EUR-Lex, CEN). Opus 4.8 scored 5/5 correct verdicts vs 4/5, a 2.7% citation-error rate vs 9.4%, and used fewer tokens. It is a directional eval (n=5), not a powered benchmark.</div></details>
+<details><summary>Does the model fabricate regulations?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">The riskiest errors we saw were not invented numbers but real regulations applied to the wrong product (e.g. a textile CMR restriction cited on a lipstick). Opus 4.8 made far fewer of these. Inside Cleo the model is also grounded on Legal Atlas, which closes most of the remaining gap.</div></details>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="conteneur">
+    <h2 class="t-h1" style="margin-bottom:28px">Read next</h2>
+    <div class="sy-carrousel" data-apparait>
+      <a class="sy-carte-photo" href="blog-compliance-checks-claude-code-60-seconds-en.html"><img src="img:monde-montre-test-etancheite" alt=""><span class="sy-etiquette">Product Compliance</span><b>5 real compliance checks done with Claude Code in under 60 seconds</b></a>
+      <a class="sy-carte-photo" href="blog-legal-atlas-machine-readable-law-en.html"><img src="img:monde-entrepot-palettes" alt=""><span class="sy-etiquette">Product</span><b>Legal Atlas: the world's law, machine-readable</b></a>
+      <a class="sy-carte-photo" href="blog-open-source-product-compliance-skills-ai-agents-en.html"><img src="img:monde-tablette-banc-test" alt=""><span class="sy-etiquette">Product Compliance</span><b>We open-sourced 40 product compliance skills for AI agents</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-final-photo">
+  <figure>
+    <img src="img:classeurs" alt="">
+    <div class="sy-final-texte" data-apparait>
+      <p class="sy-etiquette">30 minutes with the team</p>
+      <h2>See what Cleo finds on your own products</h2>
+      <p>One range and two markets are enough.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Book a demo</a></div>
+    </div>
+  </figure>
+</section>
+<!--PIED-->

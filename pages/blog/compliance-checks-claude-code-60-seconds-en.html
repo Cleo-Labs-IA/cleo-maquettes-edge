@@ -1,0 +1,86 @@
+<!--NAV-->
+<!-- Article porté depuis www.cleolabs.co/en/blog/compliance-checks-claude-code-60-seconds le 23/09/2026 par blog/porter.mjs puis blog/fragments.mjs.
+     Titre, chapô, corps, FAQ et sources sont repris tels quels (blog-posts.json + HTML rendu). Ne pas éditer à la main : régénérer. -->
+<section class="sur-sombre section-serree bl-tete">
+  <div class="conteneur">
+    <div class="article-tete">
+      <p class="sy-surtitre">Product Compliance</p>
+      <h1 class="t-titre-page" style="margin:20px 0 20px">5 real compliance checks done with Claude Code in under 60 seconds</h1>
+      <p class="t-body" style="margin:0 0 28px">Five product compliance scenarios (retinol cosmetics, Bluetooth CE marking, Japan supplement export, toy EN 71-3 migration limits, EU Battery Regulation deadlines) answered in 49 seconds total with the Cleo skills_library on Claude Code. With timings, citations and the cost they would have been the traditional way.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <a href="https://www.linkedin.com/in/naomie-halioua/" rel="author noopener" target="_blank" style="display:flex;align-items:center;gap:12px"><img src="img:naomie" alt="Naomie Halioua" style="width:44px;height:44px;border-radius:50%;object-fit:cover"><span style="display:block"><span class="t-h3" style="display:block">Naomie Halioua</span><span class="t-caption" style="display:block">CDO and co-founder</span></span></a>
+        <span class="t-caption" style="padding-left:14px;border-left:1px solid var(--c-filet-sombre)"><time datetime="2026-06-02">2 June 2026</time> · 7 min read</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-bande-photo">
+  <figure>
+    <img src="img:monde-montre-test-etancheite" alt="">
+    <div class="sy-bande-texte">
+      <p class="sy-etiquette">Product Compliance</p>
+    </div>
+  </figure>
+</section>
+
+<section class="section bl-corps" style="padding-top:56px">
+  <div class="conteneur">
+    <div class="corps-sommaire">
+      <nav class="sommaire">
+        <div class="titre">On this page</div>
+        <a href="#s1">Methodology</a>
+        <a href="#s2">Check 1: Retinol in EU cosmetics</a>
+        <a href="#s3">Check 2: Bluetooth speaker, CE marking scope</a>
+        <a href="#s4">Check 3: Vitamin supplement export to Japan</a>
+        <a href="#s5">Check 4: Children’s toy, EN 71-3 migration limits</a>
+        <a href="#s6">Check 5: EU Battery Regulation deadlines</a>
+        <a href="#s7">The cumulative tally</a>
+        <a href="#s8">Reproduce in two minutes</a>
+        <a href="#questions">Frequently asked questions</a>
+      </nav>
+      <div class="article bl-article" style="margin:0">
+<h2 id="s1">Methodology</h2><p>Five real product questions, picked from the Cleo Slack the week of May 24. For each: I opened Claude Code (Anthropic’s CLI) with the Cleo skills_library installed, started a fresh session, typed the prompt, and stopped a stopwatch when the agent printed its final verdict. No follow-up, no hand-holding, no Google. The optional Cleo Legal API was plugged in via MCP for live substance and customs data: same configuration any installer gets out of the box.</p><p>You can reproduce every result with: <code>npx -y @cleo-labs/skills-mcp@latest</code>. The package is on npm: <a href="https://www.npmjs.com/package/@cleo-labs/skills-mcp">@cleo-labs/skills-mcp</a>.</p>
+<h2 id="s2">Check 1: Retinol in EU cosmetics</h2><div class="bl-encart"><div class="bl-encart"><p>Prompt</p><p>"Is retinol legal in EU cosmetics? At what concentration?"</p></div><div><p>Verdict (8 seconds)</p><p>Yes, with hard limits. Regulation (EC) 1223/2009 Annex III entry 339, in force since November 2025: max 0.05% in face products, 0.3% in body lotions and 0.005% in lip products. Mandatory warning above 0.05%: "contains retinol, not for use by pregnant or breastfeeding women". CMR re-evaluation by the SCCS expected Q4 2026.</p></div></div><p>Without the skills: a regulatory consultant invoice of €600–900 for a written opinion, 4–7 business days. Or you trust a forum post and ship a non-compliant product.</p>
+<h2 id="s3">Check 2: Bluetooth speaker, CE marking scope</h2><div class="bl-encart"><div class="bl-encart"><p>Prompt</p><p>"What does my Bluetooth speaker need for CE marking?"</p></div><div><p>Verdict (14 seconds)</p><p>Four directives apply simultaneously. RED 2014/53/EU (Radio Equipment): the Bluetooth radio is regulated. EMC 2014/30/EU (Electromagnetic Compatibility): emissions and immunity tests. LVD 2014/35/EU (Low Voltage): applies if the power supply exceeds 50V AC / 75V DC, normally captured via the USB-C charger spec. RoHS 3 (2011/65/EU + delegated act 2015/863): restricted substance declaration. Plus from August 13 2026: GPSR (Regulation 2023/988) requires an EU responsible person and a public recall path. EN harmonised standards: EN 300 328, EN 301 489-1/-17, EN 62368-1. Typical lab budget: €6–12K, 4–8 weeks.</p></div></div><p>Without the skills: a CE consultant retainer typically starts at €3–5K just for the scope analysis. With the skills you go straight to lab quotation.</p>
+<h2 id="s4">Check 3: Vitamin supplement export to Japan</h2><div class="bl-encart"><div class="bl-encart"><p>Prompt</p><p>"Can I export my vitamin C effervescent supplement to Japan?"</p></div><div><p>Verdict (12 seconds)</p><p>Yes, under the Food Sanitation Act as a general dietary supplement (not a Food with Function Claim unless you file the dossier). Pre-import notification to the Ministry of Health, Labour and Welfare via a domestic importer of record: mandatory. Full Japanese-language label including name, ingredients, allergens, nutrition facts, importer details, and a country-of-origin statement. Vitamin C has no statutory upper limit but the Consumer Affairs Agency recommends staying below 2,000 mg/day for general supplements. HS code 2106.90.90, MFN duty 8.8% plus 10% consumption tax. Lead time once dossier is ready: 4–6 weeks. Watch out for vague health claims: they trigger the Pharmaceutical and Medical Device Act and move you into a quasi-drug category.</p></div></div><p>Without the skills: a Japan-specialised consultancy charges €4–8K for the same scope memo, often by emailing PDF templates.</p>
+<h2 id="s5">Check 4: Children’s toy, EN 71-3 migration limits</h2><div class="bl-encart"><div class="bl-encart"><p>Prompt</p><p>"Is my painted wooden toy subject to EN 71-3 migration limits? Give me the full table."</p></div><div><p>Verdict (6 seconds)</p><p>Yes. EN 71-3:2019 + A1:2021 applies to all toys placed on the EU market under the Toy Safety Directive 2009/48/EC. Migration limits (mg/kg of toy material), Category II (scraped-off material), the relevant category for painted wooden toys: Aluminium 1,406, Antimony 11.3, Arsenic 0.9, Barium 1,125, Boron 1,200, Cadmium 1.3, Chromium III 37.5, Chromium VI 0.02, Cobalt 10.5, Copper 622.5, Lead 2.0, Manganese 1,200, Mercury 1.9, Nickel 75, Selenium 37.5, Strontium 4,500, Tin 15,000, Organic tin 0.9, Zinc 3,750. Required testing: ICP-OES or ICP-MS per Annex C of the standard, plus organic tin by GC-MS. Budget: €450–900 per colour tested.</p></div></div><p>Without the skills: 30 minutes scrolling EUR-Lex, a paid copy of EN 71-3 at €240 from CEN, and you still need to remember the category mapping. Six seconds vs an afternoon.</p>
+<h2 id="s6">Check 5: EU Battery Regulation deadlines</h2><div class="bl-encart"><div class="bl-encart"><p>Prompt</p><p>"My device has an internal lithium-ion battery. What are the EU Battery Regulation deadlines I need to track?"</p></div><div><p>Verdict (9 seconds)</p><p>Regulation (EU) 2023/1542 phased deadlines for portable batteries: August 18 2024, restrictions on mercury and cadmium tightened, CE marking with battery-specific declaration becomes mandatory for new placements on market. February 18 2027: removability and replaceability requirement for portable batteries (no more glued cells without service-tool path). August 18 2027: Battery Passport mandatory for LMT, EV and industrial batteries above 2 kWh (consumer portable batteries excluded for now). January 1 2028, recycled content minimums kick in: 16% cobalt, 85% lead, 6% lithium, 6% nickel. Track via the Commission’s implementing acts page, several tertiary specs are still in consultation through 2026.</p></div></div><p>Without the skills: a quarterly subscription to a regulatory tracker at €4–9K/year, or a half-day at Inrae or a similar institute. With the skills the deadline map is in your terminal in nine seconds.</p>
+<h2 id="s7">The cumulative tally</h2><div class="bl-encart"><p>Five checks. Total response time: 49 seconds. Total cost: €0.</p><p>The equivalent done the traditional way (consultants on retainer, paid standards, scope memos, regulatory subscription) adds up to somewhere between €12K and €28K per founder per year, before you ship anything. The skills cost a free GitHub star.</p><p>And before you ask: no, this does not replace a regulatory consultant for a product launch in a notified-body category. It replaces the 80% of compliance work that is documentary, repetitive and well-documented: which is exactly the 80% that founders pay 80% of the bill for.</p></div>
+<h2 id="s8">Reproduce in two minutes</h2><p>Install the package, run the same five prompts, and tell us where the skills are wrong. Every issue logged on GitHub gets a 48-hour turnaround.</p><div><code>npx -y @cleo-labs/skills-mcp@latest</code></div><div><a href="https://github.com/Cleo-Labs-IA/skills_library">Star the repo on GitHub</a><a href="https://legaldata-public.cleolabs.co">Or get an API key →</a></div>
+<h2 id="questions">Frequently asked questions</h2>
+<div class="faq" data-schema="faq" style="margin-bottom:36px">
+<details open><summary>Can the skills replace a regulatory consultant entirely?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">No, and they are not designed to. They replace the 80% of compliance work that is documentary, repetitive and well-documented: scope memos, threshold lookups, deadline tracking, label generation. For products in notified-body categories (medical devices Class IIa+, machinery, PPE), keep a qualified consultant in the loop for the final dossier.</div></details>
+<details><summary>How accurate are the response timings cited in the article?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">All five timings were measured with a stopwatch on a single Claude Code session with the optional Cleo Legal API plugged in via MCP. Range: 6 to 14 seconds. Without the Legal API plugin (skills only, fallback to WebSearch), expect 1.5x to 2x longer because the agent does a live citation check before answering.</div></details>
+<details><summary>Where do the cost figures (€600–900 per opinion, €4–9K subscriptions) come from?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">From real founder invoices shared in the Cleo Slack community over the past 12 months. Ranges reflect typical small-D2C engagements with mid-tier consultants in France, Germany and the UK. Big-four or US-based specialists are often 2x to 3x higher.</div></details>
+<details><summary>Can I reproduce these results?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Yes. Install with 'npx -y @cleo-labs/skills-mcp@latest' in Claude Code or Cursor, paste the exact prompts from the article, and time the responses yourself. If a skill returns a different answer or a wrong threshold, open an issue on the repo: every issue gets a 48-hour turnaround.</div></details>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="conteneur">
+    <h2 class="t-h1" style="margin-bottom:28px">Read next</h2>
+    <div class="sy-carrousel" data-apparait>
+      <a class="sy-carte-photo" href="blog-cursor-mcp-compliance-skills-en.html"><img src="img:monde-proto-impression-3d" alt=""><span class="sy-etiquette">Engineering</span><b>How to use Cleo Skills MCP in Cursor in 60 seconds</b></a>
+      <a class="sy-carte-photo" href="blog-cleo-runs-on-claude-opus-4-8-en.html"><img src="img:monde-perceuse-test-endurance" alt=""><span class="sy-etiquette">Product</span><b>Cleo now runs on Claude Opus 4.8, and we ran the eval to prove it matters</b></a>
+      <a class="sy-carte-photo" href="blog-legal-atlas-machine-readable-law-en.html"><img src="img:monde-entrepot-palettes" alt=""><span class="sy-etiquette">Product</span><b>Legal Atlas: the world's law, machine-readable</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-final-photo">
+  <figure>
+    <img src="img:classeurs" alt="">
+    <div class="sy-final-texte" data-apparait>
+      <p class="sy-etiquette">30 minutes with the team</p>
+      <h2>See what Cleo finds on your own products</h2>
+      <p>One range and two markets are enough.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Book a demo</a></div>
+    </div>
+  </figure>
+</section>
+<!--PIED-->

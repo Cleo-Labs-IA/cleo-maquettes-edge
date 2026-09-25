@@ -1,0 +1,79 @@
+<!--NAV-->
+<!-- Article porté depuis www.cleolabs.co/en/blog/legal-atlas-machine-readable-law le 23/09/2026 par blog/porter.mjs puis blog/fragments.mjs.
+     Titre, chapô, corps, FAQ et sources sont repris tels quels (blog-posts.json + HTML rendu). Ne pas éditer à la main : régénérer. -->
+<section class="sur-sombre section-serree bl-tete">
+  <div class="conteneur">
+    <div class="article-tete">
+      <p class="sy-surtitre">Product</p>
+      <h1 class="t-titre-page" style="margin:20px 0 20px">Legal Atlas: the world's law, machine-readable</h1>
+      <p class="t-body" style="margin:0 0 28px">Cleo opens up Legal Atlas: a machine-readable legal database aggregating legislation, case law and doctrine from 1,494 official sources across 177 jurisdictions, exposed through a single REST API. Built for legal-tech, law firms and AI agents.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <span style="display:flex;align-items:center;gap:12px"><img src="img:alex" alt="Alexandre Bloch" style="width:44px;height:44px;border-radius:50%;object-fit:cover"><span style="display:block"><span class="t-h3" style="display:block">Alexandre Bloch</span><span class="t-caption" style="display:block">CTO</span></span></span>
+        <span class="t-caption" style="padding-left:14px;border-left:1px solid var(--c-filet-sombre)"><time datetime="2026-05-31">31 May 2026</time> · 6 min read</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-bande-photo">
+  <figure>
+    <img src="img:monde-entrepot-palettes" alt="">
+    <div class="sy-bande-texte">
+      <p class="sy-etiquette">Product</p>
+    </div>
+  </figure>
+</section>
+
+<section class="section bl-corps" style="padding-top:56px">
+  <div class="conteneur">
+    <div class="corps-sommaire">
+      <nav class="sommaire">
+        <div class="titre">On this page</div>
+        <a href="#s1">The law is published. It is not accessible.</a>
+        <a href="#s2">The coverage, in numbers</a>
+        <a href="#s3">Legislation, case law, doctrine: organised by domain</a>
+        <a href="#s4">Built for the systems that consume law</a>
+        <a href="#s5">Why Cleo built this</a>
+        <a href="#questions">Frequently asked questions</a>
+      </nav>
+      <div class="article bl-article" style="margin:0">
+<h2 id="s1">The law is published. It is not accessible.</h2><p>Every country publishes its legislation, but no two publish it the same way. A regulation might live as a scanned PDF on a ministry portal, a paginated HTML page on an official journal, or a database with no export. Citations differ, languages differ, update cadences differ. For a human researcher this is friction. For a software system (a legal-tech product, a compliance engine, an AI agent) it is a wall.</p><p>The result: the same legal text gets re-collected, re-parsed and re-verified by every team that needs it, over and over. Legal Atlas does that work once, at source, and keeps it fresh.</p>
+<h2 id="s2">The coverage, in numbers</h2><p>Every source is verified directly at its official portal before it is indexed: no third-party aggregators, no secondary copies.</p><div><div><p>1,494</p><p>Official sources tracked</p></div><div><p>177</p><p>Jurisdictions</p></div><div><p>665</p><p>Sources fully indexed</p></div><div><p>480</p><p>In progress</p></div></div>
+<h2 id="s3">Legislation, case law, doctrine: organised by domain</h2><p>Legal Atlas does not stop at statute text. It indexes legislation, case law, legal doctrine and parliamentary proceedings, and classifies every item into the domains teams actually query against.</p><div><div><p>AI &amp; Data</p></div><div><p>Health &amp; Safety</p></div><div><p>Finance</p></div><div><p>Labor &amp; Tax</p></div><div><p>Environment</p></div><div><p>IP &amp; Media</p></div></div>
+<h2 id="s4">Built for the systems that consume law</h2><p>A PDF is written for a human. An API response is written for a machine. Legal Atlas is API-first: legal-tech SaaS, law firms running research at scale, and teams building AI agents that need to reason over real, current law can integrate it directly into their workflows, and explore it first through an interactive web playground.</p><div><div class="bl-encart"><p>Pro</p><p>Programmatic access at 120 requests per minute: for products and research pipelines.</p></div><div class="bl-encart"><p>Enterprise</p><p>600 requests per minute, an SLA and dedicated support: for legal-data at production scale.</p></div></div>
+<h2 id="s5">Why Cleo built this</h2><p>Cleo’s compliance engine already reads regulation across 100+ countries to tell brands whether they can sell a product in a given market. Legal Atlas is the foundation underneath it, opened up: the same authenticated, structured, continuously refreshed legal corpus, now available to anyone building on top of law, not just product compliance.</p><div class="bl-encart"><p>Browse the jurisdictions, test the API, see what’s indexed.</p><a href="https://legaldata-public.cleolabs.co/general">Open Legal Atlas →</a></div>
+<h2 id="questions">Frequently asked questions</h2>
+<div class="faq" data-schema="faq" style="margin-bottom:36px">
+<details open><summary>What is Legal Atlas?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Legal Atlas is a machine-readable legal database by Cleo Labs. It aggregates and indexes legislation, case law and doctrine from authenticated official government sources, and exposes them through a single REST API. It currently tracks 1,494 official sources across 177 jurisdictions.</div></details>
+<details><summary>Who is it for?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Legal-tech SaaS companies, law firms running research at scale, and teams building AI agents that need to reason over real, current law. There is an interactive web playground to explore the data before integrating the API.</div></details>
+<details><summary>How can I access it?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">The interactive playground is open at legaldata-public.cleolabs.co with no signup required. Programmatic access comes in two plans: Pro (120 requests/minute) and Enterprise (600 requests/minute with an SLA and dedicated support).</div></details>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="conteneur">
+    <h2 class="t-h1" style="margin-bottom:28px">Read next</h2>
+    <div class="sy-carrousel" data-apparait>
+      <a class="sy-carte-photo" href="blog-cleo-runs-on-claude-opus-4-8-en.html"><img src="img:monde-perceuse-test-endurance" alt=""><span class="sy-etiquette">Product</span><b>Cleo now runs on Claude Opus 4.8, and we ran the eval to prove it matters</b></a>
+      <a class="sy-carte-photo" href="blog-open-source-product-compliance-skills-ai-agents-en.html"><img src="img:monde-tablette-banc-test" alt=""><span class="sy-etiquette">Product Compliance</span><b>We open-sourced 40 product compliance skills for AI agents</b></a>
+      <a class="sy-carte-photo" href="blog-temu-200m-dsa-fine-illegal-products-2026-en.html"><img src="img:monde-perceuse-test-endurance" alt=""><span class="sy-etiquette">Product Compliance</span><b>Temu fined €200M under the DSA: what the Commission actually said, and why it matters for every European brand</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-final-photo">
+  <figure>
+    <img src="img:classeurs" alt="">
+    <div class="sy-final-texte" data-apparait>
+      <p class="sy-etiquette">30 minutes with the team</p>
+      <h2>See what Cleo finds on your own products</h2>
+      <p>One range and two markets are enough.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Book a demo</a></div>
+    </div>
+  </figure>
+</section>
+<!--PIED-->

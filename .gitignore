@@ -9,3 +9,6 @@ node_modules/
 .claude/
 .worktrees/
 .superpowers/
+blog/brut.json
+blog/sonde.json
+garde/dernier-controle.json
