@@ -137,10 +137,30 @@ body[data-cleo-ds="v6"]:is([data-v6-page="39-data"],[data-v6-page="39-data-en"],
   & main .dt-trace .sy-chiffres > li > b:not(#_):not(#_):not(#_){color:#FFFFFF !important}
   & main .dt-trace .sy-chiffres > li > span:not(#_):not(#_):not(#_){color:rgba(255,255,255,.74) !important}
 
+  /* ── 25/09/2026, page 39 « l'API vendue en direct » (rapports/brief-data-funnel-2509.md) : le bloc Customs passe en
+     deux colonnes (texte, requête et réponse réelles), Legal Data en carte large, trois portes (#acces), une ligne sous
+     les tarifs, une ligne mesurée pour la douane dans le bloc sombre. ── */
+  & main .dt-douane:not(#_):not(#_){align-items:start}
+  & main .dt-douane h2:not(#_):not(#_):not(#_){max-width:22ch;margin:12px 0 0 !important;text-align:left !important}
+  & main .dt-douane .sy-lead:not(#_):not(#_):not(#_){margin:var(--e-titre-lead) 0 0 !important;text-align:left !important;max-width:none}
+  & main .dt-douane .dt-es:not(#_):not(#_){margin-top:28px}
+  & main .dt-douane-code:not(#_):not(#_){display:flex;flex-direction:column;gap:12px;min-width:0}
+  /* Le corps réel du T-shirt porte une description de 60 caractères : on la renvoie à la ligne au lieu de la couper. */
+  & main :is(.dt-douane-code, .dt-acces-large) pre:not(#_):not(#_){white-space:pre-wrap;overflow-wrap:anywhere}
+  & main .dt-code-note:not(#_):not(#_){margin:0;font-size:var(--t-legende);color:var(--c-texte-3)}
+  & main .dt-acces-large:not(#_):not(#_){display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:start;margin-top:var(--e-bento)}
+  & main .dt-acces-large-texte:not(#_):not(#_){display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+  & main .dt-acces-large .dt-actions:not(#_):not(#_){margin-top:0;padding-top:20px}
+  & main .dt-portes .dt-pilier .dt-actions:not(#_):not(#_){margin-top:auto;padding-top:24px}
+  & main .dt-portes .dt-pilier h3:not(#_):not(#_){margin-top:16px}
+  & main .dt-offre-section .dt-renvoi:not(#_):not(#_){margin-top:32px;font-size:0.875rem}
+  & main .dt-trace-note:not(#_):not(#_){margin:24px 0 0;font-size:0.875rem;line-height:1.45;color:rgba(255,255,255,.74)}
+
   /* ── Tablette et téléphone ── */
   @media (max-width:1023px){
     & main .dt-duo:not(#_):not(#_){grid-template-columns:minmax(0,1fr);gap:48px}
     & main .dt-acces:not(#_):not(#_){grid-template-columns:minmax(0,1fr)}
+    & main .dt-acces-large:not(#_):not(#_){grid-template-columns:minmax(0,1fr);gap:24px}
     & main .dt-piliers:not(#_):not(#_){grid-template-columns:minmax(0,1fr)}
     & main :is(.dt-usage, .dt-tarifs):not(#_):not(#_){grid-template-columns:repeat(2, minmax(0, 1fr))}
     & main .dt-bientot:not(#_):not(#_){grid-template-columns:minmax(0,1fr)}
