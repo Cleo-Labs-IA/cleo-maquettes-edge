@@ -1199,46 +1199,60 @@
       "_appui": "cleo-landing src/app/[locale]/privacy/layout.tsx (origin/main), title and description copied verbatim on 28/09/2026; robots noindex,follow as in the original"
     },
     "60-api-douane-en.html": {
-      "titre": "Customs Classification API by country | Cleo",
-      "description": "Customs classification API: stop maintaining tariff schedules country by country. Send product facts; get the available code, missing questions, sources.",
+      "titre": "HS Code & Customs Classification API by country | Cleo Labs",
+      "description": "HS code and customs classification API: stop maintaining tariff schedules country by country. Send product facts; get the code, open questions, sources.",
       "source": "redige",
       "url_source": null,
-      "appui_contenu": "28/09/2026 : textes de la PR cleo-legal-public#53 (components/customs-landing/audiences.ts), traduits pour le FR ; chiffres de lib/customs-facts.ts et lib/plans.ts. Titre, H1 et description refaits le 28/09/2026 sur la revue SEO de la fondatrice (mot-clé métier dans title, H1, description et premier paragraphe)."
+      "appui_contenu": "28/09/2026 : textes de la PR cleo-legal-public#53 (components/customs-landing/audiences.ts), traduits pour le FR ; chiffres de lib/customs-facts.ts et lib/plans.ts. Titre, H1 et description refaits le 28/09/2026 sur la revue SEO de la fondatrice (mot-clé métier dans title, H1, description et premier paragraphe). 28/09/2026 (passe finale) : « HS code » (EN) et « code SH » / « classement tarifaire » (FR) dans le title ou la description, suffixe « | Cleo Labs » comme les 98 autres pages."
     },
     "60-api-douane.html": {
-      "titre": "API de classification douanière par pays | Cleo",
-      "description": "API de classification douanière : ne maintenez plus les nomenclatures pays par pays. Recevez le code disponible, les questions manquantes et les sources.",
+      "titre": "API de classification douanière et code SH | Cleo Labs",
+      "description": "API de classification douanière : ne maintenez plus les nomenclatures pays par pays. Recevez le code SH disponible, les questions manquantes, les sources.",
       "source": "redige",
       "url_source": null,
-      "appui_contenu": "28/09/2026 : textes de la PR cleo-legal-public#53 (components/customs-landing/audiences.ts), traduits pour le FR ; chiffres de lib/customs-facts.ts et lib/plans.ts. Titre, H1 et description refaits le 28/09/2026 sur la revue SEO de la fondatrice (mot-clé métier dans title, H1, description et premier paragraphe)."
+      "appui_contenu": "28/09/2026 : textes de la PR cleo-legal-public#53 (components/customs-landing/audiences.ts), traduits pour le FR ; chiffres de lib/customs-facts.ts et lib/plans.ts. Titre, H1 et description refaits le 28/09/2026 sur la revue SEO de la fondatrice (mot-clé métier dans title, H1, description et premier paragraphe). 28/09/2026 (passe finale) : « HS code » (EN) et « code SH » / « classement tarifaire » (FR) dans le title ou la description, suffixe « | Cleo Labs » comme les 98 autres pages."
     },
     "61-api-douane-ecommerce-en.html": {
-      "titre": "Customs API for e-commerce and Shopify | Cleo",
-      "description": "Customs API for e-commerce and Shopify: fix missing customs data before checkout. Cleo asks for missing product facts and writes back only approved codes.",
+      "titre": "Customs & HS Code API for e-commerce and Shopify | Cleo Labs",
+      "description": "Customs API for e-commerce and Shopify: fix missing HS codes before checkout. Cleo asks for missing product facts and writes back only approved codes.",
       "source": "redige",
       "url_source": null,
-      "appui_contenu": "28/09/2026 : textes de la PR cleo-legal-public#53 (components/customs-landing/audiences.ts), traduits pour le FR ; chiffres de lib/customs-facts.ts et lib/plans.ts. Titre, H1 et description refaits le 28/09/2026 sur la revue SEO de la fondatrice (mot-clé métier dans title, H1, description et premier paragraphe)."
+      "appui_contenu": "28/09/2026 : textes de la PR cleo-legal-public#53 (components/customs-landing/audiences.ts), traduits pour le FR ; chiffres de lib/customs-facts.ts et lib/plans.ts. Titre, H1 et description refaits le 28/09/2026 sur la revue SEO de la fondatrice (mot-clé métier dans title, H1, description et premier paragraphe). 28/09/2026 (passe finale) : « HS code » (EN) et « code SH » / « classement tarifaire » (FR) dans le title ou la description, suffixe « | Cleo Labs » comme les 98 autres pages."
     },
     "61-api-douane-ecommerce.html": {
-      "titre": "API douane pour e-commerce et Shopify | Cleo",
-      "description": "API douane pour e-commerce et Shopify : complétez les données douanières avant le paiement. Cleo demande les faits manquants et renvoie les codes validés.",
+      "titre": "API douane pour e-commerce et Shopify | Cleo Labs",
+      "description": "API douane pour e-commerce et Shopify : complétez le classement tarifaire avant le paiement. Cleo demande les faits manquants et renvoie les codes validés.",
       "source": "redige",
       "url_source": null,
-      "appui_contenu": "28/09/2026 : textes de la PR cleo-legal-public#53 (components/customs-landing/audiences.ts), traduits pour le FR ; chiffres de lib/customs-facts.ts et lib/plans.ts. Titre, H1 et description refaits le 28/09/2026 sur la revue SEO de la fondatrice (mot-clé métier dans title, H1, description et premier paragraphe)."
+      "appui_contenu": "28/09/2026 : textes de la PR cleo-legal-public#53 (components/customs-landing/audiences.ts), traduits pour le FR ; chiffres de lib/customs-facts.ts et lib/plans.ts. Titre, H1 et description refaits le 28/09/2026 sur la revue SEO de la fondatrice (mot-clé métier dans title, H1, description et premier paragraphe). 28/09/2026 (passe finale) : « HS code » (EN) et « code SH » / « classement tarifaire » (FR) dans le title ou la description, suffixe « | Cleo Labs » comme les 98 autres pages."
     },
     "62-api-douane-commissionnaires-en.html": {
-      "titre": "Customs API for brokers and 3PLs | Cleo",
-      "description": "Customs API for brokers and 3PLs: turn vague client descriptions into a reviewable dossier with candidate codes, tariff notes and approval history.",
+      "titre": "Customs & HS Code API for brokers and 3PLs | Cleo Labs",
+      "description": "Customs API for brokers and 3PLs: turn vague client descriptions into a reviewable dossier with candidate HS codes, tariff notes and approval history.",
       "source": "redige",
       "url_source": null,
-      "appui_contenu": "28/09/2026 : textes de la PR cleo-legal-public#53 (components/customs-landing/audiences.ts), traduits pour le FR ; chiffres de lib/customs-facts.ts et lib/plans.ts. Titre, H1 et description refaits le 28/09/2026 sur la revue SEO de la fondatrice (mot-clé métier dans title, H1, description et premier paragraphe)."
+      "appui_contenu": "28/09/2026 : textes de la PR cleo-legal-public#53 (components/customs-landing/audiences.ts), traduits pour le FR ; chiffres de lib/customs-facts.ts et lib/plans.ts. Titre, H1 et description refaits le 28/09/2026 sur la revue SEO de la fondatrice (mot-clé métier dans title, H1, description et premier paragraphe). 28/09/2026 (passe finale) : « HS code » (EN) et « code SH » / « classement tarifaire » (FR) dans le title ou la description, suffixe « | Cleo Labs » comme les 98 autres pages."
     },
     "62-api-douane-commissionnaires.html": {
-      "titre": "API douane pour commissionnaires et 3PL | Cleo",
-      "description": "API douane pour commissionnaires et 3PL : transformez des descriptions vagues en dossier vérifiable, avec codes candidats, notes tarifaires et historique.",
+      "titre": "API douane pour commissionnaires et 3PL | Cleo Labs",
+      "description": "API douane pour commissionnaires et 3PL : des descriptions vagues au dossier de classement tarifaire vérifiable, avec codes candidats, notes et historique.",
       "source": "redige",
       "url_source": null,
-      "appui_contenu": "28/09/2026 : textes de la PR cleo-legal-public#53 (components/customs-landing/audiences.ts), traduits pour le FR ; chiffres de lib/customs-facts.ts et lib/plans.ts. Titre, H1 et description refaits le 28/09/2026 sur la revue SEO de la fondatrice (mot-clé métier dans title, H1, description et premier paragraphe)."
+      "appui_contenu": "28/09/2026 : textes de la PR cleo-legal-public#53 (components/customs-landing/audiences.ts), traduits pour le FR ; chiffres de lib/customs-facts.ts et lib/plans.ts. Titre, H1 et description refaits le 28/09/2026 sur la revue SEO de la fondatrice (mot-clé métier dans title, H1, description et premier paragraphe). 28/09/2026 (passe finale) : « HS code » (EN) et « code SH » / « classement tarifaire » (FR) dans le title ou la description, suffixe « | Cleo Labs » comme les 98 autres pages."
+    },
+    "63-api-douane-exemple-dossier-en.html": {
+      "titre": "Sample HS code classification dossier | Cleo Labs",
+      "description": "A real customs classification dossier from the Cleo API, captured 25 September 2026: candidate HS codes, chapter-note evidence and the question still open.",
+      "source": "redige",
+      "url_source": null,
+      "appui_contenu": "28/09/2026 : capture API du 25/09/2026 (GET /v2/customs/classifications/{id}/dossier), scripts/captures/2026-09-25-dossier-fr.json. noindex, follow."
+    },
+    "63-api-douane-exemple-dossier.html": {
+      "titre": "Exemple de dossier de classement tarifaire | Cleo Labs",
+      "description": "Un vrai dossier de classification douanière de l’API Cleo, capturé le 25 septembre 2026 : codes candidats, notes de chapitre et la question encore ouverte.",
+      "source": "redige",
+      "url_source": null,
+      "appui_contenu": "28/09/2026 : capture API du 25/09/2026 (GET /v2/customs/classifications/{id}/dossier), scripts/captures/2026-09-25-dossier-fr.json. noindex, follow."
     }
   },
   "structure": {
