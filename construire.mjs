@@ -47,7 +47,8 @@ const VERS_PORTAIL_LEGAL = [{ source: '/legal-data/:path+', destination: 'https:
    racine pour que le lien ne dépende plus de l'ancien projet. Toute page publique la déclare, sauf fiche SEO qui en porte une autre. */
 /* 24/09/2026 : le site en ligne portait PostHog et Vercel Analytics ; la V6 statique n'en avait aucun, et le tableau de bord
    affichait « plus personne depuis 13 h » alors que le garde SEO disait zéro dégradation. Les traceurs vivent dans commun/traceurs.html. */
-const TRACEURS = fs.existsSync(path.join(ICI, 'commun/traceurs.html')) ? fs.readFileSync(path.join(ICI, 'commun/traceurs.html'), 'utf8').trim() : ''
+/* 28/09/2026 : le commentaire de tête de traceurs.html (la note de l'atelier) ne sort plus dans les pages. */
+const TRACEURS = fs.existsSync(path.join(ICI, 'commun/traceurs.html')) ? fs.readFileSync(path.join(ICI, 'commun/traceurs.html'), 'utf8').replace(/<!--[\s\S]*?-->/g, '').trim() : ''
 const OG_IMAGE_SOURCE = '/Users/naomiehalioua/cleo-landing/public/og-image.jpg'
 const IMAGE_SOCIALE = { url: `${HOTE}/og-image.jpg`, largeur: 1200, hauteur: 630, alt: 'Cleo Labs, la conformité produit dans 106 pays' }
 const LOCAL = path.join('/Users/naomiehalioua/cleo-maquettes-edge', 'images')

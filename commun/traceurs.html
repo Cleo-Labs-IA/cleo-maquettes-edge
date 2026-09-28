@@ -1,7 +1,77 @@
 <!-- Les traceurs du site en ligne, repris tels quels le 24/09/2026 : PostHog (projet EU, clé publique, la même que cleo-landing
-     src/app/[locale]/layout.tsx) et Vercel Web Analytics (le script ne répond que si le projet l'active). Aucune page /apercu ne les porte. -->
+     src/app/[locale]/layout.tsx) et Vercel Web Analytics (le script ne répond que si le projet l'active). Aucune page /apercu ne les porte.
+     28/09/2026, campagne Customs API (audit du tunnel du 28/09) :
+     1. CONSENTEMENT. PostHog (autocapture, enregistrement des sessions, cookie ph_* d'un an sur .cleolabs.co) ne se charge
+        plus qu'après accord. Bandeau : Tout refuser / Tout accepter / Personnaliser, refuser aussi simple qu'accepter.
+        Le choix vit dans le cookie propre cleo_consentement (hôte seul, 6 mois). Le lien « Cookies » ajouté au pied rouvre
+        le choix ; un retrait coupe PostHog et efface ses cookies. Vercel Web Analytics est sans cookie : il reste hors bandeau.
+     2. ATTRIBUTION. Les paramètres de première visite (utm_*, outreach_id, gclid, gbraid, wbraid, fbclid, li_fat_id,
+        msclkid) sont lus dans l'adresse d'arrivée, validés (format, longueur), gardés dans sessionStorage (cleo_attribution,
+        premier contact de l'onglet, jamais écrasé) et ajoutés aux seuls liens vers legaldata-public.cleolabs.co et
+        cleo-legal-public.vercel.app, pour que le portail pose son cookie ld_attr au vrai clic. Rien d'autre n'est ajouté ;
+        un paramètre déjà présent dans le lien n'est pas remplacé ; sans attribution, aucun lien n'est touché. -->
 <script>
+(function(){
+var d=document,w=window,FR=(d.documentElement.lang||'').slice(0,2)!=='en';
+/* ---- attribution ---- */
+var TXT=/^[^\u0000-\u001f\u007f<>"'`\\]{1,150}$/,ID=/^[A-Za-z0-9_-]{1,256}$/,CLES={utm_source:TXT,utm_medium:TXT,utm_campaign:TXT,utm_content:TXT,utm_term:TXT,outreach_id:/^[A-Za-z0-9_-]{1,64}$/,gclid:ID,gbraid:ID,wbraid:ID,fbclid:ID,li_fat_id:ID,msclkid:/^[A-Za-z0-9_-]{1,64}$/};
+var HOTES={'legaldata-public.cleolabs.co':1,'cleo-legal-public.vercel.app':1},SS='cleo_attribution',attr=null;
+function lit(){try{var o=JSON.parse(sessionStorage.getItem(SS)||'null');if(o&&o.v===1&&o.p&&typeof o.p==='object')return nettoie(o.p)}catch(e){}return null}
+function nettoie(src){var r={},n=0;for(var k in CLES){var v=src[k];if(typeof v==='string'){v=v.trim();if(CLES[k].test(v)){r[k]=v;n++}}}return n?r:null}
+try{attr=lit();if(!attr){var q=new URLSearchParams(location.search),vu={};for(var k in CLES){var v=q.get(k);if(v!==null)vu[k]=v}attr=nettoie(vu);if(attr)try{sessionStorage.setItem(SS,JSON.stringify({v:1,p:attr}))}catch(e){}}}catch(e){attr=null}
+function decore(a){if(!attr||!a||!a.getAttribute)return;var h=a.getAttribute('href');if(!h)return;var u;try{u=new URL(h,location.href)}catch(e){return}
+if(u.protocol!=='https:'||!HOTES[u.hostname])return;var ajout=false;for(var k in attr)if(!u.searchParams.has(k)){u.searchParams.append(k,attr[k]);ajout=true}if(ajout)a.setAttribute('href',u.toString())}
+function decoreTout(){if(attr)Array.prototype.forEach.call(d.querySelectorAll('a[href]'),decore)}
+['pointerdown','click','auxclick','contextmenu','focusin'].forEach(function(t){d.addEventListener(t,function(e){var a=e.target&&e.target.closest&&e.target.closest('a[href]');if(a)decore(a)},true)});
+/* ---- consentement ---- */
+var CK='cleo_consentement',DUREE=15552000;
+function choix(){var m=d.cookie.match(/(?:^|;\s*)cleo_consentement=v1\.a([01])/);return m?m[1]==='1':null}
+function garde(ok){d.cookie=CK+'=v1.a'+(ok?1:0)+'; Max-Age='+DUREE+'; Path=/; SameSite=Lax'+(location.protocol==='https:'?'; Secure':'')}
+function chargePosthog(){if(w.__cleoPosthog)return;w.__cleoPosthog=1;
 !function(t,e){var o,n,p,r;e.__SV||(window.posthog&&window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="ci init Pi Ci ft Oi Fi ki capture calculateEventProperties Ui register register_once register_for_session unregister unregister_for_session Bi getFeatureFlag getFeatureFlagPayload getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty ji Di createPersonProfile setInternalOrTestUser zi Ti Hi opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Ai debug bt Ni getPageViewId captureTraceFeedback captureTraceMetric Ei".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
-posthog.init('phc_p3yazFL1GvCzBnSlKERFqM0q7hu7TsDVcGyvgHsWMDv',{api_host:'https://eu.i.posthog.com',defaults:'2026-01-30',person_profiles:'identified_only'})
+posthog.init('phc_p3yazFL1GvCzBnSlKERFqM0q7hu7TsDVcGyvgHsWMDv',{api_host:'https://eu.i.posthog.com',defaults:'2026-01-30',person_profiles:'identified_only',loaded:function(ph){if(attr){var p={};for(var k in attr)p['first_touch_'+k]=attr[k];ph.register_once(p)}}})}
+function coupePosthog(){try{if(w.posthog&&w.posthog.opt_out_capturing)w.posthog.opt_out_capturing()}catch(e){}
+d.cookie.split(';').forEach(function(c){var n=c.split('=')[0].trim();if(/^ph_/.test(n)){d.cookie=n+'=; Max-Age=0; Path=/';d.cookie=n+'=; Max-Age=0; Path=/; Domain=.cleolabs.co'}});
+try{for(var i=localStorage.length-1;i>=0;i--){var k=localStorage.key(i);if(k&&/^ph_/.test(k))localStorage.removeItem(k)}}catch(e){}}
+var L=FR?{t:'Cookies et mesure d’audience',x:'Avec votre accord, nous mesurons la fréquentation du site avec PostHog (pages vues, clics, enregistrement des sessions) pour l’améliorer. Refuser ne change rien à votre visite.',pol:'Politique de confidentialité',url:'/fr/privacy',non:'Tout refuser',oui:'Tout accepter',perso:'Personnaliser',nec:'Nécessaires, toujours actifs : le cookie qui garde votre choix sur cet appareil 6 mois.',mes:'Mesure d’audience (PostHog)',mesx:'Pages vues, clics et enregistrement des sessions, hébergés dans l’Union européenne.',ok:'Enregistrer mes choix',lien:'Cookies'}
+:{t:'Cookies and audience measurement',x:'With your consent, we measure site traffic with PostHog (page views, clicks, session recordings) to improve it. Refusing changes nothing about your visit.',pol:'Privacy policy',url:'/en/privacy',non:'Refuse all',oui:'Accept all',perso:'Customize',nec:'Strictly necessary, always on: the cookie that keeps your choice on this device for 6 months.',mes:'Audience measurement (PostHog)',mesx:'Page views, clicks and session recordings, hosted in the European Union.',ok:'Save my choices',lien:'Cookies'};
+var bandeau=null;
+function decide(ok){var avant=choix();garde(ok);if(ok)chargePosthog();else if(avant!==false)coupePosthog();ferme()}
+function ferme(){if(bandeau){bandeau.remove();bandeau=null}}
+function ouvre(detail){ferme();var b=d.createElement('div');b.className='cleo-cc';b.setAttribute('role','region');b.setAttribute('aria-label',L.t);
+b.innerHTML='<p class="cleo-cc-t">'+L.t+'</p><p class="cleo-cc-x">'+L.x+' <a href="'+L.url+'">'+L.pol+'</a></p>'
++'<div class="cleo-cc-perso"'+(detail?'':' hidden')+'><p class="cleo-cc-nec">'+L.nec+'</p><label class="cleo-cc-opt"><input type="checkbox" name="analytique"'+(choix()?' checked':'')+'> <span><b>'+L.mes+'</b><br>'+L.mesx+'</span></label></div>'
++'<div class="cleo-cc-actions"><button type="button" class="cleo-cc-b" data-cc="non">'+L.non+'</button><button type="button" class="cleo-cc-b" data-cc="oui">'+L.oui+'</button>'
++'<button type="button" class="cleo-cc-l" data-cc="perso"'+(detail?' hidden':'')+'>'+L.perso+'</button><button type="button" class="cleo-cc-l" data-cc="ok"'+(detail?'':' hidden')+'>'+L.ok+'</button></div>';
+b.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('[data-cc]');if(!t)return;var a=t.getAttribute('data-cc');
+if(a==='oui')decide(true);else if(a==='non')decide(false);else if(a==='ok')decide(!!b.querySelector('input[name=analytique]').checked);
+else{b.querySelector('.cleo-cc-perso').hidden=false;t.hidden=true;b.querySelector('[data-cc=ok]').hidden=false;b.querySelector('input').focus()}});
+d.body.appendChild(b);bandeau=b}
+w.cleoCookies={ouvrir:function(){ouvre(true)}};
+var c0=choix();if(c0===true)chargePosthog();
+function pret(){decoreTout();
+Array.prototype.forEach.call(d.querySelectorAll('.pied-bas'),function(p){var bt=d.createElement('button');bt.type='button';bt.className='cleo-cc-pied';bt.textContent=L.lien;bt.addEventListener('click',function(){ouvre(true)});
+var pol=p.querySelector('a[href$="/privacy"]');if(pol)pol.insertAdjacentElement('afterend',bt);else p.appendChild(bt)});
+if(c0===null)ouvre(false)}
+if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',pret);else pret();
+})();
 </script>
+<style>
+.cleo-cc{position:fixed;left:24px;bottom:24px;z-index:2147483000;max-width:440px;box-sizing:border-box;padding:20px 22px;border-radius:14px;background:#0F0E0D;color:#fff;font:inherit;font-size:0.875rem;line-height:1.55;box-shadow:0 12px 40px rgba(0,0,0,0.28)}
+.cleo-cc p{margin:0 0 10px;color:rgba(255,255,255,0.8)}
+.cleo-cc .cleo-cc-t{font-weight:600;color:#fff;font-size:0.9375rem}
+.cleo-cc a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+.cleo-cc-perso{margin:6px 0 4px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.13)}
+.cleo-cc-opt{display:flex;gap:10px;align-items:flex-start;cursor:pointer;color:rgba(255,255,255,0.8);margin-bottom:8px}
+.cleo-cc-opt input{margin-top:3px;width:18px;height:18px;flex:none;accent-color:#5B65FF}
+.cleo-cc-opt b{color:#fff;font-weight:600}
+.cleo-cc-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:14px}
+.cleo-cc-b{flex:1 1 0;min-height:44px;padding:10px 16px;border-radius:999px;border:1px solid #fff;background:#fff;color:#0A0A0A;font:inherit;font-weight:600;cursor:pointer}
+.cleo-cc-b:hover{background:#EDEBE7}
+.cleo-cc-l{flex:1 0 100%;min-height:40px;background:none;border:0;color:#fff;font:inherit;text-decoration:underline;text-underline-offset:2px;cursor:pointer;padding:6px 0}
+.cleo-cc button:focus-visible,.cleo-cc a:focus-visible,.cleo-cc input:focus-visible{outline:2px solid #8A93FF;outline-offset:2px}
+.cleo-cc-pied{background:none;border:0;padding:10px 0;min-height:44px;font:inherit;color:inherit;cursor:pointer}
+.cleo-cc-pied:hover{text-decoration:underline}
+@media (max-width:560px){.cleo-cc{left:16px;right:16px;bottom:16px;max-width:none;padding:16px 18px}}
+</style>
 <script defer src="/_vercel/insights/script.js"></script>
