@@ -6,11 +6,19 @@
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import { chromium } from '/Users/naomiehalioua/cleo-landing/node_modules/playwright/index.mjs'
+/* 28/09/2026 : Playwright du dépôt (package.json) hors du Mac ; sur le Mac, celui de cleo-landing, comme avant. */
+const PW_MAC = '/Users/naomiehalioua/cleo-landing/node_modules/playwright/index.mjs'
+const { chromium } = await import(fs.existsSync(PW_MAC) ? PW_MAC : 'playwright')
 
 const ICI = path.dirname(path.dirname(fileURLToPath(import.meta.url)))
 const SRC = process.env.BLOGSRC || '/private/tmp/claude-501/-Users-naomiehalioua-cleo-landing/b32a4fc1-7a13-4475-84be-385bbde13f98/scratchpad/blogsrc'
 const POSTS = JSON.parse(fs.readFileSync(path.join(SRC, 'blog-posts.json'), 'utf8'))
+/* 28/09/2026 : portage incrémental. Hors du Mac, seules les pages des articles nouveaux sont téléchargées ; un article
+   dont la page brute manque reprend son extraction du dernier brut.json (versionné), avec les métadonnées fraîches de
+   blog-posts.json. Sur le Mac, toutes les pages sont là : rien ne change. */
+const BRUT = path.join(ICI, 'blog', 'brut.json')
+const PRECEDENT = new Map((fs.existsSync(BRUT) ? JSON.parse(fs.readFileSync(BRUT, 'utf8')) : []).map(a => [`${a.langue} ${a.slug}`, a]))
+let repris = 0
 const DEJA = new Set([]) // 23/09/2026 : plus aucune page de blog faite à la main, tout passe par le porteur (fidélité mesurée par garde-seo.mjs).
 /* L'article PPWR existe en français comme page dessinée à la main (pages/12-article.html, route /fr/blog/eu-ppwr-…) :
    on ne porte que sa version anglaise, pour que chaque route n'ait qu'une source. */
@@ -87,7 +95,15 @@ for (const post of POSTS) {
   if (SEULEMENT && !SEULEMENT.has(post.slug)) continue
   for (const langue of (LANGUES_DE[post.slug] || ['fr', 'en'])) {
     const f = path.join(SRC, `${langue}-${post.slug}.html`)
-    if (!fs.existsSync(f)) { stats.erreurs.push(`${langue} ${post.slug} : fichier absent`); continue }
+    if (!fs.existsSync(f)) {
+      const p = PRECEDENT.get(`${langue} ${post.slug}`)
+      if (!p || MODE !== 'ecrire') { stats.erreurs.push(`${langue} ${post.slug} : fichier absent`); continue }
+      manifeste.push({ slug: post.slug, langue, fichier: p.fichier, sortie: p.sortie,
+        titre: post.title[langue], description: post.description[langue], date: post.date, categorie: post.category[langue], lecture: post.readTime[langue],
+        auteur: post.author, couverture: p.couverture, faq: (post.faq || []).map(q => ({ q: q.q[langue], a: q.a[langue] })),
+        mesure: p.mesure, corps: p.corps, sources: p.sources, repli: p.repli })
+      repris++; continue
+    }
     await page.setContent(fs.readFileSync(f, 'utf8'), { waitUntil: 'domcontentloaded' })
     const r = await page.evaluate(EXTRAIRE, langue)
     if (r.erreur) { stats.erreurs.push(`${langue} ${post.slug} : ${r.erreur}`); continue }
@@ -114,6 +130,8 @@ if (MODE === 'sonde') {
   console.log('mots corps : min', Math.min(...manifeste.map(m => m.mesure.motsCorps)), 'médiane', manifeste.map(m => m.mesure.motsCorps).sort((a, b) => a - b)[Math.floor(manifeste.length / 2)], 'max', Math.max(...manifeste.map(m => m.mesure.motsCorps)))
   fs.writeFileSync(path.join(ICI, 'blog', 'sonde.json'), JSON.stringify(manifeste, null, 1))
 } else {
-  fs.writeFileSync(path.join(ICI, 'blog', 'brut.json'), JSON.stringify(manifeste))
-  console.log('brut.json :', manifeste.length, 'articles')
+  /* Un article perdu en route ne doit jamais partir en ligne en silence : le relais s'arrête avant le build. */
+  if (stats.erreurs.length) { console.error('PORTAGE INCOMPLET :\n  ' + stats.erreurs.join('\n  ')); process.exit(1) }
+  fs.writeFileSync(BRUT, JSON.stringify(manifeste))
+  console.log('brut.json :', manifeste.length, 'articles', repris ? `(dont ${repris} repris du portage précédent)` : '')
 }
