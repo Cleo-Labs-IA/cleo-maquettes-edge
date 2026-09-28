@@ -1,0 +1,11 @@
+{
+  "name": "cleo-site-v6",
+  "private": true,
+  "type": "module",
+  "description": "Site statique www.cleolabs.co : node construire.mjs écrit sortie/, déployé par .github/workflows/site.yml",
+  "engines": { "node": ">=22" },
+  "dependencies": {
+    "playwright": "1.58.2",
+    "sharp": "0.34.5"
+  }
+}

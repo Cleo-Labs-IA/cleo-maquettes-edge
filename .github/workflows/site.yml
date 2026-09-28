@@ -1,0 +1,115 @@
+# MISE EN LIGNE DE www.cleolabs.co SANS LE MAC (28/09/2026).
+# Remplace le relais launchd (scripts/relais-blog.sh) et les `vercel deploy` lancés à la main.
+#   - chaque jour : relais du blog (article du jour de cleo-landing), build, tests, mise en ligne s'il y a du nouveau ;
+#   - à chaque push sur la branche du site : build, tests, mise en ligne ;
+#   - à la main (Actions → site → Run workflow).
+# Garde-fous : rien ne part si le build ou un test échoue ; après la mise en ligne, scripts/controle-en-ligne.sh relit
+# les adresses qui coûtent (landings Ads, accueil, blog, /api, privacy) et REVIENT au déploiement précédent au moindre écart.
+# Mode : variable de dépôt SITE_MODE. Absente ou « essai » = build et tests seuls, jamais de mise en ligne ni de commit.
+# « production » = mise en ligne. Secrets : VERCEL_TOKEN (équipe cleo-academys-projects), LANDING_TOKEN (lecture de
+# cleo-academy/cleo-landing, pour blog-posts.json). Voir docs/MISE-EN-LIGNE.md.
+name: site
+
+on:
+  schedule:
+    # UTC. Article du jour fusionné vers 10 h (Paris) : 10 h 45 / 14 h 15 / 17 h 15 en été, une heure de moins en hiver.
+    - cron: '45 8 * * *'
+    - cron: '15 12 * * *'
+    - cron: '15 15 * * *'
+  push:
+    branches: [review/wording-2309]
+  workflow_dispatch:
+    inputs:
+      forcer:
+        description: 'Reporter tout le blog même sans article nouveau'
+        type: boolean
+        default: false
+
+concurrency:
+  group: site-production
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+env:
+  VERCEL_ORG_ID: team_ewHr0LGo7RBNiANGcpvNwFMU
+  VERCEL_PROJECT_ID: prj_5HLXdC5T394oB2WoHTVNXxAIoEye
+  ANCIEN_SITE: https://cleo-landing-cleo-academys-projects.vercel.app
+  SITE_EN_LIGNE: https://www.cleolabs.co
+  MODE: ${{ vars.SITE_MODE || 'essai' }}
+  A_LANDING: ${{ secrets.LANDING_TOKEN != '' && '1' || '0' }}
+  A_VERCEL: ${{ secrets.VERCEL_TOKEN != '' && '1' || '0' }}
+
+jobs:
+  site:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: review/wording-2309
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci --no-audit --no-fund
+
+      - name: Navigateur du porteur d'articles
+        if: env.A_LANDING == '1'
+        run: npx playwright install --with-deps chromium
+
+      - name: Relais du blog, build et tests
+        id: relais
+        env:
+          LANDING_TOKEN: ${{ secrets.LANDING_TOKEN }}
+          BLOGSRC: ${{ runner.temp }}/blogsrc
+          FORCER: ${{ inputs.forcer && '1' || '0' }}
+        run: scripts/relais-ci.sh
+
+      - name: Décider de la mise en ligne
+        id: decision
+        run: |
+          if [ "$MODE" != "production" ]; then echo "go=0" >> "$GITHUB_OUTPUT"; echo "::notice::mode $MODE : build et tests verts, aucune mise en ligne"; exit 0; fi
+          if [ "$A_VERCEL" != "1" ]; then echo "::error::SITE_MODE=production mais VERCEL_TOKEN absent"; exit 1; fi
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "${{ steps.relais.outputs.nouveaux }}" = "0" ]; then echo "go=0" >> "$GITHUB_OUTPUT"; echo "aucun article nouveau"; exit 0; fi
+          echo "go=1" >> "$GITHUB_OUTPUT"
+
+      - name: Mise en ligne, contrôle, retour arrière si besoin
+        if: steps.decision.outputs.go == '1'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          set -euo pipefail
+          V="npx --yes vercel@50 --token $VERCEL_TOKEN --scope cleo-academys-projects"
+          mkdir -p sortie/.vercel
+          printf '{"orgId":"%s","projectId":"%s","projectName":"cleo-site-v6"}' "$VERCEL_ORG_ID" "$VERCEL_PROJECT_ID" > sortie/.vercel/project.json
+          precedent=$(curl -fsS -H "Authorization: Bearer $VERCEL_TOKEN" \
+            "https://api.vercel.com/v6/deployments?projectId=$VERCEL_PROJECT_ID&teamId=$VERCEL_ORG_ID&target=production&state=READY&limit=1" \
+            | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>console.log(JSON.parse(s).deployments[0]?.url||""))')
+          [ -n "$precedent" ] || { echo "::error::déploiement de production actuel introuvable, pas de mise en ligne sans retour possible"; exit 1; }
+          echo "production actuelle : $precedent"
+          $V deploy sortie --prod --yes
+          if ! scripts/controle-en-ligne.sh "$SITE_EN_LIGNE" ${{ steps.relais.outputs.articles }}; then
+            echo "::error::contrôle en échec après mise en ligne, retour à $precedent"
+            $V promote "https://$precedent" --yes
+            scripts/controle-en-ligne.sh "$SITE_EN_LIGNE" || true
+            exit 1
+          fi
+
+      - name: Versionner le relais du blog
+        if: steps.decision.outputs.go == '1' && steps.relais.outputs.nouveaux != '0'
+        run: |
+          git config user.name "cleo-site-bot"
+          git config user.email "cleo-site-bot@users.noreply.github.com"
+          git add pages/blog blog commun/v6-routes.json pages/24-blog.html pages/24-blog-en.html
+          git diff --cached --quiet && exit 0
+          git commit -m "blog : relais quotidien, ${{ steps.relais.outputs.nouveaux }} page(s) nouvelle(s) ($(TZ=Europe/Paris date '+%d/%m/%Y'))"
+          git push origin HEAD:review/wording-2309
+
+      - name: Garde SEO sur le domaine
+        if: github.event_name == 'schedule'
+        continue-on-error: true
+        run: node garde-seo.mjs verifier "$SITE_EN_LIGNE"

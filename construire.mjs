@@ -7,10 +7,25 @@
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
-import sharp from '/Users/naomiehalioua/cleo-landing/node_modules/sharp/lib/index.js'
 
 const ICI = path.dirname(fileURLToPath(import.meta.url))
-const PUB = path.join('/Users/naomiehalioua/cleo-maquettes-edge', 'images/depot')
+/* 28/09/2026 : le build tourne aussi hors du Mac de Naomie (GitHub Actions, .github/workflows/site.yml). Tout fichier
+   hors du dépôt devient facultatif : s'il manque, le fichier déjà fabriqué est repris sur le site en ligne, d'après
+   commun/images-manifeste.json (clé d'image → chemin servi), que chaque build complet sur le Mac réécrit.
+   Photos de personnes et polices Fontshare restent hors du dépôt public. SIMULER_CI=1 fait comme si rien hors du
+   dépôt n'existait, pour éprouver ce chemin sur le Mac. */
+const SIMULER_CI = process.env.SIMULER_CI === '1'
+const existe = p => (SIMULER_CI && !p.startsWith(ICI + path.sep)) ? false : fs.existsSync(p)
+const SITE_EN_LIGNE = process.env.SITE_EN_LIGNE || 'https://www.cleolabs.co'
+async function reprendreEnLigne(chemin, dest) {
+  const r = await fetch(SITE_EN_LIGNE + chemin, { headers: { 'Cache-Control': 'no-cache' } })
+  if (!r.ok) throw new Error(`REPRISE IMPOSSIBLE : ${SITE_EN_LIGNE}${chemin} répond ${r.status}`)
+  fs.mkdirSync(path.dirname(dest), { recursive: true })
+  fs.writeFileSync(dest, Buffer.from(await r.arrayBuffer()))
+}
+const SHARP_MAC = '/Users/naomiehalioua/cleo-landing/node_modules/sharp/lib/index.js'
+const sharp = (await import(existe(SHARP_MAC) ? SHARP_MAC : 'sharp')).default
+const PUB = path.join(ICI, 'images/depot')
 const CHEMINS = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/chemins.json'), 'utf8'))
 if (fs.existsSync(path.join(ICI, 'blog/chemins-blog.json'))) Object.assign(CHEMINS.pages, JSON.parse(fs.readFileSync(path.join(ICI, 'blog/chemins-blog.json'), 'utf8')))
 /* L'hôte de production : les canonicals, les hreflang et le sitemap y pointent. Les pages d'aperçu (/apercu/…) restent hors index. */
@@ -49,7 +64,7 @@ const VERS_PORTAIL_LEGAL = [{ source: '/legal-data/:path+', destination: 'https:
 const TRACEURS = fs.existsSync(path.join(ICI, 'commun/traceurs.html')) ? fs.readFileSync(path.join(ICI, 'commun/traceurs.html'), 'utf8').trim() : ''
 const OG_IMAGE_SOURCE = '/Users/naomiehalioua/cleo-landing/public/og-image.jpg'
 const IMAGE_SOCIALE = { url: `${HOTE}/og-image.jpg`, largeur: 1200, hauteur: 630, alt: 'Cleo Labs, la conformité produit dans 106 pays' }
-const LOCAL = path.join('/Users/naomiehalioua/cleo-maquettes-edge', 'images')
+const LOCAL = path.join(ICI, 'images')
 const POLICE = '/Users/naomiehalioua/Downloads/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Variable.woff2'
 
 const PAGES = [
@@ -342,6 +357,9 @@ const IMAGES = {
 
 const cacheImg = new Map()
 const DOSSIER_IMAGES = path.join(ICI, 'sortie', 'images')
+const FICHIER_MANIFESTE = path.join(ICI, 'commun/images-manifeste.json')
+const MANIFESTE_IMAGES = fs.existsSync(FICHIER_MANIFESTE) ? JSON.parse(fs.readFileSync(FICHIER_MANIFESTE, 'utf8')) : {}
+let imagesReprises = 0
 fs.mkdirSync(DOSSIER_IMAGES, { recursive: true })
 /* LES IMAGES SONT DES FICHIERS, plus des data URI. Mesuré le 03/09/2026 sur
    sortie-liart.vercel.app : 1,6 Mo de HTML pour l'accueil, 3,4 Mo pour le blog,
@@ -381,7 +399,13 @@ async function cheminImage(nom, largeurDemandee, auDelaDuPlafond) {
   const [rel, largeurTable, format] = entree
   /* Un chemin absolu désigne un fichier hors de tout dépôt (photos de personnes : jamais sur GitHub, le dépôt est public). */
   const abs = rel.startsWith('/') ? rel : rel.startsWith('local/') ? path.join(LOCAL, rel.slice(6)) : path.join(PUB, rel)
-  if (!fs.existsSync(abs)) throw new Error(`IMAGE ABSENTE : ${abs}`)
+  if (!existe(abs)) {
+    const repris = MANIFESTE_IMAGES[cle]
+    if (!rel.startsWith('/') || !repris) throw new Error(`IMAGE ABSENTE : ${abs}${rel.startsWith('/') ? ` (et « ${cle} » absente de commun/images-manifeste.json)` : ''}`)
+    await reprendreEnLigne(repris, path.join(ICI, 'sortie', repris))
+    cacheImg.set(cle, repris); imagesReprises++
+    return repris
+  }
   let plafond = largeurTable
   if (auDelaDuPlafond && format !== 'svg') plafond = (await sharp(abs).metadata()).width || largeurTable
   const largeur = largeurDemandee ? Math.min(largeurDemandee, plafond) : largeurTable
@@ -475,7 +499,7 @@ async function injecterImages(html) {
    Mémoire : une animation riche se porte en bloc, elle ne se retranscrit
    jamais. On reprend sa feuille, son markup et son IIFE tels quels ;
    seule la monospace est neutralisée, le DS V5 l'interdit. ── */
-const REF = '/Users/naomiehalioua/cleo-maquettes-edge/depot-src/ref'
+const REF = path.join(ICI, 'depot-src/ref')
 function litExport(fichier, nom) {
   const t = fs.readFileSync(`${REF}/${fichier}`, 'utf8')
   const i = t.indexOf('`', t.indexOf(`export const ${nom}`))
@@ -543,7 +567,7 @@ async function veille() {
    Une coupe dont la couture a bougé ÉCHOUE la construction, comme une image
    absente de la table IMAGES : jamais de trou silencieux.
    ══════════════════════════════════════════════════════════════════ */
-const HERO = '/Users/naomiehalioua/cleo-maquettes-edge/depot-src/hero'
+const HERO = path.join(ICI, 'depot-src/hero')
 
 function coupe(texte, debut, fin, quoi, gardeFin) {
   const i = texte.indexOf(debut)
@@ -739,11 +763,11 @@ async function globeProduits() {
    mettaient jamais en cache. Mesuré le 03/09/2026 : chaque page pesait 180 Ko
    à vide, la police seule. */
 fs.mkdirSync(path.join(ICI, 'sortie', 'fonts'), { recursive: true })
-fs.copyFileSync(POLICE, path.join(ICI, 'sortie', 'fonts', 'Satoshi-Variable.woff2'))
+if (existe(POLICE)) fs.copyFileSync(POLICE, path.join(ICI, 'sortie', 'fonts', 'Satoshi-Variable.woff2')); else await reprendreEnLigne('/fonts/Satoshi-Variable.woff2', path.join(ICI, 'sortie', 'fonts', 'Satoshi-Variable.woff2'))
 /* 16/09/2026 : graisse Black statique pour les chiffres rayés de l'identité (la variable superpose ses contours en text-stroke).
    Copiée depuis le dossier Satoshi comme la variable : la licence Fontshare (FF EULA, art. 02) interdit de redistribuer les
    fichiers de police, donc aucun .woff2 n'est versionné dans ce dépôt public. */
-fs.copyFileSync(path.join(path.dirname(POLICE), 'Satoshi-Black.woff2'), path.join(ICI, 'sortie', 'fonts', 'Satoshi-Black.woff2'))
+if (existe(POLICE)) fs.copyFileSync(path.join(path.dirname(POLICE), 'Satoshi-Black.woff2'), path.join(ICI, 'sortie', 'fonts', 'Satoshi-Black.woff2')); else await reprendreEnLigne('/fonts/Satoshi-Black.woff2', path.join(ICI, 'sortie', 'fonts', 'Satoshi-Black.woff2'))
 /* Polices de la marque « mood Tenkara » (15/09/2026) : fichiers libres (OFL) servis comme Satoshi, depuis commun/polices. */
 const dossierPolices = path.join(ICI, 'commun/polices')
 if (fs.existsSync(dossierPolices)) for (const f of fs.readdirSync(dossierPolices).filter(n => n.endsWith('.woff2'))) fs.copyFileSync(path.join(dossierPolices, f), path.join(ICI, 'sortie', 'fonts', f))
@@ -751,7 +775,7 @@ if (fs.existsSync(dossierPolices)) for (const f of fs.readdirSync(dossierPolices
 const FAVICON = 'data:image/svg+xml;base64,' + fs.readFileSync(path.join(LOCAL, 'favicon.svg')).toString('base64')
 fs.mkdirSync(path.join(ICI, 'sortie'), { recursive: true })
 fs.copyFileSync(path.join(LOCAL, 'favicon.svg'), path.join(ICI, 'sortie', 'favicon.svg'))
-if (fs.existsSync(OG_IMAGE_SOURCE)) fs.copyFileSync(OG_IMAGE_SOURCE, path.join(ICI, 'sortie', 'og-image.jpg')); else console.log('  ⚠ og-image.jpg introuvable, aucune image sociale copiée')
+if (existe(OG_IMAGE_SOURCE)) fs.copyFileSync(OG_IMAGE_SOURCE, path.join(ICI, 'sortie', 'og-image.jpg')); else await reprendreEnLigne('/og-image.jpg', path.join(ICI, 'sortie', 'og-image.jpg'))
 /* UN SEUL BUILD À LA FOIS. Plusieurs lanes construisent en parallèle depuis le
    03/09/2026 : deux écritures croisées de sortie/ donneraient une page à moitié
    écrite à l'outil de capture de l'autre. Le verrou est un dossier, atomique. */
@@ -1397,6 +1421,13 @@ for (const j of journal) {
   }
   const clampsCasses = [...t.matchAll(/clamp\([^)]*\d(?:rem|em|px|vw)\+\d[^)]*\)/g)]
   if (clampsCasses.length) { console.log(`  ECHEC ${j.fichier} : ${clampsCasses.length} clamp() sans espace autour du +`); erreurs++ }
+}
+/* Le manifeste n'est réécrit que par un build complet (toutes les sources présentes) : c'est lui qui permet au build
+   hors du Mac de reprendre en ligne les images dont la source n'est pas au dépôt. */
+if (imagesReprises) console.log(`  ${imagesReprises} image(s) reprise(s) sur ${SITE_EN_LIGNE} (source hors dépôt)`)
+else {
+  const manifeste = JSON.stringify(Object.fromEntries([...cacheImg].sort(([a], [b]) => a.localeCompare(b))), null, 1) + '\n'
+  if (!fs.existsSync(FICHIER_MANIFESTE) || fs.readFileSync(FICHIER_MANIFESTE, 'utf8') !== manifeste) fs.writeFileSync(FICHIER_MANIFESTE, manifeste)
 }
 console.log(erreurs ? `\n${erreurs} controle(s) en echec` : `\n${journal.length} page(s), tous les controles passent`)
 process.exit(erreurs ? 1 : 0)

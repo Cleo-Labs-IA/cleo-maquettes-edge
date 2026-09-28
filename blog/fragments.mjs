@@ -30,7 +30,15 @@ const COUVERTURE_DEFAUT = 'masse-pile'
    hors dépôt. Chaque article reçoit le visuel le moins utilisé de son thème (mots du slug, du titre, de la catégorie),
    les deux langues partagent le même, et le fil du blog ne montre jamais le même visuel deux cartes de suite. */
 const BANQUE = process.env.BANQUE_MONDE || '/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/'
-const MONDE = fs.existsSync(BANQUE) ? fs.readdirSync(BANQUE).filter(f => /^\d\d-.*\.jpg$/.test(f)).sort() : []
+/* 28/09/2026 : hors du Mac la banque n'est pas là (images hors dépôt). Seuls ses NOMS décident des couvertures ; ils sont
+   versionnés dans blog/banque-monde.json, réécrit ici à chaque passage sur le Mac. Les images, elles, sont reprises en
+   ligne par construire.mjs (commun/images-manifeste.json). */
+const LISTE_BANQUE = path.join(ICI, 'blog/banque-monde.json')
+const BANQUE_LA = process.env.SIMULER_CI !== '1' && fs.existsSync(BANQUE)
+const MONDE = BANQUE_LA ? fs.readdirSync(BANQUE).filter(f => /^\d\d-.*\.jpg$/.test(f)).sort()
+  : fs.existsSync(LISTE_BANQUE) ? JSON.parse(fs.readFileSync(LISTE_BANQUE, 'utf8')) : []
+if (BANQUE_LA) { const t = JSON.stringify(MONDE, null, 1) + '\n'; if (!fs.existsSync(LISTE_BANQUE) || fs.readFileSync(LISTE_BANQUE, 'utf8') !== t) fs.writeFileSync(LISTE_BANQUE, t) }
+if (!MONDE.length) { console.error('BANQUE D\'IMAGES INTROUVABLE : ni ' + BANQUE + ' ni blog/banque-monde.json, les couvertures changeraient toutes'); process.exit(1) }
 const THEMES = [
   // du plus précis au plus général ; 40 visuels au 23/09/2026 soir (01-20 puis 21-40 ajoutés par Naomie)
   [/medic|pharma|drug|anvisa|gmp|blister|prescription|melatonin|mélatonine/i, /^(22)-/],
