@@ -28,6 +28,9 @@ const EXCEPTIONS = {
   organisation: {
     slogan: 'retiré dans commun/seo.json (_retire) : il inscrit une marque tierce dans la définition de Cleo Labs.',
     contactPoint: 'retiré dans commun/seo.json (_retire) : deux adresses concurrentes, aucune choisie.',
+    foundingDate: 'retiré le 28/09/2026 (commun/seo.json, _retire.passe_finale_2026_09_28) : affiché nulle part sur le site.',
+    foundingLocation: 'idem : affiché nulle part sur le site (seule l’adresse du siège l’est).',
+    numberOfEmployees: 'idem : affiché nulle part sur le site.',
   },
   sameAs: {
     'https://www.crunchbase.com/organization/celo-labs': 'slug fautif (« celo ») : à corriger sur Crunchbase, pas à recopier.',

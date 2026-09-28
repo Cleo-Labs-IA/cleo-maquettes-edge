@@ -24,7 +24,8 @@
       "slogan": "champ 'slogan' present en ligne et au depot (layout.tsx:92). Non transcrit : liste noire, il inscrit une marque tierce dans la definition machine-lisible de Cleo Labs.",
       "sameAs_crunchbase": "l'entree Crunchbase des sameAs est retiree : son slug ecrit « celo » au lieu de « cleo ». 6 sameAs declares dans layout.tsx:193-200, 5 gardes ici. L'URL fautive n'est pas recopiee dans ce fichier, pour qu'aucun generateur ne puisse la reprendre par inadvertance.",
       "contactPoint": "aucune adresse de courriel n'est transcrite. Deux adresses concurrentes ont ete mesurees : celle qui commence par « contact », seule presente dans cleo-landing et servie 6 fois sur /fr, 12 fois sur /fr/terms ; et celle qui commence par « hello », presente uniquement dans pages/22-legal.html de la maquette. Le conflit est signale au rapport, aucune des deux n'est choisie ici.",
-      "founder_jobTitle_naomie": "jobTitle de Naomie Halioua non transcrit : quatre libelles concurrents mesures au depot. Conflit signale au rapport."
+      "founder_jobTitle_naomie": "jobTitle de Naomie Halioua non transcrit : quatre libelles concurrents mesures au depot. Conflit signale au rapport.",
+      "passe_finale_2026_09_28": "Retirés le 28/09/2026 (passe finale Customs API) car absents du site ou sans source traçable : « Europe's first AI compliance infrastructure for retailers », « multiply their processing capacity by 10x », foundingDate 2023, foundingLocation, numberOfEmployees 2-10, l'offre « Cleo Regulatory Scan », l'offre « Third-Party Due Diligence », « 10+ years » (Anaëlle Guez), la description « Engineer from École Polytechnique / Architect of MARIA » et alumniOf de Naomie Halioua, et son jobTitle null. Gardés : les chiffres canoniques affichés sur le site (106 pays, 25 000 réglementations, 19 000 autorités, 3 700 sources officielles). Le site affiche « CDO and co-founder » pour Naomie Halioua (page À propos) : à reposer en jobTitle si elle le décide."
     },
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -40,20 +41,10 @@
     },
     "image": "https://www.cleolabs.co/og-image.jpg",
     "description": {
-      "fr": "Cleo Labs développe MARIA (Multi-Agent Regulatory Intelligence Architecture), la première infrastructure IA de conformité pour les retailers en Europe. MARIA transforme 3 700+ sources réglementaires dans 106 pays en analyses d'impact en temps réel, permettant aux équipes conformité retail de multiplier par 10 leur capacité de traitement.",
-      "en": "Cleo Labs builds MARIA (Multi-Agent Regulatory Intelligence Architecture), Europe's first AI compliance infrastructure for retailers. MARIA turns 3,700+ regulatory sources across 106 countries into real-time impact analyses, helping retail compliance teams multiply their processing capacity by 10x."
+      "fr": "Cleo Labs développe MARIA (Multi-Agent Regulatory Intelligence Architecture) pour automatiser la conformité produit : 25 000 réglementations cartographiées, 19 000 autorités réglementaires suivies et 3 700 sources officielles dans 106 pays, chaque réponse citant son texte officiel.",
+      "en": "Cleo Labs builds MARIA (Multi-Agent Regulatory Intelligence Architecture) to automate product compliance: 25,000 regulations mapped, 19,000 regulatory authorities tracked and 3,700 official sources across 106 countries, every answer citing its official text."
     },
-    "foundingDate": "2023",
     "award": "Winner: The Pitch by Deel (Station F, 2026)",
-    "foundingLocation": {
-      "@type": "Place",
-      "name": "Neuilly-sur-Seine, France"
-    },
-    "numberOfEmployees": {
-      "@type": "QuantitativeValue",
-      "minValue": 2,
-      "maxValue": 10
-    },
     "areaServed": [
       {
         "@type": "Continent",
@@ -71,8 +62,8 @@
         "name": "Anaëlle Guez",
         "jobTitle": "CEO & Co-founder",
         "description": {
-          "fr": "10+ ans à l'intersection du droit et de la transformation numérique. Ancienne Chief Transformation Officer chez Havas Group.",
-          "en": "10+ years at the intersection of law and digital transformation. Former Chief Transformation Officer at Havas Group."
+          "fr": "Ancienne Chief Transformation Officer chez Havas Group.",
+          "en": "Former Chief Transformation Officer at Havas Group."
         },
         "url": "https://www.linkedin.com/in/anaelle-guez-ab341746/",
         "alumniOf": {
@@ -89,17 +80,7 @@
         "@type": "Person",
         "@id": "https://www.cleolabs.co/#naomie-halioua",
         "name": "Naomie Halioua",
-        "jobTitle": null,
-        "_jobTitle_trou": "quatre libelles concurrents au depot, aucun choisi ici : layout.tsx:125 et company/layout.tsx:76 'CRO & Co-founder' ; i18n/sections/social-proof.ts:150 'Co-founder & Chief Research Officer' / 'Co-fondatrice & Directrice de la Recherche' ; data/authors.json:5 'Co-founder & CRO, AI Research'. A trancher par Naomie.",
-        "description": {
-          "fr": "Ingénieure diplômée de l'École Polytechnique. Architecte de la technologie IA multi-agents MARIA.",
-          "en": "Engineer from École Polytechnique. Architect of the MARIA multi-agent AI technology."
-        },
         "url": "https://www.linkedin.com/in/naomiehalioua/",
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "École Polytechnique"
-        },
         "knowsAbout": [
           "Multi-agent AI systems",
           "Natural language processing",
@@ -133,28 +114,10 @@
         {
           "@type": "Offer",
           "itemOffered": {
-            "@type": "SoftwareApplication",
-            "name": "Cleo Regulatory Scan",
-            "applicationCategory": "BusinessApplication"
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
             "@type": "Service",
             "name": {
               "fr": "Automatisation de la conformité produit",
               "en": "Product Compliance Automation"
-            }
-          }
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": {
-              "fr": "Due Diligence tiers",
-              "en": "Third-Party Due Diligence"
             }
           }
         }
