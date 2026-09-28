@@ -80,12 +80,21 @@
         "@type": "Person",
         "@id": "https://www.cleolabs.co/#naomie-halioua",
         "name": "Naomie Halioua",
+        "jobTitle": "CDO & Co-founder",
+        "description": {
+          "fr": "MSc&T en intelligence artificielle de l'École polytechnique. Architecte du moteur multi-agents MARIA.",
+          "en": "MSc&T in Artificial Intelligence, École Polytechnique. Architect of the MARIA multi-agent engine."
+        },
         "url": "https://www.linkedin.com/in/naomiehalioua/",
         "knowsAbout": [
           "Multi-agent AI systems",
           "Natural language processing",
           "Regulatory technology"
-        ]
+        ],
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "École Polytechnique"
+        }
       }
     ],
     "knowsAbout": [
@@ -139,7 +148,8 @@
       "https://www.wikidata.org/wiki/Q138466568"
     ],
     "taxID": "FR20984567883",
-    "iso6523Code": "0009:FR20984567883"
+    "iso6523Code": "0009:FR20984567883",
+    "foundingDate": "2023"
   },
   "site": {
     "_source": "/Users/naomiehalioua/cleo-landing/src/app/[locale]/layout.tsx:256-277 (bloc WebSite) et 32-45 (alternates.languages), recoupe sur le HTML servi par /fr et /fr/company",
