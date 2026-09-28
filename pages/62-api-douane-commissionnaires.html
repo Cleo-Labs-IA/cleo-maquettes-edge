@@ -1,0 +1,163 @@
+<!--NAV-->
+<!-- ═══ CUSTOMS API, BROKERS (fr) ═══ généré par scripts/pages-api-douane.mjs, ne pas retoucher à la main.
+     Source : PR cleo-legal-public#53, captures réelles du 28/09/2026. -->
+<div class="dg">
+<section class="dg-hero" id="haut">
+  <div class="conteneur dg-hero-grille">
+    <div class="dg-hero-texte">
+      <p class="dg-surtitre">Pour les commissionnaires en douane, 3PL et équipes logistiques</p>
+      <h1>Transformez des données produit incomplètes en un dossier de classement que votre équipe peut vérifier.</h1>
+      <p class="dg-chapeau">Cleo renvoie des codes candidats, les questions manquantes, les notes tarifaires, les règles d’interprétation et un historique de validation complet.</p>
+      <div class="dg-actions"><a class="dg-cta" href="https://legaldata-public.cleolabs.co/docs/customs#dossier">Voir un exemple de dossier</a><a class="dg-cta-2" href="https://legaldata-public.cleolabs.co/docs/customs">Explorer l’API</a></div>
+      <p class="dg-petit">200 unités gratuites · sans carte · sans appel commercial</p>
+    </div>
+    <div class="dg-demo" data-dg-demo data-etat="questions" role="group" aria-label="Exemple : un T-shirt envoyé aux États-Unis">
+        <dl class="dg-demo-requete"><div><dt>Produit</dt><dd>T-shirt</dd></div><div><dt>Destination</dt><dd>États-Unis</dd></div></dl>
+        <div class="dg-demo-corps" aria-live="polite">
+          <div data-vue="questions">
+            <p class="dg-statut"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 5.5v5.5M10 14.2v.3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg><span><b>À vérifier par vous</b> · 3 questions d’abord</span></p>
+            <ol class="dg-questions"><li>Le vêtement est-il en maille ou crocheté (chapitre 61), ou tissé (chapitre 62) ?</li><li>Quelle est sa composition en fibres, en poids (par exemple coton 60 %, polyester 40 %) ?</li><li>Est-il pour hommes ou garçonnets, pour femmes ou fillettes, ou pour bébés ?</li></ol>
+            <button type="button" class="dg-cta-2" data-aller="faits">Y répondre</button>
+          </div>
+          <div data-vue="faits" hidden>
+            <p class="dg-statut"><span><b>Vos réponses</b></span></p>
+            <dl class="dg-faits"><div><dt>Maille ou tissé ?</dt><dd>Maille</dd></div><div><dt>Porté par ?</dt><dd>Hommes</dd></div><div><dt>Matière principale</dt><dd>Coton, 100 %</dd></div></dl>
+            <button type="button" class="dg-cta-2" data-aller="reponse">Classer avec ces réponses</button>
+          </div>
+          <div data-vue="reponse" hidden>
+            <p class="dg-statut dg-statut-pret"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.7 2.7L14.2 7.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Prêt pour votre validation</b></span></p>
+            <p class="dg-niveau">Code international, 6 chiffres</p>
+            <p class="dg-code">6109 10</p>
+            <p class="dg-code-titre">T-shirts, maillots de corps et gilets de corps, de coton, en bonneterie</p>
+            <p class="dg-source">Source : <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926">Chapitre 61, note 1</a> (texte officiel)</p>
+            <button type="button" class="dg-lien" data-aller="questions">Recommencer</button>
+          </div>
+        </div>
+        <div class="dg-demo-pied"><p>Réponse réelle capturée le 28 septembre 2026, traduite de l’anglais</p><a href="https://legaldata-public.cleolabs.co/playground?tab=classify">Essayer en direct dans le sandbox</a></div>
+      </div>
+  </div>
+</section>
+
+<section class="dg-citation" aria-label="Ce que disent les acheteurs">
+  <div class="conteneur">
+    <blockquote><p>« Nous devons pouvoir expliquer au CBP comment nous sommes arrivés à un classement » <a href="https://www.reddit.com/r/CustomsBroker/comments/1m9vdpx/are_custom_brokers_in_danger_of_being_replaced_by/">un commissionnaire sur r/CustomsBroker, traduit de l’anglais</a></p></blockquote>
+  </div>
+</section>
+
+<section class="dg-section" id="comment">
+  <div class="conteneur">
+    <h2>Comment ça marche</h2>
+    <ol class="dg-etapes">
+      <li class="dg-carte"><span class="dg-etape-icone"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9l10-5 10 5v10l-10 5-10-5z"/><path d="M4 9l10 5 10-5M14 14v10"/></svg></span><h3>1. Envoyez le produit</h3><p>Les descriptions des clients telles qu’elles arrivent : une ligne, un CSV, ou un lot avec un statut par ligne.</p></li>
+      <li class="dg-carte"><span class="dg-etape-icone"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="18" height="21" rx="2.5"/><path d="M9 10h10M9 14h6M10 19l2.2 2.2L17 16.5"/></svg></span><h3>2. Recevez le code, ou les questions qui manquent</h3><p>Les candidats avec les notes qui les fondent et ceux écartés, ou les questions à renvoyer.</p></li>
+      <li class="dg-carte"><span class="dg-etape-icone"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3.5v12M9 11l5 5 5-5"/><rect x="4" y="19" width="20" height="5.5" rx="2"/></svg></span><h3>3. Validez, puis renvoyez le code</h3><p>Un relecteur nommé valide, la ligne se verrouille, le dossier et les lignes validées s’exportent.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="dg-section dg-teinte" id="exemple">
+  <div class="conteneur">
+    <h2>Un code candidat, avec la note qui le fonde</h2>
+    <div class="dg-exemple">
+        <article class="dg-carte dg-reponse" aria-label="Exemple de réponse">
+          <p class="dg-petit">Un T-shirt homme en coton, en maille, déclaré en France. Réponse réelle, capturée le 28 septembre 2026, traduite de l’anglais.</p>
+          <p class="dg-statut dg-statut-pret"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.7 2.7L14.2 7.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Prêt pour votre validation</b></span></p>
+          <p class="dg-niveau">Code UE, 8 chiffres</p>
+          <p class="dg-code">6109 10 00</p>
+          <p class="dg-code-titre">T-shirts, maillots de corps et gilets de corps, de coton, en bonneterie. Ligne : « de coton »</p>
+          <p class="dg-source">Source : <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926">Chapitre 61, note complémentaire 2</a>, <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926">Chapitre 61, note 1</a> (texte officiel)</p>
+          <p class="dg-suite">Aussi pesé : 6104 22 00, écarté. Votre relecteur valide, demande des modifications ou rejette ; la décision est nommée, datée et verrouillée, et seules les lignes validées s’exportent.</p>
+        </article>
+    </div>
+  </div>
+</section>
+
+<section class="dg-section" id="perimetre">
+  <div class="conteneur dg-duo">
+    <div class="dg-carte">
+      <h2>Pas un moteur de recherche de codes SH de plus</h2>
+      <ul class="dg-puces"><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Pas une recherche gratuite de plus : elle demande les faits dont dépend le code.</span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Jamais un code seul avec un score opaque : les candidats, leurs raisons et la source officielle.</span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Une liste de couverture précise, pas une promesse vague : 112 territoires sur 249 à la ligne nationale. <a href="https://legaldata-public.cleolabs.co/docs/customs#coverage">Voir la liste</a></span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Elle parle à vos systèmes (API, lots, Shopify ou CSV, webhooks, MCP) au lieu d’ajouter un tableau de bord.</span></li></ul>
+    </div>
+    <div class="dg-carte">
+      <h2>Ce qu’elle ne fait pas</h2>
+      <ul class="dg-puces"><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg><span>Ni une plateforme de transit, ni un commissionnaire, ni un importateur : aucune réservation, aucun suivi, aucun dépôt.</span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg><span>Aucune décision douanière : seule une autorité douanière en rend une.</span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg><span>137 territoires sur 249 répondent à 6 chiffres seulement. Aux États-Unis, les chiffres au-delà du sixième se fixent avec un commissionnaire en douane agréé.</span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg><span>Le coût peut être marqué partiel : un droit manquant est nommé, jamais deviné.</span></li></ul>
+      <p class="dg-renvoi"><a href="https://legaldata-public.cleolabs.co/docs/customs#not-yet">La liste complète dans la documentation</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="dg-section dg-teinte" id="tarifs">
+  <div class="conteneur">
+    <h2>Commencez gratuitement. Payez au mois pour le volume.</h2>
+    <div class="dg-plans">
+      <article class="dg-carte dg-plan">
+        <h3>Sandbox</h3>
+        <p class="dg-prix">0 €</p>
+        <p class="dg-petit">200 unités, à vie · sans carte</p>
+        <p class="dg-debit">Tous les endpoints</p>
+        <a class="dg-cta" data-cta="signup" href="https://legaldata-public.cleolabs.co/signup">Obtenir une clé API</a>
+      </article>
+      <article class="dg-carte dg-plan">
+        <h3>Starter</h3>
+        <p class="dg-prix">100 € <small>par mois</small></p>
+        <p class="dg-petit">Ou 80 € par mois facturé à l’année · résiliable à tout moment</p>
+        <p class="dg-debit">100 000 unités par mois · 60 requêtes par minute</p>
+        <a class="dg-cta-2" href="https://legaldata-public.cleolabs.co/buy/starter?cadence=monthly">Choisir Starter</a>
+      </article>
+      <article class="dg-carte dg-plan">
+        <h3>Pro</h3>
+        <p class="dg-prix">349 € <small>par mois</small></p>
+        <p class="dg-petit">Ou 279 € par mois facturé à l’année · résiliable à tout moment</p>
+        <p class="dg-debit">1 000 000 unités par mois · 300 requêtes par minute</p>
+        <a class="dg-cta-2" href="https://legaldata-public.cleolabs.co/buy/pro?cadence=monthly">Choisir Pro</a>
+      </article>
+    </div>
+    <div class="dg-entreprise"><p>Un volume ou des conditions Enterprise ?</p><a class="dg-cta-2" href="mailto:hello@cleolabs.co?subject=Customs%20API">Nous écrire</a><a class="dg-lien-texte" href="https://legaldata-public.cleolabs.co/pricing">Voir le poids des requêtes</a></div>
+  </div>
+</section>
+
+<section class="dg-section" id="questions">
+  <div class="conteneur">
+    <h2>Questions</h2>
+    <div class="dg-faq" data-schema="faq">
+      <details>
+        <summary>Qui porte la décision ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Votre équipe. Cleo est un copilote : il propose des candidats avec leurs sources, un relecteur nommé valide, et chaque décision reste dans l’historique.</div>
+      </details>
+      <details>
+        <summary>Que puis-je transmettre à un client ou à un transporteur ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Un dossier JSON ou PDF avec le code, les notes et les sources, et son état de validation, conservé 400 jours ; ou un CSV des seules lignes validées.</div>
+      </details>
+      <details>
+        <summary>Le code est-il définitif ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Non. C’est un candidat avec ses sources, à valider. L’importateur, ou le commissionnaire qui agit pour lui, décide de ce qui est déclaré.</div>
+      </details>
+      <details>
+        <summary>Combien coûte un appel ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Un classement coûte 1 unité, plus 1 par élément d’un kit. Le Sandbox donne 200 unités, sans carte.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="dg-section dg-teinte dg-final" id="commencer">
+  <div class="conteneur">
+    <h2>Essayez-la sur un produit de votre catalogue.</h2>
+    <div class="dg-actions"><a class="dg-cta" data-cta="signup" href="https://legaldata-public.cleolabs.co/signup">Obtenir une clé API</a><a class="dg-cta-2" href="mailto:hello@cleolabs.co?subject=Customs%20API">Parler à un ingénieur douane</a></div>
+    <p class="dg-petit dg-avertissement">Ces suggestions sont données à titre d’information. Le classement douanier final, les licences d’exportation et la certification des produits doivent être validés par un commissionnaire agréé ou une autorité compétente. Une erreur de classement ou un contrôle de double usage manqué engage la responsabilité juridique.</p>
+  </div>
+</section>
+</div>
+<script>
+(function(){
+  var d = document.querySelector('[data-dg-demo]'); if (!d) return;
+  d.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-aller]'); if (!b) return;
+    var etat = b.getAttribute('data-aller');
+    d.setAttribute('data-etat', etat);
+    [].forEach.call(d.querySelectorAll('[data-vue]'), function (v) { v.hidden = v.getAttribute('data-vue') !== etat });
+    var suite = d.querySelector('[data-vue="' + etat + '"] button'); if (suite) suite.focus({ preventScroll: true });
+  });
+})();
+</script>
+<!--PIED-->

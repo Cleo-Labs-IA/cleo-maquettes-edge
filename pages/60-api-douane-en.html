@@ -1,0 +1,216 @@
+<!--NAV-->
+<!-- ═══ CUSTOMS API, DEV (en) ═══ généré par scripts/pages-api-douane.mjs, ne pas retoucher à la main.
+     Source : PR cleo-legal-public#53, captures réelles du 28/09/2026. -->
+<div class="dg">
+<section class="dg-hero" id="haut">
+  <div class="conteneur dg-hero-grille">
+    <div class="dg-hero-texte">
+      <p class="dg-surtitre">For ERP, TMS, e-commerce and brokerage software teams</p>
+      <h1>Build customs classification into your product without maintaining tariff schedules.</h1>
+      <p class="dg-chapeau">Send product facts, destination and date. Cleo returns the available HS or national code, missing questions, sources and review status through one API.</p>
+      <div class="dg-actions"><a class="dg-cta" data-cta="signup" href="https://legaldata-public.cleolabs.co/signup">Get an API key</a><a class="dg-cta-2" href="https://legaldata-public.cleolabs.co/docs/customs">Read the documentation</a></div>
+      <p class="dg-petit">200 free units · no card · no sales call</p>
+    </div>
+    <div class="dg-demo" data-dg-demo data-etat="questions" role="group" aria-label="Example: a T-shirt sent to the United States">
+        <dl class="dg-demo-requete"><div><dt>Product</dt><dd>T-shirt</dd></div><div><dt>Destination</dt><dd>United States</dd></div></dl>
+        <div class="dg-demo-corps" aria-live="polite">
+          <div data-vue="questions">
+            <p class="dg-statut"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 5.5v5.5M10 14.2v.3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg><span><b>Needs your review</b> · 3 questions first</span></p>
+            <ol class="dg-questions"><li>Is the garment knitted or crocheted (chapter 61) or woven (chapter 62)?</li><li>What is the fibre composition by weight (e.g. cotton 60%, polyester 40%)?</li><li>Is it for men or boys, for women or girls, or for babies?</li></ol>
+            <button type="button" class="dg-cta-2" data-aller="faits">Answer them</button>
+          </div>
+          <div data-vue="faits" hidden>
+            <p class="dg-statut"><span><b>Your answers</b></span></p>
+            <dl class="dg-faits"><div><dt>Knitted or woven?</dt><dd>Knitted</dd></div><div><dt>Worn by?</dt><dd>Men</dd></div><div><dt>Main material</dt><dd>Cotton, 100%</dd></div></dl>
+            <button type="button" class="dg-cta-2" data-aller="reponse">Classify with these answers</button>
+          </div>
+          <div data-vue="reponse" hidden>
+            <p class="dg-statut dg-statut-pret"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.7 2.7L14.2 7.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Ready for your review</b></span></p>
+            <p class="dg-niveau">International code, 6 digits</p>
+            <p class="dg-code">6109 10</p>
+            <p class="dg-code-titre">T-shirts, singlets and other vests; of cotton, knitted or crocheted</p>
+            <p class="dg-source">Source: <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926">Chapter 61 Note 1</a> (official text)</p>
+            <button type="button" class="dg-lien" data-aller="questions">Start again</button>
+          </div>
+        </div>
+        <div class="dg-demo-pied"><p>Real answer captured 28 September 2026</p><a href="https://legaldata-public.cleolabs.co/playground?tab=classify">Try it live in the sandbox</a></div>
+      </div>
+  </div>
+</section>
+
+<section class="dg-citation" aria-label="What buyers say">
+  <div class="conteneur">
+    <blockquote><p>“what is the equivalent HTS for Brazil, Russia, China” <a href="https://www.reddit.com/r/CustomsBroker/comments/zy9seo/world_tariff/">a user on r/CustomsBroker</a></p></blockquote>
+  </div>
+</section>
+
+<section class="dg-section" id="comment">
+  <div class="conteneur">
+    <h2>How it works</h2>
+    <ol class="dg-etapes">
+      <li class="dg-carte"><span class="dg-etape-icone"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9l10-5 10 5v10l-10 5-10-5z"/><path d="M4 9l10 5 10-5M14 14v10"/></svg></span><h3>1. Send the product</h3><p>One item or a batch of 2,000, by REST, TypeScript SDK or MCP.</p></li>
+      <li class="dg-carte"><span class="dg-etape-icone"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3.5" width="18" height="21" rx="2.5"/><path d="M9 10h10M9 14h6M10 19l2.2 2.2L17 16.5"/></svg></span><h3>2. Get the code, or the questions it still needs</h3><p>The level each country serves, and questions instead of guesses, with sources.</p></li>
+      <li class="dg-carte"><span class="dg-etape-icone"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3.5v12M9 11l5 5 5-5"/><rect x="4" y="19" width="20" height="5.5" rx="2"/></svg></span><h3>3. Approve, then write back</h3><p>Approved codes write back, and any code can be re-checked on a date.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="dg-section dg-teinte" id="exemple">
+  <div class="conteneur">
+    <h2>One answer your product can show</h2>
+    <div class="dg-exemple dg-exemple-duo">
+        <article class="dg-carte dg-reponse" aria-label="Example answer">
+          <p class="dg-petit">A men’s knitted cotton T-shirt sent to France. Real answer, captured 28 September 2026.</p>
+          <p class="dg-statut dg-statut-pret"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.7 2.7L14.2 7.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Ready for your review</b></span></p>
+          <p class="dg-niveau">EU code, 8 digits</p>
+          <p class="dg-code">6109 10 00</p>
+          <p class="dg-code-titre">T-shirts, singlets and other vests; of cotton, knitted or crocheted. Line: “Of cotton”</p>
+          <p class="dg-source">Source: <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926">Chapter 61 Additional Note 2</a>, <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926">Chapter 61 Note 1</a> (official text)</p>
+        </article>
+        <div class="dg-code-bloc">
+          <p class="dg-petit">Request, as sent</p>
+          <pre class="dg-pre"><code>curl -X POST https://api.legaldata.cleolabs.co/v2/customs/classifications \
+  -H "Authorization: Bearer $CLEO_API_KEY" -H "Content-Type: application/json" \
+  -d @- &lt;&lt;'JSON'
+{ "item_id": "SKU-TS-FR", "country": "FR", "system": "cn8",
+  "description": "Men's knitted cotton T-shirt",
+  "facts": { "material": "cotton", "process": "knitted", "audience": "men",
+    "composition": [{ "material": "cotton", "percent": 100 }] } }
+JSON</code></pre>
+          <details class="dg-plie">
+            <summary>See the full response</summary>
+            <pre class="dg-pre"><code>{
+  "status": "classified",
+  "candidates": [
+    {
+      "code": "61091000",
+      "system": "cn8",
+      "title": {
+        "en": "Of cotton",
+        "fr": "de coton"
+      },
+      "confidence": 0.95,
+      "evidence": [
+        {
+          "kind": "additional_note",
+          "ref": "Chapter 61 Additional Note 2"
+        },
+        {
+          "kind": "chapter_note",
+          "ref": "Chapter 61 Note 1"
+        }
+      ]
+    },
+    {
+      "code": "61042200",
+      "system": "cn8",
+      "title": {
+        "en": "Of cotton",
+        "fr": "de coton"
+      },
+      "confidence": 0.75,
+      "evidence": [
+        {
+          "kind": "chapter_note",
+          "ref": "Chapter 61 Note 9"
+        }
+      ]
+    }
+  ]
+}</code></pre>
+            <p class="dg-petit">request_id 96745a0f-305f-4188-ba21-42edb7ebc449 · top 2 of 5 candidates, evidence excerpts removed</p>
+          </details>
+        </div>
+    </div>
+  </div>
+</section>
+
+<section class="dg-section" id="perimetre">
+  <div class="conteneur dg-duo">
+    <div class="dg-carte">
+      <h2>Not another HS search box</h2>
+      <ul class="dg-puces"><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Not a free lookup box: it asks for the facts a code depends on.</span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Never one code with an opaque score: the candidates, why, and the official source.</span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>A precise coverage list, not a vague promise: 112 of 249 territories at the national line. <a href="https://legaldata-public.cleolabs.co/docs/customs#coverage">See the list</a></span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>It talks to your systems (API, batches, Shopify or CSV, webhooks, MCP) instead of adding a dashboard.</span></li></ul>
+    </div>
+    <div class="dg-carte">
+      <h2>What it doesn’t do</h2>
+      <ul class="dg-puces"><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg><span>Not your users’ customs broker or importer of record. It files nothing.</span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg><span>No customs ruling: only a customs authority issues one.</span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg><span>137 of 249 territories answer at 6 digits only. In the US, the digits past 6 for an entry are set with a licensed customs broker.</span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg><span>The cost can be marked partial: a missing duty is named, never guessed.</span></li></ul>
+      <p class="dg-renvoi"><a href="https://legaldata-public.cleolabs.co/docs/customs#not-yet">Full list in the docs</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="dg-section dg-teinte" id="tarifs">
+  <div class="conteneur">
+    <h2>Start free. Pay monthly for volume.</h2>
+    <div class="dg-plans">
+      <article class="dg-carte dg-plan">
+        <h3>Sandbox</h3>
+        <p class="dg-prix">€0</p>
+        <p class="dg-petit">200 units, lifetime · no card</p>
+        <p class="dg-debit">All endpoints</p>
+        <a class="dg-cta" data-cta="signup" href="https://legaldata-public.cleolabs.co/signup">Get an API key</a>
+      </article>
+      <article class="dg-carte dg-plan">
+        <h3>Starter</h3>
+        <p class="dg-prix">€100 <small>/ month</small></p>
+        <p class="dg-petit">Or €80/mo billed yearly · cancel anytime</p>
+        <p class="dg-debit">100,000 units / month · 60 requests / minute</p>
+        <a class="dg-cta-2" href="https://legaldata-public.cleolabs.co/buy/starter?cadence=monthly">Choose Starter</a>
+      </article>
+      <article class="dg-carte dg-plan">
+        <h3>Pro</h3>
+        <p class="dg-prix">€349 <small>/ month</small></p>
+        <p class="dg-petit">Or €279/mo billed yearly · cancel anytime</p>
+        <p class="dg-debit">1,000,000 units / month · 300 requests / minute</p>
+        <a class="dg-cta-2" href="https://legaldata-public.cleolabs.co/buy/pro?cadence=monthly">Choose Pro</a>
+      </article>
+    </div>
+    <div class="dg-entreprise"><p>Enterprise volume or terms?</p><a class="dg-cta-2" href="mailto:hello@cleolabs.co?subject=Customs%20API">Talk to us</a><a class="dg-lien-texte" href="https://legaldata-public.cleolabs.co/pricing">See request weight</a></div>
+  </div>
+</section>
+
+<section class="dg-section" id="questions">
+  <div class="conteneur">
+    <h2>Questions</h2>
+    <div class="dg-faq" data-schema="faq">
+      <details>
+        <summary>Is it predictable to integrate?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">Every response carries a request id to quote to support. Batches report an error per line, a retry with the same idempotency key within 24 hours never runs twice, and webhooks are signed.</div>
+      </details>
+      <details>
+        <summary>Which countries?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">112 of 249 territories answer at the national tariff line, the rest at 6 digits. Each answer says which level it used.</div>
+      </details>
+      <details>
+        <summary>Is the code final?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">No. It is a candidate with its sources, for your review. The importer, or the broker acting for them, decides what is declared.</div>
+      </details>
+      <details>
+        <summary>What does a call cost?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
+        <div class="reponse">One classification costs 1 unit, plus 1 per part of a kit. The Sandbox gives 200 units, no card.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="dg-section dg-teinte dg-final" id="commencer">
+  <div class="conteneur">
+    <h2>Try it on one product from your catalog.</h2>
+    <div class="dg-actions"><a class="dg-cta" data-cta="signup" href="https://legaldata-public.cleolabs.co/signup">Get an API key</a><a class="dg-cta-2" href="mailto:hello@cleolabs.co?subject=Customs%20API">Talk to a customs engineer</a></div>
+    <p class="dg-petit dg-avertissement">These suggestions are informational only. Final customs classification, export licensing and product certification must be validated by a licensed broker or competent authority. Misclassification or missed dual-use controls carry legal liability.</p>
+  </div>
+</section>
+</div>
+<script>
+(function(){
+  var d = document.querySelector('[data-dg-demo]'); if (!d) return;
+  d.addEventListener('click', function (e) {
+    var b = e.target.closest && e.target.closest('[data-aller]'); if (!b) return;
+    var etat = b.getAttribute('data-aller');
+    d.setAttribute('data-etat', etat);
+    [].forEach.call(d.querySelectorAll('[data-vue]'), function (v) { v.hidden = v.getAttribute('data-vue') !== etat });
+    var suite = d.querySelector('[data-vue="' + etat + '"] button'); if (suite) suite.focus({ preventScroll: true });
+  });
+})();
+</script>
+<!--PIED-->
