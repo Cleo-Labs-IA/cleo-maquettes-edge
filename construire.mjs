@@ -1369,7 +1369,7 @@ const llms = (langue, complet) => {
   const t = (fr, en) => langue === 'fr' ? fr : en
   const pagesL = publiques.filter(f => (f.endsWith('-en.html') || f.startsWith('blog-') && (ARTICLES_BLOG.find(a => a.sortie === f) || {}).langue === 'en') === (langue === 'en'))
   const blog = pagesL.filter(f => f.startsWith('blog-')), hors = pagesL.filter(f => !f.startsWith('blog-'))
-  const ligne = f => { const sp = SEO.pages[f] || {}; return `- [${(sp.titre || f).replace(/ \| Cleo Labs$/, '')}](${HOTE}${cheminDe(f)})${sp.description ? ': ' + sp.description : ''}` }
+  const ligne = f => { const sp = SEO.pages[f] || {}; return `- [${(sp.titre || f).replace(/ \| Cleo( Labs)?$/, '')}](${HOTE}${cheminDe(f)})${sp.description ? ': ' + sp.description : ''}` }
   const financeurs = (L.financeurs || []).map(x => x.name).filter(Boolean).join(', ')
   const fondatrices = (E.founder || []).map(x => x.name + (x.jobTitle ? ` (${x.jobTitle})` : '')).join(', ')
   const adresse = E.address ? [E.address.addressLocality, E.address.addressCountry === 'FR' ? 'France' : E.address.addressCountry].filter(Boolean).join(', ') : ''
