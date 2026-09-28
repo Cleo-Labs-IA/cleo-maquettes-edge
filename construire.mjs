@@ -25,7 +25,8 @@ const V6_ROUTES = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/v6-routes.js
    cleo-landing soit réglée sur « Only Preview Deployments » (sinon l'alias répond 302 vers la connexion Vercel). */
 const REDIRECTIONS_HERITEES = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/redirections-heritees.json'), 'utf8')).regles
 const ANCIEN_SITE = 'https://cleo-landing-cleo-academys-projects.vercel.app' // le projet cleo-landing relié à GitHub, équipe cleo-academys-projects, celui qui servait www ; l'homonyme de naomie-7307 est une copie orpheline de 146 jours
-const RELAIS_ANCIEN_SITE = ['/api/:path*', '/:lang(en|fr)/privacy'].map(s => ({ source: s, destination: ANCIEN_SITE + s }))
+const RELAIS_ANCIEN_SITE = [{ source: '/api/:path*', destination: ANCIEN_SITE + '/api/:path*' },
+  { source: '/:lang(en|fr)/privacy', destination: ANCIEN_SITE + '/:lang/privacy' }] // la politique de confidentialité n'a pas été portée en V6
 /* 28/09/2026 : les landings Google Ads vivent dans cleo-landing (/en|fr|es/lp/*) et passent par ce relais, avec leurs
    ressources (_next, vidéos, logos, favicons). Posées à la main le 25/09 dans le vercel.json de sortie, elles
    disparaissaient au build suivant (relais du blog) : 18 landings en 404 le 28/09 au matin. Elles vont EN TÊTE des
