@@ -33,19 +33,19 @@ posthog.init('phc_p3yazFL1GvCzBnSlKERFqM0q7hu7TsDVcGyvgHsWMDv',{api_host:'https:
 function coupePosthog(){try{if(w.posthog&&w.posthog.opt_out_capturing)w.posthog.opt_out_capturing()}catch(e){}
 d.cookie.split(';').forEach(function(c){var n=c.split('=')[0].trim();if(/^ph_/.test(n)){d.cookie=n+'=; Max-Age=0; Path=/';d.cookie=n+'=; Max-Age=0; Path=/; Domain=.cleolabs.co'}});
 try{for(var i=localStorage.length-1;i>=0;i--){var k=localStorage.key(i);if(k&&/^ph_/.test(k))localStorage.removeItem(k)}}catch(e){}}
-var L=FR?{t:'Cookies et mesure d’audience',x:'Avec votre accord, nous mesurons la fréquentation du site avec PostHog (pages vues, clics, enregistrement des sessions) pour l’améliorer. Refuser ne change rien à votre visite.',pol:'Politique de confidentialité',url:'/fr/privacy',non:'Tout refuser',oui:'Tout accepter',perso:'Personnaliser',nec:'Nécessaires, toujours actifs : le cookie qui garde votre choix sur cet appareil 6 mois.',mes:'Mesure d’audience (PostHog)',mesx:'Pages vues, clics et enregistrement des sessions, hébergés dans l’Union européenne.',ok:'Enregistrer mes choix',lien:'Cookies'}
-:{t:'Cookies and audience measurement',x:'With your consent, we measure site traffic with PostHog (page views, clicks, session recordings) to improve it. Refusing changes nothing about your visit.',pol:'Privacy policy',url:'/en/privacy',non:'Refuse all',oui:'Accept all',perso:'Customize',nec:'Strictly necessary, always on: the cookie that keeps your choice on this device for 6 months.',mes:'Audience measurement (PostHog)',mesx:'Page views, clicks and session recordings, hosted in the European Union.',ok:'Save my choices',lien:'Cookies'};
+var L=FR?{c:'Avec votre accord, nous mesurons l’audience avec PostHog.',t:'Cookies et mesure d’audience',x:'Avec votre accord, nous mesurons la fréquentation du site avec PostHog (pages vues, clics, enregistrement des sessions) pour l’améliorer. Refuser ne change rien à votre visite.',pol:'Politique de confidentialité',url:'/fr/privacy',non:'Tout refuser',oui:'Tout accepter',perso:'Personnaliser',nec:'Nécessaires, toujours actifs : le cookie qui garde votre choix sur cet appareil 6 mois.',mes:'Mesure d’audience (PostHog)',mesx:'Pages vues, clics et enregistrement des sessions, hébergés dans l’Union européenne.',ok:'Enregistrer mes choix',lien:'Cookies'}
+:{c:'With your consent, we measure traffic with PostHog.',t:'Cookies and audience measurement',x:'With your consent, we measure site traffic with PostHog (page views, clicks, session recordings) to improve it. Refusing changes nothing about your visit.',pol:'Privacy policy',url:'/en/privacy',non:'Refuse all',oui:'Accept all',perso:'Customize',nec:'Strictly necessary, always on: the cookie that keeps your choice on this device for 6 months.',mes:'Audience measurement (PostHog)',mesx:'Page views, clicks and session recordings, hosted in the European Union.',ok:'Save my choices',lien:'Cookies'};
 var bandeau=null;
 function decide(ok){var avant=choix();garde(ok);if(ok)chargePosthog();else if(avant!==false)coupePosthog();ferme()}
 function ferme(){if(bandeau){bandeau.remove();bandeau=null}}
-function ouvre(detail){ferme();var b=d.createElement('div');b.className='cleo-cc';b.setAttribute('role','region');b.setAttribute('aria-label',L.t);
-b.innerHTML='<p class="cleo-cc-t">'+L.t+'</p><p class="cleo-cc-x">'+L.x+' <a href="'+L.url+'">'+L.pol+'</a></p>'
+function ouvre(detail){ferme();var b=d.createElement('div');b.className='cleo-cc'+(detail?' cleo-cc-detail':'');b.setAttribute('role','region');b.setAttribute('aria-label',L.t);
+b.innerHTML='<p class="cleo-cc-t">'+L.t+'</p><p class="cleo-cc-x">'+L.x+' <a href="'+L.url+'">'+L.pol+'</a></p><p class="cleo-cc-court">'+L.c+' <a href="'+L.url+'">'+L.pol+'</a></p>'
 +'<div class="cleo-cc-perso"'+(detail?'':' hidden')+'><p class="cleo-cc-nec">'+L.nec+'</p><label class="cleo-cc-opt"><input type="checkbox" name="analytique"'+(choix()?' checked':'')+'> <span><b>'+L.mes+'</b><br>'+L.mesx+'</span></label></div>'
 +'<div class="cleo-cc-actions"><button type="button" class="cleo-cc-b" data-cc="non">'+L.non+'</button><button type="button" class="cleo-cc-b" data-cc="oui">'+L.oui+'</button>'
 +'<button type="button" class="cleo-cc-l" data-cc="perso"'+(detail?' hidden':'')+'>'+L.perso+'</button><button type="button" class="cleo-cc-l" data-cc="ok"'+(detail?'':' hidden')+'>'+L.ok+'</button></div>';
 b.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('[data-cc]');if(!t)return;var a=t.getAttribute('data-cc');
 if(a==='oui')decide(true);else if(a==='non')decide(false);else if(a==='ok')decide(!!b.querySelector('input[name=analytique]').checked);
-else{b.querySelector('.cleo-cc-perso').hidden=false;t.hidden=true;b.querySelector('[data-cc=ok]').hidden=false;b.querySelector('input').focus()}});
+else{b.classList.add('cleo-cc-detail');b.querySelector('.cleo-cc-perso').hidden=false;t.hidden=true;b.querySelector('[data-cc=ok]').hidden=false;b.querySelector('input').focus()}});
 d.body.appendChild(b);bandeau=b}
 w.cleoCookies={ouvrir:function(){ouvre(true)}};
 var c0=choix();if(c0===true)chargePosthog();
@@ -72,12 +72,30 @@ if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',pret);else pre
 .cleo-cc button:focus-visible,.cleo-cc a:focus-visible,.cleo-cc input:focus-visible{outline:2px solid #8A93FF;outline-offset:2px}
 .cleo-cc-pied{background:none;border:0;padding:10px 0;min-height:44px;font:inherit;color:inherit;cursor:pointer}
 .cleo-cc-pied:hover{text-decoration:underline}
-@media (max-width:560px){.cleo-cc{left:16px;right:16px;bottom:16px;max-width:none;padding:16px 18px}}
-/* 28/09/2026 : sur ordinateur, une carte compacte en bas à droite, pour ne plus couvrir le titre et les boutons du haut de page
-   (colonne de gauche). Même texte, mêmes boutons, même parité refuser = accepter ; le téléphone (≤ 560 px) ne change pas. */
-@media (min-width:561px){.cleo-cc{left:auto;right:24px;bottom:24px;max-width:400px;padding:16px 18px;font-size:0.8125rem;line-height:1.5}
+.cleo-cc-court{display:none}
+/* 28/09/2026 (passe finale) : au téléphone, une barre basse au lieu d'une carte qui couvrait la démo (≤ 22 % d'un écran de
+   844 px). Une phrase courte + le lien vers la politique, Tout refuser et Tout accepter côte à côte, même taille, même style,
+   Personnaliser en bouton texte. « Personnaliser » (ou le lien « Cookies » du pied) rouvre le texte complet et le choix fin.
+   Comportement, cookie et parité inchangés. */
+@media (max-width:560px){.cleo-cc{left:0;right:0;bottom:0;max-width:none;border-radius:14px 14px 0 0;padding:12px 16px calc(10px + env(safe-area-inset-bottom,0px));font-size:0.8125rem;line-height:1.45}
+.cleo-cc:not(.cleo-cc-detail) .cleo-cc-t,.cleo-cc:not(.cleo-cc-detail) .cleo-cc-x{display:none}
+.cleo-cc:not(.cleo-cc-detail) .cleo-cc-court{display:block;margin:0}
+.cleo-cc-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.cleo-cc-b{min-height:44px;padding:8px 10px}
+.cleo-cc-l{grid-column:1 / -1;min-height:40px;padding:2px 0}}
+/* 28/09/2026 : sur ordinateur, une carte compacte en bas à droite, pour ne plus couvrir le titre et les boutons du haut de page.
+   Passe finale du 28/09 : la carte de 170 à 189 px couvrait encore la bande de citation (bas à 746–818 px sur un écran de
+   900). Fermée, elle tient donc sur une ligne (≈ 64 px) : la phrase courte + la politique, Tout refuser, Tout accepter,
+   Personnaliser. Personnaliser rouvre la carte complète (texte long, case PostHog). Parité refuser = accepter inchangée. */
+@media (min-width:561px){.cleo-cc{left:auto;right:16px;bottom:12px;max-width:400px;padding:16px 18px;font-size:0.8125rem;line-height:1.5}
 .cleo-cc p{margin-bottom:8px}.cleo-cc .cleo-cc-t{font-size:0.875rem}
 .cleo-cc-actions{gap:8px;margin-top:10px}.cleo-cc-b{min-height:40px;padding:8px 14px;white-space:nowrap}
-.cleo-cc-l{flex:1 0 auto;min-height:40px;padding:6px 4px;white-space:nowrap}}
+.cleo-cc-l{flex:1 0 auto;min-height:40px;padding:6px 4px;white-space:nowrap}
+.cleo-cc:not(.cleo-cc-detail){display:flex;align-items:center;gap:16px;max-width:min(780px,calc(100vw - 32px));padding:10px 12px 10px 18px}
+.cleo-cc:not(.cleo-cc-detail) .cleo-cc-t,.cleo-cc:not(.cleo-cc-detail) .cleo-cc-x{display:none}
+.cleo-cc:not(.cleo-cc-detail) .cleo-cc-court{display:block;margin:0;flex:1 1 auto;min-width:0}
+.cleo-cc:not(.cleo-cc-detail) .cleo-cc-actions{flex:none;flex-wrap:nowrap;margin:0}
+.cleo-cc:not(.cleo-cc-detail) .cleo-cc-b{flex:none;width:118px;padding:8px 12px}
+.cleo-cc:not(.cleo-cc-detail) .cleo-cc-l{flex:none}}
 </style>
 <script defer src="/_vercel/insights/script.js"></script>
