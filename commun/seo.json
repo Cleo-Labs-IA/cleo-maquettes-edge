@@ -896,7 +896,7 @@
     },
     "39-data.html": {
       "titre": "API Legal Data et classification douanière | Cleo Labs",
-      "description": "Donnée juridique traçable et classification douanière expliquée, prêtes pour votre produit. Deux API, des prix publics, 3 appels gratuits pour tester.",
+      "description": "Donnée juridique traçable et classification douanière expliquée, prêtes pour votre produit. Deux API, des prix publics, 200 unités gratuites pour tester, sans carte.",
       "source": "redige",
       "url_source": null,
       "appui_contenu": "16/09/2026, agent D : structure de moonlit.ai (connect, mcp, platform) ; faits dans scratchpad/agents/refonte/identite-data/faits.md.",
@@ -904,7 +904,7 @@
     },
     "39-data-en.html": {
       "titre": "Legal Data API and Customs Classification API | Cleo Labs",
-      "description": "Traceable legal data and explainable customs classification, ready for your product. Two APIs, public pricing and 3 free calls to test.",
+      "description": "Traceable legal data and explainable customs classification, ready for your product. Two APIs, public pricing and 200 free units to test, no card.",
       "source": "redige",
       "url_source": null,
       "appui_contenu": "16/09/2026, agent D : structure de moonlit.ai (connect, mcp, platform) ; faits dans scratchpad/agents/refonte/identite-data/faits.md.",
