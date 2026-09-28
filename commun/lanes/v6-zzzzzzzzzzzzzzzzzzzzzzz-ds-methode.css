@@ -1,0 +1,89 @@
+/* ═══ SCÈNE 01, LA MÉTHODE, SUR LE DESIGN SYSTEM V6 ═══ 28/09/2026, Naomie : « met le design system qui a été publié
+   sur github, applique-le » au flow de la méthode (le dossier qui se remplit à mesure que les étapes s'allument).
+   Source : Cleo-Labs-IA/cleo-design-system, branche design/cleo-v6-modernisation, commit 13adc19, fichier v6/tokens.css.
+   Les valeurs ci-dessous sont recopiées telles quelles de ce fichier, pas du calque v6-foundation.css du site, qui en
+   diffère sur quatre jetons (ink-3, on-dark-2, on-dark-3, border-dark) et n'a pas border-strong.
+   Ce que le DS dit et que la scène applique :
+   - le champ profond est #08093B, sa profondeur #12134F (la fenêtre d'app), jamais le noir neutre #0A0A0B / #17171A ;
+   - sur champ profond, le bleu d'action devient le signal #4D57FF (rail, barre d'avancement, trait de l'action) ;
+   - rayons 8 / 16 / 24 / pilule, rien d'autre (la scène portait 2, 6 et 12 px) ;
+   - un statut ne se dit jamais par la couleur seule : pastille à bord plein (cleo-v6-app-status), texte lisible.
+   Portée : #methode des deux accueils (43-accueil-avant-vendre et -en) ; la page 52-data-mcp porte aussi un #methode, elle est exclue. Mise en page et animations intactes :
+   ce calque ne change que la peinture (couleurs, bords, rayons, ombres). Les keyframes redéfinies ici ne servent qu'à
+   cette scène (relevé du 28/09 : acEtape, acEtapeDerniere, acNumero, acNumeroDernier, acVoile, acTamponFond ne sont
+   posées que sur .ac-etape, .ac-media et .ac-tampon, présents sur ces deux pages uniquement). */
+
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode,
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode *{
+  --ds-deep:#08093B; --ds-deep-2:#12134F; --ds-signal:#4D57FF; --ds-blanc:#FFFFFF;
+  --ds-on-dark-2:rgba(255,255,255,.72); --ds-on-dark-3:rgba(255,255,255,.54); --ds-border-dark:rgba(255,255,255,.14);
+  --ds-shadow-hero:0 30px 90px rgba(8,9,59,.20);
+  --ds-r-sm:8px; --ds-r-md:16px; --ds-r-lg:24px; --ds-r-pill:9999px;
+  /* Les variables du site que la scène lit, rabattues sur le DS. */
+  --c-accent:var(--ds-signal) !important; --c-texte:var(--ds-blanc) !important;
+  --c-texte-2:var(--ds-on-dark-2) !important; --c-texte-3:var(--ds-on-dark-3) !important;
+  --c-carte:var(--ds-deep-2) !important; --c-filet:var(--ds-border-dark) !important;
+  --c-fond:var(--ds-deep) !important; --c-fond-2:var(--ds-deep-2) !important;
+  --r-carte:var(--ds-r-md) !important; --r-petit:var(--ds-r-sm) !important; --r-media:var(--ds-r-lg) !important;
+}
+
+/* Le champ profond, sur toute la largeur de la scène. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode{background:var(--ds-deep) !important}
+
+/* Le texte de tête : sur-titre et index sur les deux paliers « on-dark ». */
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-tete-sur{color:var(--ds-on-dark-2) !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-index{color:var(--ds-on-dark-3) !important}
+
+/* Les étapes : carte en rayon sm, rail au signal. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-etape{border-radius:var(--ds-r-sm) !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-etapes::after{background:var(--ds-signal) !important;border-radius:var(--ds-r-pill) !important}
+/* La pastille numérotée au repos : chiffre profond sur blanc. Sans !important, pour que l'animation de bureau la repeigne. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-etape > span{background:var(--ds-blanc);color:var(--ds-deep)}
+/* État figé (sous 1180 px ou « réduire les animations », même bascule que le calque unifie) : cartes sur la profondeur. */
+@media (max-width:1179px), (prefers-reduced-motion:reduce){
+  html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-etape{background:var(--ds-deep-2) !important;box-shadow:0 0 0 1px var(--ds-border-dark) !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-etape > span{background:var(--ds-blanc) !important;color:var(--ds-deep) !important}
+}
+
+/* Le média et la fenêtre d'app. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-media{background:var(--ds-deep) !important;border-radius:var(--ds-r-lg) !important;box-shadow:inset 0 0 0 1px var(--ds-border-dark) !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-app{background:var(--ds-deep-2) !important;border-radius:var(--ds-r-md) !important;box-shadow:0 0 0 1px var(--ds-border-dark), var(--ds-shadow-hero) !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-app::before{background:var(--ds-deep) !important;border-bottom:1px solid var(--ds-border-dark) !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-app::after{background-image:radial-gradient(circle 5px at 5px 5px, var(--ds-border-dark) 98%, transparent 100%), radial-gradient(circle 5px at 22px 5px, var(--ds-border-dark) 98%, transparent 100%), radial-gradient(circle 5px at 39px 5px, var(--ds-border-dark) 98%, transparent 100%) !important}
+
+/* La barre latérale : fond profond, élément courant en gras sur la profondeur (cleo-v6-app-sidebar, aria-current). */
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-app-nav{background:var(--ds-deep) !important;border-right:1px solid var(--ds-border-dark) !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-app-nav li{border-radius:var(--ds-r-sm) !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-app-nav li.actif{background:var(--ds-deep-2) !important;color:var(--ds-blanc) !important;font-weight:700 !important}
+
+/* Le corps du dossier. Le sur-titre quitte le lavande #8C92FF : le signal ne rend que 3,4:1 sur #12134F, trop peu pour 12 px. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-app-surtitre{color:var(--ds-on-dark-2) !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-app-avance{border-radius:var(--ds-r-pill) !important;background:var(--ds-deep) !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-app-avance i{background:var(--ds-signal) !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode :is(.ac-exigence, .ac-exigence-tete, .ac-exigence-grille > div){border-color:var(--ds-border-dark) !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-exigence{border-radius:var(--ds-r-sm) !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-exigence-grille small{color:var(--ds-on-dark-3) !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-action{box-shadow:inset 3px 0 0 var(--ds-signal) !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-action p{color:var(--ds-blanc) !important}
+
+/* La suite du dossier : lignes sur le champ profond, source au troisième palier. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-suite li{background:var(--ds-deep) !important;border-color:var(--ds-border-dark) !important;border-radius:var(--ds-r-sm) !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-suite-source{color:var(--ds-on-dark-3) !important}
+
+/* Les statuts, en pastille cleo-v6-app-status : bord plein, texte lisible, la couleur ne porte jamais seule l'état.
+   Complète = pastille pleine (blanc sur profond) ; en attente et à faire = pastille au trait, deux paliers de texte. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-suite .ac-etat{border-radius:var(--ds-r-pill) !important;border:1px solid currentColor !important;box-shadow:none !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-suite .ac-etat-ok{color:var(--ds-deep) !important;background:var(--ds-blanc) !important;border-color:var(--ds-blanc) !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-suite .ac-etat-attente{color:var(--ds-blanc) !important;background:transparent !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-suite .ac-etat-faire{color:var(--ds-on-dark-2) !important;background:transparent !important}
+
+/* La mention de relecture. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="43-accueil-avant-vendre"],[data-v6-page="43-accueil-avant-vendre-en"]) main #methode .ac-tampon{background:var(--ds-deep) !important;color:var(--ds-blanc) !important;border-radius:var(--ds-r-pill) !important;box-shadow:0 0 0 1px var(--ds-border-dark) !important}
+
+/* Les animations de la scène, repeintes aux valeurs du DS (mêmes noms, même rythme ; la dernière définition l'emporte). */
+@keyframes acEtape{0%,100%{background-color:transparent;box-shadow:0 0 0 1px transparent}12%,88%{background-color:#12134F;box-shadow:0 0 0 1px rgba(255,255,255,.14)}}
+@keyframes acEtapeDerniere{0%{background-color:transparent;box-shadow:0 0 0 1px transparent}12%,100%{background-color:#12134F;box-shadow:0 0 0 1px rgba(255,255,255,.14)}}
+@keyframes acNumero{0%,100%{background-color:#12134F;color:#FFFFFF;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}12%,88%{background-color:#FFFFFF;color:#08093B;box-shadow:inset 0 0 0 1px #FFFFFF}}
+@keyframes acNumeroDernier{0%{background-color:#12134F;color:#FFFFFF;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14)}12%,100%{background-color:#FFFFFF;color:#08093B;box-shadow:inset 0 0 0 1px #FFFFFF}}
+@keyframes acVoile{from{background:linear-gradient(180deg, rgba(8,9,59,.18) 0%, rgba(8,9,59,.32) 100%)}to{background:linear-gradient(180deg, rgba(8,9,59,.58) 0%, rgba(8,9,59,.74) 100%)}}
+@keyframes acTamponFond{from{background-color:#12134F}}
