@@ -1183,6 +1183,20 @@
       "source": "site",
       "url_source": "https://www.cleolabs.co/fr/careers/legal-engineer",
       "appui_contenu": "Offre portée depuis https://www.cleolabs.co/fr/careers/legal-engineer le 23/09/2026 (agent), 349 mots à la source, 380 dans le fragment."
+    },
+    "56-confidentialite.html": {
+      "titre": "Politique de Confidentialité | Cleo Labs",
+      "description": "Consultez la politique de confidentialité de Cleo Labs. Découvrez comment nous collectons, utilisons et protégeons vos données personnelles.",
+      "source": "site",
+      "url_source": "https://www.cleolabs.co/fr/privacy",
+      "_appui": "cleo-landing src/app/[locale]/privacy/layout.tsx (origin/main), titre et description repris mot pour mot le 28/09/2026 ; robots noindex,follow comme l'original"
+    },
+    "56-confidentialite-en.html": {
+      "titre": "Privacy Policy | Cleo Labs",
+      "description": "Read the Cleo Labs privacy policy. Learn how we collect, use, and protect your personal data on our AI-powered regulatory intelligence platform.",
+      "source": "site",
+      "url_source": "https://www.cleolabs.co/en/privacy",
+      "_appui": "cleo-landing src/app/[locale]/privacy/layout.tsx (origin/main), title and description copied verbatim on 28/09/2026; robots noindex,follow as in the original"
     }
   },
   "structure": {

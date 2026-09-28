@@ -25,8 +25,9 @@ const V6_ROUTES = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/v6-routes.js
    cleo-landing soit réglée sur « Only Preview Deployments » (sinon l'alias répond 302 vers la connexion Vercel). */
 const REDIRECTIONS_HERITEES = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/redirections-heritees.json'), 'utf8')).regles
 const ANCIEN_SITE = 'https://cleo-landing-cleo-academys-projects.vercel.app' // le projet cleo-landing relié à GitHub, équipe cleo-academys-projects, celui qui servait www ; l'homonyme de naomie-7307 est une copie orpheline de 146 jours
-const RELAIS_ANCIEN_SITE = [{ source: '/api/:path*', destination: ANCIEN_SITE + '/api/:path*' },
-  { source: '/:lang(en|fr)/privacy', destination: ANCIEN_SITE + '/:lang/privacy' }] // la politique de confidentialité n'a pas été portée en V6
+/* 28/09/2026 : la politique de confidentialité est portée en V6 (pages/56-confidentialite*.html, /fr/privacy et /en/privacy) ;
+   son relais vers l'ancien site est retiré. */
+const RELAIS_ANCIEN_SITE = [{ source: '/api/:path*', destination: ANCIEN_SITE + '/api/:path*' }]
 /* 28/09/2026 : les landings Google Ads vivent dans cleo-landing (/en|fr|es/lp/*) et passent par ce relais, avec leurs
    ressources (_next, vidéos, logos, favicons). Posées à la main le 25/09 dans le vercel.json de sortie, elles
    disparaissaient au build suivant (relais du blog) : 18 landings en 404 le 28/09 au matin. Elles vont EN TÊTE des
@@ -123,6 +124,10 @@ const PAGES = [
   { fichier: '33-fabricants-en.html', titre: 'Product compliance for manufacturers EN', source: 'pages/33-fabricants.html, traduction du 23/09/2026', en: true },
   { fichier: '30-securite-en.html', titre: 'Data security EN', source: 'pages/30-securite.html, traduction du 23/09/2026', en: true },
   { fichier: '22-legal-en.html', titre: 'Terms of Use EN', source: 'pages/22-legal.html, traduction du 23/09/2026', en: true },
+  /* 28/09/2026 : la politique de confidentialité, reprise mot pour mot de cleo-landing (scripts/porter-confidentialite.mjs).
+     noindex comme l'original (privacy/layout.tsx : robots index false, follow true), donc hors sitemap. */
+  { fichier: '56-confidentialite.html', titre: 'Confidentialité', source: 'cleo-landing src/app/[locale]/privacy/page.tsx', noindex: true },
+  { fichier: '56-confidentialite-en.html', titre: 'Privacy EN', source: 'cleo-landing src/app/[locale]/privacy/page.tsx', en: true, noindex: true },
   { fichier: '21-inscription-en.html', titre: 'See Cleo on your products EN', source: 'pages/21-inscription.html, traduction du 23/09/2026', en: true },
   { fichier: '20-campagne-en.html', titre: 'PPWR guide, article by article EN', source: 'pages/20-campagne.html, traduction du 23/09/2026', en: true },
   { fichier: '18-recrutement-en.html', titre: 'Careers: join Cleo Labs EN', source: 'pages/18-recrutement.html, traduction du 23/09/2026', en: true },
@@ -1227,7 +1232,7 @@ for (const p of PAGES) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" type="image/svg+xml" href="${FAVICON}">
-${estApercu(nomSortie) ? '<meta name="robots" content="noindex,nofollow">' : '<meta name="robots" content="index,follow">'}
+${estApercu(nomSortie) ? '<meta name="robots" content="noindex,nofollow">' : p.noindex ? '<meta name="robots" content="noindex,follow">' : '<meta name="robots" content="index,follow">'}
 <title>${ech(titre)}</title>
 ${metaDesc}
 ${url ? `<link rel="canonical" href="${url}">` : ''}
@@ -1259,7 +1264,7 @@ ${corps}
   })
   const dest = path.join(ICI, 'sortie', p.sortie || p.fichier)
   fs.writeFileSync(dest, doc)
-  journal.push({ fichier: p.sortie || p.fichier, ko: Math.round(doc.length / 1024) })
+  journal.push({ fichier: p.sortie || p.fichier, ko: Math.round(doc.length / 1024), noindex: !!p.noindex })
   console.log(`  ${(p.sortie || p.fichier).padEnd(22)} ${String(Math.round(doc.length / 1024)).padStart(5)} Ko`)
 }
 
@@ -1287,7 +1292,7 @@ const publiques = construites.filter(f => !estApercu(f))
 const jour = new Date().toISOString().slice(0, 10)
 fs.writeFileSync(path.join(ICI, 'sortie', 'sitemap.xml'),
   '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-  publiques.map(f => `  <url><loc>${HOTE}${cheminDe(f)}</loc><lastmod>${jour}</lastmod></url>`).join('\n') +
+  publiques.filter(f => !journal.find(j => j.fichier === f).noindex).map(f => `  <url><loc>${HOTE}${cheminDe(f)}</loc><lastmod>${jour}</lastmod></url>`).join('\n') +
   '\n</urlset>\n')
 /* Les URL propres. Vercel sert le fichier plat derriere l'adresse calquee sur
    le vrai site : aucune duplication de fichier, et la barre d'adresse dit

@@ -289,6 +289,14 @@
     "19-poste-legal.html": {
       "chemin": "/fr/careers/legal-engineer",
       "reelle": true
+    },
+    "56-confidentialite.html": {
+      "chemin": "/fr/privacy",
+      "reelle": true
+    },
+    "56-confidentialite-en.html": {
+      "chemin": "/en/privacy",
+      "reelle": true
     }
   }
 }
