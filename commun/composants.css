@@ -1353,3 +1353,11 @@
 /* ── Maquettes d'application : plancher 11 px à toutes les largeurs (audit en ligne du
       03/09 : 8 à 10 px relevés sur desktop). Ce sont des écrans produit, 11 px y est admis. ── */
 .nd .id,.nd .op,.nd .nb,.vv-date span,.vv-titre,.vv-ref,.vv-etat,.vv-bilan,.ca-mode,.cf-ref{font-size:0.75rem}
+
+/* Carte d'essai Cleo Chat sous le hero de l'accueil (option C, 28/09/2026). L'accueil est sur champ sombre :
+   la carte prend le verre sombre du site, le bouton reste le blanc du menu. */
+.carte-essai-chat{display:flex; align-items:center; justify-content:space-between; gap:24px; max-width:600px; margin:28px 0 0; padding:18px 20px; background:rgba(255,255,255,0.05); border:1px solid var(--c-filet-sombre); border-radius:14px}
+.carte-essai-chat strong{display:block; font-size:1.0625rem; font-weight:500; color:var(--c-text-on-dark)}
+.carte-essai-chat p{margin:6px 0 0; color:var(--c-text-on-dark-2); font-size:0.9375rem}
+.carte-essai-chat .btn{flex-shrink:0}
+@media (max-width:640px){ .carte-essai-chat{flex-direction:column; align-items:stretch; text-align:left} .carte-essai-chat .btn{justify-content:center} }
