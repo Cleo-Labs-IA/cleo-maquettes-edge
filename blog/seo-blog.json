@@ -1,5 +1,17 @@
 {
  "pages": {
+  "blog-galanz-refrigerator-recall-lag-2026.html": {
+   "titre": "Le 30 juillet, les États-Unis ont rappelé 121 680 réfrigérateurs rétro Galanz pour un risque d'incendie, sous cinq références : Santé Canada a publié son propre rappel 56 jours plus tard, n'en citant qu'une seule | Cleo Labs",
+   "description": "Le 30 juillet 2026, la CPSC et Galanz Americas ont rappelé environ 121 680 réfrigérateurs de style rétro aux États-Unis, sous cinq références et quatre coloris, après 34 signalements d'incendie dont un relié à un décès. Cinquante-six jours plus tard, le 24 septembre 2026, Santé Canada a publié son propre avis de rappel pour le même défaut et la même fenêtre de codes de date, ne citant qu'une seule des cinq références, le GLR76TRDER rouge, après avoir comptabilisé 2 signalements d'incidents au Canada, sans blessure, au 21 septembre 2026. Aucun des deux avis n'explique cette portée canadienne plus étroite, mais elle pointe vers un problème récurrent de données de conformité : la liste de modèles d'un rappel reflète ce que les registres de distribution propres à un marché montrent y avoir été vendu, pas l'étendue complète du défaut sous-jacent, et chaque marché suit son propre calendrier de signalement et de publication.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr/blog/galanz-refrigerator-recall-lag-2026"
+  },
+  "blog-galanz-refrigerator-recall-lag-2026-en.html": {
+   "titre": "On 30 July, the US recalled 121,680 Galanz retro refrigerators for a fire risk under five model numbers: Health Canada published its own recall 56 days later, naming only one | Cleo Labs",
+   "description": "On 30 July 2026, CPSC and Galanz Americas recalled about 121,680 retro-style refrigerators in the US under five model numbers and four colours, after 34 fire reports including one linked to a death. Fifty-six days later, on 24 September 2026, Health Canada published its own recall notice for the identical defect and date-code window, naming only one of the five models, the red GLR76TRDER, after logging 2 Canadian incident reports with no injuries as of 21 September 2026. Neither notice explains the narrower Canadian scope, but it points to a recurring compliance-data problem: a recall's model list tracks what a market's own distribution records show was sold there, not the full reach of the underlying defect, and each market runs its own incident intake and publication timeline.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/en/blog/galanz-refrigerator-recall-lag-2026"
+  },
   "blog-sauna360-cross-border-recall-2026.html": {
    "titre": "Le 17 septembre, le groupe finlandais propriétaire de Tylö et Helo a rappelé 48 000 saunas aux États-Unis et au Canada pour un risque d'incendie, le jour même où il a admis qu'une réparation vieille de onze mois, pour un tout autre risque d'effondrement de banc, avait déjà échoué sur 77 unités supplémentaires | Cleo Labs",
    "description": "Le 17 septembre 2026, la CPSC et Santé Canada, avec Sauna360, ont rappelé environ 41 580 saunas et kits infrarouges et hybrides aux États-Unis et 6 758 au Canada, vendus sous les marques Finnleo, Tylö, Polar, Radiant Health et Helo, après avoir constaté que les panneaux infrarouges pouvaient subir un court-circuit, surchauffer et présenter un risque d'incendie et de brûlure. Le même jour, dans un dossier distinct, la CPSC et Sauna360 ont élargi à environ 6 000 unités un rappel d'octobre 2025 visant les bancs de sauna Tylö Halmstad et Kiruna Hybrid, après que la réparation gratuite proposée pour un risque d'effondrement n'a pas empêché de nouvelles ruptures : 77 signalements et six blessures de plus, avant la publication d'une nouvelle réparation.",
@@ -1634,6 +1646,106 @@
   }
  },
  "structure": {
+  "blog-galanz-refrigerator-recall-lag-2026.html": {
+   "types": [
+    "TechArticle",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "Le 30 juillet, les États-Unis ont rappelé 121 680 réfrigérateurs rétro Galanz pour un risque d'incendie, sous cinq références : Santé Canada a publié son propre rappel 56 jours plus tard, n'en citant qu'une seule",
+     "description": "Le 30 juillet 2026, la CPSC et Galanz Americas ont rappelé environ 121 680 réfrigérateurs de style rétro aux États-Unis, sous cinq références et quatre coloris, après 34 signalements d'incendie dont un relié à un décès. Cinquante-six jours plus tard, le 24 septembre 2026, Santé Canada a publié son propre avis de rappel pour le même défaut et la même fenêtre de codes de date, ne citant qu'une seule des cinq références, le GLR76TRDER rouge, après avoir comptabilisé 2 signalements d'incidents au Canada, sans blessure, au 21 septembre 2026. Aucun des deux avis n'explique cette portée canadienne plus étroite, mais elle pointe vers un problème récurrent de données de conformité : la liste de modèles d'un rappel reflète ce que les registres de distribution propres à un marché montrent y avoir été vendu, pas l'étendue complète du défaut sous-jacent, et chaque marché suit son propre calendrier de signalement et de publication."
+    },
+    "TechArticle": {
+     "headline": "Le 30 juillet, les États-Unis ont rappelé 121 680 réfrigérateurs rétro Galanz pour un risque d'incendie, sous cinq références : Santé Canada a publié son propre rappel 56 jours plus tard, n'en citant qu'une seule",
+     "description": "Le 30 juillet 2026, la CPSC et Galanz Americas ont rappelé environ 121 680 réfrigérateurs de style rétro aux États-Unis, sous cinq références et quatre coloris, après 34 signalements d'incendie dont un relié à un décès. Cinquante-six jours plus tard, le 24 septembre 2026, Santé Canada a publié son propre avis de rappel pour le même défaut et la même fenêtre de codes de date, ne citant qu'une seule des cinq références, le GLR76TRDER rouge, après avoir comptabilisé 2 signalements d'incidents au Canada, sans blessure, au 21 septembre 2026. Aucun des deux avis n'explique cette portée canadienne plus étroite, mais elle pointe vers un problème récurrent de données de conformité : la liste de modèles d'un rappel reflète ce que les registres de distribution propres à un marché montrent y avoir été vendu, pas l'étendue complète du défaut sous-jacent, et chaque marché suit son propre calendrier de signalement et de publication.",
+     "datePublished": "2026-09-25",
+     "author": {
+      "@type": "Person",
+      "name": "Naomie Halioua",
+      "url": "https://www.linkedin.com/in/naomie-halioua/"
+     },
+     "publisher": {
+      "@id": "https://www.cleolabs.co/#organization"
+     },
+     "inLanguage": "fr-FR",
+     "articleSection": "Conformité produit"
+    },
+    "BreadcrumbList": {
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Accueil",
+       "item": "https://www.cleolabs.co/fr"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Blog",
+       "item": "https://www.cleolabs.co/fr/blog"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Le 30 juillet, les États-Unis ont rappelé 121 680 réfrigérateurs rétro Galanz pour un risque d'incendie, sous cinq références : Santé Canada a publié son propre rappel 56 jours plus tard, n'en citant qu'une seule",
+       "item": "https://www.cleolabs.co/fr/blog/galanz-refrigerator-recall-lag-2026"
+      }
+     ]
+    }
+   }
+  },
+  "blog-galanz-refrigerator-recall-lag-2026-en.html": {
+   "types": [
+    "TechArticle",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "On 30 July, the US recalled 121,680 Galanz retro refrigerators for a fire risk under five model numbers: Health Canada published its own recall 56 days later, naming only one",
+     "description": "On 30 July 2026, CPSC and Galanz Americas recalled about 121,680 retro-style refrigerators in the US under five model numbers and four colours, after 34 fire reports including one linked to a death. Fifty-six days later, on 24 September 2026, Health Canada published its own recall notice for the identical defect and date-code window, naming only one of the five models, the red GLR76TRDER, after logging 2 Canadian incident reports with no injuries as of 21 September 2026. Neither notice explains the narrower Canadian scope, but it points to a recurring compliance-data problem: a recall's model list tracks what a market's own distribution records show was sold there, not the full reach of the underlying defect, and each market runs its own incident intake and publication timeline."
+    },
+    "TechArticle": {
+     "headline": "On 30 July, the US recalled 121,680 Galanz retro refrigerators for a fire risk under five model numbers: Health Canada published its own recall 56 days later, naming only one",
+     "description": "On 30 July 2026, CPSC and Galanz Americas recalled about 121,680 retro-style refrigerators in the US under five model numbers and four colours, after 34 fire reports including one linked to a death. Fifty-six days later, on 24 September 2026, Health Canada published its own recall notice for the identical defect and date-code window, naming only one of the five models, the red GLR76TRDER, after logging 2 Canadian incident reports with no injuries as of 21 September 2026. Neither notice explains the narrower Canadian scope, but it points to a recurring compliance-data problem: a recall's model list tracks what a market's own distribution records show was sold there, not the full reach of the underlying defect, and each market runs its own incident intake and publication timeline.",
+     "datePublished": "2026-09-25",
+     "author": {
+      "@type": "Person",
+      "name": "Naomie Halioua",
+      "url": "https://www.linkedin.com/in/naomie-halioua/"
+     },
+     "publisher": {
+      "@id": "https://www.cleolabs.co/#organization"
+     },
+     "inLanguage": "en-US",
+     "articleSection": "Product Compliance"
+    },
+    "BreadcrumbList": {
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.cleolabs.co/en"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Blog",
+       "item": "https://www.cleolabs.co/en/blog"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "On 30 July, the US recalled 121,680 Galanz retro refrigerators for a fire risk under five model numbers: Health Canada published its own recall 56 days later, naming only one",
+       "item": "https://www.cleolabs.co/en/blog/galanz-refrigerator-recall-lag-2026"
+      }
+     ]
+    }
+   }
+  },
   "blog-sauna360-cross-border-recall-2026.html": {
    "types": [
     "TechArticle",
