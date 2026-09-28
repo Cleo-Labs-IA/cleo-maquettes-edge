@@ -1197,6 +1197,48 @@
       "source": "site",
       "url_source": "https://www.cleolabs.co/en/privacy",
       "_appui": "cleo-landing src/app/[locale]/privacy/layout.tsx (origin/main), title and description copied verbatim on 28/09/2026; robots noindex,follow as in the original"
+    },
+    "60-api-douane-en.html": {
+      "titre": "Customs Classification API: HS codes with questions, sources and review | Cleo Labs",
+      "description": "Integrate the customs layer once, without maintaining each national tariff yourself. Send a product, origin, destination and date; get the local code or the questions still open, obligations, cost, official sources and a status you approve. Free Sandbox key, no card.",
+      "source": "redige",
+      "url_source": null,
+      "appui_contenu": "28/09/2026 : textes de la PR cleo-legal-public#53 (components/customs-landing/audiences.ts), traduits pour le FR ; chiffres de lib/customs-facts.ts et lib/plans.ts."
+    },
+    "60-api-douane.html": {
+      "titre": "API de classification douanière : codes SH, questions, sources et validation | Cleo Labs",
+      "description": "Intégrez la couche douane une fois, sans maintenir vous-même chaque tarif national. Envoyez un produit, une origine, une destination et une date ; recevez le code local ou les questions encore ouvertes, les obligations, le coût, les sources officielles et un statut que vous validez. Clé Sandbox gratuite, sans carte.",
+      "source": "redige",
+      "url_source": null,
+      "appui_contenu": "28/09/2026 : textes de la PR cleo-legal-public#53 (components/customs-landing/audiences.ts), traduits pour le FR ; chiffres de lib/customs-facts.ts et lib/plans.ts."
+    },
+    "61-api-douane-ecommerce-en.html": {
+      "titre": "HS codes for your Shopify or e-commerce catalog, with sources | Cleo Labs",
+      "description": "The right HS code on every product before checkout, with a cost you can explain: the local code per destination, the questions to ask your supplier, the official source, and only approved codes written back to Shopify or your CSV.",
+      "source": "redige",
+      "url_source": null,
+      "appui_contenu": "28/09/2026 : textes de la PR cleo-legal-public#53 (components/customs-landing/audiences.ts), traduits pour le FR ; chiffres de lib/customs-facts.ts et lib/plans.ts."
+    },
+    "61-api-douane-ecommerce.html": {
+      "titre": "Codes SH pour votre catalogue Shopify ou e-commerce, avec les sources | Cleo Labs",
+      "description": "Le bon code SH sur chaque produit avant le paiement, avec un coût que vous pouvez expliquer : le code local par destination, les questions à poser à votre fournisseur, la source officielle, et seuls les codes validés renvoyés vers Shopify ou votre CSV.",
+      "source": "redige",
+      "url_source": null,
+      "appui_contenu": "28/09/2026 : textes de la PR cleo-legal-public#53 (components/customs-landing/audiences.ts), traduits pour le FR ; chiffres de lib/customs-facts.ts et lib/plans.ts."
+    },
+    "62-api-douane-commissionnaires-en.html": {
+      "titre": "Candidate HS codes with sources, for customs brokers and 3PLs | Cleo Labs",
+      "description": "Candidates and sources arrive together; your team keeps the decision. Complete customs data before it enters your shipping flow: questions for vague descriptions, a dossier to forward, review with history, and approved lines exported to CSV.",
+      "source": "redige",
+      "url_source": null,
+      "appui_contenu": "28/09/2026 : textes de la PR cleo-legal-public#53 (components/customs-landing/audiences.ts), traduits pour le FR ; chiffres de lib/customs-facts.ts et lib/plans.ts."
+    },
+    "62-api-douane-commissionnaires.html": {
+      "titre": "Codes SH candidats et sourcés, pour commissionnaires en douane et 3PL | Cleo Labs",
+      "description": "Les candidats et leurs sources arrivent ensemble ; votre équipe garde la décision. Des données douanières complètes avant votre flux d'expédition : des questions pour les descriptions vagues, un dossier à transmettre, une validation avec historique, et les lignes validées exportées en CSV.",
+      "source": "redige",
+      "url_source": null,
+      "appui_contenu": "28/09/2026 : textes de la PR cleo-legal-public#53 (components/customs-landing/audiences.ts), traduits pour le FR ; chiffres de lib/customs-facts.ts et lib/plans.ts."
     }
   },
   "structure": {

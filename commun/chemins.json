@@ -297,6 +297,24 @@
     "56-confidentialite-en.html": {
       "chemin": "/en/privacy",
       "reelle": true
+    },
+    "60-api-douane.html": {
+      "chemin": "/fr/api-douane"
+    },
+    "60-api-douane-en.html": {
+      "chemin": "/en/customs-api"
+    },
+    "61-api-douane-ecommerce.html": {
+      "chemin": "/fr/api-douane/ecommerce"
+    },
+    "61-api-douane-ecommerce-en.html": {
+      "chemin": "/en/customs-api/ecommerce"
+    },
+    "62-api-douane-commissionnaires.html": {
+      "chemin": "/fr/api-douane/commissionnaires"
+    },
+    "62-api-douane-commissionnaires-en.html": {
+      "chemin": "/en/customs-api/brokers"
     }
   }
 }

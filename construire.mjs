@@ -98,6 +98,14 @@ const PAGES = [
   { fichier: '52-data-mcp-en.html', titre: 'Data, MCP server EN', source: 'pages/52-data-mcp.html', en: true },
   { fichier: '53-data-plateforme.html', titre: 'Data, plateforme', source: 'moonlit.ai/platform (structure), 16/09/2026' },
   { fichier: '53-data-plateforme-en.html', titre: 'Data, platform EN', source: 'pages/53-data-plateforme.html', en: true },
+  /* 28/09/2026 : la Customs API par public (développeurs, e-commerce, commissionnaires), textes de la PR cleo-legal-public#53.
+     Fragments générés par scripts/pages-api-douane.mjs, styles dans commun/lanes/v6-zzzzzzzzzzzzzzzzzzzzzzz-douane.css. */
+  { fichier: '60-api-douane.html', titre: 'API douane, éditeurs de logiciels', source: 'cleo-legal-public#53 /customs-api, 28/09/2026' },
+  { fichier: '60-api-douane-en.html', titre: 'Customs API, software teams EN', source: 'cleo-legal-public#53 /customs-api', en: true },
+  { fichier: '61-api-douane-ecommerce.html', titre: 'API douane, e-commerce', source: 'cleo-legal-public#53 /customs-api/ecommerce, 28/09/2026' },
+  { fichier: '61-api-douane-ecommerce-en.html', titre: 'Customs API, e-commerce EN', source: 'cleo-legal-public#53 /customs-api/ecommerce', en: true },
+  { fichier: '62-api-douane-commissionnaires.html', titre: 'API douane, commissionnaires et logistique', source: 'cleo-legal-public#53 /customs-api/brokers, 28/09/2026' },
+  { fichier: '62-api-douane-commissionnaires-en.html', titre: 'Customs API, brokers and logistics EN', source: 'cleo-legal-public#53 /customs-api/brokers', en: true },
   //   { fichier: '40-enterprise-en.html', titre: 'Enterprise EN', source: 'pages/40-enterprise.html', en: true },  // 23/09/2026, Naomie : « la page entreprise sert à rien, tout est dans le about »
   { fichier: '43-accueil-avant-vendre-en.html', titre: 'Home, before you sell EN', source: 'pages/43-accueil-avant-vendre.html', en: true },
   { fichier: '09-texte.html',       titre: 'Un texte',    source: 'edgecomply.com/topics/reach-regulation-compliance' },
@@ -1201,7 +1209,7 @@ for (const p of PAGES) {
     if (segs.length > 1) {
       const NOMS = { resources: ['Ressources', 'Resources'], blog: ['Blog', 'Blog'], data: ['Data', 'Data'], careers: ['Carrières', 'Careers'],
         'compliance-as-a-service': ['Services', 'Services'], platform: ['Plateforme', 'Platform'], jurisdictions: ['Juridictions', 'Jurisdictions'],
-        solutions: ['Solutions', 'Solutions'], guide: ['Guide', 'Guide'], for: ['Pour', 'For'], glossary: ['Glossaire', 'Glossary'], regulations: ['Réglementations', 'Regulations'] }
+        solutions: ['Solutions', 'Solutions'], guide: ['Guide', 'Guide'], 'api-douane': ['API douane', 'Customs API'], 'customs-api': ['API douane', 'Customs API'], for: ['Pour', 'For'], glossary: ['Glossaire', 'Glossary'], regulations: ['Réglementations', 'Regulations'] }
       const existe = new Set(Object.values(CHEMINS.pages).map(c => c.chemin))
       const etapes = [{ name: langue === 'en' ? 'Home' : 'Accueil', item: `${HOTE}/${segs[0]}` }]
       for (let i = 1; i < segs.length - 1; i++) { const c = '/' + segs.slice(0, i + 1).join('/'); if (existe.has(c)) etapes.push({ name: (NOMS[segs[i]] || [segs[i], segs[i]])[langue === 'en' ? 1 : 0], item: HOTE + c }) }
