@@ -5,7 +5,8 @@
    Tout vit sous .dg (enveloppe posée par scripts/pages-api-douane.mjs) : aucun sélecteur de page ici, donc la page
    anglaise reçoit exactement les mêmes règles que sa jumelle française, sans passer par la réécriture -en du build.
    Le préfixe à six :not(#…) passe devant les couches globales (oa-sombre, openai, unifie : 3 à 5 identifiants).
-   Échelle : 13 · 16 · 18 · 20 · 32 · 52 px (6 tailles). */
+   Échelle : 13 · 16 · 18 · 20 · 32 · 52 px (6 tailles).
+   28/09 (revue fondatrice) : bande de garanties techniques sur la page développeurs, note sous les appels e-commerce. */
 
 html:not(#a):not(#b):not(#c):not(#d):not(#e):not(#f) body[data-cleo-ds="v6"] main .dg{
   --dg-fond:#0A0A0B; --dg-surface:#17171A; --dg-teinte:#111114; --dg-filet:rgba(255,255,255,.12);
@@ -36,6 +37,7 @@ html:not(#a):not(#b):not(#c):not(#d):not(#e):not(#f) body[data-cleo-ds="v6"] mai
   & :is(.dg-cta, .dg-cta-2, .dg-lien, a, summary):focus-visible{outline:2px solid var(--dg-bleu-clair); outline-offset:3px}
   & .dg-actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:28px}
   & .dg-actions + .dg-petit{margin-top:12px}
+  & .dg-cta-note + .dg-petit{margin-top:4px}
   & .dg-lien, & .dg-lien-texte, & .dg-source a, & .dg-puces a, & .dg-renvoi a, & .dg-citation a, & .dg-faq a, & .dg-demo-pied a{
     color:var(--dg-bleu-clair); text-decoration:underline; text-underline-offset:3px; text-decoration-thickness:1px}
   & .dg-lien{background:none; border:0; padding:10px 0; min-height:44px; font:inherit; font-size:16px; cursor:pointer}
@@ -81,6 +83,13 @@ html:not(#a):not(#b):not(#c):not(#d):not(#e):not(#f) body[data-cleo-ds="v6"] mai
   & .dg-etapes{list-style:none; padding:0; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px}
   & .dg-etape-icone{display:grid; place-items:center; width:48px; height:48px; border-radius:12px; background:rgba(0,8,207,.28); color:#FFFFFF; margin-bottom:18px}
   & .dg-etapes p{margin-top:8px; color:var(--dg-texte-2)}
+
+  /* Les garanties techniques (page développeurs), juste après « Comment ça marche » : une bande compacte */
+  & > section.dg-garanties{padding:36px 0; border-top:1px solid var(--dg-filet)}
+  & .dg-garanties-liste{list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:16px 24px}
+  & .dg-garanties-liste li{display:flex; gap:10px; align-items:flex-start}
+  & .dg-garanties .dg-surtitre{margin-bottom:18px !important}
+  & .dg-garanties .dg-petit{margin-top:18px}
 
   /* Une réponse */
   & .dg-exemple{max-width:720px}
@@ -135,6 +144,7 @@ html:not(#a):not(#b):not(#c):not(#d):not(#e):not(#f) body[data-cleo-ds="v6"] mai
   @media (max-width:1080px){
     & .dg-hero-grille{grid-template-columns:minmax(0,1fr); gap:40px}
     & .dg-exemple.dg-exemple-duo{grid-template-columns:minmax(0,1fr)}
+    & .dg-garanties-liste{grid-template-columns:repeat(2,minmax(0,1fr))}
   }
   @media (max-width:760px){
     & h1{font-size:30px !important; line-height:1.1 !important}
@@ -144,7 +154,8 @@ html:not(#a):not(#b):not(#c):not(#d):not(#e):not(#f) body[data-cleo-ds="v6"] mai
     & > section.dg-hero{padding:24px 0 48px}
     & .dg-chapeau{font-size:16px; line-height:1.5; margin-top:12px}
     & .dg-actions{margin-top:20px}
-    & .dg-etapes, & .dg-plans, & .dg-duo{grid-template-columns:minmax(0,1fr)}
+    & .dg-etapes, & .dg-plans, & .dg-duo, & .dg-garanties-liste{grid-template-columns:minmax(0,1fr)}
+    & > section.dg-garanties{padding:32px 0}
     & .dg-carte, & .dg-duo .dg-carte{padding:22px}
     & .dg-demo-requete > div{padding:14px 18px}
     & .dg-demo-corps{padding:20px 18px; min-height:0}

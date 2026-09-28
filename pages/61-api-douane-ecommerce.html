@@ -5,10 +5,11 @@
 <section class="dg-hero" id="haut">
   <div class="conteneur dg-hero-grille">
     <div class="dg-hero-texte">
-      <p class="dg-surtitre">Pour les équipes Shopify et e-commerce</p>
-      <h1>Mettez des données douanières validées sur chaque produit avant son expédition.</h1>
-      <p class="dg-chapeau">Cleo demande les faits produit manquants, classe les catalogues en masse, associe les codes à chaque destination et ne renvoie que les classements validés.</p>
-      <div class="dg-actions"><a class="dg-cta" href="https://legaldata-public.cleolabs.co/playground?tab=classify">Classer un produit</a><a class="dg-cta-2" href="https://legaldata-public.cleolabs.co/docs/customs#connectors">Voir le flux Shopify</a></div>
+      <p class="dg-surtitre">API douane pour les équipes Shopify et e-commerce</p>
+      <h1>Automatisez la classification douanière de votre catalogue e-commerce avant le passage en caisse.</h1>
+      <p class="dg-chapeau">Cleo identifie les caractéristiques manquantes, classe chaque produit selon sa destination, puis renvoie vers Shopify uniquement les codes approuvés.</p>
+      <div class="dg-actions"><a class="dg-cta" href="https://legaldata-public.cleolabs.co/playground?tab=classify">Auditer un catalogue</a><a class="dg-cta-2" href="https://legaldata-public.cleolabs.co/docs/customs#connectors">Voir le flux Shopify</a></div>
+      <p class="dg-petit dg-cta-note">Connecteur Shopify disponible pour un premier pilote en production.</p>
       <p class="dg-petit">200 unités gratuites · sans carte · sans appel commercial</p>
     </div>
     <div class="dg-demo" data-dg-demo data-etat="questions" role="group" aria-label="Exemple : un T-shirt envoyé aux États-Unis">
@@ -40,7 +41,7 @@
 
 <section class="dg-citation" aria-label="Ce que disent les acheteurs">
   <div class="conteneur">
-    <blockquote><p>« Shopify perçoit encore des droits sur des produits qui devraient en être exonérés » <a href="https://www.reddit.com/r/shopify/comments/1nm0puv/is_shopify_applying_usmca_exemptions_when/">un marchand sur r/shopify, traduit de l’anglais</a></p></blockquote>
+    <blockquote><p>« Une personne l’a refusé à la douane et le colis a été perdu » <a href="https://www.reddit.com/r/shopify/comments/1s4fei9/trying_to_ship_ddp_but_the_duties_line_show_0_at/">un marchand qui expédie depuis les États-Unis, sur r/shopify, traduit de l’anglais</a></p></blockquote>
   </div>
 </section>
 
@@ -57,16 +58,16 @@
 
 <section class="dg-section dg-teinte" id="exemple">
   <div class="conteneur">
-    <h2>Le même « T-shirt », une fois vos réponses données</h2>
+    <h2>Le même « T-shirt », une fois vos réponses données, pour la France</h2>
     <div class="dg-exemple">
         <article class="dg-carte dg-reponse" aria-label="Exemple de réponse">
-          <p class="dg-petit">En maille, tout coton, pour homme, expédié aux États-Unis. Réponse réelle, capturée le 28 septembre 2026, traduite de l’anglais.</p>
+          <p class="dg-petit">En maille, tout coton, pour homme, expédié en France. Réponse réelle, capturée le 28 septembre 2026, traduite de l’anglais.</p>
           <p class="dg-statut dg-statut-pret"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6 10.2l2.7 2.7L14.2 7.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><b>Prêt pour votre validation</b></span></p>
-          <p class="dg-niveau">Code international, 6 chiffres</p>
-          <p class="dg-code">6109 10</p>
-          <p class="dg-code-titre">T-shirts, maillots de corps et gilets de corps, de coton, en bonneterie</p>
-          <p class="dg-source">Source : <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926">Chapitre 61, note 1</a> (texte officiel)</p>
-          <p class="dg-suite">Validez-le et il repart vers Shopify ou votre CSV. Pour une entrée aux États-Unis, la ligne complète à 10 chiffres se fixe avec votre commissionnaire en douane agréé.</p>
+          <p class="dg-niveau">Code UE, 8 chiffres</p>
+          <p class="dg-code">6109 10 00</p>
+          <p class="dg-code-titre">T-shirts, maillots de corps et gilets de corps, de coton, en bonneterie. Ligne : « de coton »</p>
+          <p class="dg-source">Source : <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926">Chapitre 61, note complémentaire 2</a>, <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926">Chapitre 61, note 1</a> (texte officiel)</p>
+          <p class="dg-suite">Validez-le et il repart vers Shopify ou votre CSV.</p>
         </article>
     </div>
   </div>
@@ -75,12 +76,12 @@
 <section class="dg-section" id="perimetre">
   <div class="conteneur dg-duo">
     <div class="dg-carte">
-      <h2>Pas un moteur de recherche de codes SH de plus</h2>
-      <ul class="dg-puces"><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Pas une recherche gratuite de plus : elle demande les faits dont dépend le code.</span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Jamais un code seul avec un score opaque : les candidats, leurs raisons et la source officielle.</span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Une liste de couverture précise, pas une promesse vague : 112 territoires sur 249 à la ligne nationale. <a href="https://legaldata-public.cleolabs.co/docs/customs#coverage">Voir la liste</a></span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Elle parle à vos systèmes (API, lots, Shopify ou CSV, webhooks, MCP) au lieu d’ajouter un tableau de bord.</span></li></ul>
+      <h2>Ce que Cleo livre</h2>
+      <ul class="dg-puces"><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Les faits produit manquants, sous forme de questions à transmettre à votre fournisseur.</span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Votre catalogue classé pour chaque destination, importé de Shopify ou d’un CSV, par lots de 2 000 articles au plus.</span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Une étape de validation : vous approuvez chaque code avant qu’il serve.</span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Le renvoi vers Shopify ou votre CSV des seuls codes approuvés, jamais par-dessus un autre code déjà en place.</span></li></ul>
     </div>
     <div class="dg-carte">
-      <h2>Ce qu’elle ne fait pas</h2>
-      <ul class="dg-puces"><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg><span>Ni votre commissionnaire en douane ni votre importateur. Elle ne dépose rien.</span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg><span>Aucune décision douanière : seule une autorité douanière en rend une.</span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg><span>137 territoires sur 249 répondent à 6 chiffres seulement. Aux États-Unis, les chiffres au-delà du sixième se fixent avec un commissionnaire en douane agréé.</span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg><span>Le coût peut être marqué partiel : un droit manquant est nommé, jamais deviné.</span></li></ul>
+      <h2>Ce qui reste sous votre contrôle</h2>
+      <ul class="dg-puces"><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="6.5" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.8 17c.8-3.3 3.3-5.2 6.2-5.2s5.4 1.9 6.2 5.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>Votre commissionnaire en douane ou votre importateur dépose la déclaration. Cleo prépare les données.</span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="6.5" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.8 17c.8-3.3 3.3-5.2 6.2-5.2s5.4 1.9 6.2 5.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>Une décision douanière officielle reste du ressort de l’autorité douanière. Cleo livre des suggestions documentées.</span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="6.5" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.8 17c.8-3.3 3.3-5.2 6.2-5.2s5.4 1.9 6.2 5.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>112 territoires sur 249 répondent à la ligne tarifaire nationale et 137 à 6 chiffres, et chaque réponse indique son niveau. Aux États-Unis, les chiffres au-delà du sixième se fixent avec un commissionnaire en douane agréé. <a href="https://legaldata-public.cleolabs.co/docs/customs#coverage">Voir la liste</a></span></li><li><svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="6.5" r="3.2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3.8 17c.8-3.3 3.3-5.2 6.2-5.2s5.4 1.9 6.2 5.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>Chaque coût dit ce qu’il inclut. Un droit que Cleo n’a pas pu chiffrer est nommé et le coût est marqué partiel, jamais deviné.</span></li></ul>
       <p class="dg-renvoi"><a href="https://legaldata-public.cleolabs.co/docs/customs#not-yet">La liste complète dans la documentation</a></p>
     </div>
   </div>
@@ -130,7 +131,7 @@
       </details>
       <details>
         <summary>Le code est-il définitif ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
-        <div class="reponse">Non. C’est un candidat avec ses sources, à valider. L’importateur, ou le commissionnaire qui agit pour lui, décide de ce qui est déclaré.</div>
+        <div class="reponse">Non. C’est un candidat avec ses sources, à valider. L’importateur, ou le commissionnaire qui agit pour lui, décide de ce qui est déclaré. Pour une entrée aux États-Unis, la ligne complète à 10 chiffres se fixe avec votre commissionnaire en douane agréé.</div>
       </details>
       <details>
         <summary>Combien coûte un appel ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary>
@@ -144,7 +145,7 @@
   <div class="conteneur">
     <h2>Essayez-la sur un produit de votre catalogue.</h2>
     <div class="dg-actions"><a class="dg-cta" data-cta="signup" href="https://legaldata-public.cleolabs.co/signup">Obtenir une clé API</a><a class="dg-cta-2" href="mailto:hello@cleolabs.co?subject=Customs%20API">Parler à un ingénieur douane</a></div>
-    <p class="dg-petit dg-avertissement">Ces suggestions sont données à titre d’information. Le classement douanier final, les licences d’exportation et la certification des produits doivent être validés par un commissionnaire agréé ou une autorité compétente. Une erreur de classement ou un contrôle de double usage manqué engage la responsabilité juridique.</p>
+    <p class="dg-petit dg-avertissement">Cleo prépare des suggestions documentées. Un professionnel compétent valide le classement final, les licences et les déclarations applicables.</p>
   </div>
 </section>
 </div>
