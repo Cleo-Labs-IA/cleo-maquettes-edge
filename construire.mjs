@@ -26,6 +26,16 @@ const V6_ROUTES = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/v6-routes.js
 const REDIRECTIONS_HERITEES = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/redirections-heritees.json'), 'utf8')).regles
 const ANCIEN_SITE = 'https://cleo-landing-cleo-academys-projects.vercel.app' // le projet cleo-landing relié à GitHub, équipe cleo-academys-projects, celui qui servait www ; l'homonyme de naomie-7307 est une copie orpheline de 146 jours
 const RELAIS_ANCIEN_SITE = ['/api/:path*'].map(s => ({ source: s, destination: ANCIEN_SITE + s }))
+/* 28/09/2026 : les landings Google Ads vivent dans cleo-landing (/en|fr|es/lp/*) et passent par ce relais, avec leurs
+   ressources (_next, vidéos, logos, favicons). Posées à la main le 25/09 dans le vercel.json de sortie, elles
+   disparaissaient au build suivant (relais du blog) : 18 landings en 404 le 28/09 au matin. Elles vont EN TÊTE des
+   rewrites. Un fichier présent dans sortie/ gagne sur le relais ; ne jamais créer de dossier /xx/lp/ ici.
+   Guide : ~/Downloads/GUIDE-ROUTAGE-LP-CLEO-SITE-V6.md. */
+const RELAIS_LANDINGS_ADS = [
+  { source: '/:lang(en|fr|es)/lp/:path*', destination: ANCIEN_SITE + '/:lang/lp/:path*' },
+  ...['/_next/:path*', '/logos/:file*', '/anaelle-avatar.webp', '/cloud-bg.webp', '/hero-video-1.mp4', '/hero-video-2.mp4',
+    '/logo-blue.svg', '/apple-touch-icon.png', '/favicon.ico', '/favicon-16x16.png', '/favicon-32x32.png']
+    .map(s => ({ source: s, destination: ANCIEN_SITE + s }))]
 /* Le portail Legal Data (docs, playground, coverage, status) vit sur legaldata-public.cleolabs.co. Mesuré le 23/09/2026 :
    relayé vers l'alias de cleo-landing, /legal-data/docs répond 307 vers /fr/legal-data/docs, qui n'existe pas. On y va donc
    directement, en 308, avec le chemin conservé. Les pages /fr/legal-data et /en/legal-data restent des pages d'ici. */
@@ -1303,7 +1313,7 @@ fs.writeFileSync(path.join(ICI, 'sortie', 'vercel.json'), JSON.stringify({
     { source: '/fr/platform/regulations', destination: '/fr/data', permanent: true },
     ...REDIRECTIONS_HERITEES.filter(r => !reecritures.some(w => w.source === r.source)).map(r => ({ source: r.source, destination: r.destination, permanent: true })),
     ...VERS_PORTAIL_LEGAL],
-  rewrites: [...reecritures, ...RELAIS_ANCIEN_SITE]
+  rewrites: [...RELAIS_LANDINGS_ADS, ...reecritures, ...RELAIS_ANCIEN_SITE]
 }, null, 2))
 console.log(`  ${REDIRECTIONS_HERITEES.length} redirections héritées du site en ligne (308), ${RELAIS_ANCIEN_SITE.length} relais vers l'ancien site, ${VERS_PORTAIL_LEGAL.length} vers le portail Legal Data`)
 /* Une page retirée du registre ne doit pas survivre dans sortie/ d'un build à l'autre (mesuré le 23/09/2026 : sept

@@ -35,7 +35,7 @@ if [ "$nouveaux" = "0" ] && [ "${FORCER:-0}" != "1" ]; then dit "aucun article n
 node blog/porter.mjs > /tmp/relais-porter.log 2>&1 || { dit "porter en échec"; tail -5 /tmp/relais-porter.log; exit 1 }
 node blog/fragments.mjs > /tmp/relais-fragments.log 2>&1 || { dit "fragments en échec"; tail -5 /tmp/relais-fragments.log; exit 1 }
 node construire.mjs > /tmp/relais-build.log 2>&1 || { dit "build en échec"; tail -5 /tmp/relais-build.log; exit 1 }
-for t in tests/v6-structure.mjs tests/seo-accueil.mjs tests/servir-routes.mjs; do node "$t" > /tmp/relais-test.log 2>&1 || { dit "test en échec : $t"; tail -5 /tmp/relais-test.log; exit 1 }; done
+for t in tests/landings-ads.mjs tests/v6-structure.mjs tests/seo-accueil.mjs tests/servir-routes.mjs; do node "$t" > /tmp/relais-test.log 2>&1 || { dit "test en échec : $t"; tail -5 /tmp/relais-test.log; exit 1 }; done
 git add pages/blog blog commun/v6-routes.json pages/24-blog.html pages/24-blog-en.html && git commit -q -m "blog : relais quotidien, $nouveaux fichier(s) nouveau(x) ($(date '+%d/%m/%Y'))" && dit "commité $(git rev-parse --short HEAD)"
 git push -q origin HEAD 2>/dev/null && dit "poussé" || dit "push différé (hook ou réseau), le commit reste local"
 if [ "${SANS_DEPLOI:-0}" = "1" ]; then dit "SANS_DEPLOI=1 : build et tests faits, pas de mise en ligne"; exit 0; fi
