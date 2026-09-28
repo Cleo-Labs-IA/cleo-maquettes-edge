@@ -106,6 +106,11 @@ const PAGES = [
   { fichier: '61-api-douane-ecommerce-en.html', titre: 'Customs API, e-commerce EN', source: 'cleo-legal-public#53 /customs-api/ecommerce', en: true },
   { fichier: '62-api-douane-commissionnaires.html', titre: 'API douane, commissionnaires et logistique', source: 'cleo-legal-public#53 /customs-api/brokers, 28/09/2026' },
   { fichier: '62-api-douane-commissionnaires-en.html', titre: 'Customs API, brokers and logistics EN', source: 'cleo-legal-public#53 /customs-api/brokers', en: true },
+  /* 28/09/2026 : l'exemple de dossier ouvert par « Voir un exemple de dossier » (commissionnaires). Vraie capture du 25/09/2026,
+     rendue en HTML, avec le PDF tel que capturé (commun/documents/). noindex, follow : pièce à l'appui datée, texte d'API
+     identique dans les deux langues ; c'est la page commissionnaires qui doit se classer. */
+  { fichier: '63-api-douane-exemple-dossier.html', titre: 'API douane, exemple de dossier', source: 'capture API du 25/09/2026, GET /v2/customs/classifications/{id}/dossier', noindex: true },
+  { fichier: '63-api-douane-exemple-dossier-en.html', titre: 'Customs API, sample dossier EN', source: 'API capture of 25/09/2026', en: true, noindex: true },
   //   { fichier: '40-enterprise-en.html', titre: 'Enterprise EN', source: 'pages/40-enterprise.html', en: true },  // 23/09/2026, Naomie : « la page entreprise sert à rien, tout est dans le about »
   { fichier: '43-accueil-avant-vendre-en.html', titre: 'Home, before you sell EN', source: 'pages/43-accueil-avant-vendre.html', en: true },
   { fichier: '09-texte.html',       titre: 'Un texte',    source: 'edgecomply.com/topics/reach-regulation-compliance' },
@@ -790,6 +795,12 @@ const FAVICON = 'data:image/svg+xml;base64,' + fs.readFileSync(path.join(LOCAL, 
 fs.mkdirSync(path.join(ICI, 'sortie'), { recursive: true })
 fs.copyFileSync(path.join(LOCAL, 'favicon.svg'), path.join(ICI, 'sortie', 'favicon.svg'))
 if (existe(OG_IMAGE_SOURCE)) fs.copyFileSync(OG_IMAGE_SOURCE, path.join(ICI, 'sortie', 'og-image.jpg')); else await reprendreEnLigne('/og-image.jpg', path.join(ICI, 'sortie', 'og-image.jpg'))
+/* 28/09/2026 : les documents servis tels quels (PDF d'exemple de la Customs API), versionnés dans commun/documents, jamais retouchés. */
+const dossierDocuments = path.join(ICI, 'commun/documents')
+if (fs.existsSync(dossierDocuments)) {
+  fs.mkdirSync(path.join(ICI, 'sortie', 'documents'), { recursive: true })
+  for (const f of fs.readdirSync(dossierDocuments).filter(n => n.endsWith('.pdf'))) fs.copyFileSync(path.join(dossierDocuments, f), path.join(ICI, 'sortie', 'documents', f))
+}
 /* UN SEUL BUILD À LA FOIS. Plusieurs lanes construisent en parallèle depuis le
    03/09/2026 : deux écritures croisées de sortie/ donneraient une page à moitié
    écrite à l'outil de capture de l'autre. Le verrou est un dossier, atomique. */

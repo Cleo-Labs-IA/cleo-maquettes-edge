@@ -33,8 +33,14 @@ const PORTAIL = 'https://legaldata-public.cleolabs.co'
 const API = 'https://api.legaldata.cleolabs.co'
 const EURLEX = 'https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926'
 const MAIL = 'mailto:hello@cleolabs.co?subject=Customs%20API'
+const HOTE = 'https://www.cleolabs.co'
+const CHEMINS_JSON = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/chemins.json'), 'utf8'))
 /* Typographie française : espace insécable avant ? ! : ; % € et dans les guillemets. */
 const fr = s => s.replace(/ ([?!:;%€»])/g, ' $1').replace(/« /g, '« ').replace(/(\d) (\d{3})\b/g, '$1 $2')
+
+/* Les prix, une seule fois : les cartes « Tarifs » et le JSON-LD WebAPI (offers) les lisent ici. lib/plans.ts de la PR #53. */
+const TARIFS = { sandbox: 0, starter: 100, starterAn: 80, pro: 349, proAn: 279 }
+const SEO_JSON = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/seo.json'), 'utf8'))
 
 const ICONES = {
   oui: '<svg class="dg-marque" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10.5l3.5 3.5 7.5-8" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>',
@@ -78,9 +84,9 @@ const COMMUN = {
     ],
     tarifs: 'Start free. Pay monthly for volume.',
     plans: [
-      { nom: 'Sandbox', prix: '€0', note: '200 units, lifetime · no card', debit: 'All endpoints', cta: 'Get an API key', href: `${PORTAIL}/signup`, principal: true },
-      { nom: 'Starter', prix: '€100', mois: '/ month', note: 'Or €80/mo billed yearly · cancel anytime', debit: '100,000 units / month · 60 requests / minute', cta: 'Choose Starter', href: `${PORTAIL}/buy/starter?cadence=monthly` },
-      { nom: 'Pro', prix: '€349', mois: '/ month', note: 'Or €279/mo billed yearly · cancel anytime', debit: '1,000,000 units / month · 300 requests / minute', cta: 'Choose Pro', href: `${PORTAIL}/buy/pro?cadence=monthly` },
+      { nom: 'Sandbox', eur: TARIFS.sandbox, prix: `€${TARIFS.sandbox}`, note: '200 units, lifetime · no card', debit: 'All endpoints', cta: 'Get an API key', href: `${PORTAIL}/signup`, principal: true },
+      { nom: 'Starter', eur: TARIFS.starter, prix: `€${TARIFS.starter}`, mois: '/ month', note: `Or €${TARIFS.starterAn}/mo billed yearly · cancel anytime`, debit: '100,000 units / month · 60 requests / minute', cta: 'Choose Starter', href: `${PORTAIL}/buy/starter?cadence=monthly` },
+      { nom: 'Pro', eur: TARIFS.pro, prix: `€${TARIFS.pro}`, mois: '/ month', note: `Or €${TARIFS.proAn}/mo billed yearly · cancel anytime`, debit: '1,000,000 units / month · 300 requests / minute', cta: 'Choose Pro', href: `${PORTAIL}/buy/pro?cadence=monthly` },
     ],
     entreprise: 'Enterprise volume or terms?', nousEcrire: 'Talk to us', poids: 'See request weight',
     faqTitre: 'Questions',
@@ -117,9 +123,9 @@ const COMMUN = {
     ],
     tarifs: 'Commencez gratuitement. Payez au mois pour le volume.',
     plans: [
-      { nom: 'Sandbox', prix: '0 €', note: '200 unités, à vie · sans carte', debit: 'Tous les endpoints', cta: 'Obtenir une clé API', href: `${PORTAIL}/signup`, principal: true },
-      { nom: 'Starter', prix: '100 €', mois: 'par mois', note: 'Ou 80 € par mois facturé à l’année · résiliable à tout moment', debit: '100 000 unités par mois · 60 requêtes par minute', cta: 'Choisir Starter', href: `${PORTAIL}/buy/starter?cadence=monthly` },
-      { nom: 'Pro', prix: '349 €', mois: 'par mois', note: 'Ou 279 € par mois facturé à l’année · résiliable à tout moment', debit: '1 000 000 unités par mois · 300 requêtes par minute', cta: 'Choisir Pro', href: `${PORTAIL}/buy/pro?cadence=monthly` },
+      { nom: 'Sandbox', eur: TARIFS.sandbox, prix: `${TARIFS.sandbox} €`, note: '200 unités, à vie · sans carte', debit: 'Tous les endpoints', cta: 'Obtenir une clé API', href: `${PORTAIL}/signup`, principal: true },
+      { nom: 'Starter', eur: TARIFS.starter, prix: `${TARIFS.starter} €`, mois: 'par mois', note: `Ou ${TARIFS.starterAn} € par mois facturé à l’année · résiliable à tout moment`, debit: '100 000 unités par mois · 60 requêtes par minute', cta: 'Choisir Starter', href: `${PORTAIL}/buy/starter?cadence=monthly` },
+      { nom: 'Pro', eur: TARIFS.pro, prix: `${TARIFS.pro} €`, mois: 'par mois', note: `Ou ${TARIFS.proAn} € par mois facturé à l’année · résiliable à tout moment`, debit: '1 000 000 unités par mois · 300 requêtes par minute', cta: 'Choisir Pro', href: `${PORTAIL}/buy/pro?cadence=monthly` },
     ],
     entreprise: 'Un volume ou des conditions Enterprise ?', nousEcrire: 'Nous écrire', poids: 'Voir le poids des requêtes',
     faqTitre: 'Questions',
@@ -186,7 +192,7 @@ const PUBLICS = {
       surtitre: 'Customs API for Shopify and e-commerce teams',
       h1: 'Automate customs classification for your e-commerce catalog before checkout.',
       chapeau: 'Cleo identifies the missing characteristics, classifies each product for its destination, then writes back to Shopify only the approved codes.',
-      cta1: ['Audit a catalog', `${PORTAIL}/playground?tab=classify`], cta2: ['See the Shopify workflow', `${PORTAIL}/docs/customs#connectors`],
+      cta1: ['Classify a product', `${PORTAIL}/playground?tab=classify`], cta2: ['See the Shopify workflow', `${PORTAIL}/docs/customs#connectors`],
       ctaNote: 'Shopify connector available for a first production pilot.',
       citation: { texte: '“I had one person refused it at customs and the package got lost”', qui: 'a merchant shipping from the US, on r/shopify', url: 'https://www.reddit.com/r/shopify/comments/1s4fei9/trying_to_ship_ddp_but_the_duties_line_show_0_at/' },
       etapes: ['Your whole catalog, from a Shopify pull or a CSV.', 'A vague title gets questions for your supplier, not a guessed code.', 'Only codes you approve go back, and a different existing code is never overwritten.'],
@@ -209,7 +215,7 @@ const PUBLICS = {
       surtitre: 'API douane pour les équipes Shopify et e-commerce',
       h1: 'Automatisez la classification douanière de votre catalogue e-commerce avant le passage en caisse.',
       chapeau: 'Cleo identifie les caractéristiques manquantes, classe chaque produit selon sa destination, puis renvoie vers Shopify uniquement les codes approuvés.',
-      cta1: ['Auditer un catalogue', `${PORTAIL}/playground?tab=classify`], cta2: ['Voir le flux Shopify', `${PORTAIL}/docs/customs#connectors`],
+      cta1: ['Classer un produit', `${PORTAIL}/playground?tab=classify`], cta2: ['Voir le flux Shopify', `${PORTAIL}/docs/customs#connectors`],
       ctaNote: 'Connecteur Shopify disponible pour un premier pilote en production.',
       citation: { texte: '« Une personne l’a refusé à la douane et le colis a été perdu »', qui: 'un marchand qui expédie depuis les États-Unis, sur r/shopify, traduit de l’anglais', url: 'https://www.reddit.com/r/shopify/comments/1s4fei9/trying_to_ship_ddp_but_the_duties_line_show_0_at/' },
       etapes: ['Tout votre catalogue, importé de Shopify ou d’un CSV.', 'Un titre vague reçoit des questions pour votre fournisseur, pas un code deviné.', 'Seuls les codes que vous validez repartent, et un autre code déjà en place n’est jamais écrasé.'],
@@ -235,7 +241,7 @@ const PUBLICS = {
       surtitre: 'For customs brokers, 3PLs and logistics teams',
       h1: 'Prepare verifiable customs classification dossiers for your clients.',
       chapeau: 'Cleo prepares the candidate codes, the questions to send back to your client, the tariff notes, the interpretation rules and the history of every approval.',
-      cta1: ['Review a sample dossier', `${PORTAIL}/docs/customs#dossier`], cta2: ['Explore the API', `${PORTAIL}/docs/customs`],
+      cta1: ['Review a sample dossier', '63-api-douane-exemple-dossier-en.html'], cta2: ['Explore the API', `${PORTAIL}/docs/customs`],
       citation: { texte: '“We have to be able to explain to CBP how we arrived at a classification”', qui: 'a broker on r/CustomsBroker', url: 'https://www.reddit.com/r/CustomsBroker/comments/1m9vdpx/are_custom_brokers_in_danger_of_being_replaced_by/' },
       etapes: ['Client descriptions as they come: one line, a CSV, or a batch with a status per line.', 'Candidates with the notes they rest on and the ones set aside, or the questions to send back.', 'A named reviewer approves, the line locks, the dossier and approved lines export.'],
       exempleTitre: 'A candidate code, with the note behind it', exempleIntro: 'A men’s knitted cotton T-shirt declared into France.',
@@ -259,7 +265,7 @@ const PUBLICS = {
       surtitre: 'Pour les commissionnaires en douane, 3PL et équipes logistiques',
       h1: 'Préparez des dossiers de classification douanière vérifiables pour vos clients.',
       chapeau: 'Cleo prépare les codes candidats, les questions à renvoyer au client, les notes tarifaires, les règles d’interprétation et l’historique de chaque validation.',
-      cta1: ['Voir un exemple de dossier', `${PORTAIL}/docs/customs#dossier`], cta2: ['Explorer l’API', `${PORTAIL}/docs/customs`],
+      cta1: ['Voir un exemple de dossier', '63-api-douane-exemple-dossier.html'], cta2: ['Explorer l’API', `${PORTAIL}/docs/customs`],
       citation: { texte: '« Nous devons pouvoir expliquer au CBP comment nous sommes arrivés à un classement »', qui: 'un commissionnaire sur r/CustomsBroker, traduit de l’anglais', url: 'https://www.reddit.com/r/CustomsBroker/comments/1m9vdpx/are_custom_brokers_in_danger_of_being_replaced_by/' },
       etapes: ['Les descriptions des clients telles qu’elles arrivent : une ligne, un CSV, ou un lot avec un statut par ligne.', 'Les candidats avec les notes qui les fondent et ceux écartés, ou les questions à renvoyer.', 'Un relecteur nommé valide, la ligne se verrouille, le dossier et les lignes validées s’exportent.'],
       exempleTitre: 'Un code candidat, avec la note qui le fonde', exempleIntro: 'Un T-shirt homme en coton, en maille, déclaré en France.',
@@ -357,6 +363,21 @@ function page(cle, langue) {
         </div>` : ''
 
   const faq = [...T.faq, ...(T.sansFaqFinal ? [] : [T.faqFinal || L.faqFinal]), L.faqCout]
+  /* JSON-LD de l'API (28/09/2026) : décrit ce que la page montre. Description = la meta de seo.json, offres = les trois
+     cartes « Tarifs » ci-dessous (même objet L.plans), fournisseur = l'Organization du site par son @id. Pas de
+     termsOfService : legaldata-public.cleolabs.co/terms dit encore « Full terms are being finalized » (relevé le 28/09). */
+  const nomFichier = `${P.fichier}${sfx}.html`
+  const webApi = {
+    '@context': 'https://schema.org', '@type': 'WebAPI',
+    name: en ? 'Customs Classification API' : 'API de classification douanière',
+    description: SEO_JSON.pages[nomFichier].description,
+    url: HOTE + CHEMINS_JSON.pages[nomFichier].chemin,
+    provider: { '@id': SEO_JSON.entite['@id'] },
+    documentation: `${PORTAIL}/docs/customs`,
+    offers: L.plans.map(p => ({ '@type': 'Offer', name: p.nom, price: p.eur, priceCurrency: 'EUR', description: p.note, url: p.href,
+      ...(p.mois ? { priceSpecification: { '@type': 'UnitPriceSpecification', price: p.eur, priceCurrency: 'EUR', unitCode: 'MON', unitText: en ? 'month' : 'mois' } } : {}) })),
+  }
+  const ldWebApi = `<script type="application/ld+json">${JSON.stringify(webApi).replace(/</g, '\\u003c')}</script>`
   const chev = '<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>'
 
   let h = `<!--NAV-->
@@ -473,10 +494,188 @@ ${T.garanties ? `
   });
 })();
 </script>
+${ldWebApi}
 <!--PIED-->
 `
   if (!en) h = fr(h.replace(/<(script|pre)[\s\S]*?<\/\1>/g, m => m.replace(/ /g, '\u0001'))).replace(/\u0001/g, ' ')
   return h
+}
+
+/* ── L'EXEMPLE DE DOSSIER (commissionnaires), 28/09/2026 ──
+   Le bouton « Voir un exemple de dossier » ouvre un vrai dossier, pas la doc. Source : la capture du 25/09/2026,
+   GET /v2/customs/classifications/{id}/dossier (scripts/captures/2026-09-25-dossier-fr.json), et son PDF tel que
+   capturé, jamais retouché (commun/documents/customs-dossier-example-2026-09-25.pdf, copié dans sortie/documents/).
+   Aucun appel réseau. L'identifiant de classification est remplacé par « example » sur la page HTML seulement.
+   Les textes renvoyés par l'API (description, justifications, question, avertissement) sont servis tels quels ;
+   seuls les libellés de la page sont traduits. Pompe hydraulique à engrenages, FR, needs_information, 5 candidats cn8. */
+const DOSSIER = JSON.parse(fs.readFileSync(path.join(ICI, 'scripts/captures/2026-09-25-dossier-fr.json'), 'utf8'))
+const PDF_DOSSIER = '/documents/customs-dossier-example-2026-09-25.pdf'
+const PDF_KO = Math.max(1, Math.round(fs.statSync(path.join(ICI, 'commun/documents/customs-dossier-example-2026-09-25.pdf')).size / 1024))
+const codeLisible = c => String(c).replace(/^(\d{4})(\d{2})(\d{2})$/, '$1 $2 $3')
+
+function pageDossier(langue) {
+  const en = langue === 'en', D = DOSSIER.response.data, it = D.item
+  const T = en ? {
+    surtitre: 'Customs API · sample dossier',
+    h1: 'A real customs classification dossier, as the API returns it',
+    chapeau: 'A hydraulic gear pump for agricultural tractors, declared into France. Cleo retained no code yet: it lists the candidates it weighed, with the chapter note behind them, and asks the one question that decides the heading.',
+    etiquette: 'Real API output, captured 25 September 2026',
+    pdf: 'Download the PDF dossier', pdfNote: `PDF, ${PDF_KO} KB, exactly as the API rendered it. It shows the real classification id.`,
+    docs: 'How dossiers work',
+    avantRevue: 'This dossier predates the review workflow, so it has no review block.',
+    avantRevueSuite: 'A reviewed dossier also shows its review state: approved, rejected or changes requested, the approved code and when it was approved. Each decision names its reviewer in the review history.',
+    voirRevue: 'What a review adds', produit: 'The product', idCl: 'Classification id', idArticle: 'Item id', desc: 'Description, as sent',
+    dest: 'Destination', france: 'France (EU CN, 8 digits)', cree: 'Created', creeVal: '25 September 2026, 10:50 UTC', requete: 'Request',
+    faits: 'Facts sent', faitsNoms: { material: 'Material', use: 'Use', process: 'Process' },
+    statut: 'Status', statutVal: 'Needs information', codeRetenu: 'No code retained',
+    ouverte: 'The question still open', manque: 'Missing fact', pourquoi: 'Why it matters', departage: 'Decides',
+    langueQ: 'Returned in French, because the request asked for lang "fr".',
+    traduction: 'Translation: What is the machine’s function (e.g. pumping liquids, compressing a gas, producing mechanical power, cutting or shaping a material, refrigerating)?',
+    candidats: 'Candidates considered', candidatsIntro: 'Five codes, in the order the API returned them. None is retained until the open question is answered.',
+    confiance: 'Confidence', justif: 'Rationale', preuve: 'Evidence', extrait: 'Read the excerpt', sansPreuve: 'No evidence attached, as returned.',
+    texteOfficiel: '(official text)', versions: 'Tariff data versions', sources: 'Sources and licences', aucune: 'None recorded in this capture.',
+    avert: 'Disclaimer, as returned', retour: 'Back to Customs API for brokers', final: 'Get the same dossier on your own products.',
+    virgule: n => String(n),
+  } : {
+    surtitre: 'API douane · exemple de dossier',
+    h1: 'Un vrai dossier de classification douanière, tel que l’API le renvoie',
+    chapeau: 'Une pompe hydraulique à engrenages pour tracteurs agricoles, déclarée en France. Cleo n’a encore retenu aucun code : il liste les candidats pesés, avec la note de chapitre qui les fonde, et pose la seule question qui tranche la position.',
+    etiquette: 'Sortie réelle de l’API, capturée le 25 septembre 2026',
+    pdf: 'Télécharger le dossier PDF', pdfNote: `PDF, ${PDF_KO} Ko, tel que l’API l’a produit. Il porte le vrai identifiant de classification.`,
+    docs: 'Comment fonctionnent les dossiers',
+    avantRevue: 'Ce dossier précède le circuit de validation : il n’a donc pas de bloc de validation.',
+    avantRevueSuite: 'Un dossier validé montre aussi son état de validation : approuvé, rejeté ou modifications demandées, le code approuvé et sa date d’approbation. Chaque décision nomme son relecteur dans l’historique des validations.',
+    voirRevue: 'Ce qu’ajoute une validation', produit: 'Le produit', idCl: 'Identifiant de classification', idArticle: 'Identifiant article', desc: 'Description, telle qu’envoyée',
+    dest: 'Destination', france: 'France (NC de l’UE, 8 chiffres)', cree: 'Créé le', creeVal: '25 septembre 2026, 10 h 50 UTC', requete: 'Requête',
+    faits: 'Faits envoyés', faitsNoms: { material: 'Matière', use: 'Usage', process: 'Procédé' },
+    statut: 'Statut', statutVal: 'Informations manquantes', codeRetenu: 'Aucun code retenu',
+    ouverte: 'La question encore ouverte', manque: 'Fait manquant', pourquoi: 'Pourquoi il compte', departage: 'Tranche',
+    langueQ: 'Renvoyée en français, car la requête demandait lang « fr ».',
+    traduction: '',
+    candidats: 'Les candidats pesés', candidatsIntro: 'Cinq codes, dans l’ordre où l’API les a renvoyés. Aucun n’est retenu tant que la question ouverte n’a pas de réponse. Justifications en anglais, telles que renvoyées.',
+    confiance: 'Confiance', justif: 'Justification', preuve: 'Preuve', extrait: 'Lire l’extrait', sansPreuve: 'Aucune preuve jointe, tel que renvoyé.',
+    texteOfficiel: '(texte officiel)', versions: 'Versions des données tarifaires', sources: 'Sources et licences', aucune: 'Aucune enregistrée dans cette capture.',
+    avert: 'Avertissement, tel que renvoyé', retour: 'Retour à l’API douane pour les commissionnaires', final: 'Obtenez le même dossier sur vos propres produits.',
+    virgule: n => String(n).replace('.', ','),
+  }
+  const L = COMMUN[langue]
+  const q = it.questions[0]
+  const faits = Object.entries(D.query_facts).map(([k, v]) => `<div><dt>${T.faitsNoms[k] || ech(k)}</dt><dd>${ech(v)}</dd></div>`).join('')
+  const candidat = c => {
+    const preuves = Array.isArray(c.evidence) ? c.evidence.map(e => `
+            <p class="dg-source">${T.preuve}${en ? ':' : ' :'} <a href="${ech(e.url)}">${ech(e.ref)}</a> ${T.texteOfficiel} · ${ech(e.kind)} · ${ech(e.source_version)}</p>
+            <details class="dg-extrait"><summary>${T.extrait}</summary><blockquote><p>${ech(e.excerpt)}</p></blockquote></details>`).join('')
+      : `
+            <p class="dg-source">${T.sansPreuve}</p>`
+    return `
+          <li class="dg-carte dg-candidat">
+            <p class="dg-niveau">${ech(c.system)} · ${ech(c.country)} · ${T.confiance} ${T.virgule(c.confidence)}</p>
+            <p class="dg-code">${codeLisible(c.code)}</p>
+            <p class="dg-code-titre">${ech(c.title[langue] || c.title.en)}</p>
+            <p class="dg-justif"><b>${T.justif}.</b> ${ech(c.rationale)}</p>${preuves}
+          </li>`
+  }
+  let h = `<!--NAV-->
+<!-- ═══ CUSTOMS API, EXEMPLE DE DOSSIER (${langue}) ═══ généré par scripts/pages-api-douane.mjs, ne pas retoucher à la main.
+     Source : capture du 25/09/2026, scripts/captures/2026-09-25-dossier-fr.json. -->
+<div class="dg dg-dossier">
+<section class="dg-hero" id="haut">
+  <div class="conteneur">
+    <p class="dg-surtitre">${T.surtitre}</p>
+    <h1>${T.h1}</h1>
+    <p class="dg-chapeau">${T.chapeau}</p>
+    <p class="dg-etiquette">${T.etiquette}</p>
+    <div class="dg-actions"><a class="dg-cta" href="${PDF_DOSSIER}" type="application/pdf">${T.pdf}</a><a class="dg-cta-2" href="${PORTAIL}/docs/customs#dossier">${T.docs}</a></div>
+    <p class="dg-petit">${T.pdfNote}</p>
+  </div>
+</section>
+
+<section class="dg-citation dg-avant-revue" aria-label="${T.voirRevue}">
+  <div class="conteneur">
+    <p><b>${T.avantRevue}</b> ${T.avantRevueSuite} <a href="${PORTAIL}/docs/customs#review">${T.voirRevue}</a></p>
+  </div>
+</section>
+
+<section class="dg-section" id="produit">
+  <div class="conteneur dg-duo">
+    <div class="dg-carte">
+      <h2>${T.produit}</h2>
+      <dl class="dg-faits">
+        <div><dt>${T.idCl}</dt><dd>example</dd></div>
+        <div><dt>${T.idArticle}</dt><dd>${ech(D.item_id)}</dd></div>
+        <div><dt>${T.dest}</dt><dd>${T.france}</dd></div>
+        <div><dt>${T.cree}</dt><dd>${T.creeVal}</dd></div>
+      </dl>
+      <p class="dg-petit dg-desc-titre">${T.desc}</p>
+      <p class="dg-desc" lang="fr">${ech(D.description)}</p>
+      <p class="dg-petit dg-desc-titre">${T.requete}</p>
+      <pre class="dg-pre"><code>${ech(DOSSIER.request.method)} /v2/customs/classifications/example/dossier</code></pre>
+    </div>
+    <div class="dg-carte">
+      <h2>${T.faits}</h2>
+      <dl class="dg-faits">${faits}</dl>
+      <p class="dg-statut dg-statut-dossier">${ICONES.attente}<span><b>${T.statut}${en ? ':' : ' :'} ${T.statutVal}</b> · <code>${ech(it.status)}</code> · ${T.codeRetenu}</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="dg-section dg-teinte" id="question">
+  <div class="conteneur">
+    <h2>${T.ouverte}</h2>
+    <div class="dg-carte dg-question">
+      <p class="dg-question-texte" lang="fr">${ech(q.question)}</p>
+      <p class="dg-petit">${T.langueQ}</p>${T.traduction ? `
+      <p class="dg-traduction">${T.traduction}</p>` : ''}
+      <dl class="dg-faits">
+        <div><dt>${T.manque}</dt><dd><code>${ech(q.fact)}</code></dd></div>
+        <div><dt>${T.departage}</dt><dd><code>${ech(q.discriminates)}</code></dd></div>
+      </dl>
+      <p class="dg-justif"><b>${T.pourquoi}.</b> <span lang="en">${ech(q.why)}</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="dg-section" id="candidats">
+  <div class="conteneur">
+    <h2>${T.candidats}</h2>
+    <p class="dg-intro">${T.candidatsIntro}</p>
+    <ol class="dg-candidats">${it.considered_candidates.map(candidat).join('')}
+    </ol>
+  </div>
+</section>
+
+<section class="dg-section dg-teinte" id="traces">
+  <div class="conteneur dg-duo">
+    <div class="dg-carte">
+      <h2>${T.versions}</h2>
+      <p class="dg-petit">${D.dataset_versions.length ? ech(JSON.stringify(D.dataset_versions)) : T.aucune}</p>
+      <h2 class="dg-h2-suite">${T.sources}</h2>
+      <p class="dg-petit">${D.sources_and_licences.length ? ech(JSON.stringify(D.sources_and_licences)) : T.aucune}</p>
+    </div>
+    <div class="dg-carte">
+      <h2>${T.avert}</h2>
+      <p class="dg-petit" lang="en">${ech(D.advisory_disclaimer)}</p>
+    </div>
+  </div>
+</section>
+
+<section class="dg-section dg-final" id="commencer">
+  <div class="conteneur">
+    <h2>${T.final}</h2>
+    <div class="dg-actions"><a class="dg-cta" data-cta="signup" href="${PORTAIL}/signup">${L.cta}</a><a class="dg-cta-2" href="${PUBLICS.brokers.fichier}${en ? '-en' : ''}.html">${T.retour}</a></div>
+    <p class="dg-petit dg-avertissement">${L.avertissement}</p>
+  </div>
+</section>
+</div>
+<!--PIED-->
+`
+  if (!en) h = fr(h.replace(/<(script|pre)[\s\S]*?<\/\1>/g, m => m.replace(/ /g, '\u0001'))).replace(/\u0001/g, ' ')
+  return h
+}
+for (const langue of ['fr', 'en']) {
+  const nom = `63-api-douane-exemple-dossier${langue === 'en' ? '-en' : ''}.html`
+  fs.writeFileSync(path.join(ICI, 'pages', nom), pageDossier(langue))
+  console.log('  écrit pages/' + nom)
 }
 
 for (const cle of Object.keys(PUBLICS)) for (const langue of ['fr', 'en']) {

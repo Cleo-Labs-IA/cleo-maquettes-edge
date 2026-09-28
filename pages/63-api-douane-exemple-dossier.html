@@ -1,0 +1,131 @@
+<!--NAV-->
+<!-- ═══ CUSTOMS API, EXEMPLE DE DOSSIER (fr) ═══ généré par scripts/pages-api-douane.mjs, ne pas retoucher à la main.
+     Source : capture du 25/09/2026, scripts/captures/2026-09-25-dossier-fr.json. -->
+<div class="dg dg-dossier">
+<section class="dg-hero" id="haut">
+  <div class="conteneur">
+    <p class="dg-surtitre">API douane · exemple de dossier</p>
+    <h1>Un vrai dossier de classification douanière, tel que l’API le renvoie</h1>
+    <p class="dg-chapeau">Une pompe hydraulique à engrenages pour tracteurs agricoles, déclarée en France. Cleo n’a encore retenu aucun code : il liste les candidats pesés, avec la note de chapitre qui les fonde, et pose la seule question qui tranche la position.</p>
+    <p class="dg-etiquette">Sortie réelle de l’API, capturée le 25 septembre 2026</p>
+    <div class="dg-actions"><a class="dg-cta" href="/documents/customs-dossier-example-2026-09-25.pdf" type="application/pdf">Télécharger le dossier PDF</a><a class="dg-cta-2" href="https://legaldata-public.cleolabs.co/docs/customs#dossier">Comment fonctionnent les dossiers</a></div>
+    <p class="dg-petit">PDF, 4 Ko, tel que l’API l’a produit. Il porte le vrai identifiant de classification.</p>
+  </div>
+</section>
+
+<section class="dg-citation dg-avant-revue" aria-label="Ce qu’ajoute une validation">
+  <div class="conteneur">
+    <p><b>Ce dossier précède le circuit de validation : il n’a donc pas de bloc de validation.</b> Un dossier validé montre aussi son état de validation : approuvé, rejeté ou modifications demandées, le code approuvé et sa date d’approbation. Chaque décision nomme son relecteur dans l’historique des validations. <a href="https://legaldata-public.cleolabs.co/docs/customs#review">Ce qu’ajoute une validation</a></p>
+  </div>
+</section>
+
+<section class="dg-section" id="produit">
+  <div class="conteneur dg-duo">
+    <div class="dg-carte">
+      <h2>Le produit</h2>
+      <dl class="dg-faits">
+        <div><dt>Identifiant de classification</dt><dd>example</dd></div>
+        <div><dt>Identifiant article</dt><dd>SKU-PUMP-7</dd></div>
+        <div><dt>Destination</dt><dd>France (NC de l’UE, 8 chiffres)</dd></div>
+        <div><dt>Créé le</dt><dd>25 septembre 2026, 10 h 50 UTC</dd></div>
+      </dl>
+      <p class="dg-petit dg-desc-titre">Description, telle qu’envoyée</p>
+      <p class="dg-desc" lang="fr">Pompe hydraulique à engrenages pour tracteurs agricoles, 250 bar, corps en fonte</p>
+      <p class="dg-petit dg-desc-titre">Requête</p>
+      <pre class="dg-pre"><code>GET /v2/customs/classifications/example/dossier</code></pre>
+    </div>
+    <div class="dg-carte">
+      <h2>Faits envoyés</h2>
+      <dl class="dg-faits"><div><dt>Usage</dt><dd>hydraulic power for agricultural tractors</dd></div><div><dt>Procédé</dt><dd>gear pump</dd></div><div><dt>Matière</dt><dd>cast iron</dd></div></dl>
+      <p class="dg-statut dg-statut-dossier"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 5.5v5.5M10 14.2v.3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg><span><b>Statut : Informations manquantes</b> · <code>needs_information</code> · Aucun code retenu</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="dg-section dg-teinte" id="question">
+  <div class="conteneur">
+    <h2>La question encore ouverte</h2>
+    <div class="dg-carte dg-question">
+      <p class="dg-question-texte" lang="fr">Quelle est la fonction de la machine (ex. pomper des liquides, comprimer un gaz, produire une puissance mécanique, découper ou façonner une matière, réfrigérer) ?</p>
+      <p class="dg-petit">Renvoyée en français, car la requête demandait lang « fr ».</p>
+      <dl class="dg-faits">
+        <div><dt>Fait manquant</dt><dd><code>function</code></dd></div>
+        <div><dt>Tranche</dt><dd><code>heading</code></dd></div>
+      </dl>
+      <p class="dg-justif"><b>Pourquoi il compte.</b> <span lang="en">Headings within chapter 84 split by the machine's function (pumps, compressors, engines, refrigerating equipment, machine tools, and so on).</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="dg-section" id="candidats">
+  <div class="conteneur">
+    <h2>Les candidats pesés</h2>
+    <p class="dg-intro">Cinq codes, dans l’ordre où l’API les a renvoyés. Aucun n’est retenu tant que la question ouverte n’a pas de réponse. Justifications en anglais, telles que renvoyées.</p>
+    <ol class="dg-candidats">
+          <li class="dg-carte dg-candidat">
+            <p class="dg-niveau">cn8 · EU · Confiance 0,92</p>
+            <p class="dg-code">8413 60 31</p>
+            <p class="dg-code-titre">Pompes oléohydrauliques</p>
+            <p class="dg-justif"><b>Justification.</b> Heading 84136031 covers hydraulic fluid power pumps, which directly matches this gear pump's primary function of providing hydraulic power transmission. The cast iron body and 250 bar rating are typical specifications for hydraulic pumps classified under this heading.</p>
+            <p class="dg-source">Preuve : <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926">Chapter 84 Note 2</a> (texte officiel) · chapter_note · 32025R1926</p>
+            <details class="dg-extrait"><summary>Lire l’extrait</summary><blockquote><p>Subject to the operation of note 3 to Section XVI and subject to note 11 to this chapter, a machine or appliance which answers to a description in one or more of the headings 8401 to 8424 , or heading 8486 and at the same time to a description in one or more of the headings 8425 to 8480 is to be classified under the appropriate heading of the former group or under heading 8486 , as the case may be, and not the latter group.</p></blockquote></details>
+          </li>
+          <li class="dg-carte dg-candidat">
+            <p class="dg-niveau">cn8 · EU · Confiance 0,9</p>
+            <p class="dg-code">8413 60 61</p>
+            <p class="dg-code-titre">Pompes oléohydrauliques</p>
+            <p class="dg-justif"><b>Justification.</b> Heading 84136061 is another hydraulic fluid power classification that encompasses gear pumps used in power transmission systems. This code is equally applicable to hydraulic pumps serving agricultural machinery.</p>
+            <p class="dg-source">Preuve : <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926">Chapter 84 Note 2</a> (texte officiel) · chapter_note · 32025R1926</p>
+            <details class="dg-extrait"><summary>Lire l’extrait</summary><blockquote><p>Subject to the operation of note 3 to Section XVI and subject to note 11 to this chapter, a machine or appliance which answers to a description in one or more of the headings 8401 to 8424 , or heading 8486 and at the same time to a description in one or more of the headings 8425 to 8480 is to be classified under the appropriate heading of the former group or under heading 8486 , as the case may be, and not the latter group.</p></blockquote></details>
+          </li>
+          <li class="dg-carte dg-candidat">
+            <p class="dg-niveau">cn8 · EU · Confiance 0,88</p>
+            <p class="dg-code">8413 50 61</p>
+            <p class="dg-code-titre">Pompes oléohydrauliques</p>
+            <p class="dg-justif"><b>Justification.</b> Heading 84135061 covers hydraulic fluid power components and would capture this gear pump as a hydraulic power transmission element. The agricultural tractor application fits within the scope of hydraulic power machinery.</p>
+            <p class="dg-source">Preuve : <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926">Chapter 84 Note 2</a> (texte officiel) · chapter_note · 32025R1926</p>
+            <details class="dg-extrait"><summary>Lire l’extrait</summary><blockquote><p>Subject to the operation of note 3 to Section XVI and subject to note 11 to this chapter, a machine or appliance which answers to a description in one or more of the headings 8401 to 8424 , or heading 8486 and at the same time to a description in one or more of the headings 8425 to 8480 is to be classified under the appropriate heading of the former group or under heading 8486 , as the case may be, and not the latter group.</p></blockquote></details>
+          </li>
+          <li class="dg-carte dg-candidat">
+            <p class="dg-niveau">cn8 · EU · Confiance 0,45</p>
+            <p class="dg-code">8412 29 81</p>
+            <p class="dg-code-titre">Moteurs oléohydrauliques</p>
+            <p class="dg-justif"><b>Justification.</b> Heading 84122981 covers hydraulic fluid power motors, which are devices that consume hydraulic energy. A pump generates hydraulic power rather than consuming it, making this classification incorrect for a pump.</p>
+            <p class="dg-source">Preuve : <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926">Chapter 84 Note 2</a> (texte officiel) · chapter_note · 32025R1926</p>
+            <details class="dg-extrait"><summary>Lire l’extrait</summary><blockquote><p>Subject to the operation of note 3 to Section XVI and subject to note 11 to this chapter, a machine or appliance which answers to a description in one or more of the headings 8401 to 8424 , or heading 8486 and at the same time to a description in one or more of the headings 8425 to 8480 is to be classified under the appropriate heading of the former group or under heading 8486 , as the case may be, and not the latter group.</p></blockquote></details>
+          </li>
+          <li class="dg-carte dg-candidat">
+            <p class="dg-niveau">cn8 · EU · Confiance 0,25</p>
+            <p class="dg-code">8708 40 50</p>
+            <p class="dg-code-titre">Boîtes de vitesses</p>
+            <p class="dg-justif"><b>Justification.</b> Heading 87084050 covers gearboxes, which are transmission components. While this product contains gears, it is a pump (energy generator) not a gearbox (transmission reducer), making this classification inappropriate.</p>
+            <p class="dg-source">Aucune preuve jointe, tel que renvoyé.</p>
+          </li>
+    </ol>
+  </div>
+</section>
+
+<section class="dg-section dg-teinte" id="traces">
+  <div class="conteneur dg-duo">
+    <div class="dg-carte">
+      <h2>Versions des données tarifaires</h2>
+      <p class="dg-petit">Aucune enregistrée dans cette capture.</p>
+      <h2 class="dg-h2-suite">Sources et licences</h2>
+      <p class="dg-petit">Aucune enregistrée dans cette capture.</p>
+    </div>
+    <div class="dg-carte">
+      <h2>Avertissement, tel que renvoyé</h2>
+      <p class="dg-petit" lang="en">These suggestions are informational only. Final customs classification, export licensing and product certification must be validated by a licensed broker or competent authority. Misclassification or missed dual-use controls carry legal liability.</p>
+    </div>
+  </div>
+</section>
+
+<section class="dg-section dg-final" id="commencer">
+  <div class="conteneur">
+    <h2>Obtenez le même dossier sur vos propres produits.</h2>
+    <div class="dg-actions"><a class="dg-cta" data-cta="signup" href="https://legaldata-public.cleolabs.co/signup">Obtenir une clé API</a><a class="dg-cta-2" href="62-api-douane-commissionnaires.html">Retour à l’API douane pour les commissionnaires</a></div>
+    <p class="dg-petit dg-avertissement">Cleo prépare des suggestions documentées. Un professionnel compétent valide le classement final, les licences et les déclarations applicables.</p>
+  </div>
+</section>
+</div>
+<!--PIED-->

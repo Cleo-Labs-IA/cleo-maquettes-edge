@@ -1,0 +1,158 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/v2/customs/classifications/5a0a0889-c975-429a-a729-ef8fd6d9cd1e/dossier",
+    "body": null
+  },
+  "status": 200,
+  "response": {
+    "data": {
+      "classification_id": "5a0a0889-c975-429a-a729-ef8fd6d9cd1e",
+      "dossier_source": "classification",
+      "item_id": "SKU-PUMP-7",
+      "description": "Pompe hydraulique à engrenages pour tracteurs agricoles, 250 bar, corps en fonte",
+      "country": "FR",
+      "system": null,
+      "as_of": null,
+      "created_at": "2026-09-25T10:50:48.317457+00:00",
+      "dataset_versions": [],
+      "sources_and_licences": [],
+      "query_facts": {
+        "use": "hydraulic power for agricultural tractors",
+        "process": "gear pump",
+        "material": "cast iron"
+      },
+      "facts_summary": "Material: cast iron. Use: hydraulic power for agricultural tractors. Process: gear pump.",
+      "item": {
+        "status": "needs_information",
+        "code_status": "no code retained",
+        "retained_candidate": null,
+        "considered_candidates": [
+          {
+            "code": "84136031",
+            "system": "cn8",
+            "country": "EU",
+            "title": {
+              "de": "Hydropumpen",
+              "en": "Hydraulic fluid power",
+              "es": "Bombas oleohidráulicas",
+              "fr": "Pompes oléohydrauliques",
+              "it": "Pompe oleoidrauliche"
+            },
+            "confidence": 0.92,
+            "rationale": "Heading 84136031 covers hydraulic fluid power pumps, which directly matches this gear pump's primary function of providing hydraulic power transmission. The cast iron body and 250 bar rating are typical specifications for hydraulic pumps classified under this heading.",
+            "evidence": [
+              {
+                "ref": "Chapter 84 Note 2",
+                "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926",
+                "kind": "chapter_note",
+                "excerpt": "Subject to the operation of note 3 to Section XVI and subject to note 11 to this chapter, a machine or appliance which answers to a description in one or more of the headings 8401 to 8424 , or heading 8486 and at the same time to a description in one or more of the headings 8425 to 8480 is to be classified under the appropriate heading of the former group or under heading 8486 , as the case may be, and not the latter group.",
+                "source_version": "32025R1926"
+              }
+            ]
+          },
+          {
+            "code": "84136061",
+            "system": "cn8",
+            "country": "EU",
+            "title": {
+              "de": "Hydropumpen",
+              "en": "Hydraulic fluid power",
+              "es": "Bombas oleohidráulicas",
+              "fr": "Pompes oléohydrauliques",
+              "it": "Pompe oleoidrauliche"
+            },
+            "confidence": 0.9,
+            "rationale": "Heading 84136061 is another hydraulic fluid power classification that encompasses gear pumps used in power transmission systems. This code is equally applicable to hydraulic pumps serving agricultural machinery.",
+            "evidence": [
+              {
+                "ref": "Chapter 84 Note 2",
+                "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926",
+                "kind": "chapter_note",
+                "excerpt": "Subject to the operation of note 3 to Section XVI and subject to note 11 to this chapter, a machine or appliance which answers to a description in one or more of the headings 8401 to 8424 , or heading 8486 and at the same time to a description in one or more of the headings 8425 to 8480 is to be classified under the appropriate heading of the former group or under heading 8486 , as the case may be, and not the latter group.",
+                "source_version": "32025R1926"
+              }
+            ]
+          },
+          {
+            "code": "84135061",
+            "system": "cn8",
+            "country": "EU",
+            "title": {
+              "de": "Hydropumpen",
+              "en": "Hydraulic fluid power",
+              "es": "Bombas oleohidráulicas",
+              "fr": "Pompes oléohydrauliques",
+              "it": "Pompe oleoidrauliche"
+            },
+            "confidence": 0.88,
+            "rationale": "Heading 84135061 covers hydraulic fluid power components and would capture this gear pump as a hydraulic power transmission element. The agricultural tractor application fits within the scope of hydraulic power machinery.",
+            "evidence": [
+              {
+                "ref": "Chapter 84 Note 2",
+                "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926",
+                "kind": "chapter_note",
+                "excerpt": "Subject to the operation of note 3 to Section XVI and subject to note 11 to this chapter, a machine or appliance which answers to a description in one or more of the headings 8401 to 8424 , or heading 8486 and at the same time to a description in one or more of the headings 8425 to 8480 is to be classified under the appropriate heading of the former group or under heading 8486 , as the case may be, and not the latter group.",
+                "source_version": "32025R1926"
+              }
+            ]
+          },
+          {
+            "code": "84122981",
+            "system": "cn8",
+            "country": "EU",
+            "title": {
+              "de": "Hydromotoren",
+              "en": "Hydraulic fluid power motors",
+              "es": "Motores oleohidráulicos",
+              "fr": "Moteurs oléohydrauliques",
+              "it": "Motori oleoidraulici"
+            },
+            "confidence": 0.45,
+            "rationale": "Heading 84122981 covers hydraulic fluid power motors, which are devices that consume hydraulic energy. A pump generates hydraulic power rather than consuming it, making this classification incorrect for a pump.",
+            "evidence": [
+              {
+                "ref": "Chapter 84 Note 2",
+                "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926",
+                "kind": "chapter_note",
+                "excerpt": "Subject to the operation of note 3 to Section XVI and subject to note 11 to this chapter, a machine or appliance which answers to a description in one or more of the headings 8401 to 8424 , or heading 8486 and at the same time to a description in one or more of the headings 8425 to 8480 is to be classified under the appropriate heading of the former group or under heading 8486 , as the case may be, and not the latter group.",
+                "source_version": "32025R1926"
+              }
+            ]
+          },
+          {
+            "code": "87084050",
+            "system": "cn8",
+            "country": "EU",
+            "title": {
+              "de": "Schaltgetriebe",
+              "en": "Gear boxes",
+              "es": "Cajas de cambio",
+              "fr": "Boîtes de vitesses",
+              "it": "Cambi di velocità"
+            },
+            "confidence": 0.25,
+            "rationale": "Heading 87084050 covers gearboxes, which are transmission components. While this product contains gears, it is a pump (energy generator) not a gearbox (transmission reducer), making this classification inappropriate.",
+            "evidence": "no evidence attached"
+          }
+        ],
+        "missing_attributes": [
+          "function"
+        ],
+        "questions": [
+          {
+            "why": "Headings within chapter 84 split by the machine's function (pumps, compressors, engines, refrigerating equipment, machine tools, and so on).",
+            "fact": "function",
+            "question": "Quelle est la fonction de la machine (ex. pomper des liquides, comprimer un gaz, produire une puissance mécanique, découper ou façonner une matière, réfrigérer) ?",
+            "discriminates": "heading"
+          }
+        ]
+      },
+      "components": null,
+      "kit_analysis": null,
+      "advisory_disclaimer": "These suggestions are informational only. Final customs classification, export licensing and product certification must be validated by a licensed broker or competent authority. Misclassification or missed dual-use controls carry legal liability.",
+      "api_version": "v2"
+    },
+    "advisory_disclaimer": "These suggestions are informational only. Final customs classification, export licensing and product certification must be validated by a licensed broker or competent authority. Misclassification or missed dual-use controls carry legal liability."
+  }
+}

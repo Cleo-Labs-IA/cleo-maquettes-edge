@@ -353,5 +353,7 @@
   "61-api-douane-ecommerce.html": "product",
   "61-api-douane-ecommerce-en.html": "product",
   "62-api-douane-commissionnaires.html": "product",
-  "62-api-douane-commissionnaires-en.html": "product"
+  "62-api-douane-commissionnaires-en.html": "product",
+  "63-api-douane-exemple-dossier.html": "product",
+  "63-api-douane-exemple-dossier-en.html": "product"
 }

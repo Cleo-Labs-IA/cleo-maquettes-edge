@@ -315,6 +315,12 @@
     },
     "62-api-douane-commissionnaires-en.html": {
       "chemin": "/en/customs-api/brokers"
+    },
+    "63-api-douane-exemple-dossier.html": {
+      "chemin": "/fr/api-douane/exemple-dossier"
+    },
+    "63-api-douane-exemple-dossier-en.html": {
+      "chemin": "/en/customs-api/sample-dossier"
     }
   }
 }

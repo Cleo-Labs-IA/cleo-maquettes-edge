@@ -6,7 +6,7 @@ import http from 'http'
 import fs from 'fs'
 import path from 'path'
 const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.mjs': 'text/javascript',
-  '.webp': 'image/webp', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.json': 'application/json', '.txt': 'text/plain' }
+  '.webp': 'image/webp', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.json': 'application/json', '.txt': 'text/plain', '.pdf': 'application/pdf' }
 
 export function resoudreFichier(dossier, url) {
   const racine = path.resolve(dossier)
