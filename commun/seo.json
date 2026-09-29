@@ -40,8 +40,8 @@
     },
     "image": "https://www.cleolabs.co/og-image.jpg",
     "description": {
-      "fr": "Cleo Labs développe MARIA (Multi-Agent Regulatory Intelligence Architecture), la première infrastructure IA de conformité pour les retailers en Europe. MARIA transforme 3 700+ sources réglementaires dans 106 pays en analyses d'impact en temps réel, permettant aux équipes conformité retail de multiplier par 10 leur capacité de traitement.",
-      "en": "Cleo Labs builds MARIA (Multi-Agent Regulatory Intelligence Architecture), Europe's first AI compliance infrastructure for retailers. MARIA turns 3,700+ regulatory sources across 106 countries into real-time impact analyses, helping retail compliance teams multiply their processing capacity by 10x."
+      "fr": "Cleo Labs développe MARIA (Multi-Agent Regulatory Intelligence Architecture), la première infrastructure IA de conformité pour les retailers en Europe. MARIA transforme 183 sources réglementaires dans 90 juridictions en analyses d'impact en temps réel, permettant aux équipes conformité retail de multiplier par 10 leur capacité de traitement.",
+      "en": "Cleo Labs builds MARIA (Multi-Agent Regulatory Intelligence Architecture), Europe's first AI compliance infrastructure for retailers. MARIA turns 183 regulatory sources across 90 jurisdictions into real-time impact analyses, helping retail compliance teams multiply their processing capacity by 10x."
     },
     "foundingDate": "2023",
     "award": "Winner: The Pitch by Deel (Station F, 2026)",
@@ -454,7 +454,7 @@
     },
     "01-accueil.html": {
       "titre": "Conformité Produit Automatisée pour les Marques Internationales | Cleo Labs",
-      "description": "Plateforme IA de conformité produit pour les marques internationales. 106 pays, 25 000+ réglementations, 3 700+ sources. CSRD, AGEC, GPSR.",
+      "description": "Plateforme IA de conformité produit pour les marques internationales. 90 juridictions, 55 782 réglementations, 183 sources. CSRD, AGEC, GPSR.",
       "source": "archive",
       "url_source": null,
       "appariement": "https://www.cleolabs.co/fr, la page d'accueil francaise.",
@@ -473,7 +473,7 @@
     },
     "01-accueil-en.html": {
       "titre": "Automated Product Compliance for Global Brands | Cleo Labs",
-      "description": "AI-powered product compliance platform for global brands. 106 countries, 25,000+ regulations, 3,700+ sources. CSRD, AGEC, GPSR coverage.",
+      "description": "AI-powered product compliance platform for global brands. 90 jurisdictions, 55,782 regulations, 183 sources. CSRD, AGEC, GPSR coverage.",
       "source": "archive",
       "url_source": null,
       "appariement": "https://www.cleolabs.co/en, la page d'accueil anglaise.",
@@ -490,12 +490,12 @@
       "_mesure": "titre 62 caracteres, description 245 caracteres, releves sur la page servie le 27/08/2026"
     },
     "03-offre.html": {
-      "titre": "Regulatory Change, veille produit sur 106 pays | Cleo Labs",
+      "titre": "Regulatory Change, veille produit sur 90 juridictions | Cleo Labs",
       "description": "Les sources sont suivies en continu et ce qui va changer vous parvient des mois avant l'entrée en vigueur. Ne travaillez jamais sur une règle périmée.",
       "source": "redige",
       "url_source": null,
       "appariement": "pas d'equivalent servi : /fr/product/radar rend 404. Le depot declare la page (product/radar/page.tsx:30-33) mais elle n'est pas deployee.",
-      "appui_contenu": "pages/03-offre.html, h1 « Veille réglementaire produit. En continu, sur 106 pays. » et son chapeau, repris mot pour mot.",
+      "appui_contenu": "pages/03-offre.html, h1 « Veille réglementaire produit. En continu, sur 90 juridictions. » et son chapeau, repris mot pour mot.",
       "_mesure": "titre 53 caracteres, description 150 caracteres",
       "_gabarit_le": "2026-09-03"
     },
@@ -510,7 +510,7 @@
     },
     "05-marche.html": {
       "titre": "Conformité produit dans l'Union européenne | Cleo Labs",
-      "description": "Ce qui s'applique à vos produits dans l'Union européenne : REACH, RSGP, PPWR, batteries. 25 000 réglementations cartographiées dans les 27 États membres, citées à l'article.",
+      "description": "Ce qui s'applique à vos produits dans l'Union européenne : REACH, RSGP, PPWR, batteries. Les textes des 27 États membres, cartographiés et cités à l'article.",
       "source": "site",
       "url_source": "https://www.cleolabs.co/fr/jurisdictions/european-union",
       "appariement": "https://www.cleolabs.co/fr/jurisdictions/european-union, la juridiction Union europeenne.",
@@ -650,7 +650,7 @@
     },
     "18-recrutement.html": {
       "titre": "Carrières : rejoindre Cleo Labs | Cleo Labs",
-      "description": "Rejoindre l’équipe qui automatise la conformité produit : 25 000 réglementations, 106 pays.",
+      "description": "Rejoindre l’équipe qui automatise la conformité produit : 55 782 réglementations, 90 juridictions.",
       "source": "site",
       "url_source": "https://www.cleolabs.co/fr/careers",
       "appariement": "https://www.cleolabs.co/fr/careers, l'index des postes.",
@@ -786,8 +786,8 @@
       "_gabarit_le": "2026-09-03"
     },
     "36-solutions.html": {
-      "titre": "Conformité produit sur 106 pays | Cleo Labs",
-      "description": "Chaque produit rapproché de chaque réglementation qui le concerne, marché par marché, avec son état et son échéance. 106 pays suivis.",
+      "titre": "Conformité produit sur 90 juridictions | Cleo Labs",
+      "description": "Chaque produit rapproché de chaque réglementation qui le concerne, marché par marché, avec son état et son échéance. 90 juridictions suivies.",
       "source": "redige",
       "url_source": null,
       "_appui": "pages/36-solutions.html, chapeau",
@@ -846,7 +846,7 @@
     },
     "43-accueil-avant-vendre.html": {
       "titre": "Conformité Produit Automatisée pour les Marques Internationales | Cleo Labs",
-      "description": "Conformité produit automatisée pour les marques internationales : ce qui s'applique à chaque produit, ce qui manque et quoi faire, dans 106 pays.",
+      "description": "Conformité produit automatisée pour les marques internationales : ce qui s'applique à chaque produit, ce qui manque et quoi faire, dans 90 juridictions.",
       "source": "site",
       "url_source": "https://www.cleolabs.co/fr",
       "appariement": "Accueil français depuis le 15/09/2026 (remplace 01-accueil).",
@@ -863,7 +863,7 @@
     },
     "43-accueil-avant-vendre-en.html": {
       "titre": "Automated Product Compliance for Global Brands | Cleo Labs",
-      "description": "Automated product compliance for global brands: what applies to each product, what is missing and what to do, across 106 countries.",
+      "description": "Automated product compliance for global brands: what applies to each product, what is missing and what to do, across 90 jurisdictions.",
       "source": "site",
       "url_source": "https://www.cleolabs.co/en",
       "appariement": "English home since 15/09/2026 (replaces 01-accueil-en).",
@@ -942,7 +942,7 @@
     },
     "52-data-mcp.html": {
       "titre": "Serveur MCP : la donnée réglementaire dans votre IA | Cleo Labs",
-      "description": "Les règles produit de 106 pays dans Claude, Cursor, Cline, Continue et tout client compatible MCP. La réponse cite l'article qui fonde la règle.",
+      "description": "Les règles produit de 90 juridictions dans Claude, Cursor, Cline, Continue et tout client compatible MCP. La réponse cite l'article qui fonde la règle.",
       "source": "redige",
       "url_source": null,
       "appui_contenu": "16/09/2026, agent D : structure de moonlit.ai (connect, mcp, platform) ; faits dans scratchpad/agents/refonte/identite-data/faits.md.",
@@ -950,7 +950,7 @@
     },
     "52-data-mcp-en.html": {
       "titre": "MCP server: regulatory data inside your AI | Cleo Labs",
-      "description": "The product rules of 106 countries in Claude, Cursor, Cline, Continue and any MCP-compatible client. The answer cites the article behind the rule.",
+      "description": "The product rules of 90 jurisdictions in Claude, Cursor, Cline, Continue and any MCP-compatible client. The answer cites the article behind the rule.",
       "source": "redige",
       "url_source": null,
       "appui_contenu": "16/09/2026, agent D : structure de moonlit.ai (connect, mcp, platform) ; faits dans scratchpad/agents/refonte/identite-data/faits.md.",
@@ -958,7 +958,7 @@
     },
     "53-data-plateforme.html": {
       "titre": "La veille produit : la plateforme | Cleo Labs",
-      "description": "La veille produit : les textes qui visent vos produits et ceux qui changent, suivis dans 106 pays.",
+      "description": "La veille produit : les textes qui visent vos produits et ceux qui changent, suivis dans 90 juridictions.",
       "source": "redige",
       "url_source": null,
       "appui_contenu": "16/09/2026, agent D : structure de moonlit.ai (connect, mcp, platform) ; faits dans scratchpad/agents/refonte/identite-data/faits.md.",
@@ -966,7 +966,7 @@
     },
     "53-data-plateforme-en.html": {
       "titre": "Product monitoring: the platform | Cleo Labs",
-      "description": "Product regulatory monitoring: the texts that apply to your products and the ones that change, tracked across 106 countries.",
+      "description": "Product regulatory monitoring: the texts that apply to your products and the ones that change, tracked across 90 jurisdictions.",
       "source": "redige",
       "url_source": null,
       "appui_contenu": "16/09/2026, agent D : structure de moonlit.ai (connect, mcp, platform) ; faits dans scratchpad/agents/refonte/identite-data/faits.md.",
@@ -1022,7 +1022,7 @@
     },
     "05-marche-en.html": {
       "titre": "Product compliance in the European Union | Cleo Labs",
-      "description": "What applies to your products in the European Union: REACH, GPSR, PPWR, batteries. 25,000 regulations mapped across the 27 Member States, cited to the article.",
+      "description": "What applies to your products in the European Union: REACH, GPSR, PPWR, batteries. The texts of the 27 Member States, mapped and cited to the article.",
       "source": "redige",
       "url_source": null,
       "appui_contenu": "Traduction du fragment 05-marche.html par agent, 23/09/2026 ; titre et description traduits de la fiche FR.",
@@ -1086,7 +1086,7 @@
     },
     "18-recrutement-en.html": {
       "titre": "Careers: join Cleo Labs | Cleo Labs",
-      "description": "Join the team that encodes the law, product by product, and automates product compliance: 25,000 regulations mapped, 19,000 authorities, 106 countries.",
+      "description": "Join the team that encodes the law, product by product, and automates product compliance: 55,782 regulations mapped, 3,098 authorities, 90 jurisdictions.",
       "source": "redige",
       "url_source": null,
       "appui_contenu": "Traduction du fragment 18-recrutement.html par agent, 23/09/2026 ; titre et description traduits de la fiche FR.",
@@ -1149,8 +1149,8 @@
       "_mesure": "titre 47 caractères, description 122 caractères"
     },
     "36-solutions-en.html": {
-      "titre": "Product compliance across 106 countries | Cleo Labs",
-      "description": "Each product matched to every regulation that concerns it, market by market, with its status and its deadline. 106 countries tracked.",
+      "titre": "Product compliance across 90 jurisdictions | Cleo Labs",
+      "description": "Each product matched to every regulation that concerns it, market by market, with its status and its deadline. 90 jurisdictions tracked.",
       "source": "redige",
       "url_source": null,
       "appui_contenu": "Traduction du fragment 36-solutions.html par agent, 23/09/2026 ; titre et description traduits de la fiche FR.",
@@ -1301,7 +1301,7 @@
           "name": "Regulatory Change",
           "serviceType": "Veille réglementaire produit",
           "provider": "https://www.cleolabs.co/#organization",
-          "areaServed": "106 pays, valeur de la maquette"
+          "areaServed": "90 juridictions, valeur de la maquette"
         },
         "FAQPage": "les questions de la section « Questions fréquentes » de pages/03-offre.html, telles qu'elles y sont ecrites"
       },
@@ -1684,8 +1684,8 @@
         "Dataset": {
           "name": "Cleo Legal Data",
           "description": {
-            "fr": "Le corpus réglementaire produit de Cleo : 25 000 réglementations et 19 000 autorités dans 106 pays, chaque texte rattaché à sa source officielle.",
-            "en": "The Cleo product regulatory corpus: 25,000 regulations and 19,000 authorities across 106 countries, every text linked to its official source."
+            "fr": "Le corpus réglementaire produit de Cleo : 55 782 réglementations et 3 098 autorités dans 90 juridictions, chaque texte rattaché à sa source officielle.",
+            "en": "The Cleo product regulatory corpus: 55,782 regulations and 3,098 authorities across 90 jurisdictions, every text linked to its official source."
           },
           "creator": {
             "@id": "https://www.cleolabs.co/#organization"
@@ -1693,7 +1693,7 @@
           "isAccessibleForFree": false
         }
       },
-      "_source": "ajouté le 23/09/2026 : le site en ligne servait Dataset sur /legal-data ; chiffres canoniques 106 / 25 000 / 19 000"
+      "_source": "ajouté le 23/09/2026 : le site en ligne servait Dataset sur /legal-data ; chiffres alignés sur l'API le 29/09/2026 : 90 juridictions (GET /v2/coverage totals.jurisdictions), 55 782 réglementations (GET /v2/atlas/stats regulations_canonical), 3 098 autorités (GET /v2/authorities, 31 pages)"
     },
     "23-research-en.html": {
       "types": [
@@ -1734,8 +1734,8 @@
         "Dataset": {
           "name": "Cleo Legal Data",
           "description": {
-            "fr": "Le corpus réglementaire produit de Cleo : 25 000 réglementations et 19 000 autorités dans 106 pays, chaque texte rattaché à sa source officielle.",
-            "en": "The Cleo product regulatory corpus: 25,000 regulations and 19,000 authorities across 106 countries, every text linked to its official source."
+            "fr": "Le corpus réglementaire produit de Cleo : 55 782 réglementations et 3 098 autorités dans 90 juridictions, chaque texte rattaché à sa source officielle.",
+            "en": "The Cleo product regulatory corpus: 55,782 regulations and 3,098 authorities across 90 jurisdictions, every text linked to its official source."
           },
           "creator": {
             "@id": "https://www.cleolabs.co/#organization"
@@ -1743,7 +1743,7 @@
           "isAccessibleForFree": false
         }
       },
-      "_source": "ajouté le 23/09/2026 : le site en ligne servait Dataset sur /legal-data ; chiffres canoniques 106 / 25 000 / 19 000"
+      "_source": "ajouté le 23/09/2026 : le site en ligne servait Dataset sur /legal-data ; chiffres alignés sur l'API le 29/09/2026 : 90 juridictions (GET /v2/coverage totals.jurisdictions), 55 782 réglementations (GET /v2/atlas/stats regulations_canonical), 3 098 autorités (GET /v2/authorities, 31 pages)"
     },
     "02-entreprise-en.html": {
       "types": [
@@ -1997,8 +1997,8 @@
       "proprietes": {
         "Service": {
           "name": {
-            "fr": "Conformité produit sur 106 pays",
-            "en": "Product compliance across 106 countries"
+            "fr": "Conformité produit sur 90 juridictions",
+            "en": "Product compliance across 90 jurisdictions"
           },
           "serviceType": {
             "fr": "Conformité produit",
@@ -2008,8 +2008,8 @@
             "@id": "https://www.cleolabs.co/#organization"
           },
           "areaServed": {
-            "fr": "106 pays",
-            "en": "106 countries"
+            "fr": "90 juridictions",
+            "en": "90 jurisdictions"
           },
           "description": {
             "fr": "Chaque produit rapproché de chaque réglementation qui le concerne, marché par marché, avec son état et son échéance.",
@@ -2027,8 +2027,8 @@
       "proprietes": {
         "Service": {
           "name": {
-            "fr": "Conformité produit sur 106 pays",
-            "en": "Product compliance across 106 countries"
+            "fr": "Conformité produit sur 90 juridictions",
+            "en": "Product compliance across 90 jurisdictions"
           },
           "serviceType": {
             "fr": "Conformité produit",
@@ -2038,8 +2038,8 @@
             "@id": "https://www.cleolabs.co/#organization"
           },
           "areaServed": {
-            "fr": "106 pays",
-            "en": "106 countries"
+            "fr": "90 juridictions",
+            "en": "90 jurisdictions"
           },
           "description": {
             "fr": "Chaque produit rapproché de chaque réglementation qui le concerne, marché par marché, avec son état et son échéance.",

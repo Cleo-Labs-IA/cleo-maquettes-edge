@@ -65,7 +65,7 @@ const VERS_PORTAIL_LEGAL = [{ source: '/legal-data/:path+', destination: 'https:
 /* 28/09/2026 : le commentaire de tête de traceurs.html (la note de l'atelier) ne sort plus dans les pages. */
 const TRACEURS = fs.existsSync(path.join(ICI, 'commun/traceurs.html')) ? fs.readFileSync(path.join(ICI, 'commun/traceurs.html'), 'utf8').replace(/<!--[\s\S]*?-->/g, '').trim() : ''
 const OG_IMAGE_SOURCE = '/Users/naomiehalioua/cleo-landing/public/og-image.jpg'
-const IMAGE_SOCIALE = { url: `${HOTE}/og-image.jpg`, largeur: 1200, hauteur: 630, alt: 'Cleo Labs, la conformité produit dans 106 pays' }
+const IMAGE_SOCIALE = { url: `${HOTE}/og-image.jpg`, largeur: 1200, hauteur: 630, alt: 'Cleo Labs, la conformité produit dans 90 juridictions' }
 const LOCAL = path.join(ICI, 'images')
 const POLICE = '/Users/naomiehalioua/Downloads/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Variable.woff2'
 
@@ -134,7 +134,7 @@ const PAGES = [
   { fichier: '19-poste-legal-en.html', titre: 'Legal Engineer in Paris', source: 'https://www.cleolabs.co/en/careers/legal-engineer', en: true },
   { fichier: '19-poste-fde.html', titre: 'Forward Deployed Engineer à Paris', source: 'https://www.cleolabs.co/fr/careers/forward-deployed-engineer' },
   { fichier: '19-poste-fde-en.html', titre: 'Forward Deployed Engineer in Paris', source: 'https://www.cleolabs.co/en/careers/forward-deployed-engineer', en: true },
-  { fichier: '36-solutions-en.html', titre: 'Product compliance across 106 countries EN', source: 'pages/36-solutions.html, traduction du 23/09/2026', en: true },
+  { fichier: '36-solutions-en.html', titre: 'Product compliance across 90 jurisdictions EN', source: 'pages/36-solutions.html, traduction du 23/09/2026', en: true },
   { fichier: '35-marketplaces-en.html', titre: 'Product compliance for marketplaces EN', source: 'pages/35-marketplaces.html, traduction du 23/09/2026', en: true },
   { fichier: '34-importateurs-en.html', titre: 'Product compliance for importers EN', source: 'pages/34-importateurs.html, traduction du 23/09/2026', en: true },
   { fichier: '33-fabricants-en.html', titre: 'Product compliance for manufacturers EN', source: 'pages/33-fabricants.html, traduction du 23/09/2026', en: true },
@@ -862,7 +862,7 @@ const CTA = `
         <div>
           <div class="t-caption" style="margin-bottom:10px"><b style="color:var(--c-text-on-dark)">30 minutes</b> avec l'équipe, pour regarder votre catalogue</div>
           <h2 class="t-display">Faites de la conformité votre avantage concurrentiel.</h2>
-          <p class="t-body" style="margin:20px 0 0;max-width:560px">Avec Cleo, une gamme se relève sur 106 pays depuis la même base de règles, et chaque obligation retenue porte l'article et la date qui la fondent.</p>
+          <p class="t-body" style="margin:20px 0 0;max-width:560px">Avec Cleo, une gamme se relève sur 90 juridictions depuis la même base de règles, et chaque obligation retenue porte l'article et la date qui la fondent.</p>
           <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap">
             <a class="btn btn-marque" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo
               <span class="rond"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -886,7 +886,7 @@ const CTA_EN = `
         <div>
           <div class="t-caption" style="margin-bottom:10px"><b style="color:var(--c-text-on-dark)">30 minutes</b> with the team, to go through your catalogue</div>
           <h2 class="t-display">Make compliance your competitive advantage.</h2>
-          <p class="t-body" style="margin:20px 0 0;max-width:560px">With Cleo, a range is assessed across 106 countries from the same rule base, and every obligation retained carries the article and the date behind it.</p>
+          <p class="t-body" style="margin:20px 0 0;max-width:560px">With Cleo, a range is assessed across 90 jurisdictions from the same rule base, and every obligation retained carries the article and the date behind it.</p>
           <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap">
             <a class="btn btn-marque" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Request a demo
               <span class="rond"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M7.5 3.5 11 7l-3.5 3.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -1367,7 +1367,7 @@ const llms = (langue, complet) => {
   const adresse = E.address ? [E.address.addressLocality, E.address.addressCountry === 'FR' ? 'France' : E.address.addressCountry].filter(Boolean).join(', ') : ''
   return [
     `# Cleo Labs`, ``,
-    `> ${t('Cleo Labs automatise la conformité produit pour les marques et les fabricants : 25 000 réglementations et 19 000 autorités suivies dans 106 pays, chaque réponse citant son texte officiel.', 'Cleo Labs automates product compliance for brands and manufacturers: 25,000 regulations and 19,000 authorities tracked across 106 countries, every answer citing its official text.')}`, ``,
+    `> ${t('Cleo Labs automatise la conformité produit pour les marques et les fabricants : 55 782 réglementations et 3 098 autorités suivies dans 90 juridictions, chaque réponse citant son texte officiel.', 'Cleo Labs automates product compliance for brands and manufacturers: 55,782 regulations and 3,098 authorities tracked across 90 jurisdictions, every answer citing its official text.')}`, ``,
     `## ${t('Entreprise', 'Company')}`, ``,
     `- ${t('Raison sociale', 'Legal entity')}: ${E.legalName || 'Cleo Corp SAS'}`,
     E.foundingDate ? `- ${t('Création', 'Founded')}: ${E.foundingDate}` : '',
@@ -1379,7 +1379,7 @@ const llms = (langue, complet) => {
     `## ${t('Ce que Cleo propose', 'What Cleo offers')}`, ``,
     `- ${t('Services de conformité produit à prix affiché : étiquetage et documentation (à partir de 1 200 € par produit), marquage CE (à partir de 3 800 €), évaluation de conformité, mandataire dans l\'Union européenne.', 'Product compliance services with the price shown up front: labelling and documentation (from €1,200 per product), CE marking (from €3,800), product compliance assessment, EU authorised representative.')}`,
     `- ${t('Data : API Legal Data et API de classification douanière, serveur MCP. Sandbox de 200 unités gratuites sans carte, Starter 100 € par mois, Pro 349 € par mois, Enterprise sur devis.', 'Data: Legal Data API and Customs Classification API, MCP server. Sandbox of 200 free units with no card, Starter €100 per month, Pro €349 per month, Enterprise on quote.')}`,
-    `- ${t('Enterprise : la plateforme de veille produit, les textes qui visent vos produits et ceux qui changent, dans 106 pays.', 'Enterprise: the product monitoring platform, the texts that target your products and those that change, across 106 countries.')}`, ``,
+    `- ${t('Enterprise : la plateforme de veille produit, les textes qui visent vos produits et ceux qui changent, dans 90 juridictions.', 'Enterprise: the product monitoring platform, the texts that target your products and those that change, across 90 jurisdictions.')}`, ``,
     `## ${t('Pages', 'Pages')}`, ``, ...hors.map(ligne), ``,
     ...(complet ? [`## ${t('Blog', 'Blog')} (${blog.length} ${t('articles', 'articles')})`, ``, ...blog.map(f => { const a = ARTICLES_BLOG.find(x => x.sortie === f) || {}; return `- [${a.titre || f}](${HOTE}${cheminDe(f)})${a.date ? ' (' + a.date + ')' : ''}` }), ``] : [`${t('Le blog complet est listé dans', 'The full blog is listed in')} ${HOTE}/llms-full.txt`, ``]),
   ].filter(l => l !== undefined && l !== null && l !== '' || l === '').join('\n').replace(/\n{3,}/g, '\n\n')
