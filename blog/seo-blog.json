@@ -1,5 +1,17 @@
 {
  "pages": {
+  "blog-eu-garan-guarantee-label-2026.html": {
+   "titre": "Depuis le 27 septembre, le droit européen impose à tout vendeur de biens physiques d'afficher un avis de garantie au format imposé : une promesse de durabilité au-delà de deux ans déclenche désormais aussi une seconde étiquette obligatoire | Cleo Labs",
+   "description": "Le 27 septembre 2026, le règlement d'exécution (UE) 2025/1960 de la Commission est devenu applicable dans toute l'UE, fixant la présentation d'un avis harmonisé sur la garantie légale de conformité de deux ans, obligatoire pour tout vendeur de biens de consommation, et de l'étiquette GARAN pour les garanties commerciales de durabilité, obligatoire uniquement lorsqu'un vendeur promet une durabilité gratuite, sur l'ensemble du produit, au-delà de deux ans. Ces deux textes découlent de la directive (UE) 2024/825, que les États membres devaient transposer avant le 27 mars 2026. Au moment de l'échéance de septembre, 20 des 27 États membres de l'UE, dont la France, n'avaient pas achevé cette transposition, et la Commission européenne avait déjà ouvert une procédure d'infraction à leur encontre en mai.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr/blog/eu-garan-guarantee-label-2026"
+  },
+  "blog-eu-garan-guarantee-label-2026-en.html": {
+   "titre": "From 27 September, EU law forces every seller of physical goods to display a fixed-format guarantee notice: a durability promise beyond two years now triggers a second, mandatory label too | Cleo Labs",
+   "description": "On 27 September 2026, Commission Implementing Regulation (EU) 2025/1960 started applying across the EU, fixing the design of a harmonised notice on the two-year legal guarantee of conformity, mandatory for every seller of consumer goods, and of the GARAN label for commercial guarantees of durability, mandatory only where a seller promises free, whole-product durability beyond two years. Both trace back to Directive (EU) 2024/825, which member states had to transpose by 27 March 2026. By the September deadline, 20 of the EU's 27 member states, France included, had not finished that transposition, and the European Commission had already opened infringement proceedings against them in May.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/en/blog/eu-garan-guarantee-label-2026"
+  },
   "blog-korea-chicken-import-reinspection-2026.html": {
    "titre": "Le 25 septembre, les États-Unis ont rappelé 4 596 livres de ragoût de poulet prêt à consommer importé de Corée du Sud : aucune contamination n'a été trouvée, seulement une expédition qui n'a jamais franchi le contrôle au point d'entrée exigé pour toute importation de viande et de volaille | Cleo Labs",
    "description": "Le 25 septembre 2026, la FSIS a annoncé que Sempio Food Services Inc. rappelle environ 4 596 livres de ragoût de poulet prêt à consommer, des pochettes de 31,75 oz (900 g) des variétés CLASSIC et RICH produites le 30 mars 2026 en Corée du Sud sous le numéro d'établissement GIA15001, car l'expédition a été importée aux États-Unis sans bénéficier de la réinspection à l'importation, le contrôle que la FSIS applique à toute importation de viande et de volaille avant qu'elle ne puisse entrer dans le commerce américain. La FSIS a détecté l'anomalie via une surveillance de routine en magasin, et non un constat de contamination, et n'a enregistré aucun signalement confirmé de maladie ou de blessure. D'ici là, le produit avait déjà atteint des distributeurs et des détaillants dans huit États. Ce rappel rappelle que le contrôle au point d'entrée censé intercepter ce type d'anomalie ne le fait pas toujours à ce stade : un contrôle en aval, en magasin, l'a fait à sa place, une fois le produit déjà en rayon.",
@@ -1670,6 +1682,106 @@
   }
  },
  "structure": {
+  "blog-eu-garan-guarantee-label-2026.html": {
+   "types": [
+    "TechArticle",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "Depuis le 27 septembre, le droit européen impose à tout vendeur de biens physiques d'afficher un avis de garantie au format imposé : une promesse de durabilité au-delà de deux ans déclenche désormais aussi une seconde étiquette obligatoire",
+     "description": "Le 27 septembre 2026, le règlement d'exécution (UE) 2025/1960 de la Commission est devenu applicable dans toute l'UE, fixant la présentation d'un avis harmonisé sur la garantie légale de conformité de deux ans, obligatoire pour tout vendeur de biens de consommation, et de l'étiquette GARAN pour les garanties commerciales de durabilité, obligatoire uniquement lorsqu'un vendeur promet une durabilité gratuite, sur l'ensemble du produit, au-delà de deux ans. Ces deux textes découlent de la directive (UE) 2024/825, que les États membres devaient transposer avant le 27 mars 2026. Au moment de l'échéance de septembre, 20 des 27 États membres de l'UE, dont la France, n'avaient pas achevé cette transposition, et la Commission européenne avait déjà ouvert une procédure d'infraction à leur encontre en mai."
+    },
+    "TechArticle": {
+     "headline": "Depuis le 27 septembre, le droit européen impose à tout vendeur de biens physiques d'afficher un avis de garantie au format imposé : une promesse de durabilité au-delà de deux ans déclenche désormais aussi une seconde étiquette obligatoire",
+     "description": "Le 27 septembre 2026, le règlement d'exécution (UE) 2025/1960 de la Commission est devenu applicable dans toute l'UE, fixant la présentation d'un avis harmonisé sur la garantie légale de conformité de deux ans, obligatoire pour tout vendeur de biens de consommation, et de l'étiquette GARAN pour les garanties commerciales de durabilité, obligatoire uniquement lorsqu'un vendeur promet une durabilité gratuite, sur l'ensemble du produit, au-delà de deux ans. Ces deux textes découlent de la directive (UE) 2024/825, que les États membres devaient transposer avant le 27 mars 2026. Au moment de l'échéance de septembre, 20 des 27 États membres de l'UE, dont la France, n'avaient pas achevé cette transposition, et la Commission européenne avait déjà ouvert une procédure d'infraction à leur encontre en mai.",
+     "datePublished": "2026-09-28",
+     "author": {
+      "@type": "Person",
+      "name": "Naomie Halioua",
+      "url": "https://www.linkedin.com/in/naomie-halioua/"
+     },
+     "publisher": {
+      "@id": "https://www.cleolabs.co/#organization"
+     },
+     "inLanguage": "fr-FR",
+     "articleSection": "Conformité produit"
+    },
+    "BreadcrumbList": {
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Accueil",
+       "item": "https://www.cleolabs.co/fr"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Blog",
+       "item": "https://www.cleolabs.co/fr/blog"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Depuis le 27 septembre, le droit européen impose à tout vendeur de biens physiques d'afficher un avis de garantie au format imposé : une promesse de durabilité au-delà de deux ans déclenche désormais aussi une seconde étiquette obligatoire",
+       "item": "https://www.cleolabs.co/fr/blog/eu-garan-guarantee-label-2026"
+      }
+     ]
+    }
+   }
+  },
+  "blog-eu-garan-guarantee-label-2026-en.html": {
+   "types": [
+    "TechArticle",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "From 27 September, EU law forces every seller of physical goods to display a fixed-format guarantee notice: a durability promise beyond two years now triggers a second, mandatory label too",
+     "description": "On 27 September 2026, Commission Implementing Regulation (EU) 2025/1960 started applying across the EU, fixing the design of a harmonised notice on the two-year legal guarantee of conformity, mandatory for every seller of consumer goods, and of the GARAN label for commercial guarantees of durability, mandatory only where a seller promises free, whole-product durability beyond two years. Both trace back to Directive (EU) 2024/825, which member states had to transpose by 27 March 2026. By the September deadline, 20 of the EU's 27 member states, France included, had not finished that transposition, and the European Commission had already opened infringement proceedings against them in May."
+    },
+    "TechArticle": {
+     "headline": "From 27 September, EU law forces every seller of physical goods to display a fixed-format guarantee notice: a durability promise beyond two years now triggers a second, mandatory label too",
+     "description": "On 27 September 2026, Commission Implementing Regulation (EU) 2025/1960 started applying across the EU, fixing the design of a harmonised notice on the two-year legal guarantee of conformity, mandatory for every seller of consumer goods, and of the GARAN label for commercial guarantees of durability, mandatory only where a seller promises free, whole-product durability beyond two years. Both trace back to Directive (EU) 2024/825, which member states had to transpose by 27 March 2026. By the September deadline, 20 of the EU's 27 member states, France included, had not finished that transposition, and the European Commission had already opened infringement proceedings against them in May.",
+     "datePublished": "2026-09-28",
+     "author": {
+      "@type": "Person",
+      "name": "Naomie Halioua",
+      "url": "https://www.linkedin.com/in/naomie-halioua/"
+     },
+     "publisher": {
+      "@id": "https://www.cleolabs.co/#organization"
+     },
+     "inLanguage": "en-US",
+     "articleSection": "Product Compliance"
+    },
+    "BreadcrumbList": {
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.cleolabs.co/en"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Blog",
+       "item": "https://www.cleolabs.co/en/blog"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "From 27 September, EU law forces every seller of physical goods to display a fixed-format guarantee notice: a durability promise beyond two years now triggers a second, mandatory label too",
+       "item": "https://www.cleolabs.co/en/blog/eu-garan-guarantee-label-2026"
+      }
+     ]
+    }
+   }
+  },
   "blog-korea-chicken-import-reinspection-2026.html": {
    "types": [
     "TechArticle",

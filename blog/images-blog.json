@@ -1,4 +1,8 @@
 {
+ "monde-test-inflammabilite": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/13-test-inflammabilite-20260923-195602-01.jpg",
+  1200
+ ],
  "monde-chargement-conteneur": [
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/17-chargement-conteneur-20260923-195620-01.jpg",
   1200
@@ -87,8 +91,8 @@
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/02-rd-chocolat-20260923-195822-01.jpg",
   1200
  ],
- "monde-test-inflammabilite": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/13-test-inflammabilite-20260923-195602-01.jpg",
+ "monde-tee-shirt-serigraphie": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/27-tee-shirt-serigraphie-20260923-202605-01.jpg",
   1200
  ],
  "monde-poele-revetement": [
@@ -113,10 +117,6 @@
  ],
  "monde-prod-chocolat": [
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/08-prod-chocolat-20260923-195529-01.jpg",
-  1200
- ],
- "monde-tee-shirt-serigraphie": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/27-tee-shirt-serigraphie-20260923-202605-01.jpg",
   1200
  ],
  "monde-proto-impression-3d": [
