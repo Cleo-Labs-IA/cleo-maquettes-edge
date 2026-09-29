@@ -1329,8 +1329,16 @@ const reecritures = Object.entries(CHEMINS.pages)
 /* Le nom de fichier plat n'est pas une adresse : il renvoie vers la route propre, pour qu'une seule URL porte chaque page. */
 const versRoutePropre = publiques.map(f => ({ source: '/' + f, destination: cheminDe(f), permanent: false }))
 fs.writeFileSync(path.join(ICI, 'sortie', 'vercel.json'), JSON.stringify({
-  headers: [{ source: '/apercu/(.*)', headers: [
-    { key: 'X-Robots-Tag', value: 'noindex, nofollow, noarchive, nosnippet' }] }],
+  headers: [
+    { source: '/(.*)', headers: [
+      { key: 'Content-Security-Policy', value: "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; img-src 'self' data:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://eu-assets.i.posthog.com; script-src-attr 'none'; connect-src 'self' https://eu.i.posthog.com; worker-src 'self'; upgrade-insecure-requests" },
+      { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+      { key: 'X-Content-Type-Options', value: 'nosniff' },
+      { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
+    ] },
+    { source: '/apercu/(.*)', headers: [
+      { key: 'X-Robots-Tag', value: 'noindex, nofollow, noarchive, nosnippet' }] },
+  ],
   /* 23/09/2026, Naomie : « mettre le site en auto-détection de langue ». La racine lit l'en-tête
      Accept-Language : anglais en tête → /en, sinon /fr. La règle « has » se lit avant la règle par défaut. */
   redirects: [{ source: '/', has: [{ type: 'header', key: 'accept-language', value: '^en.*' }], destination: '/en', permanent: false },
