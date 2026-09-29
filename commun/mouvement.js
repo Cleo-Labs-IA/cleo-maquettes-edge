@@ -354,7 +354,7 @@
   }
   if (calme || !('IntersectionObserver' in window)) return;
 
-  // Les chiffres : entiers purs seulement (106, 25 000, 19,000), séparateur d'origine conservé.
+  // Les chiffres : entiers purs seulement (90, 55 782, 3,098), séparateur d'origine conservé.
   var chiffres = document.querySelectorAll('main .sy-chiffre-raye, main .sy-chiffres > li > b, main .ac-chiffres b');
   var compteur = new IntersectionObserver(function (entrees) {
     for (var c = 0; c < entrees.length; c++) {

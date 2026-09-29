@@ -10,14 +10,15 @@
      - Requête et réponse du T-shirt : capture réelle du 25/09/2026 (scratchpad docs-examples/classify-tshirt-fr-facts.json),
        corps réel, réponse tronquée sans rien réécrire (status ambiguous, 610910 à 0,95, Chapter 61 Additional Note 2,
        61091000 cn8 EU à 0,92).
-     - 112 pays sur 249 à la ligne nationale, 26 nomenclatures : GET /v2/customs/coverage/countries relevé le 25/09
+     - 112 pays et territoires sur 249 à la ligne nationale, 26 nomenclatures : GET /v2/customs/coverage/countries relevé le 25/09 et le 29/09
        (112 « national », 137 « hs6_only », 26 systèmes distincts) ; mêmes chiffres dans /docs/customs.
      - Lots de 2 000 articles, webhooks, retour CSV : /docs/customs le 25/09. Le connecteur Shopify y est dit « pas encore testé
        sur une boutique Shopify réelle » : d'où « retour CSV et Shopify après votre validation ».
      - Playground : « 30 free calls left today on this IP » sur /playground?tab=classify, le 25/09.
      - L'ancre #request-weight n'existe pas sur /pricing (elle vit sur /docs/customs) : le lien va donc sur /pricing, qui
        porte les lignes « Request weight ».
-     - Preuve Legal Data : 106 pays, 25 000 réglementations, 19 000 autorités, inchangés (Naomie, 17/09/2026).
+     - Preuve Legal Data, relevée le 29/09/2026 : 90 juridictions (GET /v2/coverage, totals.jurisdictions), 55 782 réglementations
+       (GET /v2/atlas/stats, regulations_canonical), 3 098 autorités (GET /v2/authorities, 31 pages). Remplace 106 / 25 000 / 19 000.
      La section « usage » (poids de 100 unités par classification, jamais codé) reste retirée : une requête vaut une unité. -->
 <section class="section sy-hero-photo" id="haut">
   <div class="conteneur">
@@ -51,7 +52,7 @@
           <div><dt>Cleo renvoie</dt><dd>les questions manquantes, ou des candidats jusqu'à la ligne nationale avec leur preuve citée, et un dossier JSON ou PDF</dd></div>
           <div><dt>Pour</dt><dd>éditeurs ERP et TMS, e-commerce, PIM, 3PL, commissionnaires en douane</dd></div>
         </dl>
-        <ul class="dt-liste"><li>112 pays sur 249 à la ligne nationale, 26 nomenclatures</li><li>Lots de 2 000 articles, webhooks, retour CSV et Shopify après votre validation</li><li>Des candidats à faire valider, jamais un classement opposable</li></ul>
+        <ul class="dt-liste"><li>112 pays et territoires sur 249 à la ligne nationale, 26 nomenclatures</li><li>Lots de 2 000 articles, webhooks, retour CSV et Shopify après votre validation</li><li>Des candidats à faire valider, jamais un classement opposable</li></ul>
         <div class="sy-actions dt-actions"><a class="sy-bouton" href="https://legaldata-public.cleolabs.co/playground?tab=classify">Tester sans compte</a><a class="sy-bouton-secondaire" href="https://legaldata-public.cleolabs.co/docs/customs">Documentation</a></div>
       </div>
       <div class="dt-douane-code" data-apparait>
@@ -183,14 +184,14 @@ Authorization: Bearer $CLEO_API_KEY</code></pre></div>
   </div>
 </section>
 
-<!-- ═══ PREUVE ET COUVERTURE ═══ Bloc sombre du site. Chiffres canon du site (106, 25 000, 19 000), décision de Naomie du 17/09. Panneau : réponse réelle du 17/09 (outputs/cleo-internal-api-strategy.html). -->
+<!-- ═══ PREUVE ET COUVERTURE ═══ Bloc sombre du site. Chiffres alignés sur l'API le 29/09/2026 (90 juridictions, 55 782 réglementations, 3 098 autorités) ; ils remplacent 106 / 25 000 / 19 000, gardés le 17/09. Panneau : réponse réelle du 17/09 (outputs/cleo-internal-api-strategy.html). -->
 <section class="section sy-sombre dt-trace-section" id="couverture">
   <div class="conteneur dt-duo dt-trace sy-sur-profond">
     <div class="dt-trace-texte">
       <h2>Chaque document garde sa source</h2>
       <p class="sy-lead">Chaque résultat renvoie son identifiant, sa source et l'URL du portail d'origine.</p>
-      <ul class="sy-chiffres dt-preuve-chiffres"><li><b>106</b><span>pays suivis</span></li><li><b>25 000</b><span>réglementations cartographiées</span></li><li><b>19 000</b><span>autorités réglementaires suivies</span></li></ul>
-      <p class="dt-trace-note">Douane : 112 territoires sur 249 à la ligne nationale, mesuré le 25 septembre 2026.</p>
+      <ul class="sy-chiffres dt-preuve-chiffres"><li><b>90</b><span>juridictions suivies</span></li><li><b>55 782</b><span>réglementations cartographiées</span></li><li><b>3 098</b><span>autorités réglementaires suivies</span></li></ul>
+      <p class="dt-trace-note">Douane : 112 pays et territoires sur 249 à la ligne nationale, mesuré le 29 septembre 2026.</p>
       <div class="sy-actions dt-actions"><a class="sy-bouton-blanc" href="26-legal-data.html">Explorer la couverture</a></div>
     </div>
     <div class="dt-panneau" aria-hidden="true" data-apparait>

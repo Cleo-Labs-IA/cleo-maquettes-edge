@@ -84,11 +84,11 @@ for (const f of pages) {
 
 // ── 3. CHIFFRES : oracle = CANONICAL-FACTS.md et le comptage des dépôts
 const canon = fs.readFileSync('/Users/naomiehalioua/cleo-maquettes-edge/depot-src/CANONICAL-FACTS.md', 'utf8')
-const attendus = { '106': /106 pays/, '25 000': /25\s?000/, '19 000': /19\s?000/, '3 700': /3\s?700/ }
+const attendus = { '90': /90 juridictions/, '55 782': /55\s?782/, '3 098': /3\s?098/, '183': /\b183\b/ }
 for (const [val, re] of Object.entries(attendus)) {
   if (!re.test(canon)) note('(canon)', 'chiffre absent du canon', val)
 }
-const horsCanon = [/\b256 000\b/, /\b50 101\b/, /\b177 juridictions\b/, /\b27 000\b/, /\b163 pays\b/]
+const horsCanon = [/\b256 000\b/, /\b50 101\b/, /\b177 juridictions\b/, /\b27 000\b/, /\b163 pays\b/, /\b106 (pays|countries)\b/, /\b(25|19)[\s,]000\b/, /\b3[\s,]700\b/]
 for (const f of pages) {
   const t = fs.readFileSync(path.join(SORTIE, f), 'utf8')
   for (const re of horsCanon) { const m = t.match(re); if (m) note(f, 'chiffre hors canon', m[0]) }
