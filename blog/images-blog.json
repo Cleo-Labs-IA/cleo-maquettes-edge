@@ -1,4 +1,8 @@
 {
+ "monde-rd-peluche": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/01-rd-peluche-20260923-195511-01.jpg",
+  1200
+ ],
  "monde-test-inflammabilite": [
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/13-test-inflammabilite-20260923-195602-01.jpg",
   1200
@@ -19,8 +23,8 @@
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/34-chargeur-test-thermique-20260923-202639-01.jpg",
   1200
  ],
- "monde-rd-peluche": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/01-rd-peluche-20260923-195511-01.jpg",
+ "monde-rd-chocolat": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/02-rd-chocolat-20260923-195822-01.jpg",
   1200
  ],
  "monde-rd-dentifrice": [
@@ -87,8 +91,8 @@
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/40-conserves-ligne-20260923-202853-01.jpg",
   1200
  ],
- "monde-rd-chocolat": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/02-rd-chocolat-20260923-195822-01.jpg",
+ "monde-prod-chocolat": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/08-prod-chocolat-20260923-195529-01.jpg",
   1200
  ],
  "monde-tee-shirt-serigraphie": [
@@ -113,10 +117,6 @@
  ],
  "monde-chaise-test-resistance": [
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/24-chaise-test-resistance-20260923-202549-01.jpg",
-  1200
- ],
- "monde-prod-chocolat": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/08-prod-chocolat-20260923-195529-01.jpg",
   1200
  ],
  "monde-proto-impression-3d": [

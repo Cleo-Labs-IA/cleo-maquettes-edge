@@ -1,5 +1,17 @@
 {
  "pages": {
+  "blog-china-toy-safety-standard-2026.html": {
+   "titre": "Dans cinq semaines, la Chine remplace l'intégralité de sa norme de sécurité des jouets : les nouvelles limites chimiques ne visent que les jouets vendus sur son marché, mais peu d'usines gardent une recette distincte pour les autres | Cleo Labs",
+   "description": "Le 5 octobre 2025, la SAMR et la SAC chinoises ont publié les normes GB 6675.1-2025 à GB 6675.4-2025, remplaçant la norme de sécurité des jouets de l'édition 2014. La nouvelle norme, ainsi que les règles de certification CCC révisées publiées par la CNCA le 29 mai 2026, deviennent toutes deux obligatoires le 1er novembre 2026 pour tout jouet vendu en Chine, ajoutant des limites pour plus de dix substances dangereuses supplémentaires ainsi que de nouvelles exigences électromagnétiques et électriques. Les jouets déjà fabriqués sous l'ancienne norme pourront être vendus jusqu'au 31 octobre 2027. La norme ne s'applique légalement qu'au marché intérieur chinois, mais peu d'usines sous-traitantes gardent une formulation parallèle, moins exigeante, pour un même moule une fois qu'un client domestique impose une reformulation, si bien que l'échéance dépasse son propre périmètre légal.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr/blog/china-toy-safety-standard-2026"
+  },
+  "blog-china-toy-safety-standard-2026-en.html": {
+   "titre": "In five weeks, China replaces its entire toy safety standard: the new chemical limits bind only toys sold there, but few factories keep a separate recipe for the ones that are not | Cleo Labs",
+   "description": "On 5 October 2025, China's SAMR and SAC published GB 6675.1-2025 through GB 6675.4-2025, replacing the 2014-edition toy safety standard. The new standard, and the revised CCC certification rules issued by CNCA on 29 May 2026, both become mandatory on 1 November 2026 for every toy sold in China, adding limits for more than ten additional hazardous substances plus new electromagnetic and electrical requirements. Toys already made under the old standard may sell through 31 October 2027. The standard legally binds only China's domestic market, but few contract factories keep a separate, lower-spec formulation running for the same mold once a domestic customer forces a reformulation, so the deadline reaches further than its own legal scope suggests.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/en/blog/china-toy-safety-standard-2026"
+  },
   "blog-eu-garan-guarantee-label-2026.html": {
    "titre": "Depuis le 27 septembre, le droit européen impose à tout vendeur de biens physiques d'afficher un avis de garantie au format imposé : une promesse de durabilité au-delà de deux ans déclenche désormais aussi une seconde étiquette obligatoire | Cleo Labs",
    "description": "Le 27 septembre 2026, le règlement d'exécution (UE) 2025/1960 de la Commission est devenu applicable dans toute l'UE, fixant la présentation d'un avis harmonisé sur la garantie légale de conformité de deux ans, obligatoire pour tout vendeur de biens de consommation, et de l'étiquette GARAN pour les garanties commerciales de durabilité, obligatoire uniquement lorsqu'un vendeur promet une durabilité gratuite, sur l'ensemble du produit, au-delà de deux ans. Ces deux textes découlent de la directive (UE) 2024/825, que les États membres devaient transposer avant le 27 mars 2026. Au moment de l'échéance de septembre, 20 des 27 États membres de l'UE, dont la France, n'avaient pas achevé cette transposition, et la Commission européenne avait déjà ouvert une procédure d'infraction à leur encontre en mai.",
@@ -1682,6 +1694,106 @@
   }
  },
  "structure": {
+  "blog-china-toy-safety-standard-2026.html": {
+   "types": [
+    "TechArticle",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "Dans cinq semaines, la Chine remplace l'intégralité de sa norme de sécurité des jouets : les nouvelles limites chimiques ne visent que les jouets vendus sur son marché, mais peu d'usines gardent une recette distincte pour les autres",
+     "description": "Le 5 octobre 2025, la SAMR et la SAC chinoises ont publié les normes GB 6675.1-2025 à GB 6675.4-2025, remplaçant la norme de sécurité des jouets de l'édition 2014. La nouvelle norme, ainsi que les règles de certification CCC révisées publiées par la CNCA le 29 mai 2026, deviennent toutes deux obligatoires le 1er novembre 2026 pour tout jouet vendu en Chine, ajoutant des limites pour plus de dix substances dangereuses supplémentaires ainsi que de nouvelles exigences électromagnétiques et électriques. Les jouets déjà fabriqués sous l'ancienne norme pourront être vendus jusqu'au 31 octobre 2027. La norme ne s'applique légalement qu'au marché intérieur chinois, mais peu d'usines sous-traitantes gardent une formulation parallèle, moins exigeante, pour un même moule une fois qu'un client domestique impose une reformulation, si bien que l'échéance dépasse son propre périmètre légal."
+    },
+    "TechArticle": {
+     "headline": "Dans cinq semaines, la Chine remplace l'intégralité de sa norme de sécurité des jouets : les nouvelles limites chimiques ne visent que les jouets vendus sur son marché, mais peu d'usines gardent une recette distincte pour les autres",
+     "description": "Le 5 octobre 2025, la SAMR et la SAC chinoises ont publié les normes GB 6675.1-2025 à GB 6675.4-2025, remplaçant la norme de sécurité des jouets de l'édition 2014. La nouvelle norme, ainsi que les règles de certification CCC révisées publiées par la CNCA le 29 mai 2026, deviennent toutes deux obligatoires le 1er novembre 2026 pour tout jouet vendu en Chine, ajoutant des limites pour plus de dix substances dangereuses supplémentaires ainsi que de nouvelles exigences électromagnétiques et électriques. Les jouets déjà fabriqués sous l'ancienne norme pourront être vendus jusqu'au 31 octobre 2027. La norme ne s'applique légalement qu'au marché intérieur chinois, mais peu d'usines sous-traitantes gardent une formulation parallèle, moins exigeante, pour un même moule une fois qu'un client domestique impose une reformulation, si bien que l'échéance dépasse son propre périmètre légal.",
+     "datePublished": "2026-09-29",
+     "author": {
+      "@type": "Person",
+      "name": "Naomie Halioua",
+      "url": "https://www.linkedin.com/in/naomie-halioua/"
+     },
+     "publisher": {
+      "@id": "https://www.cleolabs.co/#organization"
+     },
+     "inLanguage": "fr-FR",
+     "articleSection": "Conformité produit"
+    },
+    "BreadcrumbList": {
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Accueil",
+       "item": "https://www.cleolabs.co/fr"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Blog",
+       "item": "https://www.cleolabs.co/fr/blog"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Dans cinq semaines, la Chine remplace l'intégralité de sa norme de sécurité des jouets : les nouvelles limites chimiques ne visent que les jouets vendus sur son marché, mais peu d'usines gardent une recette distincte pour les autres",
+       "item": "https://www.cleolabs.co/fr/blog/china-toy-safety-standard-2026"
+      }
+     ]
+    }
+   }
+  },
+  "blog-china-toy-safety-standard-2026-en.html": {
+   "types": [
+    "TechArticle",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "In five weeks, China replaces its entire toy safety standard: the new chemical limits bind only toys sold there, but few factories keep a separate recipe for the ones that are not",
+     "description": "On 5 October 2025, China's SAMR and SAC published GB 6675.1-2025 through GB 6675.4-2025, replacing the 2014-edition toy safety standard. The new standard, and the revised CCC certification rules issued by CNCA on 29 May 2026, both become mandatory on 1 November 2026 for every toy sold in China, adding limits for more than ten additional hazardous substances plus new electromagnetic and electrical requirements. Toys already made under the old standard may sell through 31 October 2027. The standard legally binds only China's domestic market, but few contract factories keep a separate, lower-spec formulation running for the same mold once a domestic customer forces a reformulation, so the deadline reaches further than its own legal scope suggests."
+    },
+    "TechArticle": {
+     "headline": "In five weeks, China replaces its entire toy safety standard: the new chemical limits bind only toys sold there, but few factories keep a separate recipe for the ones that are not",
+     "description": "On 5 October 2025, China's SAMR and SAC published GB 6675.1-2025 through GB 6675.4-2025, replacing the 2014-edition toy safety standard. The new standard, and the revised CCC certification rules issued by CNCA on 29 May 2026, both become mandatory on 1 November 2026 for every toy sold in China, adding limits for more than ten additional hazardous substances plus new electromagnetic and electrical requirements. Toys already made under the old standard may sell through 31 October 2027. The standard legally binds only China's domestic market, but few contract factories keep a separate, lower-spec formulation running for the same mold once a domestic customer forces a reformulation, so the deadline reaches further than its own legal scope suggests.",
+     "datePublished": "2026-09-29",
+     "author": {
+      "@type": "Person",
+      "name": "Naomie Halioua",
+      "url": "https://www.linkedin.com/in/naomie-halioua/"
+     },
+     "publisher": {
+      "@id": "https://www.cleolabs.co/#organization"
+     },
+     "inLanguage": "en-US",
+     "articleSection": "Product Compliance"
+    },
+    "BreadcrumbList": {
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.cleolabs.co/en"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Blog",
+       "item": "https://www.cleolabs.co/en/blog"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "In five weeks, China replaces its entire toy safety standard: the new chemical limits bind only toys sold there, but few factories keep a separate recipe for the ones that are not",
+       "item": "https://www.cleolabs.co/en/blog/china-toy-safety-standard-2026"
+      }
+     ]
+    }
+   }
+  },
   "blog-eu-garan-guarantee-label-2026.html": {
    "types": [
     "TechArticle",
