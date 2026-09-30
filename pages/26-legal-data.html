@@ -145,11 +145,11 @@
           <span class="atlas-carte-legende-item"><i class="atlas-carte-pastille block"></i><span class="t-caption">moins de 5 %</span></span>
         </div>
         <p class="t-caption" style="margin:0 0 56px">Fond : Natural Earth (domaine public).</p>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        <link rel="stylesheet" href="/assets/atlas/leaflet.css"
           integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        <script src="/assets/atlas/leaflet.js"
           integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-        <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"
+        <script src="/assets/atlas/topojson-client.min.js"
           integrity="sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67" crossorigin="anonymous"></script>
         <script>
         (function(){
@@ -228,9 +228,9 @@
             var hote = document.getElementById('atlas-carte-monde')
             if (!hote) return
             var tactile = window.matchMedia('(max-width:640px)').matches
-            fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json', {
+            fetch('/assets/atlas/countries-110m.json', {
               integrity: 'sha384-yOCJ+8ShBm8UDqtAVtAvxTDDf4gXo5edxl/YG0FmVC5OTmqVLl7utuVGBDEeZWHf',
-              mode: 'cors'
+              mode: 'same-origin'
             }).then(function(r){ return r.json() }).then(function(topo){
               if (!window.topojson) throw new Error('topojson absent')
               var pays = corrigeAntimeridien(topojson.feature(topo, topo.objects.countries))

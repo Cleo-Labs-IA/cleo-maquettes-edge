@@ -791,6 +791,15 @@ for (let i = 0; ; i++) {
   catch { if (i >= 180) throw new Error('verrou tenu depuis 3 min, retirer ' + VERROU + ' si aucun build ne tourne'); await new Promise(r => setTimeout(r, 1000)) }
 }
 process.on('exit', () => { try { fs.rmdirSync(VERROU) } catch {} })
+/* 30/09/2026 : la CSP n'autorise que self pour la carte Legal Data. Les versions exactes de Leaflet,
+   TopoJSON et world-atlas sont donc conservées dans le dépôt avec licences et digests (vendor/atlas/PROVENANCE.md),
+   puis copiées telles quelles dans la sortie. Aucun CDN n'est nécessaire à l'exécution. */
+const atlasSource = path.join(ICI, 'vendor', 'atlas')
+const atlasSortie = path.join(ICI, 'sortie', 'assets', 'atlas')
+if (!fs.existsSync(path.join(atlasSource, 'PROVENANCE.md'))) throw new Error('actifs atlas vendorizés absents')
+fs.rmSync(atlasSortie, { recursive: true, force: true })
+fs.mkdirSync(path.dirname(atlasSortie), { recursive: true })
+fs.cpSync(atlasSource, atlasSortie, { recursive: true })
 /* LE CSS DES LANES : chaque lane écrit le sien dans commun/lanes/<lane>.css,
    concaténé après composants.css. Personne ne touche composants.css pendant
    qu'une lane tourne : c'est ce qui rend les territoires réellement disjoints. */
