@@ -15,6 +15,9 @@ assert.doesNotMatch(workflow, /(?:^|\s)(?:--token|-t)(?:\s|$)/m, 'le token Verce
 assert.doesNotMatch(workflow, /npx\s+(?:--yes\s+)?vercel/i, 'le workflow utilise uniquement la version verrouillée')
 assert.match(workflow, /\.\/node_modules\/\.bin\/vercel/)
 assert.match(workflow, /scripts\/rediger-sortie\.mjs/)
+assert.match(workflow, /\| env -u VERCEL_TOKEN node -e/, 'le parseur suivant le fetch Vercel ne doit pas recevoir VERCEL_TOKEN')
+assert.equal((workflow.match(/env -u VERCEL_TOKEN scripts\/controle-en-ligne\.sh/g) || []).length, 2,
+  'les deux contrôles en ligne doivent être lancés sans VERCEL_TOKEN')
 
 const relais = fs.readFileSync('scripts/relais-ci.sh', 'utf8')
 const commandesCurl = [workflow, relais].map(source => source.replace(/\\\n\s*/g, ' ')).join('\n')
@@ -22,7 +25,7 @@ assert.doesNotMatch(commandesCurl, /\bcurl\b[^\n]*(?:\$(?:\{)?[A-Z0-9_]*(?:TOKEN
   'aucun secret ne doit être interpolé dans argv de curl')
 assert.match(workflow, /node scripts\/curl-auth\.mjs VERCEL_TOKEN/)
 assert.match(relais, /node scripts\/curl-auth\.mjs LANDING_TOKEN/)
-for (const test of ['tests/blog-securite.mjs', 'tests/securite-critique.mjs', 'tests/csp-atlas-browser.mjs']) {
+for (const test of ['tests/blog-securite.mjs', 'tests/securite-critique.mjs', 'tests/csp-atlas-browser.mjs', 'tests/csp-formulaires-browser.mjs']) {
   assert.match(relais, new RegExp(test.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')), `${test} doit appartenir au relais CI`)
 }
 
@@ -63,6 +66,9 @@ for (const nom of ['LICENSE.leaflet', 'LICENSE.topojson-client', 'LICENSE.world-
 }
 const provenance = fs.readFileSync('vendor/atlas/PROVENANCE.md', 'utf8')
 for (const [, algorithme, digest] of actifs) assert.match(provenance, new RegExp(`${algorithme}-${digest.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`))
+assert.match(provenance, /topojson-client@3\.1\.0\/dist\/topojson-client\.min\.js/)
+assert.match(provenance, /world-atlas@2\.0\.2\/countries-110m\.json/)
+assert.doesNotMatch(provenance, /topojson-client@3\/dist|world-atlas@2\/countries/)
 
 const jetonSentinelle = 'argv-leak-sentinel-9f4d52c88be1'
 const temporaire = fs.mkdtempSync(path.join(os.tmpdir(), 'cleo-curl-auth-'))
@@ -83,6 +89,66 @@ try {
   assert.equal(capture.entree.includes(`Authorization: Bearer ${jetonSentinelle}`), true, 'le secret passe uniquement par stdin')
 } finally {
   fs.rmSync(temporaire, { recursive: true, force: true })
+}
+
+const jetonRelais = 'landing-after-fetch-sentinel-b8406ea2'
+const temporaireRelais = fs.mkdtempSync(path.join(os.tmpdir(), 'cleo-relais-env-'))
+try {
+  const compteur = path.join(temporaireRelais, 'compteur')
+  const captureChemin = path.join(temporaireRelais, 'capture.json')
+  const fauxNode = path.join(temporaireRelais, 'node')
+  const fauxCurl = path.join(temporaireRelais, 'curl')
+  fs.writeFileSync(fauxNode, `#!${process.execPath}
+const fs = require('fs')
+const { spawnSync } = require('child_process')
+const compteur = process.env.CLEO_COMPTEUR_NODE
+const nombre = fs.existsSync(compteur) ? Number(fs.readFileSync(compteur, 'utf8')) + 1 : 1
+fs.writeFileSync(compteur, String(nombre))
+if (nombre === 1) {
+  const resultat = spawnSync(process.env.CLEO_NODE_REEL, process.argv.slice(2), { stdio: 'inherit', env: process.env })
+  process.exit(resultat.status ?? 1)
+}
+fs.writeFileSync(process.env.CLEO_CAPTURE_ENV, JSON.stringify({
+  landingToken: process.env.LANDING_TOKEN ?? null,
+  argv: process.argv.slice(2),
+}))
+process.exit(86)
+`)
+  fs.writeFileSync(fauxCurl, `#!${process.execPath}
+const fs = require('fs')
+const argumentsCurl = process.argv.slice(2)
+let entree = ''
+process.stdin.setEncoding('utf8')
+process.stdin.on('data', morceau => { entree += morceau })
+process.stdin.on('end', () => {
+  const indexSortie = argumentsCurl.lastIndexOf('-o')
+  if (indexSortie < 0 || !argumentsCurl[indexSortie + 1] || !entree.includes('Authorization: Bearer')) process.exit(87)
+  fs.writeFileSync(argumentsCurl[indexSortie + 1], '[]')
+})
+`)
+  fs.chmodSync(fauxNode, 0o700)
+  fs.chmodSync(fauxCurl, 0o700)
+  const executionRelais = spawnSync('bash', ['scripts/relais-ci.sh'], {
+    cwd: process.cwd(),
+    encoding: 'utf8',
+    env: {
+      ...process.env,
+      PATH: `${temporaireRelais}${path.delimiter}${process.env.PATH || ''}`,
+      LANDING_TOKEN: jetonRelais,
+      BLOGSRC: path.join(temporaireRelais, 'blogsrc'),
+      GITHUB_OUTPUT: path.join(temporaireRelais, 'github-output'),
+      CLEO_COMPTEUR_NODE: compteur,
+      CLEO_CAPTURE_ENV: captureChemin,
+      CLEO_NODE_REEL: process.execPath,
+    },
+  })
+  assert.equal(executionRelais.status, 86, 'le relais d’intégration doit atteindre le processus sentinelle après le fetch')
+  assert.doesNotMatch(executionRelais.stdout + executionRelais.stderr, new RegExp(jetonRelais), 'LANDING_TOKEN ne doit pas atteindre les logs')
+  const capture = JSON.parse(fs.readFileSync(captureChemin, 'utf8'))
+  assert.equal(capture.landingToken, null, 'un processus lancé après le fetch ne doit plus voir LANDING_TOKEN')
+  assert.equal(capture.argv[0], '-e', 'la sentinelle doit intercepter le premier processus Node suivant le fetch')
+} finally {
+  fs.rmSync(temporaireRelais, { recursive: true, force: true })
 }
 
 const secret = 'secret-vercel-123456'

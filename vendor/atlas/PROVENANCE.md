@@ -7,8 +7,8 @@ These files were fetched unchanged on 2026-09-30 and are served from
 | --- | --- | --- | --- |
 | `leaflet.css` | `https://unpkg.com/leaflet@1.9.4/dist/leaflet.css` | Leaflet 1.9.4 / BSD-2-Clause (`LICENSE.leaflet`) | `sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=` |
 | `leaflet.js` | `https://unpkg.com/leaflet@1.9.4/dist/leaflet.js` | Leaflet 1.9.4 / BSD-2-Clause (`LICENSE.leaflet`) | `sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=` |
-| `topojson-client.min.js` | `https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js` | topojson-client 3.1.0 / ISC (`LICENSE.topojson-client`) | `sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67` |
-| `countries-110m.json` | `https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json` | world-atlas 2.0.2 / ISC (`LICENSE.world-atlas`); Natural Earth source data is public domain | `sha384-yOCJ+8ShBm8UDqtAVtAvxTDDf4gXo5edxl/YG0FmVC5OTmqVLl7utuVGBDEeZWHf` |
+| `topojson-client.min.js` | `https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js` | topojson-client 3.1.0 / ISC (`LICENSE.topojson-client`) | `sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67` |
+| `countries-110m.json` | `https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json` | world-atlas 2.0.2 / ISC (`LICENSE.world-atlas`); Natural Earth source data is public domain | `sha384-yOCJ+8ShBm8UDqtAVtAvxTDDf4gXo5edxl/YG0FmVC5OTmqVLl7utuVGBDEeZWHf` |
 
 Leaflet's distribution images were copied from the same immutable 1.9.4
 release because `leaflet.css` references them. Their SHA-256 digests are:

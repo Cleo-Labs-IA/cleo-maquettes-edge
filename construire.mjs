@@ -30,6 +30,8 @@ const CHEMINS = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/chemins.json')
 if (fs.existsSync(path.join(ICI, 'blog/chemins-blog.json'))) Object.assign(CHEMINS.pages, JSON.parse(fs.readFileSync(path.join(ICI, 'blog/chemins-blog.json'), 'utf8')))
 /* L'hôte de production : les canonicals, les hreflang et le sitemap y pointent. Les pages d'aperçu (/apercu/…) restent hors index. */
 const HOTE = 'https://www.cleolabs.co'
+const ORIGINES_ACTION_FORMULAIRE_EXTERNES = Object.freeze(['https://meetings.hubspot.com'])
+const FORM_ACTION_CSP = ["'self'", ...ORIGINES_ACTION_FORMULAIRE_EXTERNES].join(' ')
 const cheminDe = n => CHEMINS.pages[n] && CHEMINS.pages[n].chemin
 const estApercu = n => !cheminDe(n) || cheminDe(n).startsWith('/apercu')
 const V6_ROUTES = JSON.parse(fs.readFileSync(path.join(ICI, 'commun/v6-routes.json'), 'utf8'))
@@ -1337,10 +1339,37 @@ const reecritures = Object.entries(CHEMINS.pages)
   .map(([fichier, c]) => ({ source: c.chemin, destination: '/' + fichier }))
 /* Le nom de fichier plat n'est pas une adresse : il renvoie vers la route propre, pour qu'une seule URL porte chaque page. */
 const versRoutePropre = publiques.map(f => ({ source: '/' + f, destination: cheminDe(f), permanent: false }))
+/* Une action de formulaire externe est une sortie de données : la liste CSP et les pages générées doivent se
+   décrire exactement, dans les deux sens. Une nouvelle origine casse donc le build tant qu'elle n'est pas relue
+   et explicitement ajoutée ici ; une origine retirée des pages doit également disparaître de la CSP. */
+const origineHote = new URL(HOTE).origin
+const actionsFormulairesExternes = new Map()
+for (const fichier of construites) {
+  const html = fs.readFileSync(path.join(ICI, 'sortie', fichier), 'utf8')
+  for (const correspondance of html.matchAll(/<form\b[^>]*>/gi)) {
+    const attribut = correspondance[0].match(/\baction\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s"'=<>`]+))/i)
+    if (!attribut) continue
+    const action = attribut[1] ?? attribut[2] ?? attribut[3]
+    let cible
+    try { cible = new URL(action, `${HOTE}/`) } catch { throw new Error(`ACTION FORMULAIRE INVALIDE : ${fichier} -> ${action}`) }
+    if (!['http:', 'https:'].includes(cible.protocol)) throw new Error(`PROTOCOLE FORMULAIRE INTERDIT : ${fichier} -> ${cible.protocol}`)
+    if (cible.origin === origineHote) continue
+    if (!actionsFormulairesExternes.has(cible.origin)) actionsFormulairesExternes.set(cible.origin, new Set())
+    actionsFormulairesExternes.get(cible.origin).add(fichier)
+  }
+}
+const originesDetectees = new Set(actionsFormulairesExternes.keys())
+const originesAutorisees = new Set(ORIGINES_ACTION_FORMULAIRE_EXTERNES)
+const originesNonAutorisees = [...originesDetectees].filter(origine => !originesAutorisees.has(origine))
+const originesInutilisees = [...originesAutorisees].filter(origine => !originesDetectees.has(origine))
+if (originesNonAutorisees.length || originesInutilisees.length) {
+  throw new Error(`FORM-ACTION HORS SYNCHRONISATION : non autorisées [${originesNonAutorisees.join(', ')}], inutilisées [${originesInutilisees.join(', ')}]`)
+}
+console.log(`  form-action : ${[...originesDetectees].join(', ')} (pages générées et allowlist concordantes)`)
 fs.writeFileSync(path.join(ICI, 'sortie', 'vercel.json'), JSON.stringify({
   headers: [
     { source: '/(.*)', headers: [
-      { key: 'Content-Security-Policy', value: "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; img-src 'self' data:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://eu-assets.i.posthog.com; script-src-attr 'none'; connect-src 'self' https://eu.i.posthog.com; worker-src 'self'; upgrade-insecure-requests" },
+      { key: 'Content-Security-Policy', value: `default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action ${FORM_ACTION_CSP}; img-src 'self' data:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://eu-assets.i.posthog.com; script-src-attr 'none'; connect-src 'self' https://eu.i.posthog.com; worker-src 'self'; upgrade-insecure-requests` },
       { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
       { key: 'X-Content-Type-Options', value: 'nosniff' },
       { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
