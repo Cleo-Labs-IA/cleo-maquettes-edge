@@ -13,8 +13,9 @@ mkdir -p "$BLOGSRC"
 nouveaux=0; articles=""
 
 if [ -n "${LANDING_TOKEN:-}" ]; then
-  curl -fsSL -H "Authorization: Bearer $LANDING_TOKEN" -H "Accept: application/vnd.github.raw" \
+  node scripts/curl-auth.mjs LANDING_TOKEN -fsSL -H "Accept: application/vnd.github.raw" \
     "https://api.github.com/repos/cleo-academy/cleo-landing/contents/src/data/blog-posts.json?ref=main" -o "$BLOGSRC/blog-posts.json"
+  unset LANDING_TOKEN
   # Les couples langue/slug que le dernier portage ne connaît pas encore.
   manquants=$(node -e '
     const fs = require("fs")
@@ -37,7 +38,7 @@ fi
 
 node construire.mjs > /tmp/build.log 2>&1 || { tail -30 /tmp/build.log; exit 1; }
 tail -3 /tmp/build.log
-for t in tests/landings-ads.mjs tests/v6-structure.mjs tests/seo-accueil.mjs tests/servir-routes.mjs; do
+for t in tests/landings-ads.mjs tests/v6-structure.mjs tests/seo-accueil.mjs tests/servir-routes.mjs tests/blog-securite.mjs tests/securite-critique.mjs tests/csp-atlas-browser.mjs tests/csp-formulaires-browser.mjs; do
   node "$t" > /tmp/test.log 2>&1 || { echo "::error::test en échec : $t"; tail -20 /tmp/test.log; exit 1; }
   echo "OK $t"
 done

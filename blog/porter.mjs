@@ -6,13 +6,14 @@
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { assainirHtmlArticle, validerMetadonneesBlog } from './securite-contenu.mjs'
 /* 28/09/2026 : Playwright du dépôt (package.json) hors du Mac ; sur le Mac, celui de cleo-landing, comme avant. */
 const PW_MAC = '/Users/naomiehalioua/cleo-landing/node_modules/playwright/index.mjs'
 const { chromium } = await import(fs.existsSync(PW_MAC) ? PW_MAC : 'playwright')
 
 const ICI = path.dirname(path.dirname(fileURLToPath(import.meta.url)))
 const SRC = process.env.BLOGSRC || '/private/tmp/claude-501/-Users-naomiehalioua-cleo-landing/b32a4fc1-7a13-4475-84be-385bbde13f98/scratchpad/blogsrc'
-const POSTS = JSON.parse(fs.readFileSync(path.join(SRC, 'blog-posts.json'), 'utf8'))
+const POSTS = validerMetadonneesBlog(JSON.parse(fs.readFileSync(path.join(SRC, 'blog-posts.json'), 'utf8')))
 /* 28/09/2026 : portage incrémental. Hors du Mac, seules les pages des articles nouveaux sont téléchargées ; un article
    dont la page brute manque reprend son extraction du dernier brut.json (versionné), avec les métadonnées fraîches de
    blog-posts.json. Sur le Mac, toutes les pages sont là : rien ne change. */
@@ -25,6 +26,12 @@ const DEJA = new Set([]) // 23/09/2026 : plus aucune page de blog faite à la ma
 const LANGUES_DE = {}
 const MODE = process.argv[2] || 'ecrire'
 const SEULEMENT = process.argv[3] ? new Set(process.argv[3].split(',')) : null
+const extractionSure = r => ({
+  ...r,
+  corps: (r.corps || []).map(section => ({ ...section, html: assainirHtmlArticle(section.html) })),
+  sources: assainirHtmlArticle(r.sources || ''),
+  repli: r.repli ? { ...r.repli, html: assainirHtmlArticle(r.repli.html) } : null,
+})
 
 /* Extraction dans le DOM de la page en ligne. Tout se passe côté navigateur, sur le HTML tel que Next l'a servi. */
 const EXTRAIRE = (langue) => {
@@ -96,7 +103,8 @@ for (const post of POSTS) {
   for (const langue of (LANGUES_DE[post.slug] || ['fr', 'en'])) {
     const f = path.join(SRC, `${langue}-${post.slug}.html`)
     if (!fs.existsSync(f)) {
-      const p = PRECEDENT.get(`${langue} ${post.slug}`)
+      const p0 = PRECEDENT.get(`${langue} ${post.slug}`)
+      const p = p0 && extractionSure(p0)
       if (!p || MODE !== 'ecrire') { stats.erreurs.push(`${langue} ${post.slug} : fichier absent`); continue }
       manifeste.push({ slug: post.slug, langue, fichier: p.fichier, sortie: p.sortie,
         titre: post.title[langue], description: post.description[langue], date: post.date, categorie: post.category[langue], lecture: post.readTime[langue],
@@ -105,7 +113,7 @@ for (const post of POSTS) {
       repris++; continue
     }
     await page.setContent(fs.readFileSync(f, 'utf8'), { waitUntil: 'domcontentloaded' })
-    const r = await page.evaluate(EXTRAIRE, langue)
+    const r = extractionSure(await page.evaluate(EXTRAIRE, langue))
     if (r.erreur) { stats.erreurs.push(`${langue} ${post.slug} : ${r.erreur}`); continue }
     if (r.repli) stats.repli++; else stats.ok++
     if (!r.coverFile) stats.sansCover.push(`${langue} ${post.slug}`)

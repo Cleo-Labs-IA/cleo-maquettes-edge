@@ -4,11 +4,78 @@
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
+import { assainirHtmlArticle, validerMetadonneesBlog } from './securite-contenu.mjs'
 const ICI = path.dirname(path.dirname(fileURLToPath(import.meta.url)))
 const SRC = process.env.BLOGSRC || '/private/tmp/claude-501/-Users-naomiehalioua-cleo-landing/b32a4fc1-7a13-4475-84be-385bbde13f98/scratchpad/blogsrc'
 const BANK = '/Users/naomiehalioua/cleo-landing/public/blog-bank/'
-const brut = JSON.parse(fs.readFileSync(path.join(ICI, 'blog/brut.json'), 'utf8'))
-const POSTS = JSON.parse(fs.readFileSync(path.join(SRC, 'blog-posts.json'), 'utf8'))
+const POSTS = validerMetadonneesBlog(JSON.parse(fs.readFileSync(path.join(SRC, 'blog-posts.json'), 'utf8')))
+const PAR_SLUG = new Map(POSTS.map(article => [article.slug, article]))
+const importes = JSON.parse(fs.readFileSync(path.join(ICI, 'blog/brut.json'), 'utf8'))
+if (!Array.isArray(importes) || importes.length > 1_000) throw new Error('blog/brut.json invalide : liste absente ou trop volumineuse')
+const identifiants = new Set()
+const texteImporte = (valeur, nom, maximum) => {
+  if (typeof valeur !== 'string' || !valeur.length || valeur.length > maximum || /[\u0000-\u001f\u007f]/.test(valeur)) throw new Error(`blog/brut.json invalide : ${nom}`)
+  return valeur
+}
+const metadataBrute = (article, identifiant) => {
+  const date = texteImporte(article.date, `${identifiant}.date`, 10)
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date) || new Date(`${date}T00:00:00.000Z`).toISOString().slice(0, 10) !== date) throw new Error(`blog/brut.json invalide : ${identifiant}.date`)
+  if (!['naomie', 'anaelle', 'alex'].includes(article.auteur)) throw new Error(`blog/brut.json invalide : ${identifiant}.auteur`)
+  const faq = article.faq === undefined ? [] : article.faq
+  if (!Array.isArray(faq) || faq.length > 20) throw new Error(`blog/brut.json invalide : ${identifiant}.faq`)
+  return {
+    titre: texteImporte(article.titre, `${identifiant}.titre`, 500),
+    description: texteImporte(article.description, `${identifiant}.description`, 1_500),
+    date,
+    categorie: texteImporte(article.categorie, `${identifiant}.categorie`, 100),
+    lecture: texteImporte(article.lecture, `${identifiant}.lecture`, 32),
+    auteur: article.auteur,
+    faq: faq.map((entree, i) => ({ q: texteImporte(entree?.q, `${identifiant}.faq[${i}].q`, 500), a: texteImporte(entree?.a, `${identifiant}.faq[${i}].a`, 3_000) })),
+  }
+}
+const brut = importes.map((article, index) => {
+  if (!article || typeof article !== 'object' || Array.isArray(article)) throw new Error(`blog/brut.json invalide : article ${index}`)
+  if (!['fr', 'en'].includes(article.langue) || typeof article.slug !== 'string' || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(article.slug) || article.slug.length > 100) throw new Error(`blog/brut.json invalide : identité article ${index}`)
+  const identifiant = `${article.langue}/${article.slug}`
+  if (identifiants.has(identifiant)) throw new Error(`blog/brut.json invalide : doublon ${identifiant}`)
+  identifiants.add(identifiant)
+  const post = PAR_SLUG.get(article.slug)
+  const meta = post ? {
+    titre: post.title[article.langue], description: post.description[article.langue], date: post.date,
+    categorie: post.category[article.langue], lecture: post.readTime[article.langue], auteur: post.author,
+    faq: (post.faq || []).map(entree => ({ q: entree.q[article.langue], a: entree.a[article.langue] })),
+  } : metadataBrute(article, identifiant)
+  const corpsImporte = Array.isArray(article.corps) && article.corps.length
+    ? article.corps
+    : article.repli && typeof article.repli.html === 'string' ? [{ titre: '', html: article.repli.html }] : []
+  if (corpsImporte.length > 100) throw new Error(`blog/brut.json invalide : trop de sections pour ${identifiant}`)
+  const corps = corpsImporte.map((section, i) => {
+    if (!section || typeof section !== 'object' || typeof section.html !== 'string') throw new Error(`blog/brut.json invalide : section ${i} de ${identifiant}`)
+    const html = assainirHtmlArticle(section.html)
+    const titre = typeof section.titre === 'string' ? section.titre.slice(0, 500) : ''
+    return { titre, html, mots: html.replace(/<[^>]+>/g, ' ').trim().split(/\s+/).filter(Boolean).length }
+  })
+  const couverture = typeof article.couverture === 'string' && /^[a-zA-Z0-9][a-zA-Z0-9._-]*\.(?:avif|jpe?g|png|webp)$/.test(article.couverture) ? article.couverture : null
+  const en = article.langue === 'en'
+  return {
+    slug: article.slug,
+    langue: article.langue,
+    fichier: `blog/${article.slug}${en ? '-en' : ''}.html`,
+    sortie: `blog-${article.slug}${en ? '-en' : ''}.html`,
+    titre: meta.titre,
+    description: meta.description,
+    date: meta.date,
+    categorie: meta.categorie,
+    lecture: meta.lecture,
+    auteur: meta.auteur,
+    couverture,
+    faq: meta.faq,
+    mesure: { motsCorps: corps.reduce((total, section) => total + section.mots, 0), h2s: corps.map(section => section.titre).filter(Boolean).slice(0, 20) },
+    corps,
+    sources: assainirHtmlArticle(typeof article.sources === 'string' ? article.sources : ''),
+    repli: null,
+  }
+})
 const ech = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 const MOIS = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre']
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
@@ -123,7 +190,7 @@ for (const a of brut) {
       <p class="t-body" style="margin:0 0 28px">${ech(a.description)}</p>
       <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
         ${auteurHtml}
-        <span class="t-caption" style="padding-left:14px;border-left:1px solid var(--c-filet-sombre)"><time datetime="${a.date}">${dateLisible(a.date, en)}</time> · ${ech(a.lecture)}</span>
+        <span class="t-caption" style="padding-left:14px;border-left:1px solid var(--c-filet-sombre)"><time datetime="${ech(a.date)}">${dateLisible(a.date, en)}</time> · ${ech(a.lecture)}</span>
       </div>
     </div>
   </div>

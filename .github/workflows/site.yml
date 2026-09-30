@@ -57,9 +57,8 @@ jobs:
 
       - run: npm ci --no-audit --no-fund
 
-      - name: Navigateur du porteur d'articles
-        if: env.A_LANDING == '1'
-        run: npx playwright install --with-deps chromium
+      - name: Navigateur du porteur d'articles et du contrôle CSP
+        run: ./node_modules/.bin/playwright install --with-deps chromium
 
       - name: Relais du blog, build et tests
         id: relais
@@ -83,19 +82,21 @@ jobs:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
           set -euo pipefail
-          V="npx --yes vercel@50 --token $VERCEL_TOKEN --scope cleo-academys-projects"
+          VERCEL=(./node_modules/.bin/vercel --scope cleo-academys-projects)
           mkdir -p sortie/.vercel
           printf '{"orgId":"%s","projectId":"%s","projectName":"cleo-site-v6"}' "$VERCEL_ORG_ID" "$VERCEL_PROJECT_ID" > sortie/.vercel/project.json
-          precedent=$(curl -fsS -H "Authorization: Bearer $VERCEL_TOKEN" \
+          precedent=$(node scripts/curl-auth.mjs VERCEL_TOKEN -fsS \
             "https://api.vercel.com/v6/deployments?projectId=$VERCEL_PROJECT_ID&teamId=$VERCEL_ORG_ID&target=production&state=READY&limit=1" \
-            | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>console.log(JSON.parse(s).deployments[0]?.url||""))')
+            | env -u VERCEL_TOKEN node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>console.log(JSON.parse(s).deployments[0]?.url||""))')
           [ -n "$precedent" ] || { echo "::error::déploiement de production actuel introuvable, pas de mise en ligne sans retour possible"; exit 1; }
           echo "production actuelle : $precedent"
-          $V deploy sortie --prod --yes
-          if ! scripts/controle-en-ligne.sh "$SITE_EN_LIGNE" ${{ steps.relais.outputs.articles }}; then
+          sortie_vercel=$("${VERCEL[@]}" deploy sortie --prod --yes 2>&1) || { printf '%s\n' "$sortie_vercel" | node scripts/rediger-sortie.mjs; exit 1; }
+          printf '%s\n' "$sortie_vercel" | node scripts/rediger-sortie.mjs
+          if ! env -u VERCEL_TOKEN scripts/controle-en-ligne.sh "$SITE_EN_LIGNE" ${{ steps.relais.outputs.articles }}; then
             echo "::error::contrôle en échec après mise en ligne, retour à $precedent"
-            $V promote "https://$precedent" --yes
-            scripts/controle-en-ligne.sh "$SITE_EN_LIGNE" || true
+            retour=$("${VERCEL[@]}" promote "https://$precedent" --yes 2>&1) || { printf '%s\n' "$retour" | node scripts/rediger-sortie.mjs; exit 1; }
+            printf '%s\n' "$retour" | node scripts/rediger-sortie.mjs
+            env -u VERCEL_TOKEN scripts/controle-en-ligne.sh "$SITE_EN_LIGNE" || true
             exit 1
           fi
 
