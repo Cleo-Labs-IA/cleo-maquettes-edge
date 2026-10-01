@@ -38,7 +38,7 @@ fi
 
 node construire.mjs > /tmp/build.log 2>&1 || { tail -30 /tmp/build.log; exit 1; }
 tail -3 /tmp/build.log
-for t in tests/landings-ads.mjs tests/v6-structure.mjs tests/seo-accueil.mjs tests/servir-routes.mjs tests/blog-securite.mjs tests/securite-critique.mjs tests/csp-atlas-browser.mjs tests/csp-formulaires-browser.mjs; do
+for t in tests/landings-ads.mjs tests/v6-structure.mjs tests/seo-accueil.mjs tests/servir-routes.mjs tests/blog-securite.mjs tests/securite-critique.mjs tests/csp-atlas-browser.mjs tests/csp-formulaires-browser.mjs tests/sitemap-dates.mjs; do
   node "$t" > /tmp/test.log 2>&1 || { echo "::error::test en échec : $t"; tail -20 /tmp/test.log; exit 1; }
   echo "OK $t"
 done

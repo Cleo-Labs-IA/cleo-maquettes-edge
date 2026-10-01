@@ -6,6 +6,8 @@
    ============================================================ */
 import fs from 'fs'
 import path from 'path'
+import crypto from 'crypto'
+import { execFileSync } from 'child_process'
 import { fileURLToPath } from 'url'
 
 const ICI = path.dirname(fileURLToPath(import.meta.url))
@@ -1300,7 +1302,7 @@ ${corps}
   })
   const dest = path.join(ICI, 'sortie', p.sortie || p.fichier)
   fs.writeFileSync(dest, doc)
-  journal.push({ fichier: p.sortie || p.fichier, ko: Math.round(doc.length / 1024), noindex: !!p.noindex })
+  journal.push({ source: p.fichier, fichier: p.sortie || p.fichier, ko: Math.round(doc.length / 1024), noindex: !!p.noindex })
   console.log(`  ${(p.sortie || p.fichier).padEnd(22)} ${String(Math.round(doc.length / 1024)).padStart(5)} Ko`)
 }
 
@@ -1326,9 +1328,33 @@ Sitemap: ${HOTE}/sitemap.xml
 const construites = journal.map(j => j.fichier)
 const publiques = construites.filter(f => !estApercu(f))
 const jour = new Date().toISOString().slice(0, 10)
+/* <lastmod> = date du dernier changement REEL du contenu, jamais la date du build.
+   Articles : date de publication des donnees (blog/articles.json).
+   Autres pages : registre versionne commun/dates-pages.json (route -> {empreinte, date}). L'empreinte porte sur
+   le HTML produit, sans ce qui peut bouger a chaque build (nonces). Empreinte identique : on garde la date ;
+   differente : date du jour. Un registre absent pour une route est amorce avec la date du dernier commit qui a
+   touche pages/<source> (git log), jamais avec le jour du build ; sans git (checkout superficiel), le jour. Le
+   registre est versionne par les relais, car la CI en checkout superficiel n'a pas d'historique par fichier. */
+const REGISTRE = path.join(ICI, 'commun/dates-pages.json')
+const registre = fs.existsSync(REGISTRE) ? JSON.parse(fs.readFileSync(REGISTRE, 'utf8')) : {}
+const datesArticles = new Map()
+if (fs.existsSync(path.join(ICI, 'blog/articles.json'))) for (const a of JSON.parse(fs.readFileSync(path.join(ICI, 'blog/articles.json'), 'utf8'))) if (a.sortie && /^\d{4}-\d{2}-\d{2}$/.test(a.date || '')) datesArticles.set(a.sortie, a.date)
+const empreinteDe = f => crypto.createHash('sha256').update(fs.readFileSync(path.join(ICI, 'sortie', f), 'utf8').replace(/\snonce="[^"]*"/g, '')).digest('hex').slice(0, 16)
+const dateGit = src => { try { return execFileSync('git', ['log', '-1', '--format=%cs', '--', 'pages/' + src], { cwd: ICI, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim() || null } catch { return null } }
+const nouveauRegistre = {}
+const lastmodDe = f => {
+  if (datesArticles.has(f)) return datesArticles.get(f)
+  const route = cheminDe(f), emp = empreinteDe(f), ancien = registre[route]
+  const date = ancien && ancien.empreinte === emp ? ancien.date : (ancien ? jour : (dateGit(journal.find(j => j.fichier === f).source) || jour))
+  nouveauRegistre[route] = { empreinte: emp, date }
+  return date
+}
+const lignesSitemap = publiques.filter(f => !journal.find(j => j.fichier === f).noindex).map(f => `  <url><loc>${HOTE}${cheminDe(f)}</loc><lastmod>${lastmodDe(f)}</lastmod></url>`)
+const texteRegistre = JSON.stringify(Object.fromEntries(Object.keys(nouveauRegistre).sort().map(k => [k, nouveauRegistre[k]])), null, 1) + '\n'
+if (!fs.existsSync(REGISTRE) || fs.readFileSync(REGISTRE, 'utf8') !== texteRegistre) fs.writeFileSync(REGISTRE, texteRegistre)
 fs.writeFileSync(path.join(ICI, 'sortie', 'sitemap.xml'),
   '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-  publiques.filter(f => !journal.find(j => j.fichier === f).noindex).map(f => `  <url><loc>${HOTE}${cheminDe(f)}</loc><lastmod>${jour}</lastmod></url>`).join('\n') +
+  lignesSitemap.join('\n') +
   '\n</urlset>\n')
 /* Les URL propres. Vercel sert le fichier plat derriere l'adresse calquee sur
    le vrai site : aucune duplication de fichier, et la barre d'adresse dit

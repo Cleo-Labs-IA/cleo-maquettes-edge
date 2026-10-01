@@ -105,7 +105,7 @@ jobs:
         run: |
           git config user.name "cleo-site-bot"
           git config user.email "cleo-site-bot@users.noreply.github.com"
-          git add pages/blog blog commun/v6-routes.json pages/24-blog.html pages/24-blog-en.html
+          git add pages/blog blog commun/v6-routes.json commun/dates-pages.json pages/24-blog.html pages/24-blog-en.html
           git diff --cached --quiet && exit 0
           git commit -m "blog : relais quotidien, ${{ steps.relais.outputs.nouveaux }} page(s) nouvelle(s) ($(TZ=Europe/Paris date '+%d/%m/%Y'))"
           git push origin HEAD:review/wording-2309
