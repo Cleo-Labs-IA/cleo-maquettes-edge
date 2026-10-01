@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /* REPLI SANS JETON (01/10/2026) : reconstitue $BLOGSRC/blog-posts.json sans lire le dépôt privé cleo-landing.
    Appelé par scripts/relais-ci.sh quand le secret LANDING_TOKEN manque. Deux sources, toutes deux déjà utilisées par le relais :
+     (le titre LONG vient du headline du JSON-LD, jamais de <title> ; <title> ne donne que le titre court, seoTitle)
      - le plan du site de l'alias public de cleo-landing ($ANCIEN_SITE/sitemap.xml) donne la liste des articles ;
      - pour un article que blog/brut.json ne connaît pas : ses deux pages rendues (fr, en), téléchargées dans $BLOGSRC,
        dont le JSON-LD TechArticle et FAQPage, les balises article:tag et le temps de lecture affiché portent
@@ -15,6 +16,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { validerMetadonneesBlog } from '../blog/securite-contenu.mjs'
+import { SUFFIXE_TITRE, titreCourtValide } from '../blog/titre-court.mjs'
 
 const CANONIQUE = 'https://www.cleolabs.co'
 const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
@@ -26,6 +28,20 @@ const entites = s => s.replace(/&(#x[0-9a-f]+|#\d+|amp|lt|gt|quot|apos);/gi, (to
   if (k[0] === '#') return String.fromCodePoint(k[1] === 'x' ? parseInt(k.slice(2), 16) : parseInt(k.slice(1), 10))
   return { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'" }[k]
 })
+
+/* Le titre COURT d'une page (01/10/2026). Le titre long ne se lit JAMAIS dans <title> : il vient du headline du
+   TechArticle. Le jour où cleo-landing sert <title>{seoTitle} | Cleo Labs</title>, le <title> (suffixe retiré, entités
+   décodées) diffère du titre long : s'il tient en 60 caractères, c'est le titre court. S'il est égal au titre long
+   (page sans seoTitle), ou trop long, ou porteur d'une balise : pas de titre court. */
+export function titreCourtDepuisHtml(html, titreLong) {
+  const brut = (html.match(/<title[^>]*>([\s\S]*?)<\/title>/) || [])[1]
+  if (brut === undefined) return undefined
+  const norme = s => s.replace(/\s+/g, ' ').trim()
+  let titre = norme(entites(brut))
+  if ((' ' + titre).endsWith(SUFFIXE_TITRE)) titre = (' ' + titre).slice(0, -SUFFIXE_TITRE.length).trim()   // « | Cleo Labs » seul = titre vide
+  if (!titre || titre === norme(titreLong)) return undefined
+  return titreCourtValide(titre) ?? undefined
+}
 
 /* Les métadonnées d'UNE page d'article rendue. Refuse toute page qui n'est pas exactement l'article demandé
    (un slug inconnu répond 200 avec l'index du blog : pas de TechArticle, donc refus). */
@@ -57,8 +73,9 @@ export function metadonneesDepuisHtml(html, langue, slug) {
   for (const [nom, valeur] of [['headline', a.headline], ['description', a.description], ['datePublished', a.datePublished], ['articleSection', a.articleSection]]) {
     if (typeof valeur !== 'string' || !valeur) refuser(`${ici} : ${nom} absent du TechArticle`)
   }
+  const court = titreCourtDepuisHtml(html, a.headline)
   return {
-    title: a.headline, description: a.description, date: a.datePublished, category: a.articleSection,
+    title: a.headline, ...(court === undefined ? {} : { seoTitle: court }), description: a.description, date: a.datePublished, category: a.articleSection,
     author: AUTEURS[auteurs[0].name], readTime: lecture,
     // /og-image.png est l'image par défaut du site : l'article n'a pas de couverture propre.
     coverImage: couverture === '/og-image.png' ? undefined : couverture,
@@ -75,7 +92,10 @@ export function articleDepuisPages(slug, pageFr, pageEn) {
   if (JSON.stringify(fr.keywords) !== JSON.stringify(en.keywords)) refuser(`${slug} : mots-clés différents entre fr et en`)
   const bi = champ => ({ fr: fr[champ], en: en[champ] })
   return {
-    slug, author: fr.author, title: bi('title'), description: bi('description'), date: fr.date, category: bi('category'), readTime: bi('readTime'),
+    slug, author: fr.author, title: bi('title'),
+    // seoTitle est bilingue strict : il n'existe que si les DEUX pages servent un titre court.
+    ...(fr.seoTitle !== undefined && en.seoTitle !== undefined ? { seoTitle: bi('seoTitle') } : {}),
+    description: bi('description'), date: fr.date, category: bi('category'), readTime: bi('readTime'),
     ...(fr.coverImage === undefined ? {} : { coverImage: fr.coverImage }),
     keywords: fr.keywords,
     ...(fr.faq.length ? { faq: fr.faq.map((q, i) => ({ q: { fr: q.q, en: en.faq[i].q }, a: { fr: q.a, en: en.faq[i].a } })) } : {}),
@@ -93,7 +113,9 @@ export function articleDepuisBrut(slug, fr, en) {
     : IMAGE.test(fr.couverture) ? `/blog-bank/${fr.couverture}`
       : fr.couverture[0] === '/' && IMAGE.test(fr.couverture.slice(1)) ? fr.couverture : undefined
   return {
-    slug, author: fr.auteur, title: { fr: fr.titre, en: en.titre }, description: { fr: fr.description, en: en.description }, date: fr.date,
+    slug, author: fr.auteur, title: { fr: fr.titre, en: en.titre },
+    ...(titreCourtValide(fr.titreCourt) && titreCourtValide(en.titreCourt) ? { seoTitle: { fr: fr.titreCourt, en: en.titreCourt } } : {}),
+    description: { fr: fr.description, en: en.description }, date: fr.date,
     category: { fr: fr.categorie, en: en.categorie }, readTime: { fr: fr.lecture, en: en.lecture },
     ...(couverture === undefined ? {} : { coverImage: couverture }),
     keywords: [],

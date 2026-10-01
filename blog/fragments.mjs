@@ -5,6 +5,7 @@ import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { assainirHtmlArticle, validerMetadonneesBlog } from './securite-contenu.mjs'
+import { creerTitreSeo, titreCourtValide } from './titre-court.mjs'
 const ICI = path.dirname(path.dirname(fileURLToPath(import.meta.url)))
 const SRC = process.env.BLOGSRC || '/private/tmp/claude-501/-Users-naomiehalioua-cleo-landing/b32a4fc1-7a13-4475-84be-385bbde13f98/scratchpad/blogsrc'
 const BANK = '/Users/naomiehalioua/cleo-landing/public/blog-bank/'
@@ -69,6 +70,8 @@ const brut = importes.map((article, index) => {
     lecture: meta.lecture,
     auteur: meta.auteur,
     couverture,
+    /* le titre court de l'article : celui de blog-posts.json du jour, sinon celui que le porteur a gardé dans brut.json */
+    titreCourt: titreCourtValide(post?.seoTitle?.[article.langue]) || titreCourtValide(article.titreCourt) || null,
     faq: meta.faq,
     mesure: { motsCorps: corps.reduce((total, section) => total + section.mots, 0), h2s: corps.map(section => section.titre).filter(Boolean).slice(0, 20) },
     corps,
@@ -158,36 +161,14 @@ const images = {}; const chemins = {}; const seo = { pages: {}, structure: {} };
    français, Google coupe vers 60). Il sort désormais de blog/titres-courts.json (slug → { fr, en }), 60 caractères au
    plus, suffixe « | Cleo Labs » compris quand il tient (règle de cleo-landing/docs/gsc-ctr-fix-2026-07-29.md). Le h1, le
    headline du JSON-LD, og:title et twitter:title gardent le titre long.
-   POUR UN NOUVEL ARTICLE : ajouter une ligne "slug": { "fr": "…", "en": "…" } dans blog/titres-courts.json.
-   Sans ligne, repli déterministe : le titre long coupé à la limite d'un mot. Jamais d'erreur, le relais quotidien passe. */
-const SUFFIXE_TITRE = ' | Cleo Labs'; const TITRE_MAX = 60
+   ORDRE (blog/titre-court.mjs) : (a) la ligne "slug": { "fr": "…", "en": "…" } de blog/titres-courts.json ; (b) sinon le
+   `seoTitle` que cleo-landing écrit avec l'article dans blog-posts.json, gardé dans blog/brut.json (`titreCourt`) ;
+   (c) sinon repli déterministe : le titre long coupé à la limite d'un mot. Jamais d'erreur, le relais quotidien passe. */
 const FICHIER_COURTS = path.join(ICI, 'blog/titres-courts.json')
 let TITRES_COURTS = {}
 try { if (fs.existsSync(FICHIER_COURTS)) TITRES_COURTS = JSON.parse(fs.readFileSync(FICHIER_COURTS, 'utf8')) || {} } catch (e) { console.warn('blog/titres-courts.json illisible, repli sur la coupe au mot : ' + e.message); TITRES_COURTS = {} }
-const longueur = t => [...t].length
-const couperAuMot = (t, max) => {
-  if (longueur(t) <= max) return t
-  let r = ''
-  for (const mot of t.split(/\s+/)) { const essai = r ? r + ' ' + mot : mot; if (longueur(essai) > max) break; r = essai }
-  if (!r) r = [...t].slice(0, max).join('')   // un seul mot plus long que la limite
-  return r.replace(/[\s,;:.!?«»"'’(–—-]+$/u, '') || [...t].slice(0, max).join('')
-}
-const avecSuffixe = base => (longueur(base) + longueur(SUFFIXE_TITRE) <= TITRE_MAX && !/Cleo Labs/i.test(base)) ? base + SUFFIXE_TITRE : base
-const titresPris = { fr: new Set(), en: new Set() }; let replis = 0
-const titreSeo = (a) => {
-  const voulu = TITRES_COURTS[a.slug] && typeof TITRES_COURTS[a.slug][a.langue] === 'string' ? TITRES_COURTS[a.slug][a.langue].replace(/\s+/g, ' ').trim() : ''
-  let titre
-  if (voulu && longueur(voulu) <= TITRE_MAX) titre = avecSuffixe(voulu)
-  else {
-    replis++
-    const propre = a.titre.replace(/\s+/g, ' ').trim()
-    titre = avecSuffixe(couperAuMot(propre, longueur(propre) + longueur(SUFFIXE_TITRE) <= TITRE_MAX ? TITRE_MAX : TITRE_MAX - longueur(SUFFIXE_TITRE)))
-    // deux replis identiques dans la même langue : on rend la place du suffixe au titre, quelques mots de plus les séparent
-    if (titresPris[a.langue].has(titre.toLowerCase())) titre = couperAuMot(propre, TITRE_MAX)
-  }
-  titresPris[a.langue].add(titre.toLowerCase())
-  return titre
-}
+const { titreSeo, origine: origineTitre, replis: nombreDeReplis } = creerTitreSeo(TITRES_COURTS)
+let titresArticle = 0
 fs.mkdirSync(path.join(ICI, 'pages/blog'), { recursive: true })
 const parLangue = { fr: brut.filter(a => a.langue === 'fr'), en: brut.filter(a => a.langue === 'en') }
 for (const l of ['fr', 'en']) parLangue[l].sort((a, b) => b.date.localeCompare(a.date))
@@ -286,6 +267,7 @@ ${cartes.join('\n')}
   fs.writeFileSync(path.join(ICI, 'pages', a.fichier), html)
   const chemin = `/${a.langue}/blog/${a.slug}`
   chemins[a.sortie] = { chemin, reelle: true }
+  if (origineTitre(a) === 'article') titresArticle++
   seo.pages[a.sortie] = { titre: titreSeo(a), og_titre: `${a.titre} | Cleo Labs`, description: a.description, source: 'site', url_source: `https://www.cleolabs.co${chemin}` }
   seo.structure[a.sortie] = { types: ['TechArticle', 'WebPage', 'BreadcrumbList'], proprietes: {
     WebPage: { name: a.titre, description: a.description },
@@ -334,4 +316,5 @@ for (const l of ['fr', 'en']) {
 }
 fs.writeFileSync(path.join(ICI, 'blog/images-blog.json'), JSON.stringify(images, null, 1))
 console.log(`fragments : ${manifeste.length} · couvertures : ${Object.keys(images).length} · routes : ${Object.keys(chemins).length}`)
-if (replis) console.log(`titres courts : ${replis} titre(s) en repli (coupe au mot), à compléter dans blog/titres-courts.json`)
+if (titresArticle) console.log(`titres courts : ${titresArticle} titre(s) repris du seoTitle de l'article (blog-posts.json)`)
+if (nombreDeReplis()) console.log(`titres courts : ${nombreDeReplis()} titre(s) en repli (coupe au mot), à compléter dans blog/titres-courts.json ou par seoTitle dans cleo-landing`)

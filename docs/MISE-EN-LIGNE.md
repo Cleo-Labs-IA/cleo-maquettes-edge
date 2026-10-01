@@ -24,6 +24,7 @@ Le commit de blog que la tâche pousse elle-même part avec le `GITHUB_TOKEN` : 
 - **Avec le secret `LANDING_TOKEN`** : `blog-posts.json` est lu dans le dépôt privé `cleo-academy/cleo-landing`.
 - **Sans lui** : `scripts/blog-posts-public.mjs` le reconstitue depuis le plan du site et les pages publiques de l'alias `cleo-landing-cleo-academys-projects.vercel.app` (JSON-LD de chaque article), derrière la même validation stricte. Mesuré le 01/10/2026 sur les 142 articles : titre, description, date, catégorie, auteur, temps de lecture, couverture, mots-clés et FAQ sont identiques au fichier privé, et le porteur produit les mêmes pages à l'octet près.
 - Limite du mode sans jeton : la correction d'un article **déjà porté** (un titre, une FAQ) n'est reprise qu'en lançant la tâche à la main avec « forcer ».
+- **Titre court d'un article (son `<title>`), dans l'ordre** : (1) la ligne du slug dans `blog/titres-courts.json` ; (2) sinon le `seoTitle` de l'article dans `blog-posts.json` de cleo-landing (sans jeton : le `<title>` de la page publique quand il diffère du titre long), gardé dans `blog/brut.json` sous `titreCourt` ; (3) sinon le titre long coupé au mot. Le titre long (h1, og:title, JSON-LD) vient toujours de `title` ou du `headline` du JSON-LD, jamais du `<title>`. Règle dans `blog/titre-court.mjs`, preuve : `node tests/titre-court-source.mjs`.
 
 ### Le relais du Mac (`scripts/relais-blog.sh`)
 

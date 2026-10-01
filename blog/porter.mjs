@@ -7,6 +7,7 @@ import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import { assainirHtmlArticle, validerMetadonneesBlog } from './securite-contenu.mjs'
+import { titreCourtValide } from './titre-court.mjs'
 /* 28/09/2026 : Playwright du dépôt (package.json) hors du Mac ; sur le Mac, celui de cleo-landing, comme avant. */
 const PW_MAC = '/Users/naomiehalioua/cleo-landing/node_modules/playwright/index.mjs'
 const { chromium } = await import(fs.existsSync(PW_MAC) ? PW_MAC : 'playwright')
@@ -20,6 +21,13 @@ const POSTS = validerMetadonneesBlog(JSON.parse(fs.readFileSync(path.join(SRC, '
 const BRUT = path.join(ICI, 'blog', 'brut.json')
 const PRECEDENT = new Map((fs.existsSync(BRUT) ? JSON.parse(fs.readFileSync(BRUT, 'utf8')) : []).map(a => [`${a.langue} ${a.slug}`, a]))
 let repris = 0
+/* 01/10/2026 : le titre court (seoTitle de blog-posts.json) est gardé dans brut.json sous `titreCourt`. Un article déjà
+   porté n'est pas retéléchargé : sans ce champ versionné, son titre court serait perdu au relais suivant. Le titre LONG,
+   lui, vient toujours de post.title (blog-posts.json), jamais du <title> de la page. Champ absent quand il n'y en a pas. */
+const titreCourtDe = (post, langue, precedent) => {
+  const t = titreCourtValide(post.seoTitle?.[langue]) || titreCourtValide(precedent?.titreCourt)
+  return t ? { titreCourt: t } : {}
+}
 const DEJA = new Set([]) // 23/09/2026 : plus aucune page de blog faite à la main, tout passe par le porteur (fidélité mesurée par garde-seo.mjs).
 /* L'article PPWR existe en français comme page dessinée à la main (pages/12-article.html, route /fr/blog/eu-ppwr-…) :
    on ne porte que sa version anglaise, pour que chaque route n'ait qu'une source. */
@@ -114,7 +122,7 @@ for (const post of POSTS) {
       if (!p || MODE !== 'ecrire') { stats.erreurs.push(`${langue} ${post.slug} : fichier absent`); continue }
       manifeste.push({ slug: post.slug, langue, fichier: p.fichier, sortie: p.sortie,
         titre: post.title[langue], description: post.description[langue], date: post.date, categorie: post.category[langue], lecture: post.readTime[langue],
-        auteur: post.author, couverture: p.couverture, faq: (post.faq || []).map(q => ({ q: q.q[langue], a: q.a[langue] })),
+        auteur: post.author, ...titreCourtDe(post, langue, p0), couverture: p.couverture, faq: (post.faq || []).map(q => ({ q: q.q[langue], a: q.a[langue] })),
         mesure: p.mesure, corps: p.corps, sources: p.sources, repli: p.repli })
       repris++; continue
     }
@@ -127,7 +135,7 @@ for (const post of POSTS) {
     stats.sectionsMin = Math.min(stats.sectionsMin, r.corps.length); stats.sectionsMax = Math.max(stats.sectionsMax, r.corps.length)
     manifeste.push({ slug: post.slug, langue, fichier: `blog/${post.slug}${langue === 'en' ? '-en' : ''}.html`, sortie: `blog-${post.slug}${langue === 'en' ? '-en' : ''}.html`,
       titre: post.title[langue], description: post.description[langue], date: post.date, categorie: post.category[langue], lecture: post.readTime[langue],
-      auteur: post.author, couverture: r.coverFile || (post.coverImage ? post.coverImage.replace('/blog-bank/', '') : null), faq: (post.faq || []).map(q => ({ q: q.q[langue], a: q.a[langue] })),
+      auteur: post.author, ...titreCourtDe(post, langue, PRECEDENT.get(`${langue} ${post.slug}`)), couverture: r.coverFile || (post.coverImage ? post.coverImage.replace('/blog-bank/', '') : null), faq: (post.faq || []).map(q => ({ q: q.q[langue], a: q.a[langue] })),
       mesure: { h1: r.h1, dateLue: r.date, sections: r.corps.length, motsCorps: r.motsCorps, h2s: r.h2s.slice(0, 3), faqCorps: r.faqCorps, faqGabarit: r.faqGabarit, relies: r.relies, cta: r.cta, repli: !!r.repli },
       ...(MODE === 'ecrire' ? { corps: r.corps, sources: r.sources, repli: r.repli } : {}) })
   }
