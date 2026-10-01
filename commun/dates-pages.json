@@ -1,0 +1,274 @@
+{
+ "/en": {
+  "empreinte": "63f8e0fe01002a8a",
+  "date": "2026-09-29"
+ },
+ "/en/blog": {
+  "empreinte": "214ef6b56dfc5e9a",
+  "date": "2026-10-01"
+ },
+ "/en/careers": {
+  "empreinte": "9e6164ca0120683f",
+  "date": "2026-09-29"
+ },
+ "/en/careers/forward-deployed-engineer": {
+  "empreinte": "c2e7e6d1f81e5a42",
+  "date": "2026-09-29"
+ },
+ "/en/careers/legal-engineer": {
+  "empreinte": "16077c4c98df9fe1",
+  "date": "2026-09-23"
+ },
+ "/en/company": {
+  "empreinte": "644e74db7c3a063a",
+  "date": "2026-09-29"
+ },
+ "/en/compliance-as-a-service/ce-marking": {
+  "empreinte": "019f56bb25524776",
+  "date": "2026-09-23"
+ },
+ "/en/compliance-as-a-service/eu-authorised-representative": {
+  "empreinte": "c84c2075fcf3beba",
+  "date": "2026-09-29"
+ },
+ "/en/compliance-as-a-service/labelling-and-documentation": {
+  "empreinte": "2566cb5a63149809",
+  "date": "2026-09-23"
+ },
+ "/en/compliance-as-a-service/product-compliance-assessment": {
+  "empreinte": "c9578e0047b39530",
+  "date": "2026-09-23"
+ },
+ "/en/customers": {
+  "empreinte": "e3c072ff6560d0d8",
+  "date": "2026-09-23"
+ },
+ "/en/data": {
+  "empreinte": "61b046af464e77e2",
+  "date": "2026-09-29"
+ },
+ "/en/data/mcp": {
+  "empreinte": "82bcee14575cb6fe",
+  "date": "2026-09-29"
+ },
+ "/en/data/platform": {
+  "empreinte": "dcc5b1006ed86366",
+  "date": "2026-09-29"
+ },
+ "/en/event": {
+  "empreinte": "2ac966c319f41053",
+  "date": "2026-09-23"
+ },
+ "/en/for/importers-distributors": {
+  "empreinte": "63b1de0f82aaa35c",
+  "date": "2026-09-23"
+ },
+ "/en/for/manufacturers": {
+  "empreinte": "07f461f771425bfb",
+  "date": "2026-09-23"
+ },
+ "/en/for/marketplaces": {
+  "empreinte": "7e6133031ef073bc",
+  "date": "2026-09-23"
+ },
+ "/en/guide/ppwr": {
+  "empreinte": "63a3e7535b27d7b2",
+  "date": "2026-09-23"
+ },
+ "/en/industries": {
+  "empreinte": "4a7e341ef0f816a4",
+  "date": "2026-09-23"
+ },
+ "/en/jurisdictions/european-union": {
+  "empreinte": "99723313c6da48fe",
+  "date": "2026-09-23"
+ },
+ "/en/jurisdictions/european-union/regulations/ppwr": {
+  "empreinte": "4cb1f6e1af7ae714",
+  "date": "2026-09-23"
+ },
+ "/en/legal-data": {
+  "empreinte": "832c8766c8f69667",
+  "date": "2026-09-30"
+ },
+ "/en/meet": {
+  "empreinte": "5c2690efe6a45897",
+  "date": "2026-09-23"
+ },
+ "/en/platform/compliance-service": {
+  "empreinte": "d7a1fa0c295157a1",
+  "date": "2026-09-29"
+ },
+ "/en/research": {
+  "empreinte": "0ecebcbb0e77c58e",
+  "date": "2026-09-23"
+ },
+ "/en/resources": {
+  "empreinte": "ad90fc8b9bfe8b75",
+  "date": "2026-09-23"
+ },
+ "/en/resources/events": {
+  "empreinte": "560eb79d16adc43f",
+  "date": "2026-09-23"
+ },
+ "/en/resources/glossary": {
+  "empreinte": "831ca6ccb956647f",
+  "date": "2026-09-23"
+ },
+ "/en/resources/glossary/authorised-representative": {
+  "empreinte": "5fe4113631404234",
+  "date": "2026-09-23"
+ },
+ "/en/security": {
+  "empreinte": "9fdf3968ecba0dc5",
+  "date": "2026-09-23"
+ },
+ "/en/skills": {
+  "empreinte": "bd835b08037389a1",
+  "date": "2026-09-29"
+ },
+ "/en/solutions/product-compliance": {
+  "empreinte": "ad13d080a06027fa",
+  "date": "2026-09-29"
+ },
+ "/en/terms": {
+  "empreinte": "8c93983ec21e2999",
+  "date": "2026-09-23"
+ },
+ "/fr": {
+  "empreinte": "4057cfe68cecb114",
+  "date": "2026-09-29"
+ },
+ "/fr/blog": {
+  "empreinte": "9bc4eb4f7914022f",
+  "date": "2026-10-01"
+ },
+ "/fr/careers": {
+  "empreinte": "db410fe847e2b9ae",
+  "date": "2026-09-29"
+ },
+ "/fr/careers/forward-deployed-engineer": {
+  "empreinte": "20e1393b19f6957a",
+  "date": "2026-09-29"
+ },
+ "/fr/careers/legal-engineer": {
+  "empreinte": "219c65d1764e51b9",
+  "date": "2026-09-23"
+ },
+ "/fr/company": {
+  "empreinte": "b60d15da48e2957e",
+  "date": "2026-09-29"
+ },
+ "/fr/compliance-as-a-service/etiquetage-et-documentation": {
+  "empreinte": "95a1cb8d26d90fff",
+  "date": "2026-09-23"
+ },
+ "/fr/compliance-as-a-service/evaluation-de-conformite": {
+  "empreinte": "01267faee34c711a",
+  "date": "2026-09-23"
+ },
+ "/fr/compliance-as-a-service/mandataire-ue": {
+  "empreinte": "3b68f994175571f8",
+  "date": "2026-09-29"
+ },
+ "/fr/compliance-as-a-service/marquage-ce": {
+  "empreinte": "55566d613ab8d415",
+  "date": "2026-09-23"
+ },
+ "/fr/customers": {
+  "empreinte": "3d558d9f4e4093f0",
+  "date": "2026-09-16"
+ },
+ "/fr/data": {
+  "empreinte": "52f9a9c3de107d06",
+  "date": "2026-09-29"
+ },
+ "/fr/data/mcp": {
+  "empreinte": "087c00d5be6784e7",
+  "date": "2026-09-29"
+ },
+ "/fr/data/plateforme": {
+  "empreinte": "19238485b05f4d21",
+  "date": "2026-09-29"
+ },
+ "/fr/event": {
+  "empreinte": "f665795fd1ff34f8",
+  "date": "2026-09-23"
+ },
+ "/fr/for/importers-distributors": {
+  "empreinte": "cb3189e64078997c",
+  "date": "2026-09-23"
+ },
+ "/fr/for/manufacturers": {
+  "empreinte": "4760cb70335f0d88",
+  "date": "2026-09-16"
+ },
+ "/fr/for/marketplaces": {
+  "empreinte": "144531d6f1a33c68",
+  "date": "2026-09-23"
+ },
+ "/fr/guide/ppwr": {
+  "empreinte": "ff7799219aa91851",
+  "date": "2026-09-23"
+ },
+ "/fr/industries": {
+  "empreinte": "355bcef2de22028f",
+  "date": "2026-09-23"
+ },
+ "/fr/jurisdictions/european-union": {
+  "empreinte": "a9e65ea4e11d1e43",
+  "date": "2026-09-23"
+ },
+ "/fr/jurisdictions/european-union/regulations/ppwr": {
+  "empreinte": "421310702d5559cc",
+  "date": "2026-09-23"
+ },
+ "/fr/legal-data": {
+  "empreinte": "958aa4e81ca22327",
+  "date": "2026-09-30"
+ },
+ "/fr/meet": {
+  "empreinte": "b6a6d4608144edf1",
+  "date": "2026-09-23"
+ },
+ "/fr/platform/compliance-service": {
+  "empreinte": "94640fb4818fbcd6",
+  "date": "2026-09-29"
+ },
+ "/fr/research": {
+  "empreinte": "f96d6eb780c00664",
+  "date": "2026-09-23"
+ },
+ "/fr/resources": {
+  "empreinte": "763860695b069c0b",
+  "date": "2026-09-23"
+ },
+ "/fr/resources/events": {
+  "empreinte": "3a247bc9d76e4a47",
+  "date": "2026-09-23"
+ },
+ "/fr/resources/glossary": {
+  "empreinte": "658eac383e58a8aa",
+  "date": "2026-09-23"
+ },
+ "/fr/resources/glossary/representant-autorise": {
+  "empreinte": "9eda64cd48913e1e",
+  "date": "2026-09-23"
+ },
+ "/fr/security": {
+  "empreinte": "4bf3c99802d62482",
+  "date": "2026-09-23"
+ },
+ "/fr/skills": {
+  "empreinte": "b66c194a370d8bc9",
+  "date": "2026-09-29"
+ },
+ "/fr/solutions/product-compliance": {
+  "empreinte": "5d92c37340d80560",
+  "date": "2026-09-29"
+ },
+ "/fr/terms": {
+  "empreinte": "31a87b4f6a905ac3",
+  "date": "2026-09-16"
+ }
+}

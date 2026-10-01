@@ -6,6 +6,8 @@
    ============================================================ */
 import fs from 'fs'
 import path from 'path'
+import crypto from 'crypto'
+import { execFileSync } from 'child_process'
 import { fileURLToPath } from 'url'
 
 const ICI = path.dirname(fileURLToPath(import.meta.url))
@@ -433,6 +435,49 @@ async function cheminImage(nom, largeurDemandee, auDelaDuPlafond) {
   return chemin
 }
 const dataUri = cheminImage
+
+/* 01/10/2026, image de partage PROPRE À CHAQUE ARTICLE. Les 355 pages déclaraient la même og:image : un article partagé
+   sur LinkedIn, X ou repris par un assistant montrait toujours la même vignette. Chaque article reçoit désormais sa
+   couverture recadrée au centre en 1200 × 630, JPEG, sans texte incrusté (aucune police, rien à traduire), sous
+   sortie/og/blog/<slug>.jpg (commun aux deux langues). La SOURCE est l'image déjà fabriquée dans sortie/images/ par
+   cheminImage : sur le Mac c'est la photo de la banque, en CI (SIMULER_CI=1 ou GitHub Actions) c'est le fichier repris en
+   ligne d'après commun/images-manifeste.json ; les deux sont donc identiques. Si la couverture est introuvable ou si
+   sharp échoue, l'article garde og-image.jpg : jamais de build cassé, jamais de balise vers un fichier absent.
+   Cache : .cache/og-empreintes.json (hors dépôt) retient l'empreinte de la source ; une image n'est refaite que si la
+   source a changé ou si le fichier a disparu. */
+const DOSSIER_OG = path.join(ICI, 'sortie', 'og', 'blog')
+const FICHIER_EMPREINTES_OG = path.join(ICI, '.cache', 'og-empreintes.json')
+const VERSION_OG = 'v1-1200x630-q80'
+let empreintesOg = {}
+try { empreintesOg = JSON.parse(fs.readFileSync(FICHIER_EMPREINTES_OG, 'utf8')) } catch {}
+const statOg = { faites: 0, cache: 0, replis: [], slugs: new Set() }
+async function imagePartageArticle(cleCouverture, slug, titre) {
+  const repli = (raison) => { statOg.replis.push(`${slug} : ${raison}`); return null }
+  if (!cleCouverture) return repli('pas de couverture déclarée dans la page')
+  if (!/^[a-z0-9][a-z0-9-]*$/i.test(slug)) return repli(`slug inutilisable « ${slug} »`)
+  try {
+    const chemin = await cheminImage(cleCouverture)
+    const source = path.join(ICI, 'sortie', chemin)
+    if (!fs.existsSync(source)) return repli(`source absente ${chemin}`)
+    const octets = fs.readFileSync(source)
+    const empreinte = crypto.createHash('sha1').update(VERSION_OG).update(octets).digest('hex')
+    const dest = path.join(DOSSIER_OG, `${slug}.jpg`)
+    if (!statOg.slugs.has(slug)) {
+      if (empreintesOg[slug] === empreinte && fs.existsSync(dest)) statOg.cache++
+      else {
+        fs.mkdirSync(DOSSIER_OG, { recursive: true })
+        let q = 80, sortie
+        do { sortie = await sharp(octets).rotate().resize(1200, 630, { fit: 'cover', position: 'centre' }).jpeg({ quality: q, mozjpeg: true }).toBuffer(); q -= 8 } while (sortie.length > 280 * 1024 && q > 30)
+        if (sortie.length > 300 * 1024) return repli('image de plus de 300 Ko même à qualité minimale')
+        fs.writeFileSync(dest, sortie)
+        empreintesOg[slug] = empreinte
+        statOg.faites++
+      }
+      statOg.slugs.add(slug)
+    }
+    return { url: `${HOTE}/og/blog/${slug}.jpg`, largeur: 1200, hauteur: 630, alt: titre }
+  } catch (e) { return repli(`${e.message.split('\n')[0].slice(0, 120)}`) }
+}
 
 /* ── §18. La masse et l'unique.
    « Le contenu de la grille vient du réel : vraies références, vrais
@@ -1092,6 +1137,8 @@ for (const p of PAGES) {
   if (corps.includes('<!--VEILLE-->')) corps = corps.replace('<!--VEILLE-->', await veille())
   if (corps.includes('<!--GLOBE-PRODUITS-->')) corps = corps.replace('<!--GLOBE-PRODUITS-->', await globeProduits())
   corps = corps.replace(/<!--RES-NAV:([^>]*)-->/g, (_, a) => resNav(a.trim(), !!p.en))
+  /* la couverture de l'article : première image de la bande photo (voir imagePartageArticle) */
+  const cleCouvertureArticle = V6_ROUTES[p.sortie || p.fichier] === 'article' ? ((corps.match(/<section class="section sy-bande-photo">\s*<figure>\s*<img src="img:([a-z0-9-]+)"/i) || [])[1] || null) : null
   corps = await injecterImages(corps)
   /* AUCUN COMMENTAIRE HTML NE SORT. Mesuré le 03/09/2026 : 515 commentaires servis sur
      46 pages, dont « composition relevée sur edgecomply.com » cinq fois sur l'accueil
@@ -1135,7 +1182,9 @@ for (const p of PAGES) {
      (tests/seo-accueil.mjs les compare à www.cleolabs.co). seo.json les porte sous « og_titre » et « image » ;
      sans elles, on reste sur le titre et on n'invente aucune URL d'image. */
   const ogTitre = seoP && seoP.og_titre ? seoP.og_titre : titre
-  const image = seoP && seoP.image ? seoP.image : (estApercu(nomSortie) ? null : IMAGE_SOCIALE)
+  let imageArticle = null
+  if (V6_ROUTES[nomSortie] === 'article' && !estApercu(nomSortie)) imageArticle = await imagePartageArticle(cleCouvertureArticle, cheminDe(nomSortie).split('/').pop(), ogTitre.replace(/ \| Cleo Labs$/, ''))
+  const image = seoP && seoP.image ? seoP.image : imageArticle ? imageArticle : (estApercu(nomSortie) ? null : IMAGE_SOCIALE)
   const og = [
     `<meta property="og:type" content="website">`,
     `<meta property="og:site_name" content="Cleo Labs">`,
@@ -1198,6 +1247,7 @@ for (const p of PAGES) {
         bloc.isPartOf = { '@id': SEO.site.webSite['@id'] }
       }
       Object.assign(bloc, props)
+      if (imageArticle && ['TechArticle', 'Article', 'BlogPosting'].includes(type) && !bloc.image) bloc.image = imageArticle.url
       // Une propriété obligatoire absente : on n'émet pas le bloc, et on le dit.
       const trous = (REQUIS[type] || []).filter(k => !(k in bloc))
       if (trous.length) { notesSeo.push(`  (${nomSortie} : ${type} non emis, il manque ${trous.join(', ')})`); continue }
@@ -1300,7 +1350,7 @@ ${corps}
   })
   const dest = path.join(ICI, 'sortie', p.sortie || p.fichier)
   fs.writeFileSync(dest, doc)
-  journal.push({ fichier: p.sortie || p.fichier, ko: Math.round(doc.length / 1024), noindex: !!p.noindex })
+  journal.push({ source: p.fichier, fichier: p.sortie || p.fichier, ko: Math.round(doc.length / 1024), noindex: !!p.noindex })
   console.log(`  ${(p.sortie || p.fichier).padEnd(22)} ${String(Math.round(doc.length / 1024)).padStart(5)} Ko`)
 }
 
@@ -1326,9 +1376,36 @@ Sitemap: ${HOTE}/sitemap.xml
 const construites = journal.map(j => j.fichier)
 const publiques = construites.filter(f => !estApercu(f))
 const jour = new Date().toISOString().slice(0, 10)
+/* <lastmod> = date du dernier changement REEL du contenu, jamais la date du build.
+   Articles : date de publication des donnees (blog/articles.json).
+   Autres pages : registre versionne commun/dates-pages.json (route -> {empreinte, date}). L'empreinte porte sur
+   le contenu propre a la page (<main>, a defaut <body>), sans scripts, styles ni nonces : un changement de
+   traceur, de balise de tete, de barre ou de pied commun ne redate pas tout le site. Empreinte identique : on
+   garde la date ; differente : date du jour. DATES_GARDER=1 recalcule les empreintes sans toucher aux dates
+   (refonte du gabarit sans changement de contenu). Un registre absent pour une route est amorce avec la date du dernier commit qui a
+   touche pages/<source> (git log), jamais avec le jour du build ; sans git (checkout superficiel), le jour. Le
+   registre est versionne par les relais, car la CI en checkout superficiel n'a pas d'historique par fichier. */
+const REGISTRE = path.join(ICI, 'commun/dates-pages.json')
+const registre = fs.existsSync(REGISTRE) ? JSON.parse(fs.readFileSync(REGISTRE, 'utf8')) : {}
+const datesArticles = new Map()
+if (fs.existsSync(path.join(ICI, 'blog/articles.json'))) for (const a of JSON.parse(fs.readFileSync(path.join(ICI, 'blog/articles.json'), 'utf8'))) if (a.sortie && /^\d{4}-\d{2}-\d{2}$/.test(a.date || '')) datesArticles.set(a.sortie, a.date)
+const contenuPropre = html => ((html.match(/<main[\s>][\s\S]*<\/main>/i) || html.match(/<body[\s>][\s\S]*<\/body>/i) || [html])[0]).replace(/<(script|style)[\s>][\s\S]*?<\/\1>/gi, '').replace(/\snonce="[^"]*"/g, '')
+const empreinteDe = f => crypto.createHash('sha256').update(contenuPropre(fs.readFileSync(path.join(ICI, 'sortie', f), 'utf8'))).digest('hex').slice(0, 16)
+const dateGit = src => { try { return execFileSync('git', ['log', '-1', '--format=%cs', '--', 'pages/' + src], { cwd: ICI, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim() || null } catch { return null } }
+const nouveauRegistre = {}
+const lastmodDe = f => {
+  if (datesArticles.has(f)) return datesArticles.get(f)
+  const route = cheminDe(f), emp = empreinteDe(f), ancien = registre[route]
+  const date = ancien && (ancien.empreinte === emp || process.env.DATES_GARDER === '1') ? ancien.date : (ancien ? jour : (dateGit(journal.find(j => j.fichier === f).source) || jour))
+  nouveauRegistre[route] = { empreinte: emp, date }
+  return date
+}
+const lignesSitemap = publiques.filter(f => !journal.find(j => j.fichier === f).noindex).map(f => `  <url><loc>${HOTE}${cheminDe(f)}</loc><lastmod>${lastmodDe(f)}</lastmod></url>`)
+const texteRegistre = JSON.stringify(Object.fromEntries(Object.keys(nouveauRegistre).sort().map(k => [k, nouveauRegistre[k]])), null, 1) + '\n'
+if (!fs.existsSync(REGISTRE) || fs.readFileSync(REGISTRE, 'utf8') !== texteRegistre) fs.writeFileSync(REGISTRE, texteRegistre)
 fs.writeFileSync(path.join(ICI, 'sortie', 'sitemap.xml'),
   '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-  publiques.filter(f => !journal.find(j => j.fichier === f).noindex).map(f => `  <url><loc>${HOTE}${cheminDe(f)}</loc><lastmod>${jour}</lastmod></url>`).join('\n') +
+  lignesSitemap.join('\n') +
   '\n</urlset>\n')
 /* Les URL propres. Vercel sert le fichier plat derriere l'adresse calquee sur
    le vrai site : aucune duplication de fichier, et la barre d'adresse dit
@@ -1396,6 +1473,10 @@ console.log(`  ${REDIRECTIONS_HERITEES.length} redirections héritées du site e
 /* Une page retirée du registre ne doit pas survivre dans sortie/ d'un build à l'autre (mesuré le 23/09/2026 : sept
    anciennes pages d'articles faites main restaient servies à leur nom de fichier). */
 for (const f of fs.readdirSync(path.join(ICI, 'sortie'))) if (f.endsWith('.html') && !construites.includes(f)) { fs.unlinkSync(path.join(ICI, 'sortie', f)); console.log(`  purgé : ${f} (plus au registre)`) }
+fs.mkdirSync(path.dirname(FICHIER_EMPREINTES_OG), { recursive: true })
+fs.writeFileSync(FICHIER_EMPREINTES_OG, JSON.stringify(empreintesOg, null, 1))
+console.log(`  images de partage : ${statOg.slugs.size} distinctes (${statOg.faites} fabriquées, ${statOg.cache} en cache), ${statOg.replis.length} page(s) en repli sur og-image.jpg`)
+for (const r of statOg.replis) console.log(`    repli : ${r}`)
 console.log(`  ${reecritures.length} URL propres, calquees sur les routes de www.cleolabs.co`)
 console.log(`  robots.txt + sitemap.xml + vercel.json : ${publiques.length} pages indexables, /apercu hors index`)
 

@@ -148,6 +148,40 @@ const couvertureDe = (a) => {
   couvertures[a.slug] = f; return f
 }
 const images = {}; const chemins = {}; const seo = { pages: {}, structure: {} }; const manifeste = []
+/* TITRES COURTS (01/10/2026). Le <title> d'un article reprenait le titre éditorial entier (médiane 228 caractères en
+   français, Google coupe vers 60). Il sort désormais de blog/titres-courts.json (slug → { fr, en }), 60 caractères au
+   plus, suffixe « | Cleo Labs » compris quand il tient (règle de cleo-landing/docs/gsc-ctr-fix-2026-07-29.md). Le h1, le
+   headline du JSON-LD, og:title et twitter:title gardent le titre long.
+   POUR UN NOUVEL ARTICLE : ajouter une ligne "slug": { "fr": "…", "en": "…" } dans blog/titres-courts.json.
+   Sans ligne, repli déterministe : le titre long coupé à la limite d'un mot. Jamais d'erreur, le relais quotidien passe. */
+const SUFFIXE_TITRE = ' | Cleo Labs'; const TITRE_MAX = 60
+const FICHIER_COURTS = path.join(ICI, 'blog/titres-courts.json')
+let TITRES_COURTS = {}
+try { if (fs.existsSync(FICHIER_COURTS)) TITRES_COURTS = JSON.parse(fs.readFileSync(FICHIER_COURTS, 'utf8')) || {} } catch (e) { console.warn('blog/titres-courts.json illisible, repli sur la coupe au mot : ' + e.message); TITRES_COURTS = {} }
+const longueur = t => [...t].length
+const couperAuMot = (t, max) => {
+  if (longueur(t) <= max) return t
+  let r = ''
+  for (const mot of t.split(/\s+/)) { const essai = r ? r + ' ' + mot : mot; if (longueur(essai) > max) break; r = essai }
+  if (!r) r = [...t].slice(0, max).join('')   // un seul mot plus long que la limite
+  return r.replace(/[\s,;:.!?«»"'’(–—-]+$/u, '') || [...t].slice(0, max).join('')
+}
+const avecSuffixe = base => (longueur(base) + longueur(SUFFIXE_TITRE) <= TITRE_MAX && !/Cleo Labs/i.test(base)) ? base + SUFFIXE_TITRE : base
+const titresPris = { fr: new Set(), en: new Set() }; let replis = 0
+const titreSeo = (a) => {
+  const voulu = TITRES_COURTS[a.slug] && typeof TITRES_COURTS[a.slug][a.langue] === 'string' ? TITRES_COURTS[a.slug][a.langue].replace(/\s+/g, ' ').trim() : ''
+  let titre
+  if (voulu && longueur(voulu) <= TITRE_MAX) titre = avecSuffixe(voulu)
+  else {
+    replis++
+    const propre = a.titre.replace(/\s+/g, ' ').trim()
+    titre = avecSuffixe(couperAuMot(propre, longueur(propre) + longueur(SUFFIXE_TITRE) <= TITRE_MAX ? TITRE_MAX : TITRE_MAX - longueur(SUFFIXE_TITRE)))
+    // deux replis identiques dans la même langue : on rend la place du suffixe au titre, quelques mots de plus les séparent
+    if (titresPris[a.langue].has(titre.toLowerCase())) titre = couperAuMot(propre, TITRE_MAX)
+  }
+  titresPris[a.langue].add(titre.toLowerCase())
+  return titre
+}
 fs.mkdirSync(path.join(ICI, 'pages/blog'), { recursive: true })
 const parLangue = { fr: brut.filter(a => a.langue === 'fr'), en: brut.filter(a => a.langue === 'en') }
 for (const l of ['fr', 'en']) parLangue[l].sort((a, b) => b.date.localeCompare(a.date))
@@ -246,7 +280,7 @@ ${cartes.join('\n')}
   fs.writeFileSync(path.join(ICI, 'pages', a.fichier), html)
   const chemin = `/${a.langue}/blog/${a.slug}`
   chemins[a.sortie] = { chemin, reelle: true }
-  seo.pages[a.sortie] = { titre: `${a.titre} | Cleo Labs`, description: a.description, source: 'site', url_source: `https://www.cleolabs.co${chemin}` }
+  seo.pages[a.sortie] = { titre: titreSeo(a), og_titre: `${a.titre} | Cleo Labs`, description: a.description, source: 'site', url_source: `https://www.cleolabs.co${chemin}` }
   seo.structure[a.sortie] = { types: ['TechArticle', 'WebPage', 'BreadcrumbList'], proprietes: {
     WebPage: { name: a.titre, description: a.description },
     TechArticle: { headline: a.titre, description: a.description, datePublished: a.date, author: { '@type': 'Person', name: au.nom, ...(au.lien ? { url: au.lien } : {}) }, publisher: { '@id': 'https://www.cleolabs.co/#organization' }, inLanguage: en ? 'en-US' : 'fr-FR', articleSection: a.categorie },
@@ -294,3 +328,4 @@ for (const l of ['fr', 'en']) {
 }
 fs.writeFileSync(path.join(ICI, 'blog/images-blog.json'), JSON.stringify(images, null, 1))
 console.log(`fragments : ${manifeste.length} · couvertures : ${Object.keys(images).length} · routes : ${Object.keys(chemins).length}`)
+if (replis) console.log(`titres courts : ${replis} titre(s) en repli (coupe au mot), à compléter dans blog/titres-courts.json`)

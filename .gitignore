@@ -11,3 +11,4 @@ node_modules/
 .superpowers/
 blog/sonde.json
 garde/dernier-controle.json
+.cache/

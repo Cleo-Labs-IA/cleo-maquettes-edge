@@ -1,5 +1,6 @@
-# MISE EN LIGNE DE www.cleolabs.co SANS LE MAC (28/09/2026).
-# Remplace le relais launchd (scripts/relais-blog.sh) et les `vercel deploy` lancés à la main.
+# MISE EN LIGNE DE www.cleolabs.co SANS LE MAC (28/09/2026). SEULE chaîne qui met en ligne depuis le 01/10/2026 :
+# le relais launchd du Mac (scripts/relais-blog.sh) ne déploie plus, il pousse sur la branche et c'est ce push qui arrive ici.
+# Un commit de blog fait par cette tâche est poussé avec le GITHUB_TOKEN : GitHub ne relance pas de tâche pour lui, pas de boucle.
 #   - chaque jour : relais du blog (article du jour de cleo-landing), build, tests, mise en ligne s'il y a du nouveau ;
 #   - à chaque push sur la branche du site : build, tests, mise en ligne ;
 #   - à la main (Actions → site → Run workflow).
@@ -7,7 +8,8 @@
 # les adresses qui coûtent (landings Ads, accueil, blog, /api, privacy) et REVIENT au déploiement précédent au moindre écart.
 # Mode : variable de dépôt SITE_MODE. Absente ou « essai » = build et tests seuls, jamais de mise en ligne ni de commit.
 # « production » = mise en ligne. Secrets : VERCEL_TOKEN (équipe cleo-academys-projects), LANDING_TOKEN (lecture de
-# cleo-academy/cleo-landing, pour blog-posts.json). Voir docs/MISE-EN-LIGNE.md.
+# cleo-academy/cleo-landing, pour blog-posts.json ; facultatif : sans lui, scripts/blog-posts-public.mjs reconstitue les
+# métadonnées depuis les pages publiques). Voir docs/MISE-EN-LIGNE.md.
 name: site
 
 on:
@@ -105,10 +107,18 @@ jobs:
         run: |
           git config user.name "cleo-site-bot"
           git config user.email "cleo-site-bot@users.noreply.github.com"
-          git add pages/blog blog commun/v6-routes.json pages/24-blog.html pages/24-blog-en.html
+          git add pages/blog blog commun/v6-routes.json commun/dates-pages.json pages/24-blog.html pages/24-blog-en.html
           git diff --cached --quiet && exit 0
           git commit -m "blog : relais quotidien, ${{ steps.relais.outputs.nouveaux }} page(s) nouvelle(s) ($(TZ=Europe/Paris date '+%d/%m/%Y'))"
-          git push origin HEAD:review/wording-2309
+          git push origin HEAD:review/wording-2309 && exit 0
+          # Push refusé : la branche a avancé pendant cette tâche. Si l'autre relais (le Mac) y a déjà versionné ces
+          # articles, il n'y a rien à perdre ; sinon c'est une erreur, à rejouer à la main.
+          git fetch -q origin review/wording-2309
+          if git show FETCH_HEAD:blog/brut.json | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const cle=a=>a.langue+"/"+a.slug;const la=new Set(JSON.parse(s).map(cle));process.exit(JSON.parse(require("fs").readFileSync("blog/brut.json","utf8")).every(a=>la.has(cle(a)))?0:1)})'; then
+            echo "::notice::push refusé, mais la branche contient déjà ces articles (portés par l'autre relais) : rien à versionner"
+          else
+            echo "::error::push refusé et la branche ne contient pas ces articles : relancer la tâche"; exit 1
+          fi
 
       - name: Garde SEO sur le domaine
         if: github.event_name == 'schedule'
