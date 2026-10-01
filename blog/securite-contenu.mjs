@@ -1,6 +1,6 @@
 import sanitizeHtml from 'sanitize-html'
 
-const CHAMPS = new Set(['author', 'category', 'coverAspect', 'coverImage', 'date', 'description', 'faq', 'featured', 'keywords', 'readTime', 'related', 'slug', 'title', 'tweet'])
+const CHAMPS = new Set(['author', 'category', 'coverAspect', 'coverImage', 'date', 'description', 'faq', 'featured', 'keywords', 'readTime', 'related', 'seoTitle', 'slug', 'title', 'tweet'])
 const AUTEURS = new Set(['naomie', 'anaelle', 'alex'])
 const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/
 const FICHIER_IMAGE = /^\/(?:blog-bank\/)?[a-zA-Z0-9][a-zA-Z0-9._-]*\.(?:avif|jpe?g|png|webp)$/
@@ -25,6 +25,14 @@ function objetBilingue(valeur, nom, maximum) {
   const cles = Object.keys(o).sort()
   if (cles.length !== 2 || cles[0] !== 'en' || cles[1] !== 'fr') erreur(`${nom} doit contenir exactement fr et en`)
   return { fr: texte(o.fr, `${nom}.fr`, maximum), en: texte(o.en, `${nom}.en`, maximum) }
+}
+
+/* seoTitle (facultatif, 01/10/2026) : le <title> court de l'article, écrit par cleo-landing. Bilingue strict, 1 à 60
+   caractères par langue, sans caractère de contrôle ; il finit dans un <title>, donc aucun chevron non plus. */
+function titreCourtBilingue(valeur, nom) {
+  const t = objetBilingue(valeur, nom, 60)
+  for (const langue of ['fr', 'en']) if (/[<>]/.test(t[langue]) || !t[langue].trim()) erreur(`${nom}.${langue} doit être un texte sans balise`)
+  return t
 }
 
 function dateIso(valeur, nom) {
@@ -73,6 +81,7 @@ export function validerMetadonneesBlog(donnees) {
     return {
       slug,
       title: objetBilingue(article.title, `${slug}.title`, 500),
+      ...(article.seoTitle === undefined ? {} : { seoTitle: titreCourtBilingue(article.seoTitle, `${slug}.seoTitle`) }),
       description: objetBilingue(article.description, `${slug}.description`, 1500),
       category: objetBilingue(article.category, `${slug}.category`, 100),
       author: article.author,
