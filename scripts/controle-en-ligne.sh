@@ -18,4 +18,6 @@ for c in "${CHEMINS[@]}"; do
   done
   if [ "$code" = "200" ] || { [[ "$c" == */lp/* ]] && [ "$code" = "307" ]; }; then echo "$code $c"; else echo "ÉCHEC $code $c"; echecs=$((echecs+1)); fi
 done
+# 01/10/2026 : une landing peut répondre 200 et ne plus pouvoir charger Google Ads ni le calendrier (CSP globale).
+if [ "$HOTE" = "https://www.cleolabs.co" ]; then bash "$(dirname "$0")/verifier-landings.sh" || echecs=$((echecs+1)); fi
 [ "$echecs" = "0" ] && echo "contrôle en ligne : tout répond" || { echo "contrôle en ligne : $echecs adresse(s) en échec"; exit 1; }

@@ -9,7 +9,7 @@ const origineHote = new URL(hote).origin
 const origineHubSpot = 'https://meetings.hubspot.com'
 const configuration = JSON.parse(fs.readFileSync(path.join(sortie, 'vercel.json'), 'utf8'))
 const csp = configuration.headers
-  .find(regle => regle.source === '/(.*)')?.headers
+  .find(regle => !regle.source.includes('/lp/') && regle.headers.some(entete => entete.key === 'Content-Security-Policy'))?.headers
   .find(entete => entete.key === 'Content-Security-Policy')?.value
 assert.ok(csp, 'CSP globale absente de sortie/vercel.json')
 
