@@ -9,7 +9,6 @@ import path from 'path'
 import crypto from 'crypto'
 import { execFileSync } from 'child_process'
 import { fileURLToPath } from 'url'
-import crypto from 'crypto'
 
 const ICI = path.dirname(fileURLToPath(import.meta.url))
 /* 28/09/2026 : le build tourne aussi hors du Mac de Naomie (GitHub Actions, .github/workflows/site.yml). Tout fichier
@@ -1380,21 +1379,24 @@ const jour = new Date().toISOString().slice(0, 10)
 /* <lastmod> = date du dernier changement REEL du contenu, jamais la date du build.
    Articles : date de publication des donnees (blog/articles.json).
    Autres pages : registre versionne commun/dates-pages.json (route -> {empreinte, date}). L'empreinte porte sur
-   le HTML produit, sans ce qui peut bouger a chaque build (nonces). Empreinte identique : on garde la date ;
-   differente : date du jour. Un registre absent pour une route est amorce avec la date du dernier commit qui a
+   le contenu propre a la page (<main>, a defaut <body>), sans scripts, styles ni nonces : un changement de
+   traceur, de balise de tete, de barre ou de pied commun ne redate pas tout le site. Empreinte identique : on
+   garde la date ; differente : date du jour. DATES_GARDER=1 recalcule les empreintes sans toucher aux dates
+   (refonte du gabarit sans changement de contenu). Un registre absent pour une route est amorce avec la date du dernier commit qui a
    touche pages/<source> (git log), jamais avec le jour du build ; sans git (checkout superficiel), le jour. Le
    registre est versionne par les relais, car la CI en checkout superficiel n'a pas d'historique par fichier. */
 const REGISTRE = path.join(ICI, 'commun/dates-pages.json')
 const registre = fs.existsSync(REGISTRE) ? JSON.parse(fs.readFileSync(REGISTRE, 'utf8')) : {}
 const datesArticles = new Map()
 if (fs.existsSync(path.join(ICI, 'blog/articles.json'))) for (const a of JSON.parse(fs.readFileSync(path.join(ICI, 'blog/articles.json'), 'utf8'))) if (a.sortie && /^\d{4}-\d{2}-\d{2}$/.test(a.date || '')) datesArticles.set(a.sortie, a.date)
-const empreinteDe = f => crypto.createHash('sha256').update(fs.readFileSync(path.join(ICI, 'sortie', f), 'utf8').replace(/\snonce="[^"]*"/g, '')).digest('hex').slice(0, 16)
+const contenuPropre = html => ((html.match(/<main[\s>][\s\S]*<\/main>/i) || html.match(/<body[\s>][\s\S]*<\/body>/i) || [html])[0]).replace(/<(script|style)[\s>][\s\S]*?<\/\1>/gi, '').replace(/\snonce="[^"]*"/g, '')
+const empreinteDe = f => crypto.createHash('sha256').update(contenuPropre(fs.readFileSync(path.join(ICI, 'sortie', f), 'utf8'))).digest('hex').slice(0, 16)
 const dateGit = src => { try { return execFileSync('git', ['log', '-1', '--format=%cs', '--', 'pages/' + src], { cwd: ICI, stdio: ['ignore', 'pipe', 'ignore'] }).toString().trim() || null } catch { return null } }
 const nouveauRegistre = {}
 const lastmodDe = f => {
   if (datesArticles.has(f)) return datesArticles.get(f)
   const route = cheminDe(f), emp = empreinteDe(f), ancien = registre[route]
-  const date = ancien && ancien.empreinte === emp ? ancien.date : (ancien ? jour : (dateGit(journal.find(j => j.fichier === f).source) || jour))
+  const date = ancien && (ancien.empreinte === emp || process.env.DATES_GARDER === '1') ? ancien.date : (ancien ? jour : (dateGit(journal.find(j => j.fichier === f).source) || jour))
   nouveauRegistre[route] = { empreinte: emp, date }
   return date
 }

@@ -114,8 +114,11 @@ relais() {
 
   # ── 5. Commit de tout ce que le portage modifie (mêmes chemins que l'étape « Versionner » de site.yml), puis push. ─
   local avant; avant=$(git rev-parse HEAD)
-  if [ -n "$(git status --porcelain -- pages/blog blog commun/v6-routes.json commun/dates-pages.json pages/24-blog.html pages/24-blog-en.html)" ]; then
-    git add -A -- pages/blog blog commun/v6-routes.json commun/dates-pages.json pages/24-blog.html pages/24-blog-en.html && git commit -q -m "blog : relais quotidien, $nouveaux page(s) nouvelle(s) ($(date '+%d/%m/%Y'))" \
+  # Un chemin de la liste qui n'existe pas dans ce dépôt ferait échouer git add : on ne garde que ceux qui existent.
+  local chemins=() c
+  for c in pages/blog blog commun/v6-routes.json commun/dates-pages.json pages/24-blog.html pages/24-blog-en.html; do [ -e "$c" ] && chemins+=("$c"); done
+  if [ -n "$(git status --porcelain -- "${chemins[@]}")" ]; then
+    git add -A -- "${chemins[@]}" && git commit -q -m "blog : relais quotidien, $nouveaux page(s) nouvelle(s) ($(date '+%d/%m/%Y'))" \
       || { dit "commit impossible"; git reset -q --hard "$avant"; return 1; }
     dit "commité $(git rev-parse --short HEAD)"
   else
