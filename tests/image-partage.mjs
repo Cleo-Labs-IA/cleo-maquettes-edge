@@ -87,7 +87,7 @@ for (const r of [...(config.redirects || []), ...(config.rewrites || [])]) {
   assert.ok(!/^\/og(\/|$)/.test(r.source), `règle vercel.json qui vise /og : ${r.source}`)
   assert.ok(!['/(.*)', '/:path*', '/:path(.*)'].includes(r.source) || r.has, `règle fourre-tout ${r.source} qui avalerait /og/*`)
 }
-const csp = config.headers.find(h => h.source === '/(.*)').headers.find(h => h.key === 'Content-Security-Policy').value
+const csp = config.headers.find(h => !h.source.includes('/lp/') && h.headers.some(e => e.key === 'Content-Security-Policy')).headers.find(h => h.key === 'Content-Security-Policy').value
 assert.match(csp, /img-src 'self'/, "CSP : img-src 'self' requis pour /og/*")
 const srv = await serveur.servir(SORTIE)
 try {

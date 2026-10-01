@@ -52,6 +52,11 @@ const RELAIS_ANCIEN_SITE = [{ source: '/api/:path*', destination: ANCIEN_SITE + 
    disparaissaient au build suivant (relais du blog) : 18 landings en 404 le 28/09 au matin. Elles vont EN TÊTE des
    rewrites. Un fichier présent dans sortie/ gagne sur le relais ; ne jamais créer de dossier /xx/lp/ ici.
    Guide : ~/Downloads/GUIDE-ROUTAGE-LP-CLEO-SITE-V6.md. */
+/* 01/10/2026 : la CSP stricte posée le 30/09 sur /(.*) s'appliquait aussi aux landings relayées et bloquait Google Ads
+   (aucune conversion), le calendrier HubSpot et Clarity. La règle stricte les exclut ; elles reçoivent la leur, tenue par
+   la session cleo-landing dans commun/csp-landings.txt (une ligne). Tout en-tête global doit exclure /(en|fr|es)/lp/. */
+const SOURCE_HORS_LANDINGS = '/((?!(?:en|fr|es)/lp(?:/|$)).*)'
+const CSP_LANDINGS = fs.readFileSync(path.join(ICI, 'commun/csp-landings.txt'), 'utf8').trim()
 const RELAIS_LANDINGS_ADS = [
   { source: '/:lang(en|fr|es)/lp/:path*', destination: ANCIEN_SITE + '/:lang/lp/:path*' },
   ...['/_next/:path*', '/logos/:file*', '/anaelle-avatar.webp', '/cloud-bg.webp', '/hero-video-1.mp4', '/hero-video-2.mp4',
@@ -1476,8 +1481,11 @@ if (originesNonAutorisees.length || originesInutilisees.length) {
 console.log(`  form-action : ${[...originesDetectees].join(', ')} (pages générées et allowlist concordantes)`)
 fs.writeFileSync(path.join(ICI, 'sortie', 'vercel.json'), JSON.stringify({
   headers: [
+    { source: SOURCE_HORS_LANDINGS, headers: [
+      { key: 'Content-Security-Policy', value: `default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action ${FORM_ACTION_CSP}; img-src 'self' data:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://eu-assets.i.posthog.com; script-src-attr 'none'; connect-src 'self' https://eu.i.posthog.com; worker-src 'self'; upgrade-insecure-requests` }] },
+    { source: '/:lang(en|fr|es)/lp/:path*', headers: [
+      { key: 'Content-Security-Policy', value: CSP_LANDINGS }] },
     { source: '/(.*)', headers: [
-      { key: 'Content-Security-Policy', value: `default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; form-action ${FORM_ACTION_CSP}; img-src 'self' data:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://eu-assets.i.posthog.com; script-src-attr 'none'; connect-src 'self' https://eu.i.posthog.com; worker-src 'self'; upgrade-insecure-requests` },
       { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
       { key: 'X-Content-Type-Options', value: 'nosniff' },
       { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=()' },
