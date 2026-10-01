@@ -1,4 +1,8 @@
 {
+ "monde-test-chimie": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/11-test-chimie-20260923-195545-01.jpg",
+  1200
+ ],
  "monde-rd-peluche": [
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/01-rd-peluche-20260923-195511-01.jpg",
   1200
@@ -105,10 +109,6 @@
  ],
  "monde-rd-voiture": [
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/04-rd-voiture-20260923-195511-01.jpg",
-  1200
- ],
- "monde-test-chimie": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/11-test-chimie-20260923-195545-01.jpg",
   1200
  ],
  "monde-shampooing-remplissage": [
