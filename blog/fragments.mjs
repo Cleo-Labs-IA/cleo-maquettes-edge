@@ -159,6 +159,16 @@ const FICHIER_COURTS = path.join(ICI, 'blog/titres-courts.json')
 let TITRES_COURTS = {}
 try { if (fs.existsSync(FICHIER_COURTS)) TITRES_COURTS = JSON.parse(fs.readFileSync(FICHIER_COURTS, 'utf8')) || {} } catch (e) { console.warn('blog/titres-courts.json illisible, repli sur la coupe au mot : ' + e.message); TITRES_COURTS = {} }
 const longueur = t => [...t].length
+/* DESCRIPTIONS COURTES (01/10/2026). La balise <meta name="description"> d'un article reprenait la description
+   éditoriale entière (médiane 477 caractères, Google coupe vers 160). Pour les articles listés dans
+   blog/descriptions-courtes.json (slug → { fr, en }, 155 caractères au plus), elle devient la version courte.
+   og:description, twitter:description, le JSON-LD, le chapeau visible et llms.txt gardent la description longue.
+   Un article absent du fichier ne change pas : pas de coupe automatique. */
+const DESC_MAX = 155
+const FICHIER_DESC = path.join(ICI, 'blog/descriptions-courtes.json')
+let DESC_COURTES = {}
+try { if (fs.existsSync(FICHIER_DESC)) DESC_COURTES = JSON.parse(fs.readFileSync(FICHIER_DESC, 'utf8')) || {} } catch (e) { console.warn('blog/descriptions-courtes.json illisible, descriptions longues gardées : ' + e.message); DESC_COURTES = {} }
+const descriptionCourte = a => { const d = DESC_COURTES[a.slug] && typeof DESC_COURTES[a.slug][a.langue] === 'string' ? DESC_COURTES[a.slug][a.langue].replace(/\s+/g, ' ').trim() : ''; return d && longueur(d) <= DESC_MAX ? d : null }
 const couperAuMot = (t, max) => {
   if (longueur(t) <= max) return t
   let r = ''
@@ -280,7 +290,7 @@ ${cartes.join('\n')}
   fs.writeFileSync(path.join(ICI, 'pages', a.fichier), html)
   const chemin = `/${a.langue}/blog/${a.slug}`
   chemins[a.sortie] = { chemin, reelle: true }
-  seo.pages[a.sortie] = { titre: titreSeo(a), og_titre: `${a.titre} | Cleo Labs`, description: a.description, source: 'site', url_source: `https://www.cleolabs.co${chemin}` }
+  seo.pages[a.sortie] = { titre: titreSeo(a), og_titre: `${a.titre} | Cleo Labs`, description: a.description, ...(descriptionCourte(a) ? { description_courte: descriptionCourte(a) } : {}), source: 'site', url_source: `https://www.cleolabs.co${chemin}` }
   seo.structure[a.sortie] = { types: ['TechArticle', 'WebPage', 'BreadcrumbList'], proprietes: {
     WebPage: { name: a.titre, description: a.description },
     TechArticle: { headline: a.titre, description: a.description, datePublished: a.date, author: { '@type': 'Person', name: au.nom, ...(au.lien ? { url: au.lien } : {}) }, publisher: { '@id': 'https://www.cleolabs.co/#organization' }, inLanguage: en ? 'en-US' : 'fr-FR', articleSection: a.categorie },

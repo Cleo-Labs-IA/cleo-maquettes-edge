@@ -1177,7 +1177,8 @@ for (const p of PAGES) {
   ].join('\n') : ''
 
   const desc = seoP && seoP.description ? seoP.description : ''
-  const metaDesc = desc ? `<meta name="description" content="${ech(desc)}">` : ''
+  /* 01/10/2026 : seule la balise description prend la version courte (blog/descriptions-courtes.json) ; og, twitter et le JSON-LD gardent la longue. */
+  const metaDesc = desc ? `<meta name="description" content="${ech((seoP && seoP.description_courte) || desc)}">` : ''
   /* 17/09/2026, accueil : le vrai site sert un og:title distinct du <title> et une image de partage
      (tests/seo-accueil.mjs les compare à www.cleolabs.co). seo.json les porte sous « og_titre » et « image » ;
      sans elles, on reste sur le titre et on n'invente aucune URL d'image. */
