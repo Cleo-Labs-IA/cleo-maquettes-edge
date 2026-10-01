@@ -26,11 +26,17 @@ const DEJA = new Set([]) // 23/09/2026 : plus aucune page de blog faite à la ma
 const LANGUES_DE = {}
 const MODE = process.argv[2] || 'ecrire'
 const SEULEMENT = process.argv[3] ? new Set(process.argv[3].split(',')) : null
+/* 01/10/2026 : l'assainissement retire l'adresse d'un lien en http://, la source reste citée mais n'est plus cliquable.
+   blog/liens-corriges.json donne, adresse par adresse, l'équivalent https:// VÉRIFIÉ en 200. Pas de passage
+   automatique de http à https : news.china.com.cn ne répond qu'en http (certificat refusé), le lien serait mort. */
+const LIENS_CORRIGES = Object.entries(JSON.parse(fs.readFileSync(path.join(ICI, 'blog', 'liens-corriges.json'), 'utf8')))
+for (const [de, vers] of LIENS_CORRIGES) if (!de.startsWith('http://') || !vers.startsWith('https://')) throw new Error(`blog/liens-corriges.json : « ${de} » doit aller de http:// vers https://`)
+const corrigerLiens = html => LIENS_CORRIGES.reduce((h, [de, vers]) => h.split(`href="${de}"`).join(`href="${vers}"`), html || '')
 const extractionSure = r => ({
   ...r,
-  corps: (r.corps || []).map(section => ({ ...section, html: assainirHtmlArticle(section.html) })),
-  sources: assainirHtmlArticle(r.sources || ''),
-  repli: r.repli ? { ...r.repli, html: assainirHtmlArticle(r.repli.html) } : null,
+  corps: (r.corps || []).map(section => ({ ...section, html: assainirHtmlArticle(corrigerLiens(section.html)) })),
+  sources: assainirHtmlArticle(corrigerLiens(r.sources)),
+  repli: r.repli ? { ...r.repli, html: assainirHtmlArticle(corrigerLiens(r.repli.html)) } : null,
 })
 
 /* Extraction dans le DOM de la page en ligne. Tout se passe côté navigateur, sur le HTML tel que Next l'a servi. */
