@@ -37,6 +37,8 @@ const EXCEPTIONS = {
     '/en/event': 'idem, en anglais.',
     '/legal-data/docs': "mesuré le 23/09/2026 : www.cleolabs.co/legal-data/docs sert la page SANS ses styles (ses deux feuilles /_next/static répondent 404 sur ce domaine). Le lien mène à legaldata-public.cleolabs.co/docs, où la même page est stylée. Retour de Naomie (PDF du 23/09).",
     '/legal-data/playground': 'idem, pour le bac à sable.',
+    ...Object.fromEntries(['fr', 'en'].flatMap(l => ['france', 'germany', 'united-kingdom', 'united-states'].map(p =>
+      [`/${l}/jurisdictions/${p}`, "mesuré le 01/10/2026 : l'adresse répond 308 vers /legal-data depuis la bascule du 23/09. Le pied relie directement la couverture par pays au lieu de quatre liens vers une redirection."]))),
   },
 }
 
@@ -181,7 +183,7 @@ for (const [langue, fichier] of Object.entries(PAGES)) {
   // Témoin : chaque altération doit faire tomber le contrôle qu'elle vise.
   const alterations = [
     ['titre', h => h.replace(/<title>[\s\S]*?<\/title>/, '<title>Accueil | Cleo Labs</title>')],
-    ['liens internes', h => h.replace(/href="https:\/\/www\.cleolabs\.co\/(fr|en)\/jurisdictions\/france"/g, 'href="#"')],
+    ['liens internes', h => h.replace(/href="[^"]*\/(fr|en)\/jurisdictions\/european-union"/g, 'href="#"')],
     ['types structurés', h => h.replace(/<script type="application\/ld\+json">(?=\{"@context":"https:\/\/schema\.org","@type":"FAQPage")[\s\S]*?<\/script>/, '')],
     ['FAQ visible', h => h.replace(/(<div class="reponse">)[\s\S]*?(<\/div>)/, '$1$2')],
     ['og:image', h => h.replace(/<meta property="og:image" content="[^"]*">/, '')],

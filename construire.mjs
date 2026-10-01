@@ -1325,6 +1325,7 @@ ${url ? `<link rel="canonical" href="${url}">` : ''}
 ${alternates}
 ${og}
 ${structure}
+<link rel="preload" href="/fonts/Satoshi-Variable.woff2" as="font" type="font/woff2" crossorigin>
 <style>@font-face{font-family:"Satoshi";src:url(/fonts/Satoshi-Variable.woff2) format("woff2");font-weight:300 900;font-style:normal;font-display:swap}${regimeDePage ? sansCommentairesCss(regimeDePage) : ''}</style>
 <link rel="stylesheet" href="/cleo.css">
 ${estApercu(nomSortie) ? '' : TRACEURS}
@@ -1372,6 +1373,24 @@ Disallow: /api/
 ${['GPTBot', 'ChatGPT-User', 'ClaudeBot', 'anthropic-ai', 'PerplexityBot', 'Google-Extended', 'CCBot'].map(a => `User-agent: ${a}\nAllow: /\n`).join('\n')}
 Sitemap: ${HOTE}/sitemap.xml
 `)
+/* 01/10/2026 : une image placee dans le corps d'un article et servie a la racine de l'ancien site (/nom.jpg, hors
+   blog-bank) n'etait pas emportee : /blog-pitch-by-deel-stage.jpg repondait 404 en ligne. Source, dans l'ordre : le
+   dossier public de cleo-landing sur le Mac, le site en ligne, l'ancien site. Aucune source = build en echec. */
+const PUBLIC_LANDING = '/Users/naomiehalioua/cleo-landing/public'
+const imagesRacine = new Set()
+for (const j of journal) for (const m of fs.readFileSync(path.join(ICI, 'sortie', j.fichier), 'utf8').matchAll(/<img\s[^>]*src="\/([a-z0-9][a-z0-9._-]*\.(?:jpe?g|png|webp|gif|avif))"/gi)) imagesRacine.add(m[1])
+for (const nom of imagesRacine) {
+  const dest = path.join(ICI, 'sortie', nom)
+  if (existe(dest)) continue
+  if (existe(path.join(PUBLIC_LANDING, nom))) { fs.copyFileSync(path.join(PUBLIC_LANDING, nom), dest); continue }
+  let pris = false
+  for (const origine of [SITE_EN_LIGNE, ANCIEN_SITE]) {
+    const r = await fetch(`${origine}/${nom}`).catch(() => null)
+    if (r && r.ok && /^image\//.test(r.headers.get('content-type') || '')) { fs.writeFileSync(dest, Buffer.from(await r.arrayBuffer())); pris = true; break }
+  }
+  if (!pris) throw new Error(`IMAGE D'ARTICLE ABSENTE : /${nom} n'existe ni sur le Mac, ni sur ${SITE_EN_LIGNE}, ni sur ${ANCIEN_SITE}`)
+}
+if (imagesRacine.size) console.log(`  ${imagesRacine.size} image(s) de corps d'article servie(s) a la racine : ${[...imagesRacine].join(', ')}`)
 /* Le sitemap ne liste que les pages construites qui ont une route publique. */
 const construites = journal.map(j => j.fichier)
 const publiques = construites.filter(f => !estApercu(f))
@@ -1501,7 +1520,7 @@ const llms = (langue, complet) => {
     adresse ? `- ${t('Siège', 'Headquarters')}: ${adresse}` : '',
     fondatrices ? `- ${t('Fondatrices', 'Founders')}: ${fondatrices}` : '',
     L.montant && L.montant.value ? `- ${t('Financement', 'Funding')}: ${t('pré-amorçage de', 'pre-seed of')} ${(L.montant.value / 1e6).toString().replace('.', t(',', '.'))} M€${financeurs ? ` (${financeurs})` : ''}` : '',
-    `- ${t('Site', 'Website')}: ${HOTE}`,
+    `- ${t('Site', 'Website')}: ${HOTE}/${t('fr', 'en')}`, // la racine repond 307 selon la langue du navigateur : on donne la page
     ...(E.sameAs || []).map(u => `- ${t('Profil', 'Profile')}: ${u}`), ``,
     `## ${t('Ce que Cleo propose', 'What Cleo offers')}`, ``,
     `- ${t('Services de conformité produit à prix affiché : étiquetage et documentation (à partir de 1 200 € par produit), marquage CE (à partir de 3 800 €), évaluation de conformité, mandataire dans l\'Union européenne.', 'Product compliance services with the price shown up front: labelling and documentation (from €1,200 per product), CE marking (from €3,800), product compliance assessment, EU authorised representative.')}`,
