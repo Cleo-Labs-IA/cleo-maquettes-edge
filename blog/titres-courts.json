@@ -566,5 +566,9 @@
  "us-cbp-ior-voiding-2026": {
   "fr": "CBP : annulation des numéros d'importateur",
   "en": "CBP to Void Importer of Record Numbers"
+ },
+ "mexico-customs-nom-data-fine-2026": {
+  "fr": "Mexique : amende pour étiquette incomplète",
+  "en": "Mexico Customs Fine for Incomplete Labels"
  }
 }

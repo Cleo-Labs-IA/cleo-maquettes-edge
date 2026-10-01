@@ -68,6 +68,7 @@ const VERS_PORTAIL_LEGAL = [{ source: '/legal-data/:path+', destination: 'https:
    affichait « plus personne depuis 13 h » alors que le garde SEO disait zéro dégradation. Les traceurs vivent dans commun/traceurs.html. */
 /* 28/09/2026 : le commentaire de tête de traceurs.html (la note de l'atelier) ne sort plus dans les pages. */
 const TRACEURS = fs.existsSync(path.join(ICI, 'commun/traceurs.html')) ? fs.readFileSync(path.join(ICI, 'commun/traceurs.html'), 'utf8').replace(/<!--[\s\S]*?-->/g, '').trim() : ''
+const PUBLIC_LANDING_IMAGES = '/Users/naomiehalioua/cleo-landing/public'
 const OG_IMAGE_SOURCE = '/Users/naomiehalioua/cleo-landing/public/og-image.jpg'
 const IMAGE_SOCIALE = { url: `${HOTE}/og-image.jpg`, largeur: 1200, hauteur: 630, alt: 'Cleo Labs, la conformité produit dans 90 juridictions' }
 const LOCAL = path.join(ICI, 'images')
@@ -408,7 +409,18 @@ async function cheminImage(nom, largeurDemandee, auDelaDuPlafond) {
   if (!entree) throw new Error(`IMAGE INCONNUE : "${nom}" — ajoute-la dans la table IMAGES`)
   const [rel, largeurTable, format] = entree
   /* Un chemin absolu désigne un fichier hors de tout dépôt (photos de personnes : jamais sur GitHub, le dépôt est public). */
-  const abs = rel.startsWith('/') ? rel : rel.startsWith('local/') ? path.join(LOCAL, rel.slice(6)) : path.join(PUB, rel)
+  let abs = rel.startsWith('/') ? rel : rel.startsWith('local/') ? path.join(LOCAL, rel.slice(6)) : path.join(PUB, rel)
+  /* 01/10/2026 : une couverture du dossier public de cleo-landing (blog-bank) n'existe que sur le Mac. Hors du Mac,
+     l'original est repris sur l'ancien site, qui le sert toujours, puis traité comme sur le Mac. Sans cela, une
+     couverture que le site en ligne ne sert plus (carte « bureau de Paris » de l'index du blog) arrêtait le build. */
+  if (!existe(abs) && rel.startsWith(PUBLIC_LANDING_IMAGES + '/')) {
+    const relatif = rel.slice(PUBLIC_LANDING_IMAGES.length), cache = path.join(ICI, '.cache', 'public-landing', relatif)
+    if (!existe(cache)) {
+      const r = await fetch(ANCIEN_SITE + relatif.split('/').map(encodeURIComponent).join('/')).catch(() => null)
+      if (r && r.ok && /^image\//.test(r.headers.get('content-type') || '')) { fs.mkdirSync(path.dirname(cache), { recursive: true }); fs.writeFileSync(cache, Buffer.from(await r.arrayBuffer())) }
+    }
+    if (existe(cache)) abs = cache
+  }
   if (!existe(abs)) {
     const repris = MANIFESTE_IMAGES[cle]
     if (!rel.startsWith('/') || !repris) throw new Error(`IMAGE ABSENTE : ${abs}${rel.startsWith('/') ? ` (et « ${cle} » absente de commun/images-manifeste.json)` : ''}`)
