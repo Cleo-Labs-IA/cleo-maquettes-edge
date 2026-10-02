@@ -1,5 +1,19 @@
 {
  "pages": {
+  "blog-india-bis-qco-enterprise-size-2026.html": {
+   "titre": "Le 1er octobre, trois ordres BIS sans lien ont | Cleo Labs",
+   "og_titre": "Le 1er octobre, trois ordres BIS sans lien ont rendu la certification obligatoire en Inde en même temps : pour la plupart des vendeurs, l'échéance réelle est dans trois ou six mois | Cleo Labs",
+   "description": "Le 1er octobre 2026, trois ordonnances distinctes du Bureau of Indian Standards, couvrant plus de 90 appareils électriques domestiques et commerciaux, les ustensiles et boîtes de boisson en aluminium, et cinq catégories d'outillage à main, ont atteint la certification BIS obligatoire pour les entreprises générales. Les petites entreprises ont jusqu'au 1er janvier 2027 et les micro-entreprises jusqu'au 1er avril 2027 pour respecter les mêmes normes. L'ordonnance sur les ustensiles a aussi restreint son périmètre : la version 2025 couvrait l'acier inoxydable, la version 2026 ne couvre plus que l'aluminium.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr/blog/india-bis-qco-enterprise-size-2026"
+  },
+  "blog-india-bis-qco-enterprise-size-2026-en.html": {
+   "titre": "On 1 October, three unrelated BIS orders made | Cleo Labs",
+   "og_titre": "On 1 October, three unrelated BIS orders made certification mandatory in India at once: for most sellers, the real deadline is three or six months later | Cleo Labs",
+   "description": "On 1 October 2026, three separate Bureau of Indian Standards Quality Control Orders, covering more than 90 household and commercial electrical appliances, aluminium cookware and beverage cans, and five categories of hand tools, reached mandatory BIS certification for general enterprises. Small enterprises have until 1 January 2027 and micro enterprises until 1 April 2027 to meet the same standards. The cookware order also narrowed scope: the 2025 version covered stainless steel, the 2026 version covers aluminium only.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/en/blog/india-bis-qco-enterprise-size-2026"
+  },
   "blog-mexico-customs-nom-data-fine-2026.html": {
    "titre": "Mexique : amende pour étiquette incomplète | Cleo Labs",
    "og_titre": "Le 22 septembre, le Mexique a inscrit une amende, et non une saisie, dans ses règles douanières pour les étiquettes produit incomplètes : elle ne tient que si le produit, sous l'erreur de papier, respecte toujours la norme | Cleo Labs",
@@ -2004,6 +2018,106 @@
   }
  },
  "structure": {
+  "blog-india-bis-qco-enterprise-size-2026.html": {
+   "types": [
+    "TechArticle",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "Le 1er octobre, trois ordres BIS sans lien ont rendu la certification obligatoire en Inde en même temps : pour la plupart des vendeurs, l'échéance réelle est dans trois ou six mois",
+     "description": "Le 1er octobre 2026, trois ordonnances distinctes du Bureau of Indian Standards, couvrant plus de 90 appareils électriques domestiques et commerciaux, les ustensiles et boîtes de boisson en aluminium, et cinq catégories d'outillage à main, ont atteint la certification BIS obligatoire pour les entreprises générales. Les petites entreprises ont jusqu'au 1er janvier 2027 et les micro-entreprises jusqu'au 1er avril 2027 pour respecter les mêmes normes. L'ordonnance sur les ustensiles a aussi restreint son périmètre : la version 2025 couvrait l'acier inoxydable, la version 2026 ne couvre plus que l'aluminium."
+    },
+    "TechArticle": {
+     "headline": "Le 1er octobre, trois ordres BIS sans lien ont rendu la certification obligatoire en Inde en même temps : pour la plupart des vendeurs, l'échéance réelle est dans trois ou six mois",
+     "description": "Le 1er octobre 2026, trois ordonnances distinctes du Bureau of Indian Standards, couvrant plus de 90 appareils électriques domestiques et commerciaux, les ustensiles et boîtes de boisson en aluminium, et cinq catégories d'outillage à main, ont atteint la certification BIS obligatoire pour les entreprises générales. Les petites entreprises ont jusqu'au 1er janvier 2027 et les micro-entreprises jusqu'au 1er avril 2027 pour respecter les mêmes normes. L'ordonnance sur les ustensiles a aussi restreint son périmètre : la version 2025 couvrait l'acier inoxydable, la version 2026 ne couvre plus que l'aluminium.",
+     "datePublished": "2026-10-02",
+     "author": {
+      "@type": "Person",
+      "name": "Naomie Halioua",
+      "url": "https://www.linkedin.com/in/naomie-halioua/"
+     },
+     "publisher": {
+      "@id": "https://www.cleolabs.co/#organization"
+     },
+     "inLanguage": "fr-FR",
+     "articleSection": "Conformité produit"
+    },
+    "BreadcrumbList": {
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Accueil",
+       "item": "https://www.cleolabs.co/fr"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Blog",
+       "item": "https://www.cleolabs.co/fr/blog"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Le 1er octobre, trois ordres BIS sans lien ont rendu la certification obligatoire en Inde en même temps : pour la plupart des vendeurs, l'échéance réelle est dans trois ou six mois",
+       "item": "https://www.cleolabs.co/fr/blog/india-bis-qco-enterprise-size-2026"
+      }
+     ]
+    }
+   }
+  },
+  "blog-india-bis-qco-enterprise-size-2026-en.html": {
+   "types": [
+    "TechArticle",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "On 1 October, three unrelated BIS orders made certification mandatory in India at once: for most sellers, the real deadline is three or six months later",
+     "description": "On 1 October 2026, three separate Bureau of Indian Standards Quality Control Orders, covering more than 90 household and commercial electrical appliances, aluminium cookware and beverage cans, and five categories of hand tools, reached mandatory BIS certification for general enterprises. Small enterprises have until 1 January 2027 and micro enterprises until 1 April 2027 to meet the same standards. The cookware order also narrowed scope: the 2025 version covered stainless steel, the 2026 version covers aluminium only."
+    },
+    "TechArticle": {
+     "headline": "On 1 October, three unrelated BIS orders made certification mandatory in India at once: for most sellers, the real deadline is three or six months later",
+     "description": "On 1 October 2026, three separate Bureau of Indian Standards Quality Control Orders, covering more than 90 household and commercial electrical appliances, aluminium cookware and beverage cans, and five categories of hand tools, reached mandatory BIS certification for general enterprises. Small enterprises have until 1 January 2027 and micro enterprises until 1 April 2027 to meet the same standards. The cookware order also narrowed scope: the 2025 version covered stainless steel, the 2026 version covers aluminium only.",
+     "datePublished": "2026-10-02",
+     "author": {
+      "@type": "Person",
+      "name": "Naomie Halioua",
+      "url": "https://www.linkedin.com/in/naomie-halioua/"
+     },
+     "publisher": {
+      "@id": "https://www.cleolabs.co/#organization"
+     },
+     "inLanguage": "en-US",
+     "articleSection": "Product Compliance"
+    },
+    "BreadcrumbList": {
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.cleolabs.co/en"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Blog",
+       "item": "https://www.cleolabs.co/en/blog"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "On 1 October, three unrelated BIS orders made certification mandatory in India at once: for most sellers, the real deadline is three or six months later",
+       "item": "https://www.cleolabs.co/en/blog/india-bis-qco-enterprise-size-2026"
+      }
+     ]
+    }
+   }
+  },
   "blog-mexico-customs-nom-data-fine-2026.html": {
    "types": [
     "TechArticle",

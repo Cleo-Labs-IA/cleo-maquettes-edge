@@ -1,4 +1,8 @@
 {
+ "monde-rd-peluche": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/01-rd-peluche-20260923-195511-01.jpg",
+  1200
+ ],
  "monde-chargement-conteneur": [
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/17-chargement-conteneur-20260923-195620-01.jpg",
   1200
@@ -7,8 +11,8 @@
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/11-test-chimie-20260923-195545-01.jpg",
   1200
  ],
- "monde-rd-peluche": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/01-rd-peluche-20260923-195511-01.jpg",
+ "monde-prod-peluche": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/06-prod-peluche-20260923-195527-01.jpg",
   1200
  ],
  "monde-test-inflammabilite": [
@@ -47,8 +51,8 @@
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/19-fret-aerien-20260923-195621-01.jpg",
   1200
  ],
- "monde-prod-peluche": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/06-prod-peluche-20260923-195527-01.jpg",
+ "monde-test-traction-jouet": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/10-test-traction-jouet-20260923-195545-01.jpg",
   1200
  ],
  "monde-entrepot-palettes": [
@@ -79,8 +83,8 @@
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/37-lessive-etiquetage-20260923-202644-01.jpg",
   1200
  ],
- "monde-test-traction-jouet": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/10-test-traction-jouet-20260923-195545-01.jpg",
+ "monde-siege-auto-enfant-test-choc": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/38-siege-auto-enfant-test-choc-20260923-202652-01.jpg",
   1200
  ],
  "monde-prod-dentifrice": [
@@ -89,10 +93,6 @@
  ],
  "monde-chaussures-ligne-collage": [
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/28-chaussures-ligne-collage-20260923-202605-01.jpg",
-  1200
- ],
- "monde-siege-auto-enfant-test-choc": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/38-siege-auto-enfant-test-choc-20260923-202652-01.jpg",
   1200
  ],
  "monde-conserves-ligne": [
