@@ -8,7 +8,7 @@
 <section class="section sy-hero-photo">
   <div class="conteneur">
     <figure class="sy-chapitre sy-chapitre-hero">
-      <img src="img:fenetres" alt="">
+      <img src="img:parc-voitures" alt="">
       <figcaption class="sy-chapitre-texte">
         <p class="sy-etiquette">Coverage atlas</p>
         <h1>Cleo's regulatory coverage, product by product, authority by authority.</h1>
@@ -42,19 +42,19 @@
         </figure>
         <div class="g4" style="margin-bottom:24px">
           <div class="carte" style="padding:26px">
-            <div class="t-display" style="margin-bottom:8px">106</div>
-            <div class="t-caption">countries covered</div>
+            <div class="t-display" style="margin-bottom:8px">90</div>
+            <div class="t-caption">jurisdictions covered</div>
           </div>
           <div class="carte" style="padding:26px">
-            <div class="t-display" style="margin-bottom:8px">25,000</div>
+            <div class="t-display" style="margin-bottom:8px">55,782</div>
             <div class="t-caption">regulations mapped</div>
           </div>
           <div class="carte" style="padding:26px">
-            <div class="t-display" style="margin-bottom:8px">19,000</div>
+            <div class="t-display" style="margin-bottom:8px">3,098</div>
             <div class="t-caption">regulatory authorities tracked</div>
           </div>
           <div class="carte" style="padding:26px">
-            <div class="t-display" style="margin-bottom:8px">3,700</div>
+            <div class="t-display" style="margin-bottom:8px">183</div>
             <div class="t-caption">official sources</div>
           </div>
         </div>
@@ -144,11 +144,11 @@
           <span class="atlas-carte-legende-item"><i class="atlas-carte-pastille block"></i><span class="t-caption">below 5%</span></span>
         </div>
         <p class="t-caption" style="margin:0 0 56px">Basemap: Natural Earth (public domain).</p>
-        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        <link rel="stylesheet" href="/assets/atlas/leaflet.css"
           integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        <script src="/assets/atlas/leaflet.js"
           integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-        <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"
+        <script src="/assets/atlas/topojson-client.min.js"
           integrity="sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67" crossorigin="anonymous"></script>
         <script>
         (function(){
@@ -227,9 +227,9 @@
             var hote = document.getElementById('atlas-carte-monde')
             if (!hote) return
             var tactile = window.matchMedia('(max-width:640px)').matches
-            fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json', {
+            fetch('/assets/atlas/countries-110m.json', {
               integrity: 'sha384-yOCJ+8ShBm8UDqtAVtAvxTDDf4gXo5edxl/YG0FmVC5OTmqVLl7utuVGBDEeZWHf',
-              mode: 'cors'
+              mode: 'same-origin'
             }).then(function(r){ return r.json() }).then(function(topo){
               if (!window.topojson) throw new Error('topojson missing')
               var pays = corrigeAntimeridien(topojson.feature(topo, topo.objects.countries))

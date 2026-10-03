@@ -1,0 +1,226 @@
+{
+ "bureau /fr": {
+  "ancien": {
+   "ttfb": 94.39999997615814,
+   "fcp": 252,
+   "lcp": 1720,
+   "load": 543.0999999642372,
+   "cls": 0,
+   "ko": 1413,
+   "req": 60,
+   "js": 540,
+   "img": 193,
+   "titre": "Conformité Produit Automatisée",
+   "n": 3
+  },
+  "nouveau": {
+   "ttfb": 101.5,
+   "fcp": 236,
+   "lcp": 236,
+   "load": 412.7999999523163,
+   "cls": 0.007339945558984911,
+   "ko": 1064,
+   "req": 19,
+   "js": 0,
+   "img": 883,
+   "titre": "Conformité Produit Automatisée",
+   "n": 3
+  }
+ },
+ "bureau /en": {
+  "ancien": {
+   "ttfb": 95.39999997615814,
+   "fcp": 288,
+   "lcp": 1780,
+   "load": 649,
+   "cls": 0,
+   "ko": 1411,
+   "req": 60,
+   "js": 540,
+   "img": 193,
+   "titre": "Automated Product Compliance f",
+   "n": 3
+  },
+  "nouveau": {
+   "ttfb": 90.89999997615814,
+   "fcp": 260,
+   "lcp": 260,
+   "load": 347.39999997615814,
+   "cls": 0.00013460078821587792,
+   "ko": 1063,
+   "req": 19,
+   "js": 0,
+   "img": 883,
+   "titre": "Automated Product Compliance f",
+   "n": 3
+  }
+ },
+ "bureau /en/blog/cosmetic-regulation-by-country": {
+  "ancien": {
+   "ttfb": 90.79999995231628,
+   "fcp": 236,
+   "lcp": 240,
+   "load": 459.4000000357628,
+   "cls": 0.000017801568930041154,
+   "ko": 1779,
+   "req": 58,
+   "js": 780,
+   "img": 92,
+   "titre": "Cosmetic Regulation by Country",
+   "n": 3
+  },
+  "nouveau": {
+   "ttfb": 93.29999995231628,
+   "fcp": 304,
+   "lcp": 392,
+   "load": 305,
+   "cls": 0.0012405873574674211,
+   "ko": 665,
+   "req": 10,
+   "js": 0,
+   "img": 521,
+   "titre": "Cosmetic Regulation by Country",
+   "n": 3
+  }
+ },
+ "bureau /fr/company": {
+  "ancien": {
+   "ttfb": 89.89999997615814,
+   "fcp": 236,
+   "lcp": 564,
+   "load": 654.6000000238419,
+   "cls": 0,
+   "ko": 1386,
+   "req": 57,
+   "js": 540,
+   "img": 178,
+   "titre": "À Propos de Cleo Labs : Souten",
+   "n": 3
+  },
+  "nouveau": {
+   "ttfb": 92.30000001192093,
+   "fcp": 320,
+   "lcp": 320,
+   "load": 514.1999999880791,
+   "cls": 0.002140173582644783,
+   "ko": 625,
+   "req": 16,
+   "js": 0,
+   "img": 481,
+   "titre": "À Propos de Cleo Labs : Souten",
+   "n": 3
+  }
+ },
+ "mobile /fr": {
+  "ancien": {
+   "ttfb": 91.10000002384186,
+   "fcp": 800,
+   "lcp": 6124,
+   "load": 5626.300000011921,
+   "cls": 0,
+   "ko": 860,
+   "req": 47,
+   "js": 524,
+   "img": 181,
+   "titre": "Conformité Produit Automatisée",
+   "n": 3
+  },
+  "nouveau": {
+   "ttfb": 99.20000004768372,
+   "fcp": 1792,
+   "lcp": 2348,
+   "load": 2432.900000035763,
+   "cls": 0,
+   "ko": 336,
+   "req": 17,
+   "js": 0,
+   "img": 155,
+   "titre": "Conformité Produit Automatisée",
+   "n": 3
+  }
+ },
+ "mobile /en": {
+  "ancien": {
+   "ttfb": 92.40000003576279,
+   "fcp": 832,
+   "lcp": 6496,
+   "load": 5818.5,
+   "cls": 0,
+   "ko": 860,
+   "req": 48,
+   "js": 524,
+   "img": 183,
+   "titre": "Automated Product Compliance f",
+   "n": 3
+  },
+  "nouveau": {
+   "ttfb": 91.59999996423721,
+   "fcp": 1812,
+   "lcp": 2460,
+   "load": 2407.099999964237,
+   "cls": 0,
+   "ko": 335,
+   "req": 17,
+   "js": 0,
+   "img": 155,
+   "titre": "Automated Product Compliance f",
+   "n": 3
+  }
+ },
+ "mobile /en/blog/cosmetic-regulation-by-country": {
+  "ancien": {
+   "ttfb": 98.5,
+   "fcp": 1036,
+   "lcp": 1216,
+   "load": 5378.699999988079,
+   "cls": 0.00011709352875249307,
+   "ko": 1008,
+   "req": 48,
+   "js": 525,
+   "img": 101,
+   "titre": "Cosmetic Regulation by Country",
+   "n": 3
+  },
+  "nouveau": {
+   "ttfb": 91.69999998807907,
+   "fcp": 1236,
+   "lcp": 1236,
+   "load": 2013.300000011921,
+   "cls": 0.0009789027822652405,
+   "ko": 257,
+   "req": 7,
+   "js": 0,
+   "img": 113,
+   "titre": "Cosmetic Regulation by Country",
+   "n": 3
+  }
+ },
+ "mobile /fr/company": {
+  "ancien": {
+   "ttfb": 92.30000001192093,
+   "fcp": 956,
+   "lcp": 5712,
+   "load": 5619.600000023842,
+   "cls": 0,
+   "ko": 870,
+   "req": 49,
+   "js": 532,
+   "img": 195,
+   "titre": "À Propos de Cleo Labs : Souten",
+   "n": 3
+  },
+  "nouveau": {
+   "ttfb": 95.5,
+   "fcp": 1604,
+   "lcp": 3084,
+   "load": 3062.900000035763,
+   "cls": 0,
+   "ko": 529,
+   "req": 14,
+   "js": 0,
+   "img": 385,
+   "titre": "À Propos de Cleo Labs : Souten",
+   "n": 3
+  }
+ }
+}

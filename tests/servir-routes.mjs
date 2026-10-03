@@ -14,7 +14,8 @@ assert.equal(
   'le serveur local doit exposer son resolveur de routes',
 )
 
-for (const regle of CONFIG.rewrites) {
+// Les relais vers l'ancien site (destination absolue) ne se résolvent pas en fichier local.
+for (const regle of CONFIG.rewrites.filter(r => !/^https?:/.test(r.destination))) {
   assert.equal(
     serveur.resoudreFichier(SORTIE, regle.source),
     path.join(SORTIE, regle.destination),

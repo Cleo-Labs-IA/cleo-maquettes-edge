@@ -1,0 +1,225 @@
+/* ═══ UNIFICATION, 23/09/2026 ═══ Points 1, 3, 5, 7 et 8 de la revue UX/UI mesurée
+   (35 pages, Playwright). Cette feuille se charge en DERNIER (21 « z ») et ne fait
+   que supprimer des langages parallèles : elle n'ajoute aucun habillage.
+   Spécificité : cinq :not(#_) sur html pour passer devant les calques oa-* (4 ids). */
+
+/* 1. BOUTONS — six styles mesurés (blanc 14 px, blanc CAPITALES 13 px, fantôme sans
+   filet, translucide, bleu CAPITALES, blanc sur encre) deviennent deux : plein et filet.
+   Même hauteur, même casse (phrase), même taille, aucun ornement (chevrons, flèches SVG). */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] :is(main, .pied, footer) :is(.btn, .sy-bouton, .sy-bouton-blanc, .sy-bouton-secondaire, .mu-bouton, .sc-bouton, .tk-bouton, .fx-bouton){
+  display:inline-flex; align-items:center; justify-content:center; gap:8px; box-sizing:border-box;
+  min-height:44px; height:44px; padding:0 22px !important; border-radius:999px !important;
+  font-family:inherit; font-size:.875rem !important; font-weight:500 !important; letter-spacing:0 !important;
+  text-transform:none !important; line-height:1 !important; text-decoration:none !important; white-space:nowrap;
+  background:#FFFFFF !important; color:#000000 !important; border:1px solid #FFFFFF !important; box-shadow:none !important;
+  transition:background .15s ease-out, border-color .15s ease-out, color .15s ease-out, transform .15s ease-out;
+}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] :is(main, .pied, footer) :is(.btn, .sy-bouton, .sy-bouton-blanc, .mu-bouton, .sc-bouton):not(.btn-contour):not(.btn-clair):not(.sy-bouton-secondaire):not(.mu-bouton-contour):not(.sc-bouton-clair):hover{background:#E8E7E3 !important; border-color:#E8E7E3 !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] :is(main, .pied, footer) :is(.btn-contour, .btn-clair, .sy-bouton-secondaire, .mu-bouton-contour, .sc-bouton-clair){
+  background:transparent !important; color:#FFFFFF !important; border:1px solid rgba(255,255,255,.38) !important;
+}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] :is(main, .pied, footer) :is(.btn-contour, .btn-clair, .sy-bouton-secondaire, .mu-bouton-contour, .sc-bouton-clair):hover{background:rgba(255,255,255,.06) !important; border-color:rgba(255,255,255,.75) !important; color:#FFFFFF !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] :is(main, .pied, footer) :is(.sy-bouton-chevrons, .btn-marque, .sy-bouton, .btn)::after,
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] :is(main, .pied, footer) :is(.sy-bouton-chevrons, .btn-marque, .sy-bouton, .btn)::before{content:none !important; display:none !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] :is(main, .pied, footer) :is(.btn, .sy-bouton, .sy-bouton-blanc, .sy-bouton-secondaire, .mu-bouton, .sc-bouton, .tk-bouton, .fx-bouton) > :is(svg, .rond, .chev){display:none !important}
+
+/* 3. BANDES DE CHAPITRE — un seul traitement. Le voile bleu multiply (.78) du calque
+   « vivant » restait sur .sy-bande-photo alors que le calque sombre l'avait déjà retiré
+   des .sy-chapitre : même dégradé noir partout, l'objet bleu de la photo fait l'accent. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .sy-bande-photo > figure::after{
+  background:linear-gradient(0deg, rgba(0,0,0,.78) 0%, rgba(0,0,0,.42) 46%, rgba(0,0,0,.18) 100%) !important;
+  mix-blend-mode:normal !important; opacity:1 !important;
+}
+
+/* 5. RYTHME VERTICAL — neuf valeurs mesurées (144, 0, 72, 110, 56, 112, 48, 108, 58)
+   ramenées à 144 (section), 112 (haut de page), 72 (demi-section, sous un chapitre),
+   48 (bande de logos) et 0 (chapitre photo, voulu). */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]{--e-section:9rem; --e-titre-contenu:4.5rem; --e-hero-haut:7rem}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .section{padding-top:144px; padding-bottom:144px}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-hero{padding-top:112px !important; padding-bottom:112px !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-methode{padding-bottom:72px !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main > section:has(> .conteneur > .sy-chapitre:first-child, > div > .sy-chapitre:first-child){padding-top:72px !important}
+
+/* 7. ARRONDIS — 12 px et 6 px se mélangeaient sur chaque fiche. Un seul rayon pour carte,
+   panneau, média et cadre (12 px) ; --r-petit (6 px) reste aux pastilles et lignes internes. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]{--r-carte:12px; --r-media:12px}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main :is(.sy-bento > *, .sy-bento-photo, .sy-bento-creme, .sy-bento-bleu, .sy-bento > * img, .sc-panneau-image, .sc-panneau-image img, .ap-histoire-equipe img, .atlas-carte, .ap-histoire-carte, .dt-panneau){border-radius:12px !important}
+
+/* 8. QUESTIONS FRÉQUENTES — l'en-tête était centré sur Service, Data et Enterprise,
+   aligné à gauche sur les fiches et l'accueil : à gauche partout. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main :is(.sc-titre, .en-titre, .dt-questions-section .sy-entete, .dt-questions-section .sy-entete > *){text-align:left !important; margin-left:0 !important; margin-right:auto !important}
+
+@media (max-width:640px){
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .section{padding-top:84px; padding-bottom:84px}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-hero{padding-top:64px !important; padding-bottom:64px !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main > section:has(> .conteneur > .sy-chapitre:first-child, > div > .sy-chapitre:first-child){padding-top:42px !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] :is(main, .pied, footer) :is(.btn, .sy-bouton, .sy-bouton-blanc, .sy-bouton-secondaire, .mu-bouton, .sc-bouton, .tk-bouton, .fx-bouton){white-space:normal; height:auto; padding:12px 20px !important; line-height:1.2 !important}
+}
+
+/* SCÈNE 01, ÉTAT FIGÉ (sous 1180 px ou avec « réduire les animations ») — mesuré le 23/09/2026 :
+   la pastille de chaque étape était blanche avec son chiffre blanc à 72 %, donc sans chiffre.
+   Sur pastille blanche, le chiffre est noir. L'animation de bureau (pastille sombre, chiffre blanc) ne change pas. */
+@media (max-width:1179px), (prefers-reduced-motion:reduce){
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-etape > span{color:#000000 !important}
+}
+
+/* LOGOS CLIENTS — mesuré le 23/09/2026 : sur À propos, Secteur et les pages d'audience, les logos
+   restaient en grayscale(1), donc noirs sur fond noir (Electrolux et Mercedes invisibles), alors que
+   l'accueil les passe en blanc (brightness(0) invert(1)). Une seule règle pour toutes les bandes. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] :is(.ap-logos, .bande-logos, .ac-logos, .ac-logos-imgs, .hq-logos-imgs) img:not(.nav-logo img){filter:brightness(0) invert(1) !important; opacity:.9 !important}
+
+/* ═══ RETOURS DU PDF, 23/09/2026 ═══ */
+/* Experts : « centrer le texte aux images » — la liste des trois rôles est centrée sur la hauteur des portraits. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-experts-grille{align-items:center}
+/* Bento chiffré : les deux petites fiches se chevauchaient et sortaient de la carte (« ce bloc est cassé, sur toutes les pages »).
+   Elles se posent l'une sous l'autre, dans la carte, sans décalage ni rognage ; le chiffre rayé reste en bas. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .sy-fiches{position:absolute !important;inset:18px 18px auto 18px !important;display:flex !important;flex-direction:column !important;align-items:stretch !important;justify-content:flex-start !important;gap:10px !important;z-index:1}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .sy-fiche{width:100% !important;max-width:none !important;margin:0 !important;padding:9px 12px !important;align-self:auto !important;border:1px solid rgba(255,255,255,.22) !important;border-radius:8px !important;background:rgba(255,255,255,.04)}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .sy-fiche:nth-child(n+3){display:none !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main :is(.sy-bento-bleu, .sy-bento-creme):has(.sy-fiches){min-height:26rem}
+/* Grille des prix (Service) : la colonne des prix s'étirait à la hauteur de la carte Enterprise et laissait un grand vide. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .sc-tarifs{align-items:start !important}
+/* Méga-menu : au survol, le titre de l'entrée passe en bleu (« il faudrait avoir le texte en bleu quand on est en mode surlignage »). */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .nav .mega-item:hover{background:rgba(255,255,255,.06) !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .nav .mega-item:hover b{color:#8C92FF !important}
+/* FAQ : la réponse se déroule avec un mouvement quand un panneau s'ouvre (au survol sur bureau, au clic partout). */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main details[open] > :not(summary){animation:faqDeroule .32s cubic-bezier(.625,.05,0,1) both}
+@keyframes faqDeroule{from{opacity:0;translate:0 -6px}to{opacity:1;translate:0 0}}
+/* Skills : bouton « Copier » discret à côté de chaque nom, et un bouton pour toute la liste. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .skill-nom{display:inline-flex;align-items:center;gap:8px}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .sk-copier{display:inline-flex;align-items:center;height:22px;padding:0 8px;border:1px solid rgba(255,255,255,.28);border-radius:6px;background:transparent;color:rgba(255,255,255,.72);font:inherit;font-size:.75rem;line-height:1;cursor:pointer}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .sk-copier:hover{border-color:rgba(255,255,255,.7);color:#fff}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .sk-copier[data-fait]{border-color:#8C92FF;color:#8C92FF}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .sk-copier-tout{margin:0 0 24px;height:36px;padding:0 14px;font-size:.875rem;border-radius:999px}
+
+/* Service : sans la citation Decathlon, les deux cartes chiffrées se partagent la rangée. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"]:is([data-v6-page="37-compliance-service"],[data-v6-page="37-compliance-service-en"]) main .sy-bento > :is(.sy-bento-creme, .sy-bento-bleu){grid-column:span 6}
+/* À propos : la rencontre de Bruxelles, cinq photos en couleur naturelle, légende sous chaque photo. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-rencontre-lead{max-width:60ch;margin:12px 0 32px;color:var(--c-texte-2)}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-rencontre-lead a{color:#8C92FF;text-decoration:underline;text-underline-offset:3px}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-rencontre-grille{display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:16px;margin:0;padding:0;list-style:none}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-rencontre-grille li{margin:0;display:grid;gap:10px}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-rencontre-grille li:first-child{grid-row:span 2}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-rencontre-grille img{display:block;width:100%;height:100%;min-height:220px;aspect-ratio:4 / 3;object-fit:cover;border-radius:12px;filter:none !important;opacity:1 !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-rencontre-grille li:first-child img{aspect-ratio:auto}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-rencontre-grille span{font-size:.875rem;color:var(--c-texte-2)}
+@media (max-width:900px){
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-rencontre-grille{grid-template-columns:repeat(2, minmax(0, 1fr))}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-rencontre-grille li:first-child{grid-row:auto;grid-column:span 2}
+}
+@media (max-width:560px){
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-rencontre-grille{grid-template-columns:minmax(0, 1fr)}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-rencontre-grille li:first-child{grid-column:auto}
+}
+
+/* PHRASE DE MISSION — 23/09/2026, Naomie : « tu as retiré l'animation avec les lettres qui s'affichent petit à petit ».
+   La phrase a quitté la scène 01 (qui s'ouvre sur la méthode), elle garde son mouvement à sa nouvelle place :
+   chaque mot passe du gris au blanc, l'un après l'autre, pendant que la phrase entre dans l'écran. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-phrase-fin span{color:inherit}
+@media (prefers-reduced-motion:no-preference){
+  @supports (animation-timeline:view()){
+    /* la ligne de temps est celle de la SECTION (640 px de course), pas celle du mot (60 px) : mesuré,
+       avec view() sur chaque mot les onze mots passaient au blanc en un seul cran de molette. */
+    html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-manifeste{view-timeline-name:--acManif}
+    html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-phrase-fin span{
+      animation:acMotFin linear both;animation-timeline:--acManif;
+      animation-range:cover calc(10% + var(--i) * 3%) cover calc(22% + var(--i) * 3%);
+    }
+    @keyframes acMotFin{from{color:rgba(255,255,255,.18);translate:0 .08em}to{color:#FFFFFF;translate:0 0}}
+  }
+}
+
+/* LA PHRASE EN GRAND — 23/09/2026, Naomie : « les lettres animées, tu peux les remettre ». Sa propre courte scène avant la
+   méthode : plein écran, centrée, 78 px, chaque mot passe du gris au blanc au fil du défilement. La scène 01 ne bouge pas. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-manifeste-scene{padding-top:0 !important;padding-bottom:0 !important}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-manif-collant{display:grid;place-items:center;padding:96px 24px}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-manifeste-scene .ac-phrase-fin{max-width:1320px;margin:0 auto !important;text-align:center;font-size:clamp(3rem, 0.4rem + 5vw, 6.25rem) !important;font-weight:500 !important;line-height:.98 !important;letter-spacing:-.04em !important;color:#FFFFFF !important;text-wrap:balance}
+@media (min-width:1180px) and (prefers-reduced-motion:no-preference){
+  @supports (animation-timeline:view()){
+    html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-manif-scene{height:160vh;view-timeline-name:--acManifScene}
+    html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-manif-collant{position:sticky;top:122px;height:calc(100vh - 122px);padding:0 24px}
+    html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-manifeste-scene .ac-phrase-fin span{
+      animation:acMotFin linear both;animation-timeline:--acManifScene;
+      animation-range:contain calc(var(--i) * 4%) contain calc(22% + var(--i) * 4%);
+    }
+  }
+}
+
+/* ── Offres d'emploi (19-poste-*.html), 23/09/2026. Mesuré : dans .ra-corps-section, .carte-encre gardait le fond
+   clair du V5 (rgba(255,255,255,.88)) sous des titres blancs, illisible. Même carte sombre que l'aside du glossaire. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .ra-corps-section .carte-encre{background:rgb(23,23,26);color:#FFFFFF;box-shadow:none}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .ra-corps-section .carte-encre :is(h2,h3,strong){color:#FFFFFF}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .ra-corps-section .carte-encre :is(p,li,.t-caption,.t-sm){color:rgba(255,255,255,.72)}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .ra-corps-section .carte-encre a:not(.btn){color:#8C92FF}
+
+/* ── Diaporama de la rencontre (16-evenement), 23/09/2026, Naomie : « une page qui change avec au moins 10 photos ».
+   Douze photos empilées, chacune visible 4 s, fondu de 1 s, cycle de 48 s, sans JavaScript ; la première reste
+   affichée quand le visiteur préfère moins d'animations. La grille complète suit, avec les légendes. */
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ev-diapo{position:relative;aspect-ratio:16 / 9;border-radius:12px;overflow:hidden;background:#17171A;margin:0 0 40px}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ev-diapo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;filter:none;animation:evDiapo 48s linear infinite;animation-delay:calc(var(--i) * 4s - 48s)}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ev-diapo img:first-child{opacity:1}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ev-diapo-legende{position:absolute;left:20px;bottom:16px;padding:6px 12px;border-radius:8px;background:rgba(0,0,0,.55);color:#FFFFFF;font-size:.875rem}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-rencontre-grille.ev-grille-large li:first-child{grid-row:auto}
+html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-rencontre-grille.ev-grille-large li:first-child img{aspect-ratio:4 / 3}
+@keyframes evDiapo{0%{opacity:0}2%{opacity:1}8.4%{opacity:1}10.4%{opacity:0}100%{opacity:0}}
+@media (prefers-reduced-motion:reduce){html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ev-diapo img{animation:none}}
+@media (max-width:760px){html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ap-rencontre-grille{grid-template-columns:repeat(2, minmax(0, 1fr))}}
+
+/* ── Téléphone, 23/09/2026 soir, quatre captures iPhone de Naomie (mesurées dans WebKit à 390 px) ──
+   1. scène 01 : la ligne « Sécurité mécanique du jouet · Applicable » collait au bord droit de la carte ;
+   2. experts : deux portraits de hauteurs différentes, centrés verticalement, donc décalés ;
+   3. bas de page : 144 px de marge avant l'appel final ;
+   4. le doublon « Data » du menu venait du générateur (déclencheur-lien répété), corrigé dans construire.mjs. */
+@media (max-width:760px){
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-app-corps{padding-right:16px;padding-left:16px}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-exigence-tete{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;padding-right:8px}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-experts-grille{align-items:start}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-experts-grille .ac-portrait img{aspect-ratio:3 / 4;height:auto;width:100%;object-fit:cover}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .section.sy-final-photo,
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-final{padding-top:64px !important;padding-bottom:64px !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .section{padding-top:72px;padding-bottom:72px}
+}
+
+/* ── Téléphone et tablette (< 1180 px), 23/09/2026 soir, Naomie : « retire l'animation dans 01 en responsive sinon ça casse,
+   et le menu de la navbar responsive ne veut rien dire ». ──
+   Scène 01 : plus aucune animation au défilement sous 1180 px (acMonteVue faisait glisser étapes et cellules de 32 px),
+   la photo de fond disparaît (elle dépassait au-dessus du dossier), le dossier se pose simplement sous les étapes. */
+@media (max-width:1179px){
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-scene :is(.ac-etape,.ac-etape > span,.ac-exigence-grille > div,.ac-app,.ac-media-photo,.ac-etapes::after,.ac-app-avance i){animation:none !important;translate:none !important;transform:none !important;opacity:1 !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-scene{height:auto !important;view-timeline-name:none}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-scene-collant{position:static !important;height:auto !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-atelier{position:static !important;padding-block:0 !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-media{position:relative;min-height:0;margin-top:24px}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-media-photo{display:none !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-app{position:relative !important;inset:auto !important;margin:0 auto !important;width:100% !important;max-width:520px}
+}
+/* Menu du téléphone : une hiérarchie lisible. Titre de groupe en petites capitales grises (lien vers la page générale
+   pour Services et Data), entrées blanches serrées, un filet entre les groupes, l'action en bas. */
+@media (max-width:1179px){
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .menu-mobile{padding:4px 20px 40px !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .menu-mobile .mm-groupe{padding:14px 0 10px;margin:0;border:0;border-bottom:1px solid rgba(255,255,255,.1)}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .menu-mobile .mm-titre,
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .menu-mobile .mm-titre a{display:block;font-size:.75rem !important;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5) !important;padding:0 0 6px !important;margin:0}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .menu-mobile .mm-titre a::after{content:" \2192";letter-spacing:0}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .menu-mobile .mm-groupe > a{display:block;font-size:1.0625rem !important;line-height:1.3;padding:8px 0 !important;margin:0;color:#FFFFFF !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .menu-mobile .mm-groupe > a:only-child{font-weight:500;padding:6px 0 !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] .menu-mobile .mm-actions{padding-top:20px;margin:0;border:0}
+}
+
+/* ── Épure au téléphone, 23/09/2026 soir, Naomie : « épure un peu dans le responsive, c'est pas grave s'il y a moins,
+   il faut les infos direct ». Sous 760 px, ce qui est décoratif disparaît : la phrase-manifeste plein écran, la roue
+   des catégories, les photos des cartes « Par où commencer ». Le texte utile, les étapes, les prix, la FAQ restent. */
+@media (max-width:760px){
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-manifeste-scene{display:none !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-roue-bloc{display:none !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-besoin-img{display:none !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-logos{padding-top:40px;padding-bottom:40px}
+}
+
+/* ── Scène 01 au téléphone, 23/09/2026 soir, Naomie : « retire complètement le dossier dans le 01, garde juste le texte ».
+   Sous 760 px, la scène n'est plus que le titre, le chapô et les trois étapes. Le dossier d'exemple reste au bureau. */
+@media (max-width:760px){
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-scene .ac-media{display:none !important}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-scene .ac-atelier{display:block}
+  html:not(#_):not(#_):not(#_):not(#_):not(#_) body[data-cleo-ds="v6"] main .ac-scene .ac-etapes{margin-bottom:0}
+}

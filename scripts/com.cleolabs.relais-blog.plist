@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Relais du blog sur le Mac. Depuis le 01/10/2026 il ne met plus rien en ligne : il pousse, et la tâche GitHub « site »
+     déploie. Appelé à disparaître : voir docs/MISE-EN-LIGNE.md, « Ce qu'il reste à faire à la main ». -->
+<plist version="1.0"><dict>
+  <key>Label</key><string>com.cleolabs.relais-blog</string>
+  <key>ProgramArguments</key><array><string>/bin/zsh</string><string>-lc</string><string>$HOME/cleo-site-v6/scripts/relais-blog.sh $HOME/cleo-site-v6</string></array>
+  <key>StartCalendarInterval</key><array><dict><key>Hour</key><integer>10</integer><key>Minute</key><integer>40</integer></dict><dict><key>Hour</key><integer>14</integer><key>Minute</key><integer>10</integer></dict></array>
+  <key>StandardOutPath</key><string>/Users/naomiehalioua/Library/Logs/cleo-relais-blog.log</string>
+  <key>StandardErrorPath</key><string>/Users/naomiehalioua/Library/Logs/cleo-relais-blog.log</string>
+  <key>EnvironmentVariables</key><dict><key>ANCIEN_SITE</key><string>https://cleo-landing-cleo-academys-projects.vercel.app</string><key>BLOGSRC</key><string>/Users/naomiehalioua/cleo-blog-source</string></dict>
+  <key>RunAtLoad</key><false/>
+</dict></plist>

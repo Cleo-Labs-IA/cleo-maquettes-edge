@@ -1,0 +1,22 @@
+/* ═══ ARTICLES DE BLOG PORTÉS (23/09/2026) ═══ Le corps vient du HTML rendu de cleolabs.co, sans habillage.
+   Ce calque ne sert que ce que .article ne couvre pas : tableaux, code, encadrés, citations de sources, images. */
+body[data-cleo-ds="v6"] main .bl-article .bl-encart{margin:24px 0;padding:18px 20px;border:1px solid rgba(255,255,255,.14);border-radius:12px;background:rgba(255,255,255,.04)}
+body[data-cleo-ds="v6"] main .bl-article .bl-encart > :first-child{margin-top:0}
+body[data-cleo-ds="v6"] main .bl-article .bl-encart > :last-child{margin-bottom:0}
+body[data-cleo-ds="v6"] main .bl-article .bl-encart p{font-size:.875rem;line-height:1.55}
+body[data-cleo-ds="v6"] main .bl-article table{width:100%;margin:24px 0;border-collapse:collapse;font-size:.875rem;line-height:1.45}
+body[data-cleo-ds="v6"] main .bl-article th,body[data-cleo-ds="v6"] main .bl-article td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1px solid rgba(255,255,255,.12)}
+body[data-cleo-ds="v6"] main .bl-article th{font-weight:500;color:var(--c-texte)}
+body[data-cleo-ds="v6"] main .bl-article td{color:var(--c-texte-2)}
+body[data-cleo-ds="v6"] main .bl-article code{font-size:.875rem;padding:1px 6px;border-radius:6px;background:rgba(255,255,255,.08)}
+body[data-cleo-ds="v6"] main .bl-article pre{margin:20px 0;padding:16px 18px;border-radius:12px;background:rgba(255,255,255,.06);overflow-x:auto;font-size:.875rem;line-height:1.5}
+body[data-cleo-ds="v6"] main .bl-article pre code{padding:0;background:none}
+body[data-cleo-ds="v6"] main .bl-article cite{font-style:normal}
+body[data-cleo-ds="v6"] main .bl-article cite a{color:#8C92FF;text-decoration:underline;text-underline-offset:3px}
+body[data-cleo-ds="v6"] main .bl-article img{display:block;max-width:100%;height:auto;margin:24px 0;border-radius:12px}
+body[data-cleo-ds="v6"] main .bl-article h3{margin:28px 0 12px;font-size:1rem;font-weight:500}
+body[data-cleo-ds="v6"] main .bl-article div > p:only-child{margin:0 0 20px}
+body[data-cleo-ds="v6"] main .bl-tete .article-tete .t-body{max-width:64ch}
+@media (max-width:640px){
+  body[data-cleo-ds="v6"] main .bl-article table{display:block;overflow-x:auto}
+}
