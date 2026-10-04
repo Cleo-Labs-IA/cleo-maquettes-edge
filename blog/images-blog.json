@@ -1,4 +1,8 @@
 {
+ "monde-entrepot-palettes": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/16-entrepot-palettes-20260923-195607-01.jpg",
+  1200
+ ],
  "monde-chaussures-ligne-collage": [
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/28-chaussures-ligne-collage-20260923-202605-01.jpg",
   1200
@@ -59,8 +63,8 @@
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/10-test-traction-jouet-20260923-195545-01.jpg",
   1200
  ],
- "monde-entrepot-palettes": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/16-entrepot-palettes-20260923-195607-01.jpg",
+ "monde-livraison-magasin": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/20-livraison-magasin-20260923-195625-01.jpg",
   1200
  ],
  "monde-voiture-quai-export": [
@@ -69,10 +73,6 @@
  ],
  "monde-casque-audio-anechoique": [
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/31-casque-audio-anechoique-20260923-202623-01.jpg",
-  1200
- ],
- "monde-livraison-magasin": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/20-livraison-magasin-20260923-195625-01.jpg",
   1200
  ],
  "monde-medicament-blisters": [

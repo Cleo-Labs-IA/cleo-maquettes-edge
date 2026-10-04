@@ -1,5 +1,19 @@
 {
  "pages": {
+  "blog-uk-opss-sleeping-bag-standard-gap-2026.html": {
+   "titre": "Le 1er octobre, le Royaume-Uni a demandé aux | Cleo Labs",
+   "og_titre": "Le 1er octobre, le Royaume-Uni a demandé aux parents de cesser d'utiliser les gigoteuses sans emmanchures ou avec capuche : la norme volontaire derrière cette règle avait déjà été révisée quatre semaines plus tôt, et aucune date de transition britannique n'a été fixée | Cleo Labs",
+   "description": "Le 1er octobre 2026, l'OPSS a publié l'alerte de sécurité produit PSA9, demandant aux parents britanniques de cesser d'acheter ou d'utiliser des gigoteuses sans emmanchures ou avec capuche, après près de 50 rappels ou signalements depuis 2023. L'alerte exempte les produits conformes à la BS EN 16781:2018, mais le CEN a publié une EN 16781:2026 révisée quatre semaines plus tôt, ajoutant des règles sur les gigoteuses lestées et la traçabilité absentes de l'édition 2018, sans date de retrait britannique fixée pour l'ancien texte.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr/blog/uk-opss-sleeping-bag-standard-gap-2026"
+  },
+  "blog-uk-opss-sleeping-bag-standard-gap-2026-en.html": {
+   "titre": "On 1 October, the UK told parents to stop using | Cleo Labs",
+   "og_titre": "On 1 October, the UK told parents to stop using baby sleeping bags without armholes or with a hood: the voluntary standard behind that rule had already been revised four weeks earlier, and no UK transition date has been set | Cleo Labs",
+   "description": "On 1 October 2026, OPSS published Product Safety Alert PSA9, telling UK parents to stop buying or using baby sleeping bags without armholes or with a hood, following nearly 50 recalls or safety reports since 2023. The alert exempts products meeting BS EN 16781:2018, but CEN published a revised EN 16781:2026 four weeks earlier, adding rules for weighted sleep bags and traceability the 2018 edition never had, with no UK withdrawal date set for the older text.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/en/blog/uk-opss-sleeping-bag-standard-gap-2026"
+  },
   "blog-eu-pfhxa-clothing-deadline-2026.html": {
    "titre": "Le 10 octobre, l'UE applique pour la première | Cleo Labs",
    "og_titre": "Le 10 octobre, l'UE applique pour la première fois une limite PFAS dans les vêtements et les chaussures : la même restriction fixe deux seuils de concentration distincts, pas un seul, et attend une année complète avant d'atteindre tout le reste taillé dans le même tissu | Cleo Labs",
@@ -2032,6 +2046,106 @@
   }
  },
  "structure": {
+  "blog-uk-opss-sleeping-bag-standard-gap-2026.html": {
+   "types": [
+    "TechArticle",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "Le 1er octobre, le Royaume-Uni a demandé aux parents de cesser d'utiliser les gigoteuses sans emmanchures ou avec capuche : la norme volontaire derrière cette règle avait déjà été révisée quatre semaines plus tôt, et aucune date de transition britannique n'a été fixée",
+     "description": "Le 1er octobre 2026, l'OPSS a publié l'alerte de sécurité produit PSA9, demandant aux parents britanniques de cesser d'acheter ou d'utiliser des gigoteuses sans emmanchures ou avec capuche, après près de 50 rappels ou signalements depuis 2023. L'alerte exempte les produits conformes à la BS EN 16781:2018, mais le CEN a publié une EN 16781:2026 révisée quatre semaines plus tôt, ajoutant des règles sur les gigoteuses lestées et la traçabilité absentes de l'édition 2018, sans date de retrait britannique fixée pour l'ancien texte."
+    },
+    "TechArticle": {
+     "headline": "Le 1er octobre, le Royaume-Uni a demandé aux parents de cesser d'utiliser les gigoteuses sans emmanchures ou avec capuche : la norme volontaire derrière cette règle avait déjà été révisée quatre semaines plus tôt, et aucune date de transition britannique n'a été fixée",
+     "description": "Le 1er octobre 2026, l'OPSS a publié l'alerte de sécurité produit PSA9, demandant aux parents britanniques de cesser d'acheter ou d'utiliser des gigoteuses sans emmanchures ou avec capuche, après près de 50 rappels ou signalements depuis 2023. L'alerte exempte les produits conformes à la BS EN 16781:2018, mais le CEN a publié une EN 16781:2026 révisée quatre semaines plus tôt, ajoutant des règles sur les gigoteuses lestées et la traçabilité absentes de l'édition 2018, sans date de retrait britannique fixée pour l'ancien texte.",
+     "datePublished": "2026-10-04",
+     "author": {
+      "@type": "Person",
+      "name": "Naomie Halioua",
+      "url": "https://www.linkedin.com/in/naomie-halioua/"
+     },
+     "publisher": {
+      "@id": "https://www.cleolabs.co/#organization"
+     },
+     "inLanguage": "fr-FR",
+     "articleSection": "Conformité produit"
+    },
+    "BreadcrumbList": {
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Accueil",
+       "item": "https://www.cleolabs.co/fr"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Blog",
+       "item": "https://www.cleolabs.co/fr/blog"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Le 1er octobre, le Royaume-Uni a demandé aux parents de cesser d'utiliser les gigoteuses sans emmanchures ou avec capuche : la norme volontaire derrière cette règle avait déjà été révisée quatre semaines plus tôt, et aucune date de transition britannique n'a été fixée",
+       "item": "https://www.cleolabs.co/fr/blog/uk-opss-sleeping-bag-standard-gap-2026"
+      }
+     ]
+    }
+   }
+  },
+  "blog-uk-opss-sleeping-bag-standard-gap-2026-en.html": {
+   "types": [
+    "TechArticle",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "On 1 October, the UK told parents to stop using baby sleeping bags without armholes or with a hood: the voluntary standard behind that rule had already been revised four weeks earlier, and no UK transition date has been set",
+     "description": "On 1 October 2026, OPSS published Product Safety Alert PSA9, telling UK parents to stop buying or using baby sleeping bags without armholes or with a hood, following nearly 50 recalls or safety reports since 2023. The alert exempts products meeting BS EN 16781:2018, but CEN published a revised EN 16781:2026 four weeks earlier, adding rules for weighted sleep bags and traceability the 2018 edition never had, with no UK withdrawal date set for the older text."
+    },
+    "TechArticle": {
+     "headline": "On 1 October, the UK told parents to stop using baby sleeping bags without armholes or with a hood: the voluntary standard behind that rule had already been revised four weeks earlier, and no UK transition date has been set",
+     "description": "On 1 October 2026, OPSS published Product Safety Alert PSA9, telling UK parents to stop buying or using baby sleeping bags without armholes or with a hood, following nearly 50 recalls or safety reports since 2023. The alert exempts products meeting BS EN 16781:2018, but CEN published a revised EN 16781:2026 four weeks earlier, adding rules for weighted sleep bags and traceability the 2018 edition never had, with no UK withdrawal date set for the older text.",
+     "datePublished": "2026-10-04",
+     "author": {
+      "@type": "Person",
+      "name": "Naomie Halioua",
+      "url": "https://www.linkedin.com/in/naomie-halioua/"
+     },
+     "publisher": {
+      "@id": "https://www.cleolabs.co/#organization"
+     },
+     "inLanguage": "en-US",
+     "articleSection": "Product Compliance"
+    },
+    "BreadcrumbList": {
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.cleolabs.co/en"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Blog",
+       "item": "https://www.cleolabs.co/en/blog"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "On 1 October, the UK told parents to stop using baby sleeping bags without armholes or with a hood: the voluntary standard behind that rule had already been revised four weeks earlier, and no UK transition date has been set",
+       "item": "https://www.cleolabs.co/en/blog/uk-opss-sleeping-bag-standard-gap-2026"
+      }
+     ]
+    }
+   }
+  },
   "blog-eu-pfhxa-clothing-deadline-2026.html": {
    "types": [
     "TechArticle",
