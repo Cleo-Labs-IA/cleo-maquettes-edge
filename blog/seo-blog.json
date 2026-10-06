@@ -1,5 +1,19 @@
 {
  "pages": {
+  "blog-italy-customs-parcel-fee-delay-2026.html": {
+   "titre": "La taxe italienne de 2 euros sur les petits | Cleo Labs",
+   "og_titre": "La taxe italienne de 2 euros sur les petits colis extra-UE devait démarrer le 1er octobre : un décret publié deux semaines plus tôt l'a repoussée au 1er décembre, le troisième report en neuf mois, chacun suspendu à une redevance européenne encore sans montant | Cleo Labs",
+   "description": "La loi de finances 2026 de l'Italie a créé une taxe administrative de 2 euros sur les colis extra-UE déclarés à 150 euros ou moins. Prévue au 1er janvier 2026, elle a été reportée trois fois, le plus récemment par le décret-loi n° 162/2026, publié seulement 14 jours avant la date du 1er octobre qu'il a effacée, repoussant le départ au 1er décembre 2026. Chaque report a été lié à une redevance européenne que la Commission n'a toujours pas tarifée.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr/blog/italy-customs-parcel-fee-delay-2026"
+  },
+  "blog-italy-customs-parcel-fee-delay-2026-en.html": {
+   "titre": "Italy's 2-euro fee on small non-EU parcels was | Cleo Labs",
+   "og_titre": "Italy's 2-euro fee on small non-EU parcels was due on 1 October: a decree published two weeks earlier pushed it to 1 December, the third delay in nine months, each one waiting on an EU fee that still has no price | Cleo Labs",
+   "description": "Italy's 2026 Budget Law created a 2-euro administrative fee on non-EU parcels declared at 150 euros or less. Due to start 1 January 2026, it has been postponed three times, most recently by Decree-Law No. 162/2026, published just 14 days before the 1 October date it erased, pushing the start to 1 December 2026. Each delay has been tied to an EU-wide handling fee the European Commission still has not priced.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/en/blog/italy-customs-parcel-fee-delay-2026"
+  },
   "blog-peru-chemical-substances-regulation-2026.html": {
    "titre": "Le 9 octobre, le premier règlement péruvien sur | Cleo Labs",
    "og_titre": "Le 9 octobre, le premier règlement péruvien sur les substances chimiques entre juridiquement en vigueur : les obligations de classification et d'étiquetage SGH qu'il introduit restent sans sanction, sous simple supervision préventive, jusqu'en 2028, avec trois années de plus pour une mise en conformité complète | Cleo Labs",
@@ -2060,6 +2074,106 @@
   }
  },
  "structure": {
+  "blog-italy-customs-parcel-fee-delay-2026.html": {
+   "types": [
+    "TechArticle",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "La taxe italienne de 2 euros sur les petits colis extra-UE devait démarrer le 1er octobre : un décret publié deux semaines plus tôt l'a repoussée au 1er décembre, le troisième report en neuf mois, chacun suspendu à une redevance européenne encore sans montant",
+     "description": "La loi de finances 2026 de l'Italie a créé une taxe administrative de 2 euros sur les colis extra-UE déclarés à 150 euros ou moins. Prévue au 1er janvier 2026, elle a été reportée trois fois, le plus récemment par le décret-loi n° 162/2026, publié seulement 14 jours avant la date du 1er octobre qu'il a effacée, repoussant le départ au 1er décembre 2026. Chaque report a été lié à une redevance européenne que la Commission n'a toujours pas tarifée."
+    },
+    "TechArticle": {
+     "headline": "La taxe italienne de 2 euros sur les petits colis extra-UE devait démarrer le 1er octobre : un décret publié deux semaines plus tôt l'a repoussée au 1er décembre, le troisième report en neuf mois, chacun suspendu à une redevance européenne encore sans montant",
+     "description": "La loi de finances 2026 de l'Italie a créé une taxe administrative de 2 euros sur les colis extra-UE déclarés à 150 euros ou moins. Prévue au 1er janvier 2026, elle a été reportée trois fois, le plus récemment par le décret-loi n° 162/2026, publié seulement 14 jours avant la date du 1er octobre qu'il a effacée, repoussant le départ au 1er décembre 2026. Chaque report a été lié à une redevance européenne que la Commission n'a toujours pas tarifée.",
+     "datePublished": "2026-10-06",
+     "author": {
+      "@type": "Person",
+      "name": "Naomie Halioua",
+      "url": "https://www.linkedin.com/in/naomie-halioua/"
+     },
+     "publisher": {
+      "@id": "https://www.cleolabs.co/#organization"
+     },
+     "inLanguage": "fr-FR",
+     "articleSection": "Conformité produit"
+    },
+    "BreadcrumbList": {
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Accueil",
+       "item": "https://www.cleolabs.co/fr"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Blog",
+       "item": "https://www.cleolabs.co/fr/blog"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "La taxe italienne de 2 euros sur les petits colis extra-UE devait démarrer le 1er octobre : un décret publié deux semaines plus tôt l'a repoussée au 1er décembre, le troisième report en neuf mois, chacun suspendu à une redevance européenne encore sans montant",
+       "item": "https://www.cleolabs.co/fr/blog/italy-customs-parcel-fee-delay-2026"
+      }
+     ]
+    }
+   }
+  },
+  "blog-italy-customs-parcel-fee-delay-2026-en.html": {
+   "types": [
+    "TechArticle",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "Italy's 2-euro fee on small non-EU parcels was due on 1 October: a decree published two weeks earlier pushed it to 1 December, the third delay in nine months, each one waiting on an EU fee that still has no price",
+     "description": "Italy's 2026 Budget Law created a 2-euro administrative fee on non-EU parcels declared at 150 euros or less. Due to start 1 January 2026, it has been postponed three times, most recently by Decree-Law No. 162/2026, published just 14 days before the 1 October date it erased, pushing the start to 1 December 2026. Each delay has been tied to an EU-wide handling fee the European Commission still has not priced."
+    },
+    "TechArticle": {
+     "headline": "Italy's 2-euro fee on small non-EU parcels was due on 1 October: a decree published two weeks earlier pushed it to 1 December, the third delay in nine months, each one waiting on an EU fee that still has no price",
+     "description": "Italy's 2026 Budget Law created a 2-euro administrative fee on non-EU parcels declared at 150 euros or less. Due to start 1 January 2026, it has been postponed three times, most recently by Decree-Law No. 162/2026, published just 14 days before the 1 October date it erased, pushing the start to 1 December 2026. Each delay has been tied to an EU-wide handling fee the European Commission still has not priced.",
+     "datePublished": "2026-10-06",
+     "author": {
+      "@type": "Person",
+      "name": "Naomie Halioua",
+      "url": "https://www.linkedin.com/in/naomie-halioua/"
+     },
+     "publisher": {
+      "@id": "https://www.cleolabs.co/#organization"
+     },
+     "inLanguage": "en-US",
+     "articleSection": "Product Compliance"
+    },
+    "BreadcrumbList": {
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.cleolabs.co/en"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Blog",
+       "item": "https://www.cleolabs.co/en/blog"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Italy's 2-euro fee on small non-EU parcels was due on 1 October: a decree published two weeks earlier pushed it to 1 December, the third delay in nine months, each one waiting on an EU fee that still has no price",
+       "item": "https://www.cleolabs.co/en/blog/italy-customs-parcel-fee-delay-2026"
+      }
+     ]
+    }
+   }
+  },
   "blog-peru-chemical-substances-regulation-2026.html": {
    "types": [
     "TechArticle",
