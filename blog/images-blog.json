@@ -1,4 +1,8 @@
 {
+ "monde-test-chimie": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/11-test-chimie-20260923-195545-01.jpg",
+  1200
+ ],
  "monde-entrepot-palettes": [
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/16-entrepot-palettes-20260923-195607-01.jpg",
   1200
@@ -15,8 +19,8 @@
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/17-chargement-conteneur-20260923-195620-01.jpg",
   1200
  ],
- "monde-test-chimie": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/11-test-chimie-20260923-195545-01.jpg",
+ "monde-poele-revetement": [
+  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/35-poele-revetement-20260923-202639-01.jpg",
   1200
  ],
  "monde-prod-peluche": [
@@ -105,10 +109,6 @@
  ],
  "monde-tee-shirt-serigraphie": [
   "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/27-tee-shirt-serigraphie-20260923-202605-01.jpg",
-  1200
- ],
- "monde-poele-revetement": [
-  "/Users/naomiehalioua/outils-image-gemini/serie-monde-qui-bouge-v2/35-poele-revetement-20260923-202639-01.jpg",
   1200
  ],
  "monde-rd-voiture": [
