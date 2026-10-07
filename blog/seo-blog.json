@@ -1,5 +1,19 @@
 {
  "pages": {
+  "blog-us-gatorade-undeclared-dye-recall-2026.html": {
+   "titre": "PepsiCo a rappelé 122 021 caisses de Gatorade le | Cleo Labs",
+   "og_titre": "PepsiCo a rappelé 122 021 caisses de Gatorade le 25 septembre pour deux colorants pourtant toujours autorisés à la vente : la loi américaine exige seulement de les nommer sur l'étiquette, ce qui n'a pas été fait cette fois, alors même que le secteur se précipite pour les éliminer tous deux avant la fin de l'année | Cleo Labs",
+   "description": "Le 25 septembre 2026, PepsiCo a volontairement rappelé 122 021 caisses de Gatorade en 28 onces pour du FD&C Yellow No. 5 et/ou Yellow No. 6 non déclarés sur l'étiquette, une exigence que le 21 CFR 101.22(k)(2) réserve à six colorants certifiés. La FDA a classé le rappel en Classe II le 2 octobre 2026. Aucun des deux colorants n'est dangereux, mais le rappel survient en plein cœur de la fenêtre volontaire du secteur, courant jusqu'à fin 2026, pour les éliminer tous deux de l'alimentation américaine.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr/blog/us-gatorade-undeclared-dye-recall-2026"
+  },
+  "blog-us-gatorade-undeclared-dye-recall-2026-en.html": {
+   "titre": "PepsiCo recalled 122,021 cases of Gatorade on 25 | Cleo Labs",
+   "og_titre": "PepsiCo recalled 122,021 cases of Gatorade on 25 September over two color additives that are still legal to sell: US law only requires naming them on the label, and this time the label didn't, right as the industry races to phase both out by year end | Cleo Labs",
+   "description": "On 25 September 2026, PepsiCo voluntarily recalled 122,021 cases of 28-ounce Gatorade over FD&C Yellow No. 5 and/or Yellow No. 6 that were not declared on the label, a requirement 21 CFR 101.22(k)(2) applies only to six certified color additives. The FDA classified the recall Class II on 2 October 2026. Neither dye is unsafe, but the recall lands squarely inside the voluntary industry window, running to the end of 2026, for phasing both out of the US food supply.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/en/blog/us-gatorade-undeclared-dye-recall-2026"
+  },
   "blog-italy-customs-parcel-fee-delay-2026.html": {
    "titre": "La taxe italienne de 2 euros sur les petits | Cleo Labs",
    "og_titre": "La taxe italienne de 2 euros sur les petits colis extra-UE devait démarrer le 1er octobre : un décret publié deux semaines plus tôt l'a repoussée au 1er décembre, le troisième report en neuf mois, chacun suspendu à une redevance européenne encore sans montant | Cleo Labs",
@@ -2074,6 +2088,106 @@
   }
  },
  "structure": {
+  "blog-us-gatorade-undeclared-dye-recall-2026.html": {
+   "types": [
+    "TechArticle",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "PepsiCo a rappelé 122 021 caisses de Gatorade le 25 septembre pour deux colorants pourtant toujours autorisés à la vente : la loi américaine exige seulement de les nommer sur l'étiquette, ce qui n'a pas été fait cette fois, alors même que le secteur se précipite pour les éliminer tous deux avant la fin de l'année",
+     "description": "Le 25 septembre 2026, PepsiCo a volontairement rappelé 122 021 caisses de Gatorade en 28 onces pour du FD&C Yellow No. 5 et/ou Yellow No. 6 non déclarés sur l'étiquette, une exigence que le 21 CFR 101.22(k)(2) réserve à six colorants certifiés. La FDA a classé le rappel en Classe II le 2 octobre 2026. Aucun des deux colorants n'est dangereux, mais le rappel survient en plein cœur de la fenêtre volontaire du secteur, courant jusqu'à fin 2026, pour les éliminer tous deux de l'alimentation américaine."
+    },
+    "TechArticle": {
+     "headline": "PepsiCo a rappelé 122 021 caisses de Gatorade le 25 septembre pour deux colorants pourtant toujours autorisés à la vente : la loi américaine exige seulement de les nommer sur l'étiquette, ce qui n'a pas été fait cette fois, alors même que le secteur se précipite pour les éliminer tous deux avant la fin de l'année",
+     "description": "Le 25 septembre 2026, PepsiCo a volontairement rappelé 122 021 caisses de Gatorade en 28 onces pour du FD&C Yellow No. 5 et/ou Yellow No. 6 non déclarés sur l'étiquette, une exigence que le 21 CFR 101.22(k)(2) réserve à six colorants certifiés. La FDA a classé le rappel en Classe II le 2 octobre 2026. Aucun des deux colorants n'est dangereux, mais le rappel survient en plein cœur de la fenêtre volontaire du secteur, courant jusqu'à fin 2026, pour les éliminer tous deux de l'alimentation américaine.",
+     "datePublished": "2026-10-07",
+     "author": {
+      "@type": "Person",
+      "name": "Naomie Halioua",
+      "url": "https://www.linkedin.com/in/naomie-halioua/"
+     },
+     "publisher": {
+      "@id": "https://www.cleolabs.co/#organization"
+     },
+     "inLanguage": "fr-FR",
+     "articleSection": "Conformité produit"
+    },
+    "BreadcrumbList": {
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Accueil",
+       "item": "https://www.cleolabs.co/fr"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Blog",
+       "item": "https://www.cleolabs.co/fr/blog"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "PepsiCo a rappelé 122 021 caisses de Gatorade le 25 septembre pour deux colorants pourtant toujours autorisés à la vente : la loi américaine exige seulement de les nommer sur l'étiquette, ce qui n'a pas été fait cette fois, alors même que le secteur se précipite pour les éliminer tous deux avant la fin de l'année",
+       "item": "https://www.cleolabs.co/fr/blog/us-gatorade-undeclared-dye-recall-2026"
+      }
+     ]
+    }
+   }
+  },
+  "blog-us-gatorade-undeclared-dye-recall-2026-en.html": {
+   "types": [
+    "TechArticle",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "PepsiCo recalled 122,021 cases of Gatorade on 25 September over two color additives that are still legal to sell: US law only requires naming them on the label, and this time the label didn't, right as the industry races to phase both out by year end",
+     "description": "On 25 September 2026, PepsiCo voluntarily recalled 122,021 cases of 28-ounce Gatorade over FD&C Yellow No. 5 and/or Yellow No. 6 that were not declared on the label, a requirement 21 CFR 101.22(k)(2) applies only to six certified color additives. The FDA classified the recall Class II on 2 October 2026. Neither dye is unsafe, but the recall lands squarely inside the voluntary industry window, running to the end of 2026, for phasing both out of the US food supply."
+    },
+    "TechArticle": {
+     "headline": "PepsiCo recalled 122,021 cases of Gatorade on 25 September over two color additives that are still legal to sell: US law only requires naming them on the label, and this time the label didn't, right as the industry races to phase both out by year end",
+     "description": "On 25 September 2026, PepsiCo voluntarily recalled 122,021 cases of 28-ounce Gatorade over FD&C Yellow No. 5 and/or Yellow No. 6 that were not declared on the label, a requirement 21 CFR 101.22(k)(2) applies only to six certified color additives. The FDA classified the recall Class II on 2 October 2026. Neither dye is unsafe, but the recall lands squarely inside the voluntary industry window, running to the end of 2026, for phasing both out of the US food supply.",
+     "datePublished": "2026-10-07",
+     "author": {
+      "@type": "Person",
+      "name": "Naomie Halioua",
+      "url": "https://www.linkedin.com/in/naomie-halioua/"
+     },
+     "publisher": {
+      "@id": "https://www.cleolabs.co/#organization"
+     },
+     "inLanguage": "en-US",
+     "articleSection": "Product Compliance"
+    },
+    "BreadcrumbList": {
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.cleolabs.co/en"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Blog",
+       "item": "https://www.cleolabs.co/en/blog"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "PepsiCo recalled 122,021 cases of Gatorade on 25 September over two color additives that are still legal to sell: US law only requires naming them on the label, and this time the label didn't, right as the industry races to phase both out by year end",
+       "item": "https://www.cleolabs.co/en/blog/us-gatorade-undeclared-dye-recall-2026"
+      }
+     ]
+    }
+   }
+  },
   "blog-italy-customs-parcel-fee-delay-2026.html": {
    "types": [
     "TechArticle",
