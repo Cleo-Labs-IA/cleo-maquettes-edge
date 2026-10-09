@@ -6,7 +6,7 @@
    (v6-zzzzzzzzzzzzz-systeme.css). :not(#_) passe devant les règles de page. */
 body[data-cleo-ds="v6"] .nav:not(#_){background:#FFFFFF !important;border-bottom:0 !important;box-shadow:none;-webkit-backdrop-filter:none !important;backdrop-filter:none !important}
 body[data-cleo-ds="v6"] .nav > .conteneur:not(#_){box-sizing:border-box;width:var(--l-conteneur) !important;max-width:none !important;height:64px !important;margin-left:auto !important;margin-right:auto !important;padding-left:0 !important;padding-right:0 !important}
-body[data-cleo-ds="v6"] .nav :is(.nav-declencheur,.lien-secondaire):not(#_){font-size:.8125rem !important;font-weight:500 !important;letter-spacing:.04em !important;text-transform:uppercase !important;color:var(--c-texte)}
+body[data-cleo-ds="v6"] .nav :is(.nav-declencheur,.lien-secondaire):not(#_){font-size:0.875rem !important;font-weight:500 !important;letter-spacing:.04em !important;text-transform:uppercase !important;color:var(--c-texte)}
 body[data-cleo-ds="v6"] .nav :is(.nav-declencheur,.lien-secondaire):not(#_):hover{color:var(--c-accent)}
 /* 16/09/2026, identité Tenkara : le « » » du bouton « Voir une démo » revient (dessiné dans v6-zzzzzzzzzzzzz-systeme.css §10,
    même glyphe que .sy-bouton-chevrons). */

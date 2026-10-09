@@ -18,7 +18,7 @@
   --t-h2: clamp(2.125rem, 0.71rem + 3.77vw, 3.5rem);
   --t-h2-lh: 1.06;
   --t-h2-ls: -0.035em;
-  --t-lead: clamp(1.125rem, 0.86rem + 0.71vw, 1.375rem);
+  --t-lead: 1.375rem;
 }
 
 /* Le fond de page suit le jeton (la barre reste blanche, elle se détache). */
@@ -42,7 +42,7 @@ body[data-cleo-ds="v6"] main .sy-bande-photo > figure:not(#_):not(#_):not(#_)::a
 body[data-cleo-ds="v6"] main .sy-final-photo > figure:not(#_):not(#_):not(#_)::after{background:linear-gradient(180deg, rgba(8,9,59,.45) 0%, rgba(8,9,59,.62) 55%, rgba(0,8,207,.55) 100%) !important}
 
 /* Listes de prestations et de cas : titre plus présent, flèche bleue. */
-body[data-cleo-ds="v6"] main :is(.sy-lignes, [class*="prestations"], .sc-cas) :is(b, strong, h3):not(#_):not(#_):not(#_){font-size:clamp(1.125rem, 0.95rem + .45vw, 1.3125rem);color:var(--c-texte)}
+body[data-cleo-ds="v6"] main :is(.sy-lignes, [class*="prestations"], .sc-cas) :is(b, strong, h3):not(#_):not(#_):not(#_){font-size:1.375rem;color:var(--c-texte)}
 body[data-cleo-ds="v6"] main :is(.sy-lignes, [class*="prestations"]) svg:not(#_):not(#_):not(#_){color:var(--c-accent)}
 
 /* ═══ PHOTO PARTOUT ═══ 16/09/2026. Naomie a choisi « Photo partout » (sur « Blocs de couleur », « Clair et sombre »,

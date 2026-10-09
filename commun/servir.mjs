@@ -22,6 +22,17 @@ export function resoudreFichier(dossier, url) {
   return path.join(racine, '404.html')
 }
 
+/* La redirection telle que Vercel la sert : 308 si permanente, 307 sinon, et une règle « has »
+   ne joue que si l'en-tête correspond. Le garde SEO et les tests mesurent ainsi de vrais codes. */
+export function redirectionDe(dossier, url, enTetes = {}) {
+  const racine = path.resolve(dossier)
+  const config = JSON.parse(fs.readFileSync(path.join(racine, 'vercel.json'), 'utf8'))
+  const u = decodeURIComponent(url.split('?')[0])
+  const regle = config.redirects?.find(r => r.source === u && (!r.has || r.has.every(h =>
+    h.type === 'header' && new RegExp(h.value, 'i').test(String(enTetes[h.key.toLowerCase()] || '')))))
+  return regle ? { destination: regle.destination, statut: regle.permanent ? 308 : 307 } : null
+}
+
 export function statutReponse(url, fichier) {
   const u = decodeURIComponent(url.split('?')[0])
   return path.basename(fichier) === '404.html' && u !== '/404.html' ? 404 : 200
@@ -30,6 +41,8 @@ export function statutReponse(url, fichier) {
 export function servir(dossier) {
   return new Promise((res) => {
     const s = http.createServer((q, r) => {
+      const red = redirectionDe(dossier, q.url, q.headers)
+      if (red) { r.statusCode = red.statut; r.setHeader('Location', red.destination); r.end(); return }
       const f = resoudreFichier(dossier, q.url)
       r.statusCode = statutReponse(q.url, f)
       r.setHeader('Content-Type', TYPES[path.extname(f)] || 'application/octet-stream')
