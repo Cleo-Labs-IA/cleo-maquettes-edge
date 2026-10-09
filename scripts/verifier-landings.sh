@@ -5,7 +5,7 @@
 set -u
 KO=0
 LP_URLS="https://www.cleolabs.co/en/lp/product-compliance-assessment https://www.cleolabs.co/fr/lp/mandataire-ue https://www.cleolabs.co/es/lp/evaluacion-marcado-ce"
-REQUIS="www.googletagmanager.com www.googleadservices.com googleads.g.doubleclick.net meetings.hubspot.com js.hs-scripts.com clarity.ms"
+REQUIS="pagead2.googlesyndication.com www.googletagmanager.com www.googleadservices.com googleads.g.doubleclick.net meetings.hubspot.com js.hs-scripts.com clarity.ms"
 for u in $LP_URLS; do
   csp=$(curl -s -D - -o /dev/null -H "Accept-Language: $(echo "${u#https://www.cleolabs.co/}" | cut -d/ -f1)" "$u" | tr -d '\r' | grep -i '^content-security-policy:' || true)
   if [ -z "$csp" ]; then echo "OK   $u (pas de CSP)"; continue; fi
