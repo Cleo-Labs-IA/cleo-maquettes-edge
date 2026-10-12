@@ -1131,8 +1131,12 @@ const navPropre = (rel) => navsPropres[rel] || (navsPropres[rel] = avecMenuMobil
 fs.mkdirSync(path.join(ICI, 'sortie'), { recursive: true })
 const journal = []
 
+/* 12/10/2026 : la branche du nouveau site porte deux accueils. L'accueil actif vit dans pages/ ;
+   VARIANTE=posthog construit à sa place celui de pages/variantes/posthog (voir scripts/accueil-posthog.sh). */
+const VARIANTE = process.env.VARIANTE || ''
 for (const p of PAGES) {
-  const src = path.join(ICI, 'pages', p.fichier)
+  const srcVariante = VARIANTE ? path.join(ICI, 'pages/variantes', VARIANTE, p.fichier) : ''
+  const src = srcVariante && fs.existsSync(srcVariante) ? srcVariante : path.join(ICI, 'pages', p.fichier)
   if (!fs.existsSync(src)) { console.log(`  (pas encore ecrite : ${p.fichier})`); continue }
   let corps = fs.readFileSync(src, 'utf8')
   /* Le repère <main> et le lien d'évitement : le contenu vit entre la barre et
