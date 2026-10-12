@@ -1,0 +1,216 @@
+/* ═══ OFFRE SERVICE, DA CLAIRE ═══ 12/10/2026, Naomie : « une offre SERVICE avec une vraie DA sympa, claire, et une offre
+   DATA avec une vraie DA tech comme maintenant ».
+   Cette feuille est la SEULE qui habille les pages portant data-v6-regime="service" : construire.mjs ajoute
+   :not([data-v6-regime]) à tous les autres calques, le régime sombre ne les atteint donc pas. La supprimer rend la page
+   au socle crème de base.css ; retirer la page de PAGES_REGIME_SERVICE la rend au régime sombre.
+   Parti pris : fond crème chaud, cartes de couleur douce (une par prestation), grands rayons, texte encre, le bleu Cleo
+   réservé à l'action. Le grain des photos reste (« c'est la DA »). Aucune ombre dure, aucun dégradé.
+   Toutes les classes de la page commencent par sv- : rien ici ne touche une autre page. */
+
+body[data-v6-regime="service"]{
+  --sv-fond:#FAF6EF; --sv-fond-2:#F2ECE1; --sv-carte:#FFFFFF;
+  --sv-encre:#16161D; --sv-encre-2:#5C5A66; --sv-filet:rgba(22,22,29,.10);
+  --sv-bleu:#0008CF; --sv-bleu-fonce:#00069E;
+  --sv-t-bleu:#E4E7FF; --sv-t-beurre:#FFF0BF; --sv-t-menthe:#DBF2E3; --sv-t-peche:#FFE0D1;
+  --sv-r:28px; --sv-r-petit:16px;
+  background:var(--sv-fond); color:var(--sv-encre);
+}
+body[data-v6-regime="service"] main{background:var(--sv-fond); color:var(--sv-encre); overflow-x:clip}
+body[data-v6-regime="service"] .nav{background:rgba(250,246,239,.86); border-bottom:1px solid var(--sv-filet)}
+
+/* ── Gabarit ── */
+body[data-v6-regime="service"] .sv-c{width:min(1200px, calc(100% - 48px)); margin-inline:auto}
+body[data-v6-regime="service"] .sv-s{padding-block:112px}
+body[data-v6-regime="service"] .sv-s-teinte{background:var(--sv-fond-2)}
+body[data-v6-regime="service"] main [id]{scroll-margin-top:88px}
+
+/* ── Typographie : trois tailles de texte, deux de titre ── */
+body[data-v6-regime="service"] main :is(h1, h2, h3){margin:0; color:var(--sv-encre); font-weight:500; text-wrap:balance}
+body[data-v6-regime="service"] main h1{font-size:clamp(2.5rem, 1.2rem + 3.6vw, 4rem); line-height:1.04; letter-spacing:-.035em}
+body[data-v6-regime="service"] main h2{font-size:clamp(2rem, 1.2rem + 2.2vw, 2.875rem); line-height:1.08; letter-spacing:-.03em}
+body[data-v6-regime="service"] main h3{font-size:1.5rem; line-height:1.2; letter-spacing:-.02em}
+body[data-v6-regime="service"] main p{margin:0}
+body[data-v6-regime="service"] .sv-chapeau{font-size:1.1875rem; line-height:1.5; color:var(--sv-encre-2); max-width:54ch; text-wrap:pretty}
+body[data-v6-regime="service"] .sv-surtitre{font-size:.8125rem; font-weight:600; letter-spacing:.08em; text-transform:uppercase; color:var(--sv-encre-2)}
+body[data-v6-regime="service"] .sv-entete{display:grid; gap:16px; max-width:760px; margin-bottom:56px}
+body[data-v6-regime="service"] .sv-numero{display:inline-grid; place-items:center; width:44px; height:44px; border-radius:50%; background:var(--sv-encre); color:#FFFFFF; font-size:.875rem; font-weight:600; font-variant-numeric:tabular-nums}
+
+/* ── Actions : une pleine (bleu), une claire (filet), une blanche (sur fond de couleur) ── */
+body[data-v6-regime="service"] .sv-bouton{display:inline-flex; align-items:center; justify-content:center; gap:10px; min-height:52px; padding:0 26px; border-radius:999px; border:1.5px solid var(--sv-bleu); background:var(--sv-bleu); color:#FFFFFF; font-size:1rem; font-weight:600; line-height:1.1; text-decoration:none; transition:background .18s ease-out, border-color .18s ease-out, translate .18s ease-out}
+body[data-v6-regime="service"] .sv-bouton:hover{background:var(--sv-bleu-fonce); border-color:var(--sv-bleu-fonce); translate:0 -2px}
+body[data-v6-regime="service"] .sv-bouton svg{transition:translate .18s ease-out}
+body[data-v6-regime="service"] .sv-bouton:hover svg{translate:3px 0}
+body[data-v6-regime="service"] .sv-bouton-clair{background:transparent; color:var(--sv-encre); border-color:rgba(22,22,29,.22)}
+body[data-v6-regime="service"] .sv-bouton-clair:hover{background:rgba(22,22,29,.05); border-color:var(--sv-encre); color:var(--sv-encre)}
+body[data-v6-regime="service"] .sv-bouton-blanc{background:#FFFFFF; color:var(--sv-encre); border-color:#FFFFFF}
+body[data-v6-regime="service"] .sv-bouton-blanc:hover{background:var(--sv-fond); border-color:var(--sv-fond)}
+body[data-v6-regime="service"] .sv-lien{color:var(--sv-encre); font-weight:500; text-decoration:underline; text-decoration-color:rgba(22,22,29,.3); text-underline-offset:4px}
+body[data-v6-regime="service"] .sv-lien:hover{color:var(--sv-bleu); text-decoration-color:var(--sv-bleu)}
+body[data-v6-regime="service"] main :is(a, summary):focus-visible{outline:3px solid var(--sv-bleu); outline-offset:3px; border-radius:8px}
+body[data-v6-regime="service"] main a.sv-bouton:focus-visible{border-radius:999px}
+
+/* ── Haut de page : le texte à gauche, une photo chaude à droite, le devis posé dessus ── */
+body[data-v6-regime="service"] .sv-hero{padding-block:72px 40px}
+body[data-v6-regime="service"] .sv-hero-grille{display:grid; grid-template-columns:minmax(0, 1.08fr) minmax(0, .92fr); gap:64px; align-items:center}
+body[data-v6-regime="service"] .sv-hero-texte{display:grid; gap:24px; justify-items:start}
+body[data-v6-regime="service"] .sv-pastille{display:inline-flex; align-items:center; gap:8px; padding:8px 16px; border-radius:999px; background:var(--sv-t-beurre); color:var(--sv-encre); font-size:.875rem; font-weight:600}
+body[data-v6-regime="service"] .sv-pastille::before{content:""; width:8px; height:8px; border-radius:50%; background:var(--sv-bleu)}
+body[data-v6-regime="service"] .sv-actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:8px}
+body[data-v6-regime="service"] .sv-reperes{list-style:none; margin:8px 0 0; padding:0; display:flex; flex-wrap:wrap; gap:10px 22px; font-size:.9375rem; color:var(--sv-encre-2)}
+body[data-v6-regime="service"] .sv-reperes li{display:inline-flex; align-items:center; gap:8px}
+body[data-v6-regime="service"] .sv-reperes svg{flex:none; width:20px; height:20px; padding:3px; border-radius:50%; background:var(--sv-t-menthe); color:#12693A}
+body[data-v6-regime="service"] .sv-hero-image{position:relative; margin:0; aspect-ratio:4 / 4.4; border-radius:var(--sv-r)}
+body[data-v6-regime="service"] .sv-hero-image > img, body[data-v6-regime="service"] .sv-hero-image > picture img{display:block; width:100%; height:100%; object-fit:cover; border-radius:var(--sv-r)}
+body[data-v6-regime="service"] .sv-hero-image > picture{display:block; width:100%; height:100%}
+body[data-v6-regime="service"] .sv-flotte{position:absolute; background:#FFFFFF; color:var(--sv-encre); border-radius:20px; box-shadow:0 18px 40px -18px rgba(60,40,10,.35), 0 0 0 1px rgba(22,22,29,.06)}
+body[data-v6-regime="service"] .sv-flotte-devis{left:-36px; bottom:44px; width:min(300px, 78%); padding:20px 22px}
+body[data-v6-regime="service"] .sv-flotte-devis .sc-devis-tete{display:grid; gap:8px; margin-bottom:14px}
+body[data-v6-regime="service"] .sv-flotte-devis b{font-size:1rem; font-weight:600; line-height:1.25; color:var(--sv-encre)}
+body[data-v6-regime="service"] .sv-flotte-devis em{justify-self:start; padding:4px 10px; border-radius:999px; background:var(--sv-t-bleu); color:var(--sv-bleu); font-style:normal; font-size:.75rem; font-weight:600}
+body[data-v6-regime="service"] .sv-flotte-devis ul{list-style:none; margin:0; padding:0; display:grid; gap:8px; font-size:.875rem; color:var(--sv-encre-2)}
+body[data-v6-regime="service"] .sv-flotte-devis li{display:flex; gap:10px; align-items:center}
+body[data-v6-regime="service"] .sv-flotte-devis li::before{content:""; flex:none; width:6px; height:6px; border-radius:50%; background:var(--sv-bleu)}
+body[data-v6-regime="service"] .sv-flotte-sceau{right:20px; top:24px; display:inline-flex; align-items:center; gap:8px; padding:10px 16px 10px 10px; border-radius:999px; font-size:.875rem; font-weight:600}
+body[data-v6-regime="service"] .sv-flotte-sceau svg{width:24px; height:24px; padding:4px; border-radius:50%; background:var(--sv-bleu); color:#FFFFFF}
+body[data-v6-regime="service"] .sv-aller{display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-top:64px; padding-top:24px; border-top:1px solid var(--sv-filet); font-size:.9375rem}
+body[data-v6-regime="service"] .sv-aller span{color:var(--sv-encre-2); margin-right:8px}
+body[data-v6-regime="service"] .sv-aller a{display:inline-flex; align-items:center; min-height:40px; padding:0 16px; border-radius:999px; background:#FFFFFF; box-shadow:0 0 0 1px var(--sv-filet); color:var(--sv-encre); font-weight:500; text-decoration:none; transition:background .15s ease-out, color .15s ease-out}
+body[data-v6-regime="service"] .sv-aller a:hover{background:var(--sv-encre); color:#FFFFFF}
+
+/* ── Les quatre prestations : une carte de couleur par question ── */
+body[data-v6-regime="service"] .sv-cartes{display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:24px}
+body[data-v6-regime="service"] .sv-carte{display:grid; grid-template-columns:minmax(0, 1fr) 168px; grid-template-areas:"tete tete" "titre image" "nom image" "texte image" "recevez recevez" "pied pied"; column-gap:24px; align-content:start; padding:32px; border-radius:var(--sv-r); background:var(--sv-teinte); transition:translate .25s cubic-bezier(.2,.7,.2,1)}
+body[data-v6-regime="service"] .sv-carte:hover{translate:0 -4px}
+body[data-v6-regime="service"] .sv-bleu{--sv-teinte:var(--sv-t-bleu)}
+body[data-v6-regime="service"] .sv-beurre{--sv-teinte:var(--sv-t-beurre)}
+body[data-v6-regime="service"] .sv-menthe{--sv-teinte:var(--sv-t-menthe)}
+body[data-v6-regime="service"] .sv-peche{--sv-teinte:var(--sv-t-peche)}
+body[data-v6-regime="service"] .sv-carte-tete{grid-area:tete; display:flex; align-items:center; gap:12px; margin-bottom:24px; font-size:.875rem; font-weight:600; color:var(--sv-encre)}
+body[data-v6-regime="service"] .sv-rond{display:inline-grid; place-items:center; width:36px; height:36px; border-radius:50%; background:#FFFFFF; font-size:.8125rem; font-weight:700; font-variant-numeric:tabular-nums}
+body[data-v6-regime="service"] .sv-carte h3{grid-area:titre; margin-bottom:14px}
+body[data-v6-regime="service"] .sv-carte-nom{grid-area:nom; font-size:.9375rem; font-weight:600; color:var(--sv-encre); margin-bottom:6px}
+body[data-v6-regime="service"] .sv-carte-texte{grid-area:texte; font-size:1rem; line-height:1.5; color:rgba(22,22,29,.74)}
+body[data-v6-regime="service"] .sv-carte-image{grid-area:image; position:relative; margin:0; align-self:start}
+body[data-v6-regime="service"] .sv-carte-image img{display:block; width:168px; height:168px; object-fit:cover; border-radius:24px}
+body[data-v6-regime="service"] .sv-carte-image figcaption{display:none}
+body[data-v6-regime="service"] .sv-recevez{grid-area:recevez; list-style:none; margin:24px 0 0; padding:0; display:flex; flex-wrap:wrap; gap:8px}
+body[data-v6-regime="service"] .sv-recevez li{display:inline-flex; align-items:center; gap:8px; padding:8px 14px 8px 10px; border-radius:999px; background:rgba(255,255,255,.72); font-size:.875rem; font-weight:500; color:var(--sv-encre)}
+body[data-v6-regime="service"] .sv-recevez svg{flex:none; color:var(--sv-bleu)}
+body[data-v6-regime="service"] .sv-carte-pied{grid-area:pied; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px 24px; margin-top:28px; padding-top:24px; border-top:1px solid rgba(22,22,29,.12)}
+body[data-v6-regime="service"] .sv-prix{font-style:normal; font-size:1.0625rem; font-weight:600; color:var(--sv-encre); letter-spacing:-.01em}
+body[data-v6-regime="service"] .sv-carte-liens{display:flex; flex-wrap:wrap; align-items:center; gap:12px 20px}
+body[data-v6-regime="service"] .sv-carte .sv-bouton{min-height:46px; padding:0 20px; font-size:.9375rem; background:var(--sv-encre); border-color:var(--sv-encre)}
+body[data-v6-regime="service"] .sv-carte .sv-bouton:hover{background:var(--sv-bleu); border-color:var(--sv-bleu)}
+body[data-v6-regime="service"] .sv-carte .sv-lien{font-size:.9375rem}
+
+/* ── Comment ça marche : quatre étapes côte à côte ── */
+body[data-v6-regime="service"] .sv-etapes{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:20px; counter-reset:none}
+body[data-v6-regime="service"] .sv-etape{display:grid; align-content:start; gap:12px; padding:28px 24px 32px; border-radius:var(--sv-r); background:var(--sv-carte)}
+body[data-v6-regime="service"] .sv-etape b{display:grid; gap:20px; font-size:1.1875rem; font-weight:600; line-height:1.25; letter-spacing:-.015em; color:var(--sv-encre)}
+body[data-v6-regime="service"] .sv-etape b span{display:inline-grid; place-items:center; width:44px; height:44px; border-radius:50%; background:var(--sv-t-bleu); color:var(--sv-bleu); font-size:.875rem; font-weight:700; letter-spacing:0; font-variant-numeric:tabular-nums}
+body[data-v6-regime="service"] .sv-etape:nth-child(2) b span{background:var(--sv-t-beurre); color:#6B4E00}
+body[data-v6-regime="service"] .sv-etape:nth-child(3) b span{background:var(--sv-t-menthe); color:#12693A}
+body[data-v6-regime="service"] .sv-etape:nth-child(4) b span{background:var(--sv-t-peche); color:#8A3410}
+body[data-v6-regime="service"] .sv-etape p{font-size:.9375rem; line-height:1.55; color:var(--sv-encre-2)}
+
+/* ── Les prix : la table à gauche, Enterprise en bleu à droite ── */
+body[data-v6-regime="service"] .sv-tarifs{display:grid; grid-template-columns:minmax(0, 1.35fr) minmax(0, .65fr); gap:24px; align-items:stretch}
+body[data-v6-regime="service"] .sv-tarifs-table{padding:32px 32px 12px; border-radius:var(--sv-r); background:var(--sv-carte)}
+body[data-v6-regime="service"] .sv-tarifs-table ul{list-style:none; margin:16px 0 0; padding:0}
+body[data-v6-regime="service"] .sv-tarifs-table li{display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:6px 24px; padding:20px 0; border-top:1px solid var(--sv-filet)}
+body[data-v6-regime="service"] .sv-tarifs-table li a{font-size:1.125rem; font-weight:500; color:var(--sv-encre); text-decoration:none}
+body[data-v6-regime="service"] .sv-tarifs-table li a:hover{color:var(--sv-bleu); text-decoration:underline; text-underline-offset:4px}
+body[data-v6-regime="service"] .sv-tarifs-table .sv-prix{font-size:1rem; color:var(--sv-encre)}
+body[data-v6-regime="service"] .sv-tarifs-volume{display:grid; align-content:start; gap:16px; padding:32px; border-radius:var(--sv-r); background:var(--sv-bleu); color:#FFFFFF}
+body[data-v6-regime="service"] .sv-tarifs-volume .sv-surtitre{color:rgba(255,255,255,.72)}
+body[data-v6-regime="service"] .sv-grand{font-size:1.5rem; font-weight:500; line-height:1.2; letter-spacing:-.02em; color:#FFFFFF}
+body[data-v6-regime="service"] .sv-tarifs-volume > p:not(.sv-surtitre):not(.sv-grand){font-size:.9375rem; line-height:1.5; color:rgba(255,255,255,.82)}
+body[data-v6-regime="service"] .sv-tarifs-volume ul{list-style:none; margin:4px 0 12px; padding:0; display:grid; gap:10px; font-size:.9375rem}
+body[data-v6-regime="service"] .sv-tarifs-volume li{display:flex; align-items:center; gap:10px}
+body[data-v6-regime="service"] .sv-tarifs-volume li svg{flex:none; width:20px; height:20px; padding:3px; border-radius:50%; background:rgba(255,255,255,.18)}
+body[data-v6-regime="service"] .sv-tarifs-volume .sv-bouton{justify-self:start}
+body[data-v6-regime="service"] .sv-autre{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px 24px; margin-top:24px; padding:24px 32px; border-radius:var(--sv-r); background:var(--sv-fond-2); font-size:1.0625rem; font-weight:500}
+
+/* ── Les experts et les chiffres ── */
+body[data-v6-regime="service"] .sv-experts{display:grid; grid-template-columns:minmax(0, 1.1fr) minmax(0, .7fr) minmax(0, .7fr); gap:24px; align-items:start}
+body[data-v6-regime="service"] .sv-experts-texte{display:grid; gap:20px; justify-items:start; padding-right:24px}
+body[data-v6-regime="service"] .sv-expert{margin:0; display:grid; gap:16px}
+body[data-v6-regime="service"] .sv-expert img{display:block; width:100%; aspect-ratio:4 / 5; object-fit:cover; border-radius:var(--sv-r)}
+body[data-v6-regime="service"] .sv-expert figcaption{display:grid; gap:4px; justify-items:start; font-size:.9375rem}
+body[data-v6-regime="service"] .sv-expert b{font-size:1.0625rem; font-weight:600; color:var(--sv-encre)}
+body[data-v6-regime="service"] .sv-expert span{color:var(--sv-encre-2); line-height:1.4}
+body[data-v6-regime="service"] .sv-chiffres{display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:24px; margin:56px 0 0}
+body[data-v6-regime="service"] .sv-chiffres div{display:flex; flex-direction:column-reverse; gap:6px; padding:28px 32px; border-radius:var(--sv-r); background:var(--sv-carte)}
+body[data-v6-regime="service"] .sv-chiffres dd{margin:0; font-size:clamp(2.5rem, 1.4rem + 3vw, 4rem); font-weight:500; line-height:1; letter-spacing:-.04em; color:var(--sv-bleu); font-variant-numeric:tabular-nums}
+body[data-v6-regime="service"] .sv-chiffres dt{font-size:1rem; color:var(--sv-encre-2)}
+
+/* ── Questions ── */
+body[data-v6-regime="service"] .sv-questions{display:grid; grid-template-columns:minmax(0, .7fr) minmax(0, 1.3fr); gap:48px; align-items:start}
+body[data-v6-regime="service"] .sv-faq{display:grid; gap:12px}
+body[data-v6-regime="service"] .sv-faq details{border-radius:20px; background:var(--sv-carte); padding:0 24px; transition:background .15s ease-out}
+body[data-v6-regime="service"] .sv-faq details[open]{background:var(--sv-t-bleu)}
+body[data-v6-regime="service"] .sv-faq summary{display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:64px; padding:12px 0; cursor:pointer; list-style:none; font-size:1.0625rem; font-weight:600; color:var(--sv-encre)}
+body[data-v6-regime="service"] .sv-faq summary::-webkit-details-marker{display:none}
+body[data-v6-regime="service"] .sv-faq summary::after{content:"+"; flex:none; display:grid; place-items:center; width:32px; height:32px; border-radius:50%; background:var(--sv-fond); font-size:1.25rem; font-weight:400; line-height:1; transition:rotate .2s ease-out}
+body[data-v6-regime="service"] .sv-faq details[open] summary::after{rotate:45deg; background:#FFFFFF}
+body[data-v6-regime="service"] .sv-faq details p{padding:0 48px 22px 0; font-size:1rem; line-height:1.55; color:rgba(22,22,29,.78)}
+
+/* ── Appel final : un bloc bleu arrondi ── */
+body[data-v6-regime="service"] .sv-final-section{padding-top:0}
+body[data-v6-regime="service"] .sv-final{display:grid; gap:32px; justify-items:center; text-align:center; padding:96px 32px; border-radius:40px; background:var(--sv-bleu)}
+body[data-v6-regime="service"] .sv-final h2{max-width:18ch; color:#FFFFFF; font-size:clamp(2.25rem, 1.2rem + 3vw, 3.75rem)}
+
+/* ── Pied : crème, dans le ton de la page ── */
+body[data-v6-regime="service"] .pied{background:var(--sv-fond-2); color:var(--sv-encre); border-top:1px solid var(--sv-filet)}
+body[data-v6-regime="service"] .pied :is(a, p, span, li, small, div, button, em, i, address){color:var(--sv-encre-2) !important}
+body[data-v6-regime="service"] .pied :is(h3, h4, h5, strong, b, .wordmark){color:var(--sv-encre) !important}
+body[data-v6-regime="service"] .pied a:hover{color:var(--sv-bleu)}
+body[data-v6-regime="service"] .pied .pied-bas{border-top-color:var(--sv-filet)}
+
+/* ── Écrans moyens et téléphone ── */
+@media (max-width:1040px){
+  body[data-v6-regime="service"] .sv-hero-grille{grid-template-columns:minmax(0, 1fr); gap:48px}
+  body[data-v6-regime="service"] .sv-hero-image{aspect-ratio:16 / 10; max-width:640px}
+  body[data-v6-regime="service"] .sv-flotte-devis{left:16px; bottom:16px}
+  body[data-v6-regime="service"] .sv-cartes{grid-template-columns:minmax(0, 1fr)}
+  body[data-v6-regime="service"] .sv-etapes{grid-template-columns:repeat(2, minmax(0, 1fr))}
+  body[data-v6-regime="service"] .sv-tarifs{grid-template-columns:minmax(0, 1fr)}
+  body[data-v6-regime="service"] .sv-experts{grid-template-columns:repeat(2, minmax(0, 1fr))}
+  body[data-v6-regime="service"] .sv-experts-texte{grid-column:1 / -1; padding-right:0}
+  body[data-v6-regime="service"] .sv-questions{grid-template-columns:minmax(0, 1fr); gap:32px}
+}
+@media (max-width:640px){
+  /* la barre débordait de 5 px à 390 px (mesuré) : gouttière et écarts resserrés, bouton plus court */
+  body[data-v6-regime="service"] .nav .conteneur{gap:10px; padding-inline:14px}
+  body[data-v6-regime="service"] .nav .nav-fin{gap:8px; min-width:0}
+  body[data-v6-regime="service"] .nav .nav-fin :is(.btn, .btn-marque){padding-inline:14px; font-size:.8125rem}
+  body[data-v6-regime="service"] .sv-c{width:calc(100% - 32px)}
+  body[data-v6-regime="service"] .sv-s{padding-block:72px}
+  body[data-v6-regime="service"] .sv-hero{padding-block:40px 24px}
+  body[data-v6-regime="service"] .sv-entete{margin-bottom:36px}
+  body[data-v6-regime="service"] .sv-actions{width:100%}
+  body[data-v6-regime="service"] .sv-actions .sv-bouton{flex:1 1 100%}
+  body[data-v6-regime="service"] .sv-hero-image{aspect-ratio:4 / 4.2}
+  body[data-v6-regime="service"] .sv-flotte-devis{left:12px; bottom:12px; width:min(260px, 82%); padding:16px 18px}
+  body[data-v6-regime="service"] .sv-flotte-sceau{right:12px; top:12px; font-size:.8125rem}
+  body[data-v6-regime="service"] .sv-aller{margin-top:40px}
+  body[data-v6-regime="service"] .sv-aller span{flex-basis:100%}
+  body[data-v6-regime="service"] .sv-carte{grid-template-columns:minmax(0, 1fr); grid-template-areas:"tete" "image" "titre" "nom" "texte" "recevez" "pied"; padding:24px; border-radius:24px}
+  body[data-v6-regime="service"] .sv-carte-image{margin-bottom:20px}
+  body[data-v6-regime="service"] .sv-carte-image img{width:112px; height:112px; border-radius:20px}
+  body[data-v6-regime="service"] .sv-carte-pied{flex-direction:column; align-items:flex-start}
+  body[data-v6-regime="service"] .sv-etapes{grid-template-columns:minmax(0, 1fr)}
+  body[data-v6-regime="service"] .sv-tarifs-table, body[data-v6-regime="service"] .sv-tarifs-volume, body[data-v6-regime="service"] .sv-autre{padding-inline:22px}
+  body[data-v6-regime="service"] .sv-chiffres{grid-template-columns:minmax(0, 1fr); gap:16px; margin-top:40px}
+  body[data-v6-regime="service"] .sv-faq details{padding:0 18px}
+  body[data-v6-regime="service"] .sv-faq details p{padding-right:0}
+  body[data-v6-regime="service"] .sv-final{padding:64px 22px; border-radius:28px}
+}
+@media (prefers-reduced-motion:reduce){
+  body[data-v6-regime="service"] main :is(.sv-bouton, .sv-carte, .sv-bouton svg){transition:none; translate:none !important}
+}
+
+/* ── Le mot-symbole de fin de page : sur crème, en bleu très léger, au lieu du bandeau bleu nuit ── */
+body[data-v6-regime="service"] .signature-cleo{background:var(--sv-fond-2); border-top:1px solid var(--sv-filet); padding-top:48px}
+body[data-v6-regime="service"] .signature-cleo .wordmark{opacity:.12; filter:none}
+body[data-v6-regime="service"] .pied{border-top:0}

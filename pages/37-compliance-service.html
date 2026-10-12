@@ -1,231 +1,141 @@
 <!--NAV-->
-<!-- ═══ SERVICE, CAS PAR CAS ═══ 15/09/2026, Naomie : « inspire-toi de moritzlegal, un truc pratico-pratique par use case,
-     là c'est un peu le bordel ». Généré par scratchpad/service-cas.mjs. Composition relevée sur moritzlegal.com, DA Cleo.
-     Textes lus dans la page Service d'avant et dans les fiches. 16/09/2026, Naomie : « dans Service, tu n'as pas mis exactement les 4 que je t'ai dit » : le catalogue ne garde que l'évaluation (54), l'étiquetage (45), le marquage CE (55) et le mandataire (51) ; les fiches 38 et 44, 46 à 50 sont retirées du site.
-     La déclaration UE de conformité est signée par le fabricant ou son mandataire, l'expert Cleo relit. -->
-<!-- 16/09/2026, « Photo partout » (PHOTO.md) : haut de page sur photo. Texte, h1 et boutons repris tels quels de l'ancien haut .sc-hero. -->
-<section class="section sy-hero-photo">
-  <div class="conteneur">
-    <figure class="sy-chapitre sy-chapitre-hero">
-      <img src="img:atelier-velos@1320" alt="">
-      <figcaption class="sy-chapitre-texte">
-        <p class="sy-etiquette">Services</p>
-        <h1>Des prestations de conformité produit, avec un prix affiché avant la commande.</h1>
-        <p class="sy-chapitre-lead">Vous voulez simplement que quelqu'un fasse le dossier. Cleo le prépare, un expert conformité le relit et le valide. Un prix par dossier, veille comprise.</p>
-        <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Décrire mon produit</a><a class="sy-bouton-blanc" href="#catalogue">Voir les prestations</a></div>
-      </figcaption>
+<!-- ═══ OFFRE SERVICE, DA CLAIRE ═══ 12/10/2026, Naomie : « une offre SERVICE avec une vraie DA sympa, claire, et une offre DATA
+     avec une vraie DA tech comme maintenant ». Cette page sort du régime sombre (data-v6-regime="service", voir construire.mjs)
+     et porte sa propre feuille : commun/lanes/v6-zzzzzzzzzzzzzzzzzzzzzzz-service-clair.css. Fond crème chaud, cartes de couleur
+     douce, le bleu Cleo réservé à l'action. Tous les textes, les prix et les liens sont ceux de la page d'avant, lus par
+     script (scratchpad/service-clair.mjs), aucun n'a été réécrit. Les quatre prestations sont visibles d'un coup, sans onglet.
+     La déclaration UE de conformité est signée par le fabricant ou son mandataire, l'expert Cleo relit.
+     PRIX : décision de Naomie du 16/09/2026, relevés sur ecocomply.ai le même jour (évaluation 399 €, étiquetage 1 200 €,
+     marquage CE 3 800 € essais non compris, mandataire 1 500 € par an et par catégorie). -->
+<section class="sv-hero">
+  <div class="sv-c sv-hero-grille">
+    <div class="sv-hero-texte">
+      <p class="sv-pastille">Services</p>
+      <h1>Des prestations de conformité produit, avec un prix affiché avant la commande.</h1>
+      <p class="sv-chapeau">Vous voulez simplement que quelqu'un fasse le dossier. Cleo le prépare, un expert conformité le relit et le valide. Un prix par dossier, veille comprise.</p>
+      <div class="sv-actions"><a class="sv-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Décrire mon produit <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sv-bouton sv-bouton-clair" href="#catalogue">Voir les prestations</a></div>
+      <ul class="sv-reperes"><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Un prix par dossier, jamais à l'heure</li><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Un expert relit</li><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>La veille offerte</li></ul>
+    </div>
+    <figure class="sv-hero-image">
+      <img src="img:personne-equipe" alt="">
+      <div class="sv-flotte sv-flotte-devis" aria-hidden="true"><div class="sc-devis-tete"><b>Préparer le marquage CE d'un produit</b><em>Avant la commande</em></div><ul><li>Un prix par prestation</li><li>Affiché avant la commande</li><li>Un délai annoncé</li></ul></div>
+      <div class="sv-flotte sv-flotte-sceau" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Relue par un expert conformité</div>
     </figure>
   </div>
+  <nav class="sv-c sv-aller" aria-label="Accès rapide à la page"><span>Aller à</span><a href="#catalogue">Les prestations</a><a href="#comment">Comment ça marche</a><a href="#tarifs">Les prix</a><a href="#experts">Les experts</a></nav>
 </section>
 
-<!-- ═══ ALLER À ═══ 18/09/2026 : la barre d'ancres de l'accueil, posée sur les pages d'offre. Leur site fait pareil :
-     on voit le plan de la page sans défiler. Composant repris tel quel (.ac-aller), portée de la règle élargie. -->
-<nav class="ac-aller" aria-label="Accès rapide à la page">
-  <div class="conteneur ac-aller-liens"><span>Aller à</span><a href="#catalogue">Les prestations</a><a href="#comment">Comment ça marche</a><a href="#tarifs">Les prix</a><a href="#experts">Les experts</a></div>
-</nav>
-
-<!-- ═══ BENTO DE PREUVE ═══ 16/09/2026, passe identité (IDENTITE.md 2.1) : la citation de Philippine Tamic, extrait
-     verbatim de DecathlonQuote.tsx (seul témoignage utilisable), les chiffres canon 90 juridictions et 55 782 réglementations
-     cartographiées (la rangée de chiffres du haut de page est venue ici), et deux fiches compréhensibles sans connaître le sujet
-     (16/09/2026, Naomie), reprises de l'exemple des écouteurs sans fil de la page : texte officiel, déclaration relue par un expert, signature par vous. -->
-<section class="sc-s sc-preuve" id="preuve">
-  <div class="sc-conteneur">
-    <div class="sy-bento" data-apparait-groupe>
-      <div class="sy-bento-creme"><b class="sy-chiffre-raye">90</b><span>juridictions suivies</span></div>
-      <div class="sy-bento-bleu">
-        <b class="sy-chiffre-raye">55 782</b><span>réglementations cartographiées</span>
-        <div class="sy-fiches" aria-hidden="true">
-        <dl class="sy-fiche"><dt>Écouteurs sans fil</dt><dd><span>Marché</span><span>UE</span></dd><dd><span>Texte</span><span>Officiel</span></dd></dl>
-        <dl class="sy-fiche"><dt>Déclaration UE</dt><dd><span>Relecture</span><span>Expert</span></dd><dd><span>Signature</span><span>Vous</span></dd></dl>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ LES CAS ═══ la liste à gauche, le détail du cas choisi à droite (au survol ou au clic ; au téléphone, en
-     accordéon). Chaque cas : sa photo et un exemple de demande, la phrase de sa fiche, quatre éléments du livrable,
-     son état au catalogue, le lien vers sa fiche. -->
-<section class="sc-s sc-cas-section" id="catalogue">
-  <div class="sc-conteneur">
-    <!-- 16/09/2026, « Photo partout » : en-tête du chapitre sur photo, h2 repris mot pour mot. -->
-    <div class="sy-entete" data-apparait>
-      <p class="sy-surtitre">01</p>
+<!-- ═══ LES QUATRE PRESTATIONS ═══ une carte par question du client : la question, ce qu'il reçoit, le prix, la fiche. -->
+<section class="sv-s" id="catalogue">
+  <div class="sv-c">
+    <div class="sv-entete" data-apparait>
+      <p class="sv-numero">01</p>
       <h2>Les prestations, une par une</h2>
-      <p class="sy-lead">Vos questions, en langage simple, de la conception au lancement du produit.</p>
+      <p class="sv-chapeau">Vos questions, en langage simple, de la conception au lancement du produit.</p>
     </div>
-    <!-- 16/09/2026, passe « le pain » (wording/sources/pains-ministere-commission.md) : chaque panneau s'ouvre sur la question
-         du client, le nom de la prestation reste sur l'onglet ; le prix reste au pied du panneau. -->
-    <div class="sc-cas" style="--rangs:6" role="radiogroup" aria-label="Les prestations, une par une">
-      <p class="sc-famille" id="conception" style="--r:1">01 · Conception et développement</p>
-      <input type="radio" name="sc-cas" id="sc-cas-1" checked>
-      <label class="sc-cas-label" for="sc-cas-1" style="--r:2"><span>01</span>Évaluer la conformité d'un produit</label>
-      <div class="sc-panneau">
-        <div class="sc-panneau-image"><img src="img:masse-lunettes" alt=""><p class="sc-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> Quelles obligations s'appliquent à mes lunettes connectées vendues en France et en Allemagne ?</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
-        <div class="sc-panneau-corps">
-          <p class="sc-panneau-famille">Conception et développement</p>
-          <h3>Quelle réglementation s'applique à mon produit, et mes pièces sont-elles complètes ?</h3>
-          <p class="sc-lead">Les textes qui s'appliquent, ce qui manque encore et quoi faire, sur 9 domaines.</p>
-          <ul class="sc-recevez">
-            <li>Matrice de conformité</li>
-            <li>Preuves attendues</li>
-            <li>Une action pour chaque manque</li>
-            <li>Plan et budget</li>
-          </ul>
-          <div class="sc-panneau-pied"><em class="sc-etat">À partir de 399 € par produit</em><a class="sc-bouton" href="54-service-evaluation.html">Voir la prestation <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sc-lien" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Demander cette prestation</a></div>
-        </div>
-      </div>
-      <input type="radio" name="sc-cas" id="sc-cas-2">
-      <label class="sc-cas-label" for="sc-cas-2" style="--r:3"><span>02</span>Préparer l'étiquetage et la documentation</label>
-      <div class="sc-panneau">
-        <div class="sc-panneau-image"><img src="img:masse-shampooing" alt=""><p class="sc-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> Relève les mentions obligatoires de l'étiquette de mon shampooing pour la France, l'Allemagne et l'Italie.</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
-        <div class="sc-panneau-corps">
-          <p class="sc-panneau-famille">Conception et développement</p>
-          <h3>Quelles mentions afficher sur l'étiquette, la notice et l'emballage, et dans quelle langue ?</h3>
-          <p class="sc-lead">Vos étiquettes, notices, textes d'emballage et allégations, pour chaque marché.</p>
-          <ul class="sc-recevez">
-            <li>Notices</li>
-            <li>Étiquettes et marquages</li>
-            <li>Allégations relues</li>
-            <li>Langues par marché</li>
-          </ul>
-          <div class="sc-panneau-pied"><em class="sc-etat">À partir de 1 200 € par produit</em><a class="sc-bouton" href="45-service-etiquetage.html">Voir la prestation <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sc-lien" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Demander cette prestation</a></div>
-        </div>
-      </div>
-      <p class="sc-famille" id="lancement" style="--r:4">02 · Lancement produit</p>
-      <input type="radio" name="sc-cas" id="sc-cas-3">
-      <label class="sc-cas-label" for="sc-cas-3" style="--r:5"><span>03</span>Préparer le marquage CE d'un produit</label>
-      <div class="sc-panneau">
-        <div class="sc-panneau-image"><img src="img:masse-casque" alt=""><p class="sc-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> Prépare la documentation technique CE de mon casque audio sans fil.</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
-        <div class="sc-panneau-corps">
-          <p class="sc-panneau-famille">Lancement produit</p>
-          <h3>Quel dossier dois-je faire pour le marquage CE ?</h3>
-          <p class="sc-lead">La documentation technique et le projet de déclaration UE de conformité, que vous signez.</p>
-          <ul class="sc-recevez">
-            <li>Ce qui s'applique au produit</li>
-            <li>Documentation technique</li>
-            <li>Projet de déclaration</li>
-            <li>Coordination des essais</li>
-          </ul>
-          <div class="sc-panneau-pied"><em class="sc-etat">À partir de 3 800 € par produit, essais non compris</em><a class="sc-bouton" href="55-service-marquage-ce.html">Voir la prestation <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sc-lien" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Demander cette prestation</a></div>
-        </div>
-      </div>
-      <input type="radio" name="sc-cas" id="sc-cas-4">
-      <label class="sc-cas-label" for="sc-cas-4" style="--r:6"><span>04</span>Tenir le rôle de mandataire dans l'UE</label>
-      <div class="sc-panneau">
-        <div class="sc-panneau-image"><img src="img:masse-skate" alt=""><p class="sc-panneau-demande" aria-hidden="true"><span><b>@Cleo</b> Deviens notre mandataire dans l'UE pour nos skateboards fabriqués au Canada.</span><i><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></i></p></div>
-        <div class="sc-panneau-corps">
-          <p class="sc-panneau-famille">Lancement produit</p>
-          <h3>Vous vendez en Europe depuis l'étranger : qui répond pour votre produit dans l'Union ?</h3>
-          <p class="sc-lead">Un opérateur établi dans l'Union pour vos produits : mandat écrit, coordonnées sur l'étiquette, réponses aux autorités.</p>
-          <ul class="sc-recevez">
-            <li>Mandat écrit</li>
-            <li>Coordonnées sur l'étiquette</li>
-            <li>Documentation tenue</li>
-            <li>Réponses aux autorités</li>
-          </ul>
-          <div class="sc-panneau-pied"><em class="sc-etat">À partir de 1 500 € par an, par catégorie</em><a class="sc-bouton" href="51-service-mandataire.html">Voir la prestation <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sc-lien" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Demander cette prestation</a></div>
-        </div>
-      </div>
+    <div class="sv-cartes" role="list" aria-label="Les prestations, une par une">
+      <article class="sv-carte sv-bleu" role="listitem" data-apparait>
+        <div class="sv-carte-tete"><span class="sv-rond">01</span><p>Conception et développement</p></div>
+        <h3>Quelle réglementation s'applique à mon produit, et mes pièces sont-elles complètes ?</h3>
+        <p class="sv-carte-nom">Évaluer la conformité d'un produit</p>
+        <p class="sv-carte-texte">Les textes qui s'appliquent, ce qui manque encore et quoi faire, sur 9 domaines.</p>
+        <ul class="sv-recevez"><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Matrice de conformité</li><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Preuves attendues</li><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Une action pour chaque manque</li><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Plan et budget</li></ul>
+        <figure class="sv-carte-image"><img src="img:masse-lunettes" alt=""><figcaption aria-hidden="true"><b>@Cleo</b> Quelles obligations s'appliquent à mes lunettes connectées vendues en France et en Allemagne ?</figcaption></figure>
+        <div class="sv-carte-pied"><em class="sv-prix">À partir de 399 € par produit</em><div class="sv-carte-liens"><a class="sv-bouton" href="54-service-evaluation.html">Voir la prestation <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sv-lien" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Demander cette prestation</a></div></div>
+      </article>
+      <article class="sv-carte sv-beurre" role="listitem" data-apparait>
+        <div class="sv-carte-tete"><span class="sv-rond">02</span><p>Conception et développement</p></div>
+        <h3>Quelles mentions afficher sur l'étiquette, la notice et l'emballage, et dans quelle langue ?</h3>
+        <p class="sv-carte-nom">Préparer l'étiquetage et la documentation</p>
+        <p class="sv-carte-texte">Vos étiquettes, notices, textes d'emballage et allégations, pour chaque marché.</p>
+        <ul class="sv-recevez"><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Notices</li><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Étiquettes et marquages</li><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Allégations relues</li><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Langues par marché</li></ul>
+        <figure class="sv-carte-image"><img src="img:masse-shampooing" alt=""><figcaption aria-hidden="true"><b>@Cleo</b> Relève les mentions obligatoires de l'étiquette de mon shampooing pour la France, l'Allemagne et l'Italie.</figcaption></figure>
+        <div class="sv-carte-pied"><em class="sv-prix">À partir de 1 200 € par produit</em><div class="sv-carte-liens"><a class="sv-bouton" href="45-service-etiquetage.html">Voir la prestation <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sv-lien" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Demander cette prestation</a></div></div>
+      </article>
+      <article class="sv-carte sv-menthe" role="listitem" data-apparait>
+        <div class="sv-carte-tete"><span class="sv-rond">03</span><p>Lancement produit</p></div>
+        <h3>Quel dossier dois-je faire pour le marquage CE ?</h3>
+        <p class="sv-carte-nom">Préparer le marquage CE d'un produit</p>
+        <p class="sv-carte-texte">La documentation technique et le projet de déclaration UE de conformité, que vous signez.</p>
+        <ul class="sv-recevez"><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Ce qui s'applique au produit</li><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Documentation technique</li><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Projet de déclaration</li><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Coordination des essais</li></ul>
+        <figure class="sv-carte-image"><img src="img:masse-casque" alt=""><figcaption aria-hidden="true"><b>@Cleo</b> Prépare la documentation technique CE de mon casque audio sans fil.</figcaption></figure>
+        <div class="sv-carte-pied"><em class="sv-prix">À partir de 3 800 € par produit, essais non compris</em><div class="sv-carte-liens"><a class="sv-bouton" href="55-service-marquage-ce.html">Voir la prestation <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sv-lien" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Demander cette prestation</a></div></div>
+      </article>
+      <article class="sv-carte sv-peche" role="listitem" data-apparait>
+        <div class="sv-carte-tete"><span class="sv-rond">04</span><p>Lancement produit</p></div>
+        <h3>Vous vendez en Europe depuis l'étranger : qui répond pour votre produit dans l'Union ?</h3>
+        <p class="sv-carte-nom">Tenir le rôle de mandataire dans l'UE</p>
+        <p class="sv-carte-texte">Un opérateur établi dans l'Union pour vos produits : mandat écrit, coordonnées sur l'étiquette, réponses aux autorités.</p>
+        <ul class="sv-recevez"><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Mandat écrit</li><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Coordonnées sur l'étiquette</li><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Documentation tenue</li><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Réponses aux autorités</li></ul>
+        <figure class="sv-carte-image"><img src="img:masse-skate" alt=""><figcaption aria-hidden="true"><b>@Cleo</b> Deviens notre mandataire dans l'UE pour nos skateboards fabriqués au Canada.</figcaption></figure>
+        <div class="sv-carte-pied"><em class="sv-prix">À partir de 1 500 € par an, par catégorie</em><div class="sv-carte-liens"><a class="sv-bouton" href="51-service-mandataire.html">Voir la prestation <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="sv-lien" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Demander cette prestation</a></div></div>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- PRIX : 16/09/2026, décision de Naomie : prix d'EcoComply affichés sur l'évaluation (ecocomply.ai/product-compliance-assessment, « €399 per product »), l'étiquetage (product-documentation-labelling, « From €1,200 per product · single language »), le marquage CE (ce-marking, « €3,800 per product (testing costs excluded) ») et le mandataire (eu-authorised-representative, « €1,500 per year (per product category) »), relevés le 16/09/2026. -->
-<!-- ═══ COMMENT ÇA MARCHE ═══ titre tiré des chiffres de l'ancienne page (80 % / 20 %) ; quatre étapes collantes, la
-     carte d'interface posée sur la photo change à chaque étape. -->
-<section class="sc-s sc-comment-section" id="comment">
-  <div class="sc-conteneur">
-    <!-- 16/09/2026, « Photo partout » : en-tête du chapitre sur photo, h2 repris mot pour mot. -->
-    <div class="sy-entete" data-apparait>
-      <p class="sy-surtitre">02</p>
+<!-- ═══ COMMENT ÇA MARCHE ═══ les quatre étapes côte à côte, sans scène collante. -->
+<section class="sv-s sv-s-teinte" id="comment">
+  <div class="sv-c">
+    <div class="sv-entete" data-apparait>
+      <p class="sv-numero">02</p>
       <h2>Cleo prépare le dossier, un expert conformité le relit et le valide</h2>
     </div>
-    <div class="sc-comment-scene" data-scene>
-      <div class="sc-comment-collant">
-        <figure class="sc-comment-image">
-          <img src="img:personne-equipe" alt="">
-          <div class="sc-carte sc-carte-1" aria-hidden="true">
-            <div class="sc-invite"><p>Décrivez votre produit, ou déposez votre déclaration…</p><div class="sc-puces"><span>+</span><span>Fichiers</span><span>Marchés</span><span>Parler à un expert</span></div></div>
-          </div>
-          <div class="sc-carte sc-carte-2" aria-hidden="true">
-            <div class="sc-devis"><div class="sc-devis-tete"><b>Préparer le marquage CE d'un produit</b><em>Avant la commande</em></div><ul><li>Un prix par prestation</li><li>Affiché avant la commande</li><li>Un délai annoncé</li></ul></div>
-          </div>
-          <div class="sc-carte sc-carte-3" aria-hidden="true">
-            <span class="sc-flottant sc-f1">Écouteurs sans fil</span><span class="sc-flottant sc-f2">Directive 2014/53/UE</span><span class="sc-flottant sc-f3">Directive 2011/65/UE</span>
-            <div class="sc-doc"><div class="sc-doc-tete"><b>Déclaration UE de conformité</b><em>Premier jet</em></div><i></i><i></i><i></i><i></i><i></i><i></i></div>
-          </div>
-          <div class="sc-carte sc-carte-4" aria-hidden="true">
-            <div class="sc-relecteur"><span class="sc-avatar"></span><b>Expert conformité</b><em>relit</em></div>
-            <div class="sc-doc sc-doc-relu"><div class="sc-doc-tete"><b>Déclaration UE de conformité</b><em>Relue</em></div><i class="sc-m"></i><i></i><i class="sc-m"></i><i></i><i></i></div>
-            <div class="sc-sceaux"><span class="sc-ok">Relue par un expert conformité</span><span>À signer par le fabricant</span></div>
-          </div>
-        </figure>
-        <ol class="sc-etapes" data-schema="howto">
-          <li class="sc-etape"><b><span>01</span>Vous décrivez le produit</b><p>Le produit, les marchés visés et les documents dont vous disposez, fiches techniques comprises. Votre catalogue, même partiel, suffit à démarrer.</p></li>
-          <li class="sc-etape"><b><span>02</span>Un prix par dossier, jamais à l'heure</b><p>Le prix et le délai sont annoncés avant la commande. La veille offerte vous signale chaque semaine les textes qui touchent vos produits.</p></li>
-          <li class="sc-etape"><b><span>03</span>L'agent prépare</b><p>L'agent relève les textes en vigueur et rédige le premier jet, avec l'article qui fonde chaque exigence.</p></li>
-          <li class="sc-etape"><b><span>04</span>Un expert relit</b><p>Un expert conformité relit et valide le livrable avant la remise. La signature reste au fabricant ou à son mandataire.</p></li>
-        </ol>
-      </div>
-    </div>
+    <ol class="sv-etapes" data-schema="howto" data-apparait><li class="sv-etape"><b><span>01</span>Vous décrivez le produit</b><p>Le produit, les marchés visés et les documents dont vous disposez, fiches techniques comprises. Votre catalogue, même partiel, suffit à démarrer.</p></li>
+          <li class="sv-etape"><b><span>02</span>Un prix par dossier, jamais à l'heure</b><p>Le prix et le délai sont annoncés avant la commande. La veille offerte vous signale chaque semaine les textes qui touchent vos produits.</p></li>
+          <li class="sv-etape"><b><span>03</span>L'agent prépare</b><p>L'agent relève les textes en vigueur et rédige le premier jet, avec l'article qui fonde chaque exigence.</p></li>
+          <li class="sv-etape"><b><span>04</span>Un expert relit</b><p>Un expert conformité relit et valide le livrable avant la remise. La signature reste au fabricant ou à son mandataire.</p></li></ol>
   </div>
 </section>
 
-<!-- ═══ TARIFS ═══ la table des cas et leur état au catalogue (aucun montant : les prix ne sont pas fixés) ; la carte
-     sombre reprend l'équipe dédiée, vos trames et les principes de facturation décidés le 14/09/2026. -->
-<section class="sc-s" id="tarifs">
-  <div class="sc-conteneur">
-    <!-- 16/09/2026, « Photo partout » : en-tête du chapitre sur photo, h2 repris mot pour mot. -->
-    <div class="sy-entete" data-apparait>
-      <p class="sy-surtitre">03</p>
+<!-- ═══ LES PRIX ═══ -->
+<section class="sv-s" id="tarifs">
+  <div class="sv-c">
+    <div class="sv-entete" data-apparait>
+      <p class="sv-numero">03</p>
       <h2>Un prix par prestation, affiché avant la commande</h2>
     </div>
-    <div class="sc-tarifs" data-apparait>
-      <div class="sc-tarifs-table">
-        <p class="sc-etiquette">Par prestation · prix affiché avant la commande</p>
-        <ul>
-          <li><a href="54-service-evaluation.html">Évaluer la conformité d'un produit</a><em class="sc-etat">À partir de 399 € par produit</em></li>
-          <li><a href="45-service-etiquetage.html">Préparer l'étiquetage et la documentation</a><em class="sc-etat">À partir de 1 200 € par produit</em></li>
-          <li><a href="55-service-marquage-ce.html">Préparer le marquage CE d'un produit</a><em class="sc-etat">À partir de 3 800 € par produit, essais non compris</em></li>
-          <li><a href="51-service-mandataire.html">Tenir le rôle de mandataire dans l'UE</a><em class="sc-etat">À partir de 1 500 € par an, par catégorie</em></li>
-        </ul>
+    <div class="sv-tarifs" data-apparait>
+      <div class="sv-tarifs-table">
+        <p class="sv-surtitre">Par prestation · prix affiché avant la commande</p>
+        <ul><li><a href="54-service-evaluation.html">Évaluer la conformité d'un produit</a><em class="sv-prix">À partir de 399 € par produit</em></li>
+          <li><a href="45-service-etiquetage.html">Préparer l'étiquetage et la documentation</a><em class="sv-prix">À partir de 1 200 € par produit</em></li>
+          <li><a href="55-service-marquage-ce.html">Préparer le marquage CE d'un produit</a><em class="sv-prix">À partir de 3 800 € par produit, essais non compris</em></li>
+          <li><a href="51-service-mandataire.html">Tenir le rôle de mandataire dans l'UE</a><em class="sv-prix">À partir de 1 500 € par an, par catégorie</em></li></ul>
       </div>
-      <div class="sc-tarifs-volume">
-        <p class="sc-etiquette">Enterprise · volume</p>
-        <p class="sc-grand">Une équipe conformité dédiée, qui connaît vos produits.</p>
+      <div class="sv-tarifs-volume">
+        <p class="sv-surtitre">Enterprise · volume</p>
+        <p class="sv-grand">Une équipe conformité dédiée, qui connaît vos produits.</p>
         <p>Vos modèles de déclaration et de documentation technique, repris à votre format.</p>
-        <ul>
-          <li>Un prix annoncé avant chaque commande</li>
-          <li>La veille offerte</li>
-          <li>Un interlocuteur dédié</li>
-        </ul>
-        <a class="sc-bouton sc-bouton-blanc" href="02-entreprise.html">Voir Enterprise <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <ul><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Un prix annoncé avant chaque commande</li><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>La veille offerte</li><li><svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3.5 8.5l3 3 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Un interlocuteur dédié</li></ul>
+        <a class="sv-bouton sv-bouton-blanc" href="02-entreprise.html">Voir Enterprise <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </div>
-    <div class="sc-autre"><p>Une autre prestation ? Un expert regarde votre catalogue avec vous.</p><a class="sc-bouton sc-bouton-clair" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Parler à un expert <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+    <div class="sv-autre"><p>Une autre prestation ? Un expert regarde votre catalogue avec vous.</p><a class="sv-bouton sv-bouton-clair" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Parler à un expert <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
   </div>
 </section>
 
-<!-- ═══ L'ÉQUIPE ET LE TÉMOIGNAGE ═══ portraits, noms, fonctions et liens de l'ancienne page ; la citation Decathlon telle
-     qu'elle y figurait, sur une photo. -->
-<section class="sc-s" id="experts">
-  <div class="sc-conteneur">
-    <h2 class="sc-titre">Les experts conformité qui relisent chaque livrable</h2>
-    <div class="sc-experts" data-apparait>
-      <figure class="sc-expert"><img src="img:darcial-grand" alt="Darcial Mondjo"><figcaption><b>Darcial Mondjo</b><span>Global Product Compliance &amp; Regulatory Strategy Advisor</span><a class="sc-lien" href="https://www.linkedin.com/in/darcial-mondjo/">LinkedIn</a></figcaption></figure>
-      <figure class="sc-expert"><img src="img:thezi-grand" alt="Thezi Mabuza"><figcaption><b>Thezi Mabuza</b><span>Former Acting Commissioner of the National Consumer Commission of South Africa</span><a class="sc-lien" href="https://www.linkedin.com/in/thezi-mabuza/">LinkedIn</a></figcaption></figure>
-      <div class="sc-experts-texte"><p>Vos modèles de déclaration et de documentation technique, repris à votre format.</p><a class="sc-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+<!-- ═══ LES EXPERTS ET LES CHIFFRES ═══ portraits, noms, fonctions et liens de la page d'avant ; chiffres canon de son bento. -->
+<section class="sv-s sv-s-teinte" id="experts">
+  <div class="sv-c">
+    <div class="sv-experts" data-apparait>
+      <div class="sv-experts-texte">
+        <h2>Les experts conformité qui relisent chaque livrable</h2>
+        <p class="sv-chapeau">Vos modèles de déclaration et de documentation technique, repris à votre format.</p>
+        <a class="sv-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Voir une démo <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <figure class="sv-expert"><img src="img:darcial-grand" alt="Darcial Mondjo"><figcaption><b>Darcial Mondjo</b><span>Global Product Compliance &amp; Regulatory Strategy Advisor</span><a class="sv-lien" href="https://www.linkedin.com/in/darcial-mondjo/">LinkedIn</a></figcaption></figure>
+      <figure class="sv-expert"><img src="img:thezi-grand" alt="Thezi Mabuza"><figcaption><b>Thezi Mabuza</b><span>Former Acting Commissioner of the National Consumer Commission of South Africa</span><a class="sv-lien" href="https://www.linkedin.com/in/thezi-mabuza/">LinkedIn</a></figcaption></figure>
     </div>
+    <dl class="sv-chiffres" id="preuve" data-apparait><div><dt>juridictions suivies</dt><dd>90</dd></div><div><dt>réglementations cartographiées</dt><dd>55 782</dd></div></dl>
   </div>
 </section>
 
-<!-- ═══ QUESTIONS ═══ la signature (réponse de la fiche 38), le prix et l'offert (principes de l'ancienne page), le cas
-     absent (phrase de l'ancien menu). -->
-<section class="sc-s" id="questions">
-  <div class="sc-conteneur">
-    <h2 class="sc-titre">Questions fréquentes</h2>
-    <div class="sc-faq" data-schema="faq" data-apparait>
+<!-- ═══ QUESTIONS ═══ -->
+<section class="sv-s" id="questions">
+  <div class="sv-c sv-questions">
+    <h2>Questions fréquentes</h2>
+    <div class="sv-faq" data-schema="faq" data-apparait>
       <details open><summary>Qui signe la déclaration ?</summary><p>Le fabricant, ou son mandataire. Pour le marquage CE, Cleo prépare la documentation technique et le projet de déclaration UE de conformité, que vous signez ; l'expert Cleo le relit et le valide.</p></details>
       <details><summary>Quelles pièces faut-il, sont-elles complètes, sont-elles valables ?</summary><p>L'évaluation de conformité produit, à partir de 399 € par produit : pour chaque obligation, la preuve attendue, ce qui est en place, ce qui manque encore et quoi faire.</p></details>
       <details><summary>Combien coûte une prestation ?</summary><p>Un prix annoncé avant la commande, jamais à l'heure : à partir de 399 € par produit pour l'évaluation, de 1 200 € par produit pour l'étiquetage, de 3 800 € par produit pour le marquage CE (essais non compris) et de 1 500 € par an et par catégorie pour le mandataire.</p></details>
@@ -240,14 +150,13 @@
   </div>
 </section>
 
-<!-- ═══ APPEL FINAL SUR PHOTO ═══ 16/09/2026, passe identité (IDENTITE.md 2.4) : ligne de manifeste (dossier de marque, planche 7), réservée à l'accueil et à Service ; libellé « Décrire mon produit » du lexique. -->
-<section class="section sy-final-photo" id="contact">
-  <figure>
-    <img src="img:chaines" alt="">
-    <div class="sy-final-texte">
+<!-- ═══ APPEL FINAL ═══ ligne de manifeste du dossier de marque (planche 7), libellé « Décrire mon produit » du lexique. -->
+<section class="sv-s sv-final-section" id="contact">
+  <div class="sv-c">
+    <div class="sv-final" data-apparait>
       <h2>Un nouveau pays n'est plus un projet. C'est une décision.</h2>
-      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Décrire mon produit</a></div>
+      <a class="sv-bouton sv-bouton-blanc" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Décrire mon produit <svg viewBox="0 0 16 16" width="16" height="16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     </div>
-  </figure>
+  </div>
 </section>
 <!--PIED-->

@@ -868,9 +868,17 @@ fs.cpSync(atlasSource, atlasSortie, { recursive: true })
    concaténé après composants.css. Personne ne touche composants.css pendant
    qu'une lane tourne : c'est ce qui rend les territoires réellement disjoints. */
 const dossierLanes = path.join(ICI, 'commun/lanes')
+const FEUILLE_SERVICE = 'v6-zzzzzzzzzzzzzzzzzzzzzzz-service-clair.css'
+const PAGES_REGIME_SERVICE = new Set(['37-compliance-service', '37-compliance-service-en'])
 const lanesCssBrut = fs.existsSync(dossierLanes)
   ? fs.readdirSync(dossierLanes).filter(f => f.endsWith('.css')).sort()
-      .map(f => `/* ── lane ${f} ── */\n` + fs.readFileSync(path.join(dossierLanes, f), 'utf8')).join('\n')
+      /* 12/10/2026, Naomie : « une offre SERVICE avec une vraie DA sympa, claire, et une offre DATA avec une vraie DA tech
+         comme maintenant ». Les pages de l'offre Service portent data-v6-regime="service" : tous les calques existants
+         (le régime sombre et ses vingt couches) les ignorent, seule la feuille service-clair les habille. Chaque règle
+         reçoit le même :not(), l'ordre entre calques ne change donc pas. Data et le reste du site ne bougent pas. */
+      .map(f => `/* ── lane ${f} ── */\n` + (f === FEUILLE_SERVICE
+        ? fs.readFileSync(path.join(dossierLanes, f), 'utf8')
+        : fs.readFileSync(path.join(dossierLanes, f), 'utf8').split('[data-cleo-ds="v6"]').join('[data-cleo-ds="v6"]:not([data-v6-regime])'))).join('\n')
       /* 23/09/2026, les 262 articles de blog portés : leur body porte data-v6-page="blog-<slug>", et les calques
          ciblent les articles page par page (12-article, 27-article-levee…). Mesuré avant ce rattachement : h1 88 px
          au lieu de 48, chapeau 14 px au lieu de 22, sommaire bleu sur fond blanc. Chaque sélecteur qui vise 12-article
@@ -1347,7 +1355,7 @@ ${structure}
 <link rel="stylesheet" href="/cleo.css">
 ${estApercu(nomSortie) ? '' : TRACEURS}
 </head>
-<body data-cleo-ds="v6" data-v6-family="${familleV6}" data-v6-page="${pageV6}">
+<body data-cleo-ds="v6" data-v6-family="${familleV6}" data-v6-page="${pageV6}"${PAGES_REGIME_SERVICE.has(pageV6) ? ' data-v6-regime="service"' : ''}>
 ${corps}
 <script>${mouvementJs}</script>
 <script>${corps.includes('data-globe') ? globeJs : ''}</script>
