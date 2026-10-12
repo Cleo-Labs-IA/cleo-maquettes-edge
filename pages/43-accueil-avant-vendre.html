@@ -1,214 +1,125 @@
 <!--NAV-->
-<!-- ═══ 17/09/2026, « https://general.legal, mix un peu avec ces animations, cette structure, tu vois comme c'est clair » ═══
-     Repris de general.legal (relevé au navigateur, scratchpad/general-legal) : la carte à deux choix du haut de page, la scène
-     signature (phrase géante qui se remplit mot à mot au défilement, photo collante au centre, cartes qui arrivent une à une :
-     le point de départ puis trois étapes numérotées, HowTo), la roue des domaines (ici les 27 catégories publiées sur la page
-     Secteur ; EN : liste anglaise « Consumer Product Scope » de Naomie, 14/09), la FAQ numérotée. Matière du site inchangée.
-     La phrase géante est le h2 de la méthode ; la scène de la peluche (cinq étapes) est remplacée par cette scène. -->
-<!-- ═══ ACCUEIL, MÉLANGE ═══ 17/09/2026, Naomie : « mix avec les améliorations précédentes et cette DA ».
-     Améliorations reprises de la version Codex (commit d3e98f3) : haut de page clarifié (sur-titre, chapeau aux trois livrables en
-     gras, « Réserver un échange » et « Voir un exemple de dossier », globe légendé), barre « Aller à », sections numérotées 01 à 05,
-     trois entrées à la première personne, dossier en trois questions, la méthode avec les experts, cartes de prestations,
-     intro de la FAQ, appel final avec l'équipe.
-     DA reprise de la version choisie à 16 h 30 (commit 478ba02) : cartes du site, dossier sur photo en bichromie avec sa source
-     flottante, scène de la peluche liée au défilement (seule animation de ce type), portraits des experts, bento aux chiffres
-     rayés et citation sur photo, chapitre photo des prestations, appel final sur photo.
-     Zone sombre unique : le dossier (comme la version Codex). Retirés comme dans la version Codex : « Pour qui », la bande
-     source, les actualités (les pages restent au pied). SEO : h1, mot-clé du chapeau, FAQ (FAQPage), étapes (HowTo) gardés. -->
-<section class="section ac-hero">
-  <div class="ac-conteneur ac-hero-grille">
-    <div class="ac-hero-texte">
-      <p class="ac-surtitre">Conformité produit mondiale</p>
-      <h1 class="ac-h1">Vendez partout, conformez-vous partout.</h1>
-      <p class="ac-lead">La conformité produit automatisée pour les marques internationales, relue par un expert.</p>
-      <div class="ac-choix"><a class="sy-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Réserver un échange <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+<!-- Accueil test guidé par les parcours PostHog du 24/09 au 12/10/2026 : Services en chemin principal,
+     Data en chemin secondaire, rendez-vous HubSpot conservé en fin de parcours. -->
+<section class="hp-bloc hp-hero">
+  <div class="hp-conteneur hp-hero-grille">
+    <div class="hp-hero-texte">
+      <p class="hp-surtitre">Services de conformité produit</p>
+      <h1>Vous voulez simplement que quelqu'un fasse le dossier.</h1>
+      <p class="hp-lead">Cleo le prépare, un expert conformité le relit et le valide. Un prix par dossier, annoncé avant la commande.</p>
+      <div class="hp-actions">
+        <a class="hp-bouton" data-home-primary href="37-compliance-service.html">Voir les prestations et les prix</a>
+        <a class="hp-lien" data-home-secondary href="39-data.html">Explorer la Data API</a>
+      </div>
+      <ul class="hp-reperes" aria-label="Ce qui est compris">
+        <li>Un prix par dossier, jamais à l'heure</li>
+        <li>Un expert relit</li>
+        <li>Veille comprise</li>
+      </ul>
+      <p class="hp-seo">Conformité produit automatisée pour les marques internationales.</p>
     </div>
-    <div class="ac-globe-scene"><!--GLOBE-PRODUITS--><p class="ac-globe-legende"><b>Accès aux marchés mondiaux</b></p></div>
+    <figure class="hp-hero-image">
+      <img src="img:personne-equipe" alt="">
+      <figcaption class="hp-sceau">Relue par un expert conformité</figcaption>
+    </figure>
   </div>
 </section>
 
-<section class="section ac-logos">
-  <div class="ac-conteneur ac-logos-ligne">
-    <p>Aux côtés de marques et de fabricants internationaux</p>
-    <!-- 16/09/2026 : NVIDIA retiré de la bande de logos. Aucun fichier de cleo-landing ne le trace comme client, et reference_cleo_print_client_clearance le classe hors autorisation. À remettre seulement si Naomie confirme la source. -->
-    <div class="ac-logos-imgs">
+<section class="hp-bloc hp-services" id="prestations">
+  <div class="hp-conteneur">
+    <header class="hp-entete">
+      <p class="hp-surtitre">Les prestations</p>
+      <h2>Choisissez la prestation qui correspond à votre produit.</h2>
+    </header>
+    <div class="hp-services-grille" role="list" aria-label="Prestations de conformité produit">
+      <article class="hp-service hp-bleu" data-home-service="evaluation" role="listitem">
+        <img class="hp-service-image" src="img:masse-lunettes" alt="">
+        <div class="hp-service-corps">
+          <h3>Évaluer la conformité d'un produit</h3>
+          <p>Quelle réglementation s'applique à mon produit, et mes pièces sont-elles complètes&nbsp;?</p>
+          <p class="hp-prix">À partir de 399&nbsp;€ par produit</p>
+          <a class="hp-bouton" href="54-service-evaluation.html">Voir la prestation</a>
+        </div>
+      </article>
+
+      <article class="hp-service hp-beurre" data-home-service="etiquetage" role="listitem">
+        <img class="hp-service-image" src="img:masse-shampooing" alt="">
+        <div class="hp-service-corps">
+          <h3>Préparer l'étiquetage et la documentation</h3>
+          <p>Quelles mentions afficher sur l'étiquette, la notice et l'emballage, et dans quelle langue&nbsp;?</p>
+          <p class="hp-prix">À partir de 1&#8239;200&nbsp;€ par produit</p>
+          <a class="hp-bouton" href="45-service-etiquetage.html">Voir la prestation</a>
+        </div>
+      </article>
+
+      <article class="hp-service hp-menthe" data-home-service="marquage-ce" role="listitem">
+        <img class="hp-service-image" src="img:masse-casque" alt="">
+        <div class="hp-service-corps">
+          <h3>Préparer le marquage CE d'un produit</h3>
+          <p>Quel dossier dois-je faire pour le marquage CE&nbsp;?</p>
+          <p class="hp-prix">À partir de 3&#8239;800&nbsp;€ par produit, essais non compris</p>
+          <a class="hp-bouton" href="55-service-marquage-ce.html">Voir la prestation</a>
+        </div>
+      </article>
+
+      <article class="hp-service hp-peche" data-home-service="mandataire-ue" role="listitem">
+        <img class="hp-service-image" src="img:masse-skate" alt="">
+        <div class="hp-service-corps">
+          <h3>Tenir le rôle de mandataire dans l'UE</h3>
+          <p>Vous vendez en Europe depuis l'étranger&nbsp;: qui répond pour votre produit dans l'Union&nbsp;?</p>
+          <p class="hp-prix">À partir de 1&#8239;500&nbsp;€ par an, par catégorie</p>
+          <a class="hp-bouton" href="51-service-mandataire.html">Voir la prestation</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="hp-bloc hp-preuve" id="methode">
+  <div class="hp-conteneur">
+    <div class="hp-logos" aria-label="Marques et fabricants accompagnés par Cleo">
       <img src="img:logo-decathlon" alt="Decathlon">
       <img src="img:logo-balzac" alt="Balzac Paris">
       <img src="img:logo-mercedes" alt="Mercedes-Benz">
       <img src="img:logo-loccitane" alt="L'Occitane">
     </div>
-  </div>
-</section>
-
-<nav class="ac-aller" aria-label="Accès rapide à la page">
-  <div class="ac-conteneur ac-aller-liens"><span>Aller à</span><a href="#methode">Voir la méthode</a><a href="#expertise">Les experts</a><a href="#besoins">Choisir mon besoin</a><a href="37-compliance-service.html">Voir l'offre</a></div>
-</nav>
-
-<!-- ═══ 01 LA MÉTHODE ═══ 17/09/2026, Naomie : « l'animation qui va avec "comprendre la méthode" n'est pas claire, "voir le
-     dossier" j'ai l'impression que ça sert à rien, et changer un peu tout de place que ce soit plus cohérent ». L'ancienne
-     section 02 (le dossier) et l'ancienne 03 (la méthode) ne font plus qu'une scène : la phrase se remplit, puis le dossier se
-     construit sous les yeux à mesure que les étapes s'allument. Cadrer remplit le produit et l'exigence ; Préparer la source,
-     la preuve attendue et l'état ; Relire la prochaine action et la mention de relecture. Les trois questions du dossier sont
-     portées par ses cases (source, preuve, action), d'où leur retrait. Sans animation liée au défilement (sous 1024 px,
-     « réduire les animations », navigateur sans support) : le dossier est posé rempli, à côté des étapes.
-     Mots retenus par Naomie le 17/09 : « every applicable rule » (titre de la méthode, nom du HowTo). -->
-<!-- ═══ LA PHRASE, EN GRAND ═══ 23/09/2026, Naomie : « les lettres animées, tu peux les remettre ». La phrase de mission
-     retrouve sa place avant la méthode et son plein écran : elle se remplit mot à mot au défilement, dans sa propre courte
-     scène (160vh), puis la scène 01 s'ouvre directement sur la méthode. -->
-<section class="section ac-chapitre ac-manifeste-scene" aria-label="Notre mission">
-  <div class="ac-manif-scene"><div class="ac-manif-collant">
-    <h2 class="ac-phrase-fin" style="--n:11"><span style="--i:0">Nous</span> <span style="--i:1">rendons</span> <span style="--i:2">la</span> <span style="--i:3">conformité</span> <span style="--i:4">produit</span> <span style="--i:5">mondiale</span> <span style="--i:6">accessible</span> <span style="--i:7">à</span> <span style="--i:8">toutes</span> <span style="--i:9">les</span> <span style="--i:10">entreprises.</span></h2>
-  </div></div>
-</section>
-
-<section class="section ac-chapitre ac-methode" id="methode">
-  <div class="ac-conteneur">
-    <div class="ac-scene" data-scene>
-      <span class="ac-ancre" id="dossier"></span>
-      <div class="ac-scene-collant">
-        <div class="ac-atelier">
-          <div class="ac-atelier-texte">
-            <p class="ac-tete-sur"><span class="ac-index">01</span>La méthode</p>
-            <h2 class="ac-h2">Chaque règle applicable, réunie dans un dossier.</h2>
-            <ol class="ac-etapes" data-schema="howto">
-              <li class="ac-etape ac-etape-1"><span>1</span><div><b>Cadrer</b><p>Le produit et son marché</p></div></li>
-              <li class="ac-etape ac-etape-2"><span>2</span><div><b>Préparer</b><p>Règles, preuves, action</p></div></li>
-              <li class="ac-etape ac-etape-3"><span>3</span><div><b>Relire</b><p>Un expert valide</p></div></li>
-            </ol>
-          </div>
-        <div class="ac-media">
-          <img class="ac-media-photo" src="img:masse-peluche@1600" alt="">
-                        <div class="ac-app" aria-label="Exemple de dossier de lancement pour une peluche">
-              <aside class="ac-app-nav">
-                <div class="ac-app-logo"><img src="img:cleo-logo" alt="Cleo"><span>Dossier de lancement</span></div>
-                <ul>
-                  <li>Vue d'ensemble</li>
-                  <li class="actif">Exigences et preuves</li>
-                  
-                  
-                  
-                  
-                </ul>
-              </aside>
-              <div class="ac-app-corps">
-                <p class="ac-app-surtitre ac-r1">Peluche · Union européenne</p>
-                <h3>Exigences et preuves</h3>
-                <div class="ac-app-avance" aria-hidden="true"><i></i></div>
-                <div class="ac-exigence">
-                  <div class="ac-exigence-tete"><b class="ac-r1">Sécurité mécanique du jouet</b><span class="ac-r1">Applicable</span></div>
-                  <div class="ac-exigence-grille">
-                    <div><small>Source</small><p class="ac-r2 ac-r2-1">Directive 2009/48/CE</p></div>
-                    <div><small>Preuve attendue</small><p class="ac-r2 ac-r2-2">Rapport d'essai</p></div>
-                    
-                    <div class="ac-action"><small>Prochaine action</small><p class="ac-r3 ac-r3-1">Demander le rapport à l'usine</p></div>
-                  </div>
-                </div>
-
-                <ul class="ac-suite" aria-label="La suite du dossier">
-                  <li class="ac-r3 ac-r3-2"><b>Migration d'éléments chimiques</b><span class="ac-suite-source">EN 71-3</span><span class="ac-etat ac-etat-ok">Complète</span></li>
-                  <li class="ac-r3 ac-r3-3"><b>Substances restreintes</b><span class="ac-suite-source">REACH, annexe XVII</span><span class="ac-etat ac-etat-attente">Pièce en attente</span></li>
-                  </ul>
-                <p class="ac-tampon"><span class="ac-tampon-attente" aria-hidden="true">En attente de relecture</span><span class="ac-tampon-relu"><svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true"><path d="M3 8.5l3.2 3L13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Relu par un expert conformité</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="hp-preuve-grille">
+      <div class="hp-preuve-texte">
+        <p class="hp-surtitre">Le dossier</p>
+        <h2>Chaque règle applicable, réunie dans un dossier.</h2>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ 02 L'EXPERTISE ═══ experts, preuve chiffrée (chiffres de l'API du 29/09 : 90 / 55 782) et roue des 27 catégories, sortis de la méthode.
-     Mots retenus par Naomie le 17/09 : « product compliance expertise », « regulatory knowledge ». -->
-<section class="section ac-chapitre ac-expertise" id="expertise">
-  <div class="ac-conteneur">
-    <div class="ac-tete" data-apparait><p class="ac-tete-sur"><span class="ac-index">02</span>L'expertise</p><h2 class="ac-h2">Une expertise en conformité produit derrière chaque dossier.</h2><p class="ac-lead">La connaissance réglementaire de 90 juridictions, relue par des experts conformité.</p></div>
-    <div class="ac-experts-grille">
-      <figure class="ac-portrait" data-apparait><img src="img:darcial-grand@640" alt="Darcial Mondjo"><figcaption><b><a href="https://www.linkedin.com/in/darcial-mondjo/">Darcial M.</a></b><span>Global Product Compliance &amp; Regulatory Strategy Advisor</span></figcaption></figure>
-      <figure class="ac-portrait" data-apparait><img src="img:thezi-grand@640" alt="Thezi Mabuza"><figcaption><b><a href="https://www.linkedin.com/in/thezi-mabuza/">Thezi M.</a></b><span>Former Acting Commissioner of the National Consumer Commission of South Africa</span></figcaption></figure>
-      <ol class="ac-roles" data-apparait>
-        <li><span>01</span>Cleo prépare le dossier</li>
-        <li><span>02</span>Les laboratoires réalisent les essais</li>
-        <li><span>03</span>Votre organisation décide</li>
+      <ol class="hp-etapes" data-schema="howto">
+        <li class="hp-etape">
+          <span>01</span>
+          <div><b>Vous décrivez le produit</b><p>Le produit, les marchés visés et les documents dont vous disposez.</p></div>
+        </li>
+        <li class="hp-etape">
+          <span>02</span>
+          <div><b>L'agent prépare</b><p>Les textes en vigueur, les preuves attendues, ce qui manque encore et quoi faire.</p></div>
+        </li>
+        <li class="hp-etape">
+          <span>03</span>
+          <div><b>Un expert relit</b><p>Un expert conformité relit et valide le livrable avant la remise.</p></div>
+        </li>
       </ol>
     </div>
-    <div class="sy-bento" data-apparait>
-      <figure class="sy-bento-photo">
-        <img src="img:flacons@760" alt="">
-        <blockquote>« Leur moteur d'IA agit comme un traducteur intelligent qui filtre le bruit pour extraire une donnée structurée. »</blockquote>
-        <figcaption><img class="sy-avatar" src="img:philippine" alt=""><b>Philippine Tamic</b><span>Decathlon</span></figcaption>
-      </figure>
-      <div class="sy-bento-creme"><b class="sy-chiffre-raye">90</b><span>juridictions suivies</span></div>
-      <div class="sy-bento-bleu">
-        <b class="sy-chiffre-raye">55 782</b><span>réglementations cartographiées</span>
-        <div class="sy-fiches" aria-hidden="true">
-          <dl class="sy-fiche"><dt>Sécurité des jouets</dt><dd><span>Marché</span><span>UE</span></dd><dd><span>Texte</span><span>Officiel</span></dd></dl>
-          <dl class="sy-fiche"><dt>Rapport d'essai</dt><dd><span>Source</span><span>Usine</span></dd><dd><span>État</span><span>À joindre</span></dd></dl>
-        </div>
-      </div>
-    </div>
-    <div class="ac-roue-bloc" data-apparait>
-      <div class="ac-roue-texte"><h3>27 catégories de produits de consommation, des jouets à l'automobile.</h3><p>Les règles de vos marchés, rattachées à leur texte officiel.</p><a class="ac-lien" href="04-secteur.html#perimetre">Voir le périmètre <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-      <div class="ac-roue" aria-hidden="true"><ul class="ac-roue-liste"><li>Jouets</li><li>Produits pour enfants</li><li>Articles de sport</li><li>Bijoux, lunettes de soleil, montres et sacs</li><li>Produits vus à la télévision</li><li>Saisonnier et fêtes</li><li>Loisirs créatifs, tissus et couture</li><li>Mobilier d'intérieur</li><li>Extérieur</li><li>Puériculture</li><li>Papeterie</li><li>Cuisine et arts de la table</li><li>Petit électroménager</li><li>Linge de lit et de bain</li><li>Décoration intérieure</li><li>Rangement et organisation</li><li>Électronique</li><li>Matériel électrique</li><li>Éclairage</li><li>Quincaillerie et peinture</li><li>Automobile</li><li>Animaux de compagnie</li><li>Hygiène, beauté et cosmétiques</li><li>Produits chimiques ménagers</li><li>Hardlines</li><li>Softlines</li><li>Autres produits de la maison</li><li>Jouets</li><li>Produits pour enfants</li><li>Articles de sport</li><li>Bijoux, lunettes de soleil, montres et sacs</li><li>Produits vus à la télévision</li><li>Saisonnier et fêtes</li><li>Loisirs créatifs, tissus et couture</li><li>Mobilier d'intérieur</li><li>Extérieur</li><li>Puériculture</li><li>Papeterie</li><li>Cuisine et arts de la table</li><li>Petit électroménager</li><li>Linge de lit et de bain</li><li>Décoration intérieure</li><li>Rangement et organisation</li><li>Électronique</li><li>Matériel électrique</li><li>Éclairage</li><li>Quincaillerie et peinture</li><li>Automobile</li><li>Animaux de compagnie</li><li>Hygiène, beauté et cosmétiques</li><li>Produits chimiques ménagers</li><li>Hardlines</li><li>Softlines</li><li>Autres produits de la maison</li></ul></div>
-    </div>
   </div>
 </section>
 
-
-<!-- ═══ RÈGLE DES IMAGES DE L'ACCUEIL ═══ 18/09/2026, Naomie : « c'est mal fait, tu mixes tout, tu mets au
-     hasard à chaque endroit ». Trois familles, trois emplois, aucune photo deux fois :
-     1. « la masse et l'unique » (monochrome, objet bleu) = LA MATIÈRE PRODUIT → cartes des trois entrées,
-        visuels des prestations, rangée des catégories, photo du dossier de la méthode ;
-     2. les photos couleur du terrain (port, camion, atelier, laboratoire) = LE MONDE DU CLIENT → uniquement
-        la bande de respiration ci-dessous, où elles sont réunies ;
-     3. les personnes (portraits tramés, équipe) = L'HUMAIN → section Expertise et appel final. -->
-<!-- ═══ 03 BESOINS ═══ textes de la version Codex, cartes du site ; placés juste avant les prestations qu'ils ouvrent. -->
-<section class="section ac-chapitre ac-facons ac-besoins" id="besoins">
-  <div class="ac-conteneur">
-    <div class="ac-tete" data-apparait><p class="ac-tete-sur"><span class="ac-index">03</span>Par où commencer</p><h2 class="ac-h2">Commencez par votre besoin.</h2><p class="ac-lead">Prestation à prix fixe, donnée par API, ou base de règles branchée à vos systèmes.</p></div>
-    <div class="ac-facons-grille" data-apparait>
-      <a class="sy-carte ac-facon ac-besoin" href="37-compliance-service.html"><img class="ac-besoin-img" src="img:atelier-velos@860" alt=""><span class="ac-besoin-sur">Services</span><h3>J'ai un produit à mettre en conformité.</h3><p>Cleo prépare le dossier et un expert conformité le relit avant de vous le remettre.</p><span class="sy-lien">Voir les prestations <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-      <a class="sy-carte ac-facon ac-besoin" href="39-data.html"><img class="ac-besoin-img" src="img:camion-route@860" alt=""><span class="ac-besoin-sur">Data</span><h3>Je construis avec la donnée réglementaire.</h3><p>Intégrez les règles à votre produit avec l'API ou le serveur MCP de Cleo.</p><span class="sy-lien">Explorer la Data API <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-      <a class="sy-carte ac-facon ac-besoin" href="02-entreprise.html"><img class="ac-besoin-img" src="img:port-conteneurs@860" alt=""><span class="ac-besoin-sur">Enterprise</span><h3>Je pilote un grand catalogue.</h3><p>Reliez la base de règles à vos systèmes et gardez vos propres formats.</p><span class="sy-lien">Parler à l'équipe <svg viewBox="0 0 16 12" width="14" height="11" fill="none" aria-hidden="true"><path d="M1 6h13M9.5 1.5 14 6l-4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
-    </div>
+<section class="hp-bloc hp-final" id="contact">
+  <div class="hp-conteneur hp-routes">
+    <article class="hp-route hp-route-service">
+      <p class="hp-surtitre">Services</p>
+      <h2>Une autre prestation&nbsp;?</h2>
+      <p>Un expert regarde votre catalogue avec vous.</p>
+      <a class="hp-bouton" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Parler à un expert</a>
+    </article>
+    <article class="hp-route hp-route-data">
+      <p class="hp-surtitre">Data</p>
+      <h2>Vous construisez avec la donnée réglementaire&nbsp;?</h2>
+      <p>Intégrez les règles à votre produit avec l'API ou le serveur MCP de Cleo.</p>
+      <a class="hp-lien" href="39-data.html">Explorer Data</a>
+    </article>
   </div>
 </section>
-
-
-<!-- ═══ 05 QUESTIONS ═══ intro de la version Codex, les 10 questions (FAQPage). -->
-<section class="section ac-chapitre ac-questions" id="questions">
-  <div class="ac-conteneur ac-questions-grille">
-    <div class="ac-entete" data-apparait>
-      <p class="ac-tete-sur"><span class="ac-index">04</span>Les questions</p>
-      <h2 class="ac-h2">Les réponses avant le rendez-vous.</h2>
-      <p class="ac-lead">Les questions qu'on nous pose avant de commencer.</p>
-    </div>
-    <div class="faq ac-faq" data-schema="faq" data-apparait>
-      <details open><summary>Qu'est-ce que Cleo Labs ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Cleo Labs automatise la conformité produit pour les marques internationales. Pour chaque produit et chaque marché, Cleo vous dit ce qui s'applique, ce qui manque encore et quoi faire, et un expert conformité relit le dossier avant de vous le remettre. L'entreprise, Cleo Corp SAS, est basée à Neuilly-sur-Seine.</div></details>
-      <details><summary>Quelle réglementation s'applique à mon produit ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Cela dépend du produit et des marchés où vous le vendez. Un jouet vendu dans l'Union relève par exemple de la directive 2009/48/CE sur la sécurité des jouets et de ses normes d'essai EN 71. Décrivez votre produit : Cleo relève les textes qui s'appliquent, marché par marché, et cite chaque texte officiel.</div></details>
-      <details><summary>Quels produits et quels pays couvrez-vous ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Les produits de consommation, des jouets à l'automobile, dans 90 juridictions, dans l'Union et hors de l'Union. La base de Cleo compte 55 782 réglementations cartographiées, 3 098 autorités réglementaires suivies et 183 sources officielles.</div></details>
-      <details><summary>En quoi Cleo est-elle différente d'une veille réglementaire ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Une veille vous envoie des textes. Cleo part de votre produit : les règles qui s'appliquent, les essais, les mentions à afficher et les documents des fournisseurs, réunis dans un seul dossier qu'un expert conformité relit.</div></details>
-      <details><summary>Combien coûte une prestation ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Un prix annoncé avant la commande, jamais à l'heure : à partir de 399 € par produit pour l'évaluation, de 1 200 € par produit pour l'étiquetage, de 3 800 € par produit pour le marquage CE (essais non compris) et de 1 500 € par an et par catégorie pour le mandataire.</div></details>
-      <details><summary>Qui signe la déclaration de conformité ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Le fabricant, ou son mandataire. Cleo prépare la documentation technique et le projet de déclaration UE de conformité ; un expert conformité le relit et le valide, et votre organisation décide.</div></details>
-      <details><summary>Qu'est-ce que MARIA ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">MARIA (Multi-Agent Regulatory Intelligence Architecture) est l'architecture multi-agents de Cleo. Elle est décrite dans un article de recherche publié en février 2026 : 93 à 97 % de précision sur les textes contraignants, évaluée sur 7 676 réglementations.</div></details>
-      <details><summary>Qui sont les investisseurs de Cleo Labs ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Cleo a levé 1,5 M€. Le tour est mené par Larry Berger, fondateur d'Amplify, avec la participation de Kima Ventures et de La Financière Saint-James.</div></details>
-      <details><summary>Où sont hébergées nos données ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Chez Scaleway, en région Paris, dans l'Union européenne. Vos données n'entraînent aucun modèle.</div></details>
-      <details><summary>Comment commencer ?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Réservez 30 minutes avec l'équipe et décrivez votre produit : vous voyez ce que Cleo relève sur votre propre catalogue.</div></details>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ APPEL FINAL ═══ sur photo (DA), texte de la version Codex, l'équipe (portraits de la page 02). -->
-<section class="section sy-final-photo ac-final" id="contact">
-  <figure>
-    <img src="img:equipe@900" alt="">
-    <div class="sy-final-texte">
-      <h2>Parlez-nous de votre produit et de votre marché cible.</h2>
-      <p>Nous vous orientons vers ce qui correspond à votre besoin.</p>
-      <div class="ac-equipe"><span class="ac-avatars"><img src="img:anaelle" alt="Anaëlle Guez"><img src="img:naomie" alt="Naomie Halioua"><img src="img:alex" alt="Alexandre Bloch"></span><span>30 minutes avec l'équipe</span></div>
-      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Réserver un échange</a></div>
-    </div>
-  </figure>
-</section>
-
 <!--PIED-->

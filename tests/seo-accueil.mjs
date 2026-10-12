@@ -24,6 +24,7 @@ const PAGES = { fr: '43-accueil-avant-vendre.html', en: '43-accueil-avant-vendre
 const EXCEPTIONS = {
   types: {
     VideoObject: "l'accueil V6 n'a pas de vidéo. Une donnée structurée ne décrit que du contenu visible (spec de migration V6, « Contrat SEO/GEO bloquant »).",
+    FAQPage: "retirée de la home test le 12/10/2026 : les parcours PostHog privilégient Services et la page courte renvoie les questions détaillées à l'offre Service. Aucun balisage FAQ ne subsiste sans contenu visible.",
   },
   organisation: {
     slogan: 'retiré dans commun/seo.json (_retire) : il inscrit une marque tierce dans la définition de Cleo Labs.',
@@ -144,7 +145,9 @@ function verifier(html, ref) {
   const liens = new Set(m.liens)
   const liensManquants = ref.liens.filter(l => !liens.has(l) && !(l in EXCEPTIONS.liens))
   ok('liens internes', liensManquants.length === 0, `manquent : ${liensManquants.join(', ')}`)
-  ok('volume de texte', m.mots >= Math.round(ref.mots * 0.9), `${m.mots} mots contre ${ref.mots} en ligne`)
+  /* 12/10/2026 : manifeste, roue et dix FAQ retirés. La home garde au moins la moitié du volume que Google lisait ;
+     le parcours Service-first est protégé séparément par tests/home-posthog.mjs. */
+  ok('volume de texte', m.mots >= Math.round(ref.mots * 0.5), `${m.mots} mots contre ${ref.mots} en ligne`)
   ok('aucun lien vers la préversion', !m.vercel, 'un lien mène à un hôte vercel.app')
   /* Depuis le 23/09/2026 la page est destinée à la production : elle s'indexe, seul /apercu reste hors index. */
   ok('page indexable', /index,follow/.test(m.metas.robots || ''), `robots « ${m.metas.robots} »`)
@@ -184,8 +187,8 @@ for (const [langue, fichier] of Object.entries(PAGES)) {
   const alterations = [
     ['titre', h => h.replace(/<title>[\s\S]*?<\/title>/, '<title>Accueil | Cleo Labs</title>')],
     ['liens internes', h => h.replace(/href="[^"]*\/(fr|en)\/jurisdictions\/european-union"/g, 'href="#"')],
-    ['types structurés', h => h.replace(/<script type="application\/ld\+json">(?=\{"@context":"https:\/\/schema\.org","@type":"FAQPage")[\s\S]*?<\/script>/, '')],
-    ['FAQ visible', h => h.replace(/(<div class="reponse">)[\s\S]*?(<\/div>)/, '$1$2')],
+    ['types structurés', h => h.replace(/<script type="application\/ld\+json">(?=\{"@context":"https:\/\/schema\.org","@type":"HowTo")[\s\S]*?<\/script>/, '')],
+    ['étapes visibles', h => h.replace(/(<li class="hp-etape"[^>]*>[\s\S]*?<p>)[\s\S]*?(<\/p>)/, '$1$2')],
     ['og:image', h => h.replace(/<meta property="og:image" content="[^"]*">/, '')],
     ['page indexable', h => h.replace(/<meta name="robots" content="[^"]*">/, '<meta name="robots" content="noindex,nofollow">')],
   ]
