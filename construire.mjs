@@ -869,7 +869,7 @@ fs.cpSync(atlasSource, atlasSortie, { recursive: true })
    qu'une lane tourne : c'est ce qui rend les territoires réellement disjoints. */
 const dossierLanes = path.join(ICI, 'commun/lanes')
 const FEUILLE_SERVICE = 'v6-zzzzzzzzzzzzzzzzzzzzzzz-service-clair.css'
-const PAGES_REGIME_SERVICE = new Set(['37-compliance-service', '37-compliance-service-en'])
+const PAGES_REGIME_SERVICE = new Set(['37-compliance-service', '37-compliance-service-en', '43-accueil-avant-vendre', '43-accueil-avant-vendre-en'])
 const lanesCssBrut = fs.existsSync(dossierLanes)
   ? fs.readdirSync(dossierLanes).filter(f => f.endsWith('.css')).sort()
       /* 12/10/2026, Naomie : « une offre SERVICE avec une vraie DA sympa, claire, et une offre DATA avec une vraie DA tech
