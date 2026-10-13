@@ -1,5 +1,19 @@
 {
  "pages": {
+  "blog-us-hand-warmer-counterfeit-ul-mark-2026.html": {
+   "titre": "Le 1er octobre, la CPSC a rappelé deux autres | Cleo Labs",
+   "og_titre": "Le 1er octobre, la CPSC a rappelé deux autres marques de chauffe-mains rechargeables, environ 82 600 unités au total, pour le même risque d'incendie lié aux batteries lithium-ion qui avait motivé un rappel de 1,5 million d'unités avec un décès en juillet : six jours plus tôt, UL avait déjà découvert qu'une quatrième marque de chauffe-mains affichait sur Amazon un marquage de sécurité falsifié | Cleo Labs",
+   "description": "Le 1er octobre 2026, la CPSC a rappelé les chauffe-mains rechargeables HotHands de Kobayashi et ceux de Gobi Heat, environ 82 600 unités au total, pour le même risque lié aux batteries lithium-ion qui avait motivé le rappel de 1,5 million d'unités d'OCOOPA Direct deux mois plus tôt, après un décès et 350 brûlures. Aucun des trois rappels de 2026 ne cite de norme de sécurité de la CPSC enfreinte, car aucune norme de ce type n'existe pour cette catégorie de produits. Six jours avant les rappels d'octobre, UL Solutions avait signalé séparément qu'une quatrième marque de chauffe-mains vendue sur Amazon portait un marquage de certification UL qu'elle n'avait jamais délivré.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr/blog/us-hand-warmer-counterfeit-ul-mark-2026"
+  },
+  "blog-us-hand-warmer-counterfeit-ul-mark-2026-en.html": {
+   "titre": "On 1 October, CPSC recalled two more | Cleo Labs",
+   "og_titre": "On 1 October, CPSC recalled two more rechargeable hand warmer brands, about 82,600 units combined, for the same lithium-ion fire hazard behind a 1.5-million-unit recall with one death in July: six days earlier, UL had already found a fourth hand-warmer brand's safety mark on Amazon was fake | Cleo Labs",
+   "description": "On 1 October 2026, CPSC recalled Kobayashi's HotHands and Gobi Heat rechargeable hand warmers, about 82,600 units combined, for the same lithium-ion battery hazard behind a 1.5-million-unit OCOOPA Direct recall two months earlier that followed one death and 350 burn injuries. None of the three 2026 recalls cites a violated CPSC safety standard, because none exists for this product category. Six days before the October recalls, UL Solutions had separately warned that a fourth hand-warmer brand sold on Amazon carried a UL certification mark it never issued.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/en/blog/us-hand-warmer-counterfeit-ul-mark-2026"
+  },
   "blog-indonesia-bpom-cosmetic-ingredient-deadline-2026.html": {
    "titre": "L'échéance ingrédients cosmétiques de | Cleo Labs",
    "og_titre": "L'échéance ingrédients cosmétiques de l'Indonésie est passée le 3 octobre, deux semaines avant celle que tout le monde surveille : le BPOM fait appliquer sa liste de substances interdites mise à jour en refusant le renouvellement d'une notification, pas en retirant quoi que ce soit des rayons | Cleo Labs",
@@ -2102,6 +2116,106 @@
   }
  },
  "structure": {
+  "blog-us-hand-warmer-counterfeit-ul-mark-2026.html": {
+   "types": [
+    "TechArticle",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "Le 1er octobre, la CPSC a rappelé deux autres marques de chauffe-mains rechargeables, environ 82 600 unités au total, pour le même risque d'incendie lié aux batteries lithium-ion qui avait motivé un rappel de 1,5 million d'unités avec un décès en juillet : six jours plus tôt, UL avait déjà découvert qu'une quatrième marque de chauffe-mains affichait sur Amazon un marquage de sécurité falsifié",
+     "description": "Le 1er octobre 2026, la CPSC a rappelé les chauffe-mains rechargeables HotHands de Kobayashi et ceux de Gobi Heat, environ 82 600 unités au total, pour le même risque lié aux batteries lithium-ion qui avait motivé le rappel de 1,5 million d'unités d'OCOOPA Direct deux mois plus tôt, après un décès et 350 brûlures. Aucun des trois rappels de 2026 ne cite de norme de sécurité de la CPSC enfreinte, car aucune norme de ce type n'existe pour cette catégorie de produits. Six jours avant les rappels d'octobre, UL Solutions avait signalé séparément qu'une quatrième marque de chauffe-mains vendue sur Amazon portait un marquage de certification UL qu'elle n'avait jamais délivré."
+    },
+    "TechArticle": {
+     "headline": "Le 1er octobre, la CPSC a rappelé deux autres marques de chauffe-mains rechargeables, environ 82 600 unités au total, pour le même risque d'incendie lié aux batteries lithium-ion qui avait motivé un rappel de 1,5 million d'unités avec un décès en juillet : six jours plus tôt, UL avait déjà découvert qu'une quatrième marque de chauffe-mains affichait sur Amazon un marquage de sécurité falsifié",
+     "description": "Le 1er octobre 2026, la CPSC a rappelé les chauffe-mains rechargeables HotHands de Kobayashi et ceux de Gobi Heat, environ 82 600 unités au total, pour le même risque lié aux batteries lithium-ion qui avait motivé le rappel de 1,5 million d'unités d'OCOOPA Direct deux mois plus tôt, après un décès et 350 brûlures. Aucun des trois rappels de 2026 ne cite de norme de sécurité de la CPSC enfreinte, car aucune norme de ce type n'existe pour cette catégorie de produits. Six jours avant les rappels d'octobre, UL Solutions avait signalé séparément qu'une quatrième marque de chauffe-mains vendue sur Amazon portait un marquage de certification UL qu'elle n'avait jamais délivré.",
+     "datePublished": "2026-10-09",
+     "author": {
+      "@type": "Person",
+      "name": "Naomie Halioua",
+      "url": "https://www.linkedin.com/in/naomie-halioua/"
+     },
+     "publisher": {
+      "@id": "https://www.cleolabs.co/#organization"
+     },
+     "inLanguage": "fr-FR",
+     "articleSection": "Conformité produit"
+    },
+    "BreadcrumbList": {
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Accueil",
+       "item": "https://www.cleolabs.co/fr"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Blog",
+       "item": "https://www.cleolabs.co/fr/blog"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Le 1er octobre, la CPSC a rappelé deux autres marques de chauffe-mains rechargeables, environ 82 600 unités au total, pour le même risque d'incendie lié aux batteries lithium-ion qui avait motivé un rappel de 1,5 million d'unités avec un décès en juillet : six jours plus tôt, UL avait déjà découvert qu'une quatrième marque de chauffe-mains affichait sur Amazon un marquage de sécurité falsifié",
+       "item": "https://www.cleolabs.co/fr/blog/us-hand-warmer-counterfeit-ul-mark-2026"
+      }
+     ]
+    }
+   }
+  },
+  "blog-us-hand-warmer-counterfeit-ul-mark-2026-en.html": {
+   "types": [
+    "TechArticle",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "On 1 October, CPSC recalled two more rechargeable hand warmer brands, about 82,600 units combined, for the same lithium-ion fire hazard behind a 1.5-million-unit recall with one death in July: six days earlier, UL had already found a fourth hand-warmer brand's safety mark on Amazon was fake",
+     "description": "On 1 October 2026, CPSC recalled Kobayashi's HotHands and Gobi Heat rechargeable hand warmers, about 82,600 units combined, for the same lithium-ion battery hazard behind a 1.5-million-unit OCOOPA Direct recall two months earlier that followed one death and 350 burn injuries. None of the three 2026 recalls cites a violated CPSC safety standard, because none exists for this product category. Six days before the October recalls, UL Solutions had separately warned that a fourth hand-warmer brand sold on Amazon carried a UL certification mark it never issued."
+    },
+    "TechArticle": {
+     "headline": "On 1 October, CPSC recalled two more rechargeable hand warmer brands, about 82,600 units combined, for the same lithium-ion fire hazard behind a 1.5-million-unit recall with one death in July: six days earlier, UL had already found a fourth hand-warmer brand's safety mark on Amazon was fake",
+     "description": "On 1 October 2026, CPSC recalled Kobayashi's HotHands and Gobi Heat rechargeable hand warmers, about 82,600 units combined, for the same lithium-ion battery hazard behind a 1.5-million-unit OCOOPA Direct recall two months earlier that followed one death and 350 burn injuries. None of the three 2026 recalls cites a violated CPSC safety standard, because none exists for this product category. Six days before the October recalls, UL Solutions had separately warned that a fourth hand-warmer brand sold on Amazon carried a UL certification mark it never issued.",
+     "datePublished": "2026-10-09",
+     "author": {
+      "@type": "Person",
+      "name": "Naomie Halioua",
+      "url": "https://www.linkedin.com/in/naomie-halioua/"
+     },
+     "publisher": {
+      "@id": "https://www.cleolabs.co/#organization"
+     },
+     "inLanguage": "en-US",
+     "articleSection": "Product Compliance"
+    },
+    "BreadcrumbList": {
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.cleolabs.co/en"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Blog",
+       "item": "https://www.cleolabs.co/en/blog"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "On 1 October, CPSC recalled two more rechargeable hand warmer brands, about 82,600 units combined, for the same lithium-ion fire hazard behind a 1.5-million-unit recall with one death in July: six days earlier, UL had already found a fourth hand-warmer brand's safety mark on Amazon was fake",
+       "item": "https://www.cleolabs.co/en/blog/us-hand-warmer-counterfeit-ul-mark-2026"
+      }
+     ]
+    }
+   }
+  },
   "blog-indonesia-bpom-cosmetic-ingredient-deadline-2026.html": {
    "types": [
     "TechArticle",
