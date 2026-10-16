@@ -1,0 +1,4 @@
+# Leaflet 1.9.4 publishes these two files with CRLF. Keep upstream bytes exact:
+# leaflet.css is protected by the SRI digest recorded in PROVENANCE.md.
+leaflet.css binary
+LICENSE.leaflet binary

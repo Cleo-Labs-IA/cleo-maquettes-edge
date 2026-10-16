@@ -135,13 +135,13 @@ code,kbd,samp,pre{font-family:var(--font); font-variant-numeric:tabular-nums;
 .t-titre-page{font-size:clamp(1.875rem, 2.8vw, 2.5rem); font-weight:500; letter-spacing:-0.02em; line-height:1.15; color:var(--c-ink)}
 .t-display{font-size:clamp(1.5rem, 2.2vw, 2rem); font-weight:400; letter-spacing:-0.01em; line-height:1.2; color:var(--c-ink)}
 .t-h1{font-size:clamp(1.25rem, 1.7vw, 1.5rem); font-weight:400; letter-spacing:-0.01em; line-height:1.25; color:var(--c-ink)}
-.t-h2{font-size:1.125rem; font-weight:500; letter-spacing:-0.005em; line-height:1.4; color:var(--c-ink)}
+.t-h2{font-size:1rem; font-weight:500; letter-spacing:-0.005em; line-height:1.4; color:var(--c-ink)}
 .t-h3{font-size:1rem; font-weight:500; letter-spacing:0; line-height:1.4; color:var(--c-ink)}
-.t-body{font-size:0.9375rem; font-weight:400; line-height:1.60; color:var(--c-text-2)}
+.t-body{font-size:0.875rem; font-weight:400; line-height:1.60; color:var(--c-text-2)}
 .t-body-lg{font-size:1rem; font-weight:400; line-height:1.7; color:var(--c-text-2)}
-.t-caption{font-size:0.8125rem; font-weight:400; line-height:1.5; color:var(--c-text-3)}
+.t-caption{font-size:0.875rem; font-weight:400; line-height:1.5; color:var(--c-text-3)}
 /* 12 px et pas 10 : à 10 px en capitales, l'étiquette ne se lit plus (mesuré le 03/09, 13 par page d'accueil). */
-.t-label{font-size:0.8125rem; font-weight:600; letter-spacing:0.11em; text-transform:uppercase; color:var(--c-text-3)}
+.t-label{font-size:0.875rem; font-weight:600; letter-spacing:0.11em; text-transform:uppercase; color:var(--c-text-3)}
 .attenue{color:var(--c-text-3)}
 
 /* ── Champs ── */

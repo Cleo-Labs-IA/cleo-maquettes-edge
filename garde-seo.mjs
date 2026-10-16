@@ -15,8 +15,9 @@
    ════════════════════════════════════════════════════════════════ */
 import fs from 'fs'
 import path from 'path'
+import { fileURLToPath } from 'url'
 
-const ICI = '/Users/naomiehalioua/cleo-maquettes-edge'
+const ICI = path.dirname(fileURLToPath(import.meta.url))
 const PROD = 'https://www.cleolabs.co'
 const mode = process.argv[2] || 'capture'
 const base = process.argv[3] || PROD
@@ -115,18 +116,33 @@ if (mode === 'capture') {
 
 // ── VÉRIFICATION : toute DÉGRADATION est une erreur. Un gain ne l'est pas.
 const ref = JSON.parse(fs.readFileSync(path.join(ICI, 'garde/reference.json'), 'utf8'))
-const casses = [], gains = []
-const dit = (u, quoi) => casses.push(`  ${u}  ${quoi}`)
+/* Les exceptions ASSUMÉES : { "motif": "JSON-LD VideoObject", "raison": "…" }. Un écart dont le libellé contient
+   le motif est sorti des dégradations et listé à part, avec sa raison, pour que rien ne passe en silence. */
+const exceptions = fs.existsSync(path.join(ICI, 'garde/exceptions.json')) ? JSON.parse(fs.readFileSync(path.join(ICI, 'garde/exceptions.json'), 'utf8')) : []
+const casses = [], gains = [], redirigees = [], assumees = []
+const dit = (u, quoi) => { const ex = exceptions.find(e => (u + '  ' + quoi).includes(e.motif)); (ex ? assumees : casses).push(`  ${u}  ${quoi}${ex ? `  (assumé : ${ex.raison})` : ''}`) }
 
+/* Une URL sortie du sitemap n'est perdue que si elle ne mène plus nulle part : une redirection
+   permanente vers une page en 200 transmet le référencement. On la suit et on la compte à part. */
+const prendreSansSuivre = async (url) => { try { const r = await fetch(url, { headers: { 'User-Agent': UA }, redirect: 'manual' }); return { code: r.status, vers: r.headers.get('location') } } catch { return { code: 0 } } }
 for (const [u, a] of Object.entries(ref.pages)) {
   const b = pages[u]
-  if (!b) { dit(u, 'URL DISPARUE du sitemap'); continue }
+  if (!b) {
+    const r = await prendreSansSuivre(base + u)
+    if ([301, 308].includes(r.code) && r.vers) {
+      const cibleAbs = r.vers.startsWith('http') ? r.vers : base + r.vers
+      const c = await prendre(cibleAbs)
+      if (c.code === 200) { redirigees.push(`  ${u}  →  ${r.vers}`); continue }
+      dit(u, `redirigée vers ${r.vers} qui rend ${c.code}`); continue
+    }
+    dit(u, `URL DISPARUE du sitemap (rend ${r.code})`); continue
+  }
   if (a.code === 200 && b.code !== 200) dit(u, `passe de 200 à ${b.code}`)
   if (a.titre && !b.titre) dit(u, 'titre perdu')
   else if (a.titre && b.titre !== a.titre) gains.push(`  ${u}  titre change : « ${a.titre.slice(0,40)} » → « ${b.titre.slice(0,40)} »`)
   if (a.description && !b.description) dit(u, 'meta description perdue')
   if (a.canonical && !b.canonical) dit(u, 'canonical perdu')
-  else if (a.canonical && b.canonical !== a.canonical) dit(u, `canonical dévié : ${a.canonical} → ${b.canonical}`)
+  else if (a.canonical && b.canonical !== a.canonical) { if (b.canonical === PROD + u) gains.push(`  ${u}  canonical corrigé : ${a.canonical} → lui-même`); else dit(u, `canonical dévié : ${a.canonical} → ${b.canonical}`) }
   for (const h of a.hreflang) if (!b.hreflang.includes(h)) dit(u, `hreflang « ${h} » perdu`)
   for (const o of a.og) if (!b.og.includes(o)) dit(u, `og:${o} perdu`)
   for (const t of a.ld_types) {
@@ -141,10 +157,13 @@ for (const [u, a] of Object.entries(ref.pages)) {
   if (!a.noindex && b.noindex) dit(u, 'NOINDEX APPARU sur une page indexable')
 }
 for (const c of ref.robots_crawlers) if (!crawlers.includes(c)) dit('robots.txt', `agent « ${c} » retiré`)
-if (urls.length < ref.n_urls_sitemap) dit('sitemap', `${ref.n_urls_sitemap} → ${urls.length} URL`)
+if (urls.length < ref.n_urls_sitemap && urls.length + redirigees.length < ref.n_urls_sitemap) dit('sitemap', `${ref.n_urls_sitemap} → ${urls.length} URL, et ${ref.n_urls_sitemap - urls.length - redirigees.length} ne sont pas redirigées`)
 
+fs.writeFileSync(path.join(ICI, 'garde/dernier-controle.json'), JSON.stringify({ quand: new Date().toISOString(), base, casses, gains, redirigees, assumees }, null, 1))
 console.log(`\n════ GARDE-SEO : ${Object.keys(ref.pages).length} pages comparées à la référence du ${ref.quand.slice(0, 10)}\n`)
 if (gains.length) { console.log(`  ${gains.length} changement(s) sans perte :`); gains.slice(0, 8).forEach(g => console.log(g)); console.log() }
+if (redirigees.length) { console.log(`  ${redirigees.length} URL redirigée(s) en permanent vers une page en 200 :`); redirigees.slice(0, 6).forEach(g => console.log(g)); if (redirigees.length > 6) console.log(`  … et ${redirigees.length - 6} autres`); console.log() }
+if (assumees.length) { const motifs = {}; for (const a of assumees) { const m = a.match(/\(assumé : ([^)]*)\)/); const k = m ? m[1] : '?'; motifs[k] = (motifs[k] || 0) + 1 } console.log(`  ${assumees.length} écart(s) assumé(s), par raison :`); for (const [k, n] of Object.entries(motifs)) console.log(`   ${n} × ${k}`); console.log() }
 if (casses.length) {
   console.log(`  ⛔ ${casses.length} DÉGRADATION(S) :\n`)
   casses.slice(0, 40).forEach(c => console.log(c))

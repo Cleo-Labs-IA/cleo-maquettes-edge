@@ -68,7 +68,9 @@ const citationEn = sourceCitation.match(/en:\s*'([^']+)'/)?.[1]
   ?.replace(/\\u([0-9a-fA-F]{4})/g, (_, code) => String.fromCharCode(parseInt(code, 16)))
   .slice(1, 80)
 const serviceEn = fs.readFileSync(path.join(SORTIE, '37-compliance-service-en.html'), 'utf8')
-if (!citationEn || !serviceEn.includes(citationEn)) {
+/* 23/09/2026, Naomie : « pas la quote Decathlon dans Service ». La citation ne figure plus sur la page ;
+   si elle y revient, elle doit rester verbatim. */
+if (serviceEn.includes('<blockquote') && (!citationEn || !serviceEn.includes(citationEn))) {
   erreurs.push('37-compliance-service-en.html : citation anglaise non verbatim')
 }
 

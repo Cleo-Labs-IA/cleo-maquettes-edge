@@ -9,3 +9,6 @@ node_modules/
 .claude/
 .worktrees/
 .superpowers/
+blog/sonde.json
+garde/dernier-controle.json
+.cache/

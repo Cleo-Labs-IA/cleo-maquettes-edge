@@ -29,11 +29,11 @@ body[data-cleo-ds="v6"]:is([data-v6-page="52-data-mcp"],[data-v6-page="52-data-m
   & main .dt-client-carte > p:not(#_):not(#_){margin:0}
   & main .dt-client-tete:not(#_):not(#_){display:flex;align-items:center;justify-content:space-between;gap:12px}
   & main .dt-client-tete b:not(#_):not(#_){font-size:var(--t-h3);line-height:var(--t-h3-lh);letter-spacing:var(--t-h3-ls);font-weight:500;color:var(--c-texte)}
-  & main .dt-client-tete span:not(#_):not(#_){flex:none;padding:2px 8px;border-radius:var(--r-petit);box-shadow:inset 0 0 0 1px var(--c-filet);font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--c-texte-2)}
-  & main .dt-client-carte > p:nth-child(2):not(#_):not(#_){margin-top:12px;font-size:.9375rem;line-height:1.5;color:var(--c-texte-2)}
+  & main .dt-client-tete span:not(#_):not(#_){flex:none;padding:2px 8px;border-radius:var(--r-petit);box-shadow:inset 0 0 0 1px var(--c-filet);font-size:0.75rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--c-texte-2)}
+  & main .dt-client-carte > p:nth-child(2):not(#_):not(#_){margin-top:12px;font-size:0.875rem;line-height:1.5;color:var(--c-texte-2)}
   & main .dt-client-adresse:not(#_):not(#_){display:flex;flex-direction:column;gap:6px;margin-top:auto !important;padding-top:20px}
   & main .dt-client-adresse span:not(#_):not(#_){font-size:var(--t-legende);color:var(--c-texte-3)}
-  & main .dt-client-adresse code:not(#_):not(#_){display:block;padding:8px 10px;border-radius:var(--r-petit);background:var(--c-carte);font:inherit;font-size:.8125rem;line-height:1.4;color:var(--c-texte);word-break:break-all}
+  & main .dt-client-adresse code:not(#_):not(#_){display:block;padding:8px 10px;border-radius:var(--r-petit);background:var(--c-carte);font:inherit;font-size:0.875rem;line-height:1.4;color:var(--c-texte);word-break:break-all}
 
   /* Trois étapes */
   & main .dt-etapes:not(#_):not(#_){display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:48px;margin:0;padding:0;list-style:none}
@@ -47,7 +47,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="52-data-mcp"],[data-v6-page="52-data-m
   & main .dt-citation blockquote:not(#_):not(#_):not(#_){margin:0 auto !important;max-width:30ch;text-wrap:balance}
   & main .dt-citation figcaption:not(#_):not(#_):not(#_){display:flex;align-items:center;gap:12px;margin-top:24px}
   & main .dt-citation figcaption span:not(#_):not(#_){display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left}
-  & main .dt-citation figcaption b:not(#_):not(#_){font-size:.9375rem;font-weight:500;color:var(--c-texte)}
+  & main .dt-citation figcaption b:not(#_):not(#_){font-size:0.875rem;font-weight:500;color:var(--c-texte)}
   & main .dt-avatar:not(#_):not(#_){width:44px;height:44px;object-fit:cover;border-radius:var(--r-petit)}
 
   /* La section sombre : chiffres sous le panneau */
@@ -62,7 +62,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="52-data-mcp"],[data-v6-page="52-data-m
   @media (max-width:600px){
     & main .dt-schema:not(#_):not(#_){height:260px}
     & main .dt-client:not(#_):not(#_){padding:5px 8px;font-size:.75rem}
-    & main .dt-pastille:not(#_):not(#_){font-size:10px}
+    & main .dt-pastille:not(#_):not(#_){font-size:0.75rem}
     & main .dt-clients-grille:not(#_):not(#_){grid-template-columns:minmax(0,1fr)}
     & main .dt-etapes:not(#_):not(#_){grid-template-columns:minmax(0,1fr);gap:24px}
     & main .dt-chiffres-sombre:not(#_):not(#_){grid-template-columns:minmax(0,1fr)}
@@ -82,7 +82,7 @@ body[data-cleo-ds="v6"]:is([data-v6-page="53-data-plateforme"],[data-v6-page="53
   & main .dt-app:not(#_):not(#_){position:absolute;left:50%;top:50%;z-index:2;translate:-50% -50%;box-sizing:border-box;width:min(760px, 88%);padding:20px;background:var(--c-carte);color:var(--c-texte)}
   & main .dt-app-barre:not(#_):not(#_){display:flex;align-items:center;gap:16px}
   & main .dt-app-barre > img:not(#_):not(#_){width:52px;height:auto;border-radius:0}
-  & main .dt-app-recherche:not(#_):not(#_){flex:1;display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:var(--r-petit);background:var(--c-fond-2);font-size:.9375rem;color:var(--c-texte)}
+  & main .dt-app-recherche:not(#_):not(#_){flex:1;display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:var(--r-petit);background:var(--c-fond-2);font-size:0.875rem;color:var(--c-texte)}
   & main .dt-app-recherche svg:not(#_):not(#_){flex:none;color:var(--c-texte-3)}
   & main .dt-app-filtres:not(#_):not(#_){display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 6px}
   & main .dt-app-filtres span:not(#_):not(#_){display:inline-flex;gap:6px;padding:5px 10px;border-radius:var(--r-petit);box-shadow:inset 0 0 0 1px var(--c-filet);font-size:var(--t-legende);color:var(--c-texte)}

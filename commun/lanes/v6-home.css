@@ -30,7 +30,7 @@ body[data-cleo-ds="v6"][data-v6-family="home"] main > .hero-epure .t-hero{
 body[data-cleo-ds="v6"][data-v6-family="home"] main > .hero-epure .t-body{
   max-width:510px !important;
   margin:28px 0 0 !important;
-  font-size:1.0625rem;
+  font-size:1rem;
   line-height:1.6;
 }
 
@@ -357,7 +357,7 @@ body[data-cleo-ds="v6"][data-v6-family="home"] .securite-bas .hs-ico{color:var(-
   body[data-cleo-ds="v6"][data-v6-family="home"] .temoin-compact > div,
   body[data-cleo-ds="v6"][data-v6-family="home"] .temoin-compact > a{grid-column:1; grid-row:auto}
   body[data-cleo-ds="v6"][data-v6-family="home"] .temoin-compact .temoin-portrait{width:112px; height:132px}
-  body[data-cleo-ds="v6"][data-v6-family="home"] .temoin-compact .citation{font-size:1.0625rem}
+  body[data-cleo-ds="v6"][data-v6-family="home"] .temoin-compact .citation{font-size:1rem}
   body[data-cleo-ds="v6"][data-v6-family="home"] .g-agents .agent-texte,
   body[data-cleo-ds="v6"][data-v6-family="home"] .g-agents .agent-inverse .agent-texte{padding:30px 24px}
   body[data-cleo-ds="v6"][data-v6-family="home"] .g-agents .agent-visuel{margin:12px}

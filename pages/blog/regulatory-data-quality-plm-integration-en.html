@@ -1,0 +1,80 @@
+<!--NAV-->
+<!-- Article porté depuis www.cleolabs.co/en/blog/regulatory-data-quality-plm-integration le 23/09/2026 par blog/porter.mjs puis blog/fragments.mjs.
+     Titre, chapô, corps, FAQ et sources sont repris tels quels (blog-posts.json + HTML rendu). Ne pas éditer à la main : régénérer. -->
+<section class="sur-sombre section-serree bl-tete">
+  <div class="conteneur">
+    <div class="article-tete">
+      <p class="sy-surtitre">Product Compliance</p>
+      <h1 class="t-titre-page" style="margin:20px 0 20px">Why your PLM is only as good as the regulatory data you feed it</h1>
+      <p class="t-body" style="margin:0 0 28px">Most PLM compliance modules are empty shells. The gap between having a PLM and being compliant is about the regulatory data you inject. Here's why data quality is the real bottleneck, and how to fix it.</p>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <span style="display:flex;align-items:center;gap:12px"><img src="img:alex" alt="Alexandre Bloch" style="width:44px;height:44px;border-radius:50%;object-fit:cover"><span style="display:block"><span class="t-h3" style="display:block">Alexandre Bloch</span><span class="t-caption" style="display:block">CTO</span></span></span>
+        <span class="t-caption" style="padding-left:14px;border-left:1px solid var(--c-filet-sombre)"><time datetime="2026-05-27">27 May 2026</time> · 7 min read</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-bande-photo">
+  <figure>
+    <img src="img:monde-drone-banc-essai" alt="">
+    <div class="sy-bande-texte">
+      <p class="sy-etiquette">Product Compliance</p>
+    </div>
+  </figure>
+</section>
+
+<section class="section bl-corps" style="padding-top:56px">
+  <div class="conteneur">
+    <div class="corps-sommaire">
+      <nav class="sommaire">
+        <div class="titre">On this page</div>
+        <a href="#s1">The PLM compliance gap</a>
+        <a href="#s2">What &quot;good&quot; regulatory data looks like</a>
+        <a href="#s3">The real cost of bad injection</a>
+        <a href="#s4">How Cleo feeds your PLM</a>
+        <a href="#s5">Stop treating compliance as a PLM configuration problem</a>
+        <a href="#questions">Frequently asked questions</a>
+      </nav>
+      <div class="article bl-article" style="margin:0">
+<div class="bl-encart"><p>68%</p><p>Of 2025 recalls traced to outdated or missing regulatory data</p></div><div class="bl-encart"><p>$4.2M</p><p>Average cost of a single product recall</p></div><div class="bl-encart"><p>25,000+</p><p>Regulations tracked by Cleo across 106 countries</p></div>
+<h2 id="s1">The PLM compliance gap</h2><p>PLM systems were designed for product data management: bills of materials, engineering specifications, change workflows, revision control. They are exceptional at what they do, orchestrating the lifecycle of a product from concept to retirement.</p><p>Compliance modules do exist. SAP EH&amp;S, Windchill Regulatory, Teamcenter Product Compliance: they all offer fields for regulatory data, substance restrictions, and market-specific requirements. But every one of them operates on a "bring your own data" model. The module gives you the structure. You fill in the content.</p><p>In practice, most teams manually maintain spreadsheets of applicable regulations, then copy-paste values into PLM fields. A regulatory affairs analyst monitors a handful of official gazettes, updates an Excel file, and someone on the product team transfers that information into the PLM: often weeks later, often partially.</p><p>This creates three predictable failure modes. First, stale data: the regulation changed, but the PLM was not updated. Second, missing data: you entered a new market, but no one added the applicable rules. Third, wrong mapping: a regulation was applied to the wrong product category, either over-restricting a product that was actually compliant or, far worse, greenlighting one that was not.</p>
+<h2 id="s2">What "good" regulatory data looks like</h2><p>The difference between a PLM that protects you and one that gives you a false sense of security comes down to four properties of the data inside it.</p><div class="bl-encart"><p>Four properties of reliable regulatory data</p><div><div class="bl-encart"><p>01</p><p>Structured</p><p>Regulation → jurisdiction → product category → requirements → deadlines</p></div><div class="bl-encart"><p>02</p><p>Sourced</p><p>Every data point traced to an official gazette or authority publication</p></div><div class="bl-encart"><p>03</p><p>Live</p><p>Updated when regulations change, not on a yearly audit cycle</p></div><div class="bl-encart"><p>04</p><p>Mapped</p><p>Linked to YOUR product categories and SKUs, not generic industry labels</p></div></div></div><p>Structured means the data follows a consistent schema: each regulation is decomposed into its jurisdiction, the product categories it applies to, the specific requirements it imposes, and the deadlines for compliance. Not a PDF attachment. Not a free-text note. A machine-readable data object that your PLM can ingest and act on.</p><p>Sourced means traceability. Every data point should link back to its official publication: the EU Official Journal, a national gazette, an agency ruling. When an auditor asks "where does this restriction come from?", the answer should be a URL, not "the regulatory team told us."</p><p>Live means the data reflects the current state of regulation, not a snapshot from the last audit. Regulations change constantly: an amendment to REACH Annex XVII, a new AGEC decree, a revised threshold in a national cosmetics regulation. If your PLM data is refreshed annually, you are flying blind for eleven months of the year.</p><p>Mapped means the regulations are linked to your specific product taxonomy: not to a generic industry classification. A REACH restriction on a substance applies differently to a cleaning product, a cosmetic, and a textile finish. If your PLM maps at the wrong level of granularity, compliance checks produce either false positives (blocking valid products) or false negatives (approving non-compliant ones).</p>
+<h2 id="s3">The real cost of bad injection</h2><p>Bad regulatory data in a PLM does not just create theoretical risk. It creates concrete, measurable damage. Here are three cases that illustrate the three failure modes.</p><h3>Case 1. Stale data: the Japan launch that used EU-only limits</h3><p>A European beauty brand expanded into Japan in 2024. Their PLM contained ingredient restriction data, but only for the EU market. The regulatory team assumed that EU limits, among the strictest in the world, would be sufficient for Japan. They were wrong.</p><p>Japan's Ministry of Health, Labour and Welfare (MHLW) maintains its own list of restricted ingredients under the Pharmaceutical and Medical Device Act (PMD Act), with different concentration thresholds for several UV filters and preservatives. Three products were recalled within three months of launch. Total cost: over $2 million in destroyed inventory, logistics, legal fees, and a retailer relationship that took two years to rebuild.</p><h3>Case 2, Missing data: the REACH amendment nobody added</h3><p>An electronics manufacturer selling across the EU had a solid compliance setup, or so they thought. Their PLM tracked REACH Annex XVII restrictions for all product lines. But when the European Commission adopted an amendment restricting a specific flame retardant used in plastic housings, nobody updated the PLM.</p><p>The amendment had an 18-month transition period. It passed quietly. The regulatory affairs team was focused on a separate RoHS update. Four SKUs shipped with the restricted substance above the new threshold. Market surveillance caught them. Result: four product lines pulled from the EU market, a formal notification to ECHA, and a six-month remediation process that delayed the entire product roadmap.</p><h3>Case 3. Wrong mapping: 2023 labeling rules for 2026 AGEC compliance</h3><p>A French food brand relied on their PLM's labeling compliance module for packaging across their product range. The module was configured with AGEC labeling requirements, but from the 2023 version of the implementing decrees. By 2026, the Triman logo requirements, the Info-Tri specifications, and the sorting instruction formats had all been updated through successive decrees.</p><p>The brand printed 800,000 units of packaging with outdated labeling before a distributor flagged the non-compliance during an incoming quality audit. The resulting fine from DGCCRF reached €500,000, not counting the cost of reprinting packaging and the three-month delay to market re-entry.</p>
+<h2 id="s4">How Cleo feeds your PLM</h2><p>Cleo's regulatory database is built to solve exactly this problem: not replacing your PLM, but making sure the data inside it is complete, current, and correctly mapped.</p><div><div class="bl-encart"><p>Without Cleo</p><p>Manual monitoring. Spreadsheet handoffs. Annual refresh. Data gaps discovered at audit, or at recall.</p></div><div class="bl-encart"><p>With Cleo</p><p>25,000+ regulations. 106 countries. 3,700+ official sources. Structured JSON via API. Continuous updates. Your PLM always current.</p></div></div><h3>A regulatory database built for machines, not just humans</h3><p>Cleo tracks over 25,000 regulations across 106 countries, sourced from more than 3,700 official publications. Every regulation is continuously monitored by AI: not checked once a year by a consultant. When an amendment is published, the data updates. When a new market threshold takes effect, the deadline appears.</p><h3>API-first: structured output for your PLM</h3><p>Cleo's API delivers structured JSON output that maps directly to PLM fields: regulation ID, jurisdiction, applicable product categories, specific requirements, compliance deadlines, and risk score. No PDF parsing. No manual re-entry. The data arrives in the format your PLM expects.</p><h3>Integration that works with your stack</h3><p>The integration pattern is straightforward: Cleo REST API → your middleware or integration platform (MuleSoft, Boomi, Workato, or a simple script) → automatic field population in your PLM. The result is that your compliance module is no longer an empty shell waiting for someone to manually fill it. It is fed by a live regulatory intelligence layer that updates itself.</p>
+<h2 id="s5">Stop treating compliance as a PLM configuration problem</h2><p>The bottleneck was never your PLM software. SAP, Windchill, Teamcenter: they are all capable tools. The compliance modules work. The workflows run. The fields are there.</p><p>The bottleneck was always the data pipeline. Who sources the regulations? Who structures them into machine-readable format? Who keeps them current across every market you sell into? Who maps them to your specific product categories, not to a generic industry taxonomy?</p><p>That is what Cleo automates. Not the PLM. The intelligence that makes the PLM useful.</p>
+<div></div><div><p>See it in action</p><p>Feed your PLM. Not your spreadsheets.</p><p>Cleo Labs builds the regulatory data infrastructure that PLM compliance modules were designed to consume. See how 25,000+ regulations across 106 countries flow directly into your product lifecycle.</p><a href="https://www.cleolabs.co/en/meet">See the product in action →</a></div>
+<h2 id="questions">Frequently asked questions</h2>
+<div class="faq" data-schema="faq" style="margin-bottom:36px">
+<details open><summary>Can Cleo integrate with my PLM system?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Yes. Cleo exposes a REST API that outputs structured regulatory data (regulation ID, jurisdiction, applicable products, requirements, deadlines, risk score) in JSON format. This maps directly to PLM compliance fields via standard middleware.</div></details>
+<details><summary>Which PLM systems does this apply to?<svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></summary><div class="reponse">Any PLM with a compliance or regulatory module: SAP Product Compliance (EH&amp;S), PTC Windchill, Siemens Teamcenter, Oracle Agile PLM, Arena Solutions, and others. The data format is system-agnostic.</div></details>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0">
+  <div class="conteneur">
+    <h2 class="t-h1" style="margin-bottom:28px">Read next</h2>
+    <div class="sy-carrousel" data-apparait>
+      <a class="sy-carte-photo" href="blog-temu-200m-dsa-fine-illegal-products-2026-en.html"><img src="img:monde-perceuse-test-endurance" alt=""><span class="sy-etiquette">Product Compliance</span><b>Temu fined €200M under the DSA: what the Commission actually said, and why it matters for every European brand</b></a>
+      <a class="sy-carte-photo" href="blog-whats-new-may-2026-en.html"><img src="img:monde-rd-voiture" alt=""><span class="sy-etiquette">Product</span><b>What’s new at Cleo: May 2026</b></a>
+      <a class="sy-carte-photo" href="blog-whats-new-april-2026-en.html"><img src="img:monde-prod-voiture" alt=""><span class="sy-etiquette">Product</span><b>What’s new at Cleo: April 2026</b></a>
+    </div>
+  </div>
+</section>
+
+<section class="section sy-final-photo">
+  <figure>
+    <img src="img:classeurs" alt="">
+    <div class="sy-final-texte" data-apparait>
+      <p class="sy-etiquette">30 minutes with the team</p>
+      <h2>See what Cleo finds on your own products</h2>
+      <p>One range and two markets are enough.</p>
+      <div class="sy-actions"><a class="sy-bouton sy-bouton-chevrons" href="https://meetings.hubspot.com/anaelle-guez/rendez-vous">Book a demo</a></div>
+    </div>
+  </figure>
+</section>
+<!--PIED-->

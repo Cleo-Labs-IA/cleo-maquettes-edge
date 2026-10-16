@@ -7,12 +7,13 @@
 | Fait | Valeur canonique | Notes |
 |---|---|---|
 | **Levée** | 1,5 M€ pre-seed | Larry Berger/Amplify, La Financière Saint-James, Kima Ventures. Corroboré presse + site. |
-| **Couverture pays** | **106 pays** | LE chiffre. Pas "106 juridictions", pas "177". |
-| **Régulations** | **25 000** | LE chiffre. Remplace 256 000 (PH), 50 101 (article), etc. |
-| **Autorités réglementaires** | **19 000** | LE chiffre. Décision Naomie, gardé définitivement. |
-| **Sources officielles** | 3 700+ | Métrique secondaire. Remplace 3 500 / 1 494 (incohérences). |
+| **Couverture** | **90 juridictions** | Aligné sur l'API le 2026-09-29 : `GET /v2/coverage` totals.jurisdictions = 90 (= `/v2/atlas/stats` jurisdictions_documented). Dire « juridictions », pas « pays » : la liste compte l'UE, l'ASEAN, des États fédérés. Remplace 106 pays (gardé le 2026-09-17). Volatil : 91 le 2026-09-28. |
+| **Régulations** | **55 782** | `GET /v2/atlas/stats` regulations_canonical (fiches distinctes après fusion canonique ; 271 694 au total). Remplace 25 000. |
+| **Autorités réglementaires** | **3 098** | `GET /v2/authorities`, 31 pages, 3 098 slugs uniques (= authorities_spine ; 2 391 avec un canal de veille vérifié). Remplace 19 000. |
+| **Sources officielles** | 183 | `GET /v2/atlas/stats` sources_active = `/v2/coverage` totals.sources (151 avec documents > 0). Métrique secondaire. Remplace 3 700+. |
+| **Douane, ligne nationale** | 112 pays et territoires sur 249, 26 nomenclatures | `GET /v2/customs/coverage/countries` : 112 « national », 137 « hs6_only ». |
 
-> **TRIPLE HEADLINE (à utiliser partout, identique) : 106 pays · 25 000 régulations · 19 000 autorités réglementaires.** (confirmé Naomie 2026-06-09 — annule le "256 000 / 177 juridictions" précédent).
+> **TRIPLE HEADLINE depuis le 2026-09-29 (à valider par Naomie, PR fix/imp-site-numbers) : 90 juridictions · 55 782 réglementations · 3 098 autorités réglementaires.** L'ancien triple 106 / 25 000 / 19 000 (confirmé le 2026-06-09, gardé le 2026-09-17) est contredit par l'API.
 | **Fondation** | **fondée 2023, société constituée 2024** | Réconcilie presse (2023) + SAS (2024-02-01). |
 | **Moteur** | MARIA (Multi-Agent Regulatory Intelligence Architecture) | |
 | **Clients (presse)** | Decathlon, Electrolux Professional | + Longchamp, BIC, PMU, Kiabi (site). |

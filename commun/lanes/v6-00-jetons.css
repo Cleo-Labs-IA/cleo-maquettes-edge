@@ -28,23 +28,23 @@
   --t-h2: clamp(1.875rem, 0.637rem + 3.302vw, 2.75rem);
   --t-h2-lh: 1.12;
   --t-h2-ls: -0.028em;
-  --t-h3: clamp(1.25rem, 1.073rem + 0.4717vw, 1.375rem);
+  --t-h3: 1.375rem;
   /* 16/09/2026 : sous-titre dans une colonne de lecture de 680 px (articles, légal). Le h2 de chapitre à 44 px y écrase le texte. */
-  --t-h2-article: clamp(1.5rem, 1.1rem + 1.1vw, 1.75rem);
+  --t-h2-article: 1.875rem;
   --t-h3-lh: 1.25;
   --t-h3-ls: -0.01em;
-  --t-lead: clamp(1.0625rem, 0.797rem + 0.7075vw, 1.25rem);
+  --t-lead: 1.375rem;
   --t-corps: 1rem;
   --t-surtitre: 0.75rem;
-  --t-legende: 0.8125rem;
+  --t-legende: 0.875rem;
   --t-chiffre: clamp(2.5rem, 1.085rem + 3.774vw, 3.5rem);
-  --t-citation: clamp(1.375rem, 0.8rem + 1.53vw, 1.75rem);
+  --t-citation: 1.875rem;
   /* Chiffre rayé (identité) : 72 px au téléphone, 120 px au bureau ; plafonné par la largeur de sa carte (31cqi). */
   --t-chiffre-raye: clamp(4.5rem, 0.255rem + 11.321vw, 7.5rem);
 
   /* Boutons */
   --b-hauteur: 44px;
-  --b-taille: 0.8125rem;
+  --b-taille: 0.875rem;
 
   /* Espacements et grille */
   --l-marge: clamp(1.25rem, -0.519rem + 4.717vw, 2.5rem);

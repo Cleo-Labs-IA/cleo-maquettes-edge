@@ -17,6 +17,6 @@
      d'écran et au clavier, et ne se montre qu'au focus clavier (le bouton de la barre, en croix, reste le geste au doigt). */
   body[data-cleo-ds="v6"] .menu-mobile .mm-tete:not(#_){position:relative;margin:0;padding:0}
   body[data-cleo-ds="v6"] .menu-mobile :is(.mm-cache, .mm-fermer:not(:focus-visible)):not(#_){position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-  body[data-cleo-ds="v6"] .menu-mobile .mm-fermer:focus-visible:not(#_){display:inline-flex;align-items:center;min-height:44px;margin:0 0 12px;padding:0 16px;border:1px solid currentColor;border-radius:var(--r-petit, 4px);background:transparent;color:inherit;font:inherit;font-size:.9375rem}
+  body[data-cleo-ds="v6"] .menu-mobile .mm-fermer:focus-visible:not(#_){display:inline-flex;align-items:center;min-height:44px;margin:0 0 12px;padding:0 16px;border:1px solid currentColor;border-radius:var(--r-petit, 4px);background:transparent;color:inherit;font:inherit;font-size:0.875rem}
   body[data-cleo-ds="v6"] .menu-mobile a:not(#_):not(#_){min-height:48px}
 }
