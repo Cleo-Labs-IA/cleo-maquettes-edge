@@ -1,5 +1,19 @@
 {
  "pages": {
+  "blog-us-fsis-jamaica-chicken-sausage-2026.html": {
+   "titre": "Le 6 octobre, les autorités américaines ont | Cleo Labs",
+   "og_titre": "Le 6 octobre, les autorités américaines ont signalé deux produits de saucisses de poulet jamaïcaines sans aucun signe de contamination : la Jamaïque n'a jamais été agréée pour exporter de la viande ou de la volaille vers les États-Unis, si bien que la marque d'inspection jamaïcaine figurant sur les boîtes ne pouvait pas rendre l'importation légale | Cleo Labs",
+   "description": "Le 6 octobre 2026, le FSIS a publié une alerte sanitaire publique visant deux produits en conserve de saucisses de poulet Vienna de marque Grace, déjà vendus dans cinq États américains. Les boîtes ne présentent aucun signe de contamination, et aucune maladie n'a été confirmée. L'importation était illégale parce que la Jamaïque n'a jamais été reconnue admissible à exporter des produits de volaille vers les États-Unis au titre du 9 CFR 381.196, ce qui signifie qu'aucun certificat ni marque d'inspection de ce pays ne pouvait la rendre légale.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/fr/blog/us-fsis-jamaica-chicken-sausage-2026"
+  },
+  "blog-us-fsis-jamaica-chicken-sausage-2026-en.html": {
+   "titre": "On 6 October, US regulators flagged two Jamaican | Cleo Labs",
+   "og_titre": "On 6 October, US regulators flagged two Jamaican chicken sausage products with no sign of contamination: Jamaica has never been approved to export meat or poultry to the US at all, so the cans' own Jamaican inspection mark could not make the import legal | Cleo Labs",
+   "description": "On 6 October 2026, FSIS issued a public health alert for two canned Grace-brand chicken Vienna sausage products already sold in five US states. The cans show no sign of contamination, and no illnesses have been confirmed. The import was illegal because Jamaica has never been found eligible to export poultry products to the United States under 9 CFR 381.196, meaning no certificate or inspection mark from that country could have made it lawful.",
+   "source": "site",
+   "url_source": "https://www.cleolabs.co/en/blog/us-fsis-jamaica-chicken-sausage-2026"
+  },
   "blog-us-hand-warmer-counterfeit-ul-mark-2026.html": {
    "titre": "Le 1er octobre, la CPSC a rappelé deux autres | Cleo Labs",
    "og_titre": "Le 1er octobre, la CPSC a rappelé deux autres marques de chauffe-mains rechargeables, environ 82 600 unités au total, pour le même risque d'incendie lié aux batteries lithium-ion qui avait motivé un rappel de 1,5 million d'unités avec un décès en juillet : six jours plus tôt, UL avait déjà découvert qu'une quatrième marque de chauffe-mains affichait sur Amazon un marquage de sécurité falsifié | Cleo Labs",
@@ -2116,6 +2130,106 @@
   }
  },
  "structure": {
+  "blog-us-fsis-jamaica-chicken-sausage-2026.html": {
+   "types": [
+    "TechArticle",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "Le 6 octobre, les autorités américaines ont signalé deux produits de saucisses de poulet jamaïcaines sans aucun signe de contamination : la Jamaïque n'a jamais été agréée pour exporter de la viande ou de la volaille vers les États-Unis, si bien que la marque d'inspection jamaïcaine figurant sur les boîtes ne pouvait pas rendre l'importation légale",
+     "description": "Le 6 octobre 2026, le FSIS a publié une alerte sanitaire publique visant deux produits en conserve de saucisses de poulet Vienna de marque Grace, déjà vendus dans cinq États américains. Les boîtes ne présentent aucun signe de contamination, et aucune maladie n'a été confirmée. L'importation était illégale parce que la Jamaïque n'a jamais été reconnue admissible à exporter des produits de volaille vers les États-Unis au titre du 9 CFR 381.196, ce qui signifie qu'aucun certificat ni marque d'inspection de ce pays ne pouvait la rendre légale."
+    },
+    "TechArticle": {
+     "headline": "Le 6 octobre, les autorités américaines ont signalé deux produits de saucisses de poulet jamaïcaines sans aucun signe de contamination : la Jamaïque n'a jamais été agréée pour exporter de la viande ou de la volaille vers les États-Unis, si bien que la marque d'inspection jamaïcaine figurant sur les boîtes ne pouvait pas rendre l'importation légale",
+     "description": "Le 6 octobre 2026, le FSIS a publié une alerte sanitaire publique visant deux produits en conserve de saucisses de poulet Vienna de marque Grace, déjà vendus dans cinq États américains. Les boîtes ne présentent aucun signe de contamination, et aucune maladie n'a été confirmée. L'importation était illégale parce que la Jamaïque n'a jamais été reconnue admissible à exporter des produits de volaille vers les États-Unis au titre du 9 CFR 381.196, ce qui signifie qu'aucun certificat ni marque d'inspection de ce pays ne pouvait la rendre légale.",
+     "datePublished": "2026-10-10",
+     "author": {
+      "@type": "Person",
+      "name": "Naomie Halioua",
+      "url": "https://www.linkedin.com/in/naomie-halioua/"
+     },
+     "publisher": {
+      "@id": "https://www.cleolabs.co/#organization"
+     },
+     "inLanguage": "fr-FR",
+     "articleSection": "Conformité produit"
+    },
+    "BreadcrumbList": {
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Accueil",
+       "item": "https://www.cleolabs.co/fr"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Blog",
+       "item": "https://www.cleolabs.co/fr/blog"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "Le 6 octobre, les autorités américaines ont signalé deux produits de saucisses de poulet jamaïcaines sans aucun signe de contamination : la Jamaïque n'a jamais été agréée pour exporter de la viande ou de la volaille vers les États-Unis, si bien que la marque d'inspection jamaïcaine figurant sur les boîtes ne pouvait pas rendre l'importation légale",
+       "item": "https://www.cleolabs.co/fr/blog/us-fsis-jamaica-chicken-sausage-2026"
+      }
+     ]
+    }
+   }
+  },
+  "blog-us-fsis-jamaica-chicken-sausage-2026-en.html": {
+   "types": [
+    "TechArticle",
+    "WebPage",
+    "BreadcrumbList"
+   ],
+   "proprietes": {
+    "WebPage": {
+     "name": "On 6 October, US regulators flagged two Jamaican chicken sausage products with no sign of contamination: Jamaica has never been approved to export meat or poultry to the US at all, so the cans' own Jamaican inspection mark could not make the import legal",
+     "description": "On 6 October 2026, FSIS issued a public health alert for two canned Grace-brand chicken Vienna sausage products already sold in five US states. The cans show no sign of contamination, and no illnesses have been confirmed. The import was illegal because Jamaica has never been found eligible to export poultry products to the United States under 9 CFR 381.196, meaning no certificate or inspection mark from that country could have made it lawful."
+    },
+    "TechArticle": {
+     "headline": "On 6 October, US regulators flagged two Jamaican chicken sausage products with no sign of contamination: Jamaica has never been approved to export meat or poultry to the US at all, so the cans' own Jamaican inspection mark could not make the import legal",
+     "description": "On 6 October 2026, FSIS issued a public health alert for two canned Grace-brand chicken Vienna sausage products already sold in five US states. The cans show no sign of contamination, and no illnesses have been confirmed. The import was illegal because Jamaica has never been found eligible to export poultry products to the United States under 9 CFR 381.196, meaning no certificate or inspection mark from that country could have made it lawful.",
+     "datePublished": "2026-10-10",
+     "author": {
+      "@type": "Person",
+      "name": "Naomie Halioua",
+      "url": "https://www.linkedin.com/in/naomie-halioua/"
+     },
+     "publisher": {
+      "@id": "https://www.cleolabs.co/#organization"
+     },
+     "inLanguage": "en-US",
+     "articleSection": "Product Compliance"
+    },
+    "BreadcrumbList": {
+     "itemListElement": [
+      {
+       "@type": "ListItem",
+       "position": 1,
+       "name": "Home",
+       "item": "https://www.cleolabs.co/en"
+      },
+      {
+       "@type": "ListItem",
+       "position": 2,
+       "name": "Blog",
+       "item": "https://www.cleolabs.co/en/blog"
+      },
+      {
+       "@type": "ListItem",
+       "position": 3,
+       "name": "On 6 October, US regulators flagged two Jamaican chicken sausage products with no sign of contamination: Jamaica has never been approved to export meat or poultry to the US at all, so the cans' own Jamaican inspection mark could not make the import legal",
+       "item": "https://www.cleolabs.co/en/blog/us-fsis-jamaica-chicken-sausage-2026"
+      }
+     ]
+    }
+   }
+  },
   "blog-us-hand-warmer-counterfeit-ul-mark-2026.html": {
    "types": [
     "TechArticle",
